@@ -15,6 +15,7 @@
 %   \documentclass[dsc, eng]{ita}
 %		\documentclass[dsc, eng, dv]{ita}
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 \documentclass[msc]{ita}    % ITA.cls based on standard book.cls
 % Quando alterar a classe, por exemplo de [msc] para [msc, eng]) rode mais uma vez o botão BUILD OUTPUT caso haja erro
 \usepackage{ae}
@@ -35,6 +36,26 @@
 \usepackage{float}
 \usepackage{placeins}
 
+%%%%%%%%%%%%%%%%%%%%%%%%% MEUS PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage[utf8]{inputenc} % Codificação UTF-8
+% \usepackage[T1]{fontenc} % Suporte a fontes com acentos
+% % \usepackage{lmodern} % Usa fontes Latin Modern
+% \usepackage[brazil]{babel} % Idioma Português (Brasil)
+
+% \usepackage{graphicx} % Inclusão de gráficos
+% \usepackage{indentfirst}
+% \usepackage{float} % Controle de posição de figuras e tabelas
+% \usepackage{amsmath, amssymb} % Suporte avançado a matemática
+% \usepackage{hyperref} % Links clicáveis
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=black,
+%     citecolor=black,
+%     urlcolor=blue,
+%     pdftitle={Documento ABNT},
+%     pdfauthor={Seu Nome}
+% }
 
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 \addbibresource{Referencias/referencias.bib}
@@ -48,7 +69,10 @@
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-% Espaçamento padrão de todo o documento
+% Espaçamento padrão de todo o documento:
+% singlespacing Para um espaçamento simples
+% onehalfspacing Para um espaçamento de 1,5
+% doublespacing Para um espaçamento duplo
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \onehalfspacing
 
@@ -60,7 +84,7 @@
 % Identificacoes (se o trabalho for em inglês, insira os dados em inglês)
 % Para entradas abreviadas de Professora (Profa.) em português escreva: Prof$^\textnormal{a}$.
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\course{Engenheria da Computação}  % Programa de PG ou Curso de Graduação
+\course{Programa de Pós-Graduação}  % Programa de PG ou Curso de Graduação
 %\area{Aircraft Design} % Área de concentração na PG (Não utilizado no caso de TG)
 
 % Autor do trabalho: Nome Sobrenome
@@ -69,11 +93,11 @@
 \itaauthoraddress{Praça Marechal Eduardo Gomes, 50, Vila das Acácias}{12.228-900}{São José dos Campos--SP}
 
 % Titulo da Tese/Dissertação
-\title{Uma Abordagem Sobre o Dilema do Cupim Frente ao Concreto Armado Utilizando Diferentes Composições Cimentísticas}
+\title{Testes de algoritmos e leis de controle para aplicações robóticas em operações de encontro e acoplamento/ancoragem (rendezvous and docking/berthing)}
 
 % Orientador
 \advisorgender{masc}                    % masc ou fem
-\advisor{Prof.~Dr.}{Adalberto Santos Dupont}{ITA}
+\advisor{Prof.~Dr.}{Ijar Milagre da Fonseca}{ITA}
 
 % Coorientador (Caso não haja coorientador, colocar ambas as variáveis \coadvisorgender e \coadvisor comentadas, com um % na frente)
 \coadvisorgender{fem}									% masc ou fem
@@ -126,6 +150,73 @@
 \input{Cap1/cap1}
 \section{Revisão da literatura}
 
+\subsection{Pioneirismo}
+
+\input{RevDaLiteratura/Parte 1/1960 Pioneirismo}
+
+\subsection{Consolidação e novas fronteiras}
+\input{RevDaLiteratura/Parte 1/1970-1980 Consolidação e novas fronteiras}
+
+\section{Robótica e a ISS}
+\input{RevDaLiteratura/Parte 1/1990 Início da robótica e a ISS}
+
+\section{A expansão comercial e automação avançada}
+\input{RevDaLiteratura/Parte 1/2000 Cargueiros comerciais}
+
+\section{Novos paradigmas}
+\input{RevDaLiteratura/Parte 1/2020 e além}
+
+\section{Desafios e oportunidades atuais}
+\input{RevDaLiteratura/Parte 1/Desafios e oportunidades atuais}
+
+\section{Sensores e sistemas de percepção}
+\input{RevDaLiteratura/Parte 2/Sensores Lidar}
+
+\input{RevDaLiteratura/Parte 2/Sensores CamEstereo}
+
+\input{RevDaLiteratura/Parte 2/Sensores GNSS}
+
+\input{RevDaLiteratura/Parte 2/Fusao de sensores}
+
+\section{Algoritmos de navegação e controle}
+\input{RevDaLiteratura/Parte 2/Algoritmos de nav e controle}
+
+%\subsection{Controle ótimo}
+% \input{RevDaLiteratura/Parte 2/Controle otimo}
+
+\input{RevDaLiteratura/Parte 2/Planej e traj autonomo}
+
+\input{RevDaLiteratura/Parte 2/Fusao dados inercial e optico}
+
+\section{Redundância e tolerância a falhas}
+\input{RevDaLiteratura/Parte 2/Redundancia e tolerancia a falhas}
+
+\section{Expansão em ambientes não-convencionais}
+\input{RevDaLiteratura/Parte 2/Missoes interplanetarias}
+
+\input{RevDaLiteratura/Parte 2/Orbita lunar e cislunar}
+
+\section{Impacto geral}
+\input{RevDaLiteratura/Parte 2/Reducao confiabilidade e expansao}
+
+%\section{Gazebo}
+
+%\input{RevDaLiteratura/Parte 1/1 Gazebo}
+
+%\section{Mecânica Orbital}
+
+%\input{RevDaLiteratura/Parte 1/2 Mec Orbital}
+
+%\section{Kinect}
+
+%\input{RevDaLiteratura/Parte 1/3 Kinect}
+
+%\section{Robótica}
+
+%\input{RevDaLiteratura/Parte 1/4 Robotica}
+
+\section{Formulação do problema}
+\input{RevDaLiteratura/Parte 3 FormProbl/3.1 Formulacao do problema}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
