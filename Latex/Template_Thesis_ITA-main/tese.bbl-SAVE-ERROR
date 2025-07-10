@@ -1,0 +1,636 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Arystides1994}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0b06ab5eb80b78d1dbb3a0076976ab4d}{%
+           family={Arystides},
+           familyi={A\bibinitperiod},
+           given={Brayner},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=186be5126f3c81c714db5575b282049a}{%
+           family={Medeiros},
+           familyi={M\bibinitperiod},
+           given={Carlos\bibnamedelima Santos},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{location}{1}{%
+        {Petrolina}%
+      }
+      \list{organization}{1}{%
+        {Simpósio Brasileiro de Banco de Dados}%
+      }
+      \list{publisher}{1}{%
+        {EMBRAPA}%
+      }
+      \strng{namehash}{16fbfa2da11ffabc7f684a66edbed02a}
+      \strng{fullhash}{16fbfa2da11ffabc7f684a66edbed02a}
+      \strng{fullhashraw}{16fbfa2da11ffabc7f684a66edbed02a}
+      \strng{bibnamehash}{16fbfa2da11ffabc7f684a66edbed02a}
+      \strng{authorbibnamehash}{16fbfa2da11ffabc7f684a66edbed02a}
+      \strng{authornamehash}{16fbfa2da11ffabc7f684a66edbed02a}
+      \strng{authorfullhash}{16fbfa2da11ffabc7f684a66edbed02a}
+      \strng{authorfullhashraw}{16fbfa2da11ffabc7f684a66edbed02a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eventyear}{1996}
+      \field{number}{13}
+      \field{title}{Incorporação de Tempo em {SGBD} Orientado a Objeto}
+      \field{venue}{Petrolina}
+      \field{year}{1995}
+      \field{eventdateera}{ce}
+      \field{pages}{90\bibrangedash 98}
+      \range{pages}{9}
+    \endentry
+    \entry{Assenmacher1993}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=eadf5d83eeac09ae90434ec5d2b8b3a1}{%
+           family={Assenmacher},
+           familyi={A\bibinitperiod},
+           given={Hans},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5bc00d5360eb58b5da63dac6dfb134a1}{%
+           family={Breitbach},
+           familyi={B\bibinitperiod},
+           given={Tedy},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a67f3c81569c9f892d8c42938f6ff222}{%
+           family={Buhler},
+           familyi={B\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4399c0e3942ed9aea4ed902a039c5f42}{%
+           family={Hübsch},
+           familyi={H\bibinitperiod},
+           given={Visk},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df706818fff7087daa9f514dc5ee61e8}{%
+           family={Schwarz},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{organization}{1}{%
+        {European Conference on Object-Oriented Programming}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{7783dc7a5b64473556c0ff12db8d1876}
+      \strng{fullhash}{64b2e776f584acdc0a2fbab129ad50ba}
+      \strng{fullhashraw}{64b2e776f584acdc0a2fbab129ad50ba}
+      \strng{bibnamehash}{64b2e776f584acdc0a2fbab129ad50ba}
+      \strng{authorbibnamehash}{64b2e776f584acdc0a2fbab129ad50ba}
+      \strng{authornamehash}{7783dc7a5b64473556c0ff12db8d1876}
+      \strng{authorfullhash}{64b2e776f584acdc0a2fbab129ad50ba}
+      \strng{authorfullhashraw}{64b2e776f584acdc0a2fbab129ad50ba}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eventyear}{1993}
+      \field{note}{(Lecture Notes in Computer Science, v. 707)}
+      \field{number}{7}
+      \field{subtitle}{supporting Distributed Programming in {L}++}
+      \field{title}{{P}anda}
+      \field{venue}{Kaiserslautern}
+      \field{year}{1993}
+      \field{eventdateera}{ce}
+      \field{pages}{361\bibrangedash 383}
+      \range{pages}{23}
+    \endentry
+    \entry{Callaghan1995}{manual}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=bced918b770e6c977b3c5d9c9b1373e7}{%
+           family={Callaghan},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5aa0c9d3addd06178b380d12f6acd1bb}{%
+           family={Pawlowski},
+           familyi={P\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19e529d5df0ac77465f876585c156682}{%
+           family={Staubach},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{organization}{1}{%
+        {Internet Engineering Task Force, Network Working Group}%
+      }
+      \strng{namehash}{bc1d794273692b3f86cdf2e684568e16}
+      \strng{fullhash}{bc1d794273692b3f86cdf2e684568e16}
+      \strng{fullhashraw}{bc1d794273692b3f86cdf2e684568e16}
+      \strng{bibnamehash}{bc1d794273692b3f86cdf2e684568e16}
+      \strng{authorbibnamehash}{bc1d794273692b3f86cdf2e684568e16}
+      \strng{authornamehash}{bc1d794273692b3f86cdf2e684568e16}
+      \strng{authorfullhash}{bc1d794273692b3f86cdf2e684568e16}
+      \strng{authorfullhashraw}{bc1d794273692b3f86cdf2e684568e16}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{{RFC} 1831}
+      \field{title}{{NFS} version 3 protocol specification}
+      \field{year}{1995}
+      \field{pages}{68}
+      \range{pages}{1}
+    \endentry
+    \entry{Caromel1998}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c21880704ccf890600ab16bbef737a2c}{%
+           family={Caromel},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=963940d32b0e1b450bb35eeb1ff8ee0d}{%
+           family={Klauser},
+           familyi={K\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b39a50147c839667e6103f3fd2be3bb4}{%
+           family={Vayssiere},
+           familyi={V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=fd495ab4e1d5c5fe00ef8dbc69c122dd}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Geoffrey\bibnamedelima C.},
+           giveni={G\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{64f4e35ad27ee575034b691de430506d}
+      \strng{fullhash}{64f4e35ad27ee575034b691de430506d}
+      \strng{fullhashraw}{64f4e35ad27ee575034b691de430506d}
+      \strng{bibnamehash}{64f4e35ad27ee575034b691de430506d}
+      \strng{authorbibnamehash}{64f4e35ad27ee575034b691de430506d}
+      \strng{authornamehash}{64f4e35ad27ee575034b691de430506d}
+      \strng{authorfullhash}{64f4e35ad27ee575034b691de430506d}
+      \strng{authorfullhashraw}{64f4e35ad27ee575034b691de430506d}
+      \strng{editorbibnamehash}{fd495ab4e1d5c5fe00ef8dbc69c122dd}
+      \strng{editornamehash}{fd495ab4e1d5c5fe00ef8dbc69c122dd}
+      \strng{editorfullhash}{fd495ab4e1d5c5fe00ef8dbc69c122dd}
+      \strng{editorfullhashraw}{fd495ab4e1d5c5fe00ef8dbc69c122dd}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Concurrency in Practice and Experience}
+      \field{month}{9/11}
+      \field{number}{11--13}
+      \field{title}{Towards Seamless Computing and Metacomputing in {J}ava}
+      \field{volume}{10}
+      \field{year}{1998}
+      \field{pages}{1043\bibrangedash 1061}
+      \range{pages}{19}
+      \verb{urlraw}
+      \verb http://www-sop.inria.fr/\~{}sloop/javall/index.html
+      \endverb
+      \verb{url}
+      \verb http://www-sop.inria.fr/%5C~%7B%7Dsloop/javall/index.html
+      \endverb
+      \warn{\item article entry 'Caromel1998' (Referencias/referencias.bib): Invalid format '20 fev. 2000' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{COFFEE2000}{proceedings}{}{}
+      \list{location}{1}{%
+        {Java Island}%
+      }
+      \list{organization}{1}{%
+        {Conference on Coffee Importance}%
+      }
+      \list{publisher}{1}{%
+        {Java Island Press}%
+      }
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{eventyear}{2000}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Traditions around Colombian coffee}
+      \field{venue}{Java Island}
+      \field{year}{2000}
+      \field{eventdateera}{ce}
+    \endentry
+    \entry{Furmento1995}{report}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=301412a2bd543a51857df803efd6d225}{%
+           family={Furmento},
+           familyi={F\bibinitperiod},
+           given={Nathalie},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6003691ba2d6a85836de996c74f647e}{%
+           family={Roudier},
+           familyi={R\bibinitperiod},
+           given={Yves},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0970525d5279c5fe14d410a3936db503}{%
+           family={Siegel},
+           familyi={S\bibinitperiod},
+           given={Günther},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {I3S, Université de Nice Sophia-Antipolis}%
+      }
+      \list{location}{1}{%
+        {Valbonne}%
+      }
+      \strng{namehash}{61c9bd5810b5a78dae0376f523fccf17}
+      \strng{fullhash}{61c9bd5810b5a78dae0376f523fccf17}
+      \strng{fullhashraw}{61c9bd5810b5a78dae0376f523fccf17}
+      \strng{bibnamehash}{61c9bd5810b5a78dae0376f523fccf17}
+      \strng{authorbibnamehash}{61c9bd5810b5a78dae0376f523fccf17}
+      \strng{authornamehash}{61c9bd5810b5a78dae0376f523fccf17}
+      \strng{authorfullhash}{61c9bd5810b5a78dae0376f523fccf17}
+      \strng{authorfullhashraw}{61c9bd5810b5a78dae0376f523fccf17}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{(RR~95-02)}
+      \field{number}{RR~95-02}
+      \field{subtitle}{une Revue des Langages Existants}
+      \field{title}{Parallélisme et distribution en {C}++}
+      \field{type}{techreport}
+      \field{year}{1995}
+      \verb{urlraw}
+      \verb http://www-sop.inria.br/science/skd.gz
+      \endverb
+      \verb{url}
+      \verb http://www-sop.inria.br/science/skd.gz
+      \endverb
+      \warn{\item report entry 'Furmento1995' (Referencias/referencias.bib): Invalid format '29 fev. 2003' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{ITALUS2004}{misc}{}{}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{grupo de usuários {\LaTeX} do {ITA}}
+      \field{title}{ITALUS}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb http://www.comp.ita.br/italus/
+      \endverb
+      \verb{url}
+      \verb http://www.comp.ita.br/italus/
+      \endverb
+      \warn{\item misc entry 'ITALUS2004' (Referencias/referencias.bib): Invalid format '22 jul. 2004' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Joea2003}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3274bbf7568547996b1c972ed18f983f}{%
+           family={Joea},
+           familyi={J\bibinitperiod},
+           given={John\bibnamedelima Gi},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8e9a693ed79bc1101159752aaf84adf}{%
+           family={John},
+           familyi={J\bibinitperiod},
+           given={Joe\bibnamedelima Gi},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Java Island}%
+      }
+      \list{organization}{1}{%
+        {Conference on Coffee Importance}%
+      }
+      \list{publisher}{1}{%
+        {Java Island Press}%
+      }
+      \strng{namehash}{d84fd04511fa95a777c53c7503581a32}
+      \strng{fullhash}{d84fd04511fa95a777c53c7503581a32}
+      \strng{fullhashraw}{d84fd04511fa95a777c53c7503581a32}
+      \strng{bibnamehash}{d84fd04511fa95a777c53c7503581a32}
+      \strng{authorbibnamehash}{d84fd04511fa95a777c53c7503581a32}
+      \strng{authornamehash}{d84fd04511fa95a777c53c7503581a32}
+      \strng{authorfullhash}{d84fd04511fa95a777c53c7503581a32}
+      \strng{authorfullhashraw}{d84fd04511fa95a777c53c7503581a32}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Traditions around Colombian coffee}
+      \strng{crossref}{COFFEE2000}
+      \field{eventyear}{2000}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Importance of Coffee in Computer Sciences}
+      \field{venue}{Java Island}
+      \field{year}{2003}
+      \field{eventdateera}{ce}
+      \field{pages}{99\bibrangedash 100}
+      \range{pages}{2}
+    \endentry
+    \entry{Morgado2003}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=45e659cf39c9c7f2e1922201c1249159}{%
+           family={Morgado},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi L.\bibnamedelimi C.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Faculdade de Odontologia, Universidade Federal do Nananana}%
+      }
+      \list{location}{1}{%
+        {São Paulo}%
+      }
+      \strng{namehash}{45e659cf39c9c7f2e1922201c1249159}
+      \strng{fullhash}{45e659cf39c9c7f2e1922201c1249159}
+      \strng{fullhashraw}{45e659cf39c9c7f2e1922201c1249159}
+      \strng{bibnamehash}{45e659cf39c9c7f2e1922201c1249159}
+      \strng{authorbibnamehash}{45e659cf39c9c7f2e1922201c1249159}
+      \strng{authornamehash}{45e659cf39c9c7f2e1922201c1249159}
+      \strng{authorfullhash}{45e659cf39c9c7f2e1922201c1249159}
+      \strng{authorfullhashraw}{45e659cf39c9c7f2e1922201c1249159}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{Reimplante dentário}
+      \field{type}{Trabalho de Conclusão de Curso (Especialização do curso)}
+      \field{year}{2003}
+    \endentry
+    \entry{Nascimento1970}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b786c0d711c729608b1227c200b10adb}{%
+           family={Nascimento},
+           familyi={N\bibinitperiod},
+           given={Edson\bibnamedelima Arantes},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0,
+           prefix={do},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{institution}{1}{%
+        {Cosmos University}%
+      }
+      \list{location}{1}{%
+        {Cidade do Cabo}%
+      }
+      \strng{namehash}{b786c0d711c729608b1227c200b10adb}
+      \strng{fullhash}{b786c0d711c729608b1227c200b10adb}
+      \strng{fullhashraw}{b786c0d711c729608b1227c200b10adb}
+      \strng{bibnamehash}{b786c0d711c729608b1227c200b10adb}
+      \strng{authorbibnamehash}{b786c0d711c729608b1227c200b10adb}
+      \strng{authornamehash}{b786c0d711c729608b1227c200b10adb}
+      \strng{authorfullhash}{b786c0d711c729608b1227c200b10adb}
+      \strng{authorfullhashraw}{b786c0d711c729608b1227c200b10adb}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{eventyear}{1970}
+      \field{title}{Análise de curvas curvilíneas da trajetória da bola}
+      \field{type}{Mestrado em Ciência do Futebol}
+      \field{year}{1971}
+      \field{pages}{36}
+      \range{pages}{1}
+    \endentry
+    \entry{Patagonios2001}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=14f793a8eb084694b4e2befe9c98acea}{%
+           family={Patagonios},
+           familyi={P\bibinitperiod},
+           given={Jackson},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto Teórico Aeroglifo}%
+      }
+      \list{location}{1}{%
+        {Santa Pindamonhangaba}%
+      }
+      \strng{namehash}{14f793a8eb084694b4e2befe9c98acea}
+      \strng{fullhash}{14f793a8eb084694b4e2befe9c98acea}
+      \strng{fullhashraw}{14f793a8eb084694b4e2befe9c98acea}
+      \strng{bibnamehash}{14f793a8eb084694b4e2befe9c98acea}
+      \strng{authorbibnamehash}{14f793a8eb084694b4e2befe9c98acea}
+      \strng{authornamehash}{14f793a8eb084694b4e2befe9c98acea}
+      \strng{authorfullhash}{14f793a8eb084694b4e2befe9c98acea}
+      \strng{authorfullhashraw}{14f793a8eb084694b4e2befe9c98acea}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{Um exemplo de TG}
+      \field{type}{Trabalho de Conclusão de Curso (Graduação em Engenharia de Computação)}
+      \field{year}{2001}
+      \field{pages}{98}
+      \range{pages}{1}
+    \endentry
+    \entry{Sbornian2002}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=059ec25a6324c3ca2e887ce0cb050163}{%
+           family={Sbornian},
+           familyi={S\bibinitperiod},
+           given={Wilson},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto de Alguma Coisa, Universidade Sei Lá de Onde}%
+      }
+      \list{location}{1}{%
+        {Santa Pindamonhangaba}%
+      }
+      \strng{namehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{fullhash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{fullhashraw}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{bibnamehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authorbibnamehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authornamehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authorfullhash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authorfullhashraw}{059ec25a6324c3ca2e887ce0cb050163}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{eventyear}{2002}
+      \field{title}{Um exemplo de dissertação de mestrado}
+      \field{type}{Mestrado em Ciência da Computação}
+      \field{year}{2002}
+      \field{pages}{98}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb http://www.santapinda.edu/\~{}sbor/dissert.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.santapinda.edu/%5C~%7B%7Dsbor/dissert.pdf
+      \endverb
+      \warn{\item thesis entry 'Sbornian2002' (Referencias/referencias.bib): Invalid format '25 fev. 2002' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Sbornian2004}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=059ec25a6324c3ca2e887ce0cb050163}{%
+           family={Sbornian},
+           familyi={S\bibinitperiod},
+           given={Wilson},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto de Alguma Coisa, Universidade Sei Lá de Onde}%
+      }
+      \list{location}{1}{%
+        {Santo Antônio da Patrulha}%
+      }
+      \strng{namehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{fullhash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{fullhashraw}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{bibnamehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authorbibnamehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authornamehash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authorfullhash}{059ec25a6324c3ca2e887ce0cb050163}
+      \strng{authorfullhashraw}{059ec25a6324c3ca2e887ce0cb050163}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{eventyear}{2004}
+      \field{note}{1 CD--ROM}
+      \field{title}{Um exemplo de tese de doutorado}
+      \field{type}{Doutorado em Aeronáutica}
+      \field{year}{2004}
+      \field{pages}{169}
+      \range{pages}{1}
+    \endentry
+    \entry{Silberschatz1991}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=525ecdcf12996b3d68e3c71d7526bf35}{%
+           family={Silberschatz},
+           familyi={S\bibinitperiod},
+           given={Abraham},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29550297dbde1f377c4c3ebc5f458248}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={James\bibnamedelima Lyle},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64b4bcc3ca6dc2409739b5999e3b1482}{%
+           family={Galvin},
+           familyi={G\bibinitperiod},
+           given={Peter\bibnamedelima B.},
+           giveni={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{738c2ab408a893831de30a30a7fea677}
+      \strng{fullhash}{738c2ab408a893831de30a30a7fea677}
+      \strng{fullhashraw}{738c2ab408a893831de30a30a7fea677}
+      \strng{bibnamehash}{738c2ab408a893831de30a30a7fea677}
+      \strng{authorbibnamehash}{738c2ab408a893831de30a30a7fea677}
+      \strng{authornamehash}{738c2ab408a893831de30a30a7fea677}
+      \strng{authorfullhash}{738c2ab408a893831de30a30a7fea677}
+      \strng{authorfullhashraw}{738c2ab408a893831de30a30a7fea677}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{2049-67-555}
+      \field{title}{Operating system concepts}
+      \field{year}{1991}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
