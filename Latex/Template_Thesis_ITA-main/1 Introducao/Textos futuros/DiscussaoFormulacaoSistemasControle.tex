@@ -1,0 +1,27 @@
+Os métodos de otimização como o controle linear-quadrático (LQR) e programação dinâmica, aprimoram a eficiência energética durante aproximações de espaçonaves. Normalmente são utilizadas para reduzir o consumo de propelente em missões comerciais e científicas.
+
+\subsection{Controle ótimo}
+
+\subsubsection{Regulador Quadrático Linear (LQR)}
+
+Uma das opções para o controle ótimo é através do LQR, que é uma abordagem dentro da teoria de controle ótimo utilizada para controlar sistemas dinâmicos descritos por equações diferenciais lineares. Conforme explica \citep{clemente2020}, o objetivo do LQR é determinar um controle que minimize uma função de custo quadrática, a qual pondera os estados do sistema e os esforços de controle, tal função de custo é composta por três matrizes de ponderação, sendo:
+\begin{enumerate}
+    \item Matriz \(M\), que está relacionada à solução da Equação de Riccati e auxilia no cálculo da matriz de ganho;
+    \item  Matriz \(Q\), que modula a influência do estado do sistema na função de custo, penalizando desvios no vetor de estado; 
+    \item Matriz \(R\), que controla a penalização aplicada aos esforços de controle, determinando a magnitude das ações necessárias para estabilizar o sistema.
+\end{enumerate}
+O ajuste adequado das matrizes \(Q\) e \(R\) é importante para equilibrar a minimização de erros nos estados e a exigência de controle dentro das restrições do sistema.
+
+\subsection{Programação dinâmica}
+
+O controle ótimo é uma maneira utilizada para determinar estratégias eficientes em sistemas dinâmicos sujeitos a restrições, como por exemplo o gerenciamento de recursos naturais, o crescimento populacional e a engenharia de sistemas, busca-se otimizar um critério de desempenho minimizando custos ou maximizando benefícios ao longo do tempo \citep{dinizBassanezi}. 
+
+A programação dinâmica é uma das principais técnicas empregadas na solução dos problemas exemplificados, tal método é baseado no princípio da "optimalidade", que, como explica \citep{dinizBassanezi}, uma política de decisão ótima pode ser construída a partir de soluções ótimas de subproblemas menores. Dessa forma, o problema é decomposto em estágios sucessivos, facilitando a obtenção da estratégia ótima para cada instante. 
+
+Uma vantagem da programação dinâmica é sua utilização em diferentes tipos de sistemas, sem a necessidade de um conhecimento detalhado da função de custo associada ao problema, portanto, isso torna a abordagem útil para sistemas complexos, incluindo modelos de controle em tempo real e sistemas adaptativos, o que é útil em ambientes de microgravidade. Além disso, a discretização do intervalo de tempo e das variáveis de controle permite a formulação do problema de maneira computacionalmente tratável, viabilizando sua implementação com menor custo computacional.
+
+Ainda de acordo com \citep{dinizBassanezi}, o uso dessa técnica tem sido explorado em diversos contextos, como na otimização de trajetórias de veículos autônomos, no controle de processos industriais e no gerenciamento sustentável de recursos ambientais. Sua flexibilidade para lidar com restrições complexas faz dela uma abordagem relevante na área de controle ótimo. 
+
+
+
+

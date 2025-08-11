@@ -1,12 +1,9 @@
-
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 % Para alterar o TIPO DE DOCUMENTO, preencher a linha abaixo \documentclass[?]{?}
 %   \documentclass[tg]{ita}			= Trabalho de Graduacao
 %   \documentclass[tgfem]{ita}	= Para Engenheiras
 %   								msc     		= Dissertacao de Mestrado
-%   								mscfem   		= Para Mestras
 %   								dsc      		= Tese de Doutorado
-%   								dscfem   		= Para Doutoras
 %   								quali    		= Exame de Qualificacao
 %   								qualifem 		= Exame de Qualificacao para Doutoras
 % Para 'Draft Version'/'Versao Preliminar' com data no rodape, adicionar 'dv':
@@ -35,6 +32,7 @@
 \usepackage{lettrine}
 \usepackage{float}
 \usepackage{placeins}
+\usepackage{enumitem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% MEUS PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -128,7 +126,7 @@
 \date{23}{novembro}{2022}
 
 % Número CDU - (somente para TG)
-\cdu{???.??}
+% \cdu{???.??}
 
 % Glossario
 \makenoidxglossaries % to use glossaries pkg
@@ -145,61 +143,59 @@
 
 % ===================================== Início dos Capítulos =========================================
 
-
-%%%%%%%%%%%%%%% CAPITULO 1 - Introdução %%%%%%%%%%%%%%%
-%   Motivação  
-%   Objetivo geral  
-%   Objetivo específicos  
-%   Organização do trabalho
+%%%%%%%%%%%%%%% CAPITULO 1 %%%%%%%%%%%%%%%
 
 \chapter{Introdução}
-\input{Cap1/1 Capitulo1 Principal.tex}
+\input{1 Introducao/1 Capitulo1 Principal.tex}
 
-%%%%%%%%%%%%%%% CAPITULO 2 - Revisão bibliográfica %%%%%%%%%%%%%%%
-% Revisão da literatura
-% Formulação do problema
+%%%%%%%%%%%%%%% CAPITULO 2 %%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%% CAPITULO 3 - Modelagem matemática %%%%%%%%%%%%%%%
-% Equação de Hill
-% Manipulador robótico
-% Matriz de inércias
-% Euler e Quaternions
-% Cinemática do manipulador robótico
-% Sincronização de atitude
-% Riccati
+\chapter{Formulação do Problema}
+\input{2 Formulacao do problema/1 Capitulo2 Principal.tex}
 
-%%%%%%%%%%%%%%% CAPITULO 4 - Fundamentos do controle PID %%%%%%%%%%%%%%%
-% Overshoot, Anti-windup e Saturação
-% P, PI, PD e PID
-% Gráficos ilustrativos
+%%%%%%%%%%%%%%% CAPITULO 3 %%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%% CAPITULO 5 - Atitude de espaçonaves%%%%%%%%%%%%%%%
-% Cinemática de espaçonaves
-% Dinâmica de espaçonaves
-% Referenciais (Inercial, LVLH etc)
+\chapter{Resultados e Discussões dos Resultados das Simulações Computacionais}
+\input{3 Resultados e discussoes/1 Capitulo3 Principal.tex}
 
-%%%%%%%%%%%%%%% CAPITULO 6 - Simulações e resultados%%%%%%%%%%%%%%%
-% Condições iniciais
-% Equação de Hill + PID
-% Manipulador robótico + PID
-% Comparativo MATLAB vs. Gazebo
+%%%%%%%%%%%%%%% CAPITULO 4 %%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%% CAPITULO 7 - Considerações finais%%%%%%%%%%%%%%%
-% Discussão
-% Recomendações futuras
+\chapter{Conclusão e Trabalhos Futuros}
+\input{4 Conclusoes e trabalhos futuros/1 Capitulo4 Principal.tex}
 
-%%%%%%%%%%%%%%% CAPITULO 8 %%%%%%%%%%%%%%%
-% Referências
+%% Referências bibliográficas
+%% Apêndices
+%%%%% Parâmetros utilizados
+%%%%% Algoritmos implementados
 
+%\chapter{Modelagem Dinâmica de Cupins Cibernéticos}
+% \input{2 Formulacao do problema/2 Formulacao do problema}
 
-\chapter{Modelagem Dinâmica de Cupins Cibernéticos}
-% \input{Cap2/cap2}
-
-\chapter{Controle Robusto de Concretos Caóticos}
+%\chapter{Controle Robusto de Concretos Caóticos}
 % \input{Cap3/cap3}
 
 \chapter{Conclusão}
-% \input{Cap4/cap4}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
