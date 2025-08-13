@@ -33,6 +33,21 @@
 \usepackage{float}
 \usepackage{placeins}
 \usepackage{enumitem}
+\usepackage{bookmark}
+% \usepackage{utf8}{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage[brazil]{babel}
+
+%\usepackage{subfigure}
+%\usepackage{subfigmat}
+%PACOTEFIGURAS_SE _ERRADO_EXCLUIR_ACIMA
+\usepackage{booktabs}
+%PACOTETABELAS_SE _ERRADO_EXCLUIR_ACIMA
+
+\newcommand{\vect}[1]{\vec{#1}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\rhat}{\hat{\mathbf r}}
+\newcommand{\I}{\mathbf I}
 
 %%%%%%%%%%%%%%%%%%%%%%%%% MEUS PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -59,11 +74,7 @@
 \addbibresource{Referencias/referencias.bib}
 
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-%\usepackage{subfigure}
-%\usepackage{subfigmat}
-%PACOTEFIGURAS_SE _ERRADO_ESXCLUIR_ACIMA
-\usepackage{booktabs}
-%PACOTETABELAS_SE _ERRADO_ESXCLUIR_ACIMA
+
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 
 %++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -146,7 +157,7 @@
 %%%%%%%%%%%%%%% CAPITULO 1 %%%%%%%%%%%%%%%
 
 \chapter{Introdução}
-\input{1 Introducao/1 Capitulo1 Principal.tex}
+% \input{1 Introducao/1 Capitulo1 Principal.tex}
 
 %%%%%%%%%%%%%%% CAPITULO 2 %%%%%%%%%%%%%%%
 
@@ -156,12 +167,12 @@
 %%%%%%%%%%%%%%% CAPITULO 3 %%%%%%%%%%%%%%%
 
 \chapter{Resultados e Discussões dos Resultados das Simulações Computacionais}
-\input{3 Resultados e discussoes/1 Capitulo3 Principal.tex}
+% \input{3 Resultados e discussoes/1 Capitulo3 Principal.tex}
 
 %%%%%%%%%%%%%%% CAPITULO 4 %%%%%%%%%%%%%%%
 
 \chapter{Conclusão e Trabalhos Futuros}
-\input{4 Conclusoes e trabalhos futuros/1 Capitulo4 Principal.tex}
+% \input{4 Conclusoes e trabalhos futuros/1 Capitulo4 Principal.tex}
 
 %% Referências bibliográficas
 %% Apêndices
@@ -173,37 +184,6 @@
 
 %\chapter{Controle Robusto de Concretos Caóticos}
 % \input{Cap3/cap3}
-
-\chapter{Conclusão}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 % REFERENCIAS BIBLIOGRAFICAS
 \renewcommand\bibname{\itareferencesnamebabel} %renomear título do capítulo referências
@@ -241,6 +221,7 @@
 \FRDitaOpcoes{N}{O}
 % Cria o formulario
 \itaFRD
+
 
 \end{document}
 % Fim do Documento. O massacre acabou!!! :-)
