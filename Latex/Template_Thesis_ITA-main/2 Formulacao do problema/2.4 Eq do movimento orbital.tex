@@ -51,7 +51,7 @@ $G = 6,6695 \times 10^{-11}$ é a constante gravitacional \cite{halliday2013,wie
 \vect F_g(\vect r) = - G\ \frac{M(m_1+m_2)}{r^2} \frac{\vect r}{r} = - G\ \frac{M(m_1+m_2)}{r^3} {\vect r}
 \end{equation}
 
-Na maioria dos casos práticos de mecânica orbital, a massa do corpo primário ($M$) — neste caso, o planeta Terra — é muito maior que a do corpo secundário ($m_1$ e $m_2$), portanto, $M \gg (m_1 + m_2)$, e que resulta em $\mu \approx GM$ \cite{wie2008space}. Dito isso, a equação do movimento orbital sob a ação da gravidade é dada por \cite{newton1713}:
+Na maioria dos casos práticos de mecânica orbital, a massa do corpo primário ($M$) — neste caso, a massa do planeta Terra — é muito maior que a do corpo secundário ($m_1$ e $m_2$), então essas massas menores podem ser ignoradas \cite{Folta2022}, desta forma, $M \gg (m_1 + m_2)$, e que resulta em $\mu \approx GM$ \cite{wie2008space}. Dito isso, a equação do movimento orbital sob a ação da gravidade é dada por \cite{newton1713}:
 
 \begin{figure}[h] % h = here, t = top, b = bottom
     \centering
@@ -206,7 +206,7 @@ Para realizar a transformação do \emph{quadro inercial} para o \emph{quadro do
 \ddot{\mathbf s}^{*}
 + 2\boldsymbol\omega\times\dot{\mathbf s}^{*}
 + \boldsymbol\omega\times\big(\boldsymbol\omega\times\mathbf s^{*}\big)
-+ \dot{\boldsymbol\omega}\times\mathbf s^{*}.
++ \dot{\boldsymbol\omega}\times\mathbf s^{*}
 \end{equation}
 
 A equação \eqref{eq:fg_rc_fg_rt_linearizada} que está no quadro inercial ao ser transformada para o quadro LVLH (Local Vertical Local Horizontal) se torna \cite{fehse2003}:
@@ -218,7 +218,7 @@ A equação \eqref{eq:fg_rc_fg_rt_linearizada} que está no quadro inercial ao s
 + \boldsymbol\omega\times\big(\boldsymbol\omega\times\mathbf s^{*}\big)
 + \dot{\boldsymbol\omega}\times\mathbf s^{*}
 - \frac{\mu}{r_t^3}\,\mathbf J\,\mathbf s^{*}
-= \frac{\mathbf F}{m_c}\,.
+= \frac{\mathbf F}{m_c}
 \end{equation}
 
 Quando expresso no quadro do \emph{target}, é obtido seu vetor posição:
@@ -293,19 +293,23 @@ Em termos da equação \eqref{eq:relativo_LVLHgeral}, é obtido:
 \end{bmatrix}
 \end{equation}
 
-No caso da órbita circular, a taxa angular $\omega$ é constante e coincide com o \emph{mean motion} $n$, definido por $n=\sqrt{\mu/a^{3}}$; como $r_t=a$, resulta $\omega^{2}=\mu/r_t^{3}$ (logo, $\omega=n$) \cite{bate1971,arantes2011}.
+No caso da órbita circular ($e=0$), a velocidade angular
+\footnote{O autor Fehse (2003) define a \emph{velocidade angular}, ou \emph{angular rate} ou até mesmo \emph{angular velocity} como $\omega$, outros autores, como Bate (1971), a definem como $\eta$} 
+$\omega$ é constante e coincide com o movimento médio (\emph{mean motion}, $\eta$), definido por \cite{fehse2003}:
 
 \begin{equation}
 \label{eq:omega_constante}
 \boldsymbol\omega^2 = \frac{\mu}{r_t^3}
 \end{equation}
 
-Ou podendo ser escrita como:
+Ou podendo ser reescrita como:
 
 \begin{equation}
 \label{eq:omega_constante2}
 \eta^2 = \frac{\mu}{r_t^3}
 \end{equation}
+
+Como $r_t=a$, a velocidade angular $\omega^{2}= \eta^2 = \mu/r_t^{3}$, portanto, neste caso em particular de órbita circular, $\omega=n$.
 
 Então, $\dot{\omega}=0$, e ao inserir a equação \eqref{eq:omega_constante} nos termos da equação \eqref{eq:relativo_LVLHgeral}, é possível obter as equações linearizadas gerais do movimento relativo, conhecidas como Equações de Hill \cite{hill1878,fehse2003, wie2008space}.
 
@@ -324,6 +328,44 @@ Então, $\dot{\omega}=0$, e ao inserir a equação \eqref{eq:omega_constante} no
 \ddot{z} + 2\omega \dot{x} - 3 \omega^2 z = \frac{F_z}{m_c}
 \end{equation}
 
+\subsection{Mudança de Convenção de Quadro de Referência}
+
+As equações de Hill apresentadas anteriormente foram formuladas na convenção do sistema de referência LVLH (\emph{Local Vertical Local Horizontal}), onde os eixos foram definidos da seguinte forma \cite{fehse2003}:
+
+\begin{itemize}
+    \item Eixo $x$: tangencial à órbita, na direção do movimento orbital (\emph{along-track}).
+    \item Eixo $y$: normal à órbita, completando o sistema ortogonal  (\emph{cross-track}).
+    \item Eixo $z$: radial, apontando para o centro da Terra  (\emph{radial}).
+\end{itemize}
+
+No entanto, para realizar a compatibilidade com documentos técnicos da NASA, será adotada a convenção de referência utilizada por ela, que define os eixos da seguinte forma \cite{Folta2022}:
+
+\begin{itemize}
+    \item Eixo $x$: radial, apontando do centro da Terra para o satélite (\emph{radial}).
+    \item Eixo $y$: tangencial à órbita, na direção do movimento orbital  (\emph{along-track}).
+    \item Eixo $z$: normal à órbita, completando o sistema ortogonal  (\emph{cross-track}).
+\end{itemize}
+
+Por conta dessa mudança de convenção, é necessário realizar uma rotação dos eixos e, consequentemente, uma reformulação das equações \eqref{eq:equacoes_HillX}, \eqref{eq:equacoes_HillY}, \eqref{eq:equacoes_HillZ}, conforme \cite{sidi1997spacecraft}:
+
+\begin{equation}
+    \label{eq:Hill_NASA_X}
+    \ddot{x} - 2\omega \dot{y} - 3\omega^2 x = \frac{F_x}{m_c}
+\end{equation}
+
+\begin{equation}
+    \label{eq:Hill_NASA_Y}
+    \ddot{y} + 2\omega \dot{x} = \frac{F_y}{m_c}
+\end{equation}
+
+\begin{equation}
+    \label{eq:Hill_NASA_Z}
+    \ddot{z} + \omega^2 z = \frac{F_z}{m_c}
+\end{equation}
+
+As equações de Hill descrevem o movimento relativo de uma espaçonave em relação a outra em órbita próxima, considerando os efeitos de Coriolis, equação \eqref{eq:velAngular_cross_s} a força centrípeta - equação \eqref{eq:velAngular_cross_cross_s}. A convenção da NASA é utilizada em missões espaciais e facilita a integração com modelos dinâmicos e simulações padronizadas \cite{Folta2022}.
+
+
 As equações diferenciais lineares com coeficientes que variam no tempo, conforme as equações \eqref{eq:equacoes_HillX}, \eqref{eq:equacoes_HillY} e \eqref{eq:equacoes_HillZ}, representam o modelo geral que é válido para uma trajetória relativa arbitrária \cite{debruijn2011,ortolano2017} entre o \emph{chaser} e o \emph{target}, considerando que este último se move sob a influência exclusiva de um campo gravitacional central, ou seja, pode ser considerado uma \emph{espaçonave não-cooperativa} \cite{mahendrakar2023}.
 
 Com o objetivo de reduzir a ordem das matrizes, as equações de Hill fora reescritas na forma de espaço de estados. Foi adotada a separação do modelo em dois sistemas independentes: (i) uma para a dinâmica fora do plano, sendo a equação \eqref{eq:equacoes_HillY}, e (ii) outra para a dinâmica no plano, sendo as equações \eqref{eq:equacoes_HillX} e \eqref{eq:equacoes_HillZ}, as equações do movimento. A forma fundamental - ou geral - do espaço de estados pode ser expressa como \cite{fehse2003,starek2016,sherrill2014}:
@@ -337,25 +379,60 @@ Onde $\mathbf{A}$ é a matriz de transição, $\mathbf{x}$ é o vetor de estados
 
 Para o primeiro caso dentro do plano (\textit{in-plane}), as equações provenientes de \eqref{eq:equacoes_HillX} e \eqref{eq:equacoes_HillZ} e considerando o vetor de estados $x = [x,z, \dot{x}, \dot{z}]^T$ podem ser escritas conforme \cite{fehse2003}:
 
+% \begin{equation}
+% \begin{bmatrix}
+% \dot{x}(t) \\[0.3em]
+% \dot{z}(t) \\[0.3em]
+% \ddot{x}(t) \\[0.3em]
+% \ddot{z}(t)
+% \end{bmatrix}
+% =
+% \begin{bmatrix}
+% 0 & 0 & 1 & 0 \\
+% 0 & 0 & 0 & 1 \\
+% 0 & 0 & 0 & 2\omega \\
+% 0 & 3\omega^2 & -2\omega & 0
+% \end{bmatrix}
+% \begin{bmatrix}
+% x(t) \\[0.3em]
+% z(t) \\[0.3em]
+% \dot{x}(t) \\[0.3em]
+% \dot{z}(t)
+% \end{bmatrix}
+% +
+% \begin{bmatrix}
+% 0 & 0 \\
+% 0 & 0 \\
+% \frac{1}{m_c} & 0 \\
+% 0 & \frac{1}{m_c}
+% \end{bmatrix}
+% \begin{bmatrix}
+% F_x \\[0.3em]
+% F_z
+% \end{bmatrix}
+% \label{eq:inplane}
+% \end{equation}
+
 \begin{equation}
+    \label{eq:inplaneXY_NASA}
 \begin{bmatrix}
-\dot{x}(t) \\[0.3em]
-\dot{z}(t) \\[0.3em]
-\ddot{x}(t) \\[0.3em]
-\ddot{z}(t)
+\dot{x}(t) \\
+\dot{y}(t) \\
+\ddot{x}(t) \\
+\ddot{y}(t)
 \end{bmatrix}
 =
 \begin{bmatrix}
 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 1 \\
-0 & 0 & 0 & 2\omega \\
-0 & 3\omega^2 & -2\omega & 0
+-3\omega^2 & 0 & 0 & -2\omega \\
+0 & 0 & 2\omega & 0
 \end{bmatrix}
 \begin{bmatrix}
-x(t) \\[0.3em]
-z(t) \\[0.3em]
-\dot{x}(t) \\[0.3em]
-\dot{z}(t)
+x(t) \\
+y(t) \\
+\dot{x}(t) \\
+\dot{y}(t)
 \end{bmatrix}
 +
 \begin{bmatrix}
@@ -365,18 +442,41 @@ z(t) \\[0.3em]
 0 & \frac{1}{m_c}
 \end{bmatrix}
 \begin{bmatrix}
-F_x \\[0.3em]
-F_z
+F_x \\
+F_y
 \end{bmatrix}
-\label{eq:inplane}
 \end{equation}
 
-De forma similar, para a dinâmica fora do plano, (\textit{out-of-plane}), considerando o vetor de estados $x_0 = [y, \dot{y}]^T$, é obtido:
+De forma similar, para a dinâmica fora do plano, (\textit{out-of-plane}), considerando o vetor de estados $x_0 = [z, \dot{z}]^T$, é obtido:
+
+% \begin{equation}
+%     \label{eq:outofplane}
+% \begin{bmatrix}
+% \dot{y}(t) \\[0.3em]
+% \ddot{y}(t)
+% \end{bmatrix}
+% =
+% \begin{bmatrix}
+% 0 & 1 \\
+% \omega^2 & 0
+% \end{bmatrix}
+% \begin{bmatrix}
+% y(t) \\[0.3em]
+% \dot{y}(t)
+% \end{bmatrix}
+% +
+% \begin{bmatrix}
+% 0 \\
+% \frac{1}{m_c}
+% \end{bmatrix}
+% F_y
+% \end{equation}
 
 \begin{equation}
+    \label{eq:outofplaneZ_NASA}
 \begin{bmatrix}
-\dot{y}(t) \\[0.3em]
-\ddot{y}(t)
+\dot{z}(t) \\
+\ddot{z}(t)
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -384,18 +484,16 @@ De forma similar, para a dinâmica fora do plano, (\textit{out-of-plane}), consi
 \omega^2 & 0
 \end{bmatrix}
 \begin{bmatrix}
-y(t) \\[0.3em]
-\dot{y}(t)
+z(t) \\
+\dot{z}(t)
 \end{bmatrix}
 +
 \begin{bmatrix}
 0 \\
 \frac{1}{m_c}
 \end{bmatrix}
-F_y
-\label{eq:outofplane}
+F_z
 \end{equation}
 
-O sistema formado pelas Eqs.~\eqref{eq:inplane} e \eqref{eq:outofplane} é conhecido como equações de Hill~\cite{hill1878}. Na literatura, essas equações também são referidas como equações de Clohessy--Wiltshire (CW), embora a formulação CW seja apresentada aqui de forma equivalente na Eq.~(A.22).
 
 

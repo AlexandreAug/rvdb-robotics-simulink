@@ -17,88 +17,120 @@
 \subsubsection{Restrições Operacionais}
 
 Tabela com os centros de massa dos elementos do manipulador robótico, conforme a tabela \ref{tab:centrosMassa_componentes}.
+
+% --- Centros de massa dos componentes (m)
 \begin{table}[h]
 \centering
-\caption{Centros de massa (em metros)}
+\caption{Centros de massa dos componentes do manipulador.}
 \label{tab:centrosMassa_componentes}
 \begin{tabular}{lrrr}
-\hline
-\textbf{Elemento} & \textbf{$x$ [m]} & \textbf{$y$ [m]} & \textbf{$z$ [m]}\\
-\hline
-Base geral                 &  0.000000 &  0.000000 &  0.050000 \\
-Disco                      &  0.000000 & -0.225000 &  0.105000 \\
-Junta 1                    &  0.000000 & -0.225000 &  0.112500 \\
-Elo 1                      &  0.000000 & -0.225000 &  0.165000 \\
-Junta 2                    &  0.000000 & -0.197500 &  0.165000 \\
-Elo 2                      &  0.000000 & -0.170000 &  0.315000 \\
-Junta 3                    &  0.000000 & -0.142500 &  0.465000 \\
-Elo 3                      &  0.000000 & -0.115000 &  0.615000 \\
-Junta 4                    &  0.000000 & -0.087500 &  0.765000 \\
-Elo 4                      & -0.000010 & -0.059960 &  0.915030 \\
-Junta 5                    & -0.000010 & -0.059960 &  1.067530 \\
-Ferramenta                 & -0.000010 & -0.059960 &  1.145030 \\
-Manipulador (global)       &  0.000000 & -0.004950 &  0.066530 \\
-\hline
-\end{tabular}
-\end{table}
-
-Tabela com os momentos de inércia dos elementos do manipulador robótico, conforme a tabela \ref{tab:matrizInercia_componentes}, todos em kg·m².
-
-\begin{table}[h]
-\centering
-\footnotesize
-\caption{Componentes da matriz de inércia \(\mathbf{I}\) de cada subsistema (kg·m$^2$).}
-\label{tab:matrizInercia_componentes}
-\begin{tabular}{lrrrrrr}
 \toprule
-Componente & $I_{xx}$ & $I_{yy}$ & $I_{zz}$ & $I_{xy}$ & $I_{xz}$ & $I_{yz}$ \\
+\textbf{Elemento} & \textbf{$x$ [m]} & \textbf{$y$ [m]} & \textbf{$z$ [m]}\\
 \midrule
-Base Geral              & 3.274000 & 3.274000 & 6.441000 & 0.000000 & 0.000000 & 0.000000 \\
-Disco                   & 0.000788 & 0.000788 & 0.001571 & 0.000000 & 0.000000 & 0.000000 \\
-Junta 1                 & 0.000002 & 0.000002 & 0.000003 & 0.000000 & 0.000000 & 0.000000 \\
-Elo 1                   & 0.000194 & 0.000194 & 0.000061 & 0.000000 & 0.000000 & 0.000000 \\
-Junta 2                 & 0.000002 & 0.000003 & 0.000002 & 0.000000 & 0.000000 & 0.000000 \\
-Elo 2                   & 0.004510 & 0.004510 & 0.000184 & 0.000000 & 0.000000 & 0.000000 \\
-Junta 3                 & 0.000002 & 0.000003 & 0.000002 & 0.000000 & 0.000000 & 0.000000 \\
-Elo 3                   & 0.004910 & 0.004510 & 0.000184 & 0.000000 & 0.000000 & 0.000000 \\
-Junta 4                 & 0.000002 & 0.000003 & 0.000002 & 0.000000 & 0.000000 & 0.000000 \\
-Elo 4                   & 0.004510 & 0.004510 & 0.000184 & 0.000000 & 0.000000 & 0.000000 \\
-Junta 5                 & 0.000002 & 0.000002 & 0.000003 & 0.000000 & 0.000000 & 0.000000 \\
-Ferramenta              & 0.000050 & 0.000050 & 0.000001 & 0.000000 & 0.000000 & 0.000000 \\
-Manipulador (global)    & 4.045000 & 3.993000 & 6.496000 & 0.000000 & 0.000003 & 0.102800 \\
+Base geral              &  0.000 & -0.000 &  0.050 \\
+Disco                   &  0.000 & -0.125 &  0.105 \\
+Junta 1                 &  0.000 & -0.125 &  0.113 \\
+Elo 1                   &  0.000 & -0.125 &  0.160 \\
+Junta 2                 &  0.000 & -0.153 &  0.165 \\
+Elo 2                   &  0.000 & -0.180 &  0.310 \\
+Junta 3                 &  0.000 & -0.208 &  0.465 \\
+Elo 3                   &  0.000 & -0.235 &  0.000 \\
+Junta 4                 &  0.000 & -0.263 &  0.765 \\
+Elo 4                   &  0.000 & -0.290 &  0.920 \\
+Ferramenta              &  0.000 & -0.290 &  1.139 \\
+\midrule
+\textbf{Manipulador (global)} & 0.000 & -0.065000 & 0.167000 \\
 \bottomrule
 \end{tabular}
-
-\vspace{0.3em}
-\footnotesize{Observação: produtos de inércia são nulos em todos os subsistemas exceto no MI global, onde \(I_{xz}\) e \(I_{yz}\) são não nulos.}
 \end{table}
+
+
+Tabela com os momentos de inércia dos elementos do manipulador robótico, conforme a tabela \ref{tab:matrizInercia_componentes}, todos em $kg·m²$.
+
+% --- MI (momentos principais: Ixx, Iyy, Izz)
+\begin{table}[h]
+\centering
+\small
+\caption{Matriz de inércia $\mathbf{I}$ — momentos principais (kg$\cdot$m$^{2}$).}
+\label{tab:mi_principais}
+\begin{tabular}{lrrr}
+\hline
+Componente & $I_{xx}$ & $I_{yy}$ & $I_{zz}$ \\
+\hline
+Base Geral         & 0.079000000 & 0.079000000 & 0.145000000 \\
+Disco              & 0.002000000 & 0.002000000 & 0.004000000 \\
+Junta 1            & 0.000004197 & 0.000004197 & 0.000008283 \\
+Elo 1              & 0.000000000 & 0.000000000 & 0.000059690 \\
+Junta 2            & 0.000004197 & 0.000008283 & 0.000004197 \\
+Elo 2              & 0.003000000 & 0.003000000 & 0.000000000 \\
+Junta 3            & 0.000004197 & 0.000008283 & 0.000004197 \\
+Elo 3              & 0.003000000 & 0.003000000 & 0.000000000 \\
+Junta 4            & 0.000004197 & 0.000008283 & 0.000004197 \\
+Elo 4              & 0.003000000 & 0.003000000 & 0.000000000 \\
+Ferramenta         & 0.000078210 & 0.000078210 & 0.000001622 \\
+\hline
+\textbf{Manipulador (global)} & \textbf{0.490000000} & \textbf{0.438000000} & \textbf{0.202000000} \\
+\hline
+\end{tabular}
+\end{table}
+
+% --- MI (produtos de inércia: Ixy, Ixz, Iyz)
+\begin{table}[h]
+\centering
+\small
+\caption{Matriz de inércia $\mathbf{I}$ — produtos de inércia (kg$\cdot$m$^{2}$).}
+\label{tab:mi_produtos}
+\begin{tabular}{lrrr}
+\hline
+Componente & $I_{xy}$ & $I_{xz}$ & $I_{yz}$ \\
+\hline
+Base Geral         & 0.000 & 0.000 & 0.000 \\
+Disco              & 0.000 & 0.000 & 0.000 \\
+Junta 1            & 0.000 & 0.000 & 0.000 \\
+Elo 1              & 0.000 & 0.000 & 0.000 \\
+Junta 2            & 0.000 & 0.000 & 0.000 \\
+Elo 2              & 0.000 & 0.000 & 0.000 \\
+Junta 3            & 0.000 & 0.000 & 0.000 \\
+Elo 3              & 0.000 & 0.000 & 0.000 \\
+Junta 4            & 0.000 & 0.000 & 0.000 \\
+Elo 4              & 0.000 & 0.000 & 0.000 \\
+Ferramenta         & 0.000 & 0.000 & 0.000 \\
+\hline
+\textbf{Manipulador (global)} & \textbf{0.000} & \textbf{0.000} & \textbf{0.119000000} \\
+\hline
+\end{tabular}
+
+\vspace{0.2em}
+\footnotesize{Observação: produtos de inércia são nulos em todos os subsistemas; no MI global, $I_{yz}\neq 0$.}
+\end{table}
+
 
 \newpage
 
 Tabela com os parâmetros físicos dos elementos do manipulador robótico, conforme a tabela \ref{tab:parametros_fisicos}, todos em kg.
 
+% --- Parâmetros físicos (m, kg)
 \begin{table}[h]
 \centering
 \caption{Parâmetros físicos dos subsistemas do manipulador.}
 \label{tab:parametros_fisicos}
-\begin{tabular}{lrrr}  % ← Corrigido para 4 colunas
+\begin{tabular}{lrrr}
 \toprule
 Componente & Altura [m] & Diâmetro [m] & Massa [kg] \\
 \midrule
-Base Geral  & 0.100 & 0.900 & 63.6173 \\
-Disco       & 0.010 & 0.200 & 0.3142 \\
-Junta 1     & 0.005 & 0.050 & 0.0098 \\
-Elo 1       & 0.100 & 0.050 & 0.1964 \\
-Junta 2     & 0.005 & 0.050 & 0.0098 \\
-Elo 2       & 0.300 & 0.050 & 0.5890 \\
-Junta 3     & 0.005 & 0.050 & 0.0098 \\
-Elo 3       & 0.300 & 0.050 & 0.5890 \\
-Junta 4     & 0.005 & 0.050 & 0.0098 \\
-Elo 4       & 0.300 & 0.050 & 0.5890 \\
-Junta 5     & 0.005 & 0.050 & 0.0098 \\
-Ferramenta  & 0.150 & 0.015 & 0.0265 \\
+Base Geral  & 0.100 & 0.500 & 3.653 \\
+Disco       & 0.010 & 0.200 & 0.848 \\
+Junta 1     & 0.005 & 0.050 & 0.027 \\
+Elo 1       & 0.100 & 0.050 & 0.111 \\
+Junta 2     & 0.005 & 0.050 & 0.027 \\
+Elo 2       & 0.300 & 0.050 & 0.313 \\
+Junta 3     & 0.005 & 0.050 & 0.027 \\
+Elo 3       & 0.300 & 0.050 & 0.313 \\
+Junta 4     & 0.005 & 0.050 & 0.027 \\
+Elo 4       & 0.300 & 0.050 & 0.313 \\
+Ferramenta  & 0.150 & 0.015 & 0.040 \\
 \midrule
-\textbf{Total (manipulador)} & --- & --- & \textbf{65.9704} \\
+\textbf{Total (manipulador)} & --- & --- & \textbf{5.699} \\
 \bottomrule
 \end{tabular}
 \end{table}
