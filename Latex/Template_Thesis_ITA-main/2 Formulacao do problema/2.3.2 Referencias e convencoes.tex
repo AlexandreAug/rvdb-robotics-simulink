@@ -1,0 +1,34 @@
+\subsection{Referências e convenções adotadas}
+
+Foi utilizado o referencial dextrogiro (\emph{LVLH, Local Vertical, Local Horizontal}) centrado no \emph{target} \cite{santosDextrogiro2021} para a formulação relativa e simulações numéricas.
+
+\begin{figure}[ht] % h = here, t = top, b = bottom
+    \centering
+    \includegraphics[width=0.5\textwidth]{2 Formulacao do problema/Imagens/LVLH.png}
+    \caption{Referencial LVLH centrado no target, adaptado de \cite{Folta2022}.}
+    \label{fig:LVLH_NASA}
+\end{figure}
+
+Dessa forma, a convenção\footnote{Alguns autores, como \cite{fehse2003}, adotam $\vec x$ como tangencial (\emph{along-track, vetor velocidade}), $\vec z$ como radial da espaçonave para o centro da Terra.}
+adotada para este trabalho \cite{alfriend2010,Folta2022} é a seguinte: $\vec x$ é radial, apontando para fora da órbita, a partir do CoM; $\vec y$ é tangencial, apontando na direção do movimento orbital (vetor velocidade ou \emph{along-track}); e por fim, $\vec z$, normal ao plano orbital, apontando para o nadir, também conhecido como \emph{cross-track}.
+
+\subsection{Subsistema manipulador robótico}
+O quadro do corpo (\emph{body frame}) é preso de forma rígida à plataforma onde o manipulador robótico está montado. Portanto, é solidário (\emph{sem movimento relativo}).
+O frame $\boldsymbol{\{B\}}$
+- ou \emph{frame {0}}, como denominado por \cite{craig2005} - 
+é o sistema de coordenadas fixado na plataforma e sua origem foi definido no seu CoM, portanto, o manipulador robótico rotaciona e translada junto a plataforma.
+Este frame é utilizado como referencial para os parâmetros inerciais da base, como massa e matriz de inércia $\boldsymbol{I_B}$.
+Caso seja necessário, o \emph{frame {0}} pode ser fixado no ambiente desejado, no entanto, será necessário considerar uma transformação de coordenadas adicional para o frame do corpo.
+
+Para identificar e enumerar cada elo, foi utilizado $\{i\}$; iniciando em $i=1$ para o primeiro elo até $i=5$ para o último elo, que por sua vez está acoplado à ferramenta do manipulador robótico.
+Esse controle será aproveitado para a tabela de Denavit-Hartenberg a ser apresentada no futuro.
+
+\subsubsection{Tabela Denavit-Hartenberg do manipulador robótico}
+Com o objetivo 
+
+
+
+
+
+
+

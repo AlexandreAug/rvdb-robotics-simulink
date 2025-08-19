@@ -1,0 +1,30 @@
+\subsection{Escopo físico e dinâmico do manipulador robótico}
+A fase de aproximação tratada neste documento é uma aproximação curta (\emph{close rendezvous}), em que a captura ocorre pela ferramenta (\emph{tool capture}) enquanto o \emph{chaser} permanece à deriva em relação ao \emph{target}. Até o instante final de captura não há contato entre as espaçonaves; assim, as forças de contato não foram modeladas.
+
+As espaçonaves operam em regime de microgravidade. No subsistema do manipulador robótico, as forças gravitacionais são desprezadas. No subsistema orbital relativo, a translação/rotação relativas são descritas pelas Equações de Hill \cite{hill1878}. Portanto, este documento modela apenas a atitude da base e o movimento interno do manipulador.
+
+Não há atmosfera modelada, logo, não há arrasto aerodinâmico. Perturbações externas como torque magnético e pressão de radiação solar também não são consideradas. As forças e torques de controle aplicados ao corpo-base são tratados como entradas ideais no centro de massa (\emph{Center of Mass, CoM}) do \emph{chaser}, e também não foi modelado o sistema de propulsão.
+
+Todos os corpos (juntas, elos, espaçonaves, base) são rígidos, sem elasticidade, deformações, vibrações, folgas ou ruído. Todos os elementos são ideais, mas com limites físicos de rotação, velocidade e aceleração, tratados pela lei de controle.
+
+\subsection{Atuadores e sensores}
+Os atuadores das juntas aplicam torques (ou forças, no caso de junta prismática) denotados por $\tau_i$. Sensores de junta fornecem posição e velocidade. Para a base, torques/forças são entradas de controle ideais (sem detalhamento de atuadores).
+
+\subsection{Restrições operacionais}
+Para evitar colisões, o movimento do manipulador robótico é restringido a um espaço de trabalho (\emph{workspace}) que não intercepte a base do \emph{chaser} nem o \emph{target}. Além disso, foram estabelecidos limites de deslocamento, velocidade e aceleração por junta:
+\[
+q_{i,min} \le q_i \le q_{i,max},\qquad
+|\dot q_i| \le \dot q_{i,max},\qquad
+|\ddot q_i| \le \ddot q_{i,max}.
+\]
+As quatro primeiras juntas ($J_1$–$J_4$) são revolutas e a quinta junta ($J_5$) é do tipo \emph{prismática}, dessa forma, obtém-se a configuração $4R1P$, com curso limitado ao seu comprimento útil.
+
+\subsection{Incertezas e variações}
+Foram consideradas incertezas fixas por elo e para o conjunto (massas $m_i$, posições de CoM e momentos de inércia $\mathbf{I}_i$). As variáveis de estado são os ângulos/deslocamentos de junta, suas velocidades e acelerações.
+
+\subsection{Critérios de validade do modelo}
+O modelo é válido para taxas e acelerações típicas de operação do manipulador robótico. Não se cobrem fenômenos não rígidos como flexibilidade mecânicas e nem a flexibilidade do material, nem pequenas variações na taxa de atitude da base e também há ausência do aquecimento. A modelagem cinemática e dinâmica seguem \cite{craig2005}, enquanto que no contexto de microgravidade e \emph{rendezvous and docking/berthing} com base flutuante seguem \cite{fehse2003,wie2008space}.
+
+\subsection{Limites operacinais estabelecidos}
+
+A seguir são destacados os limites operacionais estabelecidos para o manipulador robótico:
