@@ -34,6 +34,10 @@
 \usepackage{placeins}
 \usepackage{enumitem}
 \usepackage{bookmark}
+\usepackage{textcomp}
+\usepackage{lmodern}
+
+\usepackage[abbreviations]{glossaries-extra}
 % \usepackage{utf8}{inputenc}
 % \usepackage[T1]{fontenc}
 % \usepackage[brazil]{babel}
@@ -44,58 +48,31 @@
 \usepackage{booktabs}
 %PACOTETABELAS_SE _ERRADO_EXCLUIR_ACIMA
 
-
-
+%% Macros LaTeX
 \newcommand{\vect}[1]{\vec{#1}}
 \newcommand{\norm}[1]{\left\lVert #1\right\rVert}
-\newcommand{\rhat}{\hat{\mathbf r}}
+\newcommand{\rhat}{\hat{\mathbf{r}}}
+\newcommand{\ahat}{\hat{\mathbf{a}}}
 \newcommand{\I}{\mathbf I}
 
-%%%%%%%%%%%%%%%%%%%%%%%%% MEUS PACKAGES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \usepackage[utf8]{inputenc} % Codificação UTF-8
-% \usepackage[T1]{fontenc} % Suporte a fontes com acentos
-% % \usepackage{lmodern} % Usa fontes Latin Modern
-% \usepackage[brazil]{babel} % Idioma Português (Brasil)
-
-% \usepackage{graphicx} % Inclusão de gráficos
-% \usepackage{indentfirst}
-% \usepackage{float} % Controle de posição de figuras e tabelas
-% \usepackage{amsmath, amssymb} % Suporte avançado a matemática
-% \usepackage{hyperref} % Links clicáveis
-% \hypersetup{
-%     colorlinks=true,
-%     linkcolor=black,
-%     citecolor=black,
-%     urlcolor=blue,
-%     pdftitle={Documento ABNT},
-%     pdfauthor={Seu Nome}
-% }
-
-%HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+%++++++++++++++++
 \addbibresource{Referencias/referencias.bib}
-
-%HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-
-%HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%++++++++++++++++
 % Espaçamento padrão de todo o documento:
 % singlespacing Para um espaçamento simples
 % onehalfspacing Para um espaçamento de 1,5
 % doublespacing Para um espaçamento duplo
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%++++++++++++++++
 \onehalfspacing
-
 %singlespacing Para um espaçamento simples
 %onehalfspacing Para um espaçamento de 1,5
 %doublespacing Para um espaçamento duplo
-
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+%++++++++++++++++
 % Identificacoes (se o trabalho for em inglês, insira os dados em inglês)
 % Para entradas abreviadas de Professora (Profa.) em português escreva: Prof$^\textnormal{a}$.
-%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-\course{Programa de Pós-Graduação}  % Programa de PG ou Curso de Graduação
+%++++++++++++++++
+\course{Programa de Pós-Graduação}
+% Programa de PG ou Curso de Graduação
 %\area{Aircraft Design} % Área de concentração na PG (Não utilizado no caso de TG)
 
 % Autor do trabalho: Nome Sobrenome
@@ -111,8 +88,8 @@
 \advisor{Prof.~Dr.}{Ijar Milagre da Fonseca}{ITA}
 
 % Coorientador (Caso não haja coorientador, colocar ambas as variáveis \coadvisorgender e \coadvisor comentadas, com um % na frente)
-\coadvisorgender{fem}									% masc ou fem
-\coadvisor{Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$.}{Doralice Serra}{OVNI}
+% \coadvisorgender{fem}									% masc ou fem
+% \coadvisor{Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$.}{Doralice Serra}{OVNI}
 
 % Pró-reitor da Pós-graduação
 \bossgender{masc}												% masc ou fem
@@ -123,12 +100,11 @@
 \bosscourse{Prof.~Dr.}{John Walker}
 
 % Palavras-Chaves informadas pela Biblioteca -> utilizada na CIP
-\kwcip{Cupim}
-\kwcip{Dilema}
-\kwcip{Construção}
+\kwcip{Rendezvous and docking/berthing}
+\kwcip{Manipulador robótico}
+\kwcip{Controle PD}
 
 % membros da banca examinadora
-
 \examiner{Prof. Dr.}{Alan Turing}{Presidente}{ITA}
 \examiner{Prof. Dr.}{Linus Torwald}{}{UXXX}
 \examiner{Prof. Dr.}{Richard Stallman}{}{UYYY}
@@ -136,18 +112,15 @@
 \examiner{Prof. Dr.}{Mickey Mouse}{}{DISNEY}
 
 % Data da defesa (mês em maiúsculo, se trabalho em inglês, e minúsculo se trabalho em português)
-\date{23}{novembro}{2022}
+\date{10}{dezembro}{2025}
 
 % Número CDU - (somente para TG)
 % \cdu{???.??}
 
-% Glossario
-\makenoidxglossaries % to use glossaries pkg
-\frontmatter
-
-
 % \input{PreTextuais/listaabreviaturas.tex}
 % \input{PreTextuais/listasimbolos.tex}
+
+\frontmatter
 
 \begin{document}
 % \input{PreTextuais/main}
@@ -158,22 +131,25 @@
 
 %%%%%%%%%%%%%%% CAPITULO 1 %%%%%%%%%%%%%%%
 
-\chapter{Introdução}
+% \chapter{Introdução}
 % \input{1 Introducao/1 Capitulo1 Principal.tex}
 
 %%%%%%%%%%%%%%% CAPITULO 2 %%%%%%%%%%%%%%%
 
-\chapter{Formulação do Problema}
 \input{2 Formulacao do problema/1 Capitulo2 Principal.tex}
+
+
+
+
 
 %%%%%%%%%%%%%%% CAPITULO 3 %%%%%%%%%%%%%%%
 
-\chapter{Resultados e Discussões dos Resultados das Simulações Computacionais}
+% \chapter{Resultados e Discussões dos Resultados das Simulações Computacionais}
 % \input{3 Resultados e discussoes/1 Capitulo3 Principal.tex}
 
 %%%%%%%%%%%%%%% CAPITULO 4 %%%%%%%%%%%%%%%
 
-\chapter{Conclusão e Trabalhos Futuros}
+% \chapter{Conclusão e Trabalhos Futuros}
 % \input{4 Conclusoes e trabalhos futuros/1 Capitulo4 Principal.tex}
 
 %% Referências bibliográficas
@@ -187,19 +163,24 @@
 %\chapter{Controle Robusto de Concretos Caóticos}
 % \input{Cap3/cap3}
 
+%% REVISÃO PARA REMOVER LACUNAS DE CONHECIMENTO
+% \chapter{Revisão matemática}
+% \section{Algebra Linear Básica}
+% \input{Outros/Revisao/1 Algebra linear basica/1.1 Vetores.tex}
+
 % REFERENCIAS BIBLIOGRAFICAS
 \renewcommand\bibname{\itareferencesnamebabel} %renomear título do capítulo referências
 \printbibliography
 
 % Apendices
 \appendix
-\chapter{Tópicos de Dilema Linear} %opcional
+\chapter{AAAAA} %opcional
 \input{ApeA/apendiceA}
 
 % Anexos
-\annex
-\chapter{Exemplo de um Primeiro Anexo} %opcional
-\input{AneA/anexoA}
+% \annex
+% \chapter{Exemplo de um Primeiro Anexo} %opcional
+% \input{AneA/anexoA}
 
 % Glossario
 %\itaglossary

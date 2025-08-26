@@ -1,0 +1,140 @@
+% \section{Parâmetros Inerciais e Agregação Dinâmica}
+% Após definir a geometria do manipulador robótico em 3D através da ferramenta CAD (\emph{Computer-Aided Design}) Autodesk Fusion 360, foi possível obter dados individuais dos elos, das juntas, da base e do manipulador robótico como um todo, este podendo ser referenciado como (\emph{manipulador robótico global}).
+% Esses dados individuais e global são as massas, centro de massa local e o tensor de inércia em relação ao próprio centro de massa e frame local, e todos os dados podem ser conferidos no Apêndice A deste trabalho.
+
+% Como o centro de massa é fornecido no frame local do elo, é necessário converter do centro de massa do elo ($\vec{r}_{i}$) para o centro de massa do frame da base ($\vec{r}_{b}$), o termo ($\vec p_i$) é a posição da origem do frame do elo $i$ em relação à base, e o termo ($\vec R_i$) é a matriz de rotação do frame do elo $i$ em relação à base, portanto, utiliza-se:
+% % --- Conversão para o frame da base
+% \begin{equation}
+%     \vec r_b = \vec p_i + \vec R_i \, \vec r_{i},
+% \end{equation}
+
+% O tensor de inércia ($\vec I_i$) é dado em relação ao centro de massa no frame do elo, alinhado com seus eixos principais, portanto é necessário rotacioná-lo para o frame da base, conforme:
+% \begin{equation}
+%     {}^{0}\vec{I}_{i} = \vec{R}_i \,*\, {}^{(elo)}\vec{I}_{i} \,*\, \vec{R}_i^T,
+% \end{equation}
+
+\section{Parâmetros Inerciais e Agregação Dinâmica}
+Após a modelagem geométrica do manipulador robótico em 3D utilizando a ferramenta CAD (\emph{Computer-Aided Design}) Autodesk Fusion 360, obtiveram-se os parâmetros inerciais individuais de cada elo, junta e base, bem como os parâmetros do manipulador completo. Esses dados compreendem as massas, a posição do centro de massa local e o tensor de inércia em relação ao respectivo centro de massa e \emph{frame} local. Todos os valores detalhados encontram-se no Apêndice A.
+
+\subsection{Parâmetros inerciais por elo}
+Como o centro de massa é fornecido no \emph{frame} local do elo, é necessário convertê-lo para o \emph{frame} da base. Denotando por $\vec{r}_{i}$ o vetor do centro de massa no \emph{frame} local do elo, por $\vec{p}_i$ a posição da origem do \emph{frame} do elo $i$ em relação à base, e por $\vec{R}_i$ a matriz de rotação do \emph{frame} do elo $i$ em relação à base, tem-se:
+\begin{equation}
+    \vec r_b = \vec p_i + \vec R_i \, \vec r_{i}.
+\end{equation}
+
+\subsection{Transformação para o frame da base}
+De forma análoga, o tensor de inércia ${}^{(elo)}\mathbf{I}_{i}$ fornecido no centro de massa do elo, alinhado com os eixos principais no \emph{frame} local, deve ser rotacionado para o \emph{frame} da base segundo:
+\begin{equation}
+    {}^{0}\mathbf{I}_{i} =
+    \vec{R}_i \,*\,
+    {}^{(\text{elo})}\mathbf{I}_{i}
+    \,*\, {}^{\, T} \vec{R}_i.
+\end{equation}
+
+% Mesmo após rotacionar o tensor de inércia, ele ainda estará sendo referenciado ao respectivo centro de massa, portanto é necessário reescrevê-lo, utilizando o Teorema de Steiner \eqref{eq:Teorema_Steiner}, com relação a origem da base.
+% O primeiro termo $\vec I_o$ representa a inércia do elo $i$ em relação à origem da base,
+% ${}^0 \vec I_i$ é a inércia no centro de massa rotacionado para o frame da base,
+% $m_i$ é a massa do elo $i$, e por fim,
+% $\vec r_i$ é a posição do centro de massa em relação à base.
+% % --- Teorema de Steiner
+% \begin{equation}
+%     \label{eq:Teorema_Steiner}
+%     \vec{I}_{O_i} = {}^{(0)} \, \vec{I}_{C_i} +
+%     m_i \big( \| \vec{r}_i \|^2 \, \vec{I}_3 -
+%     \vec{r}_i \,\, \vec{r}_i^{\,T} \big)
+% \end{equation}
+
+% Realiza-se a somatória de todas as massas dos elos.
+% % --- Agregação total
+% \begin{equation}
+%     M_{Elos} = \sum_i m_i,
+% \end{equation}
+
+% Através de uma média ponderada das posições dos centros de massa de cada elo pode-se obter o centro de massa total do sistema ($CoM_{Global}$)
+% \begin{equation}
+%     \vec{r}_{Global} = \frac{1}{M_{Elos}} \sum_i m_i \, \vec{r}_i
+% \end{equation}
+
+\subsection{Aplicação do Teorema de Steiner}
+Mesmo após a rotação, o tensor de inércia ainda está referido ao centro de massa do elo. Assim, aplica-se o Teorema de Steiner \eqref{eq:Teorema_Steiner} para referi-lo à origem da base $O$:
+\begin{equation}
+  \label{eq:Teorema_Steiner}
+  {}^{0} \mathbf{I}_{O_i} =
+  {}^{0} \mathbf{I}_{C_i} +
+  m_i
+    \big(
+    ({}^{\,\, T} \vec r_i \,\, \vec r_i)
+    \mathbf{I}_3 - \vec r_i \, ({}^{T} \vec r_i)
+    \big),
+\end{equation}
+
+Onde ${}^{0}\mathbf{I}_{O_i}$ é o tensor de inércia do elo $i$ em relação à origem da base;
+${}^{0}\mathbf{I}_{C_i}$ é o tensor no centro de massa já rotacionado para a base;
+$m_i$ é a massa do elo $i$;
+$\vec r_i$ é a posição do seu centro de massa em relação à base;
+e $\mathbf{I}_3$ é a matriz identidade $3\times 3$.
+
+%% ===== EXPLICAÇÃO =====
+% A matriz identidade serve para construir um tensor de inercia equivalente que leve em conta a mudança de referencia (do CoM para outro ponto)
+% I_3 aparece pq estamos tratando grandezas vetoriais 3D
+% é a forma matricial de generalizar a formula escalar I = sum mr^2 para o caso tensorial
+% sem ela, não teriamos a componente isotropica
+
+
+% A massa total (considerando todos os corpos rígidos incluídos no modelo) é:
+% \begin{equation}
+%   M_{\text{total}} \;=\; \sum_{j} m_j.
+% \end{equation}
+
+% O centro de massa global (\emph{CoM} do sistema) é a média ponderada das posições dos centros de massa:
+% \begin{equation}
+%   \vec r_{\text{Global}} \;=\; \frac{1}{M_{\text{total}}} \sum_{j} m_j \,\vec r_j.
+% \end{equation}
+
+% Para encontrar a inércial total do sistema (referindo-se à origem da base) é necessário somar todas as inércias que já foram referidas à origem da base.
+% \begin{equation}
+%     \vec{I}_O = \sum_i \vec{I}_{O_i},
+% \end{equation}
+
+% Para encontrar a inércia total no sistema e que esteja referido ao centro de massa total, é necessário aplicar o Teorema de Steiner novamente:
+% \begin{equation}
+%     \vec{I}_G = \vec{I}_O -
+%     M_{Global} \big(
+%     \|\vec{r}_G\|^2 \vec{I}_3 -
+%     \vec{r}_G ({}^{\,T}\vec{r}_G) \big),
+% \end{equation}
+
+% Para segurança, caso a matriz de inércia não estiver simétrica por conta de erros numéricos, é possível transformá-la em uma matriz de inércia simétrica:
+% % --- Simetrização (se necessário)
+% \begin{equation}
+%     \vec{I} \leftarrow \frac{1}{2} (\vec{I} + \vec{I}^{\, T}),
+% \end{equation}
+
+\subsection{Agregação total dos parâmetros do manipulador}
+A seguir todos os parâmetros já calculados serão agregados, iniciando pela massa. A massa total (considerando todos os corpos rígidos incluídos no modelo) é:
+\begin{equation}
+  M_{\text{total}} = \sum_{j} m_j
+\end{equation}
+
+O centro de massa global é a média ponderada das posições dos centros de massa:
+\begin{equation}
+  \vec{r}_{\text{Global}} = \frac{1}{M_{\text{total}}} \sum_{j} m_j \,\vec{r}_j .
+\end{equation}
+
+Para encontrar a inércia total do sistema referida à origem da base, soma-se as inércias já referidas à origem:
+\begin{equation}
+  \mathbf{I}_{O} \;=\; \sum_{i} \mathbf{I}_{O_i} .
+\end{equation}
+
+Para obter a inércia total referida ao centro de massa global, aplica-se novamente o Teorema de Steiner, dessa vez transportando a origem $O$ para o centro de massa global:
+\begin{equation}
+  \mathbf{I}_{G} \;=\; \mathbf{I}_{O} \;-\;
+  M_{\text{total}} \Big( \|\vec{r}_{\text{Global}}\|^2 \,\mathbf{I}_3 \;-\;
+  \vec{r}_{\text{Global}} \, \, {}^{\,T} \vec{r}_{\text{Global}} \Big) .
+\end{equation}
+
+\subsection{Verificações numéricas e consistência}
+Uma verificação adicional pode ser feita com o objetivo de verificar a segurança numérica, caso a matriz de inércia apresente assimetria por efeitos de arredondamento, pode-se deixá-la simétrica:
+\begin{equation}
+  \mathbf{I} \;\leftarrow\; \tfrac{1}{2}\,\big( \mathbf{I} + \mathbf{I}^{\,T} \big).
+\end{equation}

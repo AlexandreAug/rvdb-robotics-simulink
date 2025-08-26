@@ -1,30 +1,104 @@
-\subsection{Escopo físico e dinâmico do manipulador robótico}
-A fase de aproximação tratada neste documento é uma aproximação curta (\emph{close rendezvous}), em que a captura ocorre pela ferramenta (\emph{tool capture}) enquanto o \emph{chaser} permanece à deriva em relação ao \emph{target}. Até o instante final de captura não há contato entre as espaçonaves; assim, as forças de contato não foram modeladas.
+Entre 2.1 Modelagens e 2.1.1 Escopo
 
-As espaçonaves operam em regime de microgravidade. No subsistema do manipulador robótico, as forças gravitacionais são desprezadas. No subsistema orbital relativo, a translação/rotação relativas são descritas pelas Equações de Hill \cite{hill1878}. Portanto, este documento modela apenas a atitude da base e o movimento interno do manipulador.
+======================================
 
-Não há atmosfera modelada, logo, não há arrasto aerodinâmico. Perturbações externas como torque magnético e pressão de radiação solar também não são consideradas. As forças e torques de controle aplicados ao corpo-base são tratados como entradas ideais no centro de massa (\emph{Center of Mass, CoM}) do \emph{chaser}, e também não foi modelado o sistema de propulsão.
+Para resolução, será envolvida matemática associada para resolução de dinâmica orbital, de atitude e de controle. 
 
-Todos os corpos (juntas, elos, espaçonaves, base) são rígidos, sem elasticidade, deformações, vibrações, folgas ou ruído. Todos os elementos são ideais, mas com limites físicos de rotação, velocidade e aceleração, tratados pela lei de controle.
+A modelagem é a obtenção das equações do movimento da espaçonave do tipo manipulador robótico.
+São as equações diferenciais da cinemática (que são de primeira ordem) que fornecem as velocidades do sistema.
+São as equações diferenciais da dinâmica (que são de segunda ordem) que fornecem as velocidades do sistema.
+Diferenciais de segunda ordem = d2x/dt2, são relacionadas ao torque ou força aplicadas.  
+
+Enquanto que as de primeira ordem, obtem-se as velocidades do sistema.
+
+Para um corpo em rotação de si mesmo (ou satelite em relaçao ao seu centro de massa).
+Movimento orbital é o movimento da espaçonave em relação a um determinado centro de massa, como Planeta.
+
+Equacionamento da dinâmica tem 6 termos, sendo: 3 acelerações e 3 velocidades.
+Euler são 3 de torque, momento.
+Cinemática são 3: tx variação de tempo dos ângulos de Euler.
+
+Hipoteses de modelagem
+
+======================================
+
+Qdo o braço robótico se move, somente a base é considerada rígida.
+
+Sistema rígido: vários corpos
+Sistema não rígido: vários corpos, porém com os elos se movendo.
+
+Parte da modelagem: parte rígida e parte rígida + movimentação dos links (corpo não rígido).
+
+Fase não operacional: é quando o manipulador robótico está travado junto a base, neste caso as juntas estão travadas.
+
+Fase operacional: deixa de ser corpo rígido e o robô está em operação. As juntas estão exercendo torque sobre os elos.
+
+\chapter{Formulação do problema}
+Nesta pesquisa de Mestrado será simulado computacionalmente a dinamica orbital e de atitude de uma espaçonave tipo manipulador robótico em missão de \emph{rendezvous and docking/berthing} (RVD/B) em órbita baixa terrestre (LEO, \emph{Low Earth Orbit}).
+
+\section{Hipóteses de modelagem}
+A fase de aproximação tratada neste documento é uma aproximação durante a fase transitória do \emph{rendezvous and docking/berthing} que antecede à captura a ser realizada pela ferramenta (\emph{tool capture}) enquanto o \emph{chaser} permanece em espera em relação ao \emph{target}.
+Após o travamento da ferramenta na porta de docking, as características do sistemas \emph{chaser} e \emph{target} se alteram, e o sistema passa a ser tratado como um único corpo rígido. A dinâmica deste sistema acoplado não será abordada neste trabalho.
+% Até o instante final de captura não há contato entre as espaçonaves; assim, as forças de contato não foram modeladas.
+
+As espaçonaves operam em regime de microgravidade.
+No subsistema do manipulador robótico, as forças gravitacionais são desprezadas, e no subsistema orbital relativo, a translação/rotação relativas são descritas pelas Equações de Hill \cite{hill1878}. Portanto, este documento modela apenas a atitude da base e o movimento do manipulador robótico.
+
+As espaçonaves operam em ambiente de microgravidade, não significando que não há ausência da gravidade, mas que ocorre o equilíbrio entre a força gravitacional e a força centrífuga. As Equações de Hill \cite{hill1878} são utilizadas para descrever o movimento orbital relativo entre as duas espaçonaves neste contexto de órbita circular.
+
+\begin{figure}[ht] % h = here, t = top, b = bottom
+    \centering
+    \includegraphics[width=0.5\textwidth]{2 Formulacao do problema/Imagens/Problema dos dois corpos.png}
+    \caption{Problema dos dois corpos. Fonte: Adaptado de Bong Wie (2008).}
+    \label{fig:problema_doisCorpos}
+\end{figure}
+
+Além disso, movimento é Kepleriano, ou seja, sem perturbações, e por conta do tempo de simulação ser curto, as perturbações ambientais não influenciam nas modelagens.
+% Diversas perturbações ambientais não foram consideradas, como a atmosfera, logo, não há arrasto aerodinâmico. Outras perturbações externas como torque magnético e pressão de radiação solar também não são consideradas. As forças e torques de controle aplicados ao corpo-base são tratados como entradas ideais no centro de massa (\emph{Center of Mass, CoM}) do \emph{chaser}, e também não foi modelado o sistema de propulsão.
+
+Todos os corpos (juntas, elos, espaçonaves, base, porta de docking etc.) são rígidos durante a fase não operacional e durante a fase operacional, o manipulador robótico se comporta como corpo não rígido.
+% sem elasticidade, deformações, vibrações, folgas ou ruído. Todos os elementos são ideais, mas com limites físicos de rotação, velocidade e aceleração, tratados pela lei de controle.
+
+Os fenômenos como a flexibilidade mecânica, a flexibilidade do material, as pequenas variações na taxa de atitude da base, e o aquecimento por qualquer tipo de atrito não foram estudados neste trabalho.
+A modelagem cinemática e dinâmica seguem \cite{craig2005}, enquanto que no contexto de microgravidade e \emph{rendezvous and docking/berthing} com base flutuante seguem \cite{fehse2003,wie2008space}.
+
+Por fim, as massas de ambas as espaçonaves são constantes, e as massas dos elos do manipulador robótico também são constantes, ou seja, não há consumo de propelente ou perda de massa.
 
 \subsection{Atuadores e sensores}
-Os atuadores das juntas aplicam torques (ou forças, no caso de junta prismática) denotados por $\tau_i$. Sensores de junta fornecem posição e velocidade. Para a base, torques/forças são entradas de controle ideais (sem detalhamento de atuadores).
+Os atuadores das juntas revolutas aplicam torques, enquanto que o atuador da junta prismática exerce força.
+Ambos são denotados por $\tau_i$.
+A modelagem realizada é abstrata no nível de dinâmica, não havendo referência direta ao hardware.
 
 \subsection{Restrições operacionais}
-Para evitar colisões, o movimento do manipulador robótico é restringido a um espaço de trabalho (\emph{workspace}) que não intercepte a base do \emph{chaser} nem o \emph{target}. Além disso, foram estabelecidos limites de deslocamento, velocidade e aceleração por junta:
-\[
-q_{i,min} \le q_i \le q_{i,max},\qquad
-|\dot q_i| \le \dot q_{i,max},\qquad
-|\ddot q_i| \le \ddot q_{i,max}.
-\]
-As quatro primeiras juntas ($J_1$–$J_4$) são revolutas e a quinta junta ($J_5$) é do tipo \emph{prismática}, dessa forma, obtém-se a configuração $4R1P$, com curso limitado ao seu comprimento útil.
+Para evitar colisões, o movimento do manipulador robótico é restringido, de forma arbitrária, a um espaço de trabalho (\emph{workspace}) para que não intercepte os limites físicos do \emph{chaser} e nem do \emph{target}. Além disso, foram estabelecidos limites de sua posição \eqref{eq:limites_juntas_posicao}, velocidade \eqref{eq:limites_juntas_velocidade} e aceleração \eqref{eq:limites_juntas_aceleracao} por junta:
+
+\begin{equation}
+    \label{eq:limites_juntas_posicao}
+    q_{i,min} \le q_i \le q_{i,max}
+\end{equation}
+
+\begin{equation}
+    \label{eq:limites_juntas_velocidade}
+|\dot q_i| \le \dot q_{i,max}
+\end{equation}
+
+\begin{equation}
+    \label{eq:limites_juntas_aceleracao}
+\ddot q_i| \le \ddot q_{i,max}
+\end{equation}
+
+As quatro primeiras juntas ($J_1 - J_4$) são revolutas e a quinta junta ($J_5$) é do tipo prismática, dessa forma, obtém-se a configuração $4R1P$, com curso limitado ao seu comprimento útil.
 
 \subsection{Incertezas e variações}
-Foram consideradas incertezas fixas por elo e para o conjunto (massas $m_i$, posições de CoM e momentos de inércia $\mathbf{I}_i$). As variáveis de estado são os ângulos/deslocamentos de junta, suas velocidades e acelerações.
+% Foram consideradas incertezas fixas por elo e para o conjunto (massas $m_i$, posições de CoM e momentos de inércia $\mathbf{I}_i$). As variáveis de estado são os ângulos/deslocamentos de junta, suas velocidades e acelerações.
+Foram consideradas incertezas paramétricas fixas associadas a cada elo do manipulador robótico e ao conjunto, abrangendo as massas $m_i$, as posições do centro de massa (CoM) e os momentos de inércia.
+Essas incertezas foram modeladas como desvios percentuais em torno dos valores nominais, com limites máximos pré-definidos.
+Assim, cada simulação é realizada com um conjunto fixo de parâmetros perturbados dentro desses limites, representando erros de modelagem ou variações construtivas.
+As variáveis de estado adotadas no modelo dinâmico são os ângulos (ou deslocamentos, no caso prismático) de cada junta e suas velocidades generalizadas.
+As acelerações são obtidas diretamente das equações de movimento e, portanto, não constituem estados independentes, mas variáveis derivadas.
 
-\subsection{Critérios de validade do modelo}
-O modelo é válido para taxas e acelerações típicas de operação do manipulador robótico. Não se cobrem fenômenos não rígidos como flexibilidade mecânicas e nem a flexibilidade do material, nem pequenas variações na taxa de atitude da base e também há ausência do aquecimento. A modelagem cinemática e dinâmica seguem \cite{craig2005}, enquanto que no contexto de microgravidade e \emph{rendezvous and docking/berthing} com base flutuante seguem \cite{fehse2003,wie2008space}.
+% \subsection{Critérios de validade do modelo}
+% O modelo é válido para taxas e acelerações típicas de operação do manipulador robótico.
 
-\subsection{Limites operacinais estabelecidos}
-
-A seguir são destacados os limites operacionais estabelecidos para o manipulador robótico:
+\subsection{Condições iniciais}
+As condições iniciais do sistema são definidas pelas posições no referencial local, as velocidades iniciais e as velocidades angulares iniciais da base, além dos ângulos iniciais de cada junta do manipulador robótico e suas respectivas velocidades iniciais.

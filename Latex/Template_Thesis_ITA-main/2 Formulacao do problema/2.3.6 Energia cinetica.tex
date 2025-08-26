@@ -1,0 +1,70 @@
+% ---------------------------------------------------
+% Energia Cinética por Elo
+% ---------------------------------------------------
+\section{Energia cinética}
+Um corpo rígido possui energia cinética pois leva em conta sua translação e sua rotação. Cada elo do manipulador robótico possui sua própria característica, como massa, centro de massa e inércia, portanto a sua energia cinética é calculada de forma individual.
+
+\begin{equation}
+T_i =
+\frac{1}{2} m_i \, ({}^{\,T} \vec{v}_{C_i}) \vec{v}_{C_i}
++ \frac{1}{2} ({}^{\,T} \vec{\omega}_i) \, ({}^{(0)} \mathbf{I}_{C_i}) \, \vec{\omega}_i
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $m_i$ é a massa do elo $i$;
+    \item $\vec{v}_{C_i}$ é a velocidade do centro de massa do elo $i$ (em relação à base);
+    \item $\vec{\omega}_i$ é a velocidade angular do elo $i$;
+    \item ${}^{(0)} \mathbf{I}_{C_i}$ é o tensor de inércia do elo $i$ calculado no centro de massa, expresso no frame da base, $frame \{0\}$.
+\end{itemize}
+
+% ---------------------------------------------------
+% Energia Cinética da Base
+% ---------------------------------------------------
+\subsection{Energia cinética da base}
+A base também pode contribuir com energia cinética, especialmente se houver rotação, caso haja translação da base, essa pode ser tratada separadamente como parte do subsistema orbital.
+
+\begin{equation}
+T_b = \frac{1}{2} \, \vec{\omega}_b^{\,T} \, \mathbf{I}_b \, \vec{\omega}_b
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $\vec{\omega}_b$ é a velocidade angular da base;
+    \item $\mathbf{I}_b$ é o tensor de inércia da base.
+\end{itemize}
+
+% ---------------------------------------------------
+% Energia Cinética Total
+% ---------------------------------------------------
+A energia cinética total do manipulador robótico pode ser obtida ao se contabilizar todos os elos e a sua base:
+
+\begin{equation}
+T = \sum_{i=1}^{N_{\text{elos}}} T_i + T_b
+\end{equation}
+
+% ---------------------------------------------------
+% Energia Potencial
+% ---------------------------------------------------
+Por conta da espaçonave do tipo manipulador robótico estar em ambiente de microgravidade e por não haver outro tipo de força de perturbação ambiental, é possível considerar:
+\begin{equation}
+V \simeq 0
+\end{equation}
+
+% ---------------------------------------------------
+% Lagrangiana
+% ---------------------------------------------------
+Com o objetivo de encontrar o comportamento dinâmico de um sistema mecânico, utiliza-se a Lagrangiana. Ela é utilizada para derivar as equações do movimento do sistema, removendo a necessidade de analisar diretamente todas as forças que agem sobre ele, como por exemplo, a força normal, força de atrito etc.
+
+Para encontrar a Lagrangiana do sistema, realiza-se a diferença entre a energia cinética e a energia potencial:
+\begin{equation}
+\mathcal{L}(q, \dot{q}) = T(q, \dot{q}) - V(q)
+\end{equation}
+
+% Ao desprezar a energia potencial por estar em ambiente de microgravidade, a Lagrangiana se reduz à própria energia cinética:
+% \begin{equation}
+%     \label{eq:Lagrangiana_apenasCinetica}
+% \mathcal{L}(q, \dot{q}) \approx T(q, \dot{q})
+% \end{equation}
+
+

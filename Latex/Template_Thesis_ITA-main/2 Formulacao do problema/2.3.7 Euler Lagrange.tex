@@ -1,0 +1,100 @@
+
+Ao desprezar a energia potencial por estar em ambiente de microgravidade, a Lagrangiana se reduz à própria energia cinética:
+\begin{equation}
+    \label{eq:Lagrangiana_apenasCinetica}
+\mathcal{L}(q, \dot{q}) \approx T(q, \dot{q})
+\end{equation}
+
+% ---------------------------------------------------
+% Lagrange e sua forma geral
+% ---------------------------------------------------
+\section{Equações de Euler-Lagrange}
+
+A partir da Lagrangiana \eqref{eq:Lagrangiana_apenasCinetica}, que aqui está considerando apenas a energia cinética do sistema, aplica-se a equação de Euler–Lagrange para cada coordenada generalizada $q_i$:
+
+\begin{equation}
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = Q_i
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $\frac{\partial L}{\partial \dot{q}_i}$: momento generalizado associado a $q_i$;
+    \item $\frac{d}{dt}$: derivada temporal, representando a variação do momento generalizado;
+    \item $\frac{\partial L}{\partial q_i}$: termo que captura a dependência da Lagrangiana na coordenada $q_i$, geralmente relacionada a forças conservativas;
+    \item $Q_i$: força ou torque generalizado externo associado a $q_i$.
+\end{itemize}
+
+\subsection{Forma matricial compacta}
+Ao reunir todas as equações de Euler$-$Lagrange em um vetor, para que seja considerado simultaneamente as $n$ coordenadas generalizadas do sistema, obtém-se a forma matricial da dinâmica de manipuladores:
+
+\begin{equation}
+\mathbf{M}(\vec{q}) \, \ddot{\vec{q}} +
+\mathbf{C}(\vec{q}, \dot{\vec{q}})\,\dot{\vec{q}} +
+\vec{g}(\vec{q}) = \vec{\tau}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $\mathbf{M}(\vec{q})$: matriz de inércia ($n \times n$), que depende da configuração do manipulador;
+    \item $\mathbf{C}(\vec{q}, \dot{\vec{q}})$: matriz dos termos centrífugos e de Coriolis;
+    \item $\vec{g}(\vec{q})$: vetor das forças generalizadas de gravidade;
+    \item $\vec{\tau}$: vetor de torques ou forças generalizadas aplicados nas juntas.
+\end{itemize}
+
+
+\subsection{Separação da base e manipulador}
+Em um manipulador robótico com base flutuante, é necessário distinguir as coordenadas da base ($\vec{q}_b$) - por exemplo, posição e atitude do satélite - das coordenadas do manipulador ($\vec{q}_m$), neste caso podendo ser os ângulos das juntas. 
+O movimento de um influencia o outro por causa do acoplamento dinâmico entre os subsistemas. 
+Assim, o vetor de coordenadas generalizadas pode ser escrito como:
+
+\begin{equation}
+\vec{q} =
+\begin{bmatrix}
+\vec{q}_b \\
+\vec{q}_m
+\end{bmatrix}
+\end{equation}
+
+Dessa forma, a equação matricial da dinâmica pode ser reescrita em blocos:
+
+\begin{equation}
+\begin{bmatrix}
+\mathbf{M}_{bb} & \mathbf{M}_{bm} \\
+\mathbf{M}_{mb} & \mathbf{M}_{mm}
+\end{bmatrix}
+\begin{bmatrix}
+\ddot{\vec{q}}_b \\
+\ddot{\vec{q}}_m
+\end{bmatrix}
++
+\begin{bmatrix}
+\mathbf{C}_{bb} & \mathbf{C}_{bm} \\
+\mathbf{C}_{mb} & \mathbf{C}_{mm}
+\end{bmatrix}
+\begin{bmatrix}
+\dot{\vec{q}}_b \\
+\dot{\vec{q}}_m
+\end{bmatrix}
++
+\begin{bmatrix}
+\vec{g}_b \\
+\vec{g}_m
+\end{bmatrix}
+=
+\begin{bmatrix}
+\vec{\tau}_b \\
+\vec{\tau}_m
+\end{bmatrix}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $\mathbf{M}_{bb}$: matriz de inércia da base (translacional e rotacional);
+    \item $\mathbf{M}_{mm}$: matriz de inércia do manipulador robótico;
+    \item $\mathbf{M}_{bm} = \mathbf{M}_{mb}^T$: termos de acoplamento dinâmico entre base e manipulador;
+    \item $\mathbf{C}_{ij}$: matrizes correspondentes aos efeitos centrífugos e de Coriolis, que também podem gerar acoplamento entre base e manipulador;
+    \item $\vec{g}_b$: forças e torques de gravidade sobre a base;
+    \item $\vec{g}_m$: vetor de gravidade equivalente nas juntas do manipulador;
+    \item $\vec{\tau}_b$: forças/torques aplicados diretamente na base;
+    \item $\vec{\tau}_m$: torques de acionamento aplicados nas juntas do manipulador.
+\end{itemize}

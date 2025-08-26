@@ -2,57 +2,58 @@
 \maketitle
 
 % Dedicatoria: Nao esqueca essa secao  ... :-)
-\begin{itadedication}
-Aos amigos da Graduação e Pós-Graduação do ITA por motivarem tanto a criação deste template pelo
-Fábio Fagundes Silveira quanto por motivarem a mim e outras pessoas a atualizarem e aprimorarem este excelente trabalho.
-\end{itadedication}
+% \begin{itadedication}
+% -
+% \end{itadedication}
 
 % Agradecimentos
-\begin{itathanks}
-\input{PreTextuais/agradecimentos}
-\end{itathanks}
+% \begin{itathanks}
+% \input{PreTextuais/agradecimentos}
+% \end{itathanks}
 
 % Epígrafe
-\thispagestyle{empty}
-\ifhyperref\pdfbookmark[0]{\nameepigraphe}{epigrafe}\fi
-\begin{flushright}
-\begin{spacing}{1}
-\mbox{}\vfill
-\input{PreTextuais/epigrafe}
-\end{spacing}
-\end{flushright}
+% \thispagestyle{empty}
+% \ifhyperref\pdfbookmark[0]{\nameepigraphe}{epigrafe}\fi
+% \begin{flushright}
+% \begin{spacing}{1}
+% \mbox{}\vfill
+% \input{PreTextuais/epigrafe}
+% \end{spacing}
+% \end{flushright}
 
 % Resumo
-\begin{abstract}
-\noindent
-\input{PreTextuais/resumo}
-\end{abstract}
+% \begin{abstract}
+% \noindent
+% \input{PreTextuais/resumo}
+% \end{abstract}
 
 % Abstract
-\begin{englishabstract}
-\noindent
-\input{PreTextuais/abstract}
-\end{englishabstract}
+% \begin{englishabstract}
+% \noindent
+% \input{PreTextuais/abstract}
+% \end{englishabstract}
 
 % Lista de figuras
-\listoffigures %opcional
+% \listoffigures %opcional
 
 % Lista de tabelas
-\listoftables %opcional
+% \listoftables %opcional
 
-% Lista de abreviaturas
+% % Lista de abreviaturas
 \printnoidxglossary[type=\acronymtype,
     title=\listofabbreviationsname,
-    toctitle=\listofabbreviationsname,
-    sort=standard,
-    nonumberlist]
-    
-% Lista de simbolos
+    toctitle=\listofabbreviationsname
+    % , sort=standard, nonumberlist
+    ]
+
+% % Lista de simbolos
 \printnoidxglossary[
     title=\listofsymbolsname,
-    toctitle=\listofsymbolsname,
-    sort=use,   % according to abnt 14724 the list of symbols is sorted by order of use in text
-    nonumberlist]
+    toctitle=\listofsymbolsname
+    % , type=main
+    % , sort=use, nonumberlist
+    ]
+
 
 % Sumario
 \tableofcontents

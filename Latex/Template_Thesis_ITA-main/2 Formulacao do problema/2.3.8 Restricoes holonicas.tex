@@ -1,0 +1,96 @@
+\section{Restrições Holonômicas}
+
+Devido a vínculos geométricos, nem sempre as coordenadas generalizadas $\vec q$ podem variar livremente. 
+Exemplos incluem:
+\begin{itemize}
+    \item um quaternion que deve permanecer unitário, de modo que ${}^T q_b q_b = 1$;
+    \item o comprimento fixo de um elo rígido, que não pode ser alterado;
+    \item a condição de contato com uma superfície, sem permitir penetração.
+\end{itemize}
+
+Esses vínculos são chamados de \emph{restrições holonômicas}, pois dependem apenas das posições $\vec q$, e não de $\dot{\vec q}$ ou $\ddot{\vec q}$.
+
+Para que essas condições sejam satisfeitas em conjunto com a dinâmica, utilizam-se os multiplicadores de Lagrange $(\vec \lambda)$, que representam forças ou torques adicionais introduzidos apenas para garantir o vínculo. Ressalta-se que tais forças não são fornecidas pelos atuadores reais, mas sim introduzidas matematicamente como forças virtuais para o cumprimento das restrições.
+
+Assim, as equações de movimento deixam de ser puramente diferenciais e passam a constituir um sistema diferencial-algébrico (DAE):
+
+\begin{equation}
+\mathbf{M}(\vec{q})\,\ddot{\vec{q}} +
+\mathbf{C}(\vec{q},\dot{\vec{q}})\,\dot{\vec{q}} +
+\mathbf{g}(\vec{q}) =
+\vec{\tau} +
+\mathbf{J}^T(\vec{q}) \,\vec{\lambda}
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $\mathbf{M}(\vec{q})$: matriz de inércia;
+    \item $\mathbf{C}(\vec{q},\dot{\vec{q}})$: termos de Coriolis e centrífugos;
+    \item $\mathbf{g}(\vec{q})$: vetor de forças generalizadas de gravidade;
+    \item $\vec{\tau}$: torques/forças generalizadas aplicadas pelos atuadores;
+    \item $\mathbf{J}(\vec{q})$: matriz Jacobiana das restrições $\Phi(\vec q)$ em relação a $\vec q$;
+    \item $\vec{\lambda}$: multiplicadores de Lagrange, associados às forças ou torques de vínculo.
+\end{itemize}
+
+Além disso, o vínculo geométrico é imposto pela condição algébrica \eqref{eq:vinculo_geometrico_holonomicas}, que garante que as restrições holonômicas sejam satisfeitas ao longo da evolução do sistema:
+
+\begin{equation}
+    \label{eq:vinculo_geometrico_holonomicas}
+\Phi(\vec{q}) = 0.
+\end{equation}
+
+\section{Estabilização de Baumgarte}
+
+Na simulação numérica, mesmo impondo que $\Phi(\vec q) = 0$, erros de integração podem fazer com que os vínculos se degradem. 
+Por exemplo, em vez de manter ${}^T q_b q_b = 1$, o quaternion pode tender para ${}^T q_b q_b = 1,0001$.
+
+A técnica de \emph{Baumgarte} consiste em adicionar uma dinâmica artificial sobre o erro do vínculo, de forma análoga a um controlador de segunda ordem. 
+A ideia é garantir que o erro $\Phi$ obedeça a uma equação diferencial estável do tipo:
+
+\begin{equation}
+    \label{eq:condicoes_Baumgarte}
+    \ddot{\Phi} + 2 \alpha \dot{\Phi} + \beta^2 \Phi = 0,
+\end{equation}
+
+Onde os parâmetros $\alpha$ e $\beta$ são parâmetros do projeto (ganhos de estabilização) escolhidos de forma a amortecer e corrigir desvios do vínculo ao longo do tempo. Além disso, quando $\Phi = 0$, diz que o vínculo foi satisfeito; $\dot \Phi$ e $\ddot \Phi$ são as derivadas (primeira e segunda) do erro.
+
+Isso funciona como um amortecedor: se o vínculo se desvia, a equação de Baumgarte 
+força a trajetória de volta ao vínculo. Uma escolha típica dos parâmetros é:
+
+\begin{equation}
+    \alpha = \zeta \, \omega_n, 
+    \qquad 
+    \beta = \omega_n,
+\end{equation}
+
+Sendo $\zeta \in [0,7;\,1,0]$ representando a razão de amortecimento 
+e $\omega_n$ a frequência natural desejada para a dinâmica artificial de estabilização.
+
+\section{Dissipação e regularização}
+
+Por fim, mesmo com a técnica de \emph{Baumgarte}, os problemas numéricos podem ocorrer, 
+especialmente quando a Jacobiana $\mathbf{J}$ do vínculo se torna próxima de uma configuração singular. 
+
+Uma estratégia possível é a introdução de um termo dissipativo artificial, representado pela matriz 
+$\mathbf{D}$, que atua como um amortecedor adicional, nota-se que este termo não altera a dinâmica física real, mas suaviza o sistema e permite que ele continue bem condicionado durante a integração numérica.
+
+Assim, a equação de movimento é modificada para:
+\begin{equation}
+\mathbf{M}(\vec{q})\,\ddot{\vec{q}} 
++ \mathbf{C}(\vec{q},\dot{\vec{q}})\,\dot{\vec{q}} 
++ \mathbf{g}(\vec{q}) 
+= \vec{\tau} 
++ \mathbf{J}^T(\vec{q}) \,\vec{\lambda} 
+- \mathbf{D}\,\dot{\vec{q}}.
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $\mathbf{D}$ é a matriz de dissipação artificial, usualmente diagonal, 
+          escolhida de modo a fornecer amortecimento numérico controlado;
+\end{itemize}
+
+O termo $-\mathbf{D}\,\dot{\vec{q}}$ atua como um amortecedor virtual (matemático), reduzindo oscilações e melhorando a estabilidade numérica sem alterar a física principal do problema.
+
+
+

@@ -1,0 +1,144 @@
+\section{Matriz de atitude e outras composições}
+
+Para representar a atitude (orientação) de um corpo rígido, neste caso, o manipulador robótico, é necessário detalhar a relação entre os \emph{frames (ou sistema de coordenadass)} e um sistema de referência global.
+
+\subsection{Relação entre frames e sistema de referência global}
+Como existem múltiplos
+\emph{frames} envolvidos, como o Inercial (centrado na Terra, $\{I\}$);
+o \emph{frame} Local da espaçonave, $\{LVLH\}$, que por sua vez está no centro de massa do \emph{chaser};
+e o \emph{corpo $\{B\}$}, fixado no centro de massa do manipulador robótico,
+se faz necessário definir a relação entre esses \emph{frames} e o sistema de referência global.
+A matriz de rotação é utilizada para descrever as coordenadas de um vetor de um sistema para outro \cite{craig2005}.
+
+\begin{equation}
+    \label{eq:matriz_atitude}
+    {}^{Inercial} R_{B} = ({}^{Inercial}R_{LVLH}) ({}^{LVLH} R_{B})
+\end{equation}
+
+Enquanto que a matriz de rotação pode ser descrita por:
+\begin{equation}
+    \label{eq:matriz_rotacao}
+    {}^{LVLH} R_{B} (\psi,\theta,\phi) = 
+    R_z(\psi) R_y(\theta) R_x(\phi)
+\end{equation}
+
+% Onde $R_x$, $R_y$ e $R_z$  são as matrizes de rotação fundamental dos ângulos de Euler, dados na sequência Z-Y-X, e $\psi$, $\theta$ e $\phi$ são \emph{yaw (guinada)}, \emph{pitch (arremesso)} e \emph{roll (rolagem)}, respectivamente. No entanto, é importante ressaltar que os ângulos de Euler podem apresentar singularidades (\emph{gimbal lock/travamento de cardan}) \cite{wie2008space}, o que pode levar a problemas de controle e estabilidade, pois um grau de liberdade (\emph{DoF, Degree of Freedom}) é perdido. Para contornar essa limitação, os Quaternions serão utilizados.
+
+\begin{table}[ht]
+    \centering
+    \footnotesize
+    \caption{Relação entre ângulos de Euler (sequência ZYX) e eixos do sistema LVLH.}
+    \label{tab:euler_LVLH}
+    \begin{tabular}{lll}
+        \hline
+        \textbf{Ângulo} & \textbf{Eixo de rotação} & \textbf{Descrição} \\
+        \hline
+        $\psi$ (yaw, guinada)
+        & $z$ (cross-track)
+        & Rotação lateral em torno do eixo normal ao plano orbital \\
+
+        $\theta$ (pitch, arremesso)
+        & $y$ (along-track)
+        & Rotação em torno do eixo tangente à órbita \\
+
+        $\phi$ (roll, rolagem)
+        & $x$ (radial)
+        & Rotação em torno do eixo radial \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Para auxiliar nas transformações de coordenadas e na formulação das equações dinâmicas, define-se a matriz assimétrica associada a um vetor $a = [x, y, z]^T$, chamada de operador \emph{chapéu} \cite{murray1994mathematical}:
+
+\begin{equation}
+    \label{eq:matriz_assimetrica}
+    \hat{a} = 
+    \begin{bmatrix}
+        0   & -z  &  y \\
+        z   &  0  & -x \\
+        -y  &  x  &  0
+    \end{bmatrix}
+\end{equation}
+
+Essa matriz possui a propriedade de que $\hat{a} b = a \times b$, ou seja, a multiplicação matricial equivale ao produto vetorial tradicional.
+
+
+Cada elo do manipulador robótico é descrito, de acordo com a convenção de Denavit-Hartenberg clássica, através de uma matriz de transformação homogênea, $A_i$. 
+\subsection{Matriz de transformação homogênea}
+
+A matriz de transformação homogênea $A_i$ possui dimensão de ordem 4 e reúne a rotação em torno de $z_{i-1}$; a translação ao longo de $z_{i-1}$; a translação ao longo de $X_{i}$; e a rotação em torno de $x_{i}$. O resultado é a matriz $A_i$, que relaciona o \emph{frame} do elo $i$ com o frame do elo anterior ($i-1$).
+Portanto, essa matriz possui toda a informação geométrica que define como o elo $i$ está posicionado e orientado em relação ao elo anterior.
+
+A forma expandida da matriz de transformação homogênea se dá por:
+
+\begin{equation}
+    \label{eq:matrizTransformacaoHomogenea}
+A_i =
+\begin{bmatrix}
+\cos\theta_i & -\sin\theta_i \cos\alpha_i & \sin\theta_i \sin\alpha_i & a_i \cos\theta_i \\
+\sin\theta_i & \cos\theta_i \cos\alpha_i  & -\cos\theta_i \sin\alpha_i & a_i \sin\theta_i \\
+0            & \sin\alpha_i               & \cos\alpha_i              & d_i \\
+0            & 0                          & 0                         & 1
+\end{bmatrix}
+\end{equation}
+
+E a forma resumida da matriz \eqref{eq:matrizTransformacaoHomogenea} pode ser reescrita conforme:
+\begin{equation}
+    \label{eq:matrizTransformacaoHomogenea_resumida}
+A_i = 
+\begin{bmatrix}
+R & p \\
+0 & 1
+\end{bmatrix}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $\mathbf{R}_{(3\times 3)}$: submatriz de rotação que descreve a orientação do efetuador em relação à base;
+    \item $\mathbf{p}_{(3\times 1)}$: vetor posição que descreve a posição do efetuador em relação à base.
+\end{itemize}
+
+Portanto, o equacionamento para obter a pose do efetuador em relação à base é definido como:
+
+\begin{equation}
+{}^{0}\!T_i(q)=
+{}^{0}\!T_{i-1}(q)*
+A_i(q)
+\end{equation}
+
+Sendo que:
+\begin{equation}
+{}^{0}\!T_0 = I_{4}.
+\end{equation}
+
+Por sua vez, a pose do efetuador $\{E\}$ em relação à base $\{B\}$ é o produto de todas as matrizes $A_i$, como pode ser definido:
+\begin{equation}
+    \label{eq:produtorio_generico}
+{}^{0}\!T_E(q)= \prod_{i=1}^{n} A_i(q)
+= A_1(q)*
+A_2(q)*
+\cdots*
+A_n(q).
+\end{equation}
+
+Como o manipulador robótico deste documento possui 5 juntas, pode-se adaptar \eqref{eq:produtorio_generico} para essa totalidade de juntas, como indicado a seguir:
+\begin{equation}
+{}^{0}\!T_E(q)=
+A_1(\theta_1)*
+A_2(\theta_2)*
+A_3(\theta_3)*
+A_4(\theta_4)*
+A_5(d_5).
+\end{equation}
+
+Para extrair a orientação, utiliza-se \eqref{eq:rotacao_MatrizHomogenea_orientacao} e para extrair a posição utiliza-se \eqref{eq:posicao_MatrizHomogenea_posicao}, conforme:
+
+\begin{equation}
+    \label{eq:rotacao_MatrizHomogenea_orientacao}
+\mathbf{R}_E(q) = \big[{}^{0}\,T_E(q)\big]_{1:3, {1:3^T}}
+\end{equation}
+
+\begin{equation}
+    \label{eq:posicao_MatrizHomogenea_posicao}
+\mathbf{p}_E(q) = \big[{}^{0}\,T_E(q)\big]_{1:3, 4}
+\end{equation}
