@@ -1,9 +1,9 @@
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
-    \centering
-\includegraphics[width=0.50\linewidth]{Caminho\da\imagem\aqui.png}
-    \caption{Descritivo aqui. Fonte: XXX}
     \label{fig:LABEL_AQUI}
+\centering
+\includegraphics[width=0.50\linewidth]{Caminho\da\imagem\aqui.png}
+\caption{Descritivo aqui. Fonte: XXX}
 \end{figure}
 
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

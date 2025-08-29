@@ -1,38 +1,3 @@
-Entre 2.1 Modelagens e 2.1.1 Escopo
-
-======================================
-
-Para resolução, será envolvida matemática associada para resolução de dinâmica orbital, de atitude e de controle. 
-
-A modelagem é a obtenção das equações do movimento da espaçonave do tipo manipulador robótico.
-São as equações diferenciais da cinemática (que são de primeira ordem) que fornecem as velocidades do sistema.
-São as equações diferenciais da dinâmica (que são de segunda ordem) que fornecem as velocidades do sistema.
-Diferenciais de segunda ordem = d2x/dt2, são relacionadas ao torque ou força aplicadas.  
-
-Enquanto que as de primeira ordem, obtem-se as velocidades do sistema.
-
-Para um corpo em rotação de si mesmo (ou satelite em relaçao ao seu centro de massa).
-Movimento orbital é o movimento da espaçonave em relação a um determinado centro de massa, como Planeta.
-
-Equacionamento da dinâmica tem 6 termos, sendo: 3 acelerações e 3 velocidades.
-Euler são 3 de torque, momento.
-Cinemática são 3: tx variação de tempo dos ângulos de Euler.
-
-Hipoteses de modelagem
-
-======================================
-
-Qdo o braço robótico se move, somente a base é considerada rígida.
-
-Sistema rígido: vários corpos
-Sistema não rígido: vários corpos, porém com os elos se movendo.
-
-Parte da modelagem: parte rígida e parte rígida + movimentação dos links (corpo não rígido).
-
-Fase não operacional: é quando o manipulador robótico está travado junto a base, neste caso as juntas estão travadas.
-
-Fase operacional: deixa de ser corpo rígido e o robô está em operação. As juntas estão exercendo torque sobre os elos.
-
 \chapter{Formulação do problema}
 Nesta pesquisa de Mestrado será simulado computacionalmente a dinamica orbital e de atitude de uma espaçonave tipo manipulador robótico em missão de \emph{rendezvous and docking/berthing} (RVD/B) em órbita baixa terrestre (LEO, \emph{Low Earth Orbit}).
 
@@ -53,10 +18,9 @@ As espaçonaves operam em ambiente de microgravidade, não significando que não
     \label{fig:problema_doisCorpos}
 \end{figure}
 
-Além disso, movimento é Kepleriano, ou seja, sem perturbações, e por conta do tempo de simulação ser curto, as perturbações ambientais não influenciam nas modelagens.
-% Diversas perturbações ambientais não foram consideradas, como a atmosfera, logo, não há arrasto aerodinâmico. Outras perturbações externas como torque magnético e pressão de radiação solar também não são consideradas. As forças e torques de controle aplicados ao corpo-base são tratados como entradas ideais no centro de massa (\emph{Center of Mass, CoM}) do \emph{chaser}, e também não foi modelado o sistema de propulsão.
+Além disso, movimento é Kepleriano, ou seja, sem perturbações, e por conta do tempo de simulação ser curto, as perturbações ambientais não influenciam nas modelagens. Todos os corpos (juntas, elos, espaçonaves, base, porta de docking etc.) são rígidos durante a fase não operacional e durante a fase operacional, o manipulador robótico se comporta como corpo não rígido.
 
-Todos os corpos (juntas, elos, espaçonaves, base, porta de docking etc.) são rígidos durante a fase não operacional e durante a fase operacional, o manipulador robótico se comporta como corpo não rígido.
+% Diversas perturbações ambientais não foram consideradas, como a atmosfera, logo, não há arrasto aerodinâmico. Outras perturbações externas como torque magnético e pressão de radiação solar também não são consideradas. As forças e torques de controle aplicados ao corpo-base são tratados como entradas ideais no centro de massa (\emph{Center of Mass, CoM}) do \emph{chaser}, e também não foi modelado o sistema de propulsão.
 % sem elasticidade, deformações, vibrações, folgas ou ruído. Todos os elementos são ideais, mas com limites físicos de rotação, velocidade e aceleração, tratados pela lei de controle.
 
 Os fenômenos como a flexibilidade mecânica, a flexibilidade do material, as pequenas variações na taxa de atitude da base, e o aquecimento por qualquer tipo de atrito não foram estudados neste trabalho.

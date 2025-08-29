@@ -1,4 +1,4 @@
-\subsection{Cinemática diferencial e Jacobiano do efetuador}
+\subsection{Cinemática diferencial e Jacobiano do efetuador (Em desenvolvimento)}
 
 Para relacionar as velocidades das juntas do manipulador robótico com a velocidade espacial\footnote{\,Velocidade dentro do espaço de trabalho do manipulador robótico} do efetuador, utiliza-se o Jacobiano $J(q)$; o qual mapeia as velocidades em cada junta e as transforma em velocidades - lineares e angulares - do efetuador. Considerando
 $\vec q$ como o vetor de juntas e
@@ -124,7 +124,7 @@ Onde:
 
 % O teste numerico é um jeito de estimar numericamente o Jacobiano por diferenças finitas, desloca-se um pouco "q" e ve como x_e varia.
 % Isso é util pra detectar singularidades.
-\subsection{Singularidades}
+\subsection{Singularidades (Em desenvolvimento)}
 A configuração $q$ é singular quando $J(q) < m$, onde $m$ é a dimensão da tarefa (por exemplo, $m=6$ para controle de torção completa). Uma checagem numérica simples pode usar diferenças finitas:
 \begin{equation}
     \label{eq:jac_singularidadeCheck}

@@ -13,7 +13,7 @@
 %     {}^{0}\vec{I}_{i} = \vec{R}_i \,*\, {}^{(elo)}\vec{I}_{i} \,*\, \vec{R}_i^T,
 % \end{equation}
 
-\section{Parâmetros Inerciais e Agregação Dinâmica}
+\section{Parâmetros Inerciais e Agregação Dinâmica (Em desenvolvimento)}
 Após a modelagem geométrica do manipulador robótico em 3D utilizando a ferramenta CAD (\emph{Computer-Aided Design}) Autodesk Fusion 360, obtiveram-se os parâmetros inerciais individuais de cada elo, junta e base, bem como os parâmetros do manipulador completo. Esses dados compreendem as massas, a posição do centro de massa local e o tensor de inércia em relação ao respectivo centro de massa e \emph{frame} local. Todos os valores detalhados encontram-se no Apêndice A.
 
 \subsection{Parâmetros inerciais por elo}
@@ -22,7 +22,7 @@ Como o centro de massa é fornecido no \emph{frame} local do elo, é necessário
     \vec r_b = \vec p_i + \vec R_i \, \vec r_{i}.
 \end{equation}
 
-\subsection{Transformação para o frame da base}
+\subsection{Transformação para o frame da base (Em desenvolvimento)}
 De forma análoga, o tensor de inércia ${}^{(elo)}\mathbf{I}_{i}$ fornecido no centro de massa do elo, alinhado com os eixos principais no \emph{frame} local, deve ser rotacionado para o \emph{frame} da base segundo:
 \begin{equation}
     {}^{0}\mathbf{I}_{i} =
@@ -55,7 +55,7 @@ De forma análoga, o tensor de inércia ${}^{(elo)}\mathbf{I}_{i}$ fornecido no 
 %     \vec{r}_{Global} = \frac{1}{M_{Elos}} \sum_i m_i \, \vec{r}_i
 % \end{equation}
 
-\subsection{Aplicação do Teorema de Steiner}
+\subsection{Aplicação do Teorema de Steiner (Em desenvolvimento)}
 Mesmo após a rotação, o tensor de inércia ainda está referido ao centro de massa do elo. Assim, aplica-se o Teorema de Steiner \eqref{eq:Teorema_Steiner} para referi-lo à origem da base $O$:
 \begin{equation}
   \label{eq:Teorema_Steiner}
@@ -110,7 +110,7 @@ e $\mathbf{I}_3$ é a matriz identidade $3\times 3$.
 %     \vec{I} \leftarrow \frac{1}{2} (\vec{I} + \vec{I}^{\, T}),
 % \end{equation}
 
-\subsection{Agregação total dos parâmetros do manipulador}
+\subsection{Agregação total dos parâmetros do manipulador (Em desenvolvimento)}
 A seguir todos os parâmetros já calculados serão agregados, iniciando pela massa. A massa total (considerando todos os corpos rígidos incluídos no modelo) é:
 \begin{equation}
   M_{\text{total}} = \sum_{j} m_j
@@ -133,7 +133,7 @@ Para obter a inércia total referida ao centro de massa global, aplica-se novame
   \vec{r}_{\text{Global}} \, \, {}^{\,T} \vec{r}_{\text{Global}} \Big) .
 \end{equation}
 
-\subsection{Verificações numéricas e consistência}
+\subsection{Verificações numéricas e consistência (Em desenvolvimento)}
 Uma verificação adicional pode ser feita com o objetivo de verificar a segurança numérica, caso a matriz de inércia apresente assimetria por efeitos de arredondamento, pode-se deixá-la simétrica:
 \begin{equation}
   \mathbf{I} \;\leftarrow\; \tfrac{1}{2}\,\big( \mathbf{I} + \mathbf{I}^{\,T} \big).
