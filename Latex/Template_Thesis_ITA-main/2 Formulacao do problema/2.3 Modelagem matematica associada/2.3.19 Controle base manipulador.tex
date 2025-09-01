@@ -1,0 +1,74 @@
+\section{Controle base-manipulador}
+
+Nesta seção, descreve-se a arquitetura de controle adotado para a operação do manipulador em ambiente de microgravidade. O sistema é composto por três malhas principais, que são: controle da atitude da base (malha externa), planejamento do manipulador com mínima reação, e controle por torque nas juntas (malha interna). Essas malhas operam de forma coordenada.
+
+\subsection{Controle de atitude da base}
+
+A malha externa é responsável por controlar a orientação da base livre do sistema. Utiliza-se o erro de atitude definido por quaternions, evitando as singularidades associadas a representações por ângulos de Euler. O erro de quaternion é definido por:
+\begin{equation}
+    \vec{q}_e = \vec{q}_{\text{ref}}^{\, -1} \otimes \vec{q}_b =
+    \begin{bmatrix}
+        \vec {\omega}_e \\
+        \vec{\epsilon}_e
+    \end{bmatrix}.
+\end{equation}
+
+A lei de controle para o torque aplicado à base é:
+
+\begin{equation}
+    \vec{\tau}_b = -K_p \vec{\epsilon}_e - K_d \vec{\omega}_b.
+\end{equation}
+
+Onde $\vec{\omega}_b$ é a velocidade angular da base, e $K_p$, $K_d$ são matrizes de ganhos proporcionais e derivativos, respectivamente. O termo integral não é utilizado neste trabalho, visando evitar acúmulo de erro (windup) do longo do tempo e por ser usual no ambiente espacial.
+
+\subsection{Planejamento do manipulador com mínima reação}
+
+Durante a movimentação do manipulador robótico, busca-se minimizar o efeito de reação na base. Para isso, utiliza-se a projeção da tarefa secundária no espaço nulo da Jacobiana, mantendo a tarefa primária (movimento do efetuador) inalterada. O comando cinemático é dado por:
+\begin{equation}
+    \dot{\vec{q}}_j = \mathbf{J}^\# \vec{v}_E^{\text{\, ref}} + \left( \mathbf{I} - \mathbf{J}^\# \mathbf{J} \right) \vec{z}.
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $ \vec{v}_E^{\text{\, ref}} $ é a velocidade desejada do efetuador;
+    \item $ \mathbf{J}^\# $ é a pseudoinversa ponderada da Jacobiana;
+    \item $ \vec{z} $ é um vetor no espaço nulo, utilizado para tarefas secundárias.
+\end{itemize}
+
+A escolha de $ \vec{z} $ pode ser feita de acordo com o objetivo desejado.
+Caso seja para minimizar a reação na base, seleciona-se $ \vec{z} $ pertencente ao espaço nulo de uma matriz de acoplamento que relaciona $ \dot{\vec{q}}_j $ ao momento angular da base $ \vec{\omega}_b $.
+Já para evitar aproximações indesejadas aos limites físicos das juntas, pode-se adicionar um termo do tipo gradiente de barreira, definido por $ \vec{z} = -\nabla \Phi(\vec{q}_j) $, onde $ \Phi(\vec{q}_j) $ é uma função que penaliza a proximidade aos limites articulares.
+
+\subsection{Controle por torque nas juntas}
+
+A malha interna é responsável pelo controle fino de cada junta do manipulador, aplicando torque para seguir a trajetória desejada. A lei de controle adotada é do tipo proporcional-derivativa (PD), aplicada individualmente para cada junta $ j $:
+
+A lei de controle adotada é do tipo proporcional-derivativa (PD), aplicada individualmente para cada junta $ j $:
+
+\begin{equation}
+\tau_j = -k_{p,j} e_j - k_{d,j} \dot{e}_j.
+\label{eq:controle_PD_junta}
+\end{equation}
+
+Com:
+
+\begin{equation}
+e_j = q_{j,\text{ref}} - q_j, \quad \dot{e}_j = \dot{q}_{j,\text{ref}} - \dot{q}_j.
+\label{eq:erro_PD_junta}
+\end{equation}
+
+Onde $ q_j $ e $ \dot{q}_j $ são a posição e velocidade atuais da junta, e os termos com subíndice “ref” indicam os valores de referência.
+Adicionalmente, impõe-se saturação nos torques para respeitar os limites físicos de cada atuador:
+
+\begin{equation}
+|\tau_j| \leq \tau_{j,\text{max}}
+\label{eq:saturacao_torque_junta}
+\end{equation}
+
+É comum aplicar um filtro no termo derivativo para reduzir o impacto de ruídos de medição. As trajetórias de referência $ q_{j,\text{ref}}(t) $ devem ser ao menos $ \mathcal{C}^2 $, como polinômios de quinta ordem, a fim de garantir suavidade nas acelerações.
+
+\subsection{Interação entre malhas}
+
+A malha externa de atitude fornece o torque de estabilização $ \vec{\tau}_b $, enquanto o manipulador executa $ \vec{v}_E^{\text{ref}} $ projetado no espaço nulo da Jacobiana, de forma a evitar reações sobre a base.
+Por fim, a malha interna aplica os torques articulares $ \tau_j $, respeitando os limites operacionais e as restrições dinâmicas.
+Todas as camadas estão sujeitas a restrições físicas (como zonas de exclusão, limites de torque e velocidade) e critérios de monitoramento contínuo durante a operação.

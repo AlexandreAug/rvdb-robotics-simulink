@@ -1,0 +1,55 @@
+\section{Critérios operacionais e restrições de missão}
+
+Para que o desenvolvimento do manipulador robótico seja estável, certos parâmetros foram definidos e serão apresentados a seguir.
+
+\subsection{Conjunto de Juntas Admissíveis}
+\label{sec:conjunto_juntas}
+
+Conforme discutido na seção de Hipóteses de modelagem, as juntas do manipulador estão sujeitas a limites geométricos, cinemáticos e dinâmicos. Esses limites devem ser respeitados durante toda a operação de \emph{rendezvous and docking/berthing}.
+Os limites permitem que os atuadores operem dentro de uma faixa segura estabelecida e que o manipulador não exceda as suas capacidades físicas.
+
+Esses limites são formalizados pelos seguintes conjuntos admissíveis para posição articular \eqref{eq:conjunto_q_posicao}, velocidade \eqref{eq:conjunto_q_velocidade} e aceleração \eqref{eq:conjunto_q_aceleracao}:
+
+\begin{equation}
+\label{eq:conjunto_q_posicao}
+\mathcal{Q}_{\text{pos}}^{adm} =
+\left\{ q_j : q_{j,\min} \leq q_j \leq q_{j,\max} \right\}.
+\end{equation}
+
+\begin{equation}
+\label{eq:conjunto_q_velocidade}
+\mathcal{Q}_{\text{vel}}^{adm} =
+\left\{ |\dot{q}_j| \leq \dot{q}_{j,\max} \right\}.
+\end{equation}
+
+\begin{equation}
+\label{eq:conjunto_q_aceleracao}
+\mathcal{Q}_{\text{acel}}^{adm} =
+\left\{ |\ddot{q}_j| \leq \ddot{q}_{j,\max} \right\}.
+\end{equation}
+
+Na Tabela \ref{tab:limites_juntasPosVelocidade} são apresentados os limites\fn{Os limites da junta prismática, por ser linear, são dados em metro (m) e em metro/segundo (m/s)} de posição (em graus [°]) e velocidade (graus por segundo [°/s]) para cada uma das juntas. Os dados de aceleração máxima $\ddot{q}_{j,\max}$ serão apresentados posteriormente com base na análise dinâmica e no desempenho do controlador.
+
+\begin{table}[ht]
+\centering
+\caption{Limites físicos e operacionais das juntas do manipulador robótico.}
+\label{tab:limites_juntasPosVelocidade}
+\begin{tabular}{clllll}
+\toprule
+\textbf{Junta} & \textbf{Tipo} & $q_{j,\min}$ & $q_{j,\max}$ & $\dot{q}_{j,\min}$ & $\dot{q}_{j,\max}$ \\
+\midrule
+1 & Revoluta & $-360^\circ$ & $360^\circ$ & $-90^\circ/\text{s}$ & $90^\circ/\text{s}$ \\
+2 & Revoluta & $-90^\circ$ & $90^\circ$ & $-180^\circ/\text{s}$ & $180^\circ/\text{s}$ \\
+3 & Revoluta & $-130^\circ$ & $130^\circ$ & $-180^\circ/\text{s}$ & $180^\circ/\text{s}$ \\
+4 & Revoluta & $-150^\circ$ & $150^\circ$ & $-360^\circ/\text{s}$ & $360^\circ/\text{s}$ \\
+5 & Prismática & $-0{,}15$ m & $0$ m & $-0{,}314$ m/s & $0{,}314$ m/s \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Os limites foram definidos de maneira incremental ao longo do desenvolvimento do manipulador robótico, de modo que possa refletir as capacidades dos atuadores, as restrições geométricas dos elos e as exigências da tarefa de \emph{berthing}.
+Essa definição assegura a estabilidade do controle e previne a violação dos limites mecânicos durante a operação em microgravidade.
+
+
+
+

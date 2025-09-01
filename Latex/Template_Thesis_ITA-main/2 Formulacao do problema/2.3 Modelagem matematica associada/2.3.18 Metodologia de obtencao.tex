@@ -1,0 +1,35 @@
+\subsection{Obtenção do espaço de trabalho}
+
+Para determinar o \emph{workspace} posicional do manipulador robótico foi realizada por meio de amostragem do espaço articular admissível $Q_{adm}$, filtragem de colisões e propagação da cinemática direta.
+
+O procedimento segue as seguintes etapas:
+\begin{enumerate}
+    \item \textbf{Amostragem de $Q_{adm}$:}  
+    As variáveis articulares $q_j$ são amostradas em suas faixas admissíveis.
+    % Essa amostragem pode ser feita por grade uniforme (discretização regular) ou por métodos probabilísticos, como o \emph{Monte Carlo} estratificado.
+
+    \item \textbf{Filtragem de colisões e restrições:}  
+    Para cada amostra colhida, verifica-se se a configuração pertence ao conjunto livre de colisão $Q_{livre}$, definido por:
+    \begin{equation}
+        Q_{livre} = Q_{adm} - Q_{col}.
+    \end{equation}
+    Onde $Q_{col}$ contém configurações inválidas devido a auto-colisões ou violações das restrições de segurança (KOZ/FOV).
+
+    \item \textbf{Propagação cinemática direta:}  
+    Para cada configuração $q \in Q_{livre}$, calcula-se a cinemática direta do efetuador $\vec{p}_E(q)$ que resultará em uma nuvem de pontos no espaço cartesiano tridimensional.
+
+    \item \textbf{Coleta e organização dos dados:}  
+    As posições $\vec{p}_E(q)$ válidas são armazenadas, constituindo uma representação discreta do workspace $W_{pos}$.
+\end{enumerate}
+
+A partir dessa nuvem de pontos, podem ser extraídas métricas do workspace. Exemplos incluem:
+\begin{itemize}
+    \item Volume aproximado de $W_{pos}$, obtido pela envoltória convexa (\emph{convex hull}) ou pelo método de $\alpha$-\emph{shapes};
+    \item Distâncias máximas em direções específicas, como o alcance direcional:
+    \begin{equation}
+        \rho_{\max}(\hat{u}) = \max_{\vec{p} \in W_{pos}} \hat{u}^T \vec{p},
+    \end{equation}
+    em que $\hat{u}$ é um vetor unitário que define a direção de interesse.
+\end{itemize}
+
+Tal obtenção dessa nuvem de pontos fornece a base para a determinação prática do workspace, sendo que os resultados quantitativos (nuvens de pontos, volumes e métricas) serão apresentados no capítulo relacionados às simulações.

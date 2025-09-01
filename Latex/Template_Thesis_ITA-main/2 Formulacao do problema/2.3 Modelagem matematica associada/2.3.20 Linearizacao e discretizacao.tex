@@ -1,0 +1,74 @@
+\section{Linearização e Discretização}
+Considerando o modelo dinâmico contínuo do sistema manipulador acoplado à base, sem contatos ativos, dado por:
+\begin{equation}
+\mathbf{M}(\vec{q})\ddot{\vec{q}} + \mathbf{C}(\vec{q}, \dot{\vec{q}})\dot{\vec{q}} + \vec{g}(\vec{q}) = \vec{\tau} - \mathbf{D} \dot{\vec{q}} + \mathbf{J}(\vec{q})^T \vec{\lambda}
+\label{eq:modelo_dinamico}
+\end{equation}
+
+Define-se o vetor de estado como $\vec{x} = \begin{bmatrix} \vec{q} \\ \dot{\vec{q}} \end{bmatrix}$ e a entrada de controle como $\vec{u} = \vec{\tau}$. Um ponto de operação $(\vec{x}^*, \vec{u}^*)$ satisfaz a condição de equilíbrio:
+
+\begin{equation}
+\dot{\vec{x}}^* = \vec{0}, \quad \mathbf{C}(\vec{q}^*, \vec{0}) + \vec{g}(\vec{q}^*) = \vec{\tau}^* + \mathbf{J}(\vec{q}^*)^T \vec{\lambda}^*
+\label{eq:equilibrio}
+\end{equation}
+
+Para manobras sem contatos, pode-se assumir $\vec{\lambda}^* = \vec{0}$. A forma explícita do modelo é obtida isolando-se $\ddot{\vec{q}}$:
+
+\begin{equation}
+\ddot{\vec{q}} = \mathbf{M}^{-1}(\vec{q})\left( \vec{u} - \mathbf{D} \dot{\vec{q}} - \mathbf{C}(\vec{q}, \dot{\vec{q}})\dot{\vec{q}} - \vec{g}(\vec{q}) \right)
+\label{eq:forma_explicita}
+\end{equation}
+
+Substituindo em um sistema de primeira ordem, obtém-se:
+
+\begin{equation}
+\dot{\vec{x}} = \begin{bmatrix} \dot{\vec{q}} \\ \vec{f}(\vec{q}, \dot{\vec{q}}, \vec{u}) \end{bmatrix} = \vec{F}(\vec{x}, \vec{u})
+\label{eq:sistema_estado}
+\end{equation}
+
+Caso haja vínculos diferenciais holonômicos, como a normalização de quaternions unitários (por exemplo, $\|\vec{q}_b\|^2 = 1$), impõe-se a condição:
+
+\begin{equation}
+\vec{\Phi}(\vec{q}) = \vec{0}
+\label{eq:vinculo_phi}
+\end{equation}
+
+A linearização dessas restrições no ponto $\vec{q}^*$ resulta em:
+
+\begin{equation}
+\delta \vec{\Phi} = \mathbf{J}_{\Phi}(\vec{q}^*) \, \delta \vec{q} = \vec{0}.
+\label{eq:linearizacao_vinculo}
+\end{equation}
+
+Com $\mathbf{J}_{\Phi} = \partial \vec{\Phi} / \partial \vec{q}$. Pode-se então projetar a dinâmica linearizada nesse subespaço nulo, eliminando os multiplicadores de Lagrange, ou manter o sistema como uma DAE e aplicar regularização (ex: método de Baumgarte).
+Para implementação digital, adota-se discretização por zero-order hold (ZOH) com período de amostragem $T_s$. A forma contínua linearizada:
+
+\begin{equation}
+\dot{\vec{x}} = \mathbf{A} \vec{x} + \mathbf{B} \vec{u}.
+\label{eq:sistema_linear_continuo}
+\end{equation}
+
+É convertida em:
+
+\begin{equation}
+\vec{x}_{k+1} = \mathbf{A}_d \vec{x}_k + \mathbf{B}_d \vec{u}_k.
+\label{eq:sistema_discreto}
+\end{equation}
+
+Com as transformações:
+
+\begin{equation}
+\mathbf{A}_d = e^{\mathbf{A} T_s}, \quad \mathbf{B}_d = \int_0^{T_s} e^{\mathbf{A} \tau} d\tau \, \mathbf{B}
+\label{eq:discretizacao_AdBd}
+\end{equation}
+
+Como critério prático, recomenda-se que $T_s$ seja no máximo $\frac{1}{10}$ do tempo dominante do sistema. De modo equivalente, utiliza-se:
+
+\begin{equation}
+T_s \leq \frac{\pi}{10 \, \omega_{\text{bw}}}.
+\label{eq:criterio_Ts}
+\end{equation}
+
+Onde $\omega_{\text{bw}}$ é a frequência de banda do sistema. Em sistemas SISO auxiliares (ex: filtros), pode-se adotar o método bilinear de Tustin.
+
+Por fim, os pares $(\mathbf{A}, \mathbf{B})$ devem ser estimados numericamente por diferenças finitas no ponto de operação. A discretização deve ser exata (ZOH) para garantir precisão. Em sistemas com quaternions, é necessário impor normalização periódica ou aplicar projeção a cada passo discreto, garantindo estabilidade numérica e coerência física.
