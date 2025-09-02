@@ -1,0 +1,26 @@
+\section{Controle de Atitude}
+O controle de atitude de uma espaçonave consiste em projetar leis de realimentação capazes de estabilizar e orientar o corpo em torno de uma referência desejada.
+Nesta dissertação será empregado o controle proporcional-derivativo (PD), devido à sua simplicidade de implementação e eficiência para estabilização em torno de pequenas perturbações.
+
+\subsection{PD aplicado às velocidades angulares}
+O controlador PD atua sobre a velocidade angular da espaçonave, buscando minimizar o erro entre a atitude desejada e a atual.
+Seja $\vec{\omega}_0$ a velocidade angular medida e $\vec{\omega}_1$ a velocidade angular desejada (referência).
+Tal condição pode descrever o torque de controle como:
+\begin{equation}
+\vec{M}_{\text{PD}} = -K_p \, \vec{e}_q - K_d \, (\vec{\omega}_0 - \vec{\omega}_1),
+\label{eq:torque_PD}
+\end{equation}
+
+Onde $K_p$ e $K_d$ são os ganhos escalares de controle, e $\vec{e}_q$ representa o erro de atitude, que pode ser expresso em termos de quaternions ou ângulos de Euler linearizados.  
+Nesta dissertação, o erro de atitude será tratado em termos de quaternions, de modo a evitar singularidades associadas aos ângulos de Euler.
+
+\subsection{Requisitos de projeto dos ganhos do controlador PD}
+Os ganhos $K_p$ e $K_d$ do controlador PD devem ser projetados de forma a satisfazer critérios de desempenho bem definidos, como:
+
+(i) Deve possuir estabilidade assintótica em torno da orientação de referência, ou seja, a partir de qualquer pequena perturbação inicial, a atitude da espaçonave deve convergir ao estado desejado sem apresentar desvios residuais no regime permanente.
+
+(ii) Em seguida, o tempo de acomodação deve ser compatível com os requisitos da missão, ou seja, a resposta transitória precisa atingir a orientação de referência dentro de um intervalo de tempo determinado, permitindo que manobras de apontamento ou de acoplamento ocorram de forma correta.
+
+(iii) Outro aspecto essencial é a ausência de oscilações excessivas, o que corresponde a um amortecimento adequado da resposta. Oscilações significativas podem comprometer tanto a estabilidade numérica das simulações quanto causar colisões, além de dificultarem a operação do manipulador robótico acoplado.
+
+(iv) Por fim, deve-se possuir robustez frente a variações inerciais provocadas pelo movimento do manipulador. Como a distribuição de massa do sistema varia dinamicamente devido a movimentação das juntas, o controlador deve ser capaz de manter seu desempenho mesmo diante dessas mudanças, garantindo comportamento consistente em todas as fases da missão.
