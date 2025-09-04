@@ -13,10 +13,10 @@ Ao desprezar a energia potencial por estar em ambiente de microgravidade, a Lagr
 A partir da Lagrangiana \eqref{eq:Lagrangiana_apenasCinetica}, que aqui está considerando apenas a energia cinética do sistema, aplica-se a equação de Euler–Lagrange para cada coordenada generalizada $q_i$:
 
 \begin{equation}
-\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = Q_i
+\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = Q_i,
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $\frac{\partial L}{\partial \dot{q}_i}$: momento generalizado associado a $q_i$;
     \item $\frac{d}{dt}$: derivada temporal, representando a variação do momento generalizado;
@@ -30,14 +30,14 @@ Ao reunir todas as equações de Euler$-$Lagrange em um vetor, para que seja con
 \begin{equation}
 \mathbf{M}(\vec{q}) \, \ddot{\vec{q}} +
 \mathbf{C}(\vec{q}, \dot{\vec{q}})\,\dot{\vec{q}} +
-\vec{g}(\vec{q}) = \vec{\tau}
+\vec{g}(\vec{q}) = \vec{\tau},
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $\mathbf{M}(\vec{q})$: matriz de inércia ($n \times n$), que depende da configuração do manipulador;
     \item $\mathbf{C}(\vec{q}, \dot{\vec{q}})$: matriz dos termos centrífugos e de Coriolis;
-    \item $\vec{g}(\vec{q})$: vetor das forças generalizadas de gravidade;
+    \item $\vec{g}(\vec{q})$: vetor das forças generalizadas de gravidade\footnote{Mantido na formulação por consistência com a forma geral das equações, embora seja nulo no cenário de microgravidade considerado.};
     \item $\vec{\tau}$: vetor de torques ou forças generalizadas aplicados nas juntas.
 \end{itemize}
 
@@ -84,10 +84,10 @@ Dessa forma, a equação matricial da dinâmica pode ser reescrita em blocos:
 \begin{bmatrix}
 \vec{\tau}_b \\
 \vec{\tau}_m
-\end{bmatrix}
+\end{bmatrix},
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $\mathbf{M}_{bb}$: matriz de inércia da base (translacional e rotacional);
     \item $\mathbf{M}_{mm}$: matriz de inércia do manipulador robótico;

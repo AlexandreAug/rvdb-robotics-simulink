@@ -6,11 +6,12 @@ Um corpo rígido possui energia cinética pois leva em conta sua translação e 
 
 \begin{equation}
 T_i =
-\frac{1}{2} m_i \, ({}^{\,T} \vec{v}_{C_i}) \vec{v}_{C_i}
-+ \frac{1}{2} ({}^{\,T} \vec{\omega}_i) \, ({}^{(0)} \mathbf{I}_{C_i}) \, \vec{\omega}_i
+\frac{1}{2} m_i \,
+({{\vec v}^{\, T}}_{C_i}) \vec{v}_{C_i}
++ \frac{1}{2} {\vec \omega_i}^{T} \, ({}^{0} \mathbf{I}_{C_i}) \, \vec{\omega}_i,
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $m_i$ é a massa do elo $i$;
     \item $\vec{v}_{C_i}$ é a velocidade do centro de massa do elo $i$ (em relação à base);
@@ -22,13 +23,13 @@ Onde:
 % Energia Cinética da Base
 % ---------------------------------------------------
 \subsection{Energia cinética da base (Em desenvolvimento)}
-A base também pode contribuir com energia cinética, especialmente se houver rotação, caso haja translação da base, essa pode ser tratada separadamente como parte do subsistema orbital.
+A base também pode contribuir com energia cinética, especialmente se houver rotação, caso haja translação da base, essa pode ser tratada separadamente como parte do subsistema orbital:
 
 \begin{equation}
-T_b = \frac{1}{2} \, \vec{\omega}_b^{\,T} \, \mathbf{I}_b \, \vec{\omega}_b
+T_b = \frac{1}{2} \, \vec{\omega}_b^{\,T} \, \mathbf{I}_b \, \vec{\omega}_b,
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $\vec{\omega}_b$ é a velocidade angular da base;
     \item $\mathbf{I}_b$ é o tensor de inércia da base.

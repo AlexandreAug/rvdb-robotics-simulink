@@ -1,14 +1,16 @@
-\chapter{Formulação do problema}
+% \chapter{Formulação do problema}
+\chapter{Fundamentação teórica e modelagem}
+
 Nesta pesquisa de Mestrado será simulada computacionalmente a dinâmica orbital e de atitude de uma espaçonave equipada com manipulador robótico.
 Ela está inserida em uma missão de \emph{rendezvous and docking/berthing} (RVD/B) em órbita baixa terrestre (LEO, \emph{Low Earth Orbit}).
 A formulação contempla duas camadas principais:
-(i) a dinâmica orbital relativa entre o \emph{chaser} e o \emph{target}, e é descrita pelas Equações de Hill/Clohessy–Wiltshire em coordenadas LVLH; e
+(i) a dinâmica orbital relativa entre o \emph{chaser} e o \emph{target}, e é descrita pelas Equações de Hill/Clohessy-Wiltshire em coordenadas LVLH; e
 (ii) a dinâmica de atitude da base flutuante e do manipulador robótico acoplado, e são modelados segundo a abordagem de corpos rígidos interconectados.
 
 No subsistema orbital, considera-se que a aproximação é realizada pela direção radial (\emph{R-bar}), e que a transferência inicial entre órbitas circulares é obtida por meio de uma manobra de Hohmann, sem perturbações ambientais.
 Para o subsistema de atitude, são analisadas as equações de movimento da espaçonave com base flutuante, sujeita à ação dos torques de controle, e as equações de movimento das juntas do manipulador, composto por quatro articulações revolutas e uma prismática (configuração $4R1P$), responsáveis pelo alinhamento e extensão da ferramenta de captura.
 
-A estratégia de controle empregada é realizada através do uso de controladores do tipo proporcional$-$derivativos (PD).
+A estratégia de controle empregada é realizada através do uso de controladores do tipo proporcional$-$derivativo (PD).
 Estes são aplicados tanto à atitude da base quanto às juntas do manipulador, assegurando o alinhamento do \emph{chaser} em relação ao \emph{target}.
 A integração entre a dinâmica orbital, o controle de atitude da espaçonave e o controle do manipulador robótico é realizada em ambiente de microgravidade.
 Para garantir a fidelidade numérica das simulações, adota-se a consideração integral dos produtos de inércia, mesmo quando seus valores são da ordem de $10^{-6}$ ou inferiores.
@@ -36,8 +38,8 @@ O controle de atitude é utilizado em missões de \emph{rendezvous and docking/b
 Essa etapa é essencial nas manobras realizadas no eixo radial (\emph{R-bar}), em que o alinhamento entre as espaçonaves é condição para o sucesso da missão.
 
 As equações de movimento de atitude podem ser expressas em diferentes sistemas de coordenadas: o inercial, o orbital (\emph{Local-Vertical-Local-Horizontal, LVLH}) e o relativo.
-Cada sistema de referencia é empregado conforme a necessidade de modelagem:
-o referencial inercial descreve a dinâmica absoluta da espaçonave;
+Cada sistema de referência é empregado conforme a necessidade de modelagem:
+a referência inercial descreve a dinâmica absoluta da espaçonave;
 o LVLH é usado para demonstrar a aproximação orbital relativa;
 e o sistema relativo é útil para análise do alinhamento entre \emph{chaser} e \emph{target}.
 
@@ -80,18 +82,18 @@ As acelerações são obtidas diretamente das equações de movimento e, portant
 \subsection{Condições iniciais}
 As condições iniciais do sistema são definidas pelas posições no sistema de coordenadas local, pelas velocidades lineares e angulares iniciais da base, além dos ângulos iniciais de cada junta do manipulador e suas respectivas velocidades iniciais.
 
-\section{Hipóteses de simulação e critérios de validação}
+\subsection{Hipóteses de simulação e critérios de validação}
 
 As simulações numéricas serão utilizadas como ferramenta para validar a transferência de Hohmann, as equações do movimento absoluto, do movimento relativo e a lei de controle proposta.
 Tais simulações serão conduzidas em ambiente MATLAB/Simulink, permitindo avaliar a resposta dinâmica do sistema frente a condições iniciais estabelecidas e a diferentes níveis de complexidade na modelagem.
 
 As hipóteses de configuração inicial incluem a definição das condições de atitude tanto do \emph{chaser} quanto do \emph{target}.
-O \emph{chaser} possuirá desvios em sua posição e em suas velocidades iniciais, enquanto que o \emph{target} será tratado como referência, servindo como orientação fixa no referencial local LVLH.
+O \emph{chaser} possuirá desvios em sua posição e em suas velocidades iniciais, enquanto que o \emph{target} será tratado como referência, servindo como orientação fixa na referência local LVLH.
 A integração temporal das equações diferenciais será realizada por métodos numéricos de passo variável na propagação dos estados e estabilidade no tratamento de equações não lineares.  
 
 Serão avaliados diferentes cenários de simulação, abrangendo:
 (i) a transferência orbital do \emph{chaser} para a órbita do \emph{target} por meio da transferência de Hohmann;
-(ii) o controle absoluto de atitude no referencial inercial;
+(ii) o controle absoluto de atitude na referência inercial;
 (iii) o controle relativo de atitude no cenário entre \emph{chaser} e \emph{target}; e
 (iv) a comparação de erros residuais entre as atitudes simuladas e as atitudes de referência.
 

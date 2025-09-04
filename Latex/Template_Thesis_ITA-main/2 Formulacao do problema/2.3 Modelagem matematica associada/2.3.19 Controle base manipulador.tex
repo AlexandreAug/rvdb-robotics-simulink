@@ -3,32 +3,74 @@
 Nesta seção, descreve-se a arquitetura de controle adotado para a operação do manipulador em ambiente de microgravidade. O sistema é composto por três malhas principais, que são: controle da atitude da base (malha externa), planejamento do manipulador com mínima reação, e controle por torque nas juntas (malha interna). Essas malhas operam de forma coordenada.
 
 \subsection{Controle de atitude da base}
+A malha externa é responsável por controlar a orientação da base do sistema. 
+O erro de atitude é expresso por quaternions, para evitar as singularidades associadas aos ângulos de Euler. Neste trabalho adotou-se a convenção de Hamilton\fn{Explicado em \eqref{sec:Quaternions}}, assim, o erro de quaternion é dado por:
 
-A malha externa é responsável por controlar a orientação da base livre do sistema. Utiliza-se o erro de atitude definido por quaternions, evitando as singularidades associadas a representações por ângulos de Euler. O erro de quaternion é definido por:
 \begin{equation}
-    \vec{q}_e = \vec{q}_{\text{ref}}^{\, -1} \otimes \vec{q}_b =
+    q_e \;=\; q_{ref}^{-1} \otimes q_b \;=\;
     \begin{bmatrix}
-        \vec {\omega}_e \\
-        \vec{\epsilon}_e
-    \end{bmatrix}.
+        q_{e} \\[2pt] \vec {\epsilon}_e
+    \end{bmatrix},
+    \label{eq:erro_quaternion1}
 \end{equation}
 
-A lei de controle para o torque aplicado à base é:
+onde:
+\begin{itemize}
+    \item $q_{e}$ é a parte escalar do quaternion de erro e $\vec {\epsilon}_e$ é o vetor associado;
+    \item $q_b$ é o quaternion da atitude da base;
+    \item $q_{\mathrm{ref}}$ é o quaternion de referência e $q_{ref}^{-1}$ o seu inverso;
+    \item $\vec e_q$ define o vetor de erro de atitude usado na realimentação.
+\end{itemize}
+
+Sendo que:
+\begin{equation}
+    \vec e_q \;=\; 2\,\mathrm{sgn}(q_{e})\,\vec {\epsilon}_e,
+    \label{eq:erro_quaternion2}
+\end{equation}
+
+onde o termo $\operatorname{sgn}(q_{e})$ corresponde à \emph{função sinal}, utilizada para resolver a ambiguidade associada aos quaternions, assim, expressa-se:
+\begin{equation}
+\operatorname{sgn}(x) =
+\begin{cases}
++1, & x > 0, \\
+0,  & x = 0, \\
+-1, & x < 0,
+\end{cases}
+\label{eq:funcao_sinal}
+\end{equation}
+
+Como $q_e$ e $-q_e$ representam a mesma orientação física, existe um duplo recobrimento na representação.
+O fator $\operatorname{sgn}(q_{e})$ faz com que a parte escalar do quaternion de erro seja escolhida de forma consistente ($q_{e}\ge 0$), evitando o fenômeno conhecido como \emph{unwinding}, no qual o controlador tende a forçar uma rotação desnecessária de $360^{\circ}$ para atingir a referência.
+Portanto, o vetor de erro $\vec e_q$ em \eqref{eq:erro_quaternion2} fornece uma medida proporcional ao menor ângulo de rotação necessário para alinhar a base em relação à atitude de referência.
+
+
+Caso a referência apresente velocidade angular não nula, define-se também a velocidade de erro na mesma referência, como:
+\begin{equation}
+    \vec{\omega}_e \;=\; \vec{\omega}_b \;-\; \vec{\omega}_{\mathrm{ref}},
+    \label{eq:erro_velocidade}
+\end{equation}
+
+em que $\vec{\omega}_b$ é a velocidade angular da base e $\vec{\omega}_{\mathrm{ref}}$ a velocidade angular de referência.
+
+Com base nessas definições, a lei de controle proporcional-derivativa (PD) aplicada à base é
 
 \begin{equation}
-    \vec{\tau}_b = -K_p \vec{\epsilon}_e - K_d \vec{\omega}_b.
+    \vec{\tau}_b \;=\; -\,K_p\,\vec e_q \;-\; K_d\,\vec\omega_e,
+    \label{eq:lei_controle_PD}
 \end{equation}
 
-Onde $\vec{\omega}_b$ é a velocidade angular da base, e $K_p$, $K_d$ são matrizes de ganhos proporcionais e derivativos, respectivamente. O termo integral não é utilizado neste trabalho, visando evitar acúmulo de erro (windup) do longo do tempo e por ser usual no ambiente espacial.
+onde $K_p$ e $K_d$ são os ganhos proporcionais e derivativos, respectivamente. 
+Neste trabalho o termo integral não é utilizado, de modo a evitar o acúmulo de erro ao longo do tempo (wind--up) 
+e por não ser usualmente empregado no ambiente espacial.
+
 
 \subsection{Planejamento do manipulador com mínima reação}
-
 Durante a movimentação do manipulador robótico, busca-se minimizar o efeito de reação na base. Para isso, utiliza-se a projeção da tarefa secundária no espaço nulo da Jacobiana, mantendo a tarefa primária (movimento do efetuador) inalterada. O comando cinemático é dado por:
 \begin{equation}
-    \dot{\vec{q}}_j = \mathbf{J}^\# \vec{v}_E^{\text{\, ref}} + \left( \mathbf{I} - \mathbf{J}^\# \mathbf{J} \right) \vec{z}.
+    \dot{\vec{q}}_j = \mathbf{J}^\# \vec{v}_E^{\text{\, ref}} + \left( \mathbf{I} - \mathbf{J}^\# \mathbf{J} \right) \vec{z},
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $ \vec{v}_E^{\text{\, ref}} $ é a velocidade desejada do efetuador;
     \item $ \mathbf{J}^\# $ é a pseudoinversa ponderada da Jacobiana;
@@ -42,8 +84,6 @@ Já para evitar aproximações indesejadas aos limites físicos das juntas, pode
 \subsection{Controle por torque nas juntas}
 
 A malha interna é responsável pelo controle fino de cada junta do manipulador, aplicando torque para seguir a trajetória desejada. A lei de controle adotada é do tipo proporcional-derivativa (PD), aplicada individualmente para cada junta $ j $:
-
-A lei de controle adotada é do tipo proporcional-derivativa (PD), aplicada individualmente para cada junta $ j $:
 
 \begin{equation}
 \tau_j = -k_{p,j} e_j - k_{d,j} \dot{e}_j.

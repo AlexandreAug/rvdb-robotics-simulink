@@ -9,7 +9,7 @@ Esse conjunto pode ser escrito como:
 W_{pos} = \left\{ \vec{p} \in \mathbb{R}^3 : \exists \, q_j \in Q_{livre} \; \text{com} \; \vec{p} = \vec{p}_E(q) \right\},
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $\vec{p}_E(q)$: posição do efetuador obtida pela cinemática direta para uma dada configuração de juntas $q$;
     \item $Q_{livre}$: conjunto de juntas admissíveis sem colisões ou violações de restrições, como o Keep-Out Zones;
@@ -19,10 +19,10 @@ Onde:
 O conjunto de juntas livres de colisão é dado por:
 \begin{equation}
 \label{eq:workspace_Qlivre}
-Q_{livre} = Q_{adm} - Q_{col}.
+Q_{livre} = Q_{adm} - Q_{col},
 \end{equation}
 
-Onde:
+onde:
 \begin{itemize}
     \item $Q_{adm}$: conjunto admissível de juntas, definido pelos limites geométricos, cinemáticos e dinâmicos apresentados na seção \eqref{sec:conjunto_juntas};
     \item $Q_{col}$: conjunto de configurações inválidas devido a auto-colisão do manipulador robótico ou violação das restrições de segurança, por exemplo, Keep-Out Zones.

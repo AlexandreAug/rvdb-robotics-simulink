@@ -144,6 +144,42 @@
       \field{title}{A Kinematic Notation for Lower-Pair Mechanisms Based on Matrices}
       \field{year}{1955}
     \endentry
+    \entry{edelstein2018_derivadaSegunda}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04748c8640b106a9da2140e5d731d3ed}{%
+           family={Edelstein-Keshet},
+           familyi={E\bibinithyphendelim K\bibinitperiod},
+           given={Leah},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Math LibreTexts}%
+      }
+      \strng{namehash}{04748c8640b106a9da2140e5d731d3ed}
+      \strng{fullhash}{04748c8640b106a9da2140e5d731d3ed}
+      \strng{fullhashraw}{04748c8640b106a9da2140e5d731d3ed}
+      \strng{bibnamehash}{04748c8640b106a9da2140e5d731d3ed}
+      \strng{authorbibnamehash}{04748c8640b106a9da2140e5d731d3ed}
+      \strng{authornamehash}{04748c8640b106a9da2140e5d731d3ed}
+      \strng{authorfullhash}{04748c8640b106a9da2140e5d731d3ed}
+      \strng{authorfullhashraw}{04748c8640b106a9da2140e5d731d3ed}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Available online at Math LibreTexts}
+      \field{title}{Differential Calculus for the Life Sciences}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://math.libretexts.org
+      \endverb
+      \verb{url}
+      \verb https://math.libretexts.org
+      \endverb
+    \endentry
     \entry{fehse2003}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=5ecb95438e87e12b20e8c9e9c27d0db7}{%
@@ -240,6 +276,51 @@
       \field{type}{techreport}
       \field{version}{1.1}
       \field{year}{2022}
+    \endentry
+    \entry{halliday2013}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4b8c39f85b79739a6d86db3fc5ef7276}{%
+           family={Halliday},
+           familyi={H\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0af34f64451b9e5329db72d726604642}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c452daf9e08a2b1aace408d33996eb14}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Wiley}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{a92ddd665c90bf44bf165618dc235578}
+      \strng{fullhash}{a92ddd665c90bf44bf165618dc235578}
+      \strng{fullhashraw}{a92ddd665c90bf44bf165618dc235578}
+      \strng{bibnamehash}{a92ddd665c90bf44bf165618dc235578}
+      \strng{authorbibnamehash}{a92ddd665c90bf44bf165618dc235578}
+      \strng{authornamehash}{a92ddd665c90bf44bf165618dc235578}
+      \strng{authorfullhash}{a92ddd665c90bf44bf165618dc235578}
+      \strng{authorfullhashraw}{a92ddd665c90bf44bf165618dc235578}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10}
+      \field{title}{Fundamentals of Physics}
+      \field{year}{2013}
     \endentry
     \entry{hill1878}{article}{}{}
       \name{author}{1}{}{%
@@ -401,6 +482,46 @@
       \field{title}{A Mathematical Introduction to Robotic Manipulation}
       \field{year}{1994}
     \endentry
+    \entry{newton1713}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7a621e01239c1fe6557cf9c9d2f85bd3}{%
+           family={Newton},
+           familyi={N\bibinitperiod},
+           given={Isaac},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Royal Society}%
+      }
+      \strng{namehash}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \strng{fullhash}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \strng{fullhashraw}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \strng{bibnamehash}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \strng{authorbibnamehash}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \strng{authornamehash}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \strng{authorfullhash}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \strng{authorfullhashraw}{7a621e01239c1fe6557cf9c9d2f85bd3}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{note}{Segunda edição revisada por Roger Cotes}
+      \field{title}{Philosophiae Naturalis Principia Mathematica}
+      \field{year}{1713}
+      \verb{urlraw}
+      \verb https://doi.org/10.5479/sil.39088000674457
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5479/sil.39088000674457
+      \endverb
+    \endentry
     \entry{santosDextrogiro2021}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=9d6dd130e12875fc72c448041cdbb8bd}{%
@@ -442,6 +563,45 @@
       \field{journaltitle}{Instituto Tecnológico de Aeronáutica (ITA), Centro de Coordenação de Estudos da Marinha em São Paulo (CCEMSP), Universidade Brasil}
       \field{title}{Aplicação da Comunicação Óptica Intersatélite em Missões de Formação em Voo de Pequenos Satélites}
       \field{year}{2021}
+    \endentry
+    \entry{wgsantos2011}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5cc7a97257e81135ee6a5646da4e98f3}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Willer\bibnamedelima Gomes},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0,
+           prefix={dos},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto Nacional de Pesquisas Espaciais}%
+      }
+      \list{location}{1}{%
+        {São José dos Campos}%
+      }
+      \strng{namehash}{5cc7a97257e81135ee6a5646da4e98f3}
+      \strng{fullhash}{5cc7a97257e81135ee6a5646da4e98f3}
+      \strng{fullhashraw}{5cc7a97257e81135ee6a5646da4e98f3}
+      \strng{bibnamehash}{5cc7a97257e81135ee6a5646da4e98f3}
+      \strng{authorbibnamehash}{5cc7a97257e81135ee6a5646da4e98f3}
+      \strng{authornamehash}{5cc7a97257e81135ee6a5646da4e98f3}
+      \strng{authorfullhash}{5cc7a97257e81135ee6a5646da4e98f3}
+      \strng{authorfullhashraw}{5cc7a97257e81135ee6a5646da4e98f3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{Simulação de manobras aeroassistidas de um veículo espacial controlado por placas aerodinâmicas reguláveis e sistema propulsivo}
+      \field{type}{Dissertação (Mestrado em Engenharia e Tecnologia Espaciais)}
+      \field{year}{2011}
+      \field{pages}{193}
+      \range{pages}{1}
     \endentry
     \entry{wie2008space}{book}{}{}
       \name{author}{1}{}{%
