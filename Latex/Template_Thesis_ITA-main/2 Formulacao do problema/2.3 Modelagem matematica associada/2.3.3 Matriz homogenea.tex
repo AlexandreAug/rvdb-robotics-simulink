@@ -1,11 +1,12 @@
-\section{Matriz de atitude e outras composições}
+\section{Cinemática diferencial do efetuador e composições de orientação}
+
 
 Para representar a atitude (orientação) de um corpo rígido, neste caso, o manipulador robótico, é necessário detalhar a relação entre os \emph{frames (ou sistema de coordenadas)} e um sistema de referência global.
 
 \subsection{Relação entre frames e sistema de referência global}
 Como existem múltiplos
-\emph{frames} envolvidos, como o Inercial (centrado na Terra, $\{I\}$);
-o \emph{frame} Local da espaçonave, $\{LVLH\}$, que por sua vez está no centro de massa do \emph{chaser};
+\emph{frames} envolvidos, como o Inercial, centrado na Terra $\{I\}$;
+o \emph{frame} local da espaçonave, $\{LVLH\}$, que por sua vez está no centro de massa do \emph{chaser};
 e o \emph{corpo $\{B\}$}, fixado no centro de massa do manipulador robótico,
 se faz necessário definir a relação entre esses \emph{frames} e o sistema de referência global.
 A matriz de rotação é utilizada para descrever as coordenadas de um vetor de um sistema para outro \cite{craig2005}.
@@ -48,19 +49,6 @@ A composição de \eqref{eq:LocalparaInercial_yawpitchroll} corresponde à sequ�
     \end{tabular}
 \end{table}
 
-Após a definição das matrizes homogêneas, introduz-se também o operador \emph{chapéu} \cite{murray1994mathematical}. Esse operador auxilia nas transformações de coordenadas e na formulação das equações dinâmicas, sendo definido como a matriz assimétrica associada a um vetor $a = [x, y, z]^T$.
-
-\begin{equation}
-    \label{eq:matriz_assimetrica}
-    \hat{a} = 
-    \begin{bmatrix}
-        0   & -z  &  y \\
-        z   &  0  & -x \\
-        -y  &  x  &  0
-    \end{bmatrix}
-\end{equation}
-
-Essa matriz possui a propriedade de que $\hat{a} b = a \times b$, ou seja, a multiplicação matricial equivale ao produto vetorial tradicional.
 Como o manipulador robótico deste documento possui 5 juntas, pode-se adaptar \eqref{eq:produtorio_generico} para essa totalidade de juntas, como indicado a seguir:
 \begin{equation}
 {}^{0}\!T_E(q)=
@@ -68,18 +56,40 @@ A_1(\theta_1)
 A_2(\theta_2)
 A_3(\theta_3)
 A_4(\theta_4)
-A_5(d_5).
+A_5(d_5),
 \end{equation}
-
-Para extrair a orientação, utiliza-se \eqref{eq:rotacao_MatrizHomogenea_orientacao} e para extrair a posição utiliza-se \eqref{eq:posicao_MatrizHomogenea_posicao}, conforme:
-
+onde $A_i$ são as transformações elementares da tabela DH, e $\theta_i$ são os ângulos revolutivos das juntas, e $d_5$ é o deslocamento da junta prismática. A matriz homogênea ${}^0T_E$ que descreve tanto a orientação como a posição do efetuador em relação à base é:
 \begin{equation}
-    \label{eq:rotacao_MatrizHomogenea_orientacao}
-\mathbf{R}_E(q) = \big[{}^{0}\mathbf{T}_E(q)\big]_{1:3,\,1:3},\qquad
+{}^0T_E(q) \;=\;
+\begin{bmatrix}
+r_{11} & r_{12} & r_{13} & p_x \\
+r_{21} & r_{22} & r_{23} & p_y \\
+r_{31} & r_{32} & r_{33} & p_z \\
+0      & 0      & 0      & 1
+\end{bmatrix}.
+\label{eq:T0E_completa}
 \end{equation}
 
-Onde o ponto do Efetuador $\{E\}$ é definido como:
+A submatriz de rotação $\mathbf{R}_E(q)$ e o vetor de posição do efetuador $\vec{p}_E(q)$ são, respectivamente:
 \begin{equation}
-    \label{eq:posicao_MatrizHomogenea_posicao}
-\vec{p}_E(q) = \big[{}^{0}\mathbf{T}_E(q)\big]_{1:3,\,4}.
+\mathbf{R}_E(q) \;=\;
+\begin{bmatrix}
+r_{11} & r_{12} & r_{13} \\
+r_{21} & r_{22} & r_{23} \\
+r_{31} & r_{32} & r_{33}
+\end{bmatrix},
+\label{eq:RE_def}
 \end{equation}
+\begin{equation}
+\vec{p}_E(q) \;=\;
+\begin{bmatrix}
+p_x \\ p_y \\ p_z
+\end{bmatrix}.
+\label{eq:pE_def}
+\end{equation}
+
+
+
+
+
+

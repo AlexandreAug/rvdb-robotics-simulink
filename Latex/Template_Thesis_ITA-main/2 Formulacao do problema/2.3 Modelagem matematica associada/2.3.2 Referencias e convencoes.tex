@@ -20,15 +20,14 @@ e o vetor $\vec{z}$ é normal ao plano orbital, alinhado ao vetor momento angula
 \subsection{Subsistema manipulador robótico}
 O sistema de coordenadas do corpo (\emph{body frame}) é acoplado de forma rígida à plataforma onde o manipulador robótico está montado, portanto, não há movimento relativo entre eles. Esse sistema de coordenadas é referido como $\boldsymbol{\{B\}}$ — ou \emph{frame 0}, conforme a nomenclatura adotada por \cite{craig2005} — e possui sua origem coincidente com o centro de massa da plataforma. Dessa forma, o manipulador robótico compartilha a mesma translação e rotação da plataforma.
 
-Essa referência será utilizado como base para a definição dos parâmetros inerciais da plataforma, tais como massa e matriz de inércia $\boldsymbol{I_B}$. Caso seja necessário utilizar em outra referência (por exemplo, fixado no sistema de coordenada inercial), uma transformação adicional deverá ser aplicada entre a referência global e o \emph{frame 0}.
+Essa referência será utilizada como base para a definição dos parâmetros inerciais da plataforma, tais como massa e matriz de inércia $\boldsymbol{I_B}$. Caso seja necessário utilizar em outra referência (por exemplo, fixado no sistema de coordenada inercial), uma transformação adicional deverá ser aplicada entre a referência global e o \emph{frame 0}.
 
 A identificação dos elos segue a notação $\{i\}$, onde $i=1$ representa a primeira junta e $i=5$ a última, que acopla a ferramenta no último elo. Essa mesma numeração será utilizada para definir a tabela de Denavit-Hartenberg (DH) apresentada adiante.
 
 Além disso, o efetuador final (\emph{end-effector}) do manipulador robótico é representado pelo $frame \{E\}$, cuja origem está localizada no final da ponta da ferramenta.
 
 \subsubsection{Cinemática do manipulador robótico}
-Cinemática é a área da mecânica que estuda o movimento dos corpos sem considerar as forças que assim o provocam \cite{craig2005}.  
-
+Cinemática é a área da mecânica que estuda o movimento dos corpos sem considerar as forças que assim o provocam \cite{craig2005}.
 Dois espaços principais
 \footnote{Conforme \cite{kucuk2006robot}, outras representações podem ser feitas, por exemplo, por vetores de Gibbs, parâmetros de Cayley-Klein e outros, no entanto, não serão abordados.}
 são utilizados para modelar a cinemática de manipuladores robóticos: o espaço cartesiano e o espaço dos quaternions (apresentado na seção \eqref{sec:Quaternions}). Quando ocorre uma transformação entre dois sistemas de coordenadas cartesianos, essa transformação pode ser decomposta em uma rotação e uma translação \cite{kucuk2006robot}.  

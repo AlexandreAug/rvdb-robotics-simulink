@@ -11,11 +11,13 @@ A Tabela \ref{tab:DH_parametros} resume os parâmetros adotados para cada junta 
 A definição dos eixos coordenados segue os critérios geométricos e de montagem do manipulador robótico, sendo que os eixos $z_i$ coincidem com os eixos de rotação ou translação das juntas, e os eixos $x_i$ são orientados ao longo do elo seguinte.
 Por sua vez, o elo 1, por exemplo, estende-se verticalmente, alinhado ao eixo Z da base, enquanto que os elos seguintes seguem a orientação dos respectivos eixos $x_i$.
 
+\setlength{\tabcolsep}{20pt} 
+\renewcommand{\arraystretch}{1}
 \begin{table}[ht]
 \centering
 \caption{Parâmetros de Denavit-Hartenberg do manipulador robótico.}
 \label{tab:DH_parametros}
-\begin{tabular}{ccccc}
+\begin{tabular}{ccrrr}
 \toprule
 Junta $i$ & $\theta_i$ & $d_i$ [m] & $a_i$ [m] & $\alpha_i$ [rad] \\
 \midrule

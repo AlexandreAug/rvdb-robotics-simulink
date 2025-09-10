@@ -1,0 +1,13 @@
+Para o caso particular onde $\vec{\omega}_{ref}=\vec{0}$, então $\vec{\omega}_e=\vec{\omega}$ e
+\begin{equation}
+\vec{M} =
+-\mathbf{K}_p \big(2\,\mathrm{sgn}(q_{e(0)})\,\vec{\epsilon}_e\big)
+-\mathbf{K}_d\,\vec{\omega},
+\label{eq:pd_equilibrio2}
+\end{equation}
+
+
+Nota-se que: (i) para pequenos ângulos,
+$q_e \approx [\,1,\ \tfrac{1}{2}\,\vec{\theta}\,]^T$,
+de modo que $\vec{e}_q \approx \vec{\theta}$ (interpretação geométrica direta do erro). 
+(ii) A estabilidade local pode ser mostrada por uma função de Lyapunov do tipo $V=\tfrac{1}{2}\,\vec{\omega}_e^T\mathbf{J}\,\vec{\omega}_e + k_p\,(1-|q_{e0}|)$, cuja derivada ao longo de \eqref{eq:qedot} e de \eqref{eq:lei_controle_PD} satisfaz $\dot V = -\,\vec{\omega}_e^T \mathbf{K}_d \vec{\omega}_e \le 0$, para $\mathbf{J}\succ 0$.

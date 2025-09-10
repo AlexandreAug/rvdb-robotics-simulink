@@ -1,10 +1,9 @@
-\section{Controle base-manipulador}
-
+\section{Arquitetura de controle}
 Nesta seção, descreve-se a arquitetura de controle adotado para a operação do manipulador em ambiente de microgravidade. O sistema é composto por três malhas principais, que são: controle da atitude da base (malha externa), planejamento do manipulador com mínima reação, e controle por torque nas juntas (malha interna). Essas malhas operam de forma coordenada.
 
 \subsection{Controle de atitude da base}
-A malha externa é responsável por controlar a orientação da base do sistema. 
-O erro de atitude é expresso por quaternions, para evitar as singularidades associadas aos ângulos de Euler. Neste trabalho adotou-se a convenção de Hamilton\fn{Explicado em \eqref{sec:Quaternions}}, assim, o erro de quaternion é dado por:
+A malha externa de controle é responsável por controlar a orientação da base do sistema. O erro de atitude é expresso por quaternions para evitar as singularidades associadas aos ângulos de Euler.
+Neste trabalho foi adotada a convenção de Hamilton\fn{Explicado anteriormente na seção \eqref{sec:Quaternions}}, assim, o erro de quaternion é dado por:
 
 \begin{equation}
     q_e \;=\; q_{ref}^{-1} \otimes q_b \;=\;
@@ -112,3 +111,11 @@ Adicionalmente, impõe-se saturação nos torques para respeitar os limites fís
 A malha externa de atitude fornece o torque de estabilização $ \vec{\tau}_b $, enquanto o manipulador executa $ \vec{v}_E^{\text{ref}} $ projetado no espaço nulo da Jacobiana, de forma a evitar reações sobre a base.
 Por fim, a malha interna aplica os torques articulares $ \tau_j $, respeitando os limites operacionais e as restrições dinâmicas.
 Todas as camadas estão sujeitas a restrições físicas (como zonas de exclusão, limites de torque e velocidade) e critérios de monitoramento contínuo durante a operação.
+
+%==================================================
+% ------------- Nota sobre ganhos de controle (escopo)
+%==================================================
+\subsection{Nota sobre ganhos de controle}
+
+A lei de controle utilizada é do tipo proporcional--derivativa (PD) nas variáveis de atitude e velocidade da base e nas coordenadas de junta.
+Os valores numéricos dos ganhos $(K_p,K_d)$, bem como limites e eventuais filtros auxiliares, serão especificados no capítulo relacionado às simulações, juntamente com os cenários de simulação e as métricas de avaliação.

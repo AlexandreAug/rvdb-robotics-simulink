@@ -209,14 +209,126 @@ Para encontrar a posição do Sistema $\{A\}$:
 Onde ${}^A \vec{p}_B$ é a translação do frame $\{B\}$ em relação a $\{A\}$; ${}^B \vec{p}$ é a coordenada do ponto expressa em $\{B\}$; e ${}^A \vec{p}$ é a coordenada do mesmo ponto expressa em $\{A\}$.
 
 
+%==================================================
+%----- Derivadas parciais de R na sequencia ZYX
+%==================================================
+\subsubsection{Derivadas parciais de \(\mathbf R\) na sequência ZYX}
+
+Seja
+\begin{equation}
+\mathbf R(\psi,\theta,\phi)=\mathbf R_z(\psi)\,\mathbf R_y(\theta)\,\mathbf R_x(\phi),
+\end{equation}
+com as matrizes elementares de rotação
+% $\mathbf R_x,\mathbf R_y,\mathbf R_z$ apresentadas em
+\eqref{eq:rotacao_X}, \eqref{eq:rotacao_Y} e \eqref{eq:rotacao_Z}, as derivadas parciais são expressas, respectivamente, matematicamente por:
+
+\begin{equation}
+    \label{eq:derivada_rz}
+\frac{\partial \mathbf R}{\partial \psi}=\mathbf R'_z(\psi)\,\mathbf R_y(\theta)\,\mathbf R_x(\phi),
+\end{equation}
+
+\begin{equation}
+    \label{eq:derivada_ry}
+\frac{\partial \mathbf R}{\partial \theta}=\mathbf R_z(\psi)\,\mathbf R'_y(\theta)\,\mathbf R_x(\phi),
+\end{equation}
+
+\begin{equation}
+\label{eq:derivada_rx}
+\frac{\partial \mathbf R}{\partial \phi}=\mathbf R_z(\psi)\,\mathbf R_y(\theta)\,\mathbf R'_x(\phi),
+\end{equation}
+
+onde cada termo pode ser formulado como:
+\begin{equation}
+    \label{eq:matriz_derivada_rz}
+\mathbf R'_z(\psi)=
+\begin{bmatrix}
+-\sin\psi & -\cos\psi & 0\\
+ \cos\psi & -\sin\psi & 0\\
+ 0&0&0
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+    \label{eq:matriz_derivada_ry}
+\mathbf R'_y(\theta)=
+\begin{bmatrix}
+-\sin\theta&0&\cos\theta\\
+0&0&0\\
+-\cos\theta&0&-\sin\theta
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+    \label{eq:matriz_derivada_rx}
+\mathbf R'_x(\phi)=
+\begin{bmatrix}
+0&0&0\\
+0&-\sin\phi&-\cos\phi\\
+0&\cos\phi&-\sin\phi
+\end{bmatrix},
+\end{equation}
+
+
+%==================================================
+%----- Derivada temporal
+%==================================================
+\subsubsection{Derivada temporal e mapeamentos de velocidades angulares}
+A derivada temporal é realizada nas derivadas parciais apresentadas em \eqref{eq:derivada_rz}, \eqref{eq:derivada_ry} e \eqref{eq:derivada_rx}:
+\begin{equation}
+\dot{\mathbf R}=\frac{\partial \mathbf R}{\partial \psi}\dot\psi+\frac{\partial \mathbf R}{\partial \theta}\dot\theta+\frac{\partial \mathbf R}{\partial \phi}\dot\phi.
+\end{equation}
+Como $\mathbf R^\top\mathbf R=\mathbf I$, vale a identidade clássica:
+
+\begin{equation}
+\dot{\mathbf R}=\mathbf R\,[\vec\omega]_\times,
+\end{equation}
+
+sendo:
+\begin{equation}
+[\vec\omega]_\times=
+\begin{bmatrix}
+0&-\omega_z&\ \omega_y\\
+\ \omega_z&0&-\omega_x\\
+-\omega_y&\ \omega_x&0
+\end{bmatrix}.
+\end{equation}
+
+Para a sequência ZYX, os mapeamentos entre $[\dot\phi,\dot\theta,\dot\psi]^\top$ é dado por:
+\begin{equation}
+\begin{bmatrix}\omega_x\\ \omega_y\\ \omega_z\end{bmatrix}=
+\underbrace{\begin{bmatrix}
+1 & 0 & -\sin\theta\\
+0 & \cos\phi & \sin\phi\,\cos\theta\\
+0 & -\sin\phi & \cos\phi\,\cos\theta
+\end{bmatrix}}_{\displaystyle \mathbf T_{zyx}(\phi,\theta)}
+\begin{bmatrix}\dot\phi\\ \dot\theta\\ \dot\psi\end{bmatrix},
+\end{equation}
+
+enquanto que para a velocidade angular da base ($frame \{0\}$) o modelo pode ser descrito como: 
+\begin{equation}
+\begin{bmatrix}\dot\phi\\ \dot\theta\\ \dot\psi\end{bmatrix}=
+\underbrace{\begin{bmatrix}
+1 & \sin\phi\tan\theta & \cos\phi\tan\theta\\
+0 & \cos\phi & -\sin\phi\\
+0 & \sin\phi/\cos\theta & \cos\phi/\cos\theta
+\end{bmatrix}}_{\displaystyle \mathbf W_{zyx}(\phi,\theta)}
+\begin{bmatrix}\omega_x\\ \omega_y\\ \omega_z\end{bmatrix}.
+\end{equation}
+
+\subsubsection{Singularidade}
+Em ZYX ocorre singularidade cinemática para
+$\theta=\pm\frac{\pi}{2}$ e ($cos\theta=0$),
+quando $\mathbf W_{zyx}$ não pode ser invertido.
+Essa limitação motiva o uso de quaternions na malha de controle de atitude.
 
 
 
 
 
 
-
-
+%==================================================
+%----- Matriz de transformação homogênea
+%==================================================
 \section{Matriz de transformação homogênea}
 A matriz de transformação homogênea é utilizada como uma forma geral de construção para realizar a rotação e a translação ao mesmo tempo,
 e é definida como:
@@ -262,15 +374,94 @@ Levando em consideração que agora é possível estabelecer um ponto no espaço
 \end{equation}
 
 
+%==================================================
+%----- Derivadas e adjunta em SE(3)
+%==================================================
+% \subsection{Derivadas e adjunta em SE(3)}
+% Para
+% \begin{equation}
+% \mathbf T=
+% \begin{bmatrix}
+% \mathbf R   & \vec p\\
+% \vec 0^\top & 1
+% \end{bmatrix}
+% \in SE(3),
+% \end{equation}
+
+% é possível definir a torção espacial:
+% \begin{equation}
+%     \label{eq:torcao_espacial}
+% \vec{\mathcal V}_S
+% \begin{bmatrix}
+%     \vec v_s\\
+%     \vec \omega_s
+% \end{bmatrix}, 
+% \end{equation}
+
+% e a torção corporal:
+% \begin{equation}
+%     \label{eq:torcao_corporal}
+% \vec{\mathcal V}_B=
+% \begin{bmatrix}
+%     \vec v_B\\
+%     \vec \omega_B
+% \end{bmatrix},
+% \end{equation}
+
+% com operadores $\widehat{\cdot}$ sendo definidos como:
+% \begin{equation}
+% \widehat{\vec{\mathcal V}}=
+% \begin{bmatrix}
+%     [\vec\omega]_\times & \vec v \\
+%     \vec 0^\top         & 0
+% \end{bmatrix}.
+% \end{equation}
+
+% Portanto, podem ser utilizadas suas formas compactas:
+% \begin{equation}
+% \dot{\mathbf T}=\,\widehat{\vec{\mathcal V}}_S\,\mathbf T
+% \ =\
+% \mathbf T\,\widehat{\vec{\mathcal V}}_B,
+% \end{equation}
+
+% sendo:
+% \begin{equation}
+% \vec{\mathcal V}_S=\mathrm{Ad}_{\mathbf T}\,\vec{\mathcal V}_B,
+% \end{equation}
+
+% e a matriz adjunta escrita como:
+% \begin{equation}
+% \operatorname{Ad}_{T}=
+% \begin{bmatrix}
+% \mathbf R & [\vec p]_\times \mathbf R\\
+% \mathbf 0 & \mathbf R
+% \end{bmatrix},
+% \qquad
+% T=\begin{bmatrix}\mathbf R&\vec p\\ \mathbf 0^\top & 1\end{bmatrix}\in SE(3).
+% \end{equation}
+
+% Na cinemática direta
+% $^{0}\mathbf T_{E}=\prod_{i=1}^{n}\mathbf A_i(q_i)$,
+% obtém-se:
+% \begin{equation}
+% \dot{\,^{0}\mathbf T_{E}}=
+% \sum_{i=1}^n
+% \left(\prod_{k=1}^{i-1}\mathbf A_k\right)
+% \dot{\mathbf A}_i
+% \left(\prod_{k=i+1}^{n}\mathbf A_k\right),
+% \end{equation}
+
+% com
+% $\dot{\mathbf A}_i=\mathbf A_i\,\widehat{\vec{\mathcal V}}_{B,i}$
+% para juntas revolutas
+% ($\vec{\mathcal V}_{B,i}=[\,\hat{\vec z}_{i-1},\,\vec 0\,]^\top$)
+% e prismáticas
+% ($\vec{\mathcal V}_{B,i}=[\,\vec 0,\,\hat{\vec z}_{i-1}\,]^\top$).
 
 
-
-
-
-
-
-
-
+%==================================================
+%----- Matriz de transformação homogênea DH
+%==================================================
 \subsection{Matriz de transformação homogênea DH}
 
 A matriz de transformação homogênea $A_i$ possui dimensão de ordem 4 e reúne a rotação em torno de $z_{i-1}$;
@@ -306,15 +497,15 @@ E a forma reduzida da matriz \eqref{eq:matrizTransformacaoHomogenea} pode ser re
 
 onde:
 \begin{itemize}
-    \item $\mathbf{R}_{(3\times 3)}$: submatriz de rotação que descreve a orientação do efetuador em relação à base;
-    \item $\mathbf{p}_{(3\times 1)}$: vetor posição que descreve a posição do efetuador em relação à base.
+    \item $\mathbf{R}_{(3\times 3)}$: submatriz de rotação que descreve o frame $i$ relativo ao frame $i-1$.
+    \item $\mathbf{p}_{(3\times 1)}$: vetor posição que descreve  o frame $i$ relativo ao frame $i-1$.
 \end{itemize}
 
 Portanto, o equacionamento para obter a pose do efetuador em relação à base é definido como:
 
 \begin{equation}
 {}^{0}\!T_i(q)=
-{}^{0}\!T_{i-1}(q)*
+{}^{0}\!T_{i-1}(q)
 A_i(q).
 \end{equation}
 
