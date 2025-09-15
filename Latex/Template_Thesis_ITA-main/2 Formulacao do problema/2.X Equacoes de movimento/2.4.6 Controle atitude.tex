@@ -2,9 +2,9 @@
 O controle de atitude de uma espaçonave consiste em projetar leis de realimentação capazes de estabilizar e orientar o corpo em torno de uma referência desejada.
 Nesta dissertação será empregado o controle proporcional-derivativo (PD), pela sua implementação direta e eficiência local de estabilização.
 
-%==================================================
-%----- Erro de atitude e PD
-%==================================================
+% %==================================================
+% %----- Erro de atitude e PD
+% %==================================================
 \subsection{Erro de atitude e lei de controle PD}
 Sejam os quaternions unitários para a atitude atual e para a atitude desejada, respectivamente:
 \begin{equation}
@@ -68,15 +68,15 @@ A lei de controle PD para a atitude é dada por:
 \end{equation}
 com $\mathbf{K}_p={}^T\mathbf{K}_p \succ 0$ e $\mathbf{K}_d={}^T\mathbf{K}_d \succ 0$.
 
-%==================================================
-%----- Caso particular
-%==================================================
+% %==================================================
+% %----- Caso particular
+% %==================================================
 Para o caso particular onde $\vec{\omega}_{ref}=\vec{0}$, e
 $\vec{\omega}_e=\vec{\omega}$ poderá ser consultado no Apêndice \ref{ApendiceC}.
 
-%==================================================
-%----- PD veloc angular
-%==================================================
+% %==================================================
+% %----- PD veloc angular
+% %==================================================
 \subsection{PD aplicado às velocidades angulares}
 O controlador PD atua sobre a velocidade angular da espaçonave, buscando minimizar o erro entre a atitude desejada e a atual.
 Seja $\vec{\omega}_0$ a velocidade angular medida e $\vec{\omega}_1$ a velocidade angular desejada (referência).
@@ -89,9 +89,9 @@ De forma similar a \eqref{eq:controle_PD_fundamental}, o controle de torque de c
 Onde $K_p$ e $K_d$ são os ganhos escalares de controle, e $\vec{e}_q$ representa o erro de atitude, que pode ser expresso em termos de quaternions ou ângulos de Euler linearizados.  
 Nesta dissertação, o erro de atitude será tratado em termos de quaternions, de modo a evitar singularidades associadas aos ângulos de Euler.
 
-%==================================================
-%----- Arquitetura geral
-%==================================================
+% %==================================================
+% %----- Arquitetura geral
+% %==================================================
 \section{Arquitetura de controle base--manipulador}
 A arquitetura de controle adotada para a operação do manipulador em microgravidade contém três malhas principais: (i) o controle da atitude da base, (ii) o controle do manipulador com mínima reação, e (iii) o controle por torque nas juntas. Essas malhas operam de forma coordenada.
 
@@ -154,8 +154,8 @@ onde:
 \end{itemize}
 
 A escolha de $ \vec{z} $ pode ser feita de acordo com o objetivo desejado, caso seja para outra função, pode-se selecionar outros termos em questão, no entanto, não serão tratados neste estudo.
-% Caso seja para minimizar a reação na base, seleciona-se $ \vec{z} $ pertencente ao espaço nulo de uma matriz de acoplamento que relaciona $ \dot{\vec{q}}_j $ ao momento angular da base $ \vec{\omega}_b $.
-% Já para evitar aproximações indesejadas aos limites físicos das juntas, pode-se adicionar um termo do tipo gradiente de barreira, definido por $ \vec{z} = -\nabla \Phi(\vec{q}_j) $, onde $ \Phi(\vec{q}_j) $ é uma função que penaliza a proximidade aos limites articulares.
+Caso seja para minimizar a reação na base, seleciona-se $ \vec{z} $ pertencente ao espaço nulo de uma matriz de acoplamento que relaciona $ \dot{\vec{q}}_j $ ao momento angular da base $ \vec{\omega}_b $.
+Já para evitar aproximações indesejadas aos limites físicos das juntas, pode-se adicionar um termo do tipo gradiente de barreira, definido por $ \vec{z} = -\nabla \Phi(\vec{q}_j) $, onde $ \Phi(\vec{q}_j) $ é uma função que penaliza a proximidade aos limites articulares.
 
 \subsection{Controle por torque nas juntas}
 A terceira malha é responsável pelo controle fino de cada junta do manipulador, aplicando torque para seguir a trajetória desejada. O controle PD é aplicado individualmente para cada junta $ j $:
@@ -182,7 +182,7 @@ Adicionalmente, impõe-se saturação nos torques para respeitar os limites fís
 \label{eq:saturacao_torque_junta}
 \end{equation}
 
-% Por fim, é aplciado filtro no termo derivativo para reduzir o impacto de ruídos de medição. As trajetórias de referência $ q_{j,\text{ref}}(t) $ devem ser ao menos $ \mathcal{C}^2 $, como polinômios de quinta ordem, a fim de garantir suavidade nas acelerações.
+Por fim, é aplciado filtro no termo derivativo para reduzir o impacto de ruídos de medição. As trajetórias de referência $ q_{j,\text{ref}}(t) $ devem ser ao menos $ \mathcal{C}^2 $, como polinômios de quinta ordem, a fim de garantir suavidade nas acelerações.
 
 \subsection{Interação entre malhas}
 A malha de controle de atitude fornece o torque de estabilização $ \vec{\tau}_b $, enquanto o manipulador executa $ {\vec{v}_E}^{ref} $ projetado no espaço nulo da Jacobiana, de forma a evitar reações sobre a base.

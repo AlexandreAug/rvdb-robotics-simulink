@@ -1,0 +1,221 @@
+\subsection{Movimento orbital relativo}
+
+O movimento relativo $s$ é definido a seguir e as acelerações relativas se tornam diretamente as derivadas no espaço inercial \cite{fehse2003}.
+
+\begin{equation}
+\vec r_t + \vec s = \vec r_c
+\end{equation}
+
+\begin{equation}
+\label{eq:vetorS}
+\vect s = \vect r_{c} - \vect r_{t}
+\end{equation}
+
+\begin{equation}
+\label{eq:vetorS_ddot}
+\ddot{\vect s} = \ddot{\vect r}_{c} - \ddot{\vect r}_{t}
+\end{equation}
+
+Inserindo as equações \eqref{eq:movimentoChaser} e \eqref{eq:movimentoTarget} do movimento relativo do \emph{chaser} e do \emph{target} na equação \eqref{eq:vetorS_ddot}, temos:
+
+\begin{equation}
+\label{eq:vetorS_ddot_substituicao}
+\ddot{\vec s} = \left(-\mu \frac{\vect r_c}{\vect r_{c}^3} + \frac{\vect F}{m_c}\right) - \left(-\mu \frac{\vect r_t}{\vect r_t^3}\right)
+\end{equation}
+
+Para o próximo passo, serão considerados:
+
+\begin{equation}
+    \label{eq:fg_rc}
+\vec f_g(\vec r_c) = -\mu \frac{\vect r_c}{\vect r_{c}^3}
+\end{equation}
+
+\begin{equation}
+    \label{eq:fg_rt}
+\vec f_g(\vec r_t) = -\mu \frac{\vect r_t}{\vect r_{t}^3}
+\end{equation}
+
+Portanto, a equação \eqref{eq:vetorS_ddot_substituicao} se torna:
+
+\begin{equation}
+\label{eq:fg_rc_fg_rt}
+\ddot{\vect s} = \vec f_g(\vect r_c) - \vec f_g(\vect r_t) + \frac{\vect F}{m_c}
+\end{equation}
+
+Levando em consideração apenas a força de controle e linearizando a força gravitacional no \emph{chaser} em torno da posição do \emph{target}, se faz necessário realizar uma expansão de Taylor apenas para a primeira ordem, e é obtido \cite{arantes2011}:
+
+\begin{equation}
+\label{eq:linearizandoJacobiana}
+\vec f(\vec r_c) - \vec f(\vec r_t) = \nabla \vec f(\vec r_t)\vec p
+\end{equation}
+
+Os termos da diagonal principal da matriz Jacobiana \emph{J} são dados por \cite{fehse2003}:
+
+\begin{equation}
+\label{eq:jacobianaDiagonal}
+J_{ii} = \frac{\partial f_i}{\partial r_i} = -\frac{\mu}{r^3} \left(1 - 3\frac{r_i^2}{r^2}\right) \quad (i = j)
+\end{equation}
+
+E os termos fora da diagonal principal são dados por \cite{fehse2003}:
+\begin{equation}
+\label{eq:jacobianaForaDiagonal}
+J_{ij} = \frac{\partial f_i}{\partial r_i} = -3 \frac{\mu}{r^3} \frac{r_i r_j}{r^2} \quad (i \neq j)
+\end{equation}
+
+Portanto, a matriz Jacobiana \emph{J} será:
+
+\begin{equation}
+    \label{eq:jacobianaGenerica}
+\vec J = 
+\begin{bmatrix}
+1 - 3\frac{r_x^2}{r^2} &  -3\frac{r_x r_y}{r^2} &  -3\frac{r_x r_z}{r^2} \\
+-3\frac{r_y r_x}{r^2} & 1 - 3\frac{r_y^2}{r^2} & -3\frac{r_y r_z}{r^2} \\
+-3\frac{r_z r_x}{r^2} & -3\frac{r_z r_y}{r^2} & 1 - 3\frac{r_z^2}{r^2}
+\end{bmatrix}
+\end{equation}
+
+Reescrevendo a equação \eqref{eq:linearizandoJacobiana} com os termos da matriz Jacobiana, temos:
+
+\begin{equation}
+\label{eq:linearizandoJacobiana2}
+\vec f_g(\vec r_c) - \vec f_g(\vec r_t) = -\frac{\mu}{r_t^3} Js
+\end{equation}
+
+Portanto, a equação \eqref{eq:fg_rc_fg_rt} se torna:
+
+\begin{equation}
+\label{eq:fg_rc_fg_rt_linearizada}  
+\ddot{\vect s} = \frac{\mu}{r_t^3} Js + \frac{\vect F}{m_c}
+\end{equation}
+
+Para realizar a transformação do \emph{quadro inercial} para o \emph{quadro do target}, é necessário aplicar o \emph{Teorema do Transporte}, que é uma forma de transformar as equações do movimento de um sistema de referência para outro que está em movimento relativo \cite{wie2008space, symon1979}. Para a mesma posição relativa entre o \emph{chaser} e o \emph{target}, será considerado que $\mathbf s = \mathbf s^{*}$.
+
+\begin{equation}
+\label{eq:TransporteSymon1979}
+\ddot{\mathbf s} = 
+\ddot{\mathbf s}^{*}
++ 2\boldsymbol\omega\times\dot{\mathbf s}^{*}
++ \boldsymbol\omega\times\big(\boldsymbol\omega\times\mathbf s^{*}\big)
++ \dot{\boldsymbol\omega}\times\mathbf s^{*}
+\end{equation}
+
+A equação \eqref{eq:fg_rc_fg_rt_linearizada} que está no quadro inercial ao ser transformada para o quadro LVLH (Local Vertical Local Horizontal) se torna \cite{fehse2003}:
+
+\begin{equation}
+\label{eq:relativo_LVLHgeral}
+\ddot{\mathbf s}^{*}
++ 2\,\boldsymbol\omega\times\dot{\mathbf s}^{*}
++ \boldsymbol\omega\times\big(\boldsymbol\omega\times\mathbf s^{*}\big)
++ \dot{\boldsymbol\omega}\times\mathbf s^{*}
+- \frac{\mu}{r_t^3}\,\mathbf J\,\mathbf s^{*}
+= \frac{\mathbf F}{m_c}
+\end{equation}
+
+%%%%% Aqui acaba mov. orbital relativo
+
+% Quando expresso no quadro do \emph{target}, é obtido seu vetor posição:
+
+% \begin{equation}
+% \label{eq:posicao_LVLH_target}
+% \vec r_t = \begin{bmatrix} 0 \\ 0 \\ -r \end{bmatrix}
+% \end{equation}
+
+% E também o vetor de velocidade angular:
+
+% \begin{equation}
+% \label{eq:velocidadeAngular_LVLH_target}
+% \boldsymbol\omega = \begin{bmatrix} 0 \\ -\omega \\ 0
+% \end{bmatrix}
+% \end{equation}
+
+% Em termos da equação \eqref{eq:relativo_LVLHgeral}, é obtido:
+
+% \begin{equation}
+% \label{eq:velAngular_cross_s}
+% \boldsymbol\omega \times \boldsymbol s^* =
+% \begin{bmatrix}
+%     -\omega z \\
+%     0         \\
+%     \omega x
+% \end{bmatrix} 
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:velAngular_cross_cross_s}
+% \boldsymbol\omega \times (\boldsymbol\omega \times \boldsymbol s^*) =
+% \begin{bmatrix}
+%     -\omega^2 x \\
+%     0           \\
+%     -\omega^2 z 
+% \end{bmatrix}
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:omega_cross_dsdt}
+% \boldsymbol\omega \times \frac{d^* s^*}{dt} =
+% \begin{bmatrix}
+%     -\omega \dot z \\
+%     0                 \\
+%     \omega \dot x
+% \end{bmatrix}
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:dOmega_cross_s}
+% \frac{d\boldsymbol\omega}{dt} \times \boldsymbol s^* =
+% \begin{bmatrix}
+%     -\dot\omega z \\
+%     0              \\
+%     \dot\omega x
+% \end{bmatrix}
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:jacobiana_LVLH}
+% \mathbf Js^* =
+% \begin{bmatrix}
+%     1 & 0 & 0 \\
+%     0 & 1 & 0  \\
+%     0 & 0 & -2
+% \end{bmatrix} \boldsymbol s^* =
+% \begin{bmatrix}
+%     x \\
+%     y \\
+%     -2z
+% \end{bmatrix}
+% \end{equation}
+
+% No caso da órbita circular ($e=0$), a velocidade angular
+% \footnote{Os autores \cite{fehse2003,sidi1997spacecraft} definem a \emph{velocidade angular} (ou \emph{angular rate} ou até mesmo \emph{angular velocity}) como $\omega$, outros autores, como \cite{bate1971}, a definem como $\eta$} 
+% $\omega$ é constante e coincide com o movimento médio (\emph{mean motion}, $\eta$), definido por \cite{fehse2003}:
+
+% \begin{equation}
+% \label{eq:omega_constante}
+% \boldsymbol\omega^2 = \frac{\mu}{r_t^3}
+% \end{equation}
+
+% Ou podendo ser reescrita como:
+
+% \begin{equation}
+% \label{eq:omega_constante2}
+% \eta^2 = \frac{\mu}{r_t^3}
+% \end{equation}
+
+% Como $r_t=a$, a velocidade angular $\omega^{2}= \eta^2 = \mu/r_t^{3}$, portanto, neste caso em particular de órbita circular, $\omega=n$.
+
+% Então, $\dot{\omega}=0$, e ao inserir a equação \eqref{eq:omega_constante} nos termos da equação \eqref{eq:relativo_LVLHgeral}, é possível obter as equações linearizadas gerais do movimento relativo, conhecidas como Equações de Hill \cite{hill1878,fehse2003, wie2008space}.
+
+% \begin{equation}
+%     \label{eq:equacoes_HillX}
+% \ddot{x} - 2\omega \dot{z} = \frac{F_x}{m_c}
+% \end{equation}
+
+% \begin{equation}
+%     \label{eq:equacoes_HillY}
+% \ddot{y} + \omega^2 y = \frac{F_y}{m_c}
+% \end{equation}
+
+% \begin{equation}
+%     \label{eq:equacoes_HillZ}
+% \ddot{z} + 2\omega \dot{x} - 3 \omega^2 z = \frac{F_z}{m_c}
+% \end{equation}

@@ -1,0 +1,8 @@
+\subsection{Ganhos e critérios de ajuste}
+Os ganhos $K_p$ e $K_d$ foram ajustados iterativamente em simulação numérica para estar de acordo com os requisitos de projeto do controle PD, definidos em simulação.  
+Foram considerados:
+\begin{enumerate}[label=\roman*.]
+    \item tempo de acomodação, garantindo que a resposta seja suficientemente rápida;
+    \item sobresinal, mantido dentro de limites aceitáveis para não comprometer a estabilidade nem exigir esforços excessivos dos atuadores.
+\end{enumerate}
+A sintonia foi realizada iterativamente no Simulink, respeitando as limitações físicas dos atuadores e sensores.

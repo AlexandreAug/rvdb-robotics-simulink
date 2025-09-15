@@ -77,48 +77,48 @@ O termo potencial define o vetor gravitacional como:
 \end{equation}
 No caso de ambiente de microgravidade (ou na ausência de potencial considerado), tem-se $V\equiv 0$ e, portanto, $\vec g(q)=\vec 0$.
 
-\subsection{Símbolos de Christoffel e vetor de inércia não linear}
-Se $m_{ij}(q)$ é o elemento $(i,j)$ de $\mathbf M(q)$\fn{Ver equação \eqref{eq:EL_compacta}},
-definem-se os símbolos de Christoffel de primeira espécie como:
-\begin{equation}
-c_{ijk}(q)\;=\;\tfrac12\!\left(\frac{\partial m_{ij}}{\partial q_k}
-+\frac{\partial m_{ik}}{\partial q_j}
--\frac{\partial m_{jk}}{\partial q_i}\right),
-\label{eq:christoffel}
-\end{equation}
+% \subsection{Símbolos de Christoffel e vetor de inércia não linear}
+% Se $m_{ij}(q)$ é o elemento $(i,j)$ de $\mathbf M(q)$\fn{Ver equação \eqref{eq:EL_compacta}},
+% definem-se os símbolos de Christoffel de primeira espécie como:
+% \begin{equation}
+% c_{ijk}(q)\;=\;\tfrac12\!\left(\frac{\partial m_{ij}}{\partial q_k}
+% +\frac{\partial m_{ik}}{\partial q_j}
+% -\frac{\partial m_{jk}}{\partial q_i}\right),
+% \label{eq:christoffel}
+% \end{equation}
 
-e o vetor $\vec h(q,\dot{\vec q})=\mathbf C(q,\dot{\vec q})\,\dot{\vec q}$
-pode ser descrito matematicamente como:
-\begin{equation}
-h_i(q,\dot{\vec q}) \;=\; \sum_{j=1}^{n}\sum_{k=1}^{n} c_{ijk}(q)\,\dot q_j\,\dot q_k,
-\qquad i=1,\dots,n.
-\label{eq:h_def}
-\end{equation}
+% e o vetor $\vec h(q,\dot{\vec q})=\mathbf C(q,\dot{\vec q})\,\dot{\vec q}$
+% pode ser descrito matematicamente como:
+% \begin{equation}
+% h_i(q,\dot{\vec q}) \;=\; \sum_{j=1}^{n}\sum_{k=1}^{n} c_{ijk}(q)\,\dot q_j\,\dot q_k,
+% \qquad i=1,\dots,n.
+% \label{eq:h_def}
+% \end{equation}
 
-O termo $\mathbf C$ é definido como:
-\begin{equation}
-\mathbf C_{ij}(q,\dot{\vec q})=
-\sum_{k=1}^{n} c_{ijk}(q)\,\dot q_k,
-\label{eq:C_def}
-\end{equation}
-o qual satisfaz a propriedade de simetria estrutural que será apresentada adiante.
+% O termo $\mathbf C$ é definido como:
+% \begin{equation}
+% \mathbf C_{ij}(q,\dot{\vec q})=
+% \sum_{k=1}^{n} c_{ijk}(q)\,\dot q_k,
+% \label{eq:C_def}
+% \end{equation}
+% o qual satisfaz a propriedade de simetria estrutural que será apresentada adiante.
 
-\subsection{Propriedades estruturais}
-\label{sec:propriedades_estruturais}
-A matriz de inércia é simétrica definida-positiva e a combinação $\dot{\mathbf M}-2\mathbf C$ é antissimétrica:
-\begin{equation}
-\mathbf M(q)=\mathbf M^{\top}(q)\succ 0,
-\label{eq:properties_M_C}
-\end{equation}
+% \subsection{Propriedades estruturais}
+% \label{sec:propriedades_estruturais}
+% A matriz de inércia é simétrica definida-positiva e a combinação $\dot{\mathbf M}-2\mathbf C$ é antissimétrica:
+% \begin{equation}
+% \mathbf M(q)=\mathbf M^{\top}(q)\succ 0,
+% \label{eq:properties_M_C}
+% \end{equation}
 
-onde 
-\begin{equation}
-    \dot{\mathbf M}(q)\;-\;2\,\mathbf C(q,\dot{\vec q}),
-\end{equation}
-é antissimétrica. Esta última identidade implica a conservação de potência passiva e é útil em análises de estabilidade e projeto de controle.
-\begin{equation}
-    \dot{\vec q}^{\,\top}\!\big(\dot{\mathbf M}-2\mathbf C\big)\dot{\vec q}=0
-\end{equation}
+% onde 
+% \begin{equation}
+%     \dot{\mathbf M}(q)\;-\;2\,\mathbf C(q,\dot{\vec q}),
+% \end{equation}
+% é antissimétrica. Esta última identidade implica a conservação de potência passiva e é útil em análises de estabilidade e projeto de controle.
+% \begin{equation}
+%     \dot{\vec q}^{\,\top}\!\big(\dot{\mathbf M}-2\mathbf C\big)\dot{\vec q}=0
+% \end{equation}
 
 \subsection{Forças generalizadas a partir do \emph{momentum}}
 Quando forças ou \emph{momentum} são atuantes em um ponto da cadeia cinemática, a contribuição das juntas pode ser descrita como:

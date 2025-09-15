@@ -138,6 +138,7 @@
 
 %%%%%%%%%%%%%%% CAPITULO 2 %%%%%%%%%%%%%%%
 
+\chapter{Formulação do problema (orbital e de atitude)}
 \input{2 Formulacao do problema/1 Capitulo2 Principal.tex}
 
 
@@ -174,22 +175,29 @@
 \renewcommand\bibname{\itareferencesnamebabel} %renomear título do capítulo referências
 \printbibliography
 
-% Apendices
+%%%%% Apendices
 \appendix
 
-\chapter{Parâmetros do manipulador robótico} %opcional
-\input{ApeA/apendiceA}
-\label{ApendiceA}
+\input{Apendices/ApendiceA.tex}
 \newpage
 
-\chapter{Limites físicos e operacionais das juntas do manipulador robótico} %opcional
-\input{ApeB/apendiceB}
-\label{ApendiceB}
+\input{Apendices/ApendiceB.tex}
 \newpage
 
-\chapter{Caso particular da velocidade angular} %opcional
-\input{ApeC/apendiceC.tex}
-\label{ApendiceC}
+\input{Apendices/ApendiceC.tex}
+\newpage
+
+\input{Apendices/ApendiceD.tex}
+\newpage
+
+% \chapter{Limites físicos e operacionais das juntas do manipulador robótico} %opcional
+% \input{ApeB/apendiceB}
+% \label{ApendiceB}
+% \newpage
+
+% \chapter{Caso particular da velocidade angular} %opcional
+% \input{ApeC/apendiceC.tex}
+% \label{ApendiceC}
 
 % Anexos
 % \annex

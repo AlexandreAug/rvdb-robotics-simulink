@@ -1,0 +1,14 @@
+\subsection{Aproximações utilizadas na dinâmica}
+\label{sec:aprox_dinamica}
+A formulação apresentada até aqui é geral e inclui todos os termos da dinâmica relativa no referencial LVLH.  
+Para possibilitar análises objetivas e a aplicação de métodos clássicos de controle e planejamento de trajetória, são adotadas aproximações para simplificar o modelo.  
+As principais hipóteses utilizadas neste trabalho são:
+\begin{enumerate}[label=\roman*.]
+    \item \textbf{Órbitas coplanares:} As trajetórias do \emph{chaser} e do \emph{target} possuem o mesmo plano orbital, eliminando termos de inclinação relativa e simplificando o vetor relativo.
+    
+    \item \textbf{Massas concentradas:} Ambas as espaçonaves são modelados como massas pontuais para fins de calculos orbitais, sendo desprezados efeitos de distribuição de massa e assimetrias gravitacionais na dinâmica translacional.
+    
+    \item \textbf{Pequena separação relativa:} Assume-se que o vetor $\vec s$ é pequeno em comparação ao raio orbital $r_t$, hipótese que permite aplicar expansões de Taylor em torno da posição do alvo e justifica as linearizações subsequentes.
+\end{enumerate}
+
+As aproximações realizadas permitem simplificações posteriores, em particular para a dedução das equações lineares de movimento relativo, apresentadas em seção posterior.

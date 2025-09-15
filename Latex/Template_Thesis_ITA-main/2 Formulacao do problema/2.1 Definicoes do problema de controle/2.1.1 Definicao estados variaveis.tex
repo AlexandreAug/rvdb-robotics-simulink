@@ -1,0 +1,17 @@
+\subsection{Estados e Variáveis de Controle}
+\label{sec:var_estado_controle}
+
+Para este trabalho, adotou-se um conjunto de variáveis de estado, conforme:
+\begin{equation}
+    \label{eq:variaveis_estado}
+var_{estado} = \{ \vec r,\; \vec v,\; q,\; \vec \omega,\; \theta,\; \dot\theta \},
+\end{equation}
+onde $\vec r$ e $\vec v$ representam posição e velocidade relativas no referencial LVLH, $q$ é o quaternion unitário da base, $\vec \omega$ a velocidade angular corporal, $\theta$ os ângulos articulares e $\dot\theta$ suas velocidades.
+Por sua vez, as variáveis de controle utilizadas são:
+\begin{equation}
+    \label{eq:variaveis_controle}
+F_{controle} = \{ \vec f,\; \vec{\tau}\},
+\end{equation}
+em que $\vec f$ são forças, $\vec{\tau}$ são os torques.
+O modelo dinâmico inclui as equações orbitais, sendo o modelo do problema de dois corpos, as Equações de Hill/CW linearizadas, as equações de atitude do corpo rígido e as equações do manipulador robótico.
+

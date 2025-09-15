@@ -1,0 +1,17 @@
+\subsection{Restrições dos Atuadores}
+
+Além dos limites cinemáticos e geométricos das juntas, o manipulador robótico está sujeito às restrições dinâmicas implementadas nos atuadores responsáveis por gerar o movimento.  
+Essas restrições são expressas em termos de torque máximo nas juntas revolutas e força máxima na junta prismática.
+As restrições são expressas formalmente para cada tipo de junta, conforme:
+\begin{equation}
+\label{eq:limite_torque}
+|\tau_j| \leq \tau_{j,max} \qquad \text{(juntas revolutas)},
+\end{equation}
+
+\begin{equation}
+\label{eq:limite_forca}
+|f_5| \leq f_{d5,max} \qquad \text{(junta prismática)}.
+\end{equation}
+
+Esses valores máximos foram definidos de forma arbitrária, utilizando como base as simulações realizadas, e os valores de $\tau_{j,\text{max}}$ e $f_{d5,max}$ serão apresentados posteriormente com base na análise dinâmica completa e na sintonia do controlador implementado no ambiente de simulações \emph{MATLAB/Simulink}.  
+

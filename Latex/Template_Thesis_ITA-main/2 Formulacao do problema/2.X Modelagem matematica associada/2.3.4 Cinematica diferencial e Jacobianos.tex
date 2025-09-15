@@ -1,30 +1,30 @@
-\subsection{Cinemática diferencial e Jacobiano do efetuador}
-Para relacionar as velocidades das juntas do manipulador robótico com a velocidade espacial
-\footnote{Velocidade dentro do espaço de trabalho do manipulador robótico}
-do efetuador $\{E\}$, utiliza-se o Jacobiano ($J(q)\in\mathbb{R}^{m\times n}$) que mapeia as velocidades em cada junta e as transforma em velocidades (lineares e angulares) do efetuador.
+% \subsection{Cinemática diferencial e Jacobiano do efetuador}
+% Para relacionar as velocidades das juntas do manipulador robótico com a velocidade espacial
+% \footnote{Velocidade dentro do espaço de trabalho do manipulador robótico}
+% do efetuador $\{E\}$, utiliza-se o Jacobiano ($J(q)\in\mathbb{R}^{m\times n}$) que mapeia as velocidades em cada junta e as transforma em velocidades (lineares e angulares) do efetuador.
 
-\subsubsection{Velocidades cartesianas e $\mathbf{J}$}
-Considerando $\vec q$ como o vetor de juntas e
-$\dot{q}$ as suas respectivas velocidades,
-a velocidade espacial do efetuador é descrita como:
-\begin{equation}
-\vec{\mathcal V}_E^{(S)}=
-\begin{bmatrix}
-    \vec v_E        \\
-    \vec \omega_E
-\end{bmatrix}
-=\mathbf J_s(q)\,\dot{\vec q},
-\end{equation}
+% \subsubsection{Velocidades cartesianas e $\mathbf{J}$}
+% Considerando $\vec q$ como o vetor de juntas e
+% $\dot{q}$ as suas respectivas velocidades,
+% a velocidade espacial do efetuador é descrita como:
+% \begin{equation}
+% \vec{\mathcal V}_E^{(S)}=
+% \begin{bmatrix}
+%     \vec v_E        \\
+%     \vec \omega_E
+% \end{bmatrix}
+% =\mathbf J_s(q)\,\dot{\vec q},
+% \end{equation}
 
-enquanto a torção corporal (no frame do efetuador) é
-\begin{equation}
-    \label{eq:veloc_espacial_efetuador}
-\vec{\mathcal V}_E^{(B)}=
-\mathrm{Ad}_{(^{0}\mathbf T_E)}^{-1}\,\vec{\mathcal V}_E^{(S)}=
-\mathbf J_b(q)\,\dot{\vec q}.
-\end{equation}
+% enquanto a torção corporal (no frame do efetuador) é
+% \begin{equation}
+%     \label{eq:veloc_espacial_efetuador}
+% \vec{\mathcal V}_E^{(B)}=
+% \mathrm{Ad}_{(^{0}\mathbf T_E)}^{-1}\,\vec{\mathcal V}_E^{(S)}=
+% \mathbf J_b(q)\,\dot{\vec q}.
+% \end{equation}
 
-onde $\operatorname{Ad}_{(\cdot)}$ é a adjunta em $SE(3)$.
+% onde $\operatorname{Ad}_{(\cdot)}$ é a adjunta em $SE(3)$.
 
 %% ===== EXPLICAÇÃO ACIMA =========================
 % O vetor do lado esquerdo "V_E é a velocidade linear (m/s)" 
@@ -35,26 +35,26 @@ onde $\operatorname{Ad}_{(\cdot)}$ é a adjunta em $SE(3)$.
 % Ou seja: sabendo as velocidades das juntas, multiplica-se por J(q) e obtém como o efetuador está se movendo no espaço.
 % ==================================================
 
-As colunas de $J(q)$, quando são expressas em um mesmo frame (como o $frame \{0\}$), para a $i$-ésima junta revoluta é descrita por:
-\begin{equation}
-\label{eq:jac_columns_revoluta}
-\begin{cases}
-J_{v,i} =
-{}^{0}\!\vec{z}_{\,i-1} \times \big({}^{0}\!\vec{p}_{\,E}
-- {}^{0}\!\vec{p}_{\,i-1}\big), \\
-J_{\omega,i} =
-{}^{0}\!\vec{z}_{\,i-1},
-\end{cases}
-\end{equation}
+% As colunas de $J(q)$, quando são expressas em um mesmo frame (como o $frame \{0\}$), para a $i$-ésima junta revoluta é descrita por:
+% \begin{equation}
+% \label{eq:jac_columns_revoluta}
+% \begin{cases}
+% J_{v,i} =
+% {}^{0}\!\vec{z}_{\,i-1} \times \big({}^{0}\!\vec{p}_{\,E}
+% - {}^{0}\!\vec{p}_{\,i-1}\big), \\
+% J_{\omega,i} =
+% {}^{0}\!\vec{z}_{\,i-1},
+% \end{cases}
+% \end{equation}
 
-e para a junta prismática:
-\begin{equation}
-    \label{eq:jac_columns_prismatica}
-\begin{cases}
-J_{v,i} \;=\; {}^{0}\!\vec{z}_{\,i-1}, \\
-J_{\omega,i} \;=\; \vec{0}.
-\end{cases}
-\end{equation}
+% e para a junta prismática:
+% \begin{equation}
+%     \label{eq:jac_columns_prismatica}
+% \begin{cases}
+% J_{v,i} \;=\; {}^{0}\!\vec{z}_{\,i-1}, \\
+% J_{\omega,i} \;=\; \vec{0}.
+% \end{cases}
+% \end{equation}
 %% ===== EXPLICAÇÃO DE CIMA =====
 % Para cada junta "i", a coluna correspondente "J_i" é construida a partir do eixo da junta (z_i-1) e das posições de referencia (p_e, p_i-1).
 % p_E = posição do efetuador
@@ -67,47 +67,47 @@ J_{\omega,i} \;=\; \vec{0}.
 %
 % Portanto, cada coluna do Jacobiano corresponde à contribuição individual de uma junta para a velocidade do efetuador como um todo.
 % ==================================================
-\subsubsection{Jacobiano e contribuição da base}
-Durante a fase operacional, quando o subsistema do manipulador robótico atua como um corpo não-rígido,
-a torção total no $frame \{0\}$ é resultado da contribuição da base e das juntas via a adjunta $Ad_{{}^{0}T_{B}}$:
-\begin{equation}
-{}^{0}\!\vec{\mathcal V}_E
-=
-\mathrm{Ad}_{\,^{0}\!T_E (^{0}\!T_B)^{-1}}\;{}^{0}\!\vec{\mathcal V}_B
-\;+\;
-J_s(q)\,\dot{\vec q},
-\label{eq:VE_base_movel}
-\end{equation}
-onde $^{0}\!\vec{\mathcal V}_B=[\,^{0}\!\vec v_b;\,^{0}\!\vec\omega_b\,]$ é a torção da base, $J_s(q)\in\mathbb{R}^{6\times n}$ é o jacobiano espacial do manipulador, e $^{0}\!T_E,\,^{0}\!T_B\in SE(3)$ são as poses de $E$ e $B$ no frame $\{0\}$.
+% \subsubsection{Jacobiano e contribuição da base}
+% Durante a fase operacional, quando o subsistema do manipulador robótico atua como um corpo não-rígido,
+% a torção total no $frame \{0\}$ é resultado da contribuição da base e das juntas via a adjunta $Ad_{{}^{0}T_{B}}$:
+% \begin{equation}
+% {}^{0}\!\vec{\mathcal V}_E
+% =
+% \mathrm{Ad}_{\,^{0}\!T_E (^{0}\!T_B)^{-1}}\;{}^{0}\!\vec{\mathcal V}_B
+% \;+\;
+% J_s(q)\,\dot{\vec q},
+% \label{eq:VE_base_movel}
+% \end{equation}
+% onde $^{0}\!\vec{\mathcal V}_B=[\,^{0}\!\vec v_b;\,^{0}\!\vec\omega_b\,]$ é a torção da base, $J_s(q)\in\mathbb{R}^{6\times n}$ é o jacobiano espacial do manipulador, e $^{0}\!T_E,\,^{0}\!T_B\in SE(3)$ são as poses de $E$ e $B$ no frame $\{0\}$.
 
-\subsubsection{Base sem translação}
-Caso a velocidade linear da base for igual a zero (${}^{0}\!\vec{v}_{b}=\vec{0}$), obtém-se:
-\begin{equation}
-\label{eq:jac_base_particular1}
-{}^{0}\!\vec{\mathcal V}_{E \leftarrow B}=
-\operatorname{Ad}_{\,{}^{0}\!T_E \left({}^{0}\!T_B\right)^{-1}}
-\begin{bmatrix}
-\vec{0}         \\
-{}^{0}\!\boldsymbol{\omega}_{B}
-\end{bmatrix}
-\end{equation}
+% \subsubsection{Base sem translação}
+% Caso a velocidade linear da base for igual a zero (${}^{0}\!\vec{v}_{b}=\vec{0}$), obtém-se:
+% \begin{equation}
+% \label{eq:jac_base_particular1}
+% {}^{0}\!\vec{\mathcal V}_{E \leftarrow B}=
+% \operatorname{Ad}_{\,{}^{0}\!T_E \left({}^{0}\!T_B\right)^{-1}}
+% \begin{bmatrix}
+% \vec{0}         \\
+% {}^{0}\!\boldsymbol{\omega}_{B}
+% \end{bmatrix}
+% \end{equation}
 
-E a torção total do efetuador será:
-\begin{equation}
-\label{eq:jac_base_particular2}
-{}^{0}\!\vec{\mathcal V}_{E}=
-{}^{0}\!\vec{\mathcal V}_{E \leftarrow B}
-+J_s(q)\,\dot{\vec{q}}.
-\end{equation}
+% E a torção total do efetuador será:
+% \begin{equation}
+% \label{eq:jac_base_particular2}
+% {}^{0}\!\vec{\mathcal V}_{E}=
+% {}^{0}\!\vec{\mathcal V}_{E \leftarrow B}
+% +J_s(q)\,\dot{\vec{q}}.
+% \end{equation}
 
-\subsubsection{Base fixa}
-Se, além de
-(${}^{0}\!\vec v_b=\vec 0$),
-também (${}^{0}\!\vec\omega_b=\vec 0$), então:
-\begin{equation}
-\label{eq:VE_base_fixa}
-{}^{0}\!\vec{\mathcal V}_E = J_s(q)\,\dot{\vec q}.
-\end{equation}
+% \subsubsection{Base fixa}
+% Se, além de
+% (${}^{0}\!\vec v_b=\vec 0$),
+% também (${}^{0}\!\vec\omega_b=\vec 0$), então:
+% \begin{equation}
+% \label{eq:VE_base_fixa}
+% {}^{0}\!\vec{\mathcal V}_E = J_s(q)\,\dot{\vec q}.
+% \end{equation}
 
 % A adjunta presente em \eqref{eq:jac_base_particular1} pode ser expressa por:
 % \begin{equation}
@@ -130,39 +130,39 @@ também (${}^{0}\!\vec\omega_b=\vec 0$), então:
 %==================================================
 %----- Acel cartesiana
 %==================================================
-\subsubsection{Aceleração cartesiana e \(\dot{\mathbf J}\)}
-A aceleração é obtida pela derivada de \eqref{eq:veloc_espacial_efetuador}:
-\begin{equation}
-\dot{\vec{\mathcal V}}_E=
-\mathbf J(q)\,\ddot{\vec q}+\dot{\mathbf J}(q,\dot{\vec q})\,\dot{\vec q}.
-\end{equation}
+% \subsubsection{Aceleração cartesiana e \(\dot{\mathbf J}\)}
+% A aceleração é obtida pela derivada de \eqref{eq:veloc_espacial_efetuador}:
+% \begin{equation}
+% \dot{\vec{\mathcal V}}_E=
+% \mathbf J(q)\,\ddot{\vec q}+\dot{\mathbf J}(q,\dot{\vec q})\,\dot{\vec q}.
+% \end{equation}
 
-Para $\dot{\mathbf J}$, pode-se utilizar as torções $\vec{\mathcal V}_{B,i}$ das juntas:
-\begin{equation}
-\dot{\mathbf J}_s=
-\sum_{i=1}^n \mathbf J_{s,i}\,\dot q_i,
-\end{equation}
+% Para $\dot{\mathbf J}$, pode-se utilizar as torções $\vec{\mathcal V}_{B,i}$ das juntas:
+% \begin{equation}
+% \dot{\mathbf J}_s=
+% \sum_{i=1}^n \mathbf J_{s,i}\,\dot q_i,
+% \end{equation}
 
-\begin{equation}
-\mathbf J_{s,i}=
-\begin{bmatrix}
-ad_{\vec V} & \mathbf 0\\
-\mathbf 0   & ad_{\vec V}
-\end{bmatrix}\mathbf J_s,
-\end{equation}
+% \begin{equation}
+% \mathbf J_{s,i}=
+% \begin{bmatrix}
+% ad_{\vec V} & \mathbf 0\\
+% \mathbf 0   & ad_{\vec V}
+% \end{bmatrix}\mathbf J_s,
+% \end{equation}
 
-\begin{equation}
-\mathrm{ad}_{\vec{\mathcal V}}=
-\begin{bmatrix}
-[\vec\omega]_\times &\mathbf 0\\
-[\vec v]_\times     &[\vec\omega]_\times
-\end{bmatrix}.
-\end{equation}
+% \begin{equation}
+% \mathrm{ad}_{\vec{\mathcal V}}=
+% \begin{bmatrix}
+% [\vec\omega]_\times &\mathbf 0\\
+% [\vec v]_\times     &[\vec\omega]_\times
+% \end{bmatrix}.
+% \end{equation}
 
-Portanto, para o controle,
-utiliza-se $\ddot{\vec x}_E=\mathbf J\,\ddot{\vec q}+\dot{\mathbf J}\dot{\vec q}$
-com $\dot{\mathbf J}\dot{\vec q}$
-computado recursivamente junto com $\mathbf J$.
+% Portanto, para o controle,
+% utiliza-se $\ddot{\vec x}_E=\mathbf J\,\ddot{\vec q}+\dot{\mathbf J}\dot{\vec q}$
+% com $\dot{\mathbf J}\dot{\vec q}$
+% computado recursivamente junto com $\mathbf J$.
 %% ===== EXPLICAÇÃO DE CIMA =====
 % Qdo o manipulador está preso a uma base não-fixa, a veloc. do efetuador não depende apenas das juntas: há uma contribuição da movimentação da base.
 
@@ -173,6 +173,7 @@ computado recursivamente junto com $\mathbf J$.
 
 % Portanto, esse termo "transporta" a velocidade da base para o frame do efetuador.
 % ==================================================
+
 
 \subsection{Mapeamento de torques e forças}
 A dual da adjunta fornece a transformação da ferramenta e o mapeamento entre as juntas e o efetuador.
