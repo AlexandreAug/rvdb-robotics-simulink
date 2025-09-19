@@ -1,0 +1,33 @@
+A atitude relativa entre duas espaçonaves descreve a orientação do \emph{chaser} em relação ao \emph{target}.
+
+\subsection{Atitude relativa}
+A relação entre as atitudes fornece medidas de erro de atitude para que a lei de controle possa corrigir as orientações relativas.
+Sejam $q_t$ e $q_c$ os quaternions unitários das espaçonaves \emph{target} e \emph{chaser}, ambos definidos em relação ao mesmo referencial inercial. 
+A orientação relativa pode ser expressa por:
+
+\begin{equation}
+    \label{eq:quat_relativo}
+q_{rel}
+=
+q_t^{-1} \otimes q_c,
+\end{equation}
+
+onde o termo $q_t^{-1}$ é o inverso (no caso dos quaternions unitários, conjugado) do quaternion do \emph{target}, $q_c$ é o quaternion do \emph{chaser}, e $\otimes$ é o produto de quaternions.
+
+Por fim, o quaternion $q_{rel}$ representa a rotação necessária para alinhar o o referencial das espaçonaves.
+A parte escalar $q_{rel,0}$ é o cosseno da metade do ângulo relativo, enquanto que a parte vetorial $\vec \epsilon_{rel}$ fornece o eixo associado a essa rotação:
+
+\begin{equation}
+q_{rel} =
+\begin{bmatrix}
+\cos\!\left(\tfrac{\alpha}{2}\right) \\[4pt]
+\vec{u}\,\sin\!\left(\tfrac{\alpha}{2}\right)
+\end{bmatrix},
+\end{equation}
+
+onde $\alpha$ é o ângulo relativo entre os dois referenciais e $\vec u$ é o eixo unitário da rotação\fn{Para maior detalhamento, ver \eqref{eq:quaternion_unitario_definicao}.}.
+
+% \subsubsection{Controle e o erro de atitude}
+% A formulação da atitude relativa define o erro de orientação em malhas de controle. 
+% A partir de $q_{rel}$, é extraído o vetor de erro de atitude $\vec e_q$ e ao combiná-lo com o erro de velocidade angular, obtém-se a correção necessário para o controle aplicar e assim permanece em iteração. 
+% Esse procedimento permite que o controlador atue em direção ao menor ângulo de rotação, evitando ambiguidades na representação dos quaternions.

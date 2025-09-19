@@ -19,6 +19,34 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{ULA_VulcanCentaur}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2b2b7ad42328bb714f9803f5bef052af}{%
+           family={(ULA)},
+           familyi={(\bibinitperiod},
+           given={United\bibnamedelimb Launch\bibnamedelima Alliance},
+           giveni={U\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2b2b7ad42328bb714f9803f5bef052af}
+      \strng{fullhash}{2b2b7ad42328bb714f9803f5bef052af}
+      \strng{fullhashraw}{2b2b7ad42328bb714f9803f5bef052af}
+      \strng{bibnamehash}{2b2b7ad42328bb714f9803f5bef052af}
+      \strng{authorbibnamehash}{2b2b7ad42328bb714f9803f5bef052af}
+      \strng{authornamehash}{2b2b7ad42328bb714f9803f5bef052af}
+      \strng{authorfullhash}{2b2b7ad42328bb714f9803f5bef052af}
+      \strng{authorfullhashraw}{2b2b7ad42328bb714f9803f5bef052af}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.ulalaunch.com/rockets/vulcan-centaur}}
+      \field{note}{Acessado em [colocar data de acesso]}
+      \field{title}{Vulcan – Centaur V}
+      \field{year}{2025}
+    \endentry
     \entry{alfriend2010}{book}{}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=bda899410e386bdbfa8a7bdd63c5dec8}{%
@@ -122,6 +150,31 @@
       \field{title}{Fundamentals of Astrodynamics}
       \field{year}{1971}
     \endentry
+    \entry{BlueOrigin_NewGlenn}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=06918184ef34f67fc1a93673015786f6}{%
+           family={{Blue Origin}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{06918184ef34f67fc1a93673015786f6}
+      \strng{fullhash}{06918184ef34f67fc1a93673015786f6}
+      \strng{fullhashraw}{06918184ef34f67fc1a93673015786f6}
+      \strng{bibnamehash}{06918184ef34f67fc1a93673015786f6}
+      \strng{authorbibnamehash}{06918184ef34f67fc1a93673015786f6}
+      \strng{authornamehash}{06918184ef34f67fc1a93673015786f6}
+      \strng{authorfullhash}{06918184ef34f67fc1a93673015786f6}
+      \strng{authorfullhashraw}{06918184ef34f67fc1a93673015786f6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.blueorigin.com/new-glenn}}
+      \field{note}{Acessado em [colocar data de acesso]}
+      \field{title}{New Glenn}
+      \field{year}{2025}
+    \endentry
     \entry{debruijn2011}{article}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=444d0a33176e1cf8e5eb33da7c805084}{%
@@ -164,6 +217,40 @@
       \verb{doi}
       \verb 10.7446/jaesa.0302.01
       \endverb
+    \endentry
+    \entry{craig2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=57c29b307f6e70b7216c8c696af16b58}{%
+           family={Craig},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Prentice Hall}%
+      }
+      \strng{namehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{fullhash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{fullhashraw}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{bibnamehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authorbibnamehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authornamehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authorfullhash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authorfullhashraw}{57c29b307f6e70b7216c8c696af16b58}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{isbn}{0-13-123629-6}
+      \field{title}{Introduction to Robotics: Mechanics and Control}
+      \field{year}{2005}
     \endentry
     \entry{edelstein2018_derivadaSegunda}{book}{}{}
       \name{author}{1}{}{%
@@ -373,6 +460,36 @@
       \field{year}{1878}
       \field{pages}{5\bibrangedash 26}
       \range{pages}{22}
+    \endentry
+    \entry{IC2021}{report}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d1293af04e3d3a98e670a1d53176664d}{%
+           family={{Intelligence Community (IC)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {United States Intelligence Community}%
+      }
+      \strng{namehash}{d1293af04e3d3a98e670a1d53176664d}
+      \strng{fullhash}{d1293af04e3d3a98e670a1d53176664d}
+      \strng{fullhashraw}{d1293af04e3d3a98e670a1d53176664d}
+      \strng{bibnamehash}{d1293af04e3d3a98e670a1d53176664d}
+      \strng{authorbibnamehash}{d1293af04e3d3a98e670a1d53176664d}
+      \strng{authornamehash}{d1293af04e3d3a98e670a1d53176664d}
+      \strng{authorfullhash}{d1293af04e3d3a98e670a1d53176664d}
+      \strng{authorfullhashraw}{d1293af04e3d3a98e670a1d53176664d}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{note}{Classified as For Official Use Only (FOUO)}
+      \field{title}{{(U//FOUO) Time, Frequency, Ephemeris, Geodesy and Weather Reference and Guidance Handbook (TFEGW-RGH)}}
+      \field{type}{techreport}
+      \field{version}{16}
+      \field{year}{2021}
     \endentry
     \entry{arantes2011}{thesis}{}{}
       \name{author}{1}{}{%
@@ -710,6 +827,31 @@
       \field{title}{Spacecraft Dynamics and Control: A Practical Engineering Approach}
       \field{volume}{7}
       \field{year}{1997}
+    \endentry
+    \entry{SpaceX_Falcon9}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=54d3a21ee5b8a15d2004b7350bf67e6d}{%
+           family={SpaceX},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \strng{fullhash}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \strng{fullhashraw}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \strng{bibnamehash}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \strng{authorbibnamehash}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \strng{authornamehash}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \strng{authorfullhash}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \strng{authorfullhashraw}{54d3a21ee5b8a15d2004b7350bf67e6d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.spacex.com/vehicles/falcon-9/}}
+      \field{note}{Acessado em [colocar data de acesso]}
+      \field{title}{Falcon\,9}
+      \field{year}{2025}
     \endentry
     \entry{starek2016}{misc}{}{}
       \true{moreauthor}

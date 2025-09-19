@@ -1,6 +1,7 @@
 O problema dos dois corpos, proposto por Isaac Newton \cite{newton1713}, consiste em determinar as posições e velocidades de duas partículas em qualquer instante de tempo, desde que sejam conhecidas as suas posições, massas e velocidades em um dado instante $t$, e que ambas as partículas se movam sob a ação de sua força de gravidade mútua.
 
 \subsection{Movimento orbital absoluto}
+\label{sec:movimento_orbital_absoluto}
 Como exemplo prático do problema dos dois corpos, pode-se citar a órbita da Lua em torno da Terra, bem como a de um planeta em torno do Sol \cite{wgsantos2011}.
 A aceleração de cada corpo é dada por:
 
@@ -38,7 +39,7 @@ A equação \eqref{eq:vetor_posicao_r} é o vetor posição de $m_2$ em relaçã
 m_1 \ddot{\vec R}_1 + m_2 \ddot{\vec R}_2 = 0
 \end{equation}
 
-A partir da Lei da Gravitação Universal, equação \eqref{eq:newtonGravitacao_Parte1}, o termo $G M$ é denominado parâmetro gravitacional ($\mu$ da Terra), onde $M$ representa a massa da Terra; $m_1$ e $m_2$ são as massas dos corpos (\textit{chaser} e \textit{target}, respectivamente); $G = 6{,}6695 \times 10^{-11}$ é a constante gravitacional \cite{halliday2013,wie2008space}.
+A partir da Lei da Gravitação Universal, equação \eqref{eq:newtonGravitacao_Parte1}, o termo $G M$ é denominado parâmetro gravitacional ($\mu$ da Terra), onde $M$ representa a massa da Terra; $m_1$ e $m_2$ são as massas dos corpos (\textit{chaser} e \textit{target}, respectivamente); G é a constante gravitacional \cite{halliday2013,wie2008space}.
 
 \begin{equation}
 \label{eq:newtonGravitacao_Parte1}
@@ -49,13 +50,15 @@ Na maioria dos casos práticos de mecânica orbital, a massa do corpo primário 
 
 \begin{equation}
 \label{eq:newtonGravitacao_Parte2}
-\vect F_g(\vect r) = - G\ \frac{Mm}{r^2} {\vect r}
+\vect F_g(\vect r) =
+- G\ \frac{Mm}{r^2} {\vect r}
+= -\mu \frac{m}{\vec {r^3}}\vec r,
 \end{equation}
  
-\begin{equation}
-\label{eq:fgParte1}
-\vect F_g(\vect r) = -\mu \frac{m}{\vec {r^3}} \vect r
-\end{equation}
+% \begin{equation}
+% \label{eq:fgParte1}
+% \vect F_g(\vect r) = -\mu \frac{m}{\vec {r^3}}\vec r
+% \end{equation}
 
 \begin{equation}
 \label{eq:fgParte2}
@@ -78,14 +81,14 @@ Substituindo a equação \eqref{eq:Fma_Halliday2013_Parte2} na equação \eqref{
 
 \begin{equation}
 \label{eq:eqFundamentalDoisCorpos}
-\ddot {\vect r} = -\mu \frac{\vec r}{\vec {r^3}}
+\ddot {\vec r} = -\frac{\mu}{\vec {r^3}}\vec r
 \end{equation}
 
 Onde $\ddot{\vect r}$ é a aceleração inercial de $m_2$ em relação a $m_1$; $\mu$ é o parâmetro gravitacional do sistema de dois corpos, e \eqref{eq:eqFundamentalDoisCorpos} é a equação fundamental (geral) do problema dos dois corpos \cite{fehse2003,wie2008space}
 O \emph{target} (sem força de controle) obedece:
 \begin{equation}
 \label{eq:movimentoTarget}
-\ddot{\vec r_t} = -\,\mu\,\frac{\vec {r_t^3}}{\vec {r^3}}\,.
+\ddot{\vec r_t} = \frac{-\mu}{\vec {r^3}}\vec {r_t}.
 \end{equation}
 
 Enquanto que o \emph{chaser} (com força de controle) obedece:
@@ -93,8 +96,8 @@ Enquanto que o \emph{chaser} (com força de controle) obedece:
 \label{eq:movimentoChaser}
 \ddot{\vec r_c}
 =
--\,\mu\frac{\vec r_c}{\vec {r_c^3}}
+-\frac{\mu}{\vec {r_c^3}}\vec r_c
 +
-\frac{\vec F}{m_c}\,,
+\frac{\vec F}{m_c},
 \end{equation}
 onde $\vect F$ é um tipo de força não-gravitacional, como uma força de controle, aplicada no \emph{chaser} para se aproximar do \emph{target}.

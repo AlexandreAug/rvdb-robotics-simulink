@@ -1,0 +1,93 @@
+\subsection{Cinemática Diferencial e Jacobiano}
+
+A cinemática diferencial descreve como as velocidades de junta geram as velocidades da ferramenta em um referencial escolhido.
+Foi utilizada a matriz Jacobiana $\mathbf{J}(\vec q)$ para mapear
+$\dot{\vec q}$ em velocidade linear e angular da ferramenta.
+% Este mapeamento é a base para:
+% (i) controle no espaço de tarefa,
+% (ii) análise de singularidades e
+% (iii) conversão entre forças cartesianas e torques de junta.
+
+\subsubsection{Velocidades cartesianas e Jacobiana}
+A partir do referencial da base $\{0\}$, a velocidade (linear e angular) cartesiana da ferramenta é obtida diretamente a partir das velocidades das juntas pela Jacobiana geométrica.
+Para o MR configuração 4R1P, no mesmo sistema de coordenadas, as contribuições de cada junta ao movimento da ferramenta:
+\begin{equation}
+\label{eq:xdot_J_qdot}
+{}^{0}\!\dot{\vec x}_{E} \;=\;
+\begin{bmatrix}
+{}^{0}\!\vec v_{E} \\
+{}^{0}\!\vec \omega_{E}
+\end{bmatrix}
+= \mathbf{J}(\vec q)\,\dot{\vec q},
+\end{equation}
+em que $\dot{\vec q}$ reúne as velocidades.
+
+\subsubsection{Construção do Jacobiano}
+As colunas do Jacobiano são construídas no referencial $\{0\}$ a partir dos eixos
+${}^{0}\!\vec z_{\,i-1}$ e
+dos vetores posição ${}^{0}\!\vec p_{\,\cdot}$ obtidos pela cinemática direta.
+
+Para a junta revoluta:
+\begin{equation}
+\begin{cases}
+J_{v,i} =
+{}^{0}\!\vec{z}_{\,i-1} \times 
+\left({}^{0}\!\vec{p}_{\,E} - {}^{0}\!\vec{p}_{\,i-1}\right), \\
+J_{\omega,i} =
+{}^{0}\!\vec{z}_{\,i-1}.
+\end{cases}
+\end{equation}
+
+Para a junta prismática:
+\begin{equation}
+\begin{cases}
+J_{v,i} = {}^{0}\!\vec{z}_{\,i-1}, \\
+J_{\omega,i} = \vec 0.
+\end{cases}
+\end{equation}
+
+Portanto, cada coluna de $\mathbf{J}$ representa a contribuição de cada junta para o movimento linear e angular do MR.
+
+\subsubsection{Efeito da Base}
+Quando a base está fixa, usa-se diretamente
+\eqref{eq:xdot_J_qdot}.
+Para base flutuante, a velocidade da ferramenta é a soma do efeito do movimento da base com o efeito do movimento das juntas:
+\begin{equation}
+{}^{0}\!\dot{\vec x}_{E} =
+\mathbf{J}_{base}(\cdot)\,{}^{0}\!\dot{\vec x}_{B}
+\;+\;
+\mathbf{J}(\vec q)\,\dot{\vec q}.
+\end{equation}
+Neste trabalho, $\mathbf{J}_{base}(\cdot)$ é tratada de forma agregada na seção de acoplamento base--manipulador; aqui, assume-se base fixa no uso de $\mathbf{J}(\vec q)$ para controle.
+
+\subsubsection{Mapeamento de torques e forças}
+O mapeamento entre as forças--momentos (\emph{wrench}) aplicados na ferramenta e os torques nas juntas é dado por:
+
+\begin{equation}
+\vec\tau = \mathbf{J}^T (\vec q)\,\vec w_{E},
+\end{equation}
+
+em que a \emph{wrench} na ferramenta é
+\begin{equation}
+\vec w_{E} =
+\begin{bmatrix}
+\vec f_{E} \\
+\vec m_{E}
+\end{bmatrix},
+\end{equation}
+com $\vec f_{E}$ (N) e $\vec m_{E}$ (N$\cdot$m) expressos no mesmo referencial e aplicados no mesmo ponto $E$.
+Portanto, ($\mathbf{J}^{\top}\vec w_{E}$) transforma as forças--momentos cartesianos desejados (ou medidos) na ferramenta em torques equivalentes nas juntas.
+
+\subsubsection{Singularidades}
+Uma singularidade ocorre quando pequenas variações desejadas no efetuador $\{E\}$ exigem velocidades de junta excessivas em alguma direção.
+Isso acontece quando algum termo de menor valor de $\mathbf{J}(\vec q)$ tende a zero e o número de condição cresce.
+A pseudo-inversa amortecida pode ser utilizada, e é expressa por:
+
+\begin{equation}
+\label{eq:pseudoinversa}
+\dot{\vec q} =
+\mathbf{J}^T\,\big(\mathbf{J}\,\mathbf{J}^T
++ \lambda^2 I\big)^{-1}\,{}^{0}\!\dot{\vec x}_{E,d},
+\end{equation}
+com $\lambda>0$.
+% Para o MR deste trabalho, de configuração 4R1P, a dimensão de tarefa é $5$ (posição 3D e dois ângulos relevantes à captura), o que reduz o risco de singularidades.

@@ -1,30 +1,31 @@
-\section{Hipóteses gerais}
-As hipóteses adotadas neste trabalho para a modelagem matemática procuram trazer consistência entre a simplificação física, a reprodutibilidade das simulações e a correspondência com o escopo da presente pesquisa de Mestrado.
+\section{Hipóteses}
+As hipóteses adotadas neste trabalho trazem consistência entre a simplificação física, a reprodutibilidade das simulações e a correspondência com o escopo da presente pesquisa de Mestrado.
 
 \subsection{Fases da missão}
 \label{sec:fases_missao}
-Inicialmente foi considerado que o \emph{chaser} (perseguidor ou visitante) está situado em uma órbita inferior à órbita do \emph{target} (alvo).
+Foi considerado que o \emph{chaser} (perseguidor ou visitante) está situado em uma órbita inferior à órbita do \emph{target} (alvo).
 
 \subsubsection{Fase 1: Transferência de órbita}
-Para reduzir a altitude entre eles, é aplicada a transferência de Hohmann para que o veículo perseguidor possa estar próximo o suficiente para que ocorra a fase de aproximação entre as espaçonaves através da Equação de Hill/CW (\emph{EHCW}).
+Para reduzir a altitude entre eles, é aplicada a transferência de Hohmann para que em seguida ocorra a fase de aproximação entre as espaçonaves através da Equação HCW.
 
-\subsubsection{Fase 2 : Aproximação}
-Esta fase é onde ocorre o movimento orbital relativo entre as espaçonaves, onde o perseguidor se aproxima do alvo para que ocorra a captura através da ferramenta do manipulador robótico.
+\subsubsection{Fase 2: Aproximação}
+Nesta fase ocorre o movimento orbital relativo entre as espaçonaves, para que aconteça a captura da espaçonave alvo através da ferramenta do manipulador robótico.
 
 \subsubsection{Fase 3: Captura}
-o manipulador robótico irá se posicionar de forma que a ferramenta possa se engatar na porta de \emph{docking (atracação ou acoplamento)}.
-Nesta fase, a espaçonave irá se comportar como corpo rígido (antes do acoplamento) e corpo não-rígido (assim que o manipulador robótico se movimentar).
+O manipulador robótico irá se posicionar de forma que a ferramenta possa se engatar na porta de \emph{docking (atracação ou acoplamento)}.
+% Nesta fase, a espaçonave irá se comportar como corpo rígido (antes do acoplamento) e corpo não-rígido (assim que o manipulador robótico se movimentar).
 A modelagem após a fase de captura, onde o $chaser$ e o $target$ passam a constituir um único corpo, está fora do escopo deste trabalho.
 
-\section{Hipóteses de simulação}
-% \subsection{Critérios de validação}
-As simulações numéricas serão utilizadas como ferramenta para validar todas as fases da missão \eqref{sec:fases_missao}.
-Essas simulações serão realizadas no MATLAB e Simulink.
+% \section{Hipóteses de simulação}
+% % \subsection{Critérios de validação}
+% As simulações numéricas serão utilizadas como ferramenta para validar todas as fases da missão \eqref{sec:fases_missao}.
+% Essas simulações serão realizadas no MATLAB e Simulink.
 
 \subsection{Mecânica orbital}
-As órbitas assumidas circulares, Keplerianas, possuindo excentricidade nula ($e=0$).
-Além disso, a maioria dos elementos orbitais, como a excentricidade ($e$), a inclinação orbital ($i$), a seção reta do nodo ascendente ($RAAN, \Omega$), o argumento do perigeu $\omega$, de ambas as espaçonaves são os mesmos\fn{Caso haja alterações, será indicado}.
-Durante a modelagem não foram incluídas ou consideradas perturbações ambientais, como o termo $J_2$, o arrasto atmosférico, a pressão de radiação solar, etc., porque o tempo de simulação não ultrapassou 24 horas.
+As órbitas são assumidas como circulares, Keplerianas, possuindo excentricidade próxima de zero.
+Além disso, os elementos orbitais de ambas as espaçonaves são os mesmos.
+% como a excentricidade ($e$), a inclinação orbital ($i$), a seção reta do nodo ascendente ($RAAN, \Omega$)\fn{A RAAN é a longitude (no equador inercial) do ponto onde a órbita cruza o plano equatorial no sentido sul--norte.}, o argumento do perigeu $\omega$, de ambas as espaçonaves são os mesmos\fn{Caso haja alterações, será indicado}.
+% Durante a modelagem não foram incluídas ou consideradas perturbações ambientais, como o termo $J_2$, o arrasto atmosférico, a pressão de radiação solar, etc., porque o tempo de simulação não ultrapassou 24 horas.
 
 \subsection{Sistema de referência}
 \label{sec:referenciais_convencoes}
@@ -37,7 +38,8 @@ Foi utilizada a referência dextrogiro (\emph{LVLH, Local-Vertical-Local-Horizon
     \label{fig:LVLH_NASA}
 \end{figure}
 
-A convenção\footnote{Alguns autores, como \cite{fehse2003}, adotam a convenção alternativa na qual $\vec{x}$ é tangencial (\emph{along-track}) e $\vec{z}$ é radial.} adotada neste trabalho segue a proposta de \cite{alfriend2010, Folta2022}, conforme:
+A convenção adotada neste trabalho segue a proposta de \cite{alfriend2010, Folta2022}, conforme:
+% \footnote{Alguns autores, como \cite{fehse2003}, adotam a convenção alternativa na qual $\vec{x}$ é tangencial (\emph{along-track}) e $\vec{z}$ é radial.} adotada neste trabalho segue a proposta de \cite{alfriend2010, Folta2022}, conforme:
 \begin{itemize}
     \item o vetor $\vec{x}$ é orientado no sentido radial (nadir), apontando para fora do plano da órbita, a partir do centro de massa (CoM) da espaçonave, também indicando a altitude da espaçonave;
     \item o vetor $\vec{y}$ é tangente à órbita (\emph{along-track}), apontando na direção do movimento orbital (vetor velocidade);
@@ -46,41 +48,55 @@ A convenção\footnote{Alguns autores, como \cite{fehse2003}, adotam a convenç�
 
 \subsection{Espaçonave}
 Todas os componentes tratados na modelagem, como a base, os elos, as juntas, a ferramenta e a porta de docking, são modeladas como corpos rígidos na fase de análise pré-captura.
-Quando mencionado o termo corpo, significa que está sendo tratado a espaçonave \emph{chaser} por completo, todos os componentes dele.
+Quando mencionado o termo espaçonave, significa que está sendo tratado do \emph{chaser} por completo, incluindo todos os componentes.
 Os efeitos de flexibilidade estrutural, folgas, vibrações e deformações locais não foram incluídos ou considerados na modelagem.
 
-No subsistema local, a força peso sobre o corpo não é considerada pois está em constante queda livre (microgravidade).
-Além disso, a aceleração gravitacional continua a existir e não é considerada.
-Por fim, todas as massas são constantes ao longo das simulações.
+No subsistema local, a força peso sobre o corpo não é considerada pois está em constante queda livre (microgravidade), e a aceleração gravitacional continua a existir e não é considerada.
+Além disso, todas as massas são constantes ao longo da simulação.
 
 \subsection{Subsistemas da espaçonave}
-Assumiu-se que o manipulador robótico encontra-se acoplado rigidamente à sua base ($\{0\}$), de modo que não há movimento relativo com o corpo ($\{B\}$).
+O manipulador robótico encontra-se acoplado rigidamente à sua base ($\{0\}$), de modo que não há movimento relativo com o corpo ($\{B\}$).
 A numeração dos elos segue $\{i\}$ para $i=1,\dots,5$, sendo $\{E\}$ o efetuador final (ferramenta).
-A modelagem cinemática detalhada, contendo a tabela de parâmetros de Denavit--Hartenberg (DH), a cinemática direta e a cinemática inversa, é apresentada em seção específica.
+% A modelagem cinemática detalhada, contendo a tabela de parâmetros de Denavit--Hartenberg (DH), a cinemática direta e a cinemática inversa, é apresentada em seção específica.
 
 \subsection{Movimento de atitude}
-O controle de atitude é utilizado para manter a orientação do \emph{chaser} permaneça dentro de limites pré-estabelecidos ao longo da aproximação pelo eixo radial (\emph{R-bar}).
+O controle de atitude é utilizado para manter a orientação do \emph{chaser}.
+% permaneça dentro de limites pré-estabelecidos ao longo da aproximação pelo eixo radial (\emph{R-bar}).
 Os movimentos são tratadas em diferentes sistemas de referência, sendo:
 (i) inercial para o movimento orbital absoluto;
-(ii) LVLH (\emph{Local-Vertical-Local-Horizontal}) para descrever a aproximação relativa;
-(iii) referencial relativo para o alinhamento entre \emph{chaser} e \emph{target}.
-Na modelagem, os produtos de inércia foram preservados, mesmo quando menores do que $10^{-6}$, para a manter fidelidade nas simulações de dinâmica.
+(ii) LVLH (\emph{Local-Vertical-Local-Horizontal}) para descrever a aproximação relativa e para o alinhamento entre \emph{chaser} e \emph{target}.
+% Na modelagem, os produtos de inércia foram preservados, mesmo quando menores do que $10^{-6}$, para a manter fidelidade nas simulações de dinâmica.
 
-\subsection{Atuadores e sensores}
-Os atuadores das quatro primeiras juntas revolutas ($J_1 - J_4$) aplicam torques, enquanto que o atuador da quinta junta ($J_5$) prismática exerce força, resultando na configuração 4R1P.
-Todas as forças ou torques exercidas elas juntas são representados por $\tau$, e a modelagem é abstrata no nível dinâmico, sem referência direta ao hardware.
+\subsection{Atuadores}
+% Os atuadores das quatro primeiras juntas revolutas ($J_1 - J_4$) aplicam torques, enquanto que o atuador da quinta junta ($J_5$) prismática exerce força, resultando na configuração 4R1P.
+Todas as forças $F$ ou torques $\tau$ exercidas são abstratas no nível dinâmico, sem referência direta ao hardware.
 
-\subsection{Restrições operacionais}
-O movimento do manipulador robótico é restringido a um espaço de trabalho (\emph{workspace}) previamente definido, de modo a não exceder os limites físicos do \emph{chaser} ou do \emph{target}.
-Além disso, cada junta está sujeita a limites de posição, velocidade e aceleração.
+% \subsection{Restrições operacionais}
+% O movimento do manipulador robótico é restringido a um espaço de trabalho (\emph{workspace}) previamente definido, de modo a não exceder os limites físicos do \emph{chaser} ou do \emph{target}.
+% Além disso, cada junta está sujeita a limites de posição, velocidade e aceleração.
 
 % \subsection{Incertezas e variações} Foram consideradas incertezas paramétricas fixas associadas a cada elo do manipulador e ao conjunto, abrangendo as massas $m_i$, as posições dos centros de massa (CoM) e os momentos de inércia. Tais incertezas foram modeladas como desvios percentuais em torno dos valores nominais, com limites máximos pré-definidos. Cada simulação é realizada com um conjunto fixo de parâmetros perturbados dentro desses limites, representando erros de modelagem ou variações construtivas. As variáveis de estado adotadas no modelo dinâmico são os ângulos (ou deslocamento prismático) das juntas e suas velocidades generalizadas. As acelerações são obtidas diretamente das equações de movimento e, portanto, não constituem estados independentes, mas variáveis derivadas.
 
-\subsection{Condições iniciais}
-\label{sec:condicoes_iniciais}
-As condições iniciais de ambas as espaçonaves usadas nas simulações incluem:
-(i) durante a fase 1, no referencial inercial, as altitudes, os movimentos médios ($\eta$), as anomalias verdadeiras ($\nu$),
-as velocidades das espaçonaves, os períodos orbitais ($T$), entre outros;
-(ii) durante a fase 2, no referencial LVLH, as posições, as velocidades iniciais, as velocidades relativas, etc.;
-(iii) na fase final, no referencial local, as atitudes iniciais de cada espaçonave, os ângulos iniciais e as velocidades das juntas do manipulador robótico, entre outras.
-O \emph{chaser} possuirá desvios em suas condições iniciais, enquanto que o \emph{target} será tratado como referência LVLH.
+% \subsection{Condições iniciais}
+% \label{sec:condicoes_iniciais}
+% As condições iniciais de ambas as espaçonaves usadas nas simulações incluem:
+% (i) durante a fase 1, no referencial inercial, as altitudes, os movimentos médios ($\eta$), as anomalias verdadeiras ($\nu$),
+% as velocidades das espaçonaves, os períodos orbitais ($T$), entre outros;
+% (ii) durante a fase 2, no referencial LVLH, as posições, as velocidades iniciais, as velocidades relativas, etc.;
+% (iii) na fase final, no referencial local, as atitudes iniciais de cada espaçonave, os ângulos iniciais e as velocidades das juntas do manipulador robótico, entre outras.
+% O \emph{chaser} possuirá desvios em suas condições iniciais, enquanto que o \emph{target} será tratado como referência LVLH.
+
+\subsection{Constantes matemáticas}
+\label{sec:cte_matematicas}
+Certas constantes matemáticas utilizadas ao longo deste trabalho são as mesmas que são detalhadas abaixo:
+
+\begin{itemize}
+    \item \textbf{Massa da Terra ($M_{Terra}$)}:
+    $5{,}972\times10^{24}[kg]$.
+    \item \textbf{Constante gravitacional universal (G)}:
+    $6{,}6743\times10^{-11}$.
+    \item \textbf{Parâmetro gravitacional da Terra ($\mu$)}:
+    $3{,}986004418\times 10^{14}\ \mathrm{m^3\,s^{-2}}$.
+    \item \textbf{Raio equatorial da Terra}:
+    $6.378{,}137[km]$.
+\end{itemize}

@@ -1,0 +1,261 @@
+\subsection{Equações da cinemática}
+A atitude de uma espaçonave pode ser descrita pelos ângulos de Euler e pelos quaternions. 
+Cada representação possui vantagens e limitações quanto aos parâmetros geométricos, à presença de singularidades e ao custo computacional, o que impacta as simulações numéricas.
+% Nesta subseção do trabalho serão apresentadas as principais formas de representação e suas respectivas relações.
+% Será dado ênfase nos quaternions unitários, pois são utilizados em aplicações aeroespaciais devido à eficiência e relativo baixo custo computacional, quando comparado com os ângulos de Euler.
+
+%==================================================
+%----- Ang de Euler
+%==================================================
+\subsubsection{Ângulos de Euler}
+Neste trabalho, foi adotado a sequência de rotações extrínsecas ZYX, conhecida como \emph{yaw, pitch e roll}.
+% A rotação em torno do eixo $Z$ ($\psi$) é aplicada primeiro, seguida pela rotação em torno do eixo $Y$ ($\theta$), e por fim pela rotação em torno do eixo $X$ ($\phi$).
+Embora a interpretação ser direta (roll, pitch e yaw), os ângulos de Euler podem sofrer com a ocorrência de singularidades (\emph{gimbal lock})
+\footnote{A singularidade ocorre quando $\theta = \pm 90^{\circ}$, fazendo com que dois eixos de rotação se tornem linearmente dependentes, ou seja, é perdido um grau de liberdade.}.
+
+% Além dos ângulos de Euler e dos quaternions, outra forma equivalente de representar a orientação é por meio das matrizes de rotação. Essas matrizes são utilizadas em robótica e em transformações entre os sistemas de referência, por exemplo do referencial inercial para o referencial LVLH. As formulações completas, são apresentadas no Apêndice \ref{ApendiceE}.
+
+%==================================================
+%----- Quaternions
+%==================================================
+\subsubsection{Quaternions}
+\label{sec:Quaternions}
+Os quaternions
+% são empregados em aplicações aeroespaciais por causa de sua eficiência computacional e por evitarem
+evitam as singularidades associadas aos ângulos de Euler.
+Um quaternion é definido como:
+\begin{equation}
+    \label{eq:quaternion_unitario_definicao}
+\mathbf{q}
+=
+\begin{bmatrix}
+q_0 \\ q_1 \\ q_2 \\ q_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+\cos\frac{\alpha}{2} \\
+u_x \sin\frac{\alpha}{2} \\
+u_y \sin\frac{\alpha}{2} \\
+u_z \sin\frac{\alpha}{2}
+\end{bmatrix},
+\end{equation}
+onde $\alpha$ é o ângulo de rotação e $\vec{u} = (u_x,u_y,u_z)^T$ é o eixo unitário em torno do qual a rotação ocorre.
+É importante esclarecer que
+$\mathbf{q}\in\mathbb{H}$ com $|\mathbf{q}|=1$.
+
+\subsubsection{Produto de quaternions}
+Dados dois quaternions
+$p = [p_0,\vec{p}_v]^T$ e $q = [q_0,\vec{q}_v]^T$, 
+o produto $p \otimes q$ é definido como:
+\begin{equation}
+p \otimes q
+=
+\begin{bmatrix}
+p_0 q_0 - \vec{p_v}^{T}\vec{q}_v \\
+p_0 \vec{q}_v + q_0 \vec{p}_v + \vec{p}_v \times \vec{q}_v
+\end{bmatrix}.
+\label{eq:quat_produto}
+\end{equation}
+
+%==================================================
+%----- Rel. quaternion e matriz de rotação
+%==================================================
+\subsubsection{Relação entre quaternion e matriz de rotação}
+Um quaternion unitário é definido como:
+\begin{equation}
+q = q_0
++ q_1 \mathbf{i}
++ q_2\mathbf{j}
++ q_3\mathbf{k},
+\label{eq:def_quaternion}
+\end{equation}
+onde $q_0$ é a parte escalar e $\vec{q}_v = [q_1; q_2; q_3]^T$ é a parte vetorial.  
+
+A rotação de um vetor $\vec{v}$ pode ser escrita como:
+\begin{equation}
+\vec{v}' = (q_0^2 -
+\vec q_v{^T} \vec{q}_v)\,\vec{v} 
++ 2(\vec{q}_v \cdot \vec{v})\,\vec{q}_v
++ 2q_0 (\vec{q}_v \times \vec{v}).
+\label{eq:rodrigues_quaternion}
+\end{equation}
+
+Reescrevendo \eqref{eq:rodrigues_quaternion} em forma matricial, obtém-se:
+
+\begin{equation}
+\mathbf{R}(q) =
+(q_0^2 - \vec{q}_v{^T} \vec{q}_v)\mathbf{I}_3 
++ 2 \vec{q}_v \vec{q}_v{^T}
++ 2q_0 [\vec{q}_v]_\times,
+\label{eq:rot_matrix_general}
+\end{equation}
+
+onde $[\vec{q}_v]_\times$ é a matriz antissimétrica
+% \fn{Essa matriz auxilia nas transformações de coordenadas e na formulação das equações dinâmicas, sendo definida como uma matriz associada a um vetor qualquer $\vec a = [x, y, z]^T$.}
+($\hat{\vec{q}}_v$), associada ao produto vetorial:
+
+\begin{equation}
+\hat{\vec{q}}_v =
+[\vec{q}_v]_\times =
+\begin{bmatrix}
+0 & -q_3 & q_2 \\
+q_3 & 0 & -q_1 \\
+-q_2 & q_1 & 0
+\end{bmatrix}.
+\label{eq:skew_matrix}
+\end{equation}
+
+Expandindo os termos de \eqref{eq:rot_matrix_general}, obtém-se:
+\begin{equation}
+\mathbf{R}(q) =
+\begin{bmatrix}
+1 - 2(q_2^2+q_3^2) & 2(q_1q_2 - q_0q_3) & 2(q_1q_3+q_0q_2) \\
+2(q_1q_2+q_0q_3)   & 1 - 2(q_1^2+q_3^2) & 2(q_2q_3 - q_0q_1) \\
+2(q_1q_3 - q_0q_2) & 2(q_2q_3+q_0q_1)   & 1 - 2(q_1^2+q_2^2)
+\end{bmatrix}.
+\label{eq:rot_matrix_expandida}
+\end{equation}
+
+Assim, \eqref{eq:rot_matrix_expandida} mostra a forma expandida da matriz de rotação a partir de um quaternion unitário.
+
+\subsubsection{Matriz antissimétrica} 
+A matriz antissimétrica (\emph{skew-symmetric matrix}), apresentada em \eqref{eq:skew_matrix}, auxilia nas transformações de coordenadas e na formulação das equações dinâmicas.  
+Ela é definida a partir de um vetor genérico
+$\vec{a} = [x,y,z]^T$, como:
+
+\begin{equation}
+    \label{eq:matriz_assimetrica}
+    \hat{\vec{a}} = 
+    \begin{bmatrix}
+        0   & -z  &  y \\
+        z   &  0  & -x \\
+        -y  &  x  &  0
+    \end{bmatrix}.
+\end{equation}
+
+Essa matriz possui a propriedade fundamental de que
+$\hat{\vec{a}}\vec{b} = \vec{a} \times \vec{b}$,
+ou seja, a multiplicação matricial equivale ao produto vetorial tradicional.
+
+%==================================================
+%----- Cinemática diferencial
+%==================================================
+\subsection{Cinemática diferencial dos quaternions}
+\label{sec:cinematica_diferencial_quaternions}
+
+Considerando a velocidade angular $\vec \omega$ expressa na base ($\{0\}$), é possível determinar a matriz de atitude como:
+
+\begin{equation}
+    \label{eq:dotR_base}
+\dot{\mathbf{R}}
+=
+\mathbf{R}\,[\vec{\omega}]_{\times},
+\end{equation}
+
+onde $[\vec{\omega}]_{\times}$ denota a matriz antissimétrica \eqref{eq:skew_matrix}.
+Por sua vez, a cinemática do quaternion unitário
+$\vec{q}=[q_{0},\vec{\epsilon}\,]^{T}\,$
+é dada por:
+
+% \begin{equation}
+%     \label{eq:definicao_qdot}
+% \dot{\vec{q}}
+% =
+% \tfrac{1}{2}\,\Omega(\vec{q})\,\vec{\omega},
+% \qquad
+% \dot{\vec{q}}
+% =
+% \tfrac{1}{2}\,\mathbf{Q}(\vec{\omega})\,\vec{q},
+% \end{equation}
+
+\begin{equation}
+    \label{eq:definicao_qdot}
+\dot{\vec{q}}
+=
+\tfrac{1}{2}\,\Omega(\vec{q})\,\vec{\omega},
+\end{equation}
+
+% onde a matriz de propagação $\mathbf{Q}$ dos quaternions é dada como:
+% \begin{equation}
+% \mathbf{Q}(\vec{\omega}) =
+% \begin{bmatrix}
+% 0 & -\vec{\omega}^T \\
+% \vec{\omega} & -[\vec{\omega}]_\times
+% \end{bmatrix},
+% \end{equation}
+
+% e sendo expandida como:
+% \begin{equation}
+% \mathbf{Q}(\vec{\omega}) =
+% \begin{bmatrix}
+% 0 & -\omega_x & -\omega_y & -\omega_z \\
+% \omega_x & 0 & \omega_z & -\omega_y \\
+% \omega_y & -\omega_z & 0 & \omega_x \\
+% \omega_z & \omega_y & -\omega_x & 0
+% \end{bmatrix}.
+% \end{equation}
+
+%%%%% Como a velocidade angular $\vec \omega$ possui dimensão igual a 3, deve ser transformada para 4 dimensões, sendo expressa matematicamente como:
+sendo a matriz de mapeamento
+$\Omega(\vec{q})\in\mathbb{R}^{4\times 3}\,$
+que converte a velocidade angular
+$\vec{\omega}\in\mathbb{R}^{3}$
+em
+$\dot{\vec{q}}\in\mathbb{R}^{4}$:
+
+\begin{equation}
+    \label{eq:Omega_def}
+\Omega(\vec{q})
+=
+\begin{bmatrix}
+-\vec{\epsilon\,}^{T} \\[2pt]
+q_0\,\mathbf{I}_3
++ [\vec{\epsilon}]_{\times}
+\end{bmatrix}.
+\end{equation}
+
+% Quando a velocidade angular é expressa na referência inercial, usa-se a forma equivalente, que é consistente com a escolha do sistema de referência.
+% \begin{equation}
+%     \label{eq:equivalente_velocAngular}
+% \dot{\mathbf{R}}=[\vec{\omega}]_{\times}\mathbf{R}
+% \end{equation}
+
+Por fim, para obter estabilidade numérica, é realizada a normalização periódica de $q$, pois eventuais erros de integração podem violar a unidade da norma.
+
+%==================================================
+%----- Normalização e consistência numérica
+%==================================================
+\subsubsection{Normalização}
+A principal restrição dos quaternions é que eles devem permanecer normalizados:
+
+\begin{equation}
+\label{eq:normalizacao_quaternion}
+\lVert \mathbf{q} \rVert^2 =
+q_0^2
++ q_1^2
++ q_2^2
++ q_3^2
+= 1.
+\end{equation}
+
+Durante as simulações numéricas, erros de arredondamento e de integração numérica podem violar essa condição.
+Além disso, a normalização não altera a atitude, apenas mitiga inconsistências numéricas, e para preservá-las, adota-se a normalização periódica do vetor $\mathbf{q}$ ao longo das simulações:
+
+\begin{equation}
+\mathbf{q}
+\leftarrow
+\frac{\mathbf{q}}{\lVert \mathbf{q} \rVert}.
+\end{equation}
+
+Nesta dissertação será adotada a convenção de notação do quaternion como
+\begin{equation}
+q = [\,w,\,x,\,y,\,z\,]^T,
+\label{eq:quat_convencao}
+\end{equation}
+onde $w$ representa a parte escalar e $(x,y,z)$ correspondem à parte vetorial.
+
+% \subsection{Vantagens do uso de quaternions}
+% Dentre as vantagens principais destacam-se: a ausência de singularidades como o \emph{gimbal lock}, a eficiência computacional, a representação compacta (quatro parâmetros em vez de nove da matriz de rotação) e a estabilidade numérica em simulações de longa duração.
+
+% Nesta seção foi apresentado o conjunto de equações que descreve a cinemática da atitude, ou seja, a evolução temporal da orientação em função da velocidade angular.
+% A seguir, serão apresentadas as equações dinâmicas de Euler, que relacionam as acelerações angulares aos torques aplicados na espaçonave.

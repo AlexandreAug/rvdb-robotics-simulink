@@ -65,148 +65,148 @@ Essas matrizes são ortogonais, ou seja:
 
 Essa condição garante que a matriz de rotação preserve as distâncias e os ângulos, representando corretamente uma transformação de corpo rígido. 
 
-% \subsubsection{Composição de rotações em sequência}
-% No manipulador robótico, cada elo tem um \emph{frame} local. Para obter a posição e orientação do efetuador final (\emph{end-effector}) em relação à base, é necessário compor as rotações, como exemplificado:
+\subsubsection{Composição de rotações em sequência}
+No manipulador robótico, cada elo tem um \emph{frame} local. Para obter a posição e orientação do efetuador final (\emph{end-effector}) em relação à base, é necessário compor as rotações, como exemplificado:
 
-% \eqn{eq:exemplo_composicao}
-% {{}^0 \mathbf{R}_n =
-% {}^0 \mathbf{R}_1
-% {}^1 \mathbf{R}_2  \, ... \,
-% {}^{n-1} \mathbf{R}_n.}
+\eqn{eq:exemplo_composicao}
+{{}^0 \mathbf{R}_n =
+{}^0 \mathbf{R}_1
+{}^1 \mathbf{R}_2  \, ... \,
+{}^{n-1} \mathbf{R}_n.}
 
-% Para exemplificar, será usado uma das doze rotações conhecidas, que é a \emph{rotação XYZ} com três determinados ângulos ($\theta_{x,y,z}$), podendo ser descrita como:
-% \begin{equation}
-%     \label{rotacao_XYZ1}
-% {}^A \mathbf{R}_{B(\text{xyz})}(\theta_x,\theta_y,\theta_z) =
-% \mathbf{R}_z(\theta_z)
-% \mathbf{R}_y(\theta_y)
-% \mathbf{R}_x(\theta_x).
-% \end{equation}
+Para exemplificar, será usado uma das doze rotações conhecidas, que é a \emph{rotação XYZ} com três determinados ângulos ($\theta_{x,y,z}$), podendo ser descrita como:
+\begin{equation}
+    \label{rotacao_XYZ1}
+{}^A \mathbf{R}_{B(\text{xyz})}(\theta_x,\theta_y,\theta_z) =
+\mathbf{R}_z(\theta_z)
+\mathbf{R}_y(\theta_y)
+\mathbf{R}_x(\theta_x).
+\end{equation}
 
-% Este trabalho adota a convenção extrínseca, sendo assim, a ordem de aplicação é da direita para a esquerda - começando pela matriz mais à direita. Caso outra convenção seja usada, isso será explicitado.
-%  Substituindo\fn{Os termos foram reduzidos para otimização de espaço, sendo:
-% $cos(\theta) = c(\theta)$,
-% $sin(\theta) = s(\theta)$, e assim por diante.}
-% os termos correspondentes para cada matriz de rotação elementar, obtém-se:
-% \begin{equation}
-%     \label{rotacao_XYZ2}
-% {}^A \mathbf{R}_{B(\text{xyz})}(\theta_x,\theta_y,\theta_z) =
-% \begin{bmatrix}
-% c(\theta_z) & -s(\theta_z) & 0 \\
-% s(\theta_z) &  c(\theta_z) & 0 \\
-% 0           &  0           & 1
-% \end{bmatrix}
-% \begin{bmatrix}
-%  c(\theta_y) & 0 & s(\theta_y) \\
-%  0           & 1 & 0           \\
-% -s(\theta_y) & 0 & c(\theta_y)
-% \end{bmatrix}
-% \begin{bmatrix}
-% 1 & 0             &  0          \\
-% 0 & c(\theta_x) & -s(\theta_x) \\
-% 0 & s(\theta_x) &  c(\theta_x)
-% \end{bmatrix}.
-% \end{equation}
+Este trabalho adota a convenção extrínseca, sendo assim, a ordem de aplicação é da direita para a esquerda - começando pela matriz mais à direita. Caso outra convenção seja usada, isso será explicitado.
+ Substituindo\fn{Os termos foram reduzidos para otimização de espaço, sendo:
+$cos(\theta) = c(\theta)$,
+$sin(\theta) = s(\theta)$, e assim por diante.}
+os termos correspondentes para cada matriz de rotação elementar, obtém-se:
+\begin{equation}
+    \label{rotacao_XYZ2}
+{}^A \mathbf{R}_{B(\text{xyz})}(\theta_x,\theta_y,\theta_z) =
+\begin{bmatrix}
+c(\theta_z) & -s(\theta_z) & 0 \\
+s(\theta_z) &  c(\theta_z) & 0 \\
+0           &  0           & 1
+\end{bmatrix}
+\begin{bmatrix}
+ c(\theta_y) & 0 & s(\theta_y) \\
+ 0           & 1 & 0           \\
+-s(\theta_y) & 0 & c(\theta_y)
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0             &  0          \\
+0 & c(\theta_x) & -s(\theta_x) \\
+0 & s(\theta_x) &  c(\theta_x)
+\end{bmatrix}.
+\end{equation}
 
-% Resultando em:
-% \begin{equation}
-%     \label{rotacao_XYZ3}
-% {}^A \mathbf{R}_{B(\text{xyz})}(\theta_x,\theta_y,\theta_z) =
-% \begin{bmatrix}
-% c(\theta_z)c(\theta_y) &
-% c(\theta_z)s(\theta_y)s(\theta_x)-s(\theta_z)c(\theta_x) &
-% c(\theta_z)s(\theta_y)c(\theta_x) + s(\theta_z)s(\theta_x) \\
-% c(\theta_y)s(\theta_z) &
-% s(\theta_z)s(\theta_y)s(\theta_x) + c(\theta_z)c(\theta_x) &
-% s(\theta_z)s(\theta_y)c(\theta_x) - c(\theta_z)s(\theta_x) \\
-% -\,s(\theta_y) &
-% c(\theta_y)s(\theta_x) &
-% c(\theta_y)c(\theta_x)
-% \end{bmatrix}.
-% \end{equation}
+Resultando em:
+\begin{equation}
+    \label{rotacao_XYZ3}
+{}^A \mathbf{R}_{B(\text{xyz})}(\theta_x,\theta_y,\theta_z) =
+\begin{bmatrix}
+c(\theta_z)c(\theta_y) &
+c(\theta_z)s(\theta_y)s(\theta_x)-s(\theta_z)c(\theta_x) &
+c(\theta_z)s(\theta_y)c(\theta_x) + s(\theta_z)s(\theta_x) \\
+c(\theta_y)s(\theta_z) &
+s(\theta_z)s(\theta_y)s(\theta_x) + c(\theta_z)c(\theta_x) &
+s(\theta_z)s(\theta_y)c(\theta_x) - c(\theta_z)s(\theta_x) \\
+-\,s(\theta_y) &
+c(\theta_y)s(\theta_x) &
+c(\theta_y)c(\theta_x)
+\end{bmatrix}.
+\end{equation}
 
-% A figura \eqref{fig:Rotacao_XYZ} demonstra como o sistema Inercial (preto) fica em relação ao Sistema rotacionado (vermelho).
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=0.90\linewidth]{2 Formulacao do problema/Imagens/Rotacao_XYZ.png}
-% \caption
-% {Rotação extrínseca XYZ: (a) rotação em Z; (b) rotação em Y; (c) rotação em X no referencial inercial. Adaptado de \cite{craig2005}.}
-%     \label{fig:Rotacao_XYZ}
-% \end{figure}
+A figura \eqref{fig:Rotacao_XYZ} demonstra como o sistema Inercial (preto) fica em relação ao Sistema rotacionado (vermelho).
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.90\linewidth]{2 Formulacao do problema/Imagens/Rotacao_XYZ.png}
+\caption
+{Rotação extrínseca XYZ: (a) rotação em Z; (b) rotação em Y; (c) rotação em X no referencial inercial. Adaptado de \cite{craig2005}.}
+    \label{fig:Rotacao_XYZ}
+\end{figure}
 
-% \subsubsection{Composição de rotações em sequência}
-% \label{sec:composicao_rotacoes_sequencia}
-% No manipulador robótico, cada elo possui um sistema de coordenadas local. Para obter a posição e a orientação do efetuador final (\emph{end-effector}) em relação à base, é necessário compor as rotações sucessivas, como exemplificado:
+\subsubsection{Composição de rotações em sequência}
+\label{sec:composicao_rotacoes_sequencia}
+No manipulador robótico, cada elo possui um sistema de coordenadas local. Para obter a posição e a orientação do efetuador final (\emph{end-effector}) em relação à base, é necessário compor as rotações sucessivas, como exemplificado:
 
-% \eqn{eq:exemplo_composicao}
-% {{}^0 \mathbf{R}_n =
-% {}^0 \mathbf{R}_1
-% {}^1 \mathbf{R}_2  \, ... \,
-% {}^{n-1} \mathbf{R}_n.}
+\eqn{eq:exemplo_composicao}
+{{}^0 \mathbf{R}_n =
+{}^0 \mathbf{R}_1
+{}^1 \mathbf{R}_2  \, ... \,
+{}^{n-1} \mathbf{R}_n.}
 
-% Para exemplificação, será utilizada a sequência de rotações extrínsecas \emph{ZYX}, também conhecida como \emph{yaw, pitch e roll}, com três ângulos definidos ($\psi,\theta,\phi$), podendo ser descrita como:
-% \begin{equation}
-% {}^A \mathbf{R}_{B(\text{zyx})}(\psi,\theta,\phi) = \mathbf{R}_z(\psi)\,\mathbf{R}_y(\theta)\,\mathbf{R}_x(\phi).
-% \label{eq:rotacao_ZYX1}
-% \end{equation}
+Para exemplificação, será utilizada a sequência de rotações extrínsecas \emph{ZYX}, também conhecida como \emph{yaw, pitch e roll}, com três ângulos definidos ($\psi,\theta,\phi$), podendo ser descrita como:
+\begin{equation}
+{}^A \mathbf{R}_{B(\text{zyx})}(\psi,\theta,\phi) = \mathbf{R}_z(\psi)\,\mathbf{R}_y(\theta)\,\mathbf{R}_x(\phi).
+\label{eq:rotacao_ZYX1}
+\end{equation}
 
-% Neste trabalho, adota-se a convenção extrínseca, ou seja, a ordem de aplicação das rotações é da direita para a esquerda — começando pela matriz mais à direita. Assim, a rotação em torno de $Z$ (yaw) é aplicada primeiro, seguida pela rotação em torno de $Y$ (pitch), e por fim pela rotação em torno de $X$ (roll).
+Neste trabalho, adota-se a convenção extrínseca, ou seja, a ordem de aplicação das rotações é da direita para a esquerda — começando pela matriz mais à direita. Assim, a rotação em torno de $Z$ (yaw) é aplicada primeiro, seguida pela rotação em torno de $Y$ (pitch), e por fim pela rotação em torno de $X$ (roll).
 
-% Substituindo\fn{Para simplificação de notação: $\cos(\alpha)=c(\alpha)$, $\sin(\alpha)=s(\alpha)$.}
-% as matrizes elementares, obtém-se:
-% \begin{equation}
-%     \label{rotacao_ZYX2}
-% {}^A \mathbf{R}_{B(\text{zyx})}(\psi,\theta,\phi) =
-% \begin{bmatrix}
-% c\psi & -s\psi & 0 \\
-% s\psi &  c\psi & 0 \\
-% 0     &  0     & 1
-% \end{bmatrix}
-% \begin{bmatrix}
-%  c\theta & 0 & s\theta \\
-%  0       & 1 & 0       \\
-% -s\theta & 0 & c\theta
-% \end{bmatrix}
-% \begin{bmatrix}
-% 1 & 0      & 0       \\
-% 0 & c\phi & -s\phi  \\
-% 0 & s\phi &  c\phi
-% \end{bmatrix}.
-% \end{equation}
+Substituindo\fn{Para simplificação de notação: $\cos(\alpha)=c(\alpha)$, $\sin(\alpha)=s(\alpha)$.}
+as matrizes elementares, obtém-se:
+\begin{equation}
+    \label{rotacao_ZYX2}
+{}^A \mathbf{R}_{B(\text{zyx})}(\psi,\theta,\phi) =
+\begin{bmatrix}
+c\psi & -s\psi & 0 \\
+s\psi &  c\psi & 0 \\
+0     &  0     & 1
+\end{bmatrix}
+\begin{bmatrix}
+ c\theta & 0 & s\theta \\
+ 0       & 1 & 0       \\
+-s\theta & 0 & c\theta
+\end{bmatrix}
+\begin{bmatrix}
+1 & 0      & 0       \\
+0 & c\phi & -s\phi  \\
+0 & s\phi &  c\phi
+\end{bmatrix}.
+\end{equation}
 
-% Resultando em:
-% \begin{equation}
-%     \label{rotacao_ZYX3}
-% {}^A \mathbf{R}_{B(\text{zyx})}(\psi,\theta,\phi) =
-% \begin{bmatrix}
-% c\psi c\theta & c\psi s\theta s\phi - s\psi c\phi & c\psi s\theta c\phi + s\psi s\phi \\
-% s\psi c\theta & s\psi s\theta s\phi + c\psi c\phi & s\psi s\theta c\phi - c\psi s\phi \\
-% -\,s\theta    & c\theta s\phi                      & c\theta c\phi
-% \end{bmatrix}.
-% \end{equation}
+Resultando em:
+\begin{equation}
+    \label{rotacao_ZYX3}
+{}^A \mathbf{R}_{B(\text{zyx})}(\psi,\theta,\phi) =
+\begin{bmatrix}
+c\psi c\theta & c\psi s\theta s\phi - s\psi c\phi & c\psi s\theta c\phi + s\psi s\phi \\
+s\psi c\theta & s\psi s\theta s\phi + c\psi c\phi & s\psi s\theta c\phi - c\psi s\phi \\
+-\,s\theta    & c\theta s\phi                      & c\theta c\phi
+\end{bmatrix}.
+\end{equation}
 
-% \begin{figure}[ht]
-% \centering
-% \includegraphics[width=0.70\linewidth]{2 Formulacao do problema/Imagens/Rotacao_ZYX.png}
-% \caption
-% {Rotação extrínseca ZYX: (a) rotação em Z (yaw); (b) rotação em Y (pitch); (c) rotação em X (roll) no sistema inercial. Adaptado de \cite{craig2005}.}
-%     \label{fig:Rotacao_ZYX}
-% \end{figure}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.70\linewidth]{2 Formulacao do problema/Imagens/Rotacao_ZYX.png}
+\caption
+{Rotação extrínseca ZYX: (a) rotação em Z (yaw); (b) rotação em Y (pitch); (c) rotação em X (roll) no sistema inercial. Adaptado de \cite{craig2005}.}
+    \label{fig:Rotacao_ZYX}
+\end{figure}
 
-% A figura \eqref{fig:Rotacao_ZYX} mostra o sistema inercial (preto) em relação ao sistema rotacionado (vermelho) para a sequência ZYX. Dessa forma, quando uma origem de um sistema é transladado entre as origens dos referenciais, é necessário ter o vetor posição de uma origem em relação à outra.
-% \begin{figure}[ht]
-%     \centering
-% \includegraphics[width=0.50\linewidth]{2 Formulacao do problema/Imagens/DeslocamentoAparaB.png}
-%     \caption{Representação de um vetor posição em relação a dois sistemas.}
-%     \label{fig:Deslocamento_AparaB}
-% \end{figure}
+A figura \eqref{fig:Rotacao_ZYX} mostra o sistema inercial (preto) em relação ao sistema rotacionado (vermelho) para a sequência ZYX. Dessa forma, quando uma origem de um sistema é transladado entre as origens dos referenciais, é necessário ter o vetor posição de uma origem em relação à outra.
+\begin{figure}[ht]
+    \centering
+\includegraphics[width=0.50\linewidth]{2 Formulacao do problema/Imagens/DeslocamentoAparaB.png}
+    \caption{Representação de um vetor posição em relação a dois sistemas.}
+    \label{fig:Deslocamento_AparaB}
+\end{figure}
 
-% Para encontrar a posição do Sistema $\{A\}$:
-% \begin{equation}
-% {}^A \vec{S} = {}^A \mathbf{R}_B \, {}^B \vec{S} + {}^A \vec{S}_B
-% \end{equation}
+Para encontrar a posição do Sistema $\{A\}$:
+\begin{equation}
+{}^A \vec{S} = {}^A \mathbf{R}_B \, {}^B \vec{S} + {}^A \vec{S}_B
+\end{equation}
 
-% Onde ${}^A \vec{p}_B$ é a translação do frame $\{B\}$ em relação a $\{A\}$; ${}^B \vec{p}$ é a coordenada do ponto expressa em $\{B\}$; e ${}^A \vec{p}$ é a coordenada do mesmo ponto expressa em $\{A\}$.
+Onde ${}^A \vec{p}_B$ é a translação do frame $\{B\}$ em relação a $\{A\}$; ${}^B \vec{p}$ é a coordenada do ponto expressa em $\{B\}$; e ${}^A \vec{p}$ é a coordenada do mesmo ponto expressa em $\{A\}$.
 
 
 

@@ -1,0 +1,49 @@
+\subsection{Equações do movimento orbital}
+Assim que o \emph{chaser} estiver inserido em órbita circular, a evolução temporal da espaçonave pode ser descrita pelo problema clássico dos dois corpos, conforme \eqref{sec:movimento_orbital_absoluto}.
+O problema dos dois corpos despreza as perturbações externas e considera que a trajetória resultante é exclusivamente dada pela atração gravitacional entre a Terra e o veículo.
+Conforme \eqref{eq:eqFundamentalDoisCorpos}, a equação fundamental do movimento orbital é dada por:
+
+\begin{equation}
+\ddot {\vec r} = -\frac{\mu}{r^3}\vec r;
+\qquad
+r = \|\vec r\|,
+\end{equation}
+
+em que $\vec{r}$ é o vetor posição da espaçonave em relação ao centro da Terra e $\mu = GM$ é o parâmetro gravitacional do sistema Terra--espaçonave. 
+Pode-se caracterizar a órbita através da energia orbital específica, definida como:
+
+\begin{equation}
+    \label{eq:energia_orbital}
+\varepsilon_{orb} = \frac{v^{2}}{2} - \frac{\mu}{r},
+\end{equation}
+
+a qual permanece constante em órbitas keplerianas.
+A energia orbital específica é constante para toda a órbita e não dependem de $r$ e nem de $v$ em pontos diferentes.  
+Para uma órbita elíptica de semi-eixo maior $a$, tem-se:
+
+\begin{equation}
+    \label{eq:energia_orbital_eliptica}
+\varepsilon_{elip} = -\frac{\mu}{2a}.
+\end{equation}
+
+Ao igualar \eqref{eq:energia_orbital} e \eqref{eq:energia_orbital_eliptica}, obtém-se:
+
+\begin{equation}
+\frac{v^{2}}{2} - \frac{\mu}{r} = -\frac{\mu}{2a},
+\end{equation}
+
+o que conduz à equação vis-viva:
+
+\begin{equation}
+    \label{eq:vis_viva}
+v^{2} = \mu \left(\frac{2}{r} - \frac{1}{a}\right).
+\end{equation}
+
+Para uma órbita circular de raio $r$, ao substituir a equação
+\eqref{eq:veloc_insercao_orbital}, a energia orbital assume o valor constante:
+
+\begin{equation}
+\varepsilon_{circ} = -\frac{\mu}{2r}.
+\end{equation}
+
+% As equações acima estabelecem a base para a formulação da dinâmica orbital que será empregada nas manobras de transferência de órbita,como a transferência de Hohmann e a modelagem do movimento relativo entre as espaçonaves.

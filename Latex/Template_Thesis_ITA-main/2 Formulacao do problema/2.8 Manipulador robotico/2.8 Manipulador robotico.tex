@@ -1,0 +1,25 @@
+\section{Manipulador Robótico}
+Neste trabalho, o subsistema do manipulador robótico (MR) é acionado na fase final da missão de RVD/B.
+O MR está rigidamente acoplado à base do chaser, possuindo  configuração 4R1P.
+Em ambiente de microgravidade, o movimento do MR não sofre ação de peso, porém, por causa da conservação do momento angular, acaba produzindo reações na base, que alteram a atitude e o tensor de inércia do conjunto.
+
+% Foi adotada a modelagem clássica de robótica com elos rígidos e juntas sem perdas ou associação com hardware direto, além disso definiu-se os referenciais de acordo com a convenção DH (clássica).
+% O estudo do MR abrange:
+% (i) cinemática (direta e diferencial),
+% (ii) dinâmica e acoplamento base--manipulador,
+% (iii) controle em juntas e por fim, 
+% (iv) simulação numérica com restrições e limites.
+
+\subsection{Convenção}
+Neste trabalho, o termo \emph{ferramenta}, \emph{tool} e \emph{efetuador} são equivalentes e designam o mesmo elemento físico na extremidade ativa do MR.
+O seu referencial foi denominado $\{E\}$ e se encontra no ponto central da ferramenta para expressar a posição e a orientação da ponta.
+Portanto, ${}^{0}T_{E}$ denota a pose de
+$\{E\}$ em relação à base $\{0\}$.
+Além disso, adotou-se $\{0\}\equiv\{base\}$ (sem offset global) e,
+quando aplicável, inclui-se a transformação da ferramenta:
+${}^5 T_{tool} = {}^0 T_{5}\,{}^0 T_{tool}$.
+
+\input{2 Formulacao do problema/2.8 Manipulador robotico/2.8.1 Modelagem cinematica.tex}
+\input{2 Formulacao do problema/2.8 Manipulador robotico/2.8.2 Jacobiano.tex}
+\input{2 Formulacao do problema/2.8 Manipulador robotico/2.8.3 Modelagem dinamica.tex}
+\input{2 Formulacao do problema/2.8 Manipulador robotico/2.8.4 Acoplamento base manipulador.tex}
