@@ -1,0 +1,62 @@
+\section{Introdução}
+\label{sec:introducao}
+
+A proposta desta pesquisa de Mestrado consiste na abordagem do problema da dinâmica e controle de órbita e da atitude de uma espaçonave tipo manipulador robótico (ETMR) inserida em uma missão de Rendezvous and Docking or Berthing (RVD/B -- Encontro, Acoplamento ou Ancoragem).
+A solução desse problema envolve a modelagem matemática dos movimentos da dinâmica orbital e da atitude da espaçonave, sendo apresentada em duas versões:
+(i) os movimentos absolutos de cada espaçonave, e (ii) o movimento relativo entre a espaçonave visitante e a espaçonave alvo, denominados \emph{chaser} e \emph{target}.
+
+A formulação do problema de controle abrange tanto os movimentos absolutos quanto os relativos entre as espaçonaves. 
+Dessa forma, o controle é aplicado às manobras orbitais, incluindo as correções de atitude da espaçonave visitante em ambas as situações. 
+Um aspecto característico das missões de RVD/B é que o controle orbital envolve a transição da órbita de injeção (inicial) para uma trajetória próxima à da espaçonave alvo. 
+Nessas condições, eventuais desvios do plano orbital da espaçonave visitante em relação ao da espaçonave alvo exigem correções, de modo a preservar a coplanaridade entre as órbitas dentro de limites que não comprometam a missão de RVD/B. 
+A órbita final que antecede a aproximação de longa distância, denominada órbita de fase (\emph{phasing orbit}), conforme a nomenclatura de \cite{fehse2003}, é ilustrada na Figura \eqref{fig:orbita_fase}.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\linewidth]{2 Formulacao do problema/Imagens/Orbita de fase.png}
+\caption{Órbita de fase, figura adaptada de \cite{fehse2003}.}
+\label{fig:orbita_fase}
+\end{figure}
+
+Para reduzir o custo e a duração das manobras, a transferência orbital deve ser planejada de forma que a espaçonave visitante alcance um ângulo de fase adequado, permitindo o início da aproximação de longa distância entre as naves.
+A partir da manobra de longa distância, a análise passa a utilizar o modelo matemático da dinâmica orbital e da atitude relativa, além disso, considera-se que a órbita e a atitude da espaçonave alvo são previamente conhecidas.
+
+A espaçonave alvo é assumida como não colaborativa, no sentido de não contribuir para o controle ou para o êxito das operações de RVD/B, portanto, para que ocorra o sucesso da missão, é necessário que a atitude relativa seja nula, isto é, que a atitude da espaçonave visitante coincida com a da espaçonave alvo.
+Nesta pesquisa imputa-se que o movimento relativo seja considerado a partir da aproximação de longa distância, a partir da órbita de fase.
+
+Em consonância com o problema de RVD/B, a análise dinâmica contempla a modelagem matemática do movimento absoluto em relação ao sistema de referência\fn{Nesta pesquisa também pode ser chamado de referencial ou por sistema de referência.} inercial geocêntrico (ECI), ao passo que o movimento relativo é tratado a partir da fase de aproximação de longa distância.
+
+Inicialmente, a análise dinâmica do movimento é conduzida no referencial absoluto, abrangendo as fases desde o lançamento até a execução da transferência orbital. Nesse estágio, a dinâmica orbital do chaser é descrita em relação ao sistema inercial geocêntrico, até que a espaçonave complete a manobra de transferência e se estabeleça em uma órbita próxima à do alvo. A partir desse ponto, quando as condições de fase e distância relativa são atendidas, passa-se a empregar a formulação do movimento relativo entre as naves.
+Nas fases de aproximação de curta duração e de proximidade, quando são realizadas as correções de órbita e de atitude até a conclusão da operação de acoplamento ou ancoragem, utiliza-se o modelo matemático da dinâmica relativa.
+Nesse contexto, o movimento relativo é descrito no referencial orbital LVLH (\emph{Local-Vertical-Local-Horizontal}).
+
+% A Figura~\eqref{fig:movimento_ref_absoluto} apresenta o modelo físico da espaçonave do tipo manipulador robótico no contexto do movimento descrito no referencial inercial geocêntrico. Nesse sistema, as posições do alvo e da espaçonave visitante são expressas em relação ao centro da Terra, possibilitando a análise do movimento absoluto.
+
+% \begin{figure}[ht]
+% \centering
+% \includegraphics[width=0.7\linewidth]{2 Formulacao do problema/Imagens/Posicao absoluta.png}
+% \caption{Movimento absoluto das espaçonaves em relação ao referencial Inercial.}
+% \label{fig:movimento_ref_absoluto}
+% \end{figure}
+
+
+
+
+
+
+
+
+
+
+% Por sua vez, a Figura~\eqref{fig:movimento_relativo_LVLH} mostra o mesmo sistema, porém no referencial orbital LVLH (Local-Vertical-Local-Horizontal), centrado na espaçonave alvo.
+% Esse referencial é utilizado para descrever o movimento relativo entre as espaçonaves.
+
+% \begin{figure}[ht]
+% \centering
+% \includegraphics[width=0.7\linewidth]{2 Formulacao do problema/Imagens/Posicao relativa LVLH.png}
+% \caption{Movimento relativo das espaçonaves em relação ao referencial LVLH.}
+% \label{fig:movimento_relativo_LVLH}
+% \end{figure}
+
+Finalizando a introdução do problema, a seguir será apresentada a formulação matemática necessária para descrever a dinâmica orbital associada às missões de RVD/B.
+Serão descritas as equações fundamentais do movimento orbital e as manobras que estruturam a sequência de aproximação entre as espaçonaves.

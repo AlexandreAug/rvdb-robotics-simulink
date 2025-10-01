@@ -1,0 +1,192 @@
+\subsection{Modelagem Cinemática}
+\label{sec:modelagem_cinematica}
+
+A modelagem cinemática descreve a relação geométrica entre os ângulos das juntas e a atitude (posição e orientação) do efetuador final. Utiliza-se a formulação clássica de Denavit--Hartenberg (DH), pois representa a transformação entre os referenciais das juntas consecutivas.
+
+% --------------------------------------
+% Explicação:
+% A cinemática é dividida em:
+%%%%% 1. Cinemática direta:
+% dada a configuração articular (θ, d), obter posição/orientação do efetuador.
+%%%%% 2. Cinemática inversa:
+% dado o objetivo de posição/orientação do efetuador, calcular variáveis articulares.
+% Começa pela cinemática direta, utilizando as matrizes homogêneas A_i da convenção DH.
+% --------------------------------------
+Cada junta do MR é associada a um sistema de coordenadas local, e a relação entre dois sistemas é descrita por:
+
+\begin{equation}
+A_i =
+\begin{bmatrix}
+\cos\theta_i & -\sin\theta_i \cos\alpha_i & \sin\theta_i \sin\alpha_i & a_i \cos\theta_i \\
+\sin\theta_i & \cos\theta_i \cos\alpha_i & -\cos\theta_i \sin\alpha_i & a_i \sin\theta_i \\
+0 & \sin\alpha_i & \cos\alpha_i & d_i \\
+0 & 0 & 0 & 1
+\end{bmatrix},
+\end{equation}
+
+onde, $\theta_i$ é o ângulo da junta revoluta ($i = 1,2,3,4$), $d_i$ é o deslocamento da junta prismática ($i = 5$); $a_i$ é o comprimento do elo $i$; e $\alpha_i$ é o ângulo de torção entre os eixos.
+% ---------------------------------------------------------
+% Comentário:
+% A convenção DH padroniza os parâmetros geométricos.
+% Em cada junta, definimos 4 parâmetros (θ, d, a, α).
+% O produto sucessivo das matrizes A_i fornece a transformação total da base {0} até o efetuador {E}.
+% ---------------------------------------------------------
+A cinemática direta do MR é obtida pelas transformações:
+
+\begin{equation}
+    \label{eq:matrizes_homogeneas_sucessivas}
+{}^0 \mathbf{T}_{E} = A_1 A_2 A_3 A_4 A_5,
+\end{equation}
+
+% Extração de orientação e posição a partir de \mathbf{T}^0_E:
+% A orientação é a submatriz 3x3 superior-esquerda; 
+% a posição é a última coluna (linhas 1–3).A orientação do efetuador é a submatriz 3×3 superior–esquerda de $\mathbf{T}^{0}_{E}$, e a posição é o vetor na última coluna (linhas 1–3):
+onde:
+\begin{equation}
+{}^{0}\!\mathbf{R}_{E} = {}^0T_{E}(1\!:\!3,\,1\!:\!3),
+\qquad
+\vec p_{E} = {}^0T_{E}(1\!:\!3,\,4).
+\end{equation}
+
+em que ${}^0T_{E}$ representa a matriz homogênea que fornece a posição e orientação do efetuador final em relação à base da espaçonave.
+
+\subsection{Tabela DH}
+A tabela de parâmetros DH considera a geometria do manipulador robótico de configuração 4R1P.
+A tabela \eqref{tab:DH-MR} permite calcular as matrizes de transformação e para realizar a análise do espaço de trabalho.
+
+% \begin{table}[ht]
+% \centering
+% \caption{Parâmetros clássicos de DH}
+% \begin{tabular}{c c c c r r}
+% \hline
+% $i$ & Tipo & $\theta_i$ & $d_i$ [cm] & $a_i$ [cm] & $\alpha_i$ [°] \\
+% \hline
+% 1 & R & $\theta_1$ & 10                 & 0.0 & 90 \\
+% 2 & R & $\theta_2$ & 30                 & 5.5 & 0  \\
+% 3 & R & $\theta_3$ & 30                 & 5.5 & 0  \\
+% 4 & R & $\theta_4$ & 30                 & 5.5 & 0  \\
+% 5 & P & 0.0        & $d_5 [0,15]$   & 0.0 & 0 \\
+% \hline
+% \end{tabular}
+% \label{tab:DH-MR}
+% \end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Parâmetros de Denavit--Hartenberg do MR 4R1P}
+\begin{tabular}{c c c c c c}
+\hline
+$i$ & Tipo & $\theta_i$ & $d_i$ & $a_i$ & $\alpha_i$ \\
+\hline
+1 & Revoluta & $\theta_1$ & $d_1$ & $a_1$ & $\alpha_1$ \\
+2 & Revoluta & $\theta_2$ & $d_2$ & $a_2$ & $\alpha_2$ \\
+3 & Revoluta & $\theta_3$ & $d_3$ & $a_3$ & $\alpha_3$ \\
+4 & Revoluta & $\theta_4$ & $d_4$ & $a_4$ & $\alpha_4$ \\
+5 & Prismática & $0$      & $d_5$ & $a_5$ & $\alpha_5$ \\
+\hline
+\end{tabular}
+\label{tab:DH-MR}
+\end{table}
+Os tipos de juntas adotadas neste trabalho foram as juntas revolutas (R) e prismática (P), sendo que na junta prismática, a variável é $d_5$; ${}^0 \theta_5$, $a_5$ e $\alpha_5$ são constantes geométricas.
+% ---------------------------------------------------------
+% Comentário:
+% - $d_1 = 10$ cm corresponde à altura entre o centro de massa da base e a junta 1.
+% - Os valores $d_2, d_3, d_4 = 30$ cm correspondem aos comprimentos dos elos.
+% - Os offsets $a_i = 5.5$ cm representam o deslocamento lateral entre os eixos sucessivos.
+% - $\alpha_1 = 90°$ garante a rotação correta do sistema de coordenadas da junta 1 em relação à base.
+% - $q_5$ representa o curso prismático (0 a 15 cm) da ferramenta.
+% ---------------------------------------------------------
+
+\subsection{Cinemática Direta}
+
+A partir da Tabela DH, a cinemática direta pode ser obtida pela multiplicação sucessiva das matrizes homogêneas
+\eqref{eq:matrizes_homogeneas_sucessivas},
+onde ${}^0\,\mathbf{T}_{E} \in \mathbb{R}^{4 \times 4}$,
+e contém a posição do efetuador final $\{E\}$ em relação à base e a orientação do efetuador.
+Sendo assim, a posição do efetuador $\{E\}$ pode ser escrita como:
+\begin{equation}
+\vec{p}_E = 
+\begin{bmatrix}
+x_E \\ y_E \\ z_E
+\end{bmatrix}.
+\end{equation}
+
+Reescrevendo-a, obtém-se:
+\begin{equation}
+\mathbf{T}^{0}_{E} =
+\begin{bmatrix}
+{}^{0}\!\mathbf{R}_{E} & \vec{p}_E \\
+\mathbf{0}_{1\times 3} & 1
+\end{bmatrix}.
+\end{equation}
+
+onde ${}^0 \mathbf{R}_{E} \in SO(3)$ representa a orientação do efetuador e $\vec{p}_E \in \mathbb{R}^3$ sua posição.
+% ---------------------------------------------------------
+% Comentário:
+% - A cinemática direta responde à pergunta: dada uma configuração articular, qual é a posição e orientação do efetuador final?
+% - É a base para análise de workspace, trajetória e controle.
+% ---------------------------------------------------------
+
+\subsection{Cinemática Inversa}
+\label{sec:cinematica_inversa}
+
+A cinemática inversa consiste em determinar as variáveis articulares 
+$\{ \theta_1, \theta_2, \theta_3, \theta_4, d_5 \}$ 
+a partir de uma pose desejada do efetuador final, representada por ${}^0T_E \in SE(3)$. 
+
+A formulação segue de:
+\begin{equation}
+{}^0 T_E = A_1(\theta_1)\,A_2(\theta_2)\,A_3(\theta_3)\,A_4(\theta_4)\,A_5(d_5),
+\label{eq:cinematica_inversa_def}
+\end{equation}
+onde $A_i$ são as transformações homogêneas DH.
+A resolução consiste em inverter \eqref{eq:cinematica_inversa_def}, obtendo:
+
+\begin{equation}
+\vec p_E = f_p(\theta_1,\theta_2,\theta_3,\theta_4,d_5), 
+\qquad
+{}^0R_E = f_R(\theta_1,\theta_2,\theta_3,\theta_4).
+\end{equation}
+
+As equações não possuem solução única, podendo admitir múltiplas ou nenhuma configuração articular. 
+A resolução pode ser conduzida por métodos analíticos quando viável, ou por métodos numéricos iterativos em casos gerais.
+
+% --------------------------------------------------------
+% Comentário:
+% - Em manipuladores espaciais, a cinemática inversa é mais complexa:
+%   * Pode ter múltiplas soluções.
+%   * Pode não ter solução (posição fora do alcance).
+%   * Requer escolha da solução que evite colisões ou singularidades.
+% - Em aplicações espaciais, soluções numéricas (iterativas) são comuns,
+%   devido à geometria não trivial e às restrições de segurança.
+% ---------------------------------------------------------
+\subsection{Espaço de Trabalho}
+
+O espaço de trabalho (\emph{workspace}) é o volume de pontos no espaço que a ponta da ferramenta $\{E\}$ consegue alcançar quando as juntas se movem dentro de seus limites mecânicos.
+Sendo assim, um dado conjunto de limites de juntas e um modelo de cinemática direta, o \emph{workspace} resulta do conjunto de posições possíveis da ferramenta quando o manipulador varre esses limites.
+% O espaço de trabalho pode ser classificado como:
+% \begin{itemize}
+%     \item \textbf{Espaço alcançável}:
+%     corresponde ao conjunto de pontos que a ferramenta consegue atingir em pelo menos uma orientação possível;
+%     \item \textbf{Espaço de destreza}:
+%     subconjunto do espaço de alcance, no qual, a ferramenta pode assumir todas as orientações possíveis em torno de um ponto.
+% \end{itemize}
+
+O \emph{workspace} depende da geometria do MR, como:
+\begin{enumerate}[label=\roman*)]
+    \item comprimentos dos elos ($a_i$);
+    \item limites de rotação das juntas revolutas e de deslocamento da junta prismática ($d_5$);
+    \item intervalos permitidos para as variáveis articulares ($\theta_1,\theta_2,\theta_3,\theta_4,d_5$);
+    \item além das restrições de colisão com a própria estrutura e com o entorno.
+\end{enumerate}
+
+% Neste trabalho assume-se base fixa para referencial da geometria do MR, sendo que o efeito base--manipulador (base livre) é tratado adiante.
+% ---------------------------------------------------------
+% Comentário:
+% - A análise do workspace mostra:
+%   * A região de captura possível do satélite alvo.
+%   * As limitações impostas pelos comprimentos dos elos e cursos das juntas.
+%   * Se o manipulador atende ao requisito de aproximação em microgravidade.
+% - No contexto de operações espaciais, o workspace deve ser validado
+%   em relação à geometria da espaçonave alvo e à zona de exclusão (KOZ).
+% ---------------------------------------------------------

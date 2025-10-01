@@ -1,0 +1,74 @@
+\subsection{Cinemática Diferencial e Jacobiano}
+\label{sec:cinematica_diferencial_jacobiano}
+
+A cinemática diferencial descreve como as velocidades articulares 
+$\dot{\vec q} = [\dot\theta_1,\dot\theta_2,\dot\theta_3,\dot\theta_4,\dot d_5]^T$
+geram a velocidade linear e angular da ferramenta em um referencial escolhido.
+Esse mapeamento é feito pela matriz Jacobiana geométrica $\mathbf{J}(\vec q)$:
+
+\begin{equation}
+\label{eq:xdot_J_qdot}
+{}^{0}\!\dot{\vec x}_{E} =
+\begin{bmatrix}
+{}^{0}\!\vec v_{E} \\
+{}^{0}\!\vec \omega_{E}
+\end{bmatrix}
+= \mathbf{J}(\vec q)\,\dot{\vec q}.
+\end{equation}
+
+\subsubsection{Construção do Jacobiano}
+
+As colunas de $\mathbf{J}$ são obtidas a partir dos eixos ${}^{0}\!\vec z_{i-1}$ e das posições ${}^{0}\!\vec p$ da cinemática direta. Para uma junta revoluta $i$:
+
+\begin{equation}
+J_{v,i} = {}^{0}\!\vec z_{\,i-1} \times 
+\big({}^{0}\!\vec p_{E} - {}^{0}\!\vec p_{\,i-1}\big),
+\qquad
+J_{\omega,i} = {}^{0}\!\vec z_{\,i-1},
+\end{equation}
+
+enquanto que, para uma junta prismática:
+
+\begin{equation}
+J_{v,i} = {}^{0}\!\vec z_{\,i-1}, 
+\qquad
+J_{\omega,i} = \vec 0.
+\end{equation}
+
+\subsubsection{Efeito da Base}
+
+Se a base for considerada fixa, utiliza-se \eqref{eq:xdot_J_qdot}.
+No caso de base flutuante, a velocidade da ferramenta inclui a contribuição do movimento da base, de velocidade linear e angular ${}^{0}\!\dot{\vec x}_B$:
+
+\begin{equation}
+{}^{0}\!\dot{\vec x}_{E} =
+\mathbf{J}_{base}(\cdot)\,{}^{0}\!\dot{\vec x}_{B}
++ \mathbf{J}(\vec q)\,\dot{\vec q}.
+\end{equation}
+
+\subsubsection{Mapeamento de forças e torques}
+
+O mapeamento entre a \emph{wrench} cartesiana na ferramenta e os torques de junta é dado por:
+
+\begin{equation}
+\vec\tau = \mathbf{J}^T (\vec q)\,\vec w_{E}, 
+\qquad
+\vec w_{E} =
+\begin{bmatrix}
+\vec f_{E} \\ \vec m_{E}
+\end{bmatrix}.
+\end{equation}
+
+\subsubsection{Singularidades}
+
+Singularidades ocorrem quando $\mathbf{J}(\vec q)$ perde posto, exigindo velocidades articulares elevadas para pequenas variações na ferramenta. 
+Uma solução prática em controle inverso é a pseudo-inversa amortecida:
+
+\begin{equation}
+\label{eq:pseudoinversa}
+\dot{\vec q} =
+\mathbf{J}^T\,\big(\mathbf{J}\,\mathbf{J}^T
++ \lambda^2 I\big)^{-1}\,{}^{0}\!\dot{\vec x}_{E,d},
+\end{equation}
+
+com $\lambda > 0$ atuando como fator de regularização.

@@ -1,0 +1,20 @@
+\subsection{Critérios de Desempenho}
+\label{sec:criterios_desempenho}
+
+A avaliação do controle adotado nesta dissertação é em função das trajetórias relativas, à atitude e ao MR.
+Os critérios considerados são:
+(i) o erro de posição relativa nos eixos $(x,y,z)$ do referencial LVLH;  
+(ii) o erro de velocidade relativa;  
+(iii) o tempo de acomodação;  
+(iv) sobressinal máximo;  
+(v) erro de atitude;  
+e (vi) a suavidade do esforço de controle.
+A escolha do controlador PD é baseado na simplicidade de implementação, baixa exigência computacional e robustez em condições operacionais.
+Por outro lado, métodos alternativos, como o controle ótimo linear (LQR) e o controle preditivo baseado em modelo (MPC), podem reduzir os custos em termos de consumo de energia e da otimização de trajetória, mas possuem maior complexidade de projeto e maior custo computacional.
+Sendo assim, para os objetivos desta pesquisa, o controlador PD atende os requisitos básicos de rastreamento e estabilização.
+
+As condições de sucesso da missão foram definidas como:  
+(i) a convergência da atitude relativa para zero;  
+(ii) velocidade relativa inferior ao limite operacional de captura;  
+(iii) ausência de violações do corredor de aproximação (\emph{keep-out zone}) e 
+(iv) ausência de violações do espaço de trabalho do manipulador robótico.  
