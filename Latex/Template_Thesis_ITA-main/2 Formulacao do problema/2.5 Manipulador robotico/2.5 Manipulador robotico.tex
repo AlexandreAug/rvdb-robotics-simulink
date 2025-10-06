@@ -1,25 +1,26 @@
 \section{Manipulador Robótico}
 \label{sec:manipulador_robotico}
 
-Neste trabalho, o manipulador robótico é acionado na fase final da missão de RVD/B. 
-O MR está rigidamente acoplado à base da espaçonave visitante, possuindo configuração 4R1P. 
-Em ambiente de microgravidade, o movimento do MR não sofre a ação de peso, mas devido à conservação do momento angular, gera reações sobre a base que alteram a atitude e a matriz de inércia equivalente do conjunto. 
-Além disso, o MR está sujeito a restrições cinemáticas (alcance geométrico dos elos) e dinâmicas (torques máximos nas juntas).
+O manipulador robótico (MR) é responsável pelas operações de captura e acoplamento durante a fase final da missão de RVD/B.
+Tratando-se de ambiente de microgravidade, a sensação da ausência da força peso ($\vec P = m \vec g$) elimina as forças gravitacionais locais, mas não os efeitos de reação gerados pela movimentação do MR.
+Essas movimentações alteram a atitude e a inércia equivalente da base da espaçonave.
+A interação dinâmica entre a base e o MR exige uma formulação integrada para representar o comportamento do conjunto.
 
-\subsection{Convenção}
-\label{sec:convencao_mr}
+O desempenho do MR está condicionado por restrições cinemáticas e estruturais, como os limites de junta, as dimensões dos elos, a capacidade de torque e a velocidade dos atuadores.
+As limitações definem o espaço de trabalho (\emph{workspace}) e impõem ligações entre alcance, precisão e estabilidade do sistema.
 
-Neste trabalho, os termos \emph{ferramenta}, \emph{tool} e \emph{efetuador} são considerados equivalentes e designam o mesmo elemento físico na extremidade ativa do MR. 
-O referencial da ferramenta foi denominado $\{E\}$, localizado no ponto central do efetuador, e é utilizado para expressar sua posição e orientação. 
-A transformação homogênea ${}^{0}T_{E}$ denota a pose de $\{E\}$ em relação à base $\{0\}$. 
-Adotou-se $\{0\}\equiv\{base\}$, sem offset global, e quando aplicável inclui-se a transformação adicional da ferramenta como ${}^5T_{tool} = {}^0T_{5}\,{}^0T_{tool}$. 
+A seguir, é apresentado o propósito do MR no contexto da missão, definindo suas funções, movimentos requeridos e graus de liberdade necessários.
 
-As subseções seguintes apresentam de forma estruturada a modelagem do MR, incluindo a formulação cinemática, o cálculo do Jacobiano, a modelagem dinâmica, o acoplamento com a base da espaçonave e, por fim, o controle das juntas. 
-Dessa forma, garante-se consistência entre a representação matemática do manipulador e sua interação com a dinâmica orbital e de atitude da espaçonave.
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.1 Proposito e arquitetura.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.2 Atribuicoes referenciais e variaveis generalizadas.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.3 Cinematica e velocidades.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.4 Formulacao dinamica acoplada.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.5 Controle atitude e juntas.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.6 Implementacao e validacao numerica.tex}
 
 
-\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.1 Modelagem cinematica.tex}
-\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.2 Jacobiano.tex}
-\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.3 Modelagem dinamica.tex}
-\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.4 Acoplamento base manipulador.tex}
-\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.5 Controle das juntas.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.1 Modelagem cinematica.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.2 Jacobiano.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.3 Modelagem dinamica.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.4 Acoplamento base manipulador.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.5 Controle das juntas.tex}
