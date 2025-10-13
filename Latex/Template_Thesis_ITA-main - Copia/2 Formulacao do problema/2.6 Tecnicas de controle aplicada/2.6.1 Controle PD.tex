@@ -1,0 +1,33 @@
+\subsection{Estrutura do controle PD}
+Seja o erro $e(t)=r(t)-y(t)$ entre a referência $r(t)$ e a saída $y(t)$.
+O controlador proporcional-derivativo é clássico, sendo utilizados em sistemas dinâmicos lineares.
+Este tipo de controle é adequado para aplicações onde se deseja resposta rápida e estável, sem a necessidade de modelagem completa do sistema.
+A lei de controle proporcional derivativa é escrita como:
+\begin{equation}
+\label{eq:pd_law}
+u(t) = K_p e(t) + K_d \dot e(t),
+\end{equation}
+em que $K_p$ e $K_d$ representam, respectivamente, os ganhos proporcional e derivativo, ajustados para garantir o comportamento dinâmico desejado do sistema.
+O mesmo princípio de atuação é aplicado em cada subsistema do modelo: movimento orbital relativo, controle de atitude e juntas do manipulador.
+
+\subsection{Controle PD no movimento orbital relativo}
+No referencial LVLH, o movimento relativo linearizado é descrito pelas equações de HCW.  
+Nas aproximações ao longo do eixo radial e para curtas separações, o controlador PD é aplicado em cada eixo do movimento relativo do chaser em relação ao target.
+O sinal de controle $u(t)$ é calculado para cada eixo.
+Ele atua como uma força de propulsão na espaçonave visitante, buscando reduzir o erro de posição e velocidade em relação ao alvo.
+A escolha dos ganhos $K_p$ e $K_d$ é realizada de forma independente por eixo, de acordo com a dinâmica descrita pelas equações de Hill/Clohessy--Wiltshire.
+
+
+\subsection{Controle PD e a atitude do chaser}
+Na malha de atitude, a referência é a orientação desejada do chaser, enquanto a saída é a orientação estimada a partir dos sensores de atitude.
+O erro de atitude é definido pela diferença entre essas duas informações, sendo representados em quaternions.
+O erro de orientação em quaternion é convertido em um vetor de erro equivalente para que o controle PD exerça esforço de controle sobre as componentes de rotação.
+O termo proporcional corrige o desvio angular, enquanto que o termo derivativo utiliza a velocidade angular $\vec \omega$ para amortecer a resposta e atenuar oscilações, caso houver.
+O sinal resultante é convertido em torque de controle ($\vec \tau$) e aplicado nos atuadores do \emph{chaser}.
+
+\subsection{PD e as juntas do manipulador robótico}
+No caso das juntas do manipulador robótico, a referência corresponde ao ângulo desejado de cada junta, enquanto a saída é a posição ou deslocamento medido.
+O erro é definido como a diferença entre essas duas variáveis, e a sua derivada representa a velocidade da junta.
+O controle PD é aplicado diretamente a esse erro, de modo que o termo proporcional reduz o desvio de posição e o termo derivativo fornece amortecimento à resposta, reduzindo a quantidade de oscilações.
+O sinal de controle gerado é aplicado como torque ($\tau_i$) nas juntas revolutas ou como força ($F_{d5}$) na junta prismática.
+Os limites de torque e força foram considerados na etapa de simulação para que o esforço de controle permaneça dentro das restrições físicas do MR.

@@ -1,0 +1,98 @@
+\section{Plano de Validação Matemática}
+
+\subsection{Propriedades Estruturais do Modelo}
+
+As propriedades estruturais do modelo são fundamentais para garantir a consistência física e matemática do sistema. A matriz de inércia $ \mathbf{M}(\vec{q}) $ deve ser simétrica e definida-positiva para todo $ \vec{q} $. Além disso, o modelo deve obedecer à propriedade de passividade, ou seja, para todo vetor $ \vec{y} $, a seguinte identidade deve ser satisfeita:
+
+\begin{equation}
+\vec{y}^T \left( \dot{\mathbf{M}}(\vec{q}) - 2\mathbf{C}(\vec{q}, \dot{\vec{q}}) \right) \vec{y} = 0
+\label{eq:passividade}
+\end{equation}
+
+Essa é uma característica clássica de modelos Lagrangianos. Também se espera a conservação de energia na ausência de entradas e dissipação, o que leva à seguinte equação:
+
+\begin{equation}
+\dot{\mathcal{E}} = \frac{d}{dt}(T + V) = 0
+\label{eq:conservacao_energia}
+\end{equation}
+
+\subsection{Consistência de Jacobianos}
+
+Para garantir a validade da cinemática diferencial implementada.
+Neste trabalho, a consistência dos Jacobianos foi avaliada por diferenças finitas.
+A Jacobiana $ \mathbf{J} $ pode ser aproximada por:
+
+\begin{equation}
+\mathbf{J} \approx \frac{\vec{x}_E(\vec{q} + \Delta \vec{q}) - \vec{x}_E(\vec{q})}{\Delta \vec{q}}, \qquad \left\| \mathbf{J} - \mathbf{J}_{\mathrm{FD}} \right\| \leq \varepsilon_J
+\label{eq:jacobiano_finitas}
+\end{equation}
+
+Esse procedimento deve ser repetido para cada elo e articulação utilizada no modelo.
+
+\subsection{Checagens de Unidades e Escalas}
+
+A coerência dimensional do modelo é verificada com as seguintes expressões:
+
+\begin{itemize}
+\item $ [\mathbf{M}] = \mathrm{kg} \cdot \mathrm{m}^2 $
+\item $ [\mathbf{C}] = \mathrm{kg} \cdot \mathrm{m}^2 / \mathrm{s} $
+\item $ [\vec{g}] = \mathrm{N} \cdot \mathrm{m} $ (ou $ \mathrm{N} $ em coordenadas prismáticas)
+\end{itemize}
+
+Neste trabalho, quando houve problemas de condicionamento, foi aplicada a normalização para reescalar variáveis.
+
+\subsection{Vínculos e Estabilização}
+
+Durante a simulação, o erro de vínculo $ \| \Phi(\vec{q}) \| $ e o resíduo de Baumgarte devem permanecer abaixo dos limites $ \varepsilon_\Phi $ e $ \varepsilon_B $. No caso de uso de quaternion, é necessário monitorar a normalização:
+
+\begin{equation}
+\left\| \vec{q}_b \right\| - 1 \leq \varepsilon_q
+\label{eq:erro_quaternion}
+\end{equation}
+
+% \subsection{Linearização e Discretização}
+
+% A validade do modelo linearizado foi avaliada por meio da análise do espectro da matriz $A$ e da controlabilidade local em torno do ponto de operação. Além disso, comparou-se a resposta do modelo linear discreto com o não linear sob pequenas excitações, utilizando a formulação
+
+% \begin{equation}
+% \vec{x}_{k+1} = \mathbf{A}_d \vec{x}_k + \mathbf{B}_d \vec{u}_k, \quad
+% \mathbf{A}_d = e^{\mathbf{A}T_s}, \quad
+% \mathbf{B}_d = \int_0^{T_s} e^{\mathbf{A}\tau} d\tau \, \mathbf{B}
+% \label{eq:discretizacao_ZOH}
+% \end{equation}
+
+
+\subsection{Energia e Potência}
+
+Na ausência de dissipação e entradas externas, espera-se que a energia total do sistema permaneça aproximadamente constante. Com a inclusão de dissipação e entradas generalizadas, o balanço de potência segue a relação:
+\begin{equation}
+\mathcal{E}(t) \approx \mathcal{E}(0), \quad \text{com variação relativa} \leq \varepsilon_E
+\label{eq:energia_constante}
+\end{equation}
+
+Com dissipação $ \mathbf{D} $ e entradas $ \vec{\tau} $, o balanço de energia esperado é:
+
+\begin{equation}
+\dot{\mathcal{E}} \approx \vec{\tau}^T \dot{\vec{q}} - \dot{\vec{q}}^T \mathbf{D} \dot{\vec{q}}
+\label{eq:balanco_energia}
+\end{equation}
+
+\subsection{Sensibilidade Paramétrica}
+
+A robustez do sistema foi investigada mediante variações plausíveis nas massas, centros de massa e tensores de inércia. Avaliaram-se os impactos nas saídas, como desvios de posição do efetuador, e no esforço de controle requerido.
+
+\subsection{Tolerâncias Sugeridas}
+
+Para fins de validação numérica, adotaram-se tolerâncias típicas da ordem de:
+
+\begin{itemize}
+\item $ \varepsilon_J \sim 10^{-3} $;
+\item $ \varepsilon_\Phi \sim 10^{-6} $;
+\item $ \varepsilon_E \sim 10^{-3} $;
+\item $ \varepsilon_q \sim 10^{-6} $.
+\end{itemize}
+
+\subsection{Observações para a Implementação}
+
+% Verifica-se a convergência do solver integrando com diferentes passos e tolerâncias. O condicionamento numérico das matrizes $ \mathbf{M} $ e $ \mathbf{J} $ também deve ser monitorado. Por fim, recomenda-se comparar a cinemática e dinâmica com uma segunda fonte confiável, como o modelo do \texttt{rigidBodyTree} em posturas de teste.
+A convergência numérica foi avaliada mediante integração com diferentes passos e tolerâncias, monitorando o condicionamento das matrizes $M$ e $J$. A consistência da cinemática e da dinâmica também foi verificada por comparação com modelos de referência, como o rigidBodyTree em posturas de teste

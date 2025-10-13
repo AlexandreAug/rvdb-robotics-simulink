@@ -1,0 +1,28 @@
+Para descrever a dinâmica de atitude completa de uma espaçonave, deve-se integrar todas as equações cinemáticas e dinâmicas.
+
+\subsection{Simulações numéricas}
+
+Enquanto que as equações de Euler
+\eqref{eq:euler_corpo_rigido}
+fornecem a evolução da velocidade angular em função dos torques aplicados, as equações cinemáticas
+\eqref{eq:definicao_qdot} propagam a orientação da espaçonave através dos quaternions unitários. 
+% A atitude relativa \eqref{eq:quat_relativo} define a orientação da espaçonave visitante em relação a espaçonave alvo, portanto, transformando-as na base para o cálculo dos erros de orientação empregados nas leis de controle.
+
+O processo de simulação numérica consiste em resolver as equações apresentadas, de forma acoplada:
+
+\begin{equation}
+\begin{cases}
+\mathbf{I}(t)\,\dot{\vec{\omega}}+\vec{\omega}\times(\mathbf{I}(t)\,\vec{\omega})
+= \vec\tau, \\[6pt]
+\dot{\vec{q}}
+= \tfrac{1}{2}\,\Omega(\vec{q})\,\vec{\omega}, \\[6pt]
+q_{rel}
+= q_t^{-1} \otimes q_c,
+\end{cases}
+\label{eq:sistema_acoplado}
+\end{equation}
+onde $\mathbf{I}(t)$ é a matriz de inércia equivalente, $\vec{\omega}$ é a velocidade angular, $\vec\tau$ os torques aplicados, e $\Omega(\vec{q})$, sendo o operador cinemático.
+
+% A integração numérica é realizada em tempo contínuo, utilizando métodos de passo variável, como o \texttt{ode45}, que é adequado para sistemas dinâmicos não lineares. 
+% Na simulação, os quaternions são constantemente normalizados para mitigar erros numéricos de arredondamento e manter a unidade da norma. 
+% Sendo possível avaliar o desempenho do controlador em diferentes condições iniciais e durante as manobras acopladas do manipulador robótico.

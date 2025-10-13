@@ -1,0 +1,192 @@
+\chapter{Em desenvolvimento} 
+\label{ApendiceB}
+===== Em desenvolvimento
+
+% A seguir, são listadas as características físicas dos elos que compõem o manipulador robótico, incluindo dimensões e massas.
+
+% \begin{table}[H]
+% \centering
+% {\setlength{\tabcolsep}{6pt} 
+% % \renewcommand{\arraystretch}{1}
+% \caption{Dimensões e massas dos componentes do manipulador.}
+% \label{tab:dimensoes_massas_cm_g}
+% \begin{tabular}{l rrrr}
+% \hline
+% \textbf{Componente} & \textbf{Comprimento [cm]} & \textbf{Raio [cm]} & \textbf{Diâmetro [cm]} & \textbf{Massa [g]} \\
+% \hline
+% Base Geral   & 10,0   & 25,00  & 50,0  & 3.653   \\
+% Junta 1      & 0,5  & 2,50   & 5,0   & 26,51  \\
+% Junta 2      & 0,5  & 2,50   & 5,0   & 26,51  \\
+% Junta 3      & 0,5  & 2,50   & 5,0   & 26,51  \\
+% Junta 4      & 0,5  & 2,50  & 5,0   & 26,51  \\
+% Junta 5      & 0,5  & 2,50   & 5,0   & 26,51  \\
+% Elo 1        & 10,0   & 2,50   & 5,0   & 111,46 \\
+% Elo 2        & 30,0   & 2,50   & 5,0   & 312,92 \\
+% Elo 3        & 30,0   & 2,50   & 5,0   & 312,92 \\
+% Elo 4        & 30,0   & 2,50   & 5,0   & 312,92 \\
+% Ferramenta   & 15,0   & 0,75  & 1,5   & 40,29  \\
+% \hline
+% \textbf{Total} & -- & -- & -- & \textbf{4.876} \\
+% \hline
+% \end{tabular}}
+% \end{table}
+
+
+% \section{Matrizes de Inércia}
+% As matrizes de inércia dos componentes do manipulador robótico foram obtidas a partir do software de modelagem tridimensional \emph{Autodesk Fusion 360}. 
+
+% Por se tratar de um manipulador leve, construído predominantemente em alumínio (densidade de $2.700\,\text{kg/m}^{3}$) e com dimensões reduzidas (elos ocos com espessura de parede de $0,0025\,\text{m}$), os valores numéricos resultantes apresentam magnitudes próximas de zero quando expressos em notação científica, dessa forma, foram inseridos neste apêndice, enquanto que os valores no sistema internacional de unidades (SI) foi inserido na seção da dissertação.
+
+% Tais valores não indicam ausência de inércia, mas refletem a baixa massa e o pequeno raio de giro dos corpos em torno de seus eixos principais
+% Ainda assim, possuem relevância nas análises dinâmicas, em especial no contexto de microgravidade e em manobras de controle de precisão.
+% Dessa forma, todas as matrizes de inércia foram integralmente consideradas nos modelos computacionais e nas simulações subsequentes.
+
+
+% \begin{table}[H]
+% \centering
+% \caption{Momentos de inércia principais (valores diagonais) em g$\cdot$cm$^{2}$.}
+% \label{tab:inercias_diag_gcm2}
+% \begin{tabular}{l rrr}
+% \hline
+% \textbf{Componente} & $I_{xx}$ & $I_{yy}$ & $I_{zz}$ \\
+% \hline
+% Base Geral   & 7,95$\times$10$^{5}$   & 7,95$\times$10$^{5}$   & 1,45$\times$10$^{6}$ \\
+% Junta 1      & 41,97                  & 41,97     & 82,84 \\
+% Junta 2      & 82,84                  & 41,97     & 41,97 \\
+% Junta 3      & 82,84                  & 41,97     & 41,97 \\
+% Junta 4      & 82,84                  & 41,97     & 41,97 \\
+% Junta 5      & 41,97                  & 82,84     & 41,97 \\
+% Elo 1        & 1.368,47               & 1.368,47  & 596,91 \\
+% Elo 2        & 2,58$\times$10$^{4}$   & 1736,39   & 2,58$\times$10$^{4}$ \\
+% Elo 3        & 2,58$\times$10$^{4}$   & 1736,39   & 2,58$\times$10$^{4}$ \\
+% Elo 4        & 2,58$\times$10$^{4}$   & 1736,39   & 2,58$\times$10$^{4}$ \\
+% Ferramenta   & 782,08   & 16,22    & 782,08 \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+% A seguir estão os produtos de inércia.
+% \begin{table}[ht]
+% \centering
+% \caption{Produtos de inércia (valores fora da diagonal) em g$\cdot$cm$^{2}$.}
+% \label{tab:inercias_prod_gcm2}
+% \begin{tabular}{l rrr}
+% \hline
+% \textbf{Componente} & $I_{xy}$ & $I_{xz}$ & $I_{yz}$ \\
+% \hline
+% Base Geral   & 6,60$\times$10$^{-9}$   & 1,64$\times$10$^{-5}$   & -1,30$\times$10$^{-9}$ \\
+% Junta 1      & -2,25$\times$10$^{-9}$  & 0         & 0        \\
+% Junta 2      & -1,13$\times$10$^{-10}$ & 0         & 0        \\
+% Junta 3      & -1,42$\times$10$^{-9}$  & 1,83$\times$10$^{-9}$   & -1,25$\times$10$^{-8}$ \\
+% Junta 4      & 3,08$\times$10$^{-9}$   & -1,32$\times$10$^{-10}$ & -4,35$\times$10$^{-9}$ \\
+% Junta 5      & -3,95$\times$10$^{-9}$  & 5,37$\times$10$^{-9}$   & -1,63$\times$10$^{-10}$ \\
+% Elo 1        & 0         & -1,17$\times$10$^{-7}$  & 2,35$\times$10$^{-10}$ \\
+% Elo 2        & 2,14$\times$10$^{-8}$   & -1,08$\times$10$^{-8}$  & 2,39$\times$10$^{-7}$ \\
+% Elo 3        & 9,95$\times$10$^{-10}$  & -6,59$\times$10$^{-8}$  & 4,41$\times$10$^{-7}$ \\
+% Elo 4        & 6,33$\times$10$^{-7}$   & 4,29$\times$10$^{-8}$   & -1,15$\times$10$^{-8}$ \\
+% Ferramenta   & 5,43$\times$10$^{-8}$   & 4,39$\times$10$^{-9}$   & -5,66$\times$10$^{-9}$ \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+% A seguir constam todos os elementos do manipulador robótico e suas matrizes de inércia individuais.
+
+% \begin{equation}
+% \mathbf{I}_{\text{Base Geral}} =
+% \begin{bmatrix}
+% 7,948\times 10^{5} & 6,601\times 10^{-9} & 1,639\times 10^{-5} \\
+% 6,601\times 10^{-9} & 7,948\times 10^{5} & -1,297\times 10^{-9} \\
+% 1,639\times 10^{-5} & -1,297\times 10^{-9} & 1,449\times 10^{6}
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Junta 1}} =
+% \begin{bmatrix}
+% 41,970 & -2,246\times 10^{-9} & 0,000 \\
+% -2,246\times 10^{-9} & 41,970 & 0,000 \\
+% 0,000 & 0,000 & 82,835
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Junta 2}} =
+% \begin{bmatrix}
+% 82,835 & -1,128\times 10^{-10} & 0,000 \\
+% -1,128\times 10^{-10} & 41,970 & 0,000 \\
+% 0,000 & 0,000 & 41,970
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Junta 3}} =
+% \begin{bmatrix}
+% 82,835 & -1,417\times 10^{-9} & 1,830\times 10^{-9} \\
+% -1,417\times 10^{-9} & 41,970 & -1,249\times 10^{-8} \\
+% 1,830\times 10^{-9} & -1,249\times 10^{-8} & 41,970
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Junta 4}} =
+% \begin{bmatrix}
+% 82,835 & 3,084\times 10^{-9} & -1,323\times 10^{-10} \\
+% 3,084\times 10^{-9} & 41,970 & -4,345\times 10^{-9} \\
+% -1,323\times 10^{-10} & -4,345\times 10^{-9} & 41,970
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Junta 5}} =
+% \begin{bmatrix}
+% 41,970 & -3,951\times 10^{-9} & 5,366\times 10^{-9} \\
+% -3,951\times 10^{-9} & 82,835 & -1,634\times 10^{-10} \\
+% 5,366\times 10^{-9} & -1,634\times 10^{-10} & 41,970
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Elo 1}} =
+% \begin{bmatrix}
+% 1,368\times 10^{3} & 0,000 & -1,172\times 10^{-7} \\
+% 0,000 & 1,368\times 10^{3} & 2,345\times 10^{-10} \\
+% -1,172\times 10^{-7} & 2,345\times 10^{-10} & 596,913
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Elo 2}} =
+% \begin{bmatrix}
+% 2,583\times 10^{4} & 2,138\times 10^{-8} & -1,076\times 10^{-8} \\
+% 2,138\times 10^{-8} & 1,736\times 10^{3} & 2,389\times 10^{-7} \\
+% -1,076\times 10^{-8} & 2,389\times 10^{-7} & 2,583\times 10^{4}
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Elo 3}} =
+% \begin{bmatrix}
+% 2,583\times 10^{4} & 9,948\times 10^{-10} & -6,588\times 10^{-8} \\
+% 9,948\times 10^{-10} & 1,736\times 10^{3} & 4,412\times 10^{-7} \\
+% -6,588\times 10^{-8} & 4,412\times 10^{-7} & 2,583\times 10^{4}
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Elo 4}} =
+% \begin{bmatrix}
+% 2,583\times 10^{4} & 6,327\times 10^{-7} & 4,290\times 10^{-8} \\
+% 6,327\times 10^{-7} & 1,736\times 10^{3} & -1,154\times 10^{-8} \\
+% 4,290\times 10^{-8} & -1,154\times 10^{-8} & 2,583\times 10^{4}
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+
+% \begin{equation}
+% \mathbf{I}_{\text{Ferramenta}} =
+% \begin{bmatrix}
+% 782,082 & 5,461\times 10^{-8} & 4,386\times 10^{-9} \\
+% 5,431\times 10^{-8} & 16,219 & -5,656\times 10^{-9} \\
+% -4,386\times 10^{-9} & -5,656\times 10^{-9} & 782,082
+% \end{bmatrix} \;\; \text{g$\cdot$cm$^{2}$}
+% \end{equation}
+

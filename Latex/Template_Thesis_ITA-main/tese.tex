@@ -16,7 +16,8 @@
 \documentclass[msc]{ita}    % ITA.cls based on standard book.cls
 % Quando alterar a classe, por exemplo de [msc] para [msc, eng]) rode mais uma vez o botão BUILD OUTPUT caso haja erro
 \usepackage{ae}
-\usepackage{graphicx}
+\usepackage{xcolor}      
+\usepackage{graphicx}    
 \usepackage{epsfig}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -24,11 +25,11 @@
 \usepackage{multirow}
 \usepackage{float}
 \usepackage{amsthm}
-\usepackage{url}         % formats URL addresses properly
-\usepackage{appendix}    % allows appendix section to be included
-\usepackage{lscape}      % allows a page to be rendered in landscape mode
-\usepackage{multicol}    % allows text in multi columns
-\usepackage{cancel}      % needed to show canceled terms in equations
+\usepackage{url}       
+\usepackage{appendix}   
+\usepackage{lscape}     
+\usepackage{multicol}  
+\usepackage{cancel}     
 \usepackage{lettrine}
 \usepackage{float}
 \usepackage{placeins}
@@ -36,11 +37,15 @@
 \usepackage{bookmark}
 \usepackage{textcomp}
 \usepackage{lmodern}
+\usepackage{glossaries}
+\makeglossaries
+              
 
-\usepackage[abbreviations]{glossaries-extra}
-% \usepackage{utf8}{inputenc}
-% \usepackage[T1]{fontenc}
-% \usepackage[brazil]{babel}
+% \makeglossaries
+% \newglossaryentry{rvdb}{name={RVD/B}, description={Rendezvous and Docking/Berthing}}
+% \newacronym{pid}{PID}{Proporcional–Integral–Derivativo}
+
+
 
 %\usepackage{subfigure}
 %\usepackage{subfigmat}
@@ -95,11 +100,11 @@
 
 % Pró-reitor da Pós-graduação
 \bossgender{masc}												% masc ou fem
-\boss{Prof.~Dr.}{John von Neumann}
+\boss{Prof.~Dr.}{Antonio Guilherme de Arruda Lorenzi}
 
 %Coordenador do curso no caso de TG
-\bosscoursegender{masc}									% masc ou fem
-\bosscourse{Prof.~Dr.}{John Walker}
+% \bosscoursegender{masc}									% masc ou fem
+% \bosscourse{Prof.~Dr.}{John Walker}
 
 % Palavras-Chaves informadas pela Biblioteca -> utilizada na CIP
 \kwcip{Rendezvous and docking/berthing}
@@ -114,18 +119,18 @@
 \examiner{Prof. Dr.}{Mickey Mouse}{}{DISNEY}
 
 % Data da defesa (mês em maiúsculo, se trabalho em inglês, e minúsculo se trabalho em português)
-\date{10}{dezembro}{2025}
+\date{10}{fevereiro}{2025}
 
 % Número CDU - (somente para TG)
 % \cdu{???.??}
 
-% \input{PreTextuais/listaabreviaturas.tex}
-% \input{PreTextuais/listasimbolos.tex}
+\input{PreTextuais/listaabreviaturas.tex}
+\input{PreTextuais/listasimbolos.tex}
 
 \frontmatter
 
 \begin{document}
-% \input{PreTextuais/main}
+\input{PreTextuais/main}
 
 \mainmatter
 
@@ -133,45 +138,33 @@
 
 %%%%%%%%%%%%%%% CAPITULO 1 %%%%%%%%%%%%%%%
 
-\chapter{Introdução}
-% \input{1 Introducao/1 Capitulo1 Principal.tex}
+\input{1 Introducao/Capitulo 1.tex}
 
 %%%%%%%%%%%%%%% CAPITULO 2 %%%%%%%%%%%%%%%
 
-\input{2 Formulacao do problema/1 Capitulo2 Principal.tex}
-
-
-
-
+\input{2 Formulacao do problema/Capitulo 2.tex}
 
 %%%%%%%%%%%%%%% CAPITULO 3 %%%%%%%%%%%%%%%
 
-% \chapter{Resultados e Discussões dos Resultados das Simulações Computacionais}
-% \input{3 Resultados e discussoes/1 Capitulo3 Principal.tex}
+\input{3 Estrategia de RVDB/Capitulo 3.tex}
 
 %%%%%%%%%%%%%%% CAPITULO 4 %%%%%%%%%%%%%%%
 
-% \chapter{Conclusão e Trabalhos Futuros}
-% \input{4 Conclusoes e trabalhos futuros/1 Capitulo4 Principal.tex}
+\input{4 Resultados e discussoes/Capitulo 4.tex}
+
+%%%%%%%%%%%%%%% CAPITULO 5 %%%%%%%%%%%%%%%
+
+% \input{5 /Capitulo 5.tex}
+
 
 %% Referências bibliográficas
 %% Apêndices
 %%%%% Parâmetros utilizados
 %%%%% Algoritmos implementados
 
-%\chapter{Modelagem Dinâmica de Cupins Cibernéticos}
-% \input{2 Formulacao do problema/2 Formulacao do problema}
-
-%\chapter{Controle Robusto de Concretos Caóticos}
-% \input{Cap3/cap3}
-
-%% REVISÃO PARA REMOVER LACUNAS DE CONHECIMENTO
-% \chapter{Revisão matemática}
-% \section{Algebra Linear Básica}
-% \input{Outros/Revisao/1 Algebra linear basica/1.1 Vetores.tex}
-
 % REFERENCIAS BIBLIOGRAFICAS
-\renewcommand\bibname{\itareferencesnamebabel} %renomear título do capítulo referências
+\renewcommand\bibname{\itareferencesnamebabel}
+%renomear título do capítulo referências
 \printbibliography
 
 %%%%% Apendices
@@ -192,36 +185,33 @@
 \input{Apendices/ApendiceE.tex}
 \newpage
 
-% \chapter{Limites físicos e operacionais das juntas do manipulador robótico} %opcional
-% \input{ApeB/apendiceB}
-% \label{ApendiceB}
-% \newpage
-
-% \chapter{Caso particular da velocidade angular} %opcional
-% \input{ApeC/apendiceC.tex}
-% \label{ApendiceC}
-
 % Anexos
 % \annex
 % \chapter{Exemplo de um Primeiro Anexo} %opcional
 % \input{AneA/anexoA}
 
 % Glossario
-%\itaglossary
-%\printglossary
+% \itaglossary
+\printglossaries
 
 % Folha de Registro do Documento
 % Valores dos campos do formulario
-\FRDitadata{25 de março de 2015}
+\FRDitadata{28 de novembro de 2025}
 \FRDitadocnro{DCTA/ITA/DM-018/2015} %(o número de registro você solicita a biblioteca)
 \FRDitaorgaointerno{Instituto Tecnológico de Aeronáutica -- ITA}
 %Exemplo no caso de pós-graduação: Instituto Tecnol{\'o}gico de Aeron{\'a}utica -- ITA
-\FRDitapalavrasautor{Cupim; Cimento; Estruturas}
-\FRDitapalavrasresult{Cupim; Dilema; Construção}
+\FRDitapalavrasautor{Rendezvous; Docking; Clohessy-Wiltshire}
+\FRDitapalavrasresult{Rendezvous; Docking; Clohessy-Wiltshire}
 %Exemplo no caso de graduação (TG):
 %\FRDitapalavraapresentacao{Trabalho de Graduação, ITA, São José dos Campos, 2015. \NumPenultimaPagina\ páginas.}
 %Exemplo no caso de pós-graduação (msc, dsc):
-\FRDitapalavraapresentacao{ITA, São José dos Campos. Curso de Mestrado. Programa de Pós-Graduação em Engenharia Aeronáutica e Mecânica. Área de Sistemas Aeroespaciais e Mecatrônica. Orientador: Prof.~Dr. Adalberto Santos Dupont. Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra. Defesa em 05/03/2015. Publicada em 25/03/2015.}
+\FRDitapalavraapresentacao{ITA, São José dos Campos.
+Curso de Mestrado Acadêmico.
+Programa de Pós-Graduação em Ciências e Tecnologias Espaciais.
+Área de Sistemas Espaciais, Ensaios e Lançamentos.
+Orientador: Prof.~Dr. Ijar Milagre da Fonseca.
+% Coorientadora: Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$. Doralice Serra.
+Defesa em dd/mm/aaaa. Publicada em dd/mm/aaaa.}
 \FRDitaresumo{\input{PreTextuais/resumo}}
 %  Primeiro Parametro: Nacional ou Internacional -- N/I
 %  Segundo parametro: Ostensivo, Reservado, Confidencial ou Secreto -- O/R/C/S

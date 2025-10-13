@@ -1,0 +1,145 @@
+\subsection{Cinemática e relação de velocidades}
+\label{sec:cinematica_velocidades}
+
+Nesta subseção será estabelecida a relação cinemática entre a base $\{B\}$ e o efetuador $\{E\}$ do MR. Será evidenciado através do acoplamento por meio de um Jacobiano que inclui as velocidades generalizadas da base e das juntas. O referencial utilizado é o da base $\{B\}$.
+
+A pose (orientação e posição) do efetuador é dada por \eqref{eq:transformacao_total}, enquanto que a posição do efetuador em relação à base $\{B\}$ é o vetor coluna de translação de \eqref{eq:transformacao_total}:
+
+\begin{equation}
+\label{eq:rBE}
+{}^{B}\vec r_{BE} \;=\; \text{pos}\big({}^{B}T_{E}(\vec\theta)\big).
+\end{equation}
+
+Para definir as velocidades generalizadas da base $\{B\}$, faz-se:
+
+\begin{equation}
+\label{eq:nu_base}
+\dot{\vec q}_B \;=\;
+\begin{bmatrix}
+{}^{B}\vec v_B \\[2pt]
+{}^{B}\vec \omega_B
+\end{bmatrix},
+\qquad
+\dot{\vec\theta} \;=\; [\,\dot\theta_1,\dot\theta_2,\dot\theta_3,\dot\theta_4,\dot d_5\,]^T.
+\end{equation}
+
+A velocidade espacial (twist) do efetuador $\{E\}$, também em relação à base $\{B\}$ é dado por:
+
+\begin{equation}
+\label{eq:twist_coupled}
+\begin{bmatrix}
+{}^{B}\vec v_E \\[2pt]
+{}^{B}\vec \omega_E
+\end{bmatrix}
+\;=\;
+J_B(\vec q)\,
+\begin{bmatrix}
+{}^{B}\vec v_B \\[2pt]
+{}^{B}\vec \omega_B
+\end{bmatrix}
+\;+\;
+J_m(\vec q)\,\dot{\vec\theta},
+\end{equation}
+
+onde $J_B$ é o Jacobiano que propaga a velocidade espacial da base até o efetuador; enquanto que $J_m$ é o Jacobiano geométrico do manipulador.
+
+O termo $J_B$ decorre da cinemática de um corpo rígido:
+
+\begin{equation}
+\label{eq:JB}
+J_B(\vec q)
+\;=\;
+\begin{bmatrix}
+I_{3} & -\,[\,{}^{B}\vec r_{BE}\,]_{\times} \\
+0_{3\times 3} & I_{3}
+\end{bmatrix},
+\end{equation}
+
+de modo que:
+
+\begin{equation}
+\label{eq:vE_from_vB}
+{}^{B}\vec v_E \;=\; {}^{B}\vec v_B \;+\; {}^{B}\vec \omega_B \times {}^{B}\vec r_{BE},
+\qquad
+{}^{B}\vec \omega_E \;=\; {}^{B}\vec \omega_B.
+\end{equation}
+
+O Jacobiano do manipulador é construído coluna a coluna, a partir dos eixos articulares em relação à base $\{B\}$.
+Considerando ${}^{B}\hat z_i$ o eixo da junta $i$ e ${}^{B}\vec r_i$ a origem do referencial da junta $i$, ambos obtidos de ${}^{B}T_i$:
+
+\begin{equation}
+\label{eq:Jm_colunas}
+J_m(\vec q) \;=\; \big[\, \mathcal{J}_1 \;\mathcal{J}_2 \;\mathcal{J}_3 \;\mathcal{J}_4 \;\mathcal{J}_5 \,\big],
+\end{equation}
+
+com
+
+\begin{equation}
+\label{eq:Jm_rev}
+\mathcal{J}_i \;=\;
+\begin{bmatrix}
+{}^{B}\hat z_i \times \big({}^{B}\vec r_{BE} - {}^{B}\vec r_i\big) \\
+{}^{B}\hat z_i
+\end{bmatrix}
+\quad \text{(junta revoluta)},
+\qquad
+\mathcal{J}_5 \;=\;
+\begin{bmatrix}
+{}^{B}\hat z_5 \\
+0_{3\times 1}
+\end{bmatrix}
+\quad \text{(junta prismática)}.
+\end{equation}
+
+Para obter apenas a velocidade linear do efetuador, utiliza-se a parte translacional de \eqref{eq:twist_coupled}:
+
+\begin{equation}
+\label{eq:linear_relation}
+{}^{B}\dot{\vec r}_{E}
+\;=\;
+{}^{B}\vec v_B
+\;+\;
+{}^{B}\vec \omega_B \times {}^{B}\vec r_{BE}
+\;+\;
+J_{m,\text{lin}}(\vec q)\,\dot{\vec\theta},
+\end{equation}
+onde $J_{m,\text{lin}}$ é a submatriz $3\times 5$ composta pelas três primeiras linhas de $J_m$.
+
+Para converter as velocidades da base entre referenciais, usa-se a rotação ${}^{I}R_B$:
+
+\begin{equation}
+\label{eq:ref_map}
+\begin{bmatrix}
+{}^{I}\vec v_B \\[2pt]
+{}^{I}\vec \omega_B
+\end{bmatrix}
+\;=\;
+\begin{bmatrix}
+{}^{I}R_B & 0 \\
+0 & {}^{I}R_B
+\end{bmatrix}
+\begin{bmatrix}
+{}^{B}\vec v_B \\[2pt]
+{}^{B}\vec \omega_B
+\end{bmatrix}.
+\end{equation}
+
+Para encontrar o centro de massa (CoM) total e as posições relativas, considera-se a massa $m_k$ e e a posição do centro de massa do corpo ${}^{B}\vec r_{G_k}$, sendo que $k \in \{B,1,\dots,5\}$, expressa em relação à base $\{B\}$:
+
+\begin{equation}
+\label{eq:cm_total}
+M \;=\; \sum_{k} m_k,
+\qquad
+{}^{B}\vec r_{G} \;=\; \frac{1}{M}\sum_{k} m_k\,{}^{B}\vec r_{G_k}.
+\end{equation}
+
+As posições relativas dos elos seguem das transformações homogêneas:
+
+\begin{equation}
+\label{eq:ri_pos}
+{}^{B}\vec r_i \;=\; \text{pos}\big({}^{B}T_{i}\big),
+\qquad
+{}^{B}\vec r_{G_i} \;=\; {}^{B}R_i\,{}^{i}\vec r_{G_i} \;+\; {}^{B}\vec r_i,
+\end{equation}
+
+onde ${}^{i}\vec r_{G_i}$ é a posição do centro de massa do elo $i$ no seu próprio referencial e ${}^{B}R_i$ é a rotação de $\{i\}$ para $\{B\}$ extraída de ${}^{B}T_i$.

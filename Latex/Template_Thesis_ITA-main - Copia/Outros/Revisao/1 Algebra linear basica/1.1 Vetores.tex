@@ -1,0 +1,86 @@
+
+\subsection{Vetor}
+
+É uma quantidade com direção, sentido e magnitude (tamanho).
+
+\emph{Exemplo:}
+a velocidade de uma espaçonave não é apenas $20 [\frac{m}{s}]$, mas $20 [\frac{m}{s}]$ para o norte.
+
+\begin{itemize}
+    \item Magnitude: módulo $(20 [\frac{m}{s}])$
+    \item Direção: linha para qual aponta (norte-sul)
+    \item Sentido: seta para o norte (e não para o sul)
+\end{itemize}
+
+\subsubsection{Representação matemática}
+Pode ser escrito como uma seta ou como uma coluna de números (coordenadas) em um sistema cartesiano.
+
+\begin{equation}
+\label{eq:representacao_vetor1}
+    \vec v =
+    \begin{bmatrix}
+    v_x \\ v_y \\ v_z
+    \end{bmatrix}
+\end{equation}
+
+Por exemplo:
+\begin{equation}
+\label{eq:exemplo_vetor1}
+    \vec v =
+    \begin{bmatrix}
+    3 \\ -2 \\ 5
+    \end{bmatrix}
+\end{equation}
+
+\subsubsection{Operações básicas com vetores: Adição}
+Soma componente a componente.
+
+\begin{equation}
+\label{eq:soma_vetores}
+    \vec u + \vec v =
+    \begin{bmatrix}
+    u_x+v_x \\
+    u_y+v_y \\
+    u_z+v_z
+    \end{bmatrix}
+\end{equation}
+
+\subsubsection{Operações básicas com vetores: Multiplicação escalar}
+Multiplica um número escalar (sem direção ou sentido, por exemplo) pela matriz em questão.
+
+\begin{equation}
+\label{eq:multiplicacao_escalar}
+    \vec k * \vec v = 
+    \begin{bmatrix}
+    k\vec v_x \\
+    k\vec v_y \\
+    k\vec v_z
+    \end{bmatrix}
+\end{equation}
+
+\subsubsection{Operações básicas com vetores: Transposta}
+Altera a posição dos termos, caso seja matriz $linha$, ela se torna matriz $coluna$ (vetor).
+
+\begin{equation}
+\label{eq:transposta_linha2coluna1}
+    \vec x = 
+    [x,y,z]
+\end{equation}
+
+\begin{equation}
+\label{eq:transposta_linha2coluna2}
+    \vec x^T =
+    \begin{bmatrix}
+    x \\
+    y \\
+    z
+    \end{bmatrix} 
+\end{equation}
+
+\subsubsection{Tipos de matrizes: Quadradas}
+Podem ser $2\times2, 3\times3, 4\times4, ..., n\times n$, ou seja, elas possuem o mesmo número de colunas e linhas. Normalmente são chamadas de matriz de ordem $n$; onde $n$ representa o numero de linhas (ou colunas). Uma matriz diagonal \textbf{A} de ordem $n$ é normalmente descrita como:
+
+
+\subsection{Aplicação em robótica ou espaço}
+O vetor pode representar uma posição no espaço (ex.: posição de um satélite) ou também pode representar velocidade, força ou até um eixo de rotação.
+

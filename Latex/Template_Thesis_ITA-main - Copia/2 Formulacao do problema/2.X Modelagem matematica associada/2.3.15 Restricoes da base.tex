@@ -1,0 +1,29 @@
+\subsection{Restrições na Base}
+
+O movimento dos elos do manipulador em ambiente de microgravidade gera reações na base, que correspondem ao corpo principal do \emph{chaser}.  
+Essas reações - torques - devem ser limitados para que a atitude da base permaneça estável durante a operação de \emph{rendezvous and docking/berthing}, evitando que rotações excessivas ou desvios possam comprometer a missão.
+
+As restrições são aplicadas à taxa angular da base e ao seu erro de orientação em relação a uma referência inercial ou ao alvo:
+
+\begin{equation}
+\label{eq:restr_base_w}
+\|\vec{\omega}_B\| \leq \omega_{b,\max},
+\end{equation}
+
+\begin{equation}
+\label{eq:restr_base_theta}
+\angle(\mathbf{R}_B, \mathbf{R}_{B,\text{ref}}) \leq \Theta_{b,\max},
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $\vec{\omega}_B$: vetor de velocidade angular da base;
+    \item $\omega_{b,\max}$: valor máximo admissível de velocidade angular;
+    \item $\mathbf{R}_B$: matriz de rotação que descreve a atitude da base;
+    \item $\mathbf{R}_{B,\text{ref}}$: matriz de rotação de referência (padrão de alinhamento desejado);
+    \item $\Theta_{b,\max}$: limite máximo admissível para o desvio angular da base.
+\end{itemize}
+
+De forma prática, essas restrições asseguram que a base não sofra rotações acima de uma taxa controlável pelo sistema de controle de atitude, além disso, evita o desvio de orientação da base em relação à referência permaneça dentro de uma mergem segura, e que o manipulador opere sem induzir movimentos que comprometam a estabilidade global do manipulador robótico.
+
+Os valores de $\omega_{b,\max}$ e $\Theta_{b,\max}$ serão definidos posteriormente com base em simulações de dinâmica acoplada entre base e manipulador, bem como nos requisitos de controle de atitude estabelecidos para a missão.

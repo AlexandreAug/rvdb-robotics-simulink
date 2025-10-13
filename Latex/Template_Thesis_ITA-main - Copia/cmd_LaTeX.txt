@@ -1,0 +1,51 @@
+
+%==================================================
+%----- 
+%==================================================
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{figure}[ht]
+    \label{fig:LABEL_AQUI}
+\centering
+\includegraphics[width=0.50\linewidth]{Caminho\da\imagem\aqui.png}
+\caption{Descritivo aqui. Fonte: XXX}
+\end{figure}
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{equation}
+	\label{eq:XXXXX}
+a+b=c
+\end{equation}
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{equation}
+	\label{eq:XXXXX}
+\begin{bmatrix}
+a & b \\
+c & d
+\label{eq:XXXXX}
+\end{bmatrix}
+\end{equation}
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\begin{table}[ht]
+\centering
+\caption{XXXXX}
+\label{tab:YYYYY}
+\begin{tabular}{lr}
+\toprule
+\textbf{Componente} & \textbf{Altura} \\
+\midrule
+a & b \\
+c & d \\
+\midrule
+\textbf{Total} & \textbf{0000} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+

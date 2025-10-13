@@ -1,0 +1,119 @@
+%==================================================
+%----- 2.8 Interfaces/portas de acoplamento
+%==================================================
+\section{Interfaces/portas de acoplamento}
+
+\subsection{Referenciais e cinemática relativa}
+São empregados três referenciais:
+a base $\{B\}$, o efetuador $\{E\}$ e a porta de acoplamento (\emph{docking}) $\{D\}$. 
+A posição do ponto de acoplamento do efetuador expressa em
+$\{D\}$ é representada por
+${}^{D}\!\vec p_{E}(\vec q,t)\in\mathbb R^{3}$,
+e a orientação relativa pela rotação
+${}^{D}\!\mathbf R_{E}(\vec q,t)\in\mathrm{SO}(3)$.
+
+\subsection{Alinhamento}
+O alinhamento geométrico é modelado como restrição holonômica
+$\Phi(\vec q,t)=\vec 0$,
+em conformidade com \eqref{eq:PhiJ1} e \eqref{eq:PhiJ2}. 
+O erro de posição em $\{D\}$ é dado por:
+\begin{equation}
+\Phi_{p}(\vec q,t)\;
+\triangleq\;
+{}^{D}\!\vec p_{E}(\vec q,t)-\hat{\vec p}_{D}(t)\in\mathbb R^{3},
+\label{eq:phi_pos}
+\end{equation}
+com $\hat{\vec p}_{D}(t)$ no centro da porta. 
+Para a orientação, utiliza-se o quaternion relativo
+${}^{D}\!q_{E}=[\,\eta\;\;\vec\epsilon^{\top}\,]^{\top}$
+associado a ${}^{D}\!\mathbf R_{E}$;
+além disso, adotou-se como erro mínimo a sua parte vetorial:
+\begin{equation}
+\Phi_{o}(\vec q,t)\;\triangleq\;\vec\epsilon\in\mathbb R^{3}.
+\label{eq:phi_ori}
+\end{equation}
+A restrições é definida por:
+\begin{equation}
+\Phi(\vec q,t)\;\triangleq\;\begin{bmatrix}\Phi_{p}\\ \Phi_{o}\end{bmatrix}=\vec 0,
+\qquad 
+\mathbf J(\vec q,t)=\frac{\partial \Phi}{\partial \vec q},
+\label{eq:phi_stack_dock}
+\end{equation}
+
+cujos níveis de velocidade e aceleração seguem de
+\eqref{eq:vellevel} e \eqref{eq:acclevel}:
+\begin{equation}
+    \label{eq:vel_acel_porta_docking}
+\dot\Phi
+=
+\mathbf J\,\dot{\vec q}
++\frac{\partial \Phi}{\partial t},
+\qquad
+\ddot\Phi
+=
+\mathbf J\,\ddot{\vec q}
++\dot{\mathbf J}\,\dot{\vec q}
++\frac{\partial^{2}\Phi}{\partial t^{2}}
+\end{equation}
+
+\subsection{Condição de não-penetração}
+A não penetração é descrita por uma desigualdade escalar.
+Com $\vec n_{D}$ indicando a normal unitária do plano da $boca$ da porta e
+${}^{D}\!\vec r_{E}(\vec q,t)$
+o vetor do ponto do efetuador até esse plano, sendo expresso como:
+\begin{equation}
+g_{n}(\vec q,t)\;
+\triangleq\;
+\vec n_{D}^{\top}\,{}^{D}\!\vec r_{E}(\vec q,t)\;\ge 0.
+\label{eq:gap}
+\end{equation}
+No contato perfeito, $g_{n}=0$;
+após a captura, o acoplamento rígido é representado por
+\eqref{eq:phi_stack_dock} como vínculo ativo.
+
+\subsection{Jacobianas de acoplamento}
+As linhas de $\mathbf J$ associadas a $\Phi_{p}$
+coincidem com a Jacobiana de velocidade linear do efetuador expressa em $\{D\}$. 
+As linhas relativas a $\Phi_{o}$ são proporcionais à Jacobiana de velocidade angular;
+já a cinemática de quaternions fornece:
+\begin{equation}
+\dot{\vec\epsilon}
+=
+\tfrac12\big
+(\eta\,\mathbf I+\lfloor\vec\epsilon\times\rfloor\big)\,
+{}^{D}\!\vec\omega_{E/D},
+\end{equation}
+onde se obtém a relação com ${}^{D}\!\mathbf J_{\omega}$.
+
+\subsection{Referências para o controle da base na aproximação}
+Durante a aproximação, a atitude da base é estabilizada por um controlador PD que está sendo referenciado a $\{D\}$.
+Com $\mathbf R_{b}$ e $\mathbf R_{b}^{\mathrm{ref}}(t)$,
+sendo as orientações atual e de referência, os erros podem ser expressos por:
+\begin{equation}
+\vec e_{R}\;
+\triangleq\;
+\mathrm{vex}\!\Big
+(\tfrac12\big(\mathbf R_{b}^{\top}\mathbf R_{b}^{\mathrm{ref}}-\mathbf R_{b}^{\mathrm{ref}\,\top}\mathbf R_{b}\big)\Big),
+\qquad
+\vec e_{\omega}\;
+\triangleq\;
+\vec\omega_{b}
+-\vec\omega_{b}^{\mathrm{ref}},
+\label{eq:err_base}
+\end{equation}
+e a lei:
+\begin{equation}
+\vec\tau_{b}
+=
+-\,\mathbf K_{R}\,\vec e_{R}
+-\mathbf K_{\omega}\,\vec e_{\omega}.
+\label{eq:pd_base}
+\end{equation}
+O manipulador robótico executa o alinhamento de $\{E\}$ com $\{D\}$ via \eqref{eq:phi_stack_dock};
+caso se mantenham as restrições por estabilização, aplica-se \eqref{eq:acclevel_baumgarte}.
+
+\subsection{Observações}
+(i) A transição entre a aproximação e o contato, comuta o conjunto de vínculos ativos,
+de \eqref{eq:gap} para \eqref{eq:phi_stack_dock}; 
+(ii) No caso de perda de posto de $\mathbf J$, pode-se usar a pseudoinversa amortecida; 
+(iii) As formulações de energia e dissipação previamente apresentadas permanecem válidas com as novas restrições.

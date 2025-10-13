@@ -1,0 +1,26 @@
+\section{Manipulador Robótico}
+\label{sec:manipulador_robotico}
+
+O manipulador robótico (MR) é responsável pelas operações de captura e acoplamento durante a fase final da missão de RVD/B.
+Tratando-se de ambiente de microgravidade, a sensação da ausência da força peso ($\vec P = m \vec g$) elimina as forças gravitacionais locais, mas não os efeitos de reação gerados pela movimentação do MR.
+Essas movimentações alteram a atitude e a inércia equivalente da base da espaçonave.
+A interação dinâmica entre a base e o MR exige uma formulação integrada para representar o comportamento do conjunto.
+
+O desempenho do MR está condicionado por restrições cinemáticas e estruturais, como os limites de junta, as dimensões dos elos, a capacidade de torque e a velocidade dos atuadores.
+As limitações definem o espaço de trabalho (\emph{workspace}) e impõem ligações entre alcance, precisão e estabilidade do sistema.
+
+A seguir, é apresentado o propósito do MR no contexto da missão, definindo suas funções, movimentos requeridos e graus de liberdade necessários.
+
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.1 Proposito e arquitetura.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.2 Atribuicoes referenciais e variaveis generalizadas.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.3 Cinematica e velocidades.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.4 Formulacao dinamica acoplada.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.5 Controle atitude e juntas.tex}
+\input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.6 Implementacao e validacao numerica.tex}
+
+
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.1 Modelagem cinematica.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.2 Jacobiano.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.3 Modelagem dinamica.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.4 Acoplamento base manipulador.tex}
+% \input{2 Formulacao do problema/2.5 Manipulador robotico/2.5.5 Controle das juntas.tex}
