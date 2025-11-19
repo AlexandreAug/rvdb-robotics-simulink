@@ -1,0 +1,34 @@
+\section{Sensores e sistemas de percepção}
+
+Os sensores oferecem precisão e operam em condições adversas.
+Os mais comuns no contexto espacial são o LiDAR (Light Detection and Ranging), câmeras estéreo, câmeras de alta resolução, sistemas GNSS e pseudolites.
+Por fim, a fusão desses sensores possibilita um modelo situacional robusto e confiável.
+
+\subsection{LiDAR (Light Detection and Ranging)}
+
+De acordo com \cite{inpeLidar}, o LiDAR é um sensor remoto ativo, atuando de forma direta para captura de dados.
+Este sensor possui sua própria fonte de energia (fonte de luz), o laser.
+O LiDAR emite feixes de laser na banda do infravermelho próximo (IV) e é capaz de modelar a superfície do terreno de forma tridimensional., possibilitando gerar produtos como o Modelo Digital de Terreno e o Modelo Digital de Superfície que representam o terreno (sem nenhuma cobertura) e a superfície (edifícios, árvores etc), respectivamente.
+A técnica LiDAR é utilizada principalmente para levantamentos topográficos, caracterização da estrutura da vegetação, bem como a volumetria de edificações e ambientes urbanos de forma mais rápida e confiável.
+
+\subsubsection{O LiDAR em aplicações espaciais}
+
+De acordo com \cite{winker1996}, o experimento \emph{Lidar In-space Technology Experiment (LITE)} foi desenvolvido pelo \emph{NASA Langley Research Center} e lançado a bordo do ônibus espacial \emph{Discovery} em setembro de 1994, como parte da missão STS-64.
+Seu objetivo era validar tecnologias de LiDAR para aplicações espaciais, investigando sua capacidade de detectar camadas de aerossóis e nuvens na atmosfera terrestre.
+Diferentemente dos sensores passivos tradicionalmente usados para observações atmosféricas, o LiDAR espacial oferece medições mais detalhadas e diretas de estrutura de nuvens e aerossóis, mesmo em condições noturnas ou sobre terrenos irregulares.
+
+A missão coletou mais de 40 GB de dados em alta resolução da estrutura vertical da atmosfera.
+Também validou a tecnologia; o experimento destacou os benefícios da utilização do LiDAR em futuras plataformas orbitais autônomas, ampliando sua utilização para estudos climáticos, previsão meteorológica e monitoramento ambiental.
+O desenvolvimento do \emph{LITE} foi precedido por décadas de pesquisa em sistemas LiDAR aerotransportados e terrestres, que demonstraram sua eficácia na medição de vapor d'água, aerossóis e ozônio.
+A maturidade da tecnologia permitiu que em 1985 o projeto fosse iniciado com o objetivo de validar a operação de um sistema LiDAR no espaço.
+Em 1988, foi formado um grupo de coordenação científica para definir os requisitos do instrumento e planejar a missão.
+O LITE demonstrou que sensores ativos baseados em laser podem complementar sistemas passivos e radares para estudos atmosféricos, pavimentando o caminho para novas gerações de satélites equipados com essa tecnologia \cite{winker1996}.
+
+% \subsubsection{Os avanços na tecnologia do LiDAR}
+
+% O avanço na tecnologia de sensores de imagem tridimensional trazem inovações como o \emph{Flash LiDAR}, em particular, permite a aquisição de imagens 3D ao emitir um feixe de laser pulsado difuso, o que é eficaz para medição de terreno e identificação de obstáculos.
+% Diferentemente dos sistemas LiDAR convencionais de varredura mecânica, que possuem limitações na taxa de captura de imagens devido ao movimento do feixe laser, o \emph{Flash LiDAR} ilumina toda a área de interesse simultaneamente, capturando um quadro completo em um único pulso. Essa característica melhora a capacidade de mapeamento e a velocidade de processamento, tornando-se ideal para aplicações em tempo real, como pousos autônomos e manobras de aproximação em ambientes planetários \cite{mizuno2020}.
+
+% O experimento abordado no estudo de \cite{mizuno2020} introduz um sensor de imagem 3D baseado em um fotodiodo de avalanche de contagem de fótons (APD), capaz de oferecer alta sensibilidade e precisão na medição da luz incidente. O sistema desenvolvido conta com uma matriz de 1k pixels (32 x 32 pixels) projetada para melhorar a detecção de aerossóis, topografia e navegação de sondas espaciais. A integração de APDs operando em diferentes modos, incluindo o modo linear e o modo Geiger de avalanche de fóton único (SPAD), permitiu um avanço significativo na eficiência da captura de imagens. Essa abordagem fornece uma solução robusta para identificar superfícies de pouso seguras, sendo utilizada em missões como a OSIRIS-REx, que em 2016 aplicou essa tecnologia para navegação autônoma e controle de atitude durante sua aproximação e pouso em um asteroide. Além disso, a NASA incorporou o Flash LiDAR ao projeto ALHAT (Autonomous Landing and Hazard Avoidance Technology) para aprimorar a identificação autônoma de locais de pouso seguros.
+
+% A relevância da tecnologia Flash LiDAR não se limita a missões interplanetárias. Sensores de imagem 3D têm aplicações críticas em operações orbitais, como o docking de espaçonaves de carga na Estação Espacial Internacional (ISS). O cargueiro japonês HTV, por exemplo, utiliza um sistema LiDAR de varredura mecânica para acoplamento, enquanto a nave de suprimentos Dragon da SpaceX emprega o sistema ASC Dragon Eye Flash LiDAR para medições de posição e atitude relativa. Ainda de acordo com \cite{mizuno2020} crescente demanda por sensores de imagem 3D impulsiona a inovação e competição no setor de LiDAR, especialmente no desenvolvimento de tecnologias compactas e energeticamente eficientes para integração em veículos espaciais, drones e aplicações terrestres. Pesquisas em fotodiodos de avalanche de múltiplos pixels (MPPC) têm mostrado potencial para aumentar ainda mais a sensibilidade e eficiência dos sensores, permitindo medições detalhadas mesmo em ambientes com baixa iluminação. Esses avanços consolidam o Flash LiDAR como uma tecnologia essencial para futuras missões espaciais autônomas e aplicações avançadas de sensoriamento remoto.

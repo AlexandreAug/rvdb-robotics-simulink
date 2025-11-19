@@ -1,0 +1,34 @@
+\section{Integração com guiagem e controle}
+\label{sec:integracao_guiagem_controle}
+
+\subsection{Integração dos módulos de GNC}
+
+A arquitetura de guiagem, navegação e controle é composta por três módulos principais:
+
+\begin{enumerate}[label=(\roman*), leftmargin=*, itemsep=0pt]
+    \item \textbf{Guiagem}: responsável pela trajetória nominal e pela geração de referências de posição e velocidade para cada fase da missão. Inclui as manobras orbitais de faseamento e as transferências de Hohmann, executadas no referencial inercial (ECI).
+    \item \textbf{Navegação}: estima o estado do veículo visitante a partir dos sensores disponíveis.
+    \item \textbf{Controle}: executa as leis de controle, ajustando as forças e torques exercidos para seguir as referências fornecidas pelo módulo de guiagem.
+\end{enumerate}
+
+\subsection{Comutação entre controladores}
+
+Durante o processo de aproximação, ocorre a comutação entre diferentes modos de controle de acordo a distância ao alvo.
+A lógica de comutação é ativada quando a distância relativa e a velocidade residual atingem limites pré-definidos.
+A transição é feita de forma suave e automática, permitindo estabilidade e continuidade nas variáveis de estado e evitando descontinuidades numéricas.
+
+\subsection{Adaptação de ganhos}
+
+Os ganhos do controlador PD são ajustados conforme o regime operacional.
+Em grandes distâncias, prevalece o termo proporcional, para reduzir o erro  de posição.
+Conforme o visitante se aproxima do alvo, o termo derivativo possuir maior influência, pois aumenta a rigidez do sistema e amortece as oscilações de velocidade relativa.
+
+\subsection{Arquitetura funcional do controle}
+
+A arquitetura de controle foi estabelecida da seguinte forma:
+
+\begin{enumerate}[label=(\roman*), leftmargin=*, itemsep=0pt]
+    \item o módulo de guiagem fornece as trajetórias e as referências orbitais;
+    \item o módulo de navegação recebe o estado do visitante e calcula as variáveis relativas;
+    \item o módulo de controle executa as leis de comando, com ganhos adaptativos conforme o regime.
+\end{enumerate}

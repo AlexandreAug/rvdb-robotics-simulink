@@ -1,0 +1,14 @@
+\subsection{Perfil de atitude e alinhamento de eixos}
+\label{sec:perfil_atitude}
+
+Durante as fases de injeção, faseamento e transferências orbitais, o controle de atitude é mantido em relação ao referencial inercial (ECI).
+Sendo assim, o vetor de empuxo principal é orientado conforme o plano orbital da manobra, e o sensor de atitude absoluto (IMU) assegura o apontamento adequado do eixo de propulsão.
+Nas fases de aproximação longa e final, o controle é definido no referencial LVLH do alvo.
+O visitante alinha seu eixo longitudinal ao eixo radial da porta de acoplamento, de modo que o vetor de aproximação coincida com o eixo ${x}$ do referencial do alvo.
+O eixo transversal ${y}$ é ajustado paralelamente ao eixo da velocidade orbital, e por fim, o eixo normal ${z}$ é mantido perpendicular ao plano da órbita.
+
+O alinhamento é realizado de forma progressiva conforme a distância diminui.
+Inicialmente, o visitante adota uma orientação na qual a atitude é estabilizada em relação ao ECI. Em seguida, o sistema de controle utiliza medidas relativas de atitude, obtidas pelo sensor LIDAR, para orientar a espaçonave em direção à porta de acoplamento.
+
+Durante a fase de aproximação curta, a orientação é refinada para que o eixo de acoplamento do visitante coincida com o do alvo, dentro de uma tolerância angular reduzida.
+O MR é posicionado de modo que sua ferramenta de acoplamento se estenda ao longo do eixo radial para acoplar a ferramenta na interface mecânica.

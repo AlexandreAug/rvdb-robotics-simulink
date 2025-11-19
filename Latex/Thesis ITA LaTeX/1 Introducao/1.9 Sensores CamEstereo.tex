@@ -1,0 +1,15 @@
+Para obtenção de dados visuais, um sistema de câmeras com capacidades estéreo são utilizadas, elas podem rastrear a posição e orientação relativa de um veículo alvo.
+
+\subsection{Câmera Stereo}
+
+Conforme explicado por \cite{esaMarsExpress}, a \emph{High Resolution Stereo Camera (HRSC)}, a bordo da missão \emph{Mars Express} da ESA auxiliou no mapeamento detalhado da superfície marciana.
+Originalmente projetada para a missão russa \emph{Mars '96}, a câmera foi adaptada para a missão europeia após o fracasso do lançamento da sonda russa em novembro de 1996.
+Além disso, uma versão terrestre, denominada HRSC-AX, foi desenvolvida para aplicações de reconhecimento tridimensional de alta resolução na Terra.
+O sistema é composto por dois módulos principais: a Câmera Principal e o \emph{Super Resolution Channel (SRC)}, que realiza a captura de imagens com resolução de até 2,3 metros por pixel. Sua maior utilização é para as análises detalhadas de áreas de interesse terrestres.
+
+O sistema óptico da HRSC é baseado no princípio de câmera de varredura linear (\emph{linescan}), onde apenas uma linha de sensores é exposta à luz de cada vez, ao contrário das câmeras tradicionais que capturam imagens em áreas inteiras simultaneamente.
+A HRSC possui canais específicos para diferentes espectros de luz, incluindo vermelho, verde, azul e infravermelho próximo.
+Além disso, conta com três canais estereoscópicos que capturam imagens anguladas para a construção de modelos digitais de terreno, enquanto que dois canais fotométricos coletam dados sobre as propriedades físicas da superfície marciana. 
+A combinação desses dados permite a geração de imagens tridimensionais e análises detalhadas da geologia e morfologia de Marte \cite{esaMarsExpress}.
+
+% O SRC, parte complementar do sistema, opera de maneira diferente da HRSC principal, utilizando um sensor de área em vez de uma varredura linear. Esse sensor é composto por uma matriz de 1024 x 1032 elementos, capturando imagens de alta resolução que cobrem aproximadamente 2,35 km² na superfície de Marte, com cada pixel representando 2,3 metros. Normalmente, ambos os sistemas operam simultaneamente, garantindo que as imagens do SRC sejam aninhadas nas faixas de imagens da HRSC. Esse método facilita a localização precisa das imagens de alta resolução no contexto do mapeamento global de Marte, permitindo a identificação de potenciais locais de pouso para futuras missões e a investigação de feições geológicas de interesse \cite{esaMarsExpress}.

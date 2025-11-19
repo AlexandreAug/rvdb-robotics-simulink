@@ -1,0 +1,58 @@
+\subsubsection{Momento angular do sistema base--manipulador}
+\label{sec:dinAcoplada_momento_angular}
+
+Para fins de análise física e verificação da conservação de momento angular, introduz-se o cálculo explícito do momento angular total da espaçonave (base mais \gls{mr}) em relação à origem do referencial da base $\{B\}$.
+O momento angular da base é obtido diretamente a partir da velocidade angular $\dot{\vec q}_B$ e do tensor de inércia da base expresso em $\{B\}$, conforme \cite{spong2006robot}:
+
+\begin{equation}
+\vec h_B
+=
+I_B\,\dot{\vec q}_B,
+\end{equation}
+
+onde $I_B$ é o tensor de inércia da base física $\{B\}$ em seu centro de massa.
+Segundo \cite{featherstone2008}, para cada elo $i$ do manipulador, a velocidade espacial em $\{B\}$ é escrita como
+
+\begin{equation}
+\vec V_i
+=
+J_i(\vec q)\,\dot{\vec q},
+\end{equation}
+
+em que $J_i(\vec q)$ é o jacobiano espacial avaliado no centro de massa do elo $i$ e $\dot{\vec q}$ reúne as velocidades generalizadas da base e das juntas.
+A inércia espacial do elo $i$ em relação à origem de $\{B\}$ é denotada por $M_{i,\text{spatial}}$.
+O momento espacial do elo, segundo \cite{featherstone2008} resulta em
+
+\begin{equation}
+\vec h_{i,\text{spatial}}
+=
+M_{i,\text{spatial}}\,\vec V_i,
+\end{equation}
+
+cuja parte angular corresponde às três últimas componentes de $\vec h_{i,\text{spatial}}$, em analogia à decomposição do momento espacial em componentes linear e angular adotada em \cite{lynch2017modern} e na escrita de
+$\bigl[P^{\mathsf T}\;L^{\mathsf T}\bigr]^{\mathsf T}$\fn{Onde $P$ é o momento linear total e $L$ representa o momentum angular total} para sistemas espaçonave--\gls{mr} em \cite{Wilde2018}:
+
+\begin{equation}
+\vec h_i
+=
+\begin{bmatrix}
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1
+\end{bmatrix}
+\vec h_{i,\text{spatial}}.
+\end{equation}
+
+O momento angular total do sistema base--manipulador em $\{B\}$ é então
+
+\begin{equation}
+\vec h_{\text{tot}}
+=
+\vec h_B
++
+\sum_{i=1}^{n_\ell} \vec h_i,
+\end{equation}
+
+onde $n_\ell$ é o número de elos do \gls{mr}.
+Essa expressão é consistente com a definição de momento espacial total como soma dos momentos de cada corpo rígido em sistemas de base flutuante \cite{featherstone2008}, bem como com a forma matricial do momento linear e angular combinados em sistemas espaçonave--manipulador.
+Em microgravidade, na ausência de torques externos resultantes, o momento total é conservado \cite{featherstone2008}, de modo que $\vec h_{\text{tot}}$ deve permanecer (integralmente) constante no tempo, o que fornece uma ferramenta conveniente de diagnóstico numérico para as simulações da dinâmica acoplada.

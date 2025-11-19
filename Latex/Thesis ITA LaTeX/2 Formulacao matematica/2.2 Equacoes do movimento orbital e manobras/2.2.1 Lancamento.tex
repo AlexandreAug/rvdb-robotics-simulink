@@ -1,0 +1,38 @@
+\section{Equações do Movimento Orbital e Manobras Associadas ao Problema de RVD/B}
+\label{sec:eq_mov_orbital_manobras}
+
+A formulação da dinâmica orbital no contexto de missões de RVD/B leva em consideração as diferentes fases da missão.
+Quando o lançamento atinge a altitude nominal, é realizada a injeção do perseguidor em órbita.
+Esses eventos levam em consideração os algoritmos previstos para a injeção em uma órbita adequada para iniciar as manobras relacionadas ao \gls{rvdb}.
+Neste trabalho, assume-se que o perseguidor  foi injetado em uma órbita estável, suficientemente próxima do alvo, de forma que a órbita de fase se inicie.
+O lançador no momento da injeção tem os vínculos de manutenção da coplanaridade orbital do perseguidor com o alvo, e ao ajuste do ângulo de fase para que ocorra a transição às etapas de encontro.
+Neste trabalho, a formulação matemática da dinâmica orbital  considera os vínculos de injeção inicial e as manobras de transferência, sempre de acordo com as condições ou restrições impostas pela missão de RVD/B.
+
+\subsection{Lançamento: vínculos associados às missões de RVD/B}
+\label{sec:lancamento_vinculos}
+
+O início da missão de RVD/B ocorre na etapa de lançamento, conforme ilustrado na Figura~\ref{fig:etapas_rvdb}.
+Nessa fase, a espaçonave perseguidora deve ser injetada em uma órbita compatível com a do alvo,para aproveitar a janela de lançamento planejada e evitar inserções em órbitas inadequadas, pois poderão demandar correções adicionais de trajetória.  
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\linewidth]{2 Formulacao matematica/Imagens/Lançamento quadro explicativo.png}
+\caption{Fases de uma missão de RVD/B, adaptado de \cite{fehse2003}.}
+\label{fig:etapas_rvdb}
+\end{figure}
+
+A definição da janela de lançamento deve respeitar a geometria orbital do alvo, permitindo que a espaçonave perseguidora seja inserida em condições próximas em termos de geometria do plano orbital, e em regime estável e estabilizada, dessa forma são estabelecidas as condições iniciais para a continuidade das fases subsequentes, como a órbita de fase, aproximação e acoplamento.
+
+\subsubsection{Detalhes sobre a geometria da órbita do perseguidor}
+
+Para que o veículo lançador insira a espaçonave perseguidora na órbita de injeção desejada, é necessário fornecer os elementos orbitais \cite{vallado2007fundamentals} de injeção ou o vetor posição--velocidade no referencial inercial (ECI) .
+Neste trabalho foram considerados os elementos orbitais clássicos $(a, e, i, \Omega, \omega, M)$ e o vetor posição no referencial inercial no instante de injeção orbital e as restrições operacionais de atitude, velocidade relativa e perfil de separação.
+Além disso, as condições para que a injeção orbital seja considerada válida incluem:
+
+\begin{enumerate}[label=(\roman*)]
+    \item o correto posicionamento no semi-eixo maior e que a excentricidade estejam dentro das tolerâncias especificadas;
+    \item coincidência da inclinação e da ascensão reta do nó ascendente para que haja coplanaridade entre as órbitas;
+    \item fase orbital correta no momento da separação;
+\end{enumerate}
+
+% \cite{bate1971fundamentals, vallado2007fundamentals, curtis2010orbital}.

@@ -1,0 +1,56 @@
+\subsubsection{Energia cinética}
+\label{sec:dinAcoplada_energia_cinetica}
+
+A energia cinética total é escrita como a soma das contribuições da base e dos $n_\ell$ elos do manipulador robótico
+
+\begin{equation}
+T = T_{B} + \sum_{i=1}^{n_\ell} T_{i},
+\label{eq:T_total}
+\end{equation}
+
+onde $T_B$ é a energia cinética translacional e rotacional da base e $T_i$ é a energia cinética do $i$-ésimo elo, expressas no referencial da base $\{B\}$, com $n_\ell = 3$ para o \gls{mr} deste trabalho.
+A energia cinética da base é escrita, no caso em que apenas a atitude é considerada como grau de liberdade dinâmico, como
+
+\begin{equation}
+T_{B} =
+\frac{1}{2}\, {}^{B}\!\vec\omega_{B}^{\,T}\, I_B\, {}^{B}\!\vec\omega_{B},
+\label{eq:TB}
+\end{equation}
+
+em que $\mathbf{I}_B$ é o tensor de inércia da base em torno do seu centro de massa, expresso no referencial $\{B\}$.
+No modelo adotado, a base física não possui graus de liberdade translacionais na formulação acoplada, uma vez que a translação é descrita separadamente pelo movimento orbital relativo em \gls{lvlh}.
+Então, apenas o termo rotacional associado à velocidade angular ${}^{B}\!\vec\omega_B$ contribui para a energia cinética e para a matriz de inércia generalizada $M(\vec q)$.
+
+\begin{equation}
+T_i =
+\frac{1}{2} m_i\, {}^{B}\!\vec v_{G_i}^{\,T} {}^{B}\!\vec v_{G_i}
++
+\frac{1}{2} {}^{B}\!\vec\omega_i^{\,T} I_i {}^{B}\!\vec\omega_i,
+\label{eq:Ti}
+\end{equation}
+
+onde ${}^{B}\!\vec v_{G_i}$ e ${}^{B}\!\vec\omega_i$ são a velocidade linear do centro de massa e a velocidade angular do elo $i$, obtidas a partir do Jacobiano acoplado da Seção~\ref{sec:cinematica_diferencial_jacobiano}.
+
+Agrupando-se as velocidades generalizadas no vetor
+
+\begin{equation}
+\dot{\vec y}
+=
+\begin{bmatrix}
+{}^{B}\!\vec\omega_{B} \\
+\dot{\vec q}
+\end{bmatrix}
+\in \mathbb{R}^{6}, 
+\end{equation}
+
+a energia cinética total pode ser escrita de forma compacta como
+
+\begin{equation}
+T =
+\frac{1}{2}\,\dot{\vec y}^{\,T}\,
+M(\vec q)\,
+\dot{\vec y},
+\label{eq:T_quadratica_Mq}
+\end{equation}
+
+em que $M(\vec q)\in\mathbb{R}^{6\times 6}$ é a matriz de inércia generalizada do conjunto base--manipulador, construída a partir das contribuições da base e dos elos segundo as expressões \eqref{eq:TB} e \eqref{eq:Ti}.

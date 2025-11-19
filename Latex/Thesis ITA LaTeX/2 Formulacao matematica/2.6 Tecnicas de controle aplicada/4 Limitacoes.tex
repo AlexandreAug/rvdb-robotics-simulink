@@ -1,0 +1,13 @@
+\subsubsection{Limitações}
+
+Conforme explicado por \cite{qi2022variable}, a principal limitação de um controlador \gls{pd} pode ser resumida em:
+
+\begin{enumerate}[label=(\roman*)]
+  \item a taxa de convergência do sistema é relativamente baixa em comparação com os métodos de controle atuais, como o \gls{lqr};
+  \item a capacidade de resistência a perturbações do sistema também é baixa;
+  \item o sistema é sensível a torques de perturbação.
+\end{enumerate}
+
+Para lidar com o primeiro problema, um método comum envolve o aumento dos parâmetros de ganho de controle, o que pode agravar o segundo problema.
+Além disso, um método comum para lidar com o segundo problema é adicionar um termo integral ao controlador PD, ou seja, projetar um algoritmo de controle PID, o que pode diminuir a taxa de convergência do sistema e agravar o primeiro problema.
+Com base na discussão acima, pode-se constatar que esses problemas estão profundamente interligados e são difíceis de resolver com base em métodos padrão \cite{qi2022variable}.

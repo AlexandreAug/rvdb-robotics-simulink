@@ -1,0 +1,43 @@
+\subsection{Equações do Movimento da Atitude Relativa entre as espaçonaves perseguidor e alvo}
+
+A atitude relativa entre duas espaçonaves descreve a orientação do perseguidor em relação ao alvo.
+Essa relação de atitude fornece medidas de erro de atitude para que a lei de controle possa corrigir as orientações relativas.
+Sejam $q_a$ e $q_p$ os quaternions unitários das espaçonaves alvo e perseguidor, ambos definidos em relação ao mesmo referencial inercial, a orientação relativa pode ser expressa por \cite{na2019vision}:
+
+\begin{equation}
+    \label{eq:quat_relativo}
+q_{rel}
+=
+q_a \otimes q_p^{-1},
+\end{equation}
+
+onde o termo $q_p^{-1}$ é o inverso do quaternion do perseguidor, $q_a$ é o quaternion do alvo, e $\otimes$ é o produto de quaternions.
+Ademais, a atitude relativa não corresponde à atitude absoluta do perseguidor nem a do alvo, mas à diferença entre ambas em relação ao ECI. 
+Similarmente, ao movimento relativo de posição, definido pela subtração dos vetores $\vec r_p - \vec r_a$, a atitude relativa resulta da combinação de duas atitudes absolutas expressas em quaternions. 
+A condição de sincronização em uma missão de RVD/B ocorre quando o quaternion relativo converge para a identidade unitária:
+
+\begin{equation}
+\label{eq:qrel_sincronizacao}
+q_{rel} \;\;\longrightarrow\;\; 
+\begin{bmatrix}1 \\ 0 \\ 0 \\ 0\end{bmatrix}.
+\end{equation}
+
+Isso significa que a orientação do perseguidor se tornou idêntica à orientação do alvo. 
+Portanto, o erro de atitude é zero, e as espaçonaves estão alinhadas.
+Sendo assim, o quaternion $q_{rel}$ representa a rotação necessária para alinhar as espaçonaves.
+A parte escalar $q_{rel}$ é descrita por:
+
+\begin{equation}
+q_{rel} =
+\begin{bmatrix}
+\cos\!\left(\tfrac{\alpha}{2}\right) \\[4pt]
+\vec{u}\,\sin\!\left(\tfrac{\alpha}{2}\right)
+\end{bmatrix},
+\end{equation}
+
+onde $\alpha$ é o ângulo relativo entre os dois referenciais e $\vec u$ é o eixo unitário da rotação.
+
+% \subsubsection{Controle e o erro de atitude}
+% A formulação da atitude relativa define o erro de orientação em malhas de controle. 
+% A partir de $q_{rel}$, é extraído o vetor de erro de atitude $\vec e_q$ e ao combiná-lo com o erro de velocidade angular, obtém-se a correção necessário para o controle aplicar e assim permanece em iteração. 
+% Esse procedimento permite que o controlador atue em direção ao menor ângulo de rotação, evitando ambiguidades na representação dos quaternions.

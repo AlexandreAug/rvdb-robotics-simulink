@@ -1,0 +1,96 @@
+\subsubsection{Quaternions e justificativa de sua utilização}
+\label{sec:representacao_quaternion}
+ 
+Nessas condições, o uso de quaternions evita essas descontinuidades ao representar rotações por meio de uma álgebra estendida em quatro dimensões, definida sobre o conjunto dos quaternions unitários $q = [q_0,\,\vec{q}\,]$, com $||q||=1$. 
+Cada quaternion unitário corresponde a uma rotação de ângulo $\theta$ em torno de um eixo unitário $\vec{u}$, expressa como
+
+\begin{equation}
+q(\theta, \vec{u}) = \cos\!\left(\frac{\theta}{2}\right) + \sin\!\left(\frac{\theta}{2}\right)\vec{u}.
+\label{eq:quat_axis_angle}
+\end{equation}
+
+Essa formulação fornece uma parametrização global, livre de singularidades e numericamente estável, adequada para integração contínua das equações diferenciais de atitude. 
+Além disso, a normalização unitária dos quaternions elimina redundâncias e permite obter consistência numérica mesmo em simulações de longa duração.
+
+Do ponto de vista físico, os quaternions preservam a norma vetorial e realizam rotações por multiplicação direta e asseguram uma transição suave entre orientações. 
+Apesar de exigirem um número maior de variáveis em comparação aos ângulos de Euler, sua principal vantagem reside na ausência de singularidades e na facilidade de implementação computacional de operações de rotação e diferenciação \cite{gonzalez2025quaternionic}.
+
+Por essas razões, a formulação cinemática e dinâmica de atitude adotada neste trabalho utiliza quaternions unitários, tanto para a base da espaçonave perseguidora quanto para as transformações locais das juntas do \gls{mr}, evitando ambiguidades associadas a parametrizações angulares e garantindo continuidade global na descrição do movimento.
+
+\subsubsection{Definição e componentes do quaternion}
+\label{sec:componentes_quaternion}
+
+O espaço quaternional é um espaço vetorial de quatro dimensões, composto por um elemento escalar e três elementos imaginários mutuamente ortogonais, $\{i, j, k\}$, que obedecem às regras de multiplicação de \cite{hamilton1844imaginary}:
+
+\begin{equation}
+i^2 = j^2 = k^2 = ijk = -1,
+\label{eq:hamilton_rules}
+\end{equation}
+
+\begin{equation}
+ij = k,\quad jk = i,\quad ki = j,\qquad ji = -k,\quad kj = -i,\quad ik = -j.
+\label{eq:hamilton_products}
+\end{equation}
+
+Um quaternion pode ser escrito como
+\begin{equation}
+q = q_0 + q_1 i + q_2 j + q_3 k,
+\label{eq:quaternion_forma}
+\end{equation}
+ou, de forma vetorial compacta,
+\begin{equation}
+q = [\,q_0,\,\vec{q}\,] = [\,q_0,\,q_1,\,q_2,\,q_3\,],
+\label{eq:quaternion_wxyz}
+\end{equation}
+em que $q_0$ é a parte escalar e $\vec{q} = [q_1, q_2, q_3]$ é a parte vetorial.  
+No contexto deste trabalho, será adotada a notação $[w, x, y, z]$ para indicar explicitamente a convenção $\{q_0, q_1, q_2, q_3\} = \{w, x, y, z\}$, em conformidade com o formato usualmente utilizado em aplicações aeroespaciais e robóticas.
+A magnitude (ou norma) de um quaternion é definida como
+
+\begin{equation}
+\|q\| = \sqrt{q_0^2 + q_1^2 + q_2^2 + q_3^2},
+\label{eq:norma_quaternion}
+\end{equation}
+
+e o quaternion unitário é obtido normalizando-se $q$ tal que $\|q\|=1$.
+A relação entre os quaternions e a velocidade angular é obtida a partir da equação cinemática diferencial \cite{wie2008space}, expressa como
+
+\begin{equation}
+\begin{bmatrix}
+\dot{q}_1 \\[2pt]
+\dot{q}_2 \\[2pt]
+\dot{q}_3 \\[2pt]
+\dot{q}_4
+\end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix}
+0 & \omega_z & -\omega_y & \omega_x \\
+-\omega_z & 0 & \omega_x & \omega_y \\
+\omega_y & -\omega_x & 0 & \omega_z \\
+-\omega_x & -\omega_y & -\omega_z & 0
+\end{bmatrix}
+\begin{bmatrix}
+q_1 \\ q_2 \\ q_3 \\ q_4
+\end{bmatrix}.
+\label{eq:cinematica_quaternion}
+\end{equation}
+
+De forma compacta, a equação cinemática diferencial dos quaternions pode ser escrita como
+
+\begin{equation}
+\dot{\mathbf{q}} = \tfrac{1}{2}\,\boldsymbol{\Omega}(\vec{\omega})\,\mathbf{q},
+\label{eq:quat_compacta}
+\end{equation}
+
+em que $\mathbf{q} = [\,q_1,\,q_2,\,q_3,\,q_4\,]^T$ e a matriz $\boldsymbol{\Omega}(\vec{\omega})$ é definida por
+
+\begin{equation}
+\boldsymbol{\Omega}(\vec{\omega}) =
+\begin{bmatrix}
+0 & \omega_z & -\omega_y & \omega_x \\
+-\omega_z & 0 & \omega_x & \omega_y \\
+\omega_y & -\omega_x & 0 & \omega_z \\
+-\omega_x & -\omega_y & -\omega_z & 0
+\end{bmatrix}.
+\label{eq:Omega_omega}
+\end{equation}

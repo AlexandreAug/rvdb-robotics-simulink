@@ -1,0 +1,61 @@
+\subsubsection{Ângulos de Euler}
+\label{sec:angulos_euler}
+
+Assim como a matriz de cossenos diretores, a orientação de um referencial $B$ em relação a outro $A$ pode ser descrita em função dos ângulos de Euler.
+Estes ângulos definem uma sequência de rotações sucessivas em torno de eixos predefinidos.
+As rotações descrevem a transformação do referencial inercial $A$ até o sistema do corpo $B$ por meio de três ângulos independentes $(\theta_1, \theta_2, \theta_3)$ \cite{wie2008space}.
+A velocidade angular $\vec{\omega}^{B/A}$ pode ser expressa em função das derivadas temporais desses ângulos (taxas de Euler):
+
+\begin{equation}
+\vec{\omega}^{B/A} =
+\dot{\theta}_1 \vec{x}_B +
+\dot{\theta}_2 \vec{y}\,'_B +
+\dot{\theta}_3 \vec{z}_A
+\end{equation}
+
+onde $\vec{x}_B$, $\vec{y}_B$ e $\vec{z}_B$ são os eixos do corpo $B$, enquanto $\vec{x}_A$, $\vec{y}_A$ e $\vec{z}_A$ pertencem ao referencial inercial $A$.
+O eixo $\vec{y}\,'_B$ representa o eixo intermediário obtido após a segunda rotação da sequência de Euler.
+A relação entre as componentes da velocidade angular e as taxas de variação dos ângulos de Euler pode ser escrita matricialmente como
+
+\begin{equation}
+\begin{bmatrix}
+\omega_x \\ \omega_y \\ \omega_z
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & -\sin\theta_2 \\
+0 & \cos\theta_1 & \sin\theta_1 \cos\theta_2 \\
+0 & -\sin\theta_1 & \cos\theta_1 \cos\theta_2
+\end{bmatrix}
+\begin{bmatrix}
+\dot{\theta}_1 \\ \dot{\theta}_2 \\ \dot{\theta}_3
+\end{bmatrix}
+\label{eq:cinematica_euler}
+\end{equation}
+
+A inversa dessa relação fornece as equações diferenciais cinemáticas dos ângulos de Euler
+
+\begin{equation}
+\begin{bmatrix}
+\dot{\theta}_1 \\ \dot{\theta}_2 \\ \dot{\theta}_3
+\end{bmatrix}
+=
+\frac{1}{\cos\theta_2}
+\begin{bmatrix}
+\cos\theta_2 & \sin\theta_1 \sin\theta_2 & \cos\theta_1 \sin\theta_2 \\
+0 & \cos\theta_1 \cos\theta_2 & -\sin\theta_1 \cos\theta_2 \\
+0 & \sin\theta_1 & \cos\theta_1
+\end{bmatrix}
+\begin{bmatrix}
+\omega_x \\ \omega_y \\ \omega_z
+\end{bmatrix}
+\label{eq:euler_inversa}
+\end{equation}
+
+Essa formulação adota a convenção de rotações extrínsecas $X$--$Y$--$Z$, 
+na qual as rotações são aplicadas sequencialmente em torno dos eixos fixos $x$, $y$ e $z$, nessa ordem. 
+A composição matricial correspondente é
+$\mathbf{C} = \mathbf{C}_z(\theta_3)\mathbf{C}_y(\theta_2)\mathbf{C}_x(\theta_1)$,
+onde a multiplicação é realizada da direita para a esquerda.
+Entretanto, a matriz da equação \eqref{eq:cinematica_euler} torna-se singular para $\theta_2 = \pm 90^\circ$, fenômeno conhecido como singularidade cinemática ou \textit{Gimbal Lock}, no qual dois eixos de rotação tornam-se colineares e o sistema perde um grau de liberdade.  
+Essa limitação motiva o uso de representações alternativas, como os quaternions.

@@ -1,0 +1,99 @@
+\subsection{Definição de Estados e Variáveis de Controle}
+\label{sec:var_estado_controle}
+
+Para este trabalho, um conjunto de variáveis de estado que descrevem a dinâmica orbital, a atitude e os elos do \gls{mr} foram estabelecidos.
+
+\subsubsection{Definição de estados}
+O vetor de estados reúne as 19 variáveis necessárias para descrever completamente o movimento da espaçonave perseguidora e do manipulador robótico acoplado, conforme a Tabela~\ref{tab:vetor_estados}.
+
+\begin{table}[ht]
+\centering
+\caption{Composição do vetor de estados $\mathbf{x}$ (dimensão total: 19).}
+\label{tab:vetor_estados}
+\begin{tabular}{lll}
+\toprule
+\textbf{Grupo} & \textbf{Variáveis} & \textbf{Descrição} \\ 
+\midrule
+Translacional &
+$\vec{r} = [x, y, z]^T$ &
+Posição \\[2pt]
+ &
+$\vec{v} = [\dot{x}, \dot{y}, \dot{z}]^T$ &
+Velocidade linear \\[3pt]
+Atitude &
+$\mathbf{q} = [q_0, q_1, q_2, q_3]^T$ &
+Quaternion unitário \\[2pt]
+ &
+$\vec{\omega} = [\omega_x, \omega_y, \omega_z]^T$ &
+Velocidade angular \\[3pt]
+Manipulador robótico &
+$\boldsymbol{\theta} = [\theta_1, \theta_2, \theta_3]^T$ &
+Posições articulares \\[2pt]
+ &
+$\dot{\boldsymbol{\theta}} = [\dot{\theta}_1, \dot{\theta}_2, \dot{\theta}_3]^T$ &
+Velocidades articulares \\[2pt]
+\bottomrule
+\end{tabular}
+\end{table}
+
+As variáveis translacionais $\vec{r}$ e $\vec{v}$ representam a posição e a velocidade do centro de massa da base da espaçonave em relação ao referencial do alvo e são utilizadas na formulação da dinâmica e nas equações de movimento relativo entre os veículos.
+
+O conjunto $\{\vec{q},\,\vec{\omega}\}$ descreve a atitude e o movimento rotacional da espaçonave perseguidora.  
+O quaternion $\vec{q}$ fornece a orientação do corpo em relação ao alvo, sendo utilizado na integração das equações cinemáticas de atitude.  
+Por sua vez, a velocidade angular $\vec{\omega}$ é utilizada tanto na equação de Euler quanto na formulação Lagrangeana, sendo as componentes do vetor de rotação instantânea do corpo.
+
+
+Por fim, as variáveis $\vec{\theta}$ e $\dot{\vec{\theta}}$ descrevem o estado articular do \gls{mr}.  
+São usados nas equações cinemáticas e dinâmicas do manipulador, influenciando na variação temporal do tensor de inércia total da espaçonave e o acoplamento dinâmico entre base e elos.  
+Sendo assim, o vetor de estados fornece um conjunto estados capaz de alimentar tanto a dinâmica de Euler (modo não-operacional do manipulador robótico) quanto a de Lagrange (modo acoplado base--manipulador robótico).
+
+\subsubsection{Variáveis de controle}
+As variáveis de controle listadas na Tabela~\ref{tab:torques_aceleracoes} representam as grandezas atuantes e resultantes nas equações dinâmicas da espaçonave perseguidora.  
+
+\begin{table}[ht]
+\centering
+\caption{Variáveis de controle e resposta dinâmica.}
+\label{tab:torques_aceleracoes}
+\begin{tabular}{lll}
+\toprule
+\textbf{Grupo} & \textbf{Símbolo} & \textbf{Descrição} \\ 
+\midrule
+Controle de atitude &
+$\vec{\tau}_{base}$ &
+Torques aplicados à base \\[2pt]
+ &
+$\dot{\vec{\omega}}$ &
+Acelerações angulares resultantes \\[3pt]
+Controle das juntas &
+$\vec{\tau}_{juntas}$ &
+Torques nas juntas do MR \\[2pt]
+ &
+$\ddot{\boldsymbol{\theta}}$ &
+Acelerações articulares resultantes \\[2pt]
+\bottomrule
+\end{tabular}
+\end{table}
+
+Os torques $\vec{\tau}_{\text{atitude}}$ e $\vec{\tau}_{\text{juntas}}$ constituem as entradas de controle do sistema, produzidas pelos controladores PD de atitude e de juntas, respectivamente.  
+Esses torques são aplicados à base e aos elos do manipulador robótico e correspondem às forças efetivas responsáveis pela geração de movimento rotacional no sistema acoplado.
+
+As acelerações $\dot{\vec{\omega}}_{\text{base}}$ e $\ddot{\vec{\theta}}$ são obtidas como saídas diretas das equações diferenciais de movimento, derivadas a partir da formulação de Euler ou de Lagrange.  
+Enquanto a dinâmica de Euler considera apenas o movimento de atitude da base (sem acoplamento com o \gls{mr}), a formulação de Lagrange incorpora os efeitos de inércia cruzada, permitindo calcular as acelerações da base e das juntas de forma simultânea.
+% A relação entre torques e acelerações é mediada pela matriz de inércia generalizada $\mathbf{M}(\mathbf{q})$ e pelos termos de Coriolis e centrífuga $\mathbf{C}(\mathbf{q}, \dot{\mathbf{q}})$, segundo a equação matricial
+
+% \begin{equation}
+% \mathbf{M}(\mathbf{q})\,\ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) = \boldsymbol{\tau},
+% \label{eq:lagrange_forma_compacta}
+% \end{equation}
+
+% onde $\ddot{\mathbf{q}} = [\dot{\vec{\omega}}_{\text{base}}^T,\, \ddot{\boldsymbol{\theta}}^T]^T$ é o vetor de acelerações generalizadas e $\boldsymbol{\tau} = [\boldsymbol{\tau}_{\text{atitude}}^T,\, \boldsymbol{\tau}_{\text{juntas}}^T]^T$ o vetor de torques aplicados.  
+% Dessa forma, as variáveis de controle estão diretamente associadas à excitação dinâmica do sistema, determinando sua resposta em atitude e nas articulações do manipulador.
+O modelo dinâmico considerado integra diferentes subsistemas, como:
+\begin{enumerate}[label=(\roman*)]
+    \item as equações de \gls{hcw} linearizadas para a descrição do movimento relativo;
+    \item as equações de atitude baseadas na cinemática dos quaternions;
+    \item a dinâmica do corpo rígido de Euler;
+    \item a dinâmica acoplada de Lagrange;
+    \item a dinâmica do \gls{mr} acoplado à base da espaçonave.
+\end{enumerate}
+

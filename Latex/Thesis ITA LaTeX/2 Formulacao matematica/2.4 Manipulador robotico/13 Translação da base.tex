@@ -1,0 +1,10 @@
+\subsubsection{Translação da base}
+No modelo adotado, a base física $\{B\}$ não possui graus de liberdade translacionais explícitos nas equações de Lagrange da dinâmica acoplada.
+A translação do centro de massa da espaçonave é descrita separadamente pelas equações do movimento orbital relativo, apresentadas na Seção~\ref{sec:movimento_orbital_relativo}, de modo que o vetor de coordenadas generalizadas associado à dinâmica base--manipulador reúne apenas as variáveis de atitude da base e as juntas do \gls{mr}.
+Sendo assim, não se introduz coordenada de posição adicional para a base no modelo acoplado e, consequentemente, a aceleração generalizada correspondente é tomada como nula,
+
+\begin{equation}
+\ddot{\vec r}_{B,\text{gen}} = \vec 0.
+\end{equation}
+
+Com essa restrição, a dinâmica acoplada atua exclusivamente sobre a atitude da base e sobre as juntas do manipulador. Essa escolha elimina a necessidade de modelar os seis graus de liberdade completos da espaçonave nas equações de Lagrange e mantém a formulação coerente com o regime de microgravidade e com a cinemática relativa em \gls{lvlh}, na qual a translação global é governada pelas equações orbitais, enquanto apenas os efeitos internos de acoplamento rotacional influenciam a evolução do sistema.

@@ -1,0 +1,50 @@
+
+\subsubsection{Controle das juntas do manipulador robótico}
+\label{sec:controle_PD_juntas}
+
+O \gls{mr} acoplado à base $\{B\}$ possui 3 graus de liberdade rotacionais, descritos pelas coordenadas generalizadas
+
+\begin{equation}
+\vec\theta =
+\begin{bmatrix}
+\theta_1 \\ \theta_2 \\ \theta_3
+\end{bmatrix},
+\end{equation}
+
+e por suas respectivas velocidades articulares $\dot{\vec\theta}$.
+As referências articulares são denotadas por
+
+\begin{equation}
+\vec\theta_{\text{ref}} =
+\begin{bmatrix}
+\theta_{1,\text{ref}} \\
+\theta_{2,\text{ref}} \\
+\theta_{3,\text{ref}}
+\end{bmatrix},
+\end{equation}
+
+que são obtidas a partir da solução do problema de cinemática inversa, conforme a Seção~\eqref{sec:cinematica_inversa}, do efetuador para uma trajetória desejada de aproximação e alinhamento com a porta de acoplamento.
+Define-se o erro articular e sua derivada como
+
+\begin{equation}
+\vec e_\theta = \vec\theta - \vec\theta_{\text{ref}},
+\qquad
+\dot{\vec e}_\theta = \dot{\vec\theta} - \dot{\vec\theta}_{\text{ref}},
+\end{equation}
+
+em que as referências de velocidade $\dot{\vec\theta}_{\text{ref}}$ são nulas ou variam lentamente, caracterizando trajetórias suavizadas para o manipulador.
+A lei de controle PD em espaço de juntas é então escrita como
+
+\begin{equation}
+\vec\tau_\theta
+=
+- K_{p,\theta}\,\vec e_\theta
+- K_{d,\theta}\,\dot{\vec e}_\theta,
+\label{eq:controle_PD_juntas}
+\end{equation}
+
+onde $\vec\tau_\theta$
+é o vetor de torques nas juntas,
+e $K_{p,\theta}$, $K_{d,\theta}$
+são matrizes com os ganhos de posição e velocidade, respectivamente.
+Neste contexto, o \gls{mr} é controlado no espaço de juntas \cite{craig2005}, enquanto o vínculo com o espaço operacional (posição e orientação do efetuador em relação à porta de acoplamento) é realizado pela cinemática direta e inversa discutidas anteriormente.

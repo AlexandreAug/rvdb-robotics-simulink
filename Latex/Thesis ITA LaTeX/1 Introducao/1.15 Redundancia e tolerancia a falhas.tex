@@ -1,0 +1,35 @@
+\section{Redundância e tolerância a falhas}
+
+Utilizando arquiteturas de backup, os sistemas críticos possuem redundância em \emph{hardware} e \emph{software} para lidar com as falhas de componentes.
+
+\subsection{Redundância nos sistemas espaciais }
+
+Os estudos de \cite{sklaroff1976} dizem que o uso de sistemas redundantes em ambientes críticos ou de microgravidade tem sido utilizados para obter confiabilidade e tolerância a falhas.
+Quando se trata de sistemas de controle de voo, como os utilizados no ônibus espacial (\emph{Space Shuttle}), por exemplo, a redundância é utilizada para que funções essenciais sejam mantidas mesmo diante de falhas.
+O conjunto de computadores do ônibus espacial era composto por cinco unidades idênticas, sendo que quatro deles operavam de forma redundante para funções críticas de voo, enquanto que a quinta realizava tarefas de menor importância.
+Durante as missões em que a recuperação de falhas deveria ocorrer em frações de segundo, a redundância permitia comparações entre as saídas dos computadores identificassem possíveis falhas e assim, isolavam as unidades defeituosas para que a operação não parasse.
+
+A arquitetura dos computadores utilizavam um esquema de votação para validar os comandos e detectar as falhas.
+Quando dois computadores apresentavam resultados divergentes em relação aos demais, esses eram considerados defeituosos, e suas saídas ou resultados eram ignorados.
+O gerenciador de redundâncias incluía a capacidade de detectar e identificar falhas antes do lançamento ou durante a missão, no caso de falhas múltiplas, os computadores restantes utilizavam o autodiagnóstico para avaliar a continuidade operacional do sistema.
+Esse modelo de redundância proporcionava uma cobertura majoritária de falhas, reduzindo a probabilidade de perda do sistema devido a mau funcionamento de componentes isolados.
+
+A arquitetura computacional do ônibus espacial foi baseada em um conjunto de computadores IBM AP-101 \cite{ibm_space_shuttle}. Cada um continha uma unidade central de processamento e um processador de entrada e saída, conectados a barramentos seriais de comunicação.
+Os subsistemas do veículo espacial eram distribuídos entre barramentos redundantes, de forma que cada barramento possuía canais dedicados para comunicação com diferentes computadores.
+De forma que cada unidade recebesse os mesmos dados de entrada e produzisse comandos idênticos para os atuadores e sensores de bordo.
+
+A redundância nos sistemas de controle não se limitava ao \emph{hardware} computacional, mas também envolvia todos os sensores, atuadores e barramentos de dados.
+Alguns subsistemas mais importantes, como os atuadores das superfícies de controle e motores principais, operavam em canais redundantes e seus era comandos independentes, sendo gerados e comparados antes de serem executados. 
+Tal redundância evitava que falhas isoladas comprometessem a capacidade de controle da espaçonave, além disso, o uso de algoritmos de detecção de falhas permitia que comandos incoerentes fossem identificados e desconsiderados antes de afetar a operação da missão.
+
+Ademais, a gestão da redundância também incluía a sincronização de processos entre os computadores, como diferentes unidades podiam operar com baixas variações de tempo na execução de cálculos críticos, e era necessário garantir que todos os computadores sincronizassem seus estados periodicamente para evitar desvios no comportamento do sistema.
+Esse processo de sincronização era realizado por meio de sinais discretos e por um software especializado que coordenava a execução dos programas entre as unidades redundantes.
+Portanto, evitava-se que pequenas diferenças nos tempos de processamento levassem a falhas na coordenação entre os computadores do sistema.
+
+A definição de requisitos para o gerenciamento da redundância considerava critérios como simplicidade de hardware, flexibilidade operacional e baixa utilização de recursos computacionais.
+O principal requisito era a capacidade de identificar falhas antes do lançamento e durante a missão, garantindo que computadores defeituosos fossem isolados de forma eficiente.
+Era essencial que as falhas em um computador não resultassem na geração de comandos incorretos ou na identificação errônea de outras unidades como defeituosas.
+% Para atender a esses requisitos, foram desenvolvidos mecanismos que permitiam aos computadores do conjunto redundante avaliar continuamente o desempenho das demais unidades e ajustar o funcionamento do sistema conforme necessário.
+
+A redundância aplicada reflete um modelo de gestão de falhas para sistemas críticos, que combina \emph{hardware} redundante, algoritmos de detecção de falhas e técnicas de sincronização de processos.
+Esse modelo reduzia os riscos de falhas catastróficas durante as missões espaciais., e a experiência adquirida com essa abordagem contribuiu para o desenvolvimento de novas arquiteturas de sistemas tolerantes a falhas, influenciando projetos posteriores de veículos espaciais e sistemas aeronáuticos \cite{sklaroff1976}.

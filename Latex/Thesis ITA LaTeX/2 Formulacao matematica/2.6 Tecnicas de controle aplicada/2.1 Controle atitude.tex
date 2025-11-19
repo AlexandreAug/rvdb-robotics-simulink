@@ -1,0 +1,107 @@
+\subsubsection{Controle de atitude da base física}
+\label{sec:controle_PD_atitude}
+
+A atitude da base da espaçonave é descrita por um quaternion unitário, conforme a Equação \eqref{eq:qrel_sincronizacao}, ou seja:
+
+\begin{equation}
+\vec q_B =
+\begin{bmatrix}
+q_{B,w} \\
+q_{B,x} \\
+q_{B,y} \\
+q_{B,z}
+\end{bmatrix}.
+\end{equation}
+
+Por sua vez, a referência de atitude é a atitude da espaçonave alvo, sendo especificada por um quaternion desejado, como:
+
+\begin{equation}
+\vec q_{B,\text{ref}} =
+\begin{bmatrix}
+q_{B,w,\text{ref}} \\
+q_{B,x,\text{ref}} \\
+q_{B,y,\text{ref}} \\
+q_{B,z,\text{ref}}
+\end{bmatrix}.
+\end{equation}
+
+O erro da atitude da base física é obtido através da Equação \eqref{eq:quat_relativo}, ou seja:
+
+\begin{equation}
+\label{eq:controle_PD_quat}
+q_{rel} =
+q_a \otimes q_p^{-1}.
+\end{equation}
+
+A lei de controle PD de atitude utilizada neste trabalho atua diretamente sobre a parte vetorial do quaternion de erro e sobre a velocidade angular:
+
+\begin{equation}
+\vec\tau_B=
+-K_{p,B}
+\begin{bmatrix}
+q_{e,x} \\
+q_{e,y} \\
+q_{e,z}
+\end{bmatrix}
+-K_{d,B}
+\begin{bmatrix}
+\omega_x \\
+\omega_y \\
+\omega_z
+\end{bmatrix},
+\label{eq:controle_PD_atitude}
+\end{equation}
+
+em que \(K_{p,B}\) e \(K_{d,B}\) são matrizes de ganhos proporcionais e derivativos, respectivamente.
+Por sua vez, a velocidade angular da base, expressa em $\{B\}$, é escrita como
+
+\begin{equation}
+\vec\omega_B =
+\begin{bmatrix}
+\omega_x \\
+\omega_y \\
+\omega_z
+\end{bmatrix}.
+\end{equation}
+
+A ação de controle $\vec\tau_B$ é inserida no vetor de torques generalizados $\vec\tau$ das equações de movimento presentes nas Seções~\ref{sec:atitude_inercial} e~\ref{sec:dinAcoplada_equacoes_Lagrange}, especificamente nas Equações~\eqref{eq:euler_corpo_rigido} e~\eqref{eq:dinamica_geral}, já que as primeiras coordenadas generalizadas estão associadas à atitude da base, conforme a Seção~\ref{sec:var_estado_controle}.
+Dessa forma, o controlador PD opera diretamente sobre a parcela correspondente aos torques da base no vetor $\vec\tau$.
+
+Reorganizando os termos associados às coordenadas do \gls{mr} na Equação~\eqref{eq:dinAcoplada_base_compacta}, obtém-se a dinâmica da base explicitando o efeito de reação do manipulador:
+\begin{equation}
+M_{BB}(\vec q)\,\ddot{\vec q}_B
++
+C_{BB}(\vec q,\dot{\vec q})\,\dot{\vec q}_B
+=
+\vec\tau_B
+-
+\underbrace{\bigl[
+M_{B\theta}(\vec q)\,\ddot{\vec\theta}
++
+C_{B\theta}(\vec q,\dot{\vec q})\,\dot{\vec\theta}
+\bigr]}_{\displaystyle \vec\tau_{\text{reac}}},
+\label{eq:dina_base_reac_compacta}
+\end{equation}
+
+em que
+
+\begin{equation}
+\vec\tau_{\text{reac}}
+=
+M_{B\theta}(\vec q)\,\ddot{\vec\theta}
++
+C_{B\theta}(\vec q,\dot{\vec q})\,\dot{\vec\theta}
+\label{eq:def_tau_reac}
+\end{equation}
+
+representa o torque de reação na base devido ao movimento das juntas do manipulador.
+Durante o momento em que o \gls{mr} está fora de operação, ou seja, permanece travado em uma configuração fixa,
+
+\begin{equation}
+\dot{\vec\theta} = \vec 0,
+\qquad
+\ddot{\vec\theta} = \vec 0,
+\end{equation}
+
+tem-se $\vec\tau_{\text{reac}} = \vec 0$ e a Equação~\eqref{eq:dina_base_reac_compacta} reduz-se à dinâmica de um corpo rígido, em conformidade com a Equação~\eqref{eq:euler_corpo_rigido}.
+Quando o \gls{mr} se movimenta, os termos de acoplamento $M_{BM}$ e $C_{BM}$ passam a introduzir $\vec\tau_{\text{reac}}$ como perturbação interna, de modo que o controlador PD em \eqref{eq:controle_PD_atitude} deve simultaneamente reduzir o erro de atitude e compensar os torques de reação induzidos pelo manipulador, preservando o alinhamento da base requerido para a operação de ancoramento (\emph{berthing}).

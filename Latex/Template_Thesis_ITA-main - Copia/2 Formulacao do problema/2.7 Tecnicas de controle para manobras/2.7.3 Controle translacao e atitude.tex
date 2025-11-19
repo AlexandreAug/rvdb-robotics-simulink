@@ -1,7 +1,0 @@
-\subsection{Controle de translação e atitude}
-
-Durante a fase de longa distância, o controle de translação é realizado pelo controle PD, e é aplicado a cada eixo do movimento relativo no referencial LVLH.  
-O sinal de controle $u(t)$ fornece as forças de propulsão que compensam o erro de posição e velocidade em relação ao \emph{target}.  
-Para a malha de atitude, o controle também é baseado no controle PD e atua sobre o erro de orientação expresso em quaternion.  
-O torque de controle $\vec{\tau}$ é calculado na diferença do erro entre o quaternion de referência e o quaternion medido, e no vetor de velocidade angular.  
-Em regimes próximos ao acoplamento, o controlador pode incorporar técnicas de \emph{gain scheduling}, onde os ganhos são adaptados conforme a distância ou velocidade relativa, para que a aproximação seja suave e controlada.

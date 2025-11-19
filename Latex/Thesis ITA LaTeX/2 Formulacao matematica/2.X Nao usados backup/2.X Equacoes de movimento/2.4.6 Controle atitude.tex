@@ -1,0 +1,231 @@
+\section{Controle de Atitude}
+O controle de atitude de uma espaçonave consiste em projetar leis de realimentação capazes de estabilizar e orientar o corpo em torno de uma referência desejada.
+Nesta dissertação será empregado o controle proporcional-derivativo (PD), pela sua implementação direta e eficiência local de estabilização.
+
+% %==================================================
+% %----- Erro de atitude e PD
+% %==================================================
+\subsection{Erro de atitude e lei de controle PD}
+Sejam os quaternions unitários para a atitude atual e para a atitude desejada, respectivamente:
+\begin{equation}
+q = [q_0,q_x,q_y,q_z,]^T,
+\end{equation}
+
+\begin{equation}
+q_{ref} = [q_{0(ref)},q_{x(ref)},q_{y(ref)},q_{z(ref)}]^T,
+\end{equation}
+
+Define-se o quaternion de erro de atitude como:
+\begin{equation}
+q_e = q_{\mathrm{ref}}^{-1} \otimes q =
+[\,q_{e(0)},q_{e(x)},q_{e(y)},q_{e(z)}\,]^T,
+\label{eq:definicao_quaternion_erro}
+\end{equation}
+onde $\otimes$ é o produto de quaternions, e $[\,q_{e0},\vec\epsilon_e\,]^T$ suas partes escalar e vetorial, análogo a \eqref{eq:def_quaternion}.
+Para evitar que ocorra esforço de controle ineficiente adota-se o vetor de erro:
+\begin{equation}
+\vec e_q = 2\,sgn(q_{e0})\,\vec\epsilon_e,
+\label{eq:erro_quaternion_vetorial}
+\end{equation}
+
+em que $sgn(\cdot)$ é a função sinal, podendo se tornar um dos casos a seguir:
+
+\begin{equation}
+\operatorname{sgn}(x) =
+\begin{cases}
++1, & x > 0, \\
+0,  & x = 0, \\
+-1, & x < 0,
+\end{cases}
+\label{eq:casos_funcao_sinal}
+\end{equation}
+
+Como $q_e$ e seu negativo ($-q_e$) representam a mesma orientação física, existe um recobrimento extra na representação.
+O termo $sgn(q_{e})$ faz com que a parte escalar do quaternion de erro seja escolhida de forma consistente ($q_{e}\ge 0$), evitando o fenômeno conhecido como \emph{unwinding}, no qual o controlador tende a forçar uma rotação desnecessária de $360^{\circ}$ para atingir a referência.
+Portanto, o vetor de erro $\vec e_q$ em \eqref{eq:erro_quaternion_vetorial} fornece uma medida proporcional ao menor ângulo de rotação necessário para alinhar a base em relação à atitude de referência.
+
+\subsubsection{Velocidade angular}
+A velocidade angular de referência $\vec \omega_{ref}$ está no \emph{frame} analisado, podendo ser qualquer elo ou outra parte do manipulador robótico.
+Para compará-lo com a velocidade angular $\vec{\omega_b}$ da base, mapeia-se $\vec{\omega}_{ref}$ para o frame através da rotação associada ao erro:
+\begin{equation}
+\vec{\omega}_e \;=\; \vec{\omega} \;-\; \mathbf{R}(q_e)\,\vec{\omega}_{ref}.
+\label{eq:omega_e}
+\end{equation}
+onde $\vec \omega_e$ é o erro entre as velocidades angulares, $\vec \omega$ é a velocidade angular medida e
+$\vec \omega_{ref}$ a desejada.
+Com essa definição, a cinemática do erro é dada por:
+\begin{equation}
+\dot{q}_e \;=\; \tfrac{1}{2}\,\Omega(q_e)\,\vec{\omega}_e,
+\label{eq:qedot}
+\end{equation}
+onde $\Omega(\cdot)$ é o mapeamento apresentado em \eqref{eq:definicao_qdot}.
+Para manter a consistência numérica, normaliza-se periodicamente $q_e \leftarrow \frac{q_e}{\|q_e\|}$.
+
+A lei de controle PD para a atitude é dada por:
+\begin{equation}
+\vec{M} \;=\; -\,\mathbf{K}_p\,\vec{e}_q \;-\; \mathbf{K}_d\,\vec{\omega}_e,
+\label{eq:controle_PD_fundamental}
+\end{equation}
+com $\mathbf{K}_p={}^T\mathbf{K}_p \succ 0$ e $\mathbf{K}_d={}^T\mathbf{K}_d \succ 0$.
+
+% %==================================================
+% %----- Caso particular
+% %==================================================
+Para o caso particular onde $\vec{\omega}_{ref}=\vec{0}$, e
+$\vec{\omega}_e=\vec{\omega}$ poderá ser consultado no Apêndice \ref{ApendiceC}.
+
+% %==================================================
+% %----- PD veloc angular
+% %==================================================
+\subsection{PD aplicado às velocidades angulares}
+O controlador PD atua sobre a velocidade angular da espaçonave, buscando minimizar o erro entre a atitude desejada e a atual.
+Seja $\vec{\omega}_0$ a velocidade angular medida e $\vec{\omega}_1$ a velocidade angular desejada (referência).
+De forma similar a \eqref{eq:controle_PD_fundamental}, o controle de torque de controle pode ser expresso matematicamente como:
+\begin{equation}
+\vec{M}_{\text{PD}} = -K_p \, \vec{e}_q - K_d \, (\vec{\omega}_0 - \vec{\omega}_1),
+\label{eq:torque_PD}
+\end{equation}
+
+Onde $K_p$ e $K_d$ são os ganhos escalares de controle, e $\vec{e}_q$ representa o erro de atitude, que pode ser expresso em termos de quaternions ou ângulos de Euler linearizados.  
+Nesta dissertação, o erro de atitude será tratado em termos de quaternions, de modo a evitar singularidades associadas aos ângulos de Euler.
+
+% %==================================================
+% %----- Arquitetura geral
+% %==================================================
+\section{Arquitetura de controle base--manipulador}
+A arquitetura de controle adotada para a operação do manipulador em microgravidade contém três malhas principais: (i) o controle da atitude da base, (ii) o controle do manipulador com mínima reação, e (iii) o controle por torque nas juntas. Essas malhas operam de forma coordenada.
+
+\subsection{Controle de atitude da base}
+A primeira malha de controle é responsável por controlar a orientação da base do sistema.
+Neste trabalho foi adotada a convenção de Hamilton\fn{Detalhado anteriormente em \eqref{sec:Quaternions}}, assim, o erro de quaternion é dado por:
+\begin{equation}
+    q_e \;=\; q_{ref}^{-1} \otimes q_b \;=\;
+    \begin{bmatrix}
+        q_{e} \\[2pt] \vec {\epsilon}_e
+    \end{bmatrix},
+    \label{eq:erro_quaternion1}
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $q_{e}$ é a parte escalar do quaternion de erro e $\vec {\epsilon}_e$ é o vetor dos eixos associados;
+    \item $q_b$ é o quaternion da atitude da base;
+    \item $q_{\mathrm{ref}}$ é o quaternion de referência e $q_{ref}^{-1}$ o seu inverso;
+    \item $\vec e_q$ define o vetor de erro de atitude usado na realimentação.
+\end{itemize}
+
+
+Caso a referência apresente velocidade angular não nula, define-se também a velocidade de erro na mesma referência, como:
+\begin{equation}
+    \vec{\omega}_e \;=\; \vec{\omega}_b \;-\; \vec{\omega}_{\mathrm{ref}},
+    \label{eq:erro_velocidade}
+\end{equation}
+
+em que $\vec{\omega}_b$ é a velocidade angular da base e $\vec{\omega}_{\mathrm{ref}}$ a velocidade angular de referência.
+Com base nessas definições, a lei de controle proporcional-derivativa (PD) aplicada à base é
+
+\begin{equation}
+    \vec{\tau}_b=
+    -\,K_p\,\vec e_q
+    -K_d\,\vec\omega_e,
+    \label{eq:lei_controle_PD}
+\end{equation}
+
+onde $K_p$ e $K_d$ são os ganhos proporcionais e derivativos, respectivamente. 
+Neste trabalho o termo integral não é utilizado, de modo a evitar o acúmulo de erro ao longo do tempo (wind--up) 
+e por não ser usualmente empregado no ambiente espacial.
+
+
+\subsection{Controle do manipulador robótico com mínima reação}
+Durante a movimentação do manipulador robótico, busca-se minimizar o efeito de reação na base.
+Para isso, utiliza-se a projeção da tarefa secundária no espaço nulo da Jacobiana, mantendo o movimento do efetuador inalterado. O comando cinemático é dado por:
+\begin{equation}
+    \dot{\vec{q}}_j = \mathbf{J}^\# (\vec{v_E}^{ref}) +
+    \left( \mathbf{I}
+    -\mathbf{J}^\# \mathbf{J} \right)
+    \vec{z},
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $ \vec{v_E}^{ref} $ é a velocidade desejada do efetuador;
+    \item $ \mathbf{J}^\# $ é a pseudoinversa ponderada da Jacobiana;
+    \item $ \vec{z} $ é um vetor no espaço nulo, utilizado para tarefas secundárias.
+\end{itemize}
+
+A escolha de $ \vec{z} $ pode ser feita de acordo com o objetivo desejado, caso seja para outra função, pode-se selecionar outros termos em questão, no entanto, não serão tratados neste estudo.
+Caso seja para minimizar a reação na base, seleciona-se $ \vec{z} $ pertencente ao espaço nulo de uma matriz de acoplamento que relaciona $ \dot{\vec{q}}_j $ ao momento angular da base $ \vec{\omega}_b $.
+Já para evitar aproximações indesejadas aos limites físicos das juntas, pode-se adicionar um termo do tipo gradiente de barreira, definido por $ \vec{z} = -\nabla \Phi(\vec{q}_j) $, onde $ \Phi(\vec{q}_j) $ é uma função que penaliza a proximidade aos limites articulares.
+
+\subsection{Controle por torque nas juntas}
+A terceira malha é responsável pelo controle fino de cada junta do manipulador, aplicando torque para seguir a trajetória desejada. O controle PD é aplicado individualmente para cada junta $ j $:
+\begin{equation}
+\tau_j = -k_{p(j)} e_j - k_{d(j)} \dot{e}_(j).
+\label{eq:controle_PD_junta}
+\end{equation}
+
+Sendo:
+\begin{equation}
+e_j = q_{j(ref)} - q_j,
+\label{eq:erro_PD_junta1}
+\end{equation}
+
+\begin{equation}
+\dot{e}_j = \dot{q}_{j(ref)} - \dot{q}_j.
+\label{eq:erro_PD_junta2}
+\end{equation}
+
+Onde $ q_j $ e $ \dot{q}_j $ são a posição e velocidade atuais da junta, e os termos com subíndice \emph{ref} indicam os valores de referência.
+Adicionalmente, impõe-se saturação nos torques para respeitar os limites físicos de cada atuador:
+\begin{equation}
+|\tau_j| \leq \tau_{j(max)}
+\label{eq:saturacao_torque_junta}
+\end{equation}
+
+Por fim, é aplciado filtro no termo derivativo para reduzir o impacto de ruídos de medição. As trajetórias de referência $ q_{j,\text{ref}}(t) $ devem ser ao menos $ \mathcal{C}^2 $, como polinômios de quinta ordem, a fim de garantir suavidade nas acelerações.
+
+\subsection{Interação entre malhas}
+A malha de controle de atitude fornece o torque de estabilização $ \vec{\tau}_b $, enquanto o manipulador executa $ {\vec{v}_E}^{ref} $ projetado no espaço nulo da Jacobiana, de forma a evitar reações sobre a base.
+Por fim, a terceira malha de controle aplica os torques nas juntas $ \tau_j $, respeitando as restrições físicas (como zonas de exclusão, limites de torque e de velocidade), além de critérios de monitoramento contínuo durante a operação.
+Os limites físicos e operacionais do manipulador robótico podem ser consultados no Apêndice \ref{ApendiceB}.
+
+%==================================================
+% 2.x Mínima reação e momento angular da base
+%==================================================
+\section{Mínima reação e momento angular da base}
+
+No regime de microgravidade e na ausência de torques externos, o momento angular total do sistema em torno do centro de massa permanece constante. 
+A contribuição de reação sobre a base é representada por
+\begin{equation}
+\vec H_b(\vec q,\dot{\vec q})
+=
+\mathbf H_b(\vec q)\,\dot{\vec q},
+\label{eq:MomentoBase}
+\end{equation}
+em que $\mathbf H_b(\vec q)$ é a matriz de acoplamento base--juntas obtida a partir do momento cinético total. 
+A condição de mínima reação faz com que os movimentos de junta não produzam variações em $\vec H_b$, isto é:
+\begin{equation}
+\mathbf H_b(\vec q)\,\dot{\vec q} \;=\; \vec 0,
+\label{eq:RNS}
+\end{equation}
+o que caracteriza o subespaço nulo de reação
+(\emph{Reaction--Null Space}). 
+Na formulação de controle cinemático por tarefas, esta propriedade é compatível com as soluções por pseudo-inversa com projeção:
+a componente secundária no espaço nulo da tarefa principal (operador $\,\mathbf N=\mathbf I-\mathbf J^\#\mathbf J\,$)
+é escolhida de modo a satisfazer
+\eqref{eq:RNS}, preservando simultaneamente as restrições holonômicas e a estabilização de Baumgarte.
+
+
+%==================================================
+%----- Req projeto
+%==================================================
+\subsection{Requisitos de projeto dos ganhos do controlador PD}
+Os ganhos $K_p$ e $K_d$ do controlador PD devem ser projetados de forma a satisfazer critérios de desempenho bem definidos, como:
+
+(i) Deve possuir estabilidade assintótica em torno da orientação de referência, ou seja, a partir de qualquer pequena perturbação inicial, a atitude da espaçonave deve convergir ao estado desejado sem apresentar desvios residuais no regime permanente.
+
+(ii) Em seguida, o tempo de acomodação deve ser compatível com os requisitos da missão, ou seja, a resposta transitória precisa atingir a orientação de referência dentro de um intervalo de tempo determinado, permitindo que manobras de apontamento ou de acoplamento ocorram de forma correta.
+
+(iii) Outro aspecto essencial é a ausência de oscilações excessivas, o que corresponde a um amortecimento adequado da resposta. Oscilações significativas podem comprometer tanto a estabilidade numérica das simulações quanto causar colisões, além de dificultarem a operação do manipulador robótico acoplado.
+
+(iv) Por fim, deve-se possuir robustez frente a variações inerciais provocadas pelo movimento do manipulador. Como a distribuição de massa do sistema varia dinamicamente devido a movimentação das juntas, o controlador deve ser capaz de manter seu desempenho mesmo diante dessas mudanças, garantindo comportamento consistente em todas as fases da missão.

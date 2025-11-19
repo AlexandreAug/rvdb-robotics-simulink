@@ -1,0 +1,12 @@
+\subsection{Propósito e Arquitetura}
+\label{sec:proposito_arquitetura}
+
+Após a fase de aproximação final da espaçonave perseguidora em relação ao alvo, inicia-se a aproximação curta, onde o \gls{mr}, por meio de suas juntas revolutas, movimenta seus elos de modo que o efetuador $\{E\}$ se alinhe com a porta de acoplamento do alvo.
+Durante essa fase, o comando das juntas é obtido a partir de um modelo dinâmico acoplado base--manipulador, no qual o vetor de torques é particionado entre os atuadores de atitude da base e as juntas do \gls{mr}.
+
+Nessa etapa, a lei de controle das juntas atua de forma integrada às leis de controle de atitude e de movimento relativo da espaçonave, assegurando que a orientação da base permaneça alinhada à do alvo, mesmo diante dos torques gerados pela movimentação do manipulador.
+
+Em ambiente de microgravidade, a conservação do momento angular total acopla o movimento da base e do manipulador. 
+Assim, cada variação de configuração do \gls{mr} produz torques de reação que perturbam a atitude da base, exigindo uma compensação ativa para manter a orientação desejada. 
+Essa compensação é obtida por meio de uma lei de controle acoplado baseada no modelo de Lagrange do conjunto base--\gls{mr}, em que o tensor de inércia e os termos de Coriolis/centrífugos são utilizados para prever os torques de reação e alimentar as leis de controle de atitude.
+O \gls{mr} adotado possui configuração 3R, composta por três juntas revolutas responsáveis pela movimentação e posicionamento da ferramenta. 

@@ -1,0 +1,34 @@
+\subsection{Técnica de controle aplicada}
+\label{sec:controle_PD}
+
+A partir do modelo dinâmico acoplado base--\gls{mr} obtido na Seção~\ref{sec:dinAcoplada_}, o controlador \gls{pd} atua sobre os seguintes subconjuntos principais de variáveis:
+(i) quando em modo não-operacional, a atitude da espaçonave (conjunto base física--\gls{mr}), sendo o \gls{mr} está travado, sem exercer movimentação,
+(ii) durante o modo operacional considera-se a atitude somente da base física da espaçonave, pois o \gls{mr} está se movimentando, e
+(iii) as juntas do manipulador robótico.
+
+\subsubsection{Controle Proporcional--Derivativo (PD)}
+
+Desde 1957, cerca de $7.800$ espaçonaves foram lançadas, dentre elas, mais de $99\%$ usam o controle PID como controlador base \cite{xie2016applications}.
+Neste trabalho foi considerado o controle \gls{pd} e não PID, ou seja, o ganho integrativo foi removido pois pode resultar em uma resposta oscilatória elevada e resultar em um período longo de tempo de acomodação \cite{razak2007industrial}.
+De forma geral, para uma variável escalar de interesse $x(t)$, com referência $x_{\text{ref}}(t)$, conforme \cite{astrom1995pid}, define-se o erro como 
+
+\begin{equation}
+e(t) = x(t) - x_{\text{ref}}(t),
+\end{equation}
+
+onde $e(t)$ é o erro calculado, e conforme \cite{xue2007linear}, a ação de controle $u(t)$ é calculada como:
+
+\begin{equation}
+u(t) = -K_p\,e(t) - K_d\,\dot e(t),
+\label{eq:controle_PD_geral}
+\end{equation}
+
+onde $K_p$ e $K_d$ são ganhos positivos de natureza, em geral, diagonal ou escalar para cada canal controlado.
+No contexto deste trabalho, essas leis são estendidas a vetores de estados, com ganhos matriciais apropriados.
+Adota-se uma lei de controle por realimentação negativa, no formato da Equação~\eqref{eq:controle_PD_geral}, de modo que o sinal de controle atue reduzindo o erro em vez de amplificá-lo \cite{ogata2010engenharia}.
+
+\input{2 Formulacao matematica/2.6 Tecnicas de controle aplicada/2.1 Controle atitude.tex}
+
+\input{2 Formulacao matematica/2.6 Tecnicas de controle aplicada/2.2 Controle juntas.tex}
+
+\input{2 Formulacao matematica/2.6 Tecnicas de controle aplicada/2.3 Estrutura malha fechada.tex}

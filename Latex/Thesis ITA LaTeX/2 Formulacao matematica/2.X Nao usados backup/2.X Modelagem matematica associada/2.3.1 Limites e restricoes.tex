@@ -1,0 +1,104 @@
+\chapter{Formulação do problema}
+
+Nesta pesquisa de Mestrado será simulada computacionalmente a dinâmica orbital e de atitude de uma espaçonave equipada com manipulador robótico.
+Ela está inserida em uma missão de \emph{rendezvous and docking/berthing} (RVD/B) em órbita baixa terrestre (LEO, \emph{Low Earth Orbit}).
+A formulação contempla duas camadas principais:
+(i) a dinâmica orbital relativa entre o \emph{chaser} e o \emph{target}, e é descrita pelas Equações de Hill/Clohessy-Wiltshire em coordenadas LVLH; e
+(ii) a dinâmica de atitude da base flutuante e do manipulador robótico acoplado, e são modelados segundo a abordagem de corpos rígidos interconectados.
+
+No subsistema orbital, considera-se que a aproximação é realizada pela direção radial (\emph{R-bar}), e que a transferência inicial entre órbitas circulares é obtida por meio de uma manobra de Hohmann, sem perturbações ambientais.
+Para o subsistema de atitude, são analisadas as equações de movimento da espaçonave com base flutuante, sujeita à ação dos torques de controle, e as equações de movimento das juntas do manipulador, composto por quatro articulações revolutas e uma prismática (configuração $4R1P$), responsáveis pelo alinhamento e extensão da ferramenta de captura.
+
+A estratégia de controle empregada é realizada através do uso de controladores do tipo proporcional$-$derivativo (PD).
+Estes são aplicados tanto à atitude da base quanto às juntas do manipulador, assegurando o alinhamento do \emph{chaser} em relação ao \emph{target}.
+A integração entre a dinâmica orbital, o controle de atitude da espaçonave e o controle do manipulador robótico é realizada em ambiente de microgravidade.
+Para garantir a fidelidade numérica das simulações, adota-se a consideração integral dos produtos de inércia, mesmo quando seus valores são da ordem de $10^{-6}$ ou inferiores.
+Dessa forma, a simulação proposta abrange, de maneira unificada, os aspectos orbitais (transferência e aproximação pelo \emph{R-bar}), os aspectos de atitude (base livre em microgravidade), e os aspectos robóticos (cinemática e dinâmica de um manipulador $\mathbf{4R1P}$ controlado por controle PD), fornecendo uma plataforma para análise de desempenho e robustez de missões de RVD/B.
+
+\section{Hipóteses de modelagem}
+A fase de aproximação considerada neste trabalho corresponde à etapa transitória do \emph{rendezvous and docking/berthing}, anterior à captura pela ferramenta (\emph{tool capture}), momento em que o \emph{chaser} permanece em espera em relação ao \emph{target}.
+Após o acoplamento da ferramenta à porta de docking, as propriedades dinâmicas dos sistemas \emph{chaser} e \emph{target} se modificam, passando a constituir um único corpo rígido, a dinâmica desse novo sistema acoplado não é abordada neste estudo.
+
+As espaçonaves são modeladas em regime de microgravidade, ou seja, ocorre o equilíbrio entre a força gravitacional e a força centrífuga, e não à ausência total de gravidade.
+No subsistema do manipulador robótico, as forças gravitacionais são desprezadas; já no subsistema orbital relativo, a translação e a rotação relativas são descritas pelas Equações de Hill \cite{hill1878}. Dessa forma, este documento trata apenas da atitude da base e do movimento do manipulador robótico.
+Portanto, as Equações de Hill são utilizadas para representar o movimento orbital relativo entre as espaçonaves, assumindo órbita circular.
+
+De forma complementar, o movimento orbital é assumido como Kepleriano, sem perturbações ambientais.
+Por conseguinte, devido ao curto intervalo de tempo de simulação, essas perturbações não influenciam de forma significativa na modelagem.
+Dessa forma, todos os corpos (juntas, elos, espaçonaves, base e porta de docking) são rígidos durante a fase não operacional, enquanto que na fase operacional, o manipulador robótico é tratado como corpo não-rígido.  
+
+Em síntese, os efeitos como a flexibilidade estrutural, deformações locais, vibrações, folgas e aquecimento por atrito não foram incluídos na modelagem.
+A formulação cinemática e dinâmica segue Craig \cite{craig2005}, e no contexto de microgravidade e missões de RVD/B com base flutuante são adotadas as referências de \cite{fehse2003,wie2008space}.
+
+Por fim, as massas do \emph{chaser}, do \emph{target} e dos elos do manipulador robótico são consideradas constantes, sem consumo de propelente ou variação de massa.
+
+\subsection{Equações do Movimento de Atitude em Missões de RVD/B}
+O controle de atitude é utilizado em missões de \emph{rendezvous and docking/berthing}, pois permite que a orientação do \emph{chaser} permaneça dentro de limites pré-estabelecidos ao longo da aproximação.
+Essa etapa é essencial nas manobras realizadas no eixo radial (\emph{R-bar}), em que o alinhamento entre as espaçonaves é condição para o sucesso da missão.
+
+As equações de movimento de atitude podem ser expressas em diferentes sistemas de coordenadas: o inercial, o orbital (\emph{Local-Vertical-Local-Horizontal, LVLH}) e o relativo.
+Cada sistema de referência é empregado conforme a necessidade de modelagem:
+a referência inercial descreve a dinâmica absoluta da espaçonave;
+o LVLH é usado para demonstrar a aproximação orbital relativa;
+e o sistema relativo é útil para análise do alinhamento entre \emph{chaser} e \emph{target}.
+
+De modo adicional, adota-se a hipótese de considerar a totalidade dos produtos de inércia, para assegurar fidelidade nas simulações dinâmicas, mesmo quando seus valores são muito pequenos (da ordem de $10^{-6}$ ou inferiores).
+Por fim, os requisitos da missão estabelecem que a atitude do \emph{chaser} deve permanecer alinhada ao \emph{target} ao longo do \emph{R-bar}, respeitando as restrições estabelecidas sobre a velocidade angular.
+
+\subsection{Atuadores e sensores}
+Os atuadores das juntas revolutas aplicam torques, enquanto o atuador da junta prismática exerce força.
+Ambos são representados por $\tau_i$, e a modelagem é abstrata no nível dinâmico, sem referência direta ao hardware.
+
+\subsection{Restrições operacionais}
+Para evitar colisões, o movimento do manipulador robótico é restringido a um espaço de trabalho (\emph{workspace}) previamente definido, de modo a não interceptar os limites físicos do \emph{chaser} ou do \emph{target}.
+Além disso, cada junta está sujeita a limites de posição, velocidade e aceleração.
+Outrossim, as quatro primeiras juntas ($J_1 - J_4$) são do tipo revolutas e a quinta ($J_5$) é do tipo prismática, resultando na configuração $4R1P$, com curso limitado ao seu comprimento útil.
+
+% Além disso, cada junta está sujeita a limites de posição \eqref{eq:limites_juntas_posicao}, velocidade \eqref{eq:limites_juntas_velocidade} e aceleração \eqref{eq:limites_juntas_aceleracao}:
+% \begin{equation}
+%     \label{eq:limites_juntas_posicao}
+%     q_{i,\min} \le q_i \le q_{i,\max}
+% \end{equation}
+
+% \begin{equation}
+%     \label{eq:limites_juntas_velocidade}
+%     |\dot q_i| \le \dot q_{i,\max}
+% \end{equation}
+
+% \begin{equation}
+%     \label{eq:limites_juntas_aceleracao}
+%     |\ddot q_i| \le \ddot q_{i,\max}
+% \end{equation}
+
+\subsection{Incertezas e variações}
+Foram consideradas incertezas paramétricas fixas associadas a cada elo do manipulador e ao conjunto, abrangendo as massas $m_i$, as posições dos centros de massa (CoM) e os momentos de inércia.
+Tais incertezas foram modeladas como desvios percentuais em torno dos valores nominais, com limites máximos pré-definidos.
+Cada simulação é realizada com um conjunto fixo de parâmetros perturbados dentro desses limites, representando erros de modelagem ou variações construtivas.  
+
+As variáveis de estado adotadas no modelo dinâmico são os ângulos (ou deslocamento prismático) das juntas e suas velocidades generalizadas.
+As acelerações são obtidas diretamente das equações de movimento e, portanto, não constituem estados independentes, mas variáveis derivadas.
+
+\subsection{Condições iniciais}
+As condições iniciais do sistema são definidas pelas posições no sistema de coordenadas local, pelas velocidades lineares e angulares iniciais da base, além dos ângulos iniciais de cada junta do manipulador e suas respectivas velocidades iniciais.
+
+\subsection{Hipóteses de simulação e critérios de validação}
+
+As simulações numéricas serão utilizadas como ferramenta para validar a transferência de Hohmann, as equações do movimento absoluto, do movimento relativo e a lei de controle proposta.
+Tais simulações serão conduzidas em ambiente MATLAB/Simulink, permitindo avaliar a resposta dinâmica do sistema frente a condições iniciais estabelecidas e a diferentes níveis de complexidade na modelagem.
+
+As hipóteses de configuração inicial incluem a definição das condições de atitude tanto do \emph{chaser} quanto do \emph{target}.
+O \emph{chaser} possuirá desvios em sua posição e em suas velocidades iniciais, enquanto que o \emph{target} será tratado como referência, servindo como orientação fixa na referência local LVLH.
+A integração temporal das equações diferenciais será realizada por métodos numéricos de passo variável na propagação dos estados e estabilidade no tratamento de equações não lineares.  
+
+Serão avaliados diferentes cenários de simulação, abrangendo:
+(i) a transferência orbital do \emph{chaser} para a órbita do \emph{target} por meio da transferência de Hohmann;
+(ii) o controle absoluto de atitude na referência inercial;
+(iii) o controle relativo de atitude no cenário entre \emph{chaser} e \emph{target}; e
+(iv) a comparação de erros residuais entre as atitudes simuladas e as atitudes de referência.
+
+Os critérios de avaliação adotados são:
+(i) a estabilização, entendida como a convergência da atitude para a orientação desejada sem oscilações não físicas;
+(ii) a robustez, medida pela manutenção de desempenho aceitável frente a variações inerciais do manipulador e a perturbações externas;
+(iii) a saturação de atuadores, observando se os torques exigidos permanecem dentro dos limites físicos do sistema;
+(iv) o tempo de resposta, avaliado pela duração necessária para que o erro angular relativo atenda aos critérios de desempenho; e
+(v) o atendimento às condições de sincronização posição--atitude, em especial a exigência de erro angular inferior a $1^\circ$ e a permanência do \emph{chaser} dentro do corredor seguro de aproximação.

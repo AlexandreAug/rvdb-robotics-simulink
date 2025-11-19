@@ -1,0 +1,151 @@
+\subsection{Acoplamento base--manipulador}
+\label{sec:acoplamento_base_manipulador}
+
+As variáveis são para o acoplamento dos movimentos entre a base e o MR:
+\begin{equation}
+\label{eq:nu_def}
+\nu
+\;=\;
+\begin{bmatrix}
+{}^{0}\!\vec v_{B} \\[2pt]
+{}^{0}\!\vec \omega_{B} \\[2pt]
+\dot{\vec q}
+\end{bmatrix},
+\end{equation}
+
+onde ${}^{0}\!\vec v_{B}$ e ${}^{0}\!\vec \omega_{B}$ são as velocidades linear e angular da base expressas em $\{0\}$, e
+$\dot{\vec q}$ são as velocidades das juntas.
+O vetor $\nu$ reúne as velocidades generalizadas do sistema, sendo formado pelas componentes linear e angular da base e pelas velocidades articulares do manipulador.
+
+\subsection{Jacobiano composto da base e do MR}
+A velocidade cartesiana da ferramenta no mesmo sistema de coordenadas $\{0\}$ passa a ter duas contribuições, sendo elas:
+
+\begin{equation}
+\label{eq:xdot_composto}
+{}^{0}\!\dot{\vec x}_{E}
+\;=\;
+\underbrace{\mathbf{J}_{\!B}(\cdot)}_{\text{efeito da base}}\,
+\begin{bmatrix}
+{}^{0}\!\vec v_{B} \\
+{}^{0}\!\vec \omega_{B}
+\end{bmatrix}
+\;+\;
+\underbrace{\mathbf{J}(\vec q)}_{\text{efeito das juntas}}\,\dot{\vec q},
+\end{equation}
+
+onde $\mathbf{J}_{\!B}(\cdot)$ depende apenas da posição relativa entre a base $\{B\}$ e
+o efetuador $\{E\}$, enquanto que
+$\mathbf{J}(\vec q)$ é o Jacobiano geométrico do manipulador.
+A formulação mostra que, em ambiente de microgravidade, a mobilidade do efetuador não depende apenas das juntas, 
+mas também dos deslocamentos da base livre. 
+Esse efeito em missões de RVD/B perturbam a atitude da espaçonave.
+
+\subsection{Matriz de inércia e o acoplamento}
+Considerando como base livre, as equações de movimento podem ser descritas por:
+
+\begin{equation}
+\label{eq:EOM_particionada_compacta}
+\mathbf M_{\text{tot}}(\vec q\, )\,\dot{\nu}
+\;+\;
+\mathbf C_{\text{tot}}(\vec q,\nu)\,\nu
+\;=\;
+\vec\tau_{\text{tot}}
+\;+\;
+\vec w_{\text{ext}}.
+\end{equation}
+
+Detalhando cada termo, obtém-se:
+\begin{equation}
+\label{eq:Mtot_def}
+\mathbf M_{\text{tot}}(\vec q)
+=
+\begin{bmatrix}
+\mathbf M_{BB}(\vec q) & \mathbf M_{BM}(\vec q) \\
+\mathbf M_{MB}(\vec q) & \mathbf M_{MM}(\vec q)
+\end{bmatrix}
+\end{equation}
+
+As submatrizes $\mathbf M_{BB}$ e $\mathbf M_{MM}$ representam as inércias da base e do MR, respectivamente, 
+enquanto que $\mathbf M_{BM} = \mathbf M_{MB}^{T}$ contém os termos de acoplamento cruzado. 
+
+\begin{equation}
+\label{eq:Ctot_def}
+\mathbf C_{\text{tot}}(\vec q,\nu)
+=
+\begin{bmatrix}
+\mathbf C_{BB}(\cdot) & \mathbf C_{BM}(\cdot) \\
+\mathbf C_{MB}(\cdot) & \mathbf C_{MM}(\cdot)
+\end{bmatrix}
+\end{equation}
+
+Por consistência energética, a matriz total deve satisfazer a condição de passividade:
+\begin{equation}
+\dot{\mathbf M}_{\text{tot}}(\vec q) - 2\,\mathbf C_{\text{tot}}(\vec q,\nu) 
+\;\;\text{é anti-simétrica}.
+\end{equation}
+
+% Vetores empilhados (opcional, ajuda a reduzir largura na EOM)
+\begin{equation}
+\label{eq:stacked_defs1}
+\dot{\nu} =
+\begin{bmatrix}
+{}^{0} \dot{\vec v}_{B} \\
+{}^{0} \dot{\vec \omega}_{B} \\
+\ddot{\vec q}
+\end{bmatrix},
+\qquad
+\nu =
+\begin{bmatrix}
+{}^{0} \vec v_{B} \\
+{}^{0} \vec \omega_{B} \\
+\dot{\vec q}
+\end{bmatrix},
+\end{equation}
+
+% Vetores empilhados (opcional, ajuda a reduzir largura na EOM)
+\begin{equation}
+\label{eq:stacked_tau}
+\vec\tau_{\text{tot}} =
+\begin{bmatrix}
+\vec \tau_{B} \\
+\vec \tau
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+\label{eq:stacked_wrench}
+\vec w_{\text{ext}} =
+\begin{bmatrix}
+{}^{\text{ext}}\vec w_{B} \\
+{}^{\text{ext}}\vec w_{E}
+\end{bmatrix}.
+\end{equation}
+
+A equação \eqref{eq:EOM_particionada_compacta} descreve a dinâmica acoplada base--manipulador.
+A matriz de inércia \eqref{eq:Mtot_def} agrega a inércia translacional e rotacional da base, a inércia no espaço das juntas e os termos de acoplamento dinâmico entre base e braço; além disso, é simétrica e definida positiva.
+A matriz \eqref{eq:Ctot_def} reúne os termos de Coriolis/centrífugos do sistema base e manipulador, incluindo efeitos cruzados.
+% Deve satisfazer a propriedade estrutural $\dot{\mathbf M}_{\text{tot}}-2\,\mathbf C_{\text{tot}}$ anti-simétrica, assegurando coerência energética.
+Os vetores $\nu$ e $\dot{\nu}$ definidos em \eqref{eq:stacked_defs1} são, respectivamente, as velocidades linear e angular da base, além das velocidades articulares; e as correspondentes acelerações.
+Os vetores em \eqref{eq:stacked_tau} são as entradas de atuação (esforços na base e torques/força nas juntas).
+Por sua vez, \eqref{eq:stacked_wrench} explicita as excitações externas (força--momento na base e na ferramenta), todas expressas no mesmo referencial e referidas aos pontos $B$ e $E$, respectivamente.
+Na prática, ${}^{\text{ext}}\vec w_{B}$ inclui perturbações ambientais (ex.: arrasto, torque gravitacional) 
+e ${}^{\text{ext}}\vec w_{E}$ corresponde às interações externas no efetuador (ex.: contato no berthing).
+
+\subsubsection{Momento angular}
+Para descrever a interação do momento angular do sistema em torno do centro de massa, utiliza-se:
+
+\begin{equation}
+\label{eq:centroidal}
+\vec h_{c}
+\;=\;
+\mathbf A_{c}(\vec q)\,\nu,
+\qquad
+\dot{\vec h}_{c} \;=\; \vec w^{\text{ext}}_{c}.
+\end{equation}
+
+Na ausência de momentos externos
+(${}^{\text{ext}}\vec w_{c}=\vec 0$),
+o momento angular no centro de massa é conservado: movimentos das juntas alteram $\vec h_{c}$ e, por reação, geram velocidade/atitude na base.
+A matriz $\mathbf A_{c}(\vec q)$ é obtida por composição rígida (corpos articulados) e depende apenas da configuração.
+Esse resultado evidencia que a movimentação do MR, na ausência de forças externas, não altera o momento angular total do sistema, mas redistribui entre base e elos. 
+Esse fenômeno é conhecido como conservação do momento angular em sistemas de base livre.

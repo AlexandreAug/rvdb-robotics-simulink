@@ -1,0 +1,102 @@
+\section{Revisão da literatura}
+
+A missão de \gls{rvdb} é o processo de fazer com que duas espaçonaves se encontrem \cite{merriamRendezvous} e façam o acoplamento mecânico \cite{merriamDocking}.
+O procedimento envolve o alinhamento e a sincronização de atitude das espaçonaves para que possam estar em uma distância suficientemente segura para que a ancoragem\fn{Alternativamente, conhecido como atracação.} \emph{(berthing)} ocorra \cite{merriamBerthing}.
+A operação de RVD/B se justifica pois existe a necessidade de executar tarefas como a montagem em órbita de unidades maiores, a ida do ônibus espacial \emph{(Space Shuttle)} para realizar a entrega de suprimentos na Estação Espacial Internacional (\gls{iss}) ou até mesmo para realizar o reparo de espaçonaves em órbita \cite{fehse2003}.
+Portanto, é um tipo de operação chave para a prestação de serviços em órbita, conhecidos como \gls{oos}.
+
+\subsection{Pioneirismo}
+
+
+O primeiro \gls{rvdb} entre duas espaçonaves ocorreu em 1966 \cite{nasa1stDocking}, quando Neil Armstrong e Dave Scott realizaram, de forma manual a aproximação (\emph{rendezvous}) na espaçonave \emph{Gemini} e acoplaram no veículo não-tripulado \emph{Agena}.
+No ano seguinte, ocorreu o primeiro \gls{rvdb} automático; as espaçonaves soviéticas \emph{Kosmos} 186 e 188 realizaram o acoplamento \emph{(docking)} entre si sem intervenção humana \cite{nasaAutmaticDocking1967}.
+Desde então, o conhecimento e a experiência obtidos com as missões Gemini e Apollo (1968-1972) foram posteriormente aplicadas com sucesso nas missões da Skylab (1973-1974) e \emph{Apollo--Soyuz} \cite{goodman2011rendezvous}.
+
+Durante a década de 1980, na Europa Ocidental, a tecnologia de \gls{rvdb} foi desenvolvida pela \gls{esa}.
+Inicialmente, essa técnica foi implementada no projeto \gls{mtff}, planejado para acoplar-se à estação espacial americana \emph{Freedom} \cite{goelz1992MtffFreedom} e à espaçonave europeia \emph{Hermes} \cite{worldspaceflightMTFF}.
+Após o cancelamento dos projetos \gls{mtff} e \emph{Hermes}, o \gls{atv} tornou-se a principal contribuição européia para o programa da \gls{iss} \cite{ellwood2007ATV2ISS}. O \gls{atv} foi concebido para realizar tarefas de abastecimento e manutenção da ISS \cite{atvDLR}.
+
+\begin{figure}[ht]
+    \label{fig:pioneirismo_ATV}
+\centering
+\includegraphics[width=1\linewidth]{1 Introducao/Imagens/2 Pioneirismo - ATV.jpeg}
+\caption{ATV "Albert Einstein". Fonte: Deutsches Zentrum für Luft-und Raumfahrt (DLR)}
+\end{figure}
+
+Os veículos que realizaram \gls{rvdb} junto da ISS incluem o ônibus espacial dos \gls{eua}, a Soyuz russa e a espaçonave japonesa HTV \cite{nasaVisitingVehicles}.
+
+
+% \section{Processo da missão de RVD/B}
+
+% A missão de RVD/B pode ser dividida em fases, incluindo o lançamento, faseamento, aproximação de curta distância, aproximação final e acoplamento.
+% A fase de lançamento é executada através de um veículo lançador, que também pode ser considerado no conceito geral do processo e por sua vez, a aproximação de curta distância pode ser dividida em fase de \emph{homing} e fase de \emph{closing} \cite{rvdProcesso}.
+
+% \subsection{RVD/B pelo eixo radial (R-bar)}
+
+% \begin{figure}[ht]
+%     \label{fig:aproximacao_rbar_pioneirismo}
+% \centering
+% \includegraphics[width=1\linewidth]{1 Introducao/Imagens/2 Pioneirismo - RVDB R-bar.png}
+% \caption{Aproximação do tipo R-bar. Fonte: Adaptado de \cite{fehse2003}.}
+% \end{figure}
+
+% Após a fase de lançamento, o veículo lançador insere a espaçonave visitante na órbita de injeção $\mathbf{(P0)}$.
+% Durante a órbita de faseamento (\emph{phasing phase}), o veículo visitante realiza manobras sob o guiamento e comando realizados pela estação terrena para que os sensores de navegação do visitante possam obter os dados do veículo alvo.
+% O objetivo dessa fase é ajustar o ângulo de fase orbital entre as duas espaçonaves, reduzindo a diferença dos planos orbitais $\mathbf{(P1)}$ e elevar o raio orbital para se igualar com o raio orbital do alvo $\mathbf{(P2)}$.
+% Durante a \emph{homing phase}, o visitante se torna autônomo e seu objetivo é ir até o ponto $\mathbf{(P3)}$, o qual está localizado a alguns kilometros de distância do alvo. Essa fase possui o intuito reduzir tanto a velocidade relativa como a distância relativa.
+% Na sequência, durante a \emph{closing phase}, o visitante reduz sua distância relativa ainda mais.
+% A fase de aproximação final inicia a partir do ponto $\mathbf{(P4)}$, quando o visitante se aproxima do alvo pelo eixo radial \emph{(R-bar)} $\mathbf{(P5)}$ e finaliza quando o visitante encosta no alvo $\mathbf{(P6)}$.
+
+% \subsection{RVD/B pelo vetor velocidade (V-bar)}
+
+% A proximação pelo \emph{V-bar} se assemelha com a estratégia anterior; a diferença se dá a partir da fase de \emph{homing}.
+% Na fase de \emph{closing}, o visitante realiza nova transferência de órbita $\mathbf{(P3)}$, dessa vez em um raio orbital menor quando comparado ao raio orbital do alvo, para que possa acelerar e se aproximar mais rapidamente do alvo.
+% No início da aproximação final $\mathbf{(P4)}$, o visitante se aproxima em uma linha reta, de forma lenta e gradual até realizar o acoplamento mecânico com o alvo $\mathbf{(P5)}$.
+
+% \begin{figure}[ht]
+%     \label{fig:aproximacao_vbar_pioneirismo}
+% \centering
+% \includegraphics[width=1\linewidth]{1 Introducao/Imagens/2 Pioneirismo - RVDB V-bar.png}
+% \caption{Aproximação do tipo V-bar. Fonte: Adaptado de \cite{fehse2003}.}
+% \end{figure}
+
+\section{Programa espacial Apollo}
+
+O programa Apollo, de 1961 a 1972, introduziu novas tecnologias operacionais que ampliaram as capacidades da tripulação e dos sistemas embarcados.
+As principais áreas envolvidas foram as de operação de voo (\emph{Flight Operations}), as atribuições da tripulação (Flight Crew's Role) e as comunicações do tipo homem-máquina (Man-Machine Communications).
+Essas áreas refletiam a integração entre as estações terrenas, os sistemas a bordo e as complexas tarefas desempenhadas pela tripulação, como os sistemas críticos de voo, o gerenciamento de sistemas e a navegação da espaçonave.
+A interação entre os operadores e os equipamentos da espaçonave evoluiu de uma atuação direta nos controles para um nível de supervisão e tomada de decisão.
+
+Como exemplo da transição, os sistemas de controle, navegação e orientação foram desenvolvidos especificamente para as espaçonaves Apollo. O projeto fornecia um ambiente autônomo para a tripulação, permitindo que os astronautas navegassem e guiassem o veículo sem a dependência contínua do suporte terrestre.
+Sendo assim, as operações poderiam ser conduzidas mesmo sob situações imprevistas.
+
+Nevins (1971) explica que, para que a operação autônoma pudesse acontecer, certos requisitos foram estabelecidos para a missão Apollo, como:
+\begin{enumerate}[label=(\roman*)]
+    \item o sistema deveria ser capaz de completar a missão sem auxílio ou ajuda da estação em solo;
+    \item o sistema empregaria a participação humana sempre que isso pudesse simplificar ou melhorar a operação em comparação às sequências pré-estabelecidas das funções exigidas;
+    \item o sistema deveria fornecer interfaces adequadas ao piloto através das telas e dos métodos de controle do sistema de orientação;
+    \item o sistema deveria ser projetado de modo que as tarefas pudessem ser executadas por apenas um operador e ainda sim, de forma segura, permitindo o retorno seguro à Terra a partir de qualquer ponto da missão.
+\end{enumerate}
+
+Como resultado, o programa \emph{Apollo} se tornou o primeiro programa tripulado dos Estados Unidos que integrava sensores e sistemas de processamento de dados a bordo. A tripulação poderia desempenhar de forma ativa e decisiva durante as fases de voo, estabelecendo assim, um novo padrão de missões espaciais e de interação entre o homem e a máquina.
+Essas interações eram realizados através de atuadores manuais via linguagem computacional e controlavam grupos de tarefas ao invés de tarefas individuais.
+Tarefas como a rotação de atitude da espaçonave, as ações para o pouso na Lua e até a reentrada na atmosfera terrestre foram impactadas positivamente com essas melhorias de comunicação entre o homem e a máquina.
+Além disso, existia o sistema de \emph{backup} que possuía caminhos paralelos e operava de diferentes modos, todos podendo ser ativados manualmente.
+
+A tripulação nas missões Apollo desempenhavam diferentes funções e dependiam da integração entre o ser humano e a máquina \cite{nevins1971}, destacando-se:
+\begin{enumerate}[label=\roman*)]
+    \item Monitoramento e tomada de decisões de navegação e orientação, que eram comparados com os dados da estação terrestre;
+    \item Sequenciamento e inicialização dos sistemas de orientação, navegação, sensores e os sistemas de propulsão;
+    \item Inicialização dos sistemas de \emph{backup} para permitir a redundância caso houvessem falhas dos sistemas principais;
+    \item Reconhecimento de padrões, como a identificação de estrelas, alinhamento geométrico com o horizonte visual da Terra (ou da Lua) para navegação cislunar.
+\end{enumerate}
+
+Embora a tecnologia tivesse avançado, essas tarefas ainda exigiam intervenção humana e eram diratamente ligada com o sucesso das missões, pois ainda não havia automação total dos sistemas; sendo assim, uma única falha no sistema poderia acarretar no fracasso da missão por completo.
+Para mitigar esses riscos, era necessário incorporar sistemas redundantes.
+A função mais importante da tripulação era monitorar os sistemas primários e os de \emph{backup} associados, para que as transições fossem suaves e rápidas entre os sistemas quando necessário \cite{nevins1971}.
+
+A transição para o modo de \emph{backup} deveria ser de maneira gradual pois a degradação do sistema acontecia de forma lenta e não de forma instantânea, o que trazia robustez operacional.
+Nevis (1971) ainda diz que mesmo após 10 anos posteriores ao programa Apollo ainda era improvável que a capacidade de decisão humana fosse totalmente substituída por sistemas automatizados.
+Durante esse período, os sistemas eram configurados para manter o envolvimento humano, mesmo que de forma reduzida.
+Com o passar do tempo e o avanço tecnológico, esperava-se que o papel da tripulação se tornasse administrativo e de supervisão para aliviar a carga operacional.
+Com isso, os sistemas automáticos assumiriam a maior parte das funções críticas até que fosse necessário intervenção humana em situações imprevistas \cite{nevins1971}.

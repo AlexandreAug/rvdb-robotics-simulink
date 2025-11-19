@@ -1,0 +1,92 @@
+
+\subsubsection{Velocidades linear e angular}
+\label{sec:dinAcoplada_veloc_linear_angular}
+
+As velocidades linear $\vec v_{G_i}$ e angular $\vec\omega_i$ do $i$-ésimo elo são obtidas a partir dos jacobianos espaciais $J_{\text{sp},i}$, avaliados no respectivo centro de massa, que relacionam diretamente $\dot{\vec q}$ com as velocidades cinemáticas empregadas na energia cinética.
+
+\begin{equation}
+J_{\text{sp},i}=
+\begin{bmatrix}
+J_{v,i}\\[2pt]
+J_{\omega,i}
+\end{bmatrix},
+\end{equation}
+
+de modo que
+
+\begin{equation}
+{}^{B}\!\vec v_{G_i}=J_{v,i}\,\dot{\vec q},
+\qquad
+{}^{B}\!\vec\omega_i=J_{\omega,i}\,\dot{\vec q}.
+\end{equation}
+
+A variação temporal desses jacobianos introduz os termos associados a efeitos centrífugos e de Coriolis.
+Para cada elo, a contribuição dinâmica decorrente dessas variações, expressa no espaço das coordenadas generalizadas, assume a forma
+
+\begin{equation}
+C_i(\vec q,\dot{\vec q})\,\dot{\vec q}
+=
+J_{\text{sp},i}^{T}\,
+M_{i,\text{spatial}}
+\left(
+\dot J_{\text{sp},i}\,\dot{\vec q}
+\right),
+\end{equation}
+
+em que $M_{i,\text{spatial}}$ é a matriz espacial composta pela massa e pelo tensor de inércia do elo $i$.
+Note-se que $C_i(\vec q,\dot{\vec q})\,\dot{\vec q}$ representa a parcela do vetor de forças generalizadas associada ao $i$\textsuperscript{o} elo que é puramente decorrente dos termos centrífugos e de Coriolis, ou seja, da dependência explícita da energia cinética em relação às velocidades generalizadas.
+
+Essa formulação decorre diretamente da estrutura da energia cinética escrita em coordenadas espaciais e é equivalente à forma clássica baseada nos símbolos de Christoffel, permanecendo coerente com a decomposição matricial da dinâmica no referencial da base física ${B}$ e com a estrutura cinemática do \gls{mr} definida em ${0}$.
+
+Em ambiente de microgravidade, a energia potencial gravitacional do conjunto é desprezada, de forma que a energia potencial generalizada satisfaz $V(\vec q) = 0$ e a lagrangiana reduz-se a $L(\vec q,\dot{\vec q}) = T(\vec q,\dot{\vec q})$.
+Assim, o sistema base--\gls{mr} é descrito unicamente pela energia cinética total e pelas coordenadas generalizadas, permitindo a aplicação direta das equações de Lagrange
+Nesse contexto, a dinâmica passa a ser governada exclusivamente pela matriz de inércia generalizada $M(\vec q)$ e pelos acoplamentos cinemáticos entre a atitude da base e as coordenadas articulares.
+Após reunir as velocidades generalizadas, obtém-se:
+
+\begin{equation}
+\dot{\vec q} =
+\begin{bmatrix}
+\vec\omega_{B} \\
+\dot{\vec\theta}
+\end{bmatrix},
+\end{equation}
+
+e então, a energia cinética total assume a forma matricial
+
+\begin{equation}
+T = \frac{1}{2}\,\dot{\vec q}^{\,T} M(\vec q) \dot{\vec q},
+\label{eq:T_matriz}
+\end{equation}
+
+em que $M(\vec q)$ é a matriz de inércia generalizada, derivada segundo o método de Lagrange.
+Os momentos de inércia que constituem $M(\vec q)$ são construídos a partir da soma das contribuições espaciais de cada elo, considerando seus jacobianos lineares e angulares avaliados no centro de massa de cada elo, expresso no referencial da base $\{B\}$.
+
+Para cada elo, a matriz $M_{i,\text{spatial}}$ é um tensor de inércia espacial $6\times 6$ que combina, em um único operador, os efeitos translacionais e rotacionais em torno do centro de massa expresso em $\{B\}$.
+Denotando por ${}^{B}\!p_{G_i}$ a posição do centro de massa do elo $i$ em relação à origem de $\{B\}$ e por ${}^{B}\!I_i$ o tensor de inércia em torno desse centro, a forma padrão do operador espacial pode ser escrita como
+
+\begin{equation}
+M_{i,\text{spatial}}
+=
+\begin{bmatrix}
+m_i I_3 & -m_i\,S({}^{B}\!p_{G_i})\\[2pt]
+m_i\,S({}^{B}\!p_{G_i}) & {}^{B}\!I_i - m_i\,S({}^{B}\!p_{G_i})\,S({}^{B}\!p_{G_i})^{T}
+\end{bmatrix},
+\end{equation}
+
+em que $S(\cdot)$ denota o operador matricial antissimétrico associado ao produto vetorial, isto é, para qualquer vetor $\vec a\in\mathbb{R}^3$ vale $S(\vec a)\,\vec b = \vec a \times \vec b$.
+Essa representação segue a formulação de operadores espaciais de dinâmica de corpos rígidos e permite aplicar a mesma estrutura de forma uniforme a todos os elos.
+
+De maneira análoga, a base física $\{B\}$ é descrita por uma matriz de inércia espacial $I_{\text{base}}$, construída a partir da massa $m_B$ e do tensor ${}^{B}\!I_B$ em torno de seu centro de massa.
+Assim, a matriz de massa generalizada do conjunto base--\gls{mr} resulta da soma das contribuições espaciais de todos os elos, ponderadas pelos jacobianos espaciais, acrescida da inércia espacial da base:
+
+\begin{equation}
+M(\vec q) =
+\sum_{i=1}^{n_\ell}
+J_{\text{sp},i}^{T}\, M_{i,\text{spatial}}\, J_{\text{sp},i}
++ M_{\text{base},\text{spatial}},
+\label{eq:M_total_formula}
+\end{equation}
+
+onde $J_{\text{sp},i}$ é o jacobiano espacial do elo $i$, $M_{i,\text{spatial}}$ é a matriz de inércia espacial do respectivo elo e $M_{\text{base},\text{spatial}}$ representa a matriz de inércia espacial associada à base física.
+Para o sistema base--\gls{mr}, as coordenadas generalizadas $\vec q$ reúnem as variáveis de atitude da base física e as coordenadas articulares do manipulador, enquanto o vetor de velocidades generalizadas $\dot{\vec q}$ contém a velocidade angular $\vec{\omega}_B$ da base e as velocidades articulares $\dot{\vec \theta}$.
+

@@ -1,0 +1,20 @@
+\subsection{Critérios de Desempenho}
+\label{sec:criterios_desempenho}
+
+A avaliação do controle adotado nesta dissertação é em função das trajetórias relativas, à atitude e à espaçonave.
+Os critérios considerados são:
+\begin{enumerate}[label=(\roman*)]
+  \item o erro de posição relativa nos eixos $(x,y,z)$ do referencial LVLH.
+  \item redução de erros na atitude relativa e trajetórias de aproximação de acordo com as prescrições nominais e de segurança para órbita e atitude, evitando colisões e a perda da missão.
+\end{enumerate}
+
+A escolha do controlador PD é baseado na simplicidade de implementação e baixa exigência computacional.
+Por outro lado, métodos alternativos, como o \gls{lqr} e o controle preditivo baseado em modelo (MPC), podem reduzir os custos em termos de consumo de energia e da otimização de trajetória, mas possuem maior complexidade de projeto e maior custo computacional.
+Sendo assim, para os objetivos desta pesquisa, o controlador PD atende os requisitos básicos de rastreamento e estabilização.
+
+As condições de sucesso da missão foram definidas como:  
+\begin{enumerate}[label=(\roman*)]
+  \item erro da atitude relativa igual a zero.
+  \item velocidade relativa inferior ao limite operacional de captura.
+  \item ausência de violações do espaço de trabalho do manipulador robótico.
+\end{enumerate}

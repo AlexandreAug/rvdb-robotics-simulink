@@ -1,0 +1,136 @@
+\subsection{Cinemática Diferencial e Jacobiano}
+\label{sec:cinematica_diferencial_jacobiano}
+
+A cinemática diferencial relaciona as velocidades articulares
+$\dot{\vec q} = [\dot\theta_1,\dot\theta_2,\dot\theta_3]^T$
+com a velocidade linear da ferramenta no referencial da base $\{B\}\equiv\{0\}$, coerente com a cinemática direta implementada.
+
+\subsubsection{Jacobiana linear e angular}
+O mapeamento das velocidades articulares é dado pela Jacobiana linear $\mathbf{J}_{v}(\vec q)$
+
+\begin{equation}
+\label{eq:jacob_linear1}
+{}^{0}\!\dot{\vec{x}}_{E} = \mathbf{J}_{v}(\vec q)\,\dot{\vec q}.
+\end{equation}
+
+Na formulação geral, a Jacobiana geométrica reúne ambas as contribuições (linear e angular) na mesma equação
+
+\begin{equation}
+\begin{bmatrix}
+{}^{0}\!\dot{\vec{x}}_{E} \\
+{}^{0}\!\vec{\omega}_{E}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\mathbf{J}_{v}(\vec q) \\
+\mathbf{J}_{\omega}(\vec q)
+\end{bmatrix}
+\dot{\vec q}, 
+\end{equation}
+
+em que $\mathbf{J}_{\omega}(\vec q)\in\mathbb{R}^{3\times 3}$ é o Jacobiano angular.
+Para juntas revolutas, cada coluna de $\mathbf{J}_{\omega}$ coincide com o eixo unitário de rotação da junta correspondente, expresso no referencial da base $\{B\}\equiv\{0\}$.
+
+\subsubsection{Construção do Jacobiano}
+
+As colunas de $\mathbf{J}_{v}$ são obtidas a partir dos eixos unitários de cada junta, expressos no referencial da base $\{B\}\equiv\{0\}$, e das posições dos respectivos pontos de rotação.
+Denotado por ${}^{0}\!\hat{u}_{i}$, o eixo da junta $i$ expresso em $\{0\}$ e por ${}^{0}\!\vec p_{i}$ a posição do ponto sobre esse eixo, extraídos da cinemática direta, a contribuição linear de uma junta revoluta $i$ é dada por
+
+\begin{equation}
+J_{v,i}
+=
+{}^{0}\!\hat{u}_{i}
+\times
+\bigl(
+{}^{0}\!\vec p_{E}
+-
+{}^{0}\!\vec p_{i}
+\bigr),
+\end{equation}
+
+onde ${}^{0}\!\vec p_{E}$ é a posição do efetuador no mesmo referencial.
+No manipulador 3R deste trabalho, os eixos de junta são organizados no arranjo $Z$--$X$--$X$ em relação à base física: a junta~1 rotaciona em torno de um eixo vertical alinhado com $\hat{z}_{B}$, enquanto as juntas~2 e~3 rotacionam em torno de eixos paralelos a $\hat{x}_{B}$. 
+Portanto, cada coluna de $\mathbf{J}_{v}$ representa a velocidade linear instantânea do efetuador decorrente de uma velocidade unitária aplicada em torno desses eixos físicos de rotação.
+
+\subsection{Interpretação geométrica da Jacobiana}
+\label{sec:interpretacao_geometrica_jacobiana}
+
+A Jacobiana descreve como as velocidades articulares geram velocidade linear e angular no efetuador, embora, neste trabalho, a interpretação geométrica seja enfatizada principalmente na componente linear.
+Cada coluna possui interpretação geométrica direta, conforme \cite{craig2005}.
+
+\subsubsection{Contribuição da junta revoluta}
+
+Para uma junta revoluta, a rotação ocorre em torno do eixo ${}^{0}\!\hat{z}_{\,i-1}$ do referencial anterior, que na convenção de Denavit--Hartenberg coincide com o eixo da junta.
+Essa rotação produz uma velocidade linear obtida pelo produto vetorial entre esse eixo e o vetor que conecta o eixo ao efetuador:
+
+\begin{equation}
+J_{v,i}
+=
+{}^{0}\!\hat{z}_{\,i-1}
+\times
+\left(
+{}^{0}\!\vec{p}_{E}
+-
+{}^{0}\!\vec{p}_{\,i-1}
+\right).
+\end{equation}
+
+O termo $J_{v,i}$ representa o movimento linear imposto ao efetuador, cujo efeito cresce com a distância perpendicular ao eixo ${}^{0}\!\hat{z}_{\,i-1}$.
+
+\subsubsection{Síntese geométrica}
+
+Cada coluna da Jacobiana linear representa a velocidade instantânea do efetuador causada por uma velocidade unitária na junta $i$:
+
+\begin{equation}
+\dot{q}_{i} = 1,
+\qquad
+\dot{q}_{j} = 0,\; j \neq i.
+\end{equation}
+
+\subsubsection{Jacobiano angular}
+
+De forma análoga, a componente angular da Jacobiana, $\mathbf{J}_{\omega}(\vec q)$, relaciona as velocidades articulares à velocidade angular do efetuador ${}^{0}\!\vec{\omega}_{E}$. Para uma junta revoluta $i$, a contribuição angular é dada diretamente pelo eixo de rotação expresso no referencial da base,
+\begin{equation}
+J_{\omega,i} = {}^{0}\!\hat{u}_{i},
+\end{equation}
+onde ${}^{0}\!\hat{z}_{i}$ é o eixo unitário da junta $i$. No manipulador 3R com arranjo $Z$--$X$--$X$, obtém-se
+
+\begin{equation}
+\mathbf{J}_{\omega}(\vec q)=
+\bigl[\,{}^{0}\!\hat{z}_{1}\;\;{}^{0}\!\hat{z}_{2}\;\;{}^{0}\!\hat{z}_{3}\,\bigr], 
+\end{equation}
+
+com ${}^{0}\!\hat{z}_{1}$ alinhado a $\hat{z}_{B}$ e ${}^{0}\!\hat{z}_{2}$, ${}^{0}\!\hat{z}_{3}$ paralelos a $\hat{x}_{B}$. Essa estrutura reflete diretamente a distribuição física dos eixos de junta do manipulador acoplado à base.
+
+\subsection{Singularidades e interpretação geométrica}
+\label{sec:singularidades_jacobiana}
+
+Singularidades ocorrem quando a Jacobiana linear perde posto, tornando impossível gerar determinadas velocidades cartesianas.
+Ocorrem quando eixos de juntas tornam-se alinhados ou quando o efetuador atinge uma configuração de liberdade reduzida.
+
+Quando colunas de $\mathbf{J}_{v}$ tornam-se linearmente dependentes, o espaço de velocidades possíveis se reduz. Pequenas movimentações desejadas podem exigir velocidades articulares elevadas. Conforme \cite{craig2005}, a independência direcional dos eixos das juntas é essencial para manter posto pleno.
+
+A partir dessa relação direta, surge o problema inverso: determinar $\dot{\vec{q}}$ que produza uma velocidade cartesiana desejada ${}^{0}\!\dot{\vec{x}}_{E,d}$.
+Idealmente, teríamos
+$\dot{\vec{q}} = \mathbf{J}_{v}^{-1}(\vec q)\,{}^{0}\!\dot{\vec{x}}_{E,d}$,
+mas, em geral, $\mathbf{J}_{v}$ não é quadrada ou pode perder posto.
+
+Adota-se então a pseudo-inversa amortecida \cite{sciavicco_siciliano2010}:
+
+\begin{equation}
+\label{eq:pseudoinversa_preIK}
+\dot{\vec{q}}
+=
+\mathbf{J}_{v}^{T}
+\bigl(
+\mathbf{J}_{v}\mathbf{J}_{v}^{T}
++
+\lambda^{2}\mathbf{I}_{3}
+\bigr)^{-1}
+\,{}^{0}\!\dot{\vec{x}}_{E,d},
+\end{equation}
+
+com $\lambda > 0$ atuando como termo de regularização perto de singularidades e $\mathbf{I}_{3}$ denotando a matriz identidade de ordem três.
+
+
+Essa formulação permite projetar a velocidade desejada no espaço articular de forma estável, estabelecendo a ponte entre cinemática diferencial e cinemática inversa diferencial.
