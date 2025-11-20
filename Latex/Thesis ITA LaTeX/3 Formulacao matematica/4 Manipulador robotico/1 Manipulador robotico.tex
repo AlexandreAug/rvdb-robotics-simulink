@@ -1,0 +1,41 @@
+\section{Manipulador Robótico}
+\label{sec:manipulador_robotico}
+
+O Manipulador Robótico é responsável pelas operações de captura e acoplamento durante a fase final da missão de \gls{rvdb}, operando em ambiente de microgravidade orbital, no qual o conjunto base--manipulador pode ser tratado, em primeira aproximação, como um sistema mecânico isolado em torno do seu centro de massa.
+As movimentações exercidas pelos elos e juntas alteram a atitude e a inércia equivalente da base física $\{B\}$ da espaçonave.
+A interação dinâmica entre a base e o MR exige uma formulação integrada para representar o comportamento do conjunto.
+
+O desempenho do MR está condicionado por restrições cinemáticas e estruturais, como os limites de junta, as dimensões dos elos, a capacidade de torque e a velocidade dos atuadores.
+As limitações definem o espaço de trabalho (\emph{workspace}) e impõem restrições de alcance e estabilidade do sistema.
+A seguir, é apresentado o propósito do \gls{mr} no contexto da missão de \gls{rvdb}.
+
+\subsection{Modos de operação}
+\label{sec:MR_modos_operacao}
+
+Neste trabalho foram considerados dois modos de operação para o \gls{mr}, sendo eles:
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Modo não-operacional}: após o término da transferência orbital, inicia-se a aproximação longa descrito através do movimento relativo. Neste momento, a dinâmica da espaçonave perseguidora é representada pela dinâmica de Euler do corpo rígido, conforme a Seção~\ref{sec:atitude_inercial}.
+  \item \textbf{Modo operacional}: realiza-se a troca da dinâmica do corpo rígido para a dinâmica acoplada, conforme a Seção~\ref{sec:dinAcoplada_}. Neste instante está ocorrendo a aproximação curta, onde o manipulador robótico se movimentará para que a ferramenta seja conectada na porta de acoplamento do alvo.
+\end{enumerate}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/2 Proposito e arquitetura.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/3 Referenciais e cinematica direta.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/4 Cinematica diferencial e Jacobiano.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/5 Cinematica inversa.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/6 Formulacao dinamica acoplada.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/7 Energia cinetica.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/8 Velocidades linear e angular.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/9 Equações de Lagrange.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/10 Momentos de inércia.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/12 Conservação do momento angular.tex}
+
+\input{3 Formulacao matematica/4 Manipulador robotico/13 Translação da base.tex}

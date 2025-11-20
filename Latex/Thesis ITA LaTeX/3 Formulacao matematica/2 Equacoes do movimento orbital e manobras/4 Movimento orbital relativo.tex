@@ -1,0 +1,254 @@
+\subsection{Movimento orbital relativo}
+\label{sec:movimento_orbital_relativo}
+O problema do movimento relativo dos dois corpos se aplica também à ao movimento orbital relativo entre a espaçonave perseguidora e o alvo.
+Ela é formulada a partir da diferença entre as posições da espaçonave perseguidora e do alvo previamente descritos no ECI, conforme apresentado na Figura~\eqref{fig:movimento_relativo_LVLH}.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.9\linewidth]{3 Formulacao matematica/Imagens/Posicao relativa LVLH.png}
+\caption{Movimento relativo das espaçonaves em relação ao referencial LVLH.}
+\label{fig:movimento_relativo_LVLH}
+\end{figure}
+Sendo assim, o vetor relativo $s$ expressa a posição do aceleração em relação ao alvo, e as equações diferenciais permitem descrever a dinâmica da aproximação entre as duas espaçonaves \cite{fehse2003}.
+
+\begin{equation}
+\vec r_{a} + \vec s = \vec r_{p}
+\end{equation}
+
+\begin{equation}
+\label{eq:vetorS}
+\vect s = \vect r_{p} - \vect r_{a}
+\end{equation}
+
+\begin{equation}
+\label{eq:vetorS_ddot}
+\ddot{\vect s} = \ddot{\vect r}_{p} - \ddot{\vect r}_{a}
+\end{equation}
+
+Inserindo as equações \eqref{eq:movimentoperseguidor} e \eqref{eq:movimentoalvo} do movimento relativo do perseguidor e do alvo na equação \eqref{eq:vetorS_ddot}, temos:
+
+\begin{equation}
+\label{eq:vetorS_ddot_substituicao}
+\ddot{\vec s} = \left(-\mu \frac{\vect r_{p}}{\vect {r_{p}}^3} + \frac{\vect F}{m_{p}}\right) - \left(-\mu \frac{\vect r_a}{\vect {r_a}^3}\right)
+\end{equation}
+
+Onde $\mu$ é o parâmetro gravitacional do sistema. A seguir, serão considerados:
+
+\begin{equation}
+    \label{eq:fg_rc}
+\vec f_g(\vec r_{p}) = -\mu \frac{\vect r_{p}}{\vect {r^3}_{p}}
+\end{equation}
+
+\begin{equation}
+    \label{eq:fg_rt}
+\vec f_g(\vec r_a) = -\mu \frac{\vect r_a}{\vect {r^3}_a}
+\end{equation}
+
+Portanto, a equação \eqref{eq:vetorS_ddot_substituicao} se torna:
+
+\begin{equation}
+\label{eq:fg_rc_fg_rt}
+\ddot{\vect s} = \vec f_g(\vect r_{p}) - \vec f_g(\vect r_{a}) + \frac{\vect F}{m_{p}}
+\end{equation}
+
+Para simplificar a diferença entre os termos gravitacionais, utiliza-se a expansão de Taylor em torno da posição do alvo, retendo apenas a primeira ordem, o que é suficiente para representar as forças relativas no contexto de órbitas próximas \cite{arantes2011}.
+
+\begin{equation}
+\label{eq:linearizandoJacobiana}
+\vec f(\vec r_{p}) - \vec f(\vec r_{a}) = \nabla \vec f(\vec r_{a})\,\vec s
+\end{equation}
+
+onde o vetor $\vec s$, definido na Eq.~\eqref{eq:vetorS}, representa o deslocamento entre os pontos de avaliação, dado por
+$\vec s = \vec r_{p} - \vec r_{a}$.
+Interpretando $\nabla \vec f(\vec r_a)$ como a matriz jacobiana,
+
+\begin{equation}
+\mathbf{J}(\vec r_a) \;\triangleq\; \left.\frac{\partial \vec f}{\partial \vec r}\right|_{\vec r=\vec r_a},
+\end{equation}
+
+isto é, a matriz das derivadas parciais que fornece a melhor aproximação linear local do sistema em torno de $\vec r_a$, a Eq.~\eqref{eq:linearizandoJacobiana} corresponde à linearização de primeira ordem da dinâmica \cite{khalil2002nonlinear}. 
+Aplicando essa definição ao campo gravitacional relativo $\vec f(\vec r)=-\mu\,\vec r/r^{3}$, obtêm-se, em particular, os termos da diagonal principal de $\mathbf{J}$ apresentados a seguir \cite{fehse2003}:
+
+\begin{equation}
+\label{eq:jacobianaDiagonal}
+\mathbf{J}_{ii} \;=\;
+\frac{\partial f_g(r_i)}{\partial r_i} \;=\;
+-\frac{\mu}{r^3}\!\left(1 - 3\,\frac{r_i^2}{r^2}\right), \quad (i=j).
+\end{equation}
+
+E os termos fora da diagonal principal são dados por \cite{fehse2003}:
+\begin{equation}
+\label{eq:jacobianaForaDiagonal}
+\mathbf{J}_{ij} =
+\frac{\partial f_g(r_i)}{\partial r_i} =
+-3 \frac{\mu}{r^3} \frac{r_i r_j}{r^2} \quad (i \neq j)
+\end{equation}
+
+Portanto, a matriz Jacobiana $\mathbf{J}$ será
+
+\begin{equation}
+    \label{eq:jacobianaGenerica}
+\vec {\mathbf{J}} = 
+\begin{bmatrix}
+1 - 3\frac{r_x^2}{r^2} &  -3\frac{r_x r_y}{r^2} &  -3\frac{r_x r_z}{r^2} \\
+-3\frac{r_y r_x}{r^2} & 1 - 3\frac{r_y^2}{r^2} & -3\frac{r_y r_z}{r^2} \\
+-3\frac{r_z r_x}{r^2} & -3\frac{r_z r_y}{r^2} & 1 - 3\frac{r_z^2}{r^2}
+\end{bmatrix}.
+\end{equation}
+
+Reescrevendo a equação \eqref{eq:linearizandoJacobiana} com os termos da matriz Jacobiana, obtém-se
+
+\begin{equation}
+\label{eq:linearizandoJacobiana2}
+\vec f_g(\vec r_{p}) - \vec f_g(\vec r_{a}) = -\frac{\mu}{r_{a}^3} \mathbf{J}s,
+\end{equation}
+
+onde $s$ é a distância relativa entre as espaçonaves, conforme \eqref{eq:vetorS}.
+Portanto, a equação \eqref{eq:fg_rc_fg_rt} se torna:
+
+\begin{equation}
+\label{eq:fg_rc_fg_rt_linearizada}  
+\ddot{\vect s} = \frac{\mu}{r_{a}^3} \mathbf{J}s + \frac{\vect F}{m_{p}}
+\end{equation}
+
+Para realizar a transformação do referencial inercial para o referencial fixo no corpo, é necessário aplicar o \emph{Teorema do Transporte}, que é uma forma de transformar as equações do movimento de um sistema de referência para outro que está em movimento relativo \cite{wie2008space, symon1979}.
+Para a mesma posição relativa entre o perseguidor (acelerado por controle) e o alvo, considera-se que
+$\mathbf{s} = \mathbf{s}^*$,
+uma vez que
+$\mathbf{s}^*$
+está expresso no referencial rotativo, enquanto $\mathbf{s}$ está no referencial inercial.
+Assim, ambos representam o mesmo vetor geométrico, porém medido em referenciais distintos. Entretanto, as suas derivadas não são equivalentes, ou seja, $\dot{\mathbf{s}} \neq \dot{\mathbf{s}}^*$, pois a derivada depende do movimento relativo entre os referenciais.
+
+\begin{equation}
+\label{eq:TransporteSymon1979}
+\ddot{\vec s} = 
+\ddot{\vec s}^{\,*}
++\vec{\omega} \times (\vec \omega \times \vec {s^*})
++2 \vec{\omega} \times \dot{ \vec{s}}
++ \dot{\vec{\omega}} \times \vec{s^*}
+\end{equation}
+
+A equação \eqref{eq:fg_rc_fg_rt_linearizada} que está no referencial inercial ao ser transformada para o referencial LVLH (Local Vertical Local Horizontal) se torna \cite{fehse2003}
+
+\begin{equation}
+\label{eq:relativo_LVLHgeral}
+\ddot{\vec s}^{\,*}
++ \vec \omega \times (\vec \omega \times \vec{s}^{\,*})
++ 2 \vec \omega \times \dot{\vec s}^{\,*} 
++ \dot{\omega} \times \vec{s}^{\,*}
++ \frac{\mu}{r^3_a} \vec{M} \vec{s}^{\,*}
+= \frac{\vec{F}}{m_p}
+\end{equation}
+
+A transformação para o referencial LVLH do alvo resulta na equação \eqref{eq:relativo_LVLHgeral}, que apresenta a dinâmica relativa no formato vetorial.
+Para órbitas circulares, esta formulação se reduz às equações linearizadas conhecidas como Equações de Hill ou \gls{hcw} que serão apresentadas a seguir.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Aqui acaba mov. orbital relativo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Quando expresso no quadro do \emph{a}, é obtido seu vetor posição:
+
+% \begin{equation}
+% \label{eq:posicao_LVLH_a}
+% \vec r_{a} = \begin{bmatrix} 0 \\ 0 \\ -r \end{bmatrix}
+% \end{equation}
+
+% E também o vetor de velocidade angular:
+
+% \begin{equation}
+% \label{eq:velocidadeAngular_LVLH_a}
+% \boldsymbol\omega = \begin{bmatrix} 0 \\ -\omega \\ 0
+% \end{bmatrix}
+% \end{equation}
+
+% Em termos da equação \eqref{eq:relativo_LVLHgeral}, é obtido:
+
+% \begin{equation}
+% \label{eq:velAngular_{p}ross_s}
+% \boldsymbol\omega \times \boldsymbol s^* =
+% \begin{bmatrix}
+%     -\omega z \\
+%     0         \\
+%     \omega x
+% \end{bmatrix} 
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:velAngular_{p}ross_{p}ross_s}
+% \boldsymbol\omega \times (\boldsymbol\omega \times \boldsymbol s^*) =
+% \begin{bmatrix}
+%     -\omega^2 x \\
+%     0           \\
+%     -\omega^2 z 
+% \end{bmatrix}
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:omega_{p}ross_dsdt}
+% \boldsymbol\omega \times \frac{d^* s^*}{dt} =
+% \begin{bmatrix}
+%     -\omega \dot z \\
+%     0                 \\
+%     \omega \dot x
+% \end{bmatrix}
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:dOmega_{p}ross_s}
+% \frac{d\boldsymbol\omega}{dt} \times \boldsymbol s^* =
+% \begin{bmatrix}
+%     -\dot\omega z \\
+%     0              \\
+%     \dot\omega x
+% \end{bmatrix}
+% \end{equation}
+
+% \begin{equation}
+% \label{eq:jacobiana_LVLH}
+% \mathbf Js^* =
+% \begin{bmatrix}
+%     1 & 0 & 0 \\
+%     0 & 1 & 0  \\
+%     0 & 0 & -2
+% \end{bmatrix} \boldsymbol s^* =
+% \begin{bmatrix}
+%     x \\
+%     y \\
+%     -2z
+% \end{bmatrix}
+% \end{equation}
+
+% No caso da órbita circular ($e=0$), a velocidade angular
+% \footnote{Os autores \cite{fehse2003,sidi1997spacecraft} definem a \emph{velocidade angular} (ou \emph{angular rate} ou até mesmo \emph{angular velocity}) como $\omega$, outros autores, como \cite{bate1971}, a definem como $\eta$} 
+% $\omega$ é constante e coincide com o movimento médio (\emph{mean motion}, $\eta$), definido por \cite{fehse2003}:
+
+% \begin{equation}
+% \label{eq:omega_{p}onstante}
+% \boldsymbol\omega^2 = \frac{\mu}{r_{a}^3}
+% \end{equation}
+
+% Ou podendo ser reescrita como:
+
+% \begin{equation}
+% \label{eq:omega_{p}onstante2}
+% \eta^2 = \frac{\mu}{r_{a}^3}
+% \end{equation}
+
+% Como $r_{a}=a$, a velocidade angular $\omega^{2}= \eta^2 = \mu/r_{a}^{3}$, portanto, neste caso em particular de órbita circular, $\omega=n$.
+
+% Então, $\dot{\omega}=0$, e ao inserir a equação \eqref{eq:omega_{p}onstante} nos termos da equação \eqref{eq:relativo_LVLHgeral}, é possível obter as equações linearizadas gerais do movimento relativo, conhecidas como Equações de Hill \cite{hill1878,fehse2003, wie2008space}.
+
+% \begin{equation}
+%     \label{eq:equacoes_HillX}
+% \ddot{x} - 2\omega \dot{z} = \frac{F_x}{m_{p}}
+% \end{equation}
+
+% \begin{equation}
+%     \label{eq:equacoes_HillY}
+% \ddot{y} + \omega^2 y = \frac{F_y}{m_{p}}
+% \end{equation}
+
+% \begin{equation}
+%     \label{eq:equacoes_HillZ}
+% \ddot{z} + 2\omega \dot{x} - 3 \omega^2 z = \frac{F_z}{m_{p}}
+% \end{equation}
