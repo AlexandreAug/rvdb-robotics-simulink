@@ -1,13 +1,25 @@
-% 3.	Resultados e Discussões dos resultados dasSimulações Computacionais
-% 3.1.	Análise de Desempenho
-% 3.2.	Robustez e Estabilidade
-% 3.3.	Considerações Computacionais
-% 3.4.	Análise comparativa dos resultados das simulações computacionais e dos testes via ambiente virtual do Gazebo
-
 \chapter{Resultados e discussão}
-\label{sec:Resultados_discussao}
+\label{sec:cap4_objetivo_criterios}
 
-% \input{3 Resultados e discussoes/3.1 Analise de desempenho.tex}
-% \input{3 Resultados e discussoes/3.2 Robustez e estabilidade.tex}
-% \input{3 Resultados e discussoes/3.3 Consideracoes computacionais.tex}
-% \input{3 Resultados e discussoes/3.4 Analise comparativa.tex}
+Este capítulo apresenta e discute os resultados das simulações realizadas nas plataformas MATLAB e Simulink com o propósito de validar a estratégia adotada para a missão de \gls{rvdb} abordada no Capítulo~\ref{sec:cap2_estrategias_rvdb}.
+Nesta seção, busca-se comprovar que:
+
+\begin{enumerate}[label=(\roman*)]
+  \item a transferência orbital translada o perseguidor para uma região de forma que ocorra a transição entre o referencial ECI para o \gls{lvlh};
+  \item o controle translacional descrito pelas equações de \gls{hcw} conduz o perseguidor até a região de aproximação de curta distância;
+  \item o controle \gls{pd} de atitude estabiliza a espaçonave perseguidora durante os modos não-operacional e operacional do \gls{mr}; e
+  \item durante a aproximação final, a dinâmica acoplada base--\gls{mr} descreve o compartamento do \gls{mr} durante sua movimentação para realizar o engate da ferramenta na porta de acoplamento, e o controle de atitude mantém a compensação diante das reações dinâmicas causadas pelo \gls{mr}.
+\end{enumerate}
+
+
+\input{4 Resultados e discussoes/Linha do tempo.tex}
+
+\input{4 Resultados e discussoes/1 App longa distancia.tex}
+\input{4 Resultados e discussoes/2 App curta distancia.tex}
+% \input{4 Resultados e discussoes/3 Atitude.tex}
+\input{4 Resultados e discussoes/4 App final.tex}
+% \input{4 Resultados e discussoes/}
+% \input{4 Resultados e discussoes/}
+% \input{4 Resultados e discussoes/}
+% \input{4 Resultados e discussoes/}
+% \input{4 Resultados e discussoes/}

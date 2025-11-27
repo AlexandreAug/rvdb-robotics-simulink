@@ -2,29 +2,27 @@
 \label{sec:convencao_sistCoordenadas_elos}
 
 Para descrever a localização de cada elo relativo ao seus elos vizinhos, foram fixados eixos em cada elo. Cada elo recebe o nome por um número de acordo com o elo que está sendo fixado, portanto o referencial $\{i\}$ é rigidamente fixado ao elo $\{i\}$.
-Nesta pesquisa, a definição dos referenciais do manipulador de três juntas revolutas segue a convenção clássica de \gls{dh} para representar a transformação geométrica entre eles \cite{craig2005}.
+Nesta pesquisa, a definição dos referenciais do manipulador de três juntas revolutas segue a convenção clássica de \gls{dh} para representar a transformação geométrica entre eles \cite{craig2005}, como mostrado na Figura~\ref{fig:Craig_3_5}.
 
-\subsection{Cinemática direta, convenção e definição dos eixos do manipulador robótico}
+\subsection{Convenção e descrição dos elos do manipulador robótico}
 \label{sec:convencao_dh_mr}
 
+Neste trabalho adota-se as convenções seguidas por \cite{craig2005}, adpatadas para aplicações espaciais.
 Cada junta é associada a um eixo $\hat{Z}_i$, coincidente com o respectivo eixo de rotação.
 O eixo $\hat{X}_i$ é orientado de modo a conectar o eixo $\hat{Z}_i$ ao eixo $\hat{Z}_{i+1}$, sendo perpendicular a ambos, enquanto $\hat{Y}_i$ é obtido pela regra da mão direita, completando o sistema ortogonal.
 As juntas 1, 2 e 3 são revolutas, portanto os eixos $\hat{Z}_1$, $\hat{Z}_2$ e $\hat{Z}_3$ representam os eixos de rotação sucessivos dos elos.
 O eixo $\hat{X}_1$ é definido na direção da interseção entre $\hat{Z}_1$ e $\hat{Z}_2$, e o eixo $\hat{X}_2$ segue o mesmo critério em relação a $\hat{Z}_2$ e $\hat{Z}_3$, a Figura~\ref{fig:Craig_3_5} demonstra isso. Por fim, o efetuador $\{E\}$ é definido na extremidade da ferramenta, que está rigidamente acoplada ao elo 3, de modo que o eixo $\hat{Z}_3$ permanece alinhado ao eixo longitudinal da ferramenta.
+Os referenciais locais $\{i\}$ ($i=1,\dots,3$) fixados em cada elo do manipulador respeitam as convenções de \gls{dh}, e as distâncias e ângulos definidos a partir desses eixos são utilizados na construção da tabela \gls{dh}.
 
-\begin{figure}[ht]
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{3 Formulacao matematica/4 Manipulador robotico/Imagens_MR/Craig_3_5.png}
 \caption{Referencias dos elos fixados de modo que o referencial $i$ é rigidamente fixado ao elo $i$. Adaptado de \cite{craig2005}.}
 \label{fig:Craig_3_5}
 \end{figure}
 
-O sistema de coordenadas inercial $\{I\}$ é utilizado como referência absoluta, enquanto o referencial da base $\{B\}$ tem sua origem no centro de massa da base física e seus eixos estão alinhados conforme a orientação do corpo.
-Neste trabalho é assumido que o referencial $\{0\}$ é tomado coincidente com a base física $\{B\}$, com $\hat{Z}_0$ alinhado ao eixo da primeira junta, de modo que as transformações homogêneas ${}^{B}T_i$ partem diretamente da base da primeira junta revoluta.
-Os referenciais locais $\{i\}$ ($i=1,\dots,3$) fixados em cada elo do manipulador respeitam as convenções de \gls{dh}, e as distâncias e ângulos definidos a partir desses eixos são utilizados na construção da tabela \gls{dh}.
-
-Além da descrição geométrica, os mesmos referenciais e as transformações homogêneas sucessivas ${}^{B}T_i$ são reutilizados na formulação dinâmica do conjunto base--manipulador, sendo que a partir dessas matrizes obtêm-se as posições dos centros de massa e os eixos de junta em coordenadas da base, que são empregados no cálculo das matrizes de inércia espacial e dos Jacobianos espaciais.
-Esses elementos compõem o modelo de Lagrange implementado por meio de cadeias de transformações homogêneas sucessivas (rotações $R_Z$, $R_X$ e translações ao longo dos eixos globais), equivalentes à convenção de \gls{dh} adotada nesta seção.
+% Além da descrição geométrica, os mesmos referenciais e as transformações homogêneas sucessivas ${}^{B}T_i$ são reutilizados na formulação dinâmica do conjunto base--manipulador, sendo que a partir dessas matrizes obtêm-se as posições dos centros de massa e os eixos de junta em coordenadas da base, que são empregados no cálculo das matrizes de inércia espacial e dos Jacobianos espaciais. Esses elementos compõem o modelo de Lagrange implementado por meio de cadeias de transformações homogêneas sucessivas (rotações $R_Z$, $R_X$ e translações ao longo dos eixos globais), equivalentes à convenção de \gls{dh} adotada nesta seção.
 
 A Figura~\ref{fig:referenciais_MR} exibe a espaçonave perseguidora de forma que é possível verificar os eixos de rotação de cada junta e o alinhamento de cada elo e os centros de gravidade de cada elemento.
 
@@ -36,6 +34,8 @@ A Figura~\ref{fig:referenciais_MR} exibe a espaçonave perseguidora de forma que
 \end{figure}
 
 Por sua vez, a Figura~\ref{fig:rotacaoJuntas_MR} exibe o mesmo manipulador robótico da Figura~\ref{fig:referenciais_MR}, no entanto, está no formato esquemático e explicita as juntas e seus eixos de rotação.
+O sistema de coordenadas \gls{lvlh} é utilizado como referência no movimento relativo, enquanto o referencial da base $\{B\}$ é fixado na plataforma robótica da espaçonave e seus eixos estão alinhados conforme a orientação do corpo.
+Neste trabalho é assumido que o referencial $\{0\}$ é tomado coincidente com a base física $\{B\}$, com $\hat{Z}_0$ alinhado ao eixo da primeira junta, de modo que as transformações homogêneas ${}^{B}T_i$ partem diretamente da base da primeira junta revoluta.
 
 \begin{figure}[ht]
 \centering
@@ -59,7 +59,7 @@ O manipulador robótico possui três juntas revolutas, com eixos orientados segu
 
 A definição dos parâmetros \gls{dh} decorre da orientação relativa entre os eixos de junta. Como a junta~1 gira em torno de um eixo vertical, $\hat{Z}_0$ e $\hat{Z}_1$ são coincidentes, o que implica $\alpha_0 = 0^\circ$ e $a_0 = 0$. Na junta~2, o eixo $\hat{Z}_2$ passa a ser orientado ao longo de $\hat{X}$, exigindo uma rotação de $90^\circ$ em torno de $\hat{X}_1$ para alinhar $\hat{Z}_1$ com $\hat{Z}_2$, resultando em $\alpha_1 = 90^\circ$. As juntas~2 e~3 possuem eixos paralelos, ambos orientados em $\hat{X}$, de modo que $\alpha_2 = 0^\circ$.
 
-Os parâmetros $a_i$ permanecem nulos porque todos os eixos de junta se interceptam no mesmo ponto no modelo orientacional, e os termos $d_i$ são definidos como zero por não haver deslocamentos ao longo de $\hat{Z}_i$ nesta etapa. As variáveis articulares $\theta_i$ correspondem diretamente às rotações das três juntas em torno de seus respectivos eixos $\hat{Z}_i$.
+As juntas 2 e 3 são paralelas e implica que $a_2$, de $z_2$ para $z_3$ existe, e os termos $d_i$ são definidos como zero por não haver deslocamentos ao longo de $\hat{Z}_i$. As variáveis articulares $\theta_i$ correspondem diretamente às rotações das três juntas em torno de seus respectivos eixos $\hat{Z}_i$.
 
 \begin{table}[ht]
 \centering
@@ -70,7 +70,7 @@ $i$ & $\alpha_{i-1}$ & $a_{i-1}$ & $d_i$ & $\theta_i$ \\
 \hline
 1 & $0^\circ$  & 0 & 0 & $\theta_1$ \\
 2 & $90^\circ$ & 0 & 0 & $\theta_2$ \\
-3 & $0^\circ$  & 0 & 0 & $\theta_3$ \\
+3 & $0^\circ$  & $a_2$ & 0 & $\theta_3$ \\
 \end{tabular}
 \end{table}
 
@@ -89,6 +89,7 @@ A forma geral da transformação é dada por \cite{craig2005}
     {}^{i-1}T_i
     =
     R_X(\alpha_{i-1})\,D_X(a_{i-1})\,R_Z(\theta_i)\,D_Z(d_i).
+    \label{eq:Ti}
 \end{equation}
 
 As quatro matrizes da convenção de \gls{dh} são \cite{spong2006robot}:
@@ -133,7 +134,7 @@ D_Z(d_i) =
 \end{bmatrix}.
 \end{equation}
 
-Multiplicando essas quatro operações na ordem prescrita (direita para a esquerda), obtém-se a matriz homogênea completa \cite{craig2005}
+Multiplicando essas quatro operações na ordem prescrita, conforme a equação \eqref{eq:Ti}, obtém-se a matriz homogênea completa \cite{craig2005}
 
 \begin{equation}
     \label{eq:transf_homogenea_geral_Craig}

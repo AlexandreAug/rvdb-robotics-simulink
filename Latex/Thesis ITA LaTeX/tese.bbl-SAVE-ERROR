@@ -77,63 +77,6 @@
       \field{title}{Spacecraft Formation Flying: Dynamics, Control and Navigation}
       \field{year}{2010}
     \endentry
-    \entry{bloesch2013}{misc}{}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=f1435bb9c30ae81b29d01029941e7068}{%
-           family={Bloesch},
-           familyi={B\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=164607f9daa616a03bed0e2bf6531a8d}{%
-           family={Hutter},
-           familyi={H\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0779c261d22505f312e6b8b679c19b69}{%
-           family={Gehring},
-           familyi={G\bibinitperiod},
-           given={Christian},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=07bd1cdadeb2aa2be82d0bbde5bb8b92}{%
-           family={Hoepflinger},
-           familyi={H\bibinitperiod},
-           given={Mark\bibnamedelima A.},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6ee8958bbf32527489012d8ca7c95ee3}{%
-           family={Siegwart},
-           familyi={S\bibinitperiod},
-           given={Roland},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {ETH Zürich}%
-      }
-      \list{location}{1}{%
-        {Zürich, Switzerland}%
-      }
-      \strng{namehash}{a17b7b6a400d16e726e7d112721c4f03}
-      \strng{fullhash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{fullhashraw}{25e286439abeb4f8efb03b77237163b5}
-      \strng{bibnamehash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{authorbibnamehash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{authornamehash}{a17b7b6a400d16e726e7d112721c4f03}
-      \strng{authorfullhash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{authorfullhashraw}{25e286439abeb4f8efb03b77237163b5}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Lecture notes}
-      \field{title}{Robot Dynamics -- Floating Base Systems}
-      \field{year}{2013}
-    \endentry
     \entry{craig2005}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=57c29b307f6e70b7216c8c696af16b58}{%
@@ -167,83 +110,6 @@
       \field{isbn}{0-13-123629-6}
       \field{title}{Introduction to Robotics: Mechanics and Control}
       \field{year}{2005}
-    \endentry
-    \entry{Geradin2004}{report}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=55bbf59917324962aed0534c9e5595b5}{%
-           family={Duysinx},
-           familyi={D\bibinitperiod},
-           given={Pierre},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=4e51d92f9d3ca7ef80957c21f3fa7039}{%
-           family={Geradin},
-           familyi={G\bibinitperiod},
-           given={Michel},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {University of Liège}%
-      }
-      \list{location}{1}{%
-        {Liège, Belgium}%
-      }
-      \strng{namehash}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \strng{fullhash}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \strng{fullhashraw}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \strng{bibnamehash}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \strng{authorbibnamehash}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \strng{authornamehash}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \strng{authorfullhash}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \strng{authorfullhashraw}{789f220d1aac657a7f5fc87f7b10ebe0}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{11}
-      \field{title}{An Introduction to Robotics: Mechanical Aspects}
-      \field{type}{Lecture notes}
-      \field{year}{2004}
-    \endentry
-    \entry{featherstone2008}{book}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=fa3cce175250fcafb8ef938e29b16b05}{%
-           family={Featherstone},
-           familyi={F\bibinitperiod},
-           given={Roy},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {New York, NY}%
-      }
-      \list{publisher}{1}{%
-        {Springer Science+Business Media, LLC}%
-      }
-      \strng{namehash}{fa3cce175250fcafb8ef938e29b16b05}
-      \strng{fullhash}{fa3cce175250fcafb8ef938e29b16b05}
-      \strng{fullhashraw}{fa3cce175250fcafb8ef938e29b16b05}
-      \strng{bibnamehash}{fa3cce175250fcafb8ef938e29b16b05}
-      \strng{authorbibnamehash}{fa3cce175250fcafb8ef938e29b16b05}
-      \strng{authornamehash}{fa3cce175250fcafb8ef938e29b16b05}
-      \strng{authorfullhash}{fa3cce175250fcafb8ef938e29b16b05}
-      \strng{authorfullhashraw}{fa3cce175250fcafb8ef938e29b16b05}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-0-387-74314-1}
-      \field{note}{Printed on acid-free paper}
-      \field{title}{Rigid Body Dynamics Algorithms}
-      \field{year}{2008}
-      \verb{doi}
-      \verb 10.1007/978-1-4899-7560-7
-      \endverb
     \endentry
     \entry{fehse2003}{book}{}{}
       \name{author}{1}{}{%
@@ -279,196 +145,96 @@
       \field{title}{Automated Rendezvous and Docking of Spacecraft}
       \field{year}{2003}
     \endentry
-    \entry{lynch2017modern}{book}{}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=ab9086b1452a1a9813fc6765151b4f61}{%
-           family={Lynch},
-           familyi={L\bibinitperiod},
-           given={Kevin\bibnamedelima M.},
-           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=66f19f2d439b6eb60c024ab622b0389f}{%
-           family={Park},
-           familyi={P\bibinitperiod},
-           given={Frank\bibnamedelima C.},
-           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Cambridge, UK}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{8d01efb70f6cec86f711e78e22f97a48}
-      \strng{fullhash}{8d01efb70f6cec86f711e78e22f97a48}
-      \strng{fullhashraw}{8d01efb70f6cec86f711e78e22f97a48}
-      \strng{bibnamehash}{8d01efb70f6cec86f711e78e22f97a48}
-      \strng{authorbibnamehash}{8d01efb70f6cec86f711e78e22f97a48}
-      \strng{authornamehash}{8d01efb70f6cec86f711e78e22f97a48}
-      \strng{authorfullhash}{8d01efb70f6cec86f711e78e22f97a48}
-      \strng{authorfullhashraw}{8d01efb70f6cec86f711e78e22f97a48}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9781107156302}
-      \field{title}{Modern Robotics: Mechanics, Planning, and Control}
-      \field{year}{2017}
-      \verb{urlraw}
-      \verb http://modernrobotics.org
-      \endverb
-      \verb{url}
-      \verb http://modernrobotics.org
-      \endverb
-    \endentry
-    \entry{sciavicco_siciliano2010}{book}{}{}
+    \entry{vedant2025longrange}{online}{}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=38f7a70abf2d86e432d63826f560ab93}{%
-           family={Siciliano},
+        {{un=0,uniquepart=base,hash=8ae51e3521c88d26ae54523e229445ac}{%
+           family={Kini},
+           familyi={K\bibinitperiod},
+           given={Vedant\bibnamedelima Vivek},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=965555930adb9ca9dd662f2895a7cd23}{%
+           family={Surya},
            familyi={S\bibinitperiod},
-           given={Bruno},
-           giveni={B\bibinitperiod},
+           given={Dantu\bibnamedelima Phani},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=8ee631ade831cd9df4fdd3ecba074704}{%
-           family={Sciavicco},
+        {{un=0,uniquepart=base,hash=577be3cfaa375e6f3a114d258a5289f6}{%
+           family={Sahoo},
            familyi={S\bibinitperiod},
-           given={Lorenzo},
-           giveni={L\bibinitperiod},
+           given={Rakesh\bibnamedelima Kumar},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=ff3e3865edda89166207ec2d8a4c22aa}{%
-           family={Villani},
-           familyi={V\bibinitperiod},
-           given={Luigi},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dcc89269b2eb1155024b2da9fd7c68eb}{%
-           family={Oriolo},
-           familyi={O\bibinitperiod},
-           given={Giuseppe},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{ee90168e098b65fb796c51b65c7348da}
-      \strng{fullhash}{ee90168e098b65fb796c51b65c7348da}
-      \strng{fullhashraw}{ee90168e098b65fb796c51b65c7348da}
-      \strng{bibnamehash}{ee90168e098b65fb796c51b65c7348da}
-      \strng{authorbibnamehash}{ee90168e098b65fb796c51b65c7348da}
-      \strng{authornamehash}{ee90168e098b65fb796c51b65c7348da}
-      \strng{authorfullhash}{ee90168e098b65fb796c51b65c7348da}
-      \strng{authorfullhashraw}{ee90168e098b65fb796c51b65c7348da}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-1-84628-641-4}
-      \field{title}{Robotics: Modelling, Planning and Control}
-      \field{year}{2010}
-    \endentry
-    \entry{spong2006robot}{book}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=1e0c4c9e500fcb5128a2bb73fbbe891a}{%
-           family={Spong},
+        {{un=0,uniquepart=base,hash=ffb5d198fdf21c9d88c9035af7469329}{%
+           family={Sinha},
            familyi={S\bibinitperiod},
-           given={Mark\bibnamedelima W.},
-           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8346db44e6189448a4dff197f5bc47bb}{%
-           family={Hutchinson},
-           familyi={H\bibinitperiod},
-           given={Seth},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7175c3321a0269f1e715675f8629352e}{%
-           family={Vidyasagar},
-           familyi={V\bibinitperiod},
-           given={M.},
+           given={Manoranjan},
            giveni={M\bibinitperiod},
            givenun=0}}%
       }
-      \list{location}{1}{%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{1}{%
-        {John Wiley \& Sons}%
-      }
-      \strng{namehash}{d6482215384c9e79f8244e09185e7fc5}
-      \strng{fullhash}{d6482215384c9e79f8244e09185e7fc5}
-      \strng{fullhashraw}{d6482215384c9e79f8244e09185e7fc5}
-      \strng{bibnamehash}{d6482215384c9e79f8244e09185e7fc5}
-      \strng{authorbibnamehash}{d6482215384c9e79f8244e09185e7fc5}
-      \strng{authornamehash}{d6482215384c9e79f8244e09185e7fc5}
-      \strng{authorfullhash}{d6482215384c9e79f8244e09185e7fc5}
-      \strng{authorfullhashraw}{d6482215384c9e79f8244e09185e7fc5}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \strng{namehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{fullhash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{fullhashraw}{433b07562eb26be9fbea34cf9391e307}
+      \strng{bibnamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorbibnamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authornamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorfullhash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorfullhashraw}{433b07562eb26be9fbea34cf9391e307}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{First Edition}
-      \field{title}{Robot Modeling and Control}
-      \field{year}{2006}
-    \endentry
-    \entry{Wilde2018}{article}{}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=4edddff3cd4494a22a13ba264e94e27e}{%
-           family={Wilde},
-           familyi={W\bibinitperiod},
-           given={Matthias},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d787c33feddbd124cfbdd7553f63c8db}{%
-           family={Heijden},
-           familyi={H\bibinitperiod},
-           given={Jan\bibnamedelima C.},
-           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
-           givenun=0,
-           prefix={van\bibnamedelima der},
-           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
-           prefixun=0}}%
-        {{un=0,uniquepart=base,hash=5d9753c98d823c83966f248dbe18f6fd}{%
-           family={Schaub},
-           familyi={S\bibinitperiod},
-           given={Hanspeter},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \strng{fullhash}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \strng{fullhashraw}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \strng{bibnamehash}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \strng{authorbibnamehash}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \strng{authornamehash}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \strng{authorfullhash}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \strng{authorfullhashraw}{f5ce24d8397d2894338c8d2fc231e4fb}
-      \field{sortinit}{W}
-      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Frontiers in Robotics and AI}
-      \field{title}{Equations of Motion of Free-Floating Spacecraft Manipulators using the Generalized Jacobian Matrix}
-      \field{volume}{5}
-      \field{year}{2018}
-      \field{pages}{15}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.3389/frobt.2018.00015
+      \field{eprintclass}{eess.SY}
+      \field{eprinttype}{arxiv}
+      \field{title}{Long-Range Rendezvous and Docking Maneuver Control of Satellite using Cross-Feedback Sliding Mode Controller}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2504.01203
       \endverb
       \verb{urlraw}
-      \verb https://www.frontiersin.org/articles/10.3389/frobt.2018.00015/full
+      \verb https://arxiv.org/abs/2504.01203
       \endverb
       \verb{url}
-      \verb https://www.frontiersin.org/articles/10.3389/frobt.2018.00015/full
+      \verb https://arxiv.org/abs/2504.01203
+      \endverb
+    \endentry
+    \entry{mathworks_space_rendezvous_docking}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={{MathWorks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MathWorks}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{MATLAB®{} \& Simulink®{}, Aerospace Blockset example}
+      \field{title}{Space Rendezvous and Docking}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/aeroblks/spacecraft-rendezvous-and-docking.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/aeroblks/spacecraft-rendezvous-and-docking.html
       \endverb
     \endentry
   \enddatalist

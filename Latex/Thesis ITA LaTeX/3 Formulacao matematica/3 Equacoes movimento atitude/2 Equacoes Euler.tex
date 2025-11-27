@@ -2,96 +2,292 @@
 \label{sec:atitude_inercial}
 
 A formulação matemática de atitude da espaçonave perseguidora é realizada partir das equações de Euler aplicadas a um corpo rígido.
-Essas equações são descritas em torno do centro de massa (\emph{Center of Mass} ou CoM) e expressas no sistema da própria espaçonave.
-As equações diferenciais de movimento rotacional assumem a forma \cite{wie2008space}
+Essas equações são escritas em relação aos eixos fixos na espaçonave. O movimento pode ser representado no ECI via matrizes de rotação ou no próprio referencial \gls{lvlh} quando a atitude da espaçonave se desalinha do sistema orbital.
+% As equações diferenciais de movimento rotacional assumem a forma \cite{wie2008space}
+
+% \begin{equation}
+% \mathbf{I}\,\dot{\vec{\omega}}
+% + \vec{\omega}\times \big(\mathbf{I}\,\vec{\omega}\big)
+% = \vec{M},
+% \label{eq:euler_corpo_rigido}
+% \end{equation}
+
+A partir de \cite{wie2008space}, a equação de momento angular de um corpo rígido em torno do seu centro de massa é escrita, no referencial inercial, como
+
+\begin{equation}
+\vec{M}
+= \dot{\vec{H}}
+= \left\{ \frac{d\vec{H}}{dt} \right\}_{N},
+\label{eq:wie_M_Hdot}
+\end{equation}
+
+em que $\vec{H}$ é o momento angular e $\vec{M}$ é o momento externo resultante.
+Aplicando o teorema do transporte para a derivada temporal de um vetor expresso em um referencial solidário ao corpo $B$, obtém-se
+
+\begin{equation}
+\dot{\vec{H}}
+\equiv
+\left\{ \frac{d\vec{H}}{dt} \right\}_{N}
+=
+\left\{ \frac{d\vec{H}}{dt} \right\}_{B}
++
+\vec{\omega}^{B/N} \times \vec{H},
+\label{eq:wie_transport_H}
+\end{equation}
+onde $\vec{\omega}^{B/N}$ é a velocidade angular do corpo $B$ em relação ao referencial inercial $N$.
+Para um corpo rígido com eixos principais fixos ao corpo, no referencial $B$ o momento angular é
+
+\begin{equation}
+\vec{H}
+= \mathbf{J}\,\vec{\omega}^{B/N},
+\label{eq:wie_H_Jw}
+\end{equation}
+
+em que $\mathbf{J}$ é a matriz de inércia em $B$, que é constante nesse referencial.
+Logo, a derivada de $\vec{H}$ tomada em $B$ é
+
+\begin{equation}
+\left\{ \frac{d\vec{H}}{dt} \right\}_{B}
+= \mathbf{J}\,\dot{\vec{\omega}}^{B/N},
+\label{eq:wie_dHdt_B}
+\end{equation}
+
+pois $\mathbf{J}$ não depende do tempo em $B$.
+Substituindo \eqref{eq:wie_dHdt_B} e \eqref{eq:wie_H_Jw} em \eqref{eq:wie_transport_H} e, em seguida, na equação de momento angular \eqref{eq:wie_M_Hdot}, obtém-se
+
+\begin{equation}
+\vec{M}
+=
+\mathbf{J}\,\dot{\vec{\omega}}^{B/N}
++
+\vec{\omega}^{B/N} \times
+\big( \mathbf{J}\,\vec{\omega}^{B/N} \big),
+\label{eq:euler_rotacional_wie}
+\end{equation}
+
+que é a forma vetorial das equações de Euler para o movimento de rotação de um corpo rígido em torno de seu centro de massa. Identificando $\vec{\omega} \equiv \vec{\omega}^{B/N}$ e $\mathbf{I} \equiv \mathbf{J}$, recupera-se a forma
 
 \begin{equation}
 \mathbf{I}\,\dot{\vec{\omega}}
-+ \vec{\omega}\times \big(\mathbf{I}\,\vec{\omega}\big)
-= \vec{M},
++
+\vec{\omega}\times\big(\mathbf{I}\,\vec{\omega}\big)
+=
+\vec{M}.
 \label{eq:euler_corpo_rigido}
 \end{equation}
 
 em que $\mathbf{I}$ é o tensor de inércia em relação ao centro de massa, $\vec{\omega}$ é o vetor de velocidade angular e $\vec{M}$ são os momentos (ou torques) externos aplicados ao corpo.
 A equação \eqref{eq:euler_corpo_rigido} é válida somente para a espaçonave perseguidora quando o \gls{mr} não estiver operando, ou seja, travado.
 
-Para um referencial fixo ao corpo, definido pelos eixos principais de inércia $\{x, y, z\}$, as equações rotacionais de Euler que descrevem o movimento de um corpo rígido podem ser expressas como
+% Para um referencial fixo ao corpo, definido pelos eixos principais de inércia $\{x, y, z\}$, as equações rotacionais de Euler que descrevem o movimento de um corpo rígido podem ser expressas como
+
+% \begin{equation}
+% \begin{aligned}
+% I_x\dot{\omega}_x - (I_y - I_z)\omega_y\omega_z &= M_x, \\[4pt]
+% I_y\dot{\omega}_y - (I_z - I_x)\omega_z\omega_x &= M_y, \\[4pt]
+% I_z\dot{\omega}_z - (I_x - I_y)\omega_x\omega_y &= M_z.
+% \end{aligned}
+% \end{equation}
+
+A partir da forma vetorial de \eqref{eq:euler_corpo_rigido}, obtêm-se as equações escalares assumindo que o sistema de coordenadas do corpo está alinhado com os eixos principais de inércia, de modo que
 
 \begin{equation}
-\begin{aligned}
-I_x\dot{\omega}_x - (I_y - I_z)\omega_y\omega_z &= M_x, \\[4pt]
-I_y\dot{\omega}_y - (I_z - I_x)\omega_z\omega_x &= M_y, \\[4pt]
-I_z\dot{\omega}_z - (I_x - I_y)\omega_x\omega_y &= M_z.
-\end{aligned}
+   \mathbf{I} =
+\begin{bmatrix}
+I_x & 0   & 0 \\
+0   & I_y & 0 \\
+0   & 0   & I_z
+\end{bmatrix},
+\qquad
+\vec{\omega} =
+\begin{bmatrix}
+\omega_x \\[2pt]
+\omega_y \\[2pt]
+\omega_z
+\end{bmatrix},
+\qquad
+\vec{M} =
+\begin{bmatrix}
+M_x \\[2pt]
+M_y \\[2pt]
+M_z
+\end{bmatrix}. 
+\end{equation}
+
+Primeiro,
+
+\begin{equation}
+\mathbf{I}\,\vec{\omega}
+=
+\begin{bmatrix}
+I_x \omega_x \\
+I_y \omega_y \\
+I_z \omega_z
+\end{bmatrix}.
+\label{eq:Iomega_componentes}
+\end{equation}
+
+Em seguida calcula-se o produto vetorial
+
+\begin{equation}
+    \vec{\omega} \times (\mathbf{I}\vec{\omega})
+    =
+    \begin{vmatrix}
+    \vec{i} & \vec{j} & \vec{k} \\
+    \omega_x & \omega_y & \omega_z \\
+    I_x\omega_x & I_y\omega_y & I_z\omega_z
+    \end{vmatrix},
+\end{equation}
+
+o que resulta em
+
+\begin{equation}
+\vec{\omega} \times (\mathbf{I}\vec{\omega})
+=
+\begin{bmatrix}
+(I_z - I_y)\,\omega_y\,\omega_z \\
+(I_x - I_z)\,\omega_x\,\omega_z \\
+(I_y - I_x)\,\omega_x\,\omega_y
+\end{bmatrix}.
+\label{eq:cross_Iomega}
+\end{equation}
+
+A derivada do termo inercial é simplesmente
+
+\begin{equation}
+\mathbf{I}\,\dot{\vec{\omega}}
+=
+\begin{bmatrix}
+I_x \dot{\omega}_x \\
+I_y \dot{\omega}_y \\
+I_z \dot{\omega}_z
+\end{bmatrix}.
+\label{eq:I_omega_dot}
+\end{equation}
+
+Substituindo \eqref{eq:cross_Iomega} e \eqref{eq:I_omega_dot} em \eqref{eq:euler_corpo_rigido} e igualando componente a componente, obtêm-se as equações de Euler na forma escalar
+
+\begin{equation}
+\begin{matrix}
+        I_x \dot{\omega}_x + (I_z - I_y)\,\omega_y\,\omega_z = M_x, \\
+        I_y \dot{\omega}_y + (I_x - I_z)\,\omega_x\,\omega_z = M_y, \\
+        I_z \dot{\omega}_z + (I_y - I_x)\,\omega_x\,\omega_y = M_z.
+\end{matrix}
+\end{equation}
+
+Reescrevendo os termos de acoplamento com sinal trocado, obtendo
+
+\begin{equation}
+\begin{matrix}
+    I_x \dot{\omega}_x - (I_y - I_z)\,\omega_y\,\omega_z = M_x, \\
+    I_y \dot{\omega}_y - (I_z - I_x)\,\omega_z\,\omega_x = M_y, \\
+    I_z \dot{\omega}_z - (I_x - I_y)\,\omega_x\,\omega_y = M_z,
+\end{matrix}
 \end{equation}
 
 Essas três equações diferenciais ordinárias são acopladas e não lineares, além disso, descrevem a evolução das componentes da velocidade angular do corpo rígido.
 Em conjunto com as equações cinemáticas correspondentes, elas definem o movimento rotacional de um corpo com três graus de liberdade rotacionais \cite{wie2008space}.
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.9\linewidth]{3 Formulacao matematica/Imagens/Corpo rigido momento.png}
-\caption{Corpo rígido com dois referenciais fixos ao corpo. Adaptado de \cite{wie2008space}.}
-\label{fig:corpo_rigido_wie_6_3}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.9\linewidth]{3 Formulacao matematica/Imagens/Corpo rigido momento.png}
+% \caption{Corpo rígido com dois referenciais fixos ao corpo. Adaptado de \cite{wie2008space}.}
+% \label{fig:corpo_rigido_wie_6_3}
+% \end{figure}
 
-A Figura~\ref{fig:corpo_rigido_wie_6_3} ilustra um corpo rígido, em torno de seu centro de massa.
-São mostrados dois sistemas de coordenadas fixos ao corpo, associados aos eixos principais de inércia ${[x, y, z]}$, utilizados para descrever a orientação e o movimento rotacional.
-Esses referenciais expressam as componentes da velocidade angular e dos momentos aplicados diretamente no sistema do corpo, conforme as equações de Euler.
+% A Figura~\ref{fig:corpo_rigido_wie_6_3} ilustra um corpo rígido, em torno de seu centro de massa.
+% São mostrados dois sistemas de coordenadas fixos ao corpo, associados aos eixos principais de inércia ${[x, y, z]}$, utilizados para descrever a orientação e o movimento rotacional.
+% Esses referenciais expressam as componentes da velocidade angular e dos momentos aplicados diretamente no sistema do corpo, conforme as equações de Euler.
 
-Nesse referencial, os eixos ${[x, y, z]}$ estão alinhados com os eixos principais de inércia do corpo, ou seja, aqueles para os quais o tensor de inércia é diagonal.
-Portanto, os produtos de inércia são nulos e cada eixo está associado a um momento principal de inércia $[I_x$, $I_y$, $I_z$].
-As componentes da velocidade angular $[\omega_x, \omega_y, \omega_z]$ e do momento aplicado $[M_x, M_y, M_z]$ são medidas em relação a esses eixos fixos ao corpo \cite{wie2008space}.
-
+% Nesse referencial, os eixos ${[x, y, z]}$ estão alinhados com os eixos principais de inércia do corpo, ou seja, aqueles para os quais o tensor de inércia é diagonal.
+% Portanto, os produtos de inércia são nulos e cada eixo está associado a um momento principal de inércia $[I_x$, $I_y$, $I_z$].
+% As componentes da velocidade angular $[\omega_x, \omega_y, \omega_z]$ e do momento aplicado $[M_x, M_y, M_z]$ são medidas em relação a esses eixos fixos ao corpo \cite{wie2008space}.
 \subsubsection{Tensor de inércia variável}
+\label{sec:tensor_inercia_variavel}
 
-No caso da espaçonave perseguidora, que possui um \gls{mr} acoplado em sua base, o tensor de inércia não é constante, pois a movimentação dos elos modifica a distribuição de massa, e que pode ser representada por:
-
+No caso da espaçonave perseguidora, equipada com um \gls{mr} acoplado a uma base
+flutuante, a distribuição de massa do sistema depende da configuração interna
+do manipulador e da atitude da plataforma. Seja o vetor de coordenadas
+generalizadas
 \begin{equation}
-\mathbf{I}(t) = \mathbf{I}_{base} + \mathbf{I}_{manip}(q(t)),
+\vec{q}(t) =
+\begin{bmatrix}
+\vec{\eta}(t) \\
+\vec{q}_m(t)
+\end{bmatrix},
+\qquad
+\vec{q}_m(t) =
+\begin{bmatrix}
+q_1(t) \\ q_2(t) \\ q_3(t)
+\end{bmatrix},
+\end{equation}
+em que $\vec{\eta}(t)$ parametriza a atitude da base e $\vec{q}_m(t)$ contém os
+ângulos das três juntas revolutas do \gls{mr}. A matriz de inércia total em
+torno do centro de massa, expressa no referencial do corpo $B$, é modelada por
+\begin{equation}
+\mathbf{I}_B\big(\vec{q}(t)\big)
+=
+\mathbf{I}_{\text{base},B}
++
+\mathbf{I}_{\text{manip},B}\big(\vec{q}(t)\big),
 \label{eq:inercia_total}
 \end{equation}
+onde $\mathbf{I}_{\text{base},B}$ é o tensor de inércia da base isolada e
+$\mathbf{I}_{\text{manip},B}$ representa a contribuição do \gls{mr}, dependente
+da configuração articular e da orientação relativa dos elos em relação à base.
 
-em que $\mathbf{I}_{base}$ é o tensor de inércia associada à base da espaçonave e $\mathbf{I}_{manip}(t)$ é a contribuição variável de inércia do \gls{mr}.
-Conforme ocorre a variação temporal de $\mathbf{I}$, o termo $\dot{\mathbf{I}}(t)\omega$ é introduzido na dinâmica do sistema, como visto em \eqref{eq:euler_corpo_rigido}, proposto por \cite{wie2008space}.
-
-A origem do termo adicional se dá a partir da derivada temporal do momento angular, conforme a formulação apresentada em \cite{wie2008space}\fn{Seções 6.2 a 6.4.}.
-Considerando o vetor momento angular no sistema do corpo,
-$\vec{H} = \mathbf{I}(t)\vec{\omega}$, 
-a derivada total no referencial inercial é dada por
-
+A equação fundamental de quantidade de movimento angular de um corpo rígido em
+torno de seu centro de massa, apresentada em Wie~\cite{wie2008space}, relaciona
+o momento externo $\vec{M}$ à derivada temporal da quantidade de movimento
+angular $\vec{H}$ tomada no referencial inercial $N$:
 \begin{equation}
-\frac{d\vec{H}}{dt} = \mathbf{I}(t)\,\dot{\vec{\omega}} + \dot{\mathbf{I}}(t)\,\vec{\omega}.
-\label{eq:derivada_momento_angular}
+\vec{M}
+=
+\left\{ \frac{d\vec{H}}{dt} \right\}_{N}.
+\label{eq:eq_momento_angular}
 \end{equation}
-
-Substituindo essa expressão na equação geral do momento angular, 
-$\vec{M} = \frac{d\vec{H}}{dt} + \vec{\omega}\times\vec{H}$, obtém-se
-
+Para o sistema em estudo, o vetor quantidade de movimento angular expresso no
+referencial do corpo é
 \begin{equation}
-\vec{M} = \mathbf{I}(t)\,\dot{\vec{\omega}} + \dot{\mathbf{I}}(t)\,\vec{\omega} + 
-\vec{\omega}\times\big(\mathbf{I}(t)\,\vec{\omega}\big),
+\vec{H}_B(t)
+=
+\mathbf{I}_B\big(\vec{q}(t)\big)\,
+\vec{\omega}^{B/N}(t),
+\label{eq:H_def}
+\end{equation}
+em que $\vec{\omega}^{B/N}$ é a velocidade angular da base em relação a $N$.
+
+Aplicando o teorema de transporte entre os referenciais $N$ e $B$, conforme \cite{wie2008space}, obtém-se
+\begin{equation}
+\left\{ \frac{d\vec{H}_B}{dt} \right\}_{N}
+=
+\left\{ \frac{d\vec{H}_B}{dt} \right\}_{B}
++
+\vec{\omega}^{B/N} \times \vec{H}_B.
+\label{eq:teorema_transporte_H}
+\end{equation}
+Substituindo \eqref{eq:H_def} em \eqref{eq:teorema_transporte_H} e usando
+\eqref{eq:eq_momento_angular}, a equação de movimento rotacional para o sistema
+com inércia variável resulta em
+\begin{equation}
+\vec{M}
+=
+\mathbf{I}_B\big(\vec{q}\big)\,
+\dot{\vec{\omega}}^{B/N}
++
+\dot{\mathbf{I}}_B\big(\vec{q}\big)\,
+\vec{\omega}^{B/N}
++
+\vec{\omega}^{B/N} \times
+\Big(
+\mathbf{I}_B\big(\vec{q}\big)\,
+\vec{\omega}^{B/N}
+\Big),
 \label{eq:euler_inercia_variavel}
 \end{equation}
-
-onde o termo $\dot{\mathbf{I}}(t)\vec{\omega}$ representa a contribuição associada 
-à variação temporal do tensor de inércia devido à movimentação interna de massas, 
-como no caso do manipulador robótico acoplado à base.
-
-
-% \subsubsection{Dinâmica acoplada com o manipulador}
-
-% Os movimentos do \gls{mr} geram torques que devem ser incluídos na equação dinâmica da atitude, \eqref{eq:euler_corpo_rigido}.
-% Deve-se considerar tanto os torques de controle externos quanto os torques internos de reação do MR, dada por:
-
-% \begin{equation}
-% \mathbf{I}(t)\,\dot{\vec{\omega}}
-% + \vec{\omega}\times \big(\mathbf{I}(t)\,\vec{\omega}\big) 
-% = \vec{M}_{controle}
-% +\vec{M}_{manip}
-% +\mathbf{I}_{manip}
-% +\vec \omega_{ferramenta}
-% \label{eq:dinamica_acoplada}
-% \end{equation}
-
-% onde $\vec{M}_{controle}$ são os torques de controle aplicados à espaçonave e $\vec{M}_{manip}$ são os torques produzidos pelas juntas do MR durante sua movimentação. 
+em que o termo
+$\vec{\omega}^{B/N} \times \big(\mathbf{I}_B(\vec{q})\,\vec{\omega}^{B/N}\big)$
+corresponde ao efeito giroscópico clássico das equações de Euler e o termo
+$\dot{\mathbf{I}}_B(\vec{q})\,\vec{\omega}^{B/N}$ representa a contribuição
+associada à variação temporal do tensor de inércia devido à redistribuição
+interna de massas provocada pelo movimento do \gls{mr} sobre a base flutuante.

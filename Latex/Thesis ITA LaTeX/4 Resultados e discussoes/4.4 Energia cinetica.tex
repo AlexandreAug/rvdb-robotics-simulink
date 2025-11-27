@@ -1,0 +1,34 @@
+\subsection{Energia cinética e momento angular}
+\label{sec:cap4_app_final_energia_momento}
+
+A evolução da energia cinética do sistema base–manipulador ao longo da aproximação final permite avaliar quão intensa é a dinâmica residual na vizinhança do alvo. No intervalo total de simulação ($900$ s, com $N = 225003$ amostras), a energia cinética associada à base apresenta valores entre $0$ e aproximadamente $0{,}1914$ J, convergindo para um valor final muito pequeno, da ordem de $E_{\text{base,final}} \approx 7{,}3\times 10^{-5}$ J. A contribuição dos elos é ainda menor: a energia cinética dos elos varia no intervalo $[0,\;9{,}33\times 10^{-4}]$ J, atingindo um valor final praticamente nulo, $E_{\text{elos,final}} \approx 1{,}7\times 10^{-7}$ J. Como consequência, a energia cinética total $E_{\text{tot}}$ permanece dominada pela componente da base, com máximo em torno de $0{,}1914$ J e valor final $E_{\text{tot,final}} \approx 1{,}35\times 10^{-4}$ J, indicando que, ao final da aproximação, tanto a base quanto o manipulador operam em um regime de movimento muito suave, com baixos níveis de energia mecânica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Figura: energias cinéticas da base, elos e total ao longo do tempo,
+% com linha tracejada vermelha marcando o início do modo operacional do MR.
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+Do ponto de vista do momento angular, o sistema também se mantém em uma faixa estreita de variação ao longo de toda a manobra. O momento angular total em relação ao corpo da base apresenta componentes dentro dos intervalos
+$h_{x,\text{tot}} \in [-0{,}09494,\;0{,}09511]$ N·m·s,
+$h_{y,\text{tot}} \in [-0{,}1415,\;0{,}0990]$ N·m·s e
+$h_{z,\text{tot}} \in [-0{,}1426,\;0{,}1452]$ N·m·s,
+com valores finais
+$h_{x,\text{tot,final}} \approx 2{,}36\times 10^{-3}$ N·m·s,
+$h_{y,\text{tot,final}} \approx -5{,}04\times 10^{-3}$ N·m·s e
+$h_{z,\text{tot,final}} \approx 1{,}51\times 10^{-2}$ N·m·s.
+As componentes de momento angular da base, consideradas isoladamente, exibem variações muito próximas às do total, com faixas de
+$h_{x,\text{base}} \in [-0{,}09494,\;0{,}09511]$ N·m·s,
+$h_{y,\text{base}} \in [-0{,}1002,\;0{,}0990]$ N·m·s e
+$h_{z,\text{base}} \in [-0{,}1385,\;0{,}1452]$ N·m·s,
+e valores finais
+$h_{x,\text{base,final}} \approx 7{,}95\times 10^{-4}$ N·m·s,
+$h_{y,\text{base,final}} \approx -7{,}95\times 10^{-4}$ N·m·s e
+$h_{z,\text{base,final}} \approx 4{,}35\times 10^{-3}$ N·m·s.
+A contribuição dos elos para o momento angular, na forma como foi computada, permanece desprezível em comparação com a da base, reforçando a ideia de que o acoplamento dinâmico não induz grandes variações globais de momento angular ao longo da aproximação.
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Figura: momento angular total, da base e dos elos,
+% com destaque para a região em que o MR opera em modo Lagrange.
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+A combinação desses resultados mostra que a fase de aproximação final é realizada com baixos níveis de energia cinética e com momentos angulares relativamente pequenos, o que é compatível com a exigência de uma manobra de acoplamento segura e precisa. A convergência da energia cinética total para valores próximos de zero indica que a movimentação residual da base e do manipulador ao final da sequência é limitada, enquanto os valores reduzidos de momento angular sugerem que o controle de atitude e o planejamento de trajetória do MR são capazes de evitar excitações excessivas da dinâmica de corpo rígido do perseguidor durante a operação de captura.

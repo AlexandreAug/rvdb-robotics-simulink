@@ -70,6 +70,13 @@
 \usepackage{placeins}
 \usepackage{lmodern}
 \usepackage{longtable}
+\usepackage{hhline}
+\usepackage{tabularx}
+\usepackage{xltabular}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+\usepackage{array}
+
 
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, positioning, calc}
@@ -88,7 +95,6 @@
 \usepackage{booktabs}
 %PACOTETABELAS_SE _ERRADO_ESXCLUIR_ACIMA
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
-\renewcommand{\arraystretch}{1.2}
 
 \newcommand{\vect}[1]{\vec{#1}}
 \newcommand{\norm}[1]{\left\lVert #1\right\rVert}
@@ -179,16 +185,8 @@
 
 \input{4 Resultados e discussoes/0 Capitulo 4.tex}
 
-% \input{5 Conclusoes e trabalhos futuros/0 Capitulo 5.tex}
+\input{5 Conclusoes e trabalhos futuros/0 Capitulo 5.tex}
 
-% \chapter{Introdução}
-% \input{Cap1/cap1}
-% \chapter{Modelagem Dinâmica de Cupins Cibernéticos}
-% \input{Cap2/cap2}
-% \chapter{Controle Robusto de Concretos Caóticos}
-% \input{Cap3/cap3}
-% \chapter{Conclusão}
-% \input{Cap4/cap4}
 
 % REFERENCIAS BIBLIOGRAFICAS
 \renewcommand\bibname{\itareferencesnamebabel} %renomear título do capítulo referências
@@ -196,8 +194,8 @@
 
 % Apendices
 \appendix
-% \chapter{Tópicos de Dilema Linear} %opcional
-% \input{ApeA/apendiceA}
+\chapter{Apêndice A} %opcional
+\input{ApeA/apendiceA}
 
 % Anexos
 \annex

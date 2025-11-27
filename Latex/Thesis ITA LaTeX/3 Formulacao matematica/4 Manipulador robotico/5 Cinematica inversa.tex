@@ -1,17 +1,12 @@
 \subsection{Cinemática Inversa}
 \label{sec:cinematica_inversa}
 
-A cinemática inversa consiste em determinar o vetor articular que produz uma pose desejada do efetuador em relação à base.
+Dados a pose desejada do efetuador (posição e orientação), o problema de cinemática inversa consiste em determinar todos os possíveis conjuntos de ângulos de junta que produzem essa pose. Na cinemática de manipuladores, essa determinação da pose do efetuador é um problema fundamental.
 O problema é não linear, pois envolve equações trigonométricas resultantes da composição de transformações homogêneas \cite{craig2005,spong2006robot}.
 Como um manipulador 3R possui menos de seis graus de liberdade, não é capaz de realizar combinações arbitrárias de posição e orientação em três dimensões, estando limitado ao subespaço de poses compatíveis com sua geometria \cite{craig2005}.
-
-A existência de solução depende do espaço de trabalho: a pose desejada deve ser alcançável e compatível com a configuração $Z$--$X$--$X$ do \gls{mr}.
+% A existência de solução depende do espaço de trabalho: a pose desejada deve ser alcançável e compatível com a configuração $Z$--$X$--$X$ do \gls{mr}.
 Além disso, manipuladores revolutos podem admitir múltiplas soluções articulares para uma mesma pose, exigindo que a escolha final respeite continuidade da trajetória e limites mecânicos \cite{craig2005}.
-
-Para manipuladores com poucos graus de liberdade, não há, em geral, expressão analítica fechada que relacione diretamente a pose desejada aos ângulos das juntas \cite{sciavicco_siciliano2010}.
-Neste trabalho adota-se a formulação diferencial, que utiliza a Jacobiana geométrica para relacionar velocidades cartesianas (lineares e angulares) e articulares.
-A solução aproximada é obtida pela pseudo-inversa amortecida da Jacobiana, que fornece as velocidades das juntas necessárias para reduzir o erro operacional.
-A integração dessas velocidades gera a trajetória correspondente no espaço de juntas, restringindo a solução às poses fisicamente admissíveis pelo manipulador 3R.
+Portanto, a existência ou a inexistência de uma solução de cinemática inversa define o espaço de trabalho de um dado manipulador. A ausência de solução indica que o manipulador não consegue atingir a pose desejada, isto é, não pode alcançar simultaneamente a posição e a orientação especificadas por estarem fora do seu espaço de trabalho.
 
 \subsubsection{Erro operacional}
 

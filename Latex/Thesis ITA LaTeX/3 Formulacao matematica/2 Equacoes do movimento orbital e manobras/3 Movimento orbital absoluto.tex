@@ -4,12 +4,12 @@ Segundo \cite{wie2008space}, a dinâmica orbital é análise do movimento orbita
 As Leis de Newton do movimento e a Lei da gravidade, assim como as três Leis do movimento planetário de Kepler providenciam o fundamento para esse estudo.
 
 % \subsubsection{Problema dos dois corpos}
-Nesta dissertação foi considerado o problema mais simples da mecânica orbital, ou seja, o problema dinâmico de duas massas pontuais sob a influência de sua atração gravitacional mútua, conhecido como o problema dos dois corpos na mecânica celeste, sendo este utilizado para descrever o movimento absoluto e relativo do \gls{rvdb}.
-A formulação do problema matemático é descrita pelas leis de movimento e pela lei da gravidade de \cite{newton1713}, e então o problema de dois corpos será formulado de forma condizente com as três leis empíricas do movimento planetário de Kepler, que são \cite{kepler1609astronomia}:
+Nesta dissertação foi considerado o problema mais simples da mecânica orbital, ou seja, o problema dinâmico de duas massas pontuais sob a influência de sua atração gravitacional mútua, conhecido como o problema dos dois corpos na mecânica celeste, sendo este utilizado para descrever o movimento absoluto das espaçonaves em missão de \gls{rvdb}.
+A formulação do problema matemático é descrita pelas leis de movimento e pela lei da gravidade de Newton \cite{wie2008space}. O problema de dois corpos será formulado com as três leis empíricas do movimento planetário de Kepler, que são:
 
 \begin{enumerate}[label=(\roman*)]
     \item Cada planeta move-se ao redor do Sol descrevendo uma órbita elíptica, tendo o Sol localizado em um dos focos da elipse (Lei das Órbitas).
-    \item O vetor raio traçado do Sol até o planeta varre áreas iguais em intervalos de tempo iguais, indicando que a velocidade orbital é variável ao longo da trajetória (Lei das Áreas).
+    \item O vetor raio traçado do Sol até o planeta varre áreas iguais em intervalos de tempo iguais, conservando a quantidade de movimento angular.
     \item O quadrado do período orbital de um planeta é proporcional ao cubo do semi-eixo maior de sua órbita, relação que expressa a dependência entre o tempo de revolução e a distância média ao Sol (Lei dos Períodos).
 \end{enumerate}
 
@@ -22,7 +22,7 @@ Nesse estudo, então, o sistema de dois corpos é o sistema restrito dos dois co
 
 \subsubsection{O problema dos corpos: Movimento absoluto e relativo}
 
-Como exemplo prático do problema dos dois corpos, pode-se citar a órbita da Lua em torno da Terra, bem como a de um planeta em torno do Sol \cite{wgsantos2011}.
+% Como exemplo prático do problema dos dois corpos, pode-se citar a órbita da Lua em torno da Terra, bem como a de um planeta em torno do Sol \cite{wgsantos2011}.
 A aceleração de cada corpo é dada por:
 
 \begin{equation}
@@ -87,53 +87,6 @@ sendo reescrito como
 \ddot {\vec r} = -\frac{\mu}{\vec {r^3}}\vec r
 \end{equation}
 
-
-%%%%%%%%%%%%%%%%
-% A partir da Lei da Gravitação Universal, equação \eqref{eq:newtonGravitacao_Parte1}, o termo $G M$ é denominado parâmetro gravitacional ($\mu$ da Terra), onde $M$ representa a massa da Terra; $m_1$ e $m_2$ são as massas dos corpos perseguidor e alvo, respectivamente; G é a constante gravitacional \cite{halliday2013,wie2008space}.
-
-% \begin{equation}
-% \label{eq:newtonGravitacao_Parte1}
-% \vect F_g(\vect r) = - G\ \frac{M(m_1+m_2)}{r^2} \frac{\vect r}{r} = - G\ \frac{M(m_1+m_2)}{r^3} {\vect r}
-% \end{equation}
-
-% Na maioria dos casos práticos de mecânica orbital, a massa do corpo primário ($M$) — neste caso, a massa do planeta Terra — é muito maior que a do corpo secundário ($m_1$ e $m_2$), então essas massas menores podem ser ignoradas \cite{Folta2022}, desta forma, $M \gg (m_1 + m_2)$, e que resulta em $\mu \approx GM$ \cite{wie2008space}. Dito isso, a equação do movimento orbital sob a ação da gravidade é dada por \cite{newton1713}:
-
-% \begin{equation}
-% \label{eq:newtonGravitacao_Parte2}
-% \vect F_g(\vect r) =
-% - G\ \frac{Mm}{r^2} {\vect r}
-% = -\mu \frac{m}{\vec {r^3}}\vec r,
-% \end{equation}
- 
-% \begin{equation}
-% \label{eq:fgParte1}
-% \vect F_g(\vect r) = -\mu \frac{m}{\vec {r^3}}\vec r
-% \end{equation}
-
-% \begin{equation}
-% \label{eq:fgParte2}
-% \frac{\vect F_g(\vect r)}{m} = -\mu \frac{\vect r}{\vec {r^3}}
-% \end{equation}
-
-% Pela segunda Lei de Newton \cite{newton1713}, a força é o produto da massa pela aceleração \cite{halliday2013} - que é o mesmo que a derivada segunda da posição em relação ao tempo \cite{edelstein2018_derivadaSegunda}.
-
-% \begin{equation}
-% \label{eq:F=ma_Halliday2013Parte1}
-% \vect F_g(\vect r) = m * \vec a = m * \ddot{\vect r}
-% \end{equation}
-
-% \begin{equation}
-% \label{eq:Fma_Halliday2013_Parte2}
-% \frac{\vect F_g(\vect r)}{m} = \ddot{\vect r}
-% \end{equation}
-
-% Substituindo a equação \eqref{eq:Fma_Halliday2013_Parte2} na equação \eqref{eq:fgParte2}:
-
-% \begin{equation}
-% \label{eq:eqFundamentalDoisCorpos}
-% \ddot {\vec r} = -\frac{\mu}{\vec {r^3}}\vec r
-% \end{equation}
-
 onde $\ddot{\vect r}$ é a aceleração inercial de $m_2$ em relação a $m_1$; $\mu$ é o parâmetro gravitacional do sistema de dois corpos, e \eqref{eq:eqFundamentalDoisCorpos} é a equação fundamental (geral) do problema dos dois corpos \cite{fehse2003,wie2008space}.
 A dinâmica orbital do alvo (sem aceleração de controle) é propagada por\fn{O subescrito \emph{p} se refere à espaçonave perseguidora, enquanto que \emph{a} é a espaçonave alvo.}
 
@@ -160,7 +113,7 @@ Nesse sistema, as posições do alvo e da espaçonave perseguidora são expressa
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.9\linewidth]{3 Formulacao matematica/Imagens/Posicao absoluta.png}
-\caption{Problema dos Dois Corpos.}
+\caption{O problema do movimento relativo formulado para missões de \gls{rvdb}.}
 \label{fig:movimento_ref_absoluto}
 \end{figure}
 

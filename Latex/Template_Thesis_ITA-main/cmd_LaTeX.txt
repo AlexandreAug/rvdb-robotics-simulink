@@ -6,12 +6,15 @@ git push
 %----- 
 %==================================================
 
+
+\setlength{\tabcolsep}{70pt} % Largura total da tabela
+
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 \begin{figure}[ht]
-    \label{fig:LABEL_AQUI}
 \centering
-\includegraphics[width=0.50\linewidth]{Caminho\da\imagem\aqui.png}
+\includegraphics[width=0.50\linewidth]{Caminhodaimagemaqui.png}
 \caption{Descritivo aqui. Fonte: XXX}
+    \label{fig:LABEL_AQUI}
 \end{figure}
 
 %%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

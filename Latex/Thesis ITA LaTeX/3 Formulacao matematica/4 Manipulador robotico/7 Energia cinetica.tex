@@ -1,23 +1,41 @@
 \subsubsection{Energia cinética}
 \label{sec:dinAcoplada_energia_cinetica}
 
-A energia cinética total é escrita como a soma das contribuições da base e dos $n_\ell$ elos do manipulador robótico
-
+A energia cinética total é escrita como a soma das contribuições da base e dos
+$n$ elos do manipulador robótico:
 \begin{equation}
-T = T_{B} + \sum_{i=1}^{n_\ell} T_{i},
+T = T_{B} + \sum_{i=1}^{n} T_{i},
 \label{eq:T_total}
 \end{equation}
+em que $n$ denota o número de elos do manipulador e, no caso do \gls{mr} considerado neste trabalho, tem-se $n = 3$.
 
-onde $T_B$ é a energia cinética translacional e rotacional da base e $T_i$ é a energia cinética do $i$-ésimo elo, expressas no referencial da base $\{B\}$, com $n_\ell = 3$ para o \gls{mr} deste trabalho.
-A energia cinética da base é escrita, no caso em que apenas a atitude é considerada como grau de liberdade dinâmico, como
+O termo $T_B$ representa a energia cinética associada à base da espaçonave, incluindo tanto a energia translacional do centro de massa da base quanto a energia rotacional devida à sua velocidade angular em torno desse centro de massa.
+Já $T_i$ corresponde à energia cinética do $i$-ésimo elo do manipulador, também composta por parcela translacional (movimento do centro de massa do elo em relação ao referencial da base $\{B\}$) e parcela rotacional (associada à rotação do elo em torno do seu próprio centro de massa). Dessa forma, a soma em \eqref{eq:T_total} agrega, de maneira explícita, as contribuições de todos os elos à energia cinética total do sistema espaçonave e manipulador.
 
+A energia cinética total é escrita como a soma da contribuição de atitude da
+espaçonave (tratada como corpo rígido equivalente) e das contribuições dos elos
+do manipulador,
+\begin{equation}
+T = T_{B} + \sum_{i=1}^{n} T_{i},
+\label{eq:T_total}
+\end{equation}
+em que $n$ é o número de elos do manipulador ($n=3$ neste trabalho).
+No presente modelo, o movimento orbital do centro de massa global é tratado
+separadamente no problema de translação; assim, $T_B$ representa apenas a
+energia cinética de atitude (puramente rotacional) da espaçonave em torno do
+seu centro de massa.
+
+Quando somente a atitude é considerada como grau de liberdade dinâmico, essa
+energia cinética de atitude é escrita como
 \begin{equation}
 T_{B} =
-\frac{1}{2}\, {}^{B}\!\vec\omega_{B}^{\,T}\, I_B\, {}^{B}\!\vec\omega_{B},
+\frac{1}{2}\, {}^{B}\!\vec{\omega}_{B}^{\,T}\,\mathbf{I}_B\,{}^{B}\!\vec{\omega}_{B},
 \label{eq:TB}
 \end{equation}
+em que $\mathbf{I}_B$ é o tensor de inércia da espaçonave (base + elos do
+manipulador, na configuração considerada) em torno do seu centro de massa
+global, expresso no referencial $\{B\}$ fixo ao veículo.
 
-em que $\mathbf{I}_B$ é o tensor de inércia da base em torno do seu centro de massa, expresso no referencial $\{B\}$.
 No modelo adotado, a base física não possui graus de liberdade translacionais na formulação acoplada, uma vez que a translação é descrita separadamente pelo movimento orbital relativo em \gls{lvlh}.
 Então, apenas o termo rotacional associado à velocidade angular ${}^{B}\!\vec\omega_B$ contribui para a energia cinética e para a matriz de inércia generalizada $M(\vec q)$.
 
@@ -26,7 +44,7 @@ T_i =
 \frac{1}{2} m_i\, {}^{B}\!\vec v_{G_i}^{\,T} {}^{B}\!\vec v_{G_i}
 +
 \frac{1}{2} {}^{B}\!\vec\omega_i^{\,T} I_i {}^{B}\!\vec\omega_i,
-\label{eq:Ti}
+\label{eq:Ti_2}
 \end{equation}
 
 onde ${}^{B}\!\vec v_{G_i}$ e ${}^{B}\!\vec\omega_i$ são a velocidade linear do centro de massa e a velocidade angular do elo $i$, obtidas a partir do Jacobiano acoplado da Seção~\ref{sec:cinematica_diferencial_jacobiano}.

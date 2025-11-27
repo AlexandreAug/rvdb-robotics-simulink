@@ -1,0 +1,51 @@
+\section{Atitude}
+\label{sec:cap4_atitude}
+
+Nesta seção apresenta-se uma visão integrada da atitude do perseguidor ao longo de toda a missão de \gls{rvdb} simulada e abrange desde a aproximação de longa distância (Seção~\ref{sec:cap4_app_longa}), a aproximação de curta distância (Seção~\ref{sec:cap4_app_curta}) e a aproximação final (Seção~\ref{sec:cap4_app_final}).
+O objetivo é evidenciar que o alinhamento da atitude ocorre de forma contínua desde a transferência orbital até o momento do acoplamento da ferramenta na porta de acoplamento.
+
+Ao longo da simulação, a dinâmica de atitude do perseguidor é descrita por quaternions, a partir dos quais são obtidos os ângulos de Euler para fins de interpretação física.
+Na aproximação de longa distância, a atitude é ajustada de forma a ficar igual à atitude do alvo.
+Durante a aproximação de curta distância, esse alinhamento é reforçado, pois durante a transição da dinâmica de corpo rígido descrito pelas equações de Euler para a dinâmica acoplada de Lagrange, ocorre um desalinhamento por conta da movimentação do \gls{mr}.
+Na aproximação final, o alinhamento de atitude continua sendo monitorado e frequentemente corrigido, pois caso haja desalinhamento, o controle das articulações do \gls{mr} irá realizar novas correções e virará um \emph{looping} de erros.
+
+% ------------------------------------------------------------------
+% Tabela: resumo global da atitude por fase da aproximação
+% \begin{table}[H]
+% \centering
+% \caption{Resumo dos principais parâmetros de atitude ao longo das fases de aproximação.}
+% \label{tab:cap4_atitude_resumo_fases}
+% \begin{tabularx}{\linewidth}{|X|X|X|X|}
+% \hline
+% \textbf{Fase} &
+% \textbf{Condição inicial de atitude} &
+% \textbf{Erro máximo (ângulos de Euler / quaternion)} &
+% \textbf{Condição final de atitude} \\
+% \hline
+% Aproximação longa & & & \\
+% Aproximação curta & & & \\
+% Aproximação final & & & \\
+% \hline
+% \end{tabularx}
+% \end{table}
+% ------------------------------------------------------------------
+
+% ------------------------------------------------------------------
+% Figura: evolução global dos ângulos de Euler ao longo de toda a simulação
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.9\linewidth]{fig_cap4_atitude_euler_global}
+% \caption{Evolução dos ângulos de Euler do perseguidor ao longo de toda a simulação (aproximações longa, curta e final).}
+% \label{fig:cap4_atitude_euler_global}
+% \end{figure}
+% ------------------------------------------------------------------
+
+% ------------------------------------------------------------------
+% Figura: evolução dos quaternions (ou do erro em quaternion) ao longo de toda a simulação
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.9\linewidth]{fig_cap4_atitude_quat_global}
+% \caption{Componentes do quaternion de atitude (ou norma do erro em quaternion) do perseguidor ao longo de toda a simulação.}
+% \label{fig:cap4_atitude_quat_global}
+% \end{figure}
+% ------------------------------------------------------------------

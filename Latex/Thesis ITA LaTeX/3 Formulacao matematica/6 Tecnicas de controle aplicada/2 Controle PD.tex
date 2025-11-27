@@ -1,12 +1,13 @@
-\subsection{Técnica de controle aplicada}
+% \subsection{Técnica de controle aplicada}
+
+
+% A partir do modelo dinâmico acoplado base--\gls{mr} obtido na Seção~\ref{sec:dinAcoplada_}, o controlador \gls{pd} atua sobre os seguintes subconjuntos principais de variáveis:
+% (i) quando em modo não-operacional, a atitude da espaçonave (conjunto base física--\gls{mr}), sendo o \gls{mr} está travado, sem exercer movimentação,
+% (ii) durante o modo operacional considera-se a atitude somente da base física da espaçonave, pois o \gls{mr} está se movimentando, e
+% (iii) as juntas do manipulador robótico.
+
+\subsection{Controle Proporcional--Derivativo (PD)}
 \label{sec:controle_PD}
-
-A partir do modelo dinâmico acoplado base--\gls{mr} obtido na Seção~\ref{sec:dinAcoplada_}, o controlador \gls{pd} atua sobre os seguintes subconjuntos principais de variáveis:
-(i) quando em modo não-operacional, a atitude da espaçonave (conjunto base física--\gls{mr}), sendo o \gls{mr} está travado, sem exercer movimentação,
-(ii) durante o modo operacional considera-se a atitude somente da base física da espaçonave, pois o \gls{mr} está se movimentando, e
-(iii) as juntas do manipulador robótico.
-
-\subsubsection{Controle Proporcional--Derivativo (PD)}
 
 Desde 1957, cerca de $7.800$ espaçonaves foram lançadas, dentre elas, mais de $99\%$ usam o controle PID como controlador base \cite{xie2016applications}.
 Neste trabalho foi considerado o controle \gls{pd} e não PID, ou seja, o ganho integrativo foi removido pois pode resultar em uma resposta oscilatória elevada e resultar em um período longo de tempo de acomodação \cite{razak2007industrial}.
@@ -24,7 +25,7 @@ u(t) = -K_p\,e(t) - K_d\,\dot e(t),
 \end{equation}
 
 onde $K_p$ e $K_d$ são ganhos positivos de natureza, em geral, diagonal ou escalar para cada canal controlado.
-No contexto deste trabalho, essas leis são estendidas a vetores de estados, com ganhos matriciais apropriados.
+% No contexto deste trabalho, essas leis são estendidas a vetores de estados, com ganhos matriciais apropriados.
 Adota-se uma lei de controle por realimentação negativa, no formato da Equação~\eqref{eq:controle_PD_geral}, de modo que o sinal de controle atue reduzindo o erro em vez de amplificá-lo \cite{ogata2010engenharia}.
 
 \input{3 Formulacao matematica/6 Tecnicas de controle aplicada/2.1 Controle atitude.tex}

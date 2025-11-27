@@ -1,18 +1,102 @@
-\section{Uma Primeira Seção para o Apêndice}
+\section{Posição e velocidade no referencial inercial}
+\label{ap:ApendiceA}
 
-A matriz de Dilema Linear $M$ e o vetor de torques inerciais $b$,
-utilizados na simulação são calculados segundo a formulação 
-abaixo:
-\begin{equation}
-M=\left[ \begin{array}{ccc}
-M_{11} & M_{12} & M_{13} \\
-M_{21} & M_{22} & M_{23} \\
-M_{31} & M_{32} & M_{33}
-\end{array} \right]
-\end{equation}
+As Tabelas \ref{tab:cap4_eci_cenarioA} e \ref{tab:cap4_eci_cenarioB} apresentam as posições e velocidades no referencial ECI das espaçonaves perseguidora e alvo.
+Essas variáveis foram coletadas nos instantes da injeção inicial do perseguidor em sua órbita inicial, no instante em que $\Delta v1$ foi aplicado, assim como $\Delta v2$, e finalmente no instante final do \emph{drift} orbital, que é o ponto inicial do movimento relativo descrito pelas equações \gls{hcw}.
 
-\begin{figure}[h]
-\centering
-\includegraphics[height=5cm, width=5cm]{ApeA/pragas_ciclo_cupim}
-\caption{Uma figura que está no apêndice}\label{FD}
-\end{figure}
+\begin{xltabular}{\linewidth}{|L|l|}
+\caption{Vetores orbitais no referencial ECI (cenário A)}\label{tab:cap4_eci_cenarioA}\\
+\hline
+\multicolumn{1}{|c|}{\textbf{Variável}} &
+\multicolumn{1}{c|}{\textbf{Vetor (km e km/s)}} \\
+\hline
+\endfirsthead
+
+\hline
+\multicolumn{1}{|c|}{\textbf{Variável}} &
+\multicolumn{1}{c|}{\textbf{Valor (km e km/s)}} \\
+\hline
+\endhead
+
+(ECI) Raio orbital inicial do perseguidor & $[6.826,87;\,-838,234;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade orbital inicial do perseguidor & $[0,927744;\,7,55586;\,0]$ \\
+\hline
+(ECI) Raio orbital inicial do alvo & $[6.978,14;\,0,0000;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade orbital inicial do alvo & $[0;\,7,55787;\,0]$ \\
+\hline
+(ECI) Raio orbital do perseguidor no instante de $\Delta v1$ & $[-4.478,30;\,-5.220,50;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do perseguidor no instante de $\Delta v1$ & $[5,7796;\,-4,5651;\,0]$ \\
+\hline
+(ECI) Raio orbital do alvo no instante de $\Delta v1$ & $[-4.361,77;\,-5.446,96;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do alvo no instante de $\Delta v1$ & $[5,89948;\,-4,72414;\,0]$ \\
+\hline
+(ECI) Raio orbital do perseguidor no instante de $\Delta v2$ & $[4.543,34;\,5.296,32;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do perseguidor no instante de $\Delta v2$ & $[-5,73645;\,4,9209;\,0]$ \\
+\hline
+(ECI) Raio orbital do alvo no instante de $\Delta v2$ & $[4.543,03;\,5.296,72;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do alvo no instante de $\Delta v2$ & $[-5,73676;\,4,92045;\,0]$ \\
+\hline
+(ECI) Raio orbital do perseguidor após o \emph{drift} orbital & $[-1.832,79;\,6.733,04;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do perseguidor após o \emph{drift} orbital & $[-7,29257;\,-1,9851;\,0]$ \\
+\hline
+(ECI) Raio orbital do alvo após o \emph{drift} orbital & $[-1.833,16;\,6.733,05;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do alvo após o \emph{drift} orbital & $[-7,29241;\,-1,98545;\,0]$ \\
+\hline
+\end{xltabular}
+
+% ------------------------------------------------------------
+\begin{xltabular}{\linewidth}{|L|l|}
+\caption{Vetores orbitais no referencial ECI (cenário B)}\label{tab:cap4_eci_cenarioB}\\
+\hline
+\multicolumn{1}{|c|}{\textbf{Variável}} &
+\multicolumn{1}{c|}{\textbf{Vetor (km e km/s)}} \\
+\hline
+\endfirsthead
+
+\hline
+\multicolumn{1}{|c|}{\textbf{Variável}} &
+\multicolumn{1}{c|}{\textbf{Valor (km e km/s)}} \\
+\hline
+\endhead
+
+(ECI) Raio orbital inicial do perseguidor & $[0,0000;\,-6.778,14;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade orbital inicial do perseguidor & $[7,66856;\,0;\,0]$ \\
+\hline
+(ECI) Raio orbital inicial do alvo & $[6.978,14;\,0,0000;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade orbital inicial do alvo & $[0;\,7,55787;\,0]$ \\
+\hline
+(ECI) Raio orbital do perseguidor no instante de $\Delta v1$ & $[-4.187,43;\,-5.329,97;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do perseguidor no instante de $\Delta v1$ & $[-6.03015;\,-4.73752;\,0]$ \\
+\hline
+(ECI) Raio orbital do alvo no instante de $\Delta v1$ & $[-4.670,72;\,5.184,47;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do alvo no instante de $\Delta v1$ & $[-5.61519;\,-5.05876;\,0]$ \\
+\hline
+(ECI) Raio orbital do perseguidor no instante de $\Delta v2$ & $[4.310,92;\,-5.487,16;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do perseguidor no instante de $\Delta v2$ & $[5,94315;\,4,66917;\,0]$ \\
+\hline
+(ECI) Raio orbital do alvo no instante de $\Delta v2$ & $[4.311,38;\,-5.486,93;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do alvo no instante de $\Delta v2$ & $[5.94277;\,4,66956;\,0]$ \\
+\hline
+(ECI) Raio orbital do perseguidor após o \emph{drift} orbital & $[6.960,99;\,487,484;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do perseguidor após o \emph{drift} orbital & $[-0,527994;\,7,53945;\,0]$ \\
+\hline
+(ECI) Raio orbital do alvo após o \emph{drift} orbital & $[6.961,06;\,487,844;\,0,0000]^T$ \\
+\hline
+(ECI) Velocidade do alvo após o \emph{drift} orbital & $[-0,528373;\,7,53937;\,0]$ \\
+\hline
+\end{xltabular}
