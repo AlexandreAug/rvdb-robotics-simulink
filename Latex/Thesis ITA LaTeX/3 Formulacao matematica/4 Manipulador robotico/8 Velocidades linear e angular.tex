@@ -1,92 +1,373 @@
-
 \subsubsection{Velocidades linear e angular}
 \label{sec:dinAcoplada_veloc_linear_angular}
 
-As velocidades linear $\vec v_{G_i}$ e angular $\vec\omega_i$ do $i$-ésimo elo são obtidas a partir dos jacobianos espaciais $J_{\text{sp},i}$, avaliados no respectivo centro de massa, que relacionam diretamente $\dot{\vec q}$ com as velocidades cinemáticas empregadas na energia cinética.
-
+As velocidades linear ${}^{B}\!\vec v_{G_i}$ e angular ${}^{B}\!\vec\omega_i$
+do elo $i$ são obtidas a partir do jacobiano geométrico avaliado no respectivo
+centro de massa \cite{craig2005,Wang2003KinematicsDynamics}.
+Escrevendo o jacobiano na forma espacial \cite{murray1994mathematical},
+tem-se um operador $J_{\text{sp},i}(\vec q\, \, )$ que
+relaciona diretamente as velocidades generalizadas
+$\dot{\vec q\, \, }$ com as velocidades cinemáticas empregadas na energia
+cinética:
 \begin{equation}
-J_{\text{sp},i}=
 \begin{bmatrix}
-J_{v,i}\\[2pt]
-J_{\omega,i}
+{}^{B}\!\vec v_{G_i} \\
+{}^{B}\!\vec\omega_i
+\end{bmatrix}
+=
+J_{\text{sp},i}(\vec q\,)\,\dot{\vec q\,}.
+\label{eq:jacobianos_vGi1}
+\end{equation}
+
+Em seguida, decompõe-se o jacobiano espacial em parte linear e parte angular
+
+\begin{equation}
+J_{\text{sp},i}(\vec q\,)
+=
+\begin{bmatrix}
+J_{v,i}(\vec q\,) \\
+J_{\omega,i}(\vec q\,)
 \end{bmatrix},
+\label{eq:jacobianos_vGi2}
 \end{equation}
 
-de modo que
+onde o termo $J_{v,i}(\vec q\, )$ é a parte linear, enquanto
+$J_{\omega,i}(\vec q\, )$ é a parte angular do jacobiano espacial do elo $i$.
+
+Como discutido em \cite{sciavicco_siciliano2010}, no caso de juntas
+revolutas as colunas de $J_{v,i}$ e $J_{\omega,i}$ associadas às coordenadas
+articulares podem ser escritas a partir dos eixos de junta e das posições
+dos centros de massa.
+Se ${}^{B}\!\vec z_j$ denota o eixo de rotação da junta $j$ em $\{B\}$,
+${}^{B}\!\vec r_{O_j}$ a posição da sua origem e ${}^{B}\!\vec r_{G_i}$ a
+posição do centro de massa do elo $i$, então, para uma junta revoluta $j$
+que atua sobre o elo $i$, a coluna correspondente é
 
 \begin{equation}
-{}^{B}\!\vec v_{G_i}=J_{v,i}\,\dot{\vec q},
+    J_{v,i}^{(j)}(\vec q\, )
+    =
+    {}^{B}\!\vec z_j \times
+    \bigl({}^{B}\!\vec r_{G_i}(\vec q\, ) - {}^{B}\!\vec r_{O_j}(\vec q\, )\bigr),
+    \qquad
+    J_{\omega,i}^{(j)}(\vec q\, )
+    =
+    {}^{B}\!\vec z_j,
+\end{equation}
+para $j\le i$, ao passo que, para $j>i$, essas colunas são nulas,
+\begin{equation}
+J_{v,i}^{(j)}(\vec q\, ) = \vec 0,
 \qquad
-{}^{B}\!\vec\omega_i=J_{\omega,i}\,\dot{\vec q}.
+J_{\omega,i}^{(j)}(\vec q\, ) = \vec 0.
+\end{equation}
+Essas expressões coincidem com as de um manipulador de base fixa, pois se
+referem apenas às coordenadas articulares $\theta_j$; as colunas de
+$J_{\text{sp},i}(\vec q\, )$ associadas às coordenadas de atitude da base são
+determinadas pela cinemática da base e aparecem de forma explícita nas
+relações entre $\dot{\vec\eta}_B$, ${}^{B}\!\vec\omega_B$ e na construção de
+$M(\vec q\, )$.
+
+%%%%%%%%%%==========%%%%%%%%%%==========%%%%%%%%%%==========%%%%%%%%%%==========%%%%%%%%%%==========
+
+A expressão de Coriolis e centrífuga para cada elo decorre diretamente da
+energia cinética escrita no espaço de velocidades espaciais.
+Como em \cite{featherstone2008}, para o elo $i$ a energia cinética pode ser
+escrita como
+\begin{equation}
+T_i
+=
+\frac{1}{2}
+\left(
+J_{\text{sp},i}(\vec q\, )\,\dot{\vec q\, }
+\right)^{T}
+M_{i,\text{spatial}}
+\left(
+J_{\text{sp},i}(\vec q\, )\,\dot{\vec q\, }
+\right),
+\label{eq:Ti_spatial_energy}
+\end{equation}
+onde $M_{i,\text{spatial}}$ é a matriz espacial de
+inércia do elo, composta pela massa e pelo tensor de inércia do elo escritos no
+formalismo de velocidades espaciais 6D.
+Ademais, a derivada de \eqref{eq:Ti_spatial_energy} em relação às velocidades generalizadas produz
+\begin{equation}
+\frac{\partial T_i}{\partial \dot{\vec q\, }}
+=
+J_{\text{sp},i}^{T}\,
+M_{i,\text{spatial}}\,
+J_{\text{sp},i}\,\dot{\vec q\, },
+\end{equation}
+e, por sua vez, a derivada temporal gera o termo de Coriolis e centrífugo:
+\begin{equation}
+\frac{d}{dt}
+\left(
+\frac{\partial T_i}{\partial \dot{\vec q\, }}
+\right)
+=
+J_{\text{sp},i}^{T}
+M_{i,\text{spatial}}
+\left(
+\dot J_{\text{sp},i}\,\dot{\vec q\, }
+\right)
++
+\left(\dot J_{\text{sp},i}\right)^{T}
+M_{i,\text{spatial}}
+J_{\text{sp},i}\,\dot{\vec q\, }.
+\label{eq:derivada_spatial}
 \end{equation}
 
-A variação temporal desses jacobianos introduz os termos associados a efeitos centrífugos e de Coriolis.
-Para cada elo, a contribuição dinâmica decorrente dessas variações, expressa no espaço das coordenadas generalizadas, assume a forma
-
+Como $M_{i,\text{spatial}}$ é constante para cada elo (sua massa e seu tensor de
+inércia são definidos no referencial do elo e independentemente de $\vec q\, $),
+o termo simétrico
+$(\dot J_{\text{sp},i})^{T}M_{i,\text{spatial}}J_{\text{sp},i}\dot{\vec q\, }$
+pode ser incorporado à parte inercial da dinâmica.
+Assim, a parcela do elo
+$i$ que efetivamente compõe o vetor de forças generalizadas de Coriolis é
 \begin{equation}
-C_i(\vec q,\dot{\vec q})\,\dot{\vec q}
+C_i(\vec q\, ,\dot{\vec q\, })\,\dot{\vec q\, }
 =
 J_{\text{sp},i}^{T}\,
 M_{i,\text{spatial}}
 \left(
-\dot J_{\text{sp},i}\,\dot{\vec q}
-\right),
+\dot J_{\text{sp},i}\,\dot{\vec q\, }
+\right).
+\label{eq:termos_centrif_coriolis}
 \end{equation}
 
-em que $M_{i,\text{spatial}}$ é a matriz espacial composta pela massa e pelo tensor de inércia do elo $i$.
-Note-se que $C_i(\vec q,\dot{\vec q})\,\dot{\vec q}$ representa a parcela do vetor de forças generalizadas associada ao $i$\textsuperscript{o} elo que é puramente decorrente dos termos centrífugos e de Coriolis, ou seja, da dependência explícita da energia cinética em relação às velocidades generalizadas.
-
-Essa formulação decorre diretamente da estrutura da energia cinética escrita em coordenadas espaciais e é equivalente à forma clássica baseada nos símbolos de Christoffel, permanecendo coerente com a decomposição matricial da dinâmica no referencial da base física ${B}$ e com a estrutura cinemática do \gls{mr} definida em ${0}$.
-
-Em ambiente de microgravidade, a energia potencial gravitacional do conjunto é desprezada, de forma que a energia potencial generalizada satisfaz $V(\vec q) = 0$ e a lagrangiana reduz-se a $L(\vec q,\dot{\vec q}) = T(\vec q,\dot{\vec q})$.
-Assim, o sistema base--\gls{mr} é descrito unicamente pela energia cinética total e pelas coordenadas generalizadas, permitindo a aplicação direta das equações de Lagrange
-Nesse contexto, a dinâmica passa a ser governada exclusivamente pela matriz de inércia generalizada $M(\vec q)$ e pelos acoplamentos cinemáticos entre a atitude da base e as coordenadas articulares.
-Após reunir as velocidades generalizadas, obtém-se:
-
+A expressão \eqref{eq:termos_centrif_coriolis} é equivalente à forma
+clássica dos termos de Coriolis e centrífugos escrita a partir dos símbolos de
+Christoffel \cite{featherstone2008}.
+Para um manipulador com matriz de inércia
+$B(\vec q\, )$,
+cujos elementos são $b_{ij}(\vec q\, )$,
+define-se o tensor de coeficientes, conforme \cite{sciavicco_siciliano2010} apresenta:
 \begin{equation}
-\dot{\vec q} =
+c_{ijk}(\vec q\, )
+=
+\frac{1}{2}
+\left(
+\frac{\partial b_{ij}}{\partial q_k}
++
+\frac{\partial b_{ik}}{\partial q_j}
+-
+\frac{\partial b_{jk}}{\partial q_i}
+\right),
+\label{eq:christoffel_coefs}
+\end{equation}
+conhecidos como símbolos de Christoffel de primeira espécie \cite{sciavicco_siciliano2010}.
+A matriz de Coriolis é então construída como
+\begin{equation}
+c_{ij}(\vec q\, ,\dot{\vec q\, })
+=
+\sum_{k=1}^{n} c_{ijk}(\vec q\, )\,\dot q_k,
+\qquad
+i,j = 1,\dots,n,
+\label{eq:C_Christoffel}
+\end{equation}
+de modo que o vetor de forças generalizadas associado a Coriolis e efeitos
+centrífugos assume a forma
+\begin{equation}
+\bigl[C(\vec q\, ,\dot{\vec q\, })\,\dot{\vec q\, }\bigr]_i
+=
+\sum_{j=1}^{n} c_{ij}(\vec q\, ,\dot{\vec q\, })\,\dot q_j
+=
+\sum_{j=1}^{n}\sum_{k=1}^{n}
+c_{ijk}(\vec q\, )\,\dot q_j \dot q_k.
+\label{eq:C_Christoffel_vetor}
+\end{equation}
+
+Tanto a representação
+\eqref{eq:christoffel_coefs}--\eqref{eq:C_Christoffel_vetor},
+quanto a forma espacial em \eqref{eq:termos_centrif_coriolis} derivam da mesma
+estrutura da energia cinética.
+A diferença está na escolha das variáveis intermediárias:
+na formulação clássica, parte-se diretamente da
+matriz de inércia $B(\vec q\, )$ no espaço das coordenadas generalizadas;
+na formulação espacial, a energia cinética de cada elo é escrita
+como \eqref{eq:Ti_spatial_energy} e toda a dependência em
+$(\vec q\, ,\dot{\vec q\, })$ é encapsulada nos jacobianos espaciais $J_{\text{sp},i}(\vec q\, )$.
+
+%%%%%%%%%%==========%%%%%%%%%%==========%%%%%%%%%%==========%%%%%%%%%%==========%%%%%%%%%%==========
+
+Em ambiente de microgravidade, o centro de massa do sistema praticamente
+coincide com o centro de gravidade e o torque gravitacional interno em torno
+do centro de massa é desprezível \cite{wie2008space}.
+Além disso, para uma órbita circular, a contribuição da energia potencial
+gravitacional na dinâmica de atitude é praticamente constante.
+Assim, no modelo adotado, toma-se a energia potencial generalizada como
+$V(\vec q\, ) = 0$ e a Lagrangiana reduz-se
+a $L(\vec q\, ,\dot{\vec q\, }) = T(\vec q\, ,\dot{\vec q\, })$.
+O conjunto espaçonave--\gls{mr} é, então, descrito diretamente pelas equações
+de Lagrange em sua forma padrão \cite{murray1994mathematical}:
+\begin{equation}
+M(\vec q\, )\,\ddot{\vec q\, }
++
+C(\vec q\, ,\dot{\vec q\, })\,\dot{\vec q\, }
+=
+\vec\tau,
+\label{eq:lagrange_formato_padrao}
+\end{equation}
+em que $\vec q\, $ é o vetor de coordenadas generalizadas, $M(\vec q\, )$ é a
+matriz de inércia generalizada e $C(\vec q\, ,\dot{\vec q\, })\,\dot{\vec q\, }$
+agrega os termos de Coriolis e centrífugos.
+O foco desta seção é a construção de $M(\vec q\, )$ a partir das
+contribuições de massa e inércia da base e dos elos do manipulador.
+
+As coordenadas generalizadas são organizadas de modo a reunir, em um único
+vetor, os parâmetros de atitude da base e as coordenadas articulares do
+manipulador:
+\begin{equation}
+\vec q\, 
+=
 \begin{bmatrix}
-\vec\omega_{B} \\
+\vec\eta_B \\
+\vec\theta
+\end{bmatrix},
+\qquad
+\dot{\vec q\, }
+=
+\begin{bmatrix}
+\dot{\vec\eta}_B \\
 \dot{\vec\theta}
 \end{bmatrix},
+\label{eq:q_generalizado_base_mr}
 \end{equation}
-
-e então, a energia cinética total assume a forma matricial
-
+em que $\vec\eta_B $ representa os ângulos de Euler da espaçonave e
+$\vec\theta$ contém as coordenadas articulares do manipulador.
+A relação cinemática entre as taxas dos ângulos de Euler e a velocidade
+angular do corpo é dada pelas equações cinemáticas diferenciais
+\cite{Schaub2010AttitudeDynamics}, que, para a sequência 3--2--1,
+podem ser escritas no formato
+$\dot{\vec\eta}_B = B(\vec\eta_B)\,{}^{B}\!\vec\omega_B$.
+Neste trabalho, utiliza-se a forma inversa,
 \begin{equation}
-T = \frac{1}{2}\,\dot{\vec q}^{\,T} M(\vec q) \dot{\vec q},
-\label{eq:T_matriz}
+    {}^{B}\!\vec\omega_B
+    =
+    \mathbf{T}_\omega(\vec\eta_B)\,\dot{\vec\eta}_B,
+    \qquad
+    \mathbf{T}_\omega(\vec\eta_B)=B^{-1}(\vec\eta_B),
 \end{equation}
+de modo a expressar a velocidade angular da base em função das
+velocidades generalizadas de atitude.
+Ao reunir a velocidade angular da espaçonave e as velocidades articulares em um
+único vetor cinemático, obtém-se
+\begin{equation}
+    \dot{\vec y}
+    =
+    \begin{bmatrix}
+    {}^{B}\!\vec\omega_B \\
+    \dot{\vec\theta}
+    \end{bmatrix}
+    =
+    \underbrace{
+    \begin{bmatrix}
+    \mathbf{T}_\omega(\vec\eta_B) & 0 \\
+    0 & I_{n}
+    \end{bmatrix}}_{\displaystyle \mathbf{J}_y(\vec q\, )}
+    \dot{\vec q\, },
+\end{equation}
+isto é, as velocidades físicas relevantes são combinações lineares das
+velocidades generalizadas $\dot{\vec q\, }$.
+Com essa definição, a energia cinética total do conjunto pode ser escrita
+na forma matricial
+\begin{equation}
+T =
+\frac{1}{2}\,\dot{\vec q\, }^{\,T}\,M(\vec q\, )\,\dot{\vec q\, },
+\label{eq:T_matriz_corrigida}
+\end{equation}
+onde $M(\vec q\, )$ é a matriz de inércia generalizada do sistema
+espaçonave--\gls{mr}. Essa matriz é construída somando-se as contribuições
+de cada elo, obtidas a partir de seus jacobianos espaciais, e a
+contribuição da base física, conforme detalhado a seguir.
 
-em que $M(\vec q)$ é a matriz de inércia generalizada, derivada segundo o método de Lagrange.
-Os momentos de inércia que constituem $M(\vec q)$ são construídos a partir da soma das contribuições espaciais de cada elo, considerando seus jacobianos lineares e angulares avaliados no centro de massa de cada elo, expresso no referencial da base $\{B\}$.
-
-Para cada elo, a matriz $M_{i,\text{spatial}}$ é um tensor de inércia espacial $6\times 6$ que combina, em um único operador, os efeitos translacionais e rotacionais em torno do centro de massa expresso em $\{B\}$.
-Denotando por ${}^{B}\!p_{G_i}$ a posição do centro de massa do elo $i$ em relação à origem de $\{B\}$ e por ${}^{B}\!I_i$ o tensor de inércia em torno desse centro, a forma padrão do operador espacial pode ser escrita como
+Para cada elo, a matriz $M_{i,\text{spatial}}$ é um operador de inércia
+espacial $6\times 6$ que combina, em um único bloco, os efeitos
+translacionais e rotacionais em torno do centro de massa expresso em
+$\{B\}$.
+Se ${}^{B}\!p_{G_i}$ denota a posição do centro de massa do elo em relação à
+origem de $\{B\}$ e ${}^{B}\!I_i$ o tensor de inércia do elo em torno desse
+centro, a forma padrão do operador de inércia espacial é
 
 \begin{equation}
 M_{i,\text{spatial}}
 =
 \begin{bmatrix}
 m_i I_3 & -m_i\,S({}^{B}\!p_{G_i})\\[2pt]
-m_i\,S({}^{B}\!p_{G_i}) & {}^{B}\!I_i - m_i\,S({}^{B}\!p_{G_i})\,S({}^{B}\!p_{G_i})^{T}
+m_i\,S({}^{B}\!p_{G_i}) &
+{}^{B}\!I_i - m_i\,S({}^{B}\!p_{G_i})\,S({}^{B}\!p_{G_i})^{T}
 \end{bmatrix},
 \end{equation}
 
-em que $S(\cdot)$ denota o operador matricial antissimétrico associado ao produto vetorial, isto é, para qualquer vetor $\vec a\in\mathbb{R}^3$ vale $S(\vec a)\,\vec b = \vec a \times \vec b$.
-Essa representação segue a formulação de operadores espaciais de dinâmica de corpos rígidos e permite aplicar a mesma estrutura de forma uniforme a todos os elos.
+em que $m_i$ é a massa do $i$-ésimo elo, $I_3$ é a matriz identidade $3\times 3$,
+${}^{B}\!p_{G_i}$ é o vetor posição do centro de massa do elo $i$
+em relação à origem do referencial $\{B\}$, ${}^{B}\!I_i$
+é o tensor de inércia do elo $i$ em torno do seu centro de massa, expresso em
+$\{B\}$, e $S(\cdot)$ é o operador matricial antissimétrico associado ao produto
+vetorial, tal que $S(\vec a)\,\vec b = \vec a \times \vec b$ para quaisquer
+$\vec a,\vec b$.
 
-De maneira análoga, a base física $\{B\}$ é descrita por uma matriz de inércia espacial $I_{\text{base}}$, construída a partir da massa $m_B$ e do tensor ${}^{B}\!I_B$ em torno de seu centro de massa.
-Assim, a matriz de massa generalizada do conjunto base--\gls{mr} resulta da soma das contribuições espaciais de todos os elos, ponderadas pelos jacobianos espaciais, acrescida da inércia espacial da base:
+De maneira análoga, a espaçonave (base) é descrita por um operador de inércia
+espacial $M_{\text{base},\text{spatial}}$.
+No formalismo de velocidades espaciais \cite{featherstone2008}, uma matriz de
+inércia espacial relaciona a velocidade espacial
+$\vec v_{\text{sp}} = [\,{}^{B}\!\vec v^{\,T}\;{}^{B}\!\vec\omega^{\,T}\,]^{T}$
+com a quantidade de movimento espacial
+$\vec h_{\text{sp}}$ por meio de
+$\vec h_{\text{sp}} = M_{\text{spatial}}\,\vec v_{\text{sp}}$.
+
+Para a base, $M_{\text{base},\text{spatial}}$ é construído a partir da massa
+$m_B$ e do tensor ${}^{B}\!I_B$ em torno do seu centro de massa, em completa
+analogia com $M_{i,\text{spatial}}$ definido para os elos.
+
+A energia cinética total do conjunto espaçonave--\gls{mr} resulta da soma das
+energias cinéticas de cada elo e da base.
+Utilizando a forma espacial em \eqref{eq:Ti_spatial_energy} para cada elo,
+tem-se
 
 \begin{equation}
-M(\vec q) =
-\sum_{i=1}^{n_\ell}
-J_{\text{sp},i}^{T}\, M_{i,\text{spatial}}\, J_{\text{sp},i}
-+ M_{\text{base},\text{spatial}},
-\label{eq:M_total_formula}
+T
+=
+\sum_{i=1}^{n}
+\frac{1}{2}
+\bigl(J_{\text{sp},i}(\vec q\, )\,\dot{\vec q\, }\bigr)^{T}
+M_{i,\text{spatial}}
+\bigl(J_{\text{sp},i}(\vec q\, )\,\dot{\vec q\, }\bigr)
++
+\frac{1}{2}\,
+\vec v_{\text{base,sp}}^{\,T}\,
+M_{\text{base},\text{spatial}}\,
+\vec v_{\text{base,sp}},
 \end{equation}
 
-onde $J_{\text{sp},i}$ é o jacobiano espacial do elo $i$, $M_{i,\text{spatial}}$ é a matriz de inércia espacial do respectivo elo e $M_{\text{base},\text{spatial}}$ representa a matriz de inércia espacial associada à base física.
-Para o sistema base--\gls{mr}, as coordenadas generalizadas $\vec q$ reúnem as variáveis de atitude da base física e as coordenadas articulares do manipulador, enquanto o vetor de velocidades generalizadas $\dot{\vec q}$ contém a velocidade angular $\vec{\omega}_B$ da base e as velocidades articulares $\dot{\vec \theta}$.
+em que $\vec v_{\text{base,sp}}$ é a velocidade espacial da base, escrita
+também como combinação linear das velocidades generalizadas
+$\dot{\vec q\, }$.
+Comparando essa expressão com a forma quadrática de \eqref{eq:T_matriz_corrigida}, obtém-se
 
+\begin{equation}
+T =
+\frac{1}{2}\,\dot{\vec q\, }^{\,T}\,M(\vec q\, )\,\dot{\vec q\, },
+\end{equation}
+
+que é a matriz de inércia generalizada $M(\vec q\, )$ é dada pela soma das
+contribuições espaciais de todos os elos, ponderadas pelos respectivos
+jacobianos espaciais, acrescida da contribuição inercial da base:
+
+\begin{equation}
+M(\vec q\, ) =
+\sum_{i=1}^{n}
+J_{\text{sp},i}^{T}(\vec q\, )\,
+M_{i,\text{spatial}}\,
+J_{\text{sp},i}(\vec q\, )
++
+M_{\text{base},\text{spatial}}.
+\label{eq:M_total_formula_corrigida}
+\end{equation}
+
+Cada termo
+$J_{\text{sp},i}^{T}(\vec q\, \, \, )\,M_{i,\text{spatial}}\,J_{\text{sp},i}(\vec q\, \, \, )$
+é, portanto, a contribuição espacial do elo $i$ para a matriz de inércia
+generalizada.
+Nessa expressão, cada jacobiano espacial $J_{\text{sp},i}(\vec q\, \, )$ mapeia as
+velocidades generalizadas $\dot{\vec q\, \, }$ na velocidade espacial (linear e
+angular) do centro de massa do elo $i$ em $\{B\}$, garantindo consistência
+entre a cinemática diferencial e a estrutura de $M(\vec q\, \, )$.

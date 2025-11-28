@@ -1,82 +1,71 @@
 \subsubsection{Momentos de inércia}
 \label{sec:dinAcoplada_momentos_inercia}
 
-A matriz de inércia generalizada $M(\vec q)$ é introduzida a partir da forma quadrática da energia cinética, conforme \cite{spong2006robot}:
+A matriz de inércia generalizada $M(\vec q\,)$ é introduzida a partir da
+forma quadrática da energia cinética, conforme
+\eqref{eq:T_matriz_corrigida} e \eqref{eq:M_total_formula_corrigida} e em
+linha com \cite{spong2006robot,featherstone2008}:
 
 \begin{equation}
-T = \tfrac{1}{2}\,\dot{\vec q}^{\,T} M(\vec q)\,\dot{\vec q}.
+T =
+\frac{1}{2}\,\dot{\vec q}^{\,T}\,M(\vec q\,)\,\dot{\vec q}.
 \end{equation}
 
-Adota-se o vetor de coordenadas generalizadas \cite{bloesch2013}:
+Os elementos $m_{kj}(\vec q\,)$ de $M(\vec q\,)$ têm interpretação direta:
+os termos da diagonal representam as inércias equivalentes associadas a
+cada grau de liberdade, enquanto os termos fora da diagonal expressam os
+acoplamentos inerciais entre a atitude da base e as juntas do
+manipulador \cite{Geradin2004}.
+
+Adota-se o vetor de coordenadas generalizadas conforme
+\eqref{eq:q_generalizado_base_mr},
 
 \begin{equation}
-\vec q = [\vec q_B^{\,T}\;\;\vec\theta^{\,T}]^{\,T},
-\end{equation}
-
-no qual $\vec q_B$ descreve a atitude da base e $\vec\theta$ reúne as juntas do \gls{mr}.
-Com essa escolha, a matriz $M(\vec q)$ assume a forma particionada usual para sistemas de base flutuante, conforme \cite{featherstone2008}:
-
-\begin{equation}
-M(\vec q) =
+\vec q
+=
 \begin{bmatrix}
-M_{bb} & M_{bm} \\[4pt]
-M_{mb} & M_{mm}
+\vec\eta_B \\
+\vec\theta
+\end{bmatrix},
+\end{equation}
+
+onde $\vec\eta_B$ descreve a atitude da base e $\vec\theta$ reúne as
+coordenadas articulares do \gls{mr}. Com essa escolha, a matriz
+$M(\vec q\,)$ assume a forma particionada usual para sistemas de base
+flutuante \cite{featherstone2008,Wilde2018}:
+
+\begin{equation}
+M(\vec q\,) =
+\begin{bmatrix}
+M_{BB}(\vec q\,) & M_{BM}(\vec q\,) \\
+M_{MB}(\vec q\,) & M_{MM}(\vec q\,)
 \end{bmatrix},
 \label{eq:M_blocos}
 \end{equation}
 
-sendo que $M_{mb}=M_{bm}^{T}$.
+em que $M_{BB}$ agrupa as inércias equivalentes associadas à atitude da
+base física, $M_{MM}$ contém as contribuições inerciais do manipulador e
+os blocos $M_{BM}$, $M_{MB}$ representam os termos de acoplamento
+inercial entre base e \gls{mr}.
 
-A estrutura em blocos segue da forma como as velocidades espaciais dos elos são escritas a partir dos jacobianos correspondentes \cite{featherstone2008}, $\vec V_i = J_i(\vec q)\,\dot{\vec q}$, onde a energia cinética de cada elo, escrita em termos das velocidades linear e angular do centro de massa \cite{sciavicco_siciliano2010}, pode ser reescrita na forma compacta:
-
-
-\begin{equation}
-T_i
-=
-\tfrac{1}{2}\,
-\vec V_i^{\mathsf T} M_{i,\text{spatial}}\,\vec V_i,
-\end{equation}
-
-o que conduz à representação
+Do ponto de vista construtivo, a expressão
+\eqref{eq:M_total_formula_corrigida} mostra que $M(\vec q\,)$ é obtida
+somando-se as contribuições espaciais de cada elo e da base, isto é,
 
 \begin{equation}
-M(\vec q)
-=
-\sum_i
-J_i^{\mathsf T}(\vec q)\,
+M(\vec q\,) =
+\sum_{i=1}^{n}
+J_{\text{sp},i}^{T}(\vec q\,)\,
 M_{i,\text{spatial}}\,
-J_i(\vec q).
+J_{\text{sp},i}(\vec q\,)
++
+M_{\text{base},\text{spatial}},
 \end{equation}
 
-Em sistemas base--\gls{mr} em microgravidade, essa forma coincide com a matriz de inércia generalizada obtida pela formulação do jacobiano generalizado.
-Os blocos de $M(\vec q)$ possuem interpretação direta: $M_{bb}$ reúne as inércias equivalentes da base, $M_{mm}$ contém as contribuições do manipulador, e $M_{bm}$, $M_{mb}$ representam os termos de acoplamento.
-Separando \eqref{eq:dinamica_geral} em blocos, obtém-se
-
-\begin{align}
-M_{bb}\,\ddot{\vec q}_B
-+ M_{bm}\,\ddot{\boldsymbol\theta}
-+ C_{bb}\,\dot{\vec q}_B
-+ C_{bm}\,\dot{\boldsymbol\theta}
-&=
-\vec\tau_B,
-\\[4pt]
-M_{mb}\,\ddot{\vec q}_B
-+ M_{mm}\,\ddot{\boldsymbol\theta}
-+ C_{mb}\,\dot{\vec q}_B
-+ C_{mm}\,\dot{\boldsymbol\theta}
-&=
-\vec\tau_m,
-\end{align}
-
-onde a primeira equação descreve a atitude da base sob as reações do manipulador e a segunda descreve a dinâmica das juntas em base flutuante.
-Essa estrutura blocada é análoga àquela obtida por \citeauthor{Wilde2018} para sistemas espaçonave--\gls{mr} em microgravidade, em que a matriz de inércia é escrita na forma
-
-\begin{equation}
-\begin{bmatrix}
-H_0 & H_{0m}\\
-H_{0m}^{\mathsf T} & H_m
-\end{bmatrix},
-\end{equation}
-
-enquanto que as equações de movimento são separadas em componentes da base e do \gls{mr} \cite[Eq.~(39)]{Wilde2018}.
-
+onde $J_{\text{sp},i}(\vec q\,)$ é o jacobiano espacial do elo $i$ e
+$M_{i,\text{spatial}}$ é o operador de inércia espacial associado à
+massa e ao tensor de inércia do elo no formalismo 6D
+\cite{featherstone2008}. Essa construção garante a consistência entre a
+cinemática diferencial (via jacobianos espaciais) e a estrutura da
+matriz de inércia generalizada empregada nas equações de Lagrange em
+\eqref{eq:dinamica_geral}.

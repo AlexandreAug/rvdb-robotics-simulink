@@ -1,58 +1,82 @@
-\subsubsection{Momento angular do sistema base--manipulador}
+\subsubsection{Quantidade de movimento angular do sistema}
 \label{sec:dinAcoplada_momento_angular}
 
-Para fins de análise física e verificação da conservação de momento angular, introduz-se o cálculo explícito do momento angular total da espaçonave (base mais \gls{mr}) em relação à origem do referencial da base $\{B\}$.
-O momento angular da base é obtido diretamente a partir da velocidade angular $\dot{\vec q}_B$ e do tensor de inércia da base expresso em $\{B\}$, conforme \cite{spong2006robot}:
+Para fins de análise física e verificação da conservação da quantidade de movimento angular,
+introduz-se o cálculo explícito da quantidade de movimento angular total da espaçonave em relação à origem do referencial $\{B\}$.
+A formulação de velocidades espaciais adotada na Seção~\ref{sec:dinAcoplada_energia_cinetica}, a velocidade espacial do corpo $i$ (espaçonave ou \gls{mr}) em $\{B\}$ é escrita como
 
 \begin{equation}
-\vec h_B
+\vec v_{i,\text{sp}}
 =
-I_B\,\dot{\vec q}_B,
+\begin{bmatrix}
+{}^{B}\!\vec v_{G_i} \\[2pt]
+{}^{B}\!\vec\omega_i
+\end{bmatrix}
+=
+J_{\text{sp},i}(\vec q\,)\,\dot{\vec q\,},
 \end{equation}
 
-onde $I_B$ é o tensor de inércia da base física $\{B\}$ em seu centro de massa.
-Segundo \cite{featherstone2008}, para cada elo $i$ do manipulador, a velocidade espacial em $\{B\}$ é escrita como
+onde ${}^{B}\!\vec v_{G_i}$ e ${}^{B}\!\vec\omega_i$ são, respectivamente,
+a velocidade linear do centro de massa e a velocidade angular do corpo $i$
+expressas em $\{B\}$, e $J_{\text{sp},i}(\vec q\,)$ é o jacobiano espacial
+avaliado no centro de massa do corpo $i$, construído a partir dos graus de
+liberdade de atitude da base e das juntas do manipulador
+\cite{featherstone2008}.
+
+Para cada corpo $i$, o operador de inércia espacial
+$M_{i,\text{spatial}}$ associa a velocidade espacial ao momento espacial
+\cite{featherstone2008}:
 
 \begin{equation}
-\vec V_i
+\vec h_{i,\text{sp}}
 =
-J_i(\vec q)\,\dot{\vec q},
+M_{i,\text{spatial}}\,\vec v_{i,\text{sp}},
 \end{equation}
 
-em que $J_i(\vec q)$ é o jacobiano espacial avaliado no centro de massa do elo $i$ e $\dot{\vec q}$ reúne as velocidades generalizadas da base e das juntas.
-A inércia espacial do elo $i$ em relação à origem de $\{B\}$ é denotada por $M_{i,\text{spatial}}$.
-O momento espacial do elo, segundo \cite{featherstone2008} resulta em
+onde $\vec h_{i,\text{sp}}$ agrupa em um único vetor o momento linear e o momento angular do corpo $i$ em relação à origem de $\{B\}$.
+A parte angular de $\vec h_{i,\text{sp}}$ é obtida selecionando-se as
+três últimas componentes, por meio da matriz
 
 \begin{equation}
-\vec h_{i,\text{spatial}}
-=
-M_{i,\text{spatial}}\,\vec V_i,
-\end{equation}
-
-cuja parte angular corresponde às três últimas componentes de $\vec h_{i,\text{spatial}}$, em analogia à decomposição do momento espacial em componentes linear e angular adotada em \cite{lynch2017modern} e na escrita de
-$\bigl[P^{\mathsf T}\;L^{\mathsf T}\bigr]^{\mathsf T}$\fn{Onde $P$ é o momento linear total e $L$ representa o momentum angular total} para sistemas espaçonave--\gls{mr} em \cite{Wilde2018}:
-
-\begin{equation}
-\vec h_i
+S_\omega
 =
 \begin{bmatrix}
 0 & 0 & 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 0 & 1 & 0 \\
 0 & 0 & 0 & 0 & 0 & 1
-\end{bmatrix}
-\vec h_{i,\text{spatial}}.
+\end{bmatrix},
+\qquad
+\vec h_i
+=
+S_\omega\,\vec h_{i,\text{sp}},
 \end{equation}
 
-O momento angular total do sistema base--manipulador em $\{B\}$ é então
+em que $\vec h_i$ é o vetor de momento angular do corpo $i$ em $\{B\}$,
+em analogia à decomposição do momento espacial em componentes linear e
+angular discutida em \cite{featherstone2008,lynch2017modern}.
+
+Neste trabalho, a base é tratada como um corpo rígido adicional com operador de inércia espacial
+$M_{\text{base},\text{spatial}}$ expresso em $\{B\}$,
+cujos parâmetros de massa, centro de massa e tensor de inércia já incluem
+a contribuição estrutural da espaçonave.
+Os elos do manipulador são indexados por $i=1,\dots,n$, de modo que o
+momento angular total do sistema espaçonave--manipulador em $\{B\}$ é escrito como
 
 \begin{equation}
 \vec h_{\text{tot}}
 =
-\vec h_B
-+
-\sum_{i=1}^{n_\ell} \vec h_i,
+\sum_{i=0}^{n} \vec h_i
+=
+\sum_{i=0}^{n}
+S_\omega\,M_{i,\text{spatial}}\,
+J_{\text{sp},i}(\vec q\,)\,\dot{\vec q\,}.
 \end{equation}
 
-onde $n_\ell$ é o número de elos do \gls{mr}.
-Essa expressão é consistente com a definição de momento espacial total como soma dos momentos de cada corpo rígido em sistemas de base flutuante \cite{featherstone2008}, bem como com a forma matricial do momento linear e angular combinados em sistemas espaçonave--manipulador.
-Em microgravidade, na ausência de torques externos resultantes, o momento total é conservado \cite{featherstone2008}, de modo que $\vec h_{\text{tot}}$ deve permanecer (integralmente) constante no tempo, o que fornece uma ferramenta conveniente de diagnóstico numérico para as simulações da dinâmica acoplada.
+Essa expressão define o momento espacial total como a soma dos momentos de cada corpo rígido
+em sistemas de base flutuante \cite{featherstone2008} e com formulações de sistemas espaçonave--manipulador
+que utilizam a conservação de momento para descrever a dinâmica em
+microgravidade.
+
+Na ausência de torques externos, a quantidade de movimento angular total em
+torno do centro de massa da espaçonave robótica é conservado, de modo que
+$\vec h_{\text{tot}}$ deve permanecer constante no tempo \cite{wie2008space,featherstone2008}.

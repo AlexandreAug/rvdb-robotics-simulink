@@ -1,10 +1,43 @@
 \subsubsection{Translação da base}
-No modelo adotado, a base física $\{B\}$ não possui graus de liberdade translacionais explícitos nas equações de Lagrange da dinâmica acoplada.
-A translação do centro de massa da espaçonave é descrita separadamente pelas equações do movimento orbital relativo, apresentadas na Seção~\ref{sec:movimento_orbital_relativo}, de modo que o vetor de coordenadas generalizadas associado à dinâmica base--manipulador reúne apenas as variáveis de atitude da base e as juntas do \gls{mr}.
-Sendo assim, não se introduz coordenada de posição adicional para a base no modelo acoplado e, consequentemente, a aceleração generalizada correspondente é tomada como nula,
+\label{sec:dinAcoplada_translacao_base}
 
-\begin{equation}
-\ddot{\vec r}_{B,\text{gen}} = \vec 0.
-\end{equation}
+Do ponto de vista físico, o movimento do centro de massa da espaçonave
+robótica é governado pelas leis de Newton e pelas equações do movimento
+orbital.
+Em um modelo completo de base flutuante, os graus de liberdade de
+translação do centro de massa da espaçonave aparecem no vetor de
+coordenadas generalizadas, acoplados à atitude da base e ao movimento
+das juntas do \gls{mr}.
+Portanto, deslocamentos internos de massa, causados pelo
+movimento dos elos, modificam a posição do centro de massa e podem, em
+princípio, perturbar o movimento orbital \cite{wie2008space,featherstone2008}.
 
-Com essa restrição, a dinâmica acoplada atua exclusivamente sobre a atitude da base e sobre as juntas do manipulador. Essa escolha elimina a necessidade de modelar os seis graus de liberdade completos da espaçonave nas equações de Lagrange e mantém a formulação coerente com o regime de microgravidade e com a cinemática relativa em \gls{lvlh}, na qual a translação global é governada pelas equações orbitais, enquanto apenas os efeitos internos de acoplamento rotacional influenciam a evolução do sistema.
+Neste trabalho, adota-se uma simplificação onde
+a translação do centro de massa da espaçonave é descrita pelas equações \gls{hcw} no referencial \gls{lvlh},
+apresentado na Seção~\ref{sec:hillcw}, enquanto a formulação
+lagrangiana da dinâmica acoplada considera apenas as variáveis de
+atitude da base e as juntas do \gls{mr}.
+Assim, o vetor de coordenadas generalizadas associado à dinâmica
+espaçonave--manipulador é dado por \eqref{eq:q_generalizado_base_mr}, sem
+incluir explicitamente coordenadas de posição da base no modelo
+lagrangiano.
+
+Em resumo, as equações do movimento orbital relativo fornecem a cada
+instante a posição e a velocidade do centro de massa da espaçonave no
+referencial \gls{lvlh}, que são tratadas como dados de entrada para o
+modelo de atitude e juntas.
+As reações devidas ao movimento interno do \gls{mr} sobre a
+órbita do centro de massa não são realimentadas nas equações de
+translação.
+Por outro lado, os acoplamentos rotacionais entre base e manipulador
+são mantidos explicitamente na matriz de inércia e nos termos de
+Coriolis em \eqref{eq:dinamica_geral}, de modo que o efeito dos torques
+das juntas sobre a atitude da espaçonave é preservado na dinâmica
+acoplada.
+
+Essa hipótese de desacoplamento entre a translação do centro de massa e
+as reações internas é adequada para analisar, de forma isolada, o
+comportamento de atitude e o acoplamento base--manipulador ao longo da
+aproximação de curta distância, mas representa uma limitação do modelo
+quando se deseja avaliar, em detalhe, a influência dos deslocamentos
+internos de massa sobre a órbita da espaçonave.
