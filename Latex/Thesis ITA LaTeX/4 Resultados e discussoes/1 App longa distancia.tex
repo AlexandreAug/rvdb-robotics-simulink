@@ -22,7 +22,8 @@ Alvo & 6.978,13 \\
 \label{tab:cap4_1_raio_orbital}
 \end{table}
 
-A condição de fase inicial entre as espaçonaves, conforme a Tabela~\ref{tab:cap4_2_longitude}, foi imposta ao perseguidor no instante inicial da simulação.
+A condição de fase inicial entre as espaçonaves, apresentada na Tabela~\ref{tab:cap4_2_longitude}, foi definida como parte das condições iniciais da simulação e representa a separação angular do perseguidor em relação ao alvo, tomado como referência. Adotou-se um deslocamento inicial de $-7^\circ$ para o perseguidor, isto é, uma separação angular inicial "atrás" do alvo no sentido do movimento orbital, assumindo-se que tal condição é estabelecida pelo veículo lançador após a separação do perseguidor em sua órbita de injeção.
+
 
 \begin{table}[H]
 \centering
@@ -40,16 +41,26 @@ Alvo & [$0,00$] ($0,00$) \\
 \label{tab:cap4_2_longitude}
 \end{table}
 
-A Figura~\ref{fig:cap4_1Posições_perseguidor_alvo} mostra as posições iniciais do perseguidor e do alvo, bem como os instantes de aplicação de $\Delta v_1$ e $\Delta v_2$. A aplicação de $\Delta v_2$ marca o encerramento desta fase da missão de \gls{rvdb}.
+A Figura~\ref{fig:cap4_1Posições_perseguidor_alvo1} mostra as posições iniciais do perseguidor e do alvo, bem como os instantes de aplicação de $\Delta v_1$ e $\Delta v_2$. A aplicação de $\Delta v_2$ marca o encerramento desta fase da missão de \gls{rvdb}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{4 Resultados e discussoes/Imagens/1 App longa distancia/1 Transferência de órbita.png}
-\caption{Posições inicial e final das espaçonaves durante a primeira fase da missão de \gls{rvdb}.}
-    \label{fig:cap4_1Posições_perseguidor_alvo}
+\caption{Posições inicial e final das espaçonaves durante a fase de aproximação longa da missão de \gls{rvdb}.}
+    \label{fig:cap4_1Posições_perseguidor_alvo1}
 \end{figure}
 
-A seguir, na Figura~\ref{fig:cap4_2Longitudes_perseguidor_alvo}, a diferença de longitude entre as espaçonaves ao longo do tempo é apresentada.
+A seguir, a Figura~\ref{fig:cap4_1Posições_perseguidor_alvo2} exibe o momento em que é iniciado a deriva orbital e seu término para iniciar a aproximação de curta distância.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{4 Resultados e discussoes/Imagens/1 App longa distancia/1 Final da transf orbita.png}
+\caption{Deriva orbital do perseguidor após o segundo impulso durante a aproximação de longa distância da missão de \gls{rvdb}.}
+    \label{fig:cap4_1Posições_perseguidor_alvo2}
+\end{figure}
+
+A seguir, a Figura~\ref{fig:cap4_2Longitudes_perseguidor_alvo} apresenta a diferença de longitude entre as espaçonaves ao longo do tempo, juntamente com os instantes da queima 1 e 2.
+O tempo inicial deste gráfico é o início absoluto da simulação da missão de \gls{rvdb}
 
 \begin{figure}[H]
 \centering
@@ -58,10 +69,12 @@ A seguir, na Figura~\ref{fig:cap4_2Longitudes_perseguidor_alvo}, a diferença de
     \label{fig:cap4_2Longitudes_perseguidor_alvo}
 \end{figure}
 
-Ao final da aproximação de longa distância, no instante $6.596$ s, a longitude do alvo é $49,3801^{\circ}$ e a do perseguidor é $49,3760^{\circ}$, resultando em diferença de $0,0041^{\circ}$ ($7,15\times 10^{-5}$ rad), correspondente a $506,06$ m de separação relativa.
 
-A Tabela~\ref{tab:cap4_3_longitude_instantes} resume longitudes em instantes selecionados e a respectiva diferença de fase.
-O perseguidor levou $6.596$ s (01h49min) para atingir a condição de término desta fase e cerca de $6.598$ segundos ($01$h$49$min)  para se aproximar suficientemente do alvo para finalizar a primeira fase da missão de \gls{rvdb}.
+Ao final da aproximação de longa distância, no instante $6.596$ s, a longitude do alvo é $49,38^{\circ}$ e a do perseguidor é $49,38^{\circ}$, resultando em diferença de $0,004^{\circ}$ ($0,069$ rad), correspondente a $506,06$ m de separação relativa.
+
+A Tabela~\ref{tab:cap4_3_longitude_instantes} apresenta as longitudes em instantes selecionados e a respectiva diferença de fase.
+Em termos de tempo absoluto, o perseguidor levou $6.571$~s ($01$h$49$min$31$s) para atingir a condição de término desta fase, ou seja, aproximou-se suficientemente do alvo, finalizando a primeira fase da missão de \gls{rvdb}.
+
 
 \begin{table}[H]
 \centering
@@ -75,7 +88,7 @@ O perseguidor levou $6.596$ s (01h49min) para atingir a condição de término d
 $0$      & $-7,0000^{\circ}$   & $0,0000^{\circ}$    & $-7,0000^{\circ}$ \\
 $2.889$  & $176,2150^{\circ}$  & $179,2910^{\circ}$  & $-3,0760^{\circ}$ \\
 $3.728$  & $308,6870^{\circ}$  & $310,6240^{\circ}$  & $-1,9370^{\circ}$ \\
-$6.598$  & $49,3760^{\circ}$   & $49,3801^{\circ}$   & $-0,0041^{\circ}$ \\
+$6.571$  & $49,3760^{\circ}$   & $49,3801^{\circ}$   & $-0,0041^{\circ}$ \\
 \hline
 \end{tabularx}
 \label{tab:cap4_3_longitude_instantes}
@@ -89,7 +102,7 @@ No instante inicial da simulação, o perseguidor está na altitude de $500$ km,
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{4 Resultados e discussoes/Imagens/1 App longa distancia/3 Raio orbital ao longo do tempo.png}
-\caption{Evolução do raio orbital do perseguidor ao longo do tempo.}
+\caption{Evolução do raio orbital do perseguidor ao longo do tempo absoluto.}
     \label{fig:cap4_3_raio_orbital}
 \end{figure}
 
@@ -118,39 +131,39 @@ Consumo de $\Delta v_2$      & $27,29$ & $6.598$ \\
 \label{tab:cap4_deltav}
 \end{table}
 
-\subsection{Distância relativa}
+% \subsection{Distância relativa}
 
-A Figura~\ref{fig:cap4_4_dist_relativa} apresenta a evolução temporal da distância relativa. O \emph{drift} gerado pela diferença de velocidade orbital promove a aproximação gradual desde o início da aproximação de longa distância.
+% A Figura~\ref{fig:cap4_4_dist_relativa} apresenta a evolução temporal da distância relativa. O \emph{drift} gerado pela diferença de velocidade orbital promove a aproximação gradual desde o início da aproximação de longa distância.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\linewidth]{4 Resultados e discussoes/Imagens/1 App longa distancia/4 Distância relativa ao longo do tempo.png}
-\caption{Evolução da distância relativa entre as espaçonaves no referencial ECI.}
-    \label{fig:cap4_4_dist_relativa}
-\end{figure}
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=1\linewidth]{4 Resultados e discussoes/Imagens/1 App longa distancia/4 Distância relativa ao longo do tempo.png}
+% \caption{Evolução da distância relativa entre as espaçonaves no referencial ECI.}
+%     \label{fig:cap4_4_dist_relativa}
+% \end{figure}
 
-Para melhor visualização, a Tabela~\ref{tab:cap4_dist_relativa_eci} apresenta as distâncias relativas em determinados instantes de tempo, os mesmos utilizados anteriormente.
+% Para melhor visualização, a Tabela~\ref{tab:cap4_dist_relativa_eci} apresenta as distâncias relativas em determinados instantes de tempo, os mesmos utilizados anteriormente.
 
-\begin{table}[H]
-\centering
-\caption{Distância relativa em ECI nos instantes principais}
-\begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
-\hline
-\multicolumn{1}{|c|}{\textbf{Instante de tempo [s]}} &
-\multicolumn{1}{c|}{\textbf{Distância relativa [km]}} &
-\multicolumn{1}{c|}{\textbf{Evento}} \\
-\hhline{|=|=|=|}
-$0$     & $851,774$ & Início da aproximação longa \\
-\hline
-$2.889$ & $385,079$ & — \\
-\hline
-$3.728$ & $254,678$ & Queima 1 \\
-\hline
-$6.598$ & $0,506$   & Queima 2 \\
-\hline
-\end{tabularx}
-\label{tab:cap4_dist_relativa_eci}
-\end{table}
+% \begin{table}[H]
+% \centering
+% \caption{Distância relativa em ECI nos instantes principais}
+% \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+% \hline
+% \multicolumn{1}{|c|}{\textbf{Instante de tempo [s]}} &
+% \multicolumn{1}{c|}{\textbf{Distância relativa [km]}} &
+% \multicolumn{1}{c|}{\textbf{Evento}} \\
+% \hhline{|=|=|=|}
+% $0$     & $851,774$ & Início da aproximação longa \\
+% \hline
+% $2.889$ & $385,079$ & — \\
+% \hline
+% $3.728$ & $254,678$ & Queima 1 \\
+% \hline
+% $6.598$ & $0,506$   & Queima 2 \\
+% \hline
+% \end{tabularx}
+% \label{tab:cap4_dist_relativa_eci}
+% \end{table}
 
 \subsection{Cenários}
 
@@ -175,6 +188,15 @@ B & $-90^{\circ}$ [deg] ou $-1,5708$ (rad) \\
 \end{tabularx}
 \label{tab:cap4_longitude_cenarios}
 \end{table}
+
+A Figura~\ref{fig:cap4_posicoes_cenarios} exemplifica a posição do perseguidor em cada cenário.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{3 Formulacao matematica/Imagens/Cenario A e B.png}
+\caption{Posições iniciais do perseguidor em cada cenário.}
+\label{fig:cap4_posicoes_cenarios}
+\end{figure}
 
 \subsubsection{Longitude no instante da queima}
 
@@ -231,7 +253,7 @@ Longitude do alvo na queima 2        & radiano & 0,861846 & 5,378383 \\
 
 \subsubsection{Comparativo entre os cenários}
 
-A Tabela~\ref{tab:cap4_comp_alt_tempos} apresenta novos valores de altitude e tempos obtidos após a mudança nos parâmetros iniciais do perseguidor.
+A Tabela~\ref{tab:cap4_comp_alt_tempos} apresenta novos valores de altitude e tempos obtidos após a mudança nos parâmetros iniciais do perseguidor durante a fase de aproximação de longa distância.
 
 \begin{table}[H]
 \centering
@@ -261,17 +283,24 @@ Tempo até a queima 2                 & segundo& 6.597  & 33.972 & 27.375  & 415
 \hline
 Tempo de drift                       & segundo& 900    & 900    & 0       & 0\%   \\
 \hline
-Tempo total (após drift)             & segundo& 7.498  & 34.873 & 27.375  & 365\% \\
+Tempo total (após drift)             & segundo& 7.471  & 34.873 & 27.375  & 365\% \\
 \hline
 \end{tabularx}
 \label{tab:cap4_comp_alt_tempos}
 \end{table}
 
-O tempo total da aproximação de longa distância (desde a injeção do perseguidor em sua órbita inicial até o instante final do \emph{drift} orbital) do cenário (A) foi de $7.498$ segundos, enquanto que no cenário (B) foi de $34.873$ segundos, ou seja, $365\%$ a mais do que o cenário inicial.
+O tempo total da aproximação de longa distância (desde a injeção do perseguidor em sua órbita inicial até o instante final do \emph{drift} orbital) no cenário (A) foi de $7.471$~s, enquanto no cenário (B) foi de $34.873$~s.
+Em termos relativos, isso representa um aumento de $366{,}8\%$ em relação ao cenário (A), obtido pela comparação direta dos tempos totais:
+
+\begin{equation}
+\frac{34.873 - 7.471}{7.471}\times 100 \approx 366{,}8\%.
+\end{equation}
+
+Essa diferença se dá, pois no cenário (B), a condição de fase a ser atingida antes do início da manobra de curta distância exige um intervalo maior de deriva (\emph{drift}) para acumular a separação angular desejada, dado que essa etapa depende da diferença de movimento médio entre as espaçonaves.
 
 \subsubsection{Consumo de Delta-V}
 Outro parâmetro analisado foi o consumo de $\Delta v$.
-Os parâmetros obtidos estão na Tabela~\ref{tab:cap4_comp_deltav} e foram calculados através da equação \emph{vis-viva}.
+Os parâmetros obtidos estão na Tabela~\ref{tab:cap4_comp_deltav} e foram calculados através da equação \emph{vis-viva}, ver \ref{eq:vis_viva}.
 Pode-se notar que no cenário (B) houve um consumo maior de $\Delta v$, ao todo, $102\%$ a mais que o cenário (A).
 
 \begin{table}[H]
@@ -302,6 +331,7 @@ Consumo total de $\Delta v$   & m/s & 54,69 & 110,63 & 55,94 & 102\% \\
 
 Os elementos orbitais, apresentados na Tabela~\ref{tab:cap4_elementos_perseguidor}, foram coletados no final da aproximação de longa distância e não foram alterados.
 Portanto, isso não refletirá em uma mudança significativa das condições iniciais para o movimento relativo descrito pelas equações \gls{hcw} que serão abordadas mais a frente.
+
 
 \begin{table}[H]
 \centering

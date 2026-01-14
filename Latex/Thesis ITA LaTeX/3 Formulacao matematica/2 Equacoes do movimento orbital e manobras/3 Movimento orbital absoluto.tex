@@ -20,7 +20,7 @@ Vale ressaltar que o corpo primário não é fixado inercialmente no problema do
 O problema dos dois corpos deve ser diferenciado do chamado problema restrito de dois corpos (sistema planeta--satélite), no qual o corpo primário de massa $m_1$ é assumido fixo inercialmente. Esse problema restrito de dois corpos é frequentemente descrito pelo movimento de força central de uma partícula de massa $m_2$ em torno de um corpo primário de massa $m_1$ fixado inercialmente.
 Nesse estudo, então, o sistema de dois corpos é o sistema restrito dos dois corpos \cite{wie2008space}.
 
-\subsubsection{O problema dos corpos: Movimento absoluto e relativo}
+\subsubsection{O problema dos dois corpos: Movimento absoluto e relativo}
 
 % Como exemplo prático do problema dos dois corpos, pode-se citar a órbita da Lua em torno da Terra, bem como a de um planeta em torno do Sol \cite{wgsantos2011}.
 A aceleração de cada corpo é dada por:
@@ -84,10 +84,18 @@ Subtraindo a \eqref{eq:wie3_1} multiplicada por $m_2$ da \eqref{eq:wie3_2} multi
 sendo reescrito como
 \begin{equation}
 \label{eq:eqFundamentalDoisCorpos}
-\ddot {\vec r} = -\frac{\mu}{\vec {r^3}}\vec r
+\ddot{\vec r} = -\frac{\mu}{r^3}\,\vec r
 \end{equation}
 
 onde $\ddot{\vect r}$ é a aceleração inercial de $m_2$ em relação a $m_1$; $\mu$ é o parâmetro gravitacional do sistema de dois corpos, e \eqref{eq:eqFundamentalDoisCorpos} é a equação fundamental (geral) do problema dos dois corpos \cite{fehse2003,wie2008space}.
+
+A partir do integral de energia do problema restrito de dois corpos, a relação entre o módulo da velocidade orbital $v=\|\dot{\vec r}\|$, a distância ao corpo primário $r=\|\vec r\|$ e o semieixo maior $a$ pode ser escrita pela equação vis-viva \cite{wie2008space}:
+
+\begin{equation}
+\label{eq:vis_viva}
+v^2 = \mu\left(\frac{2}{r}-\frac{1}{a}\right).
+\end{equation}
+
 A dinâmica orbital do alvo (sem aceleração de controle) é propagada por\fn{O subescrito \emph{p} se refere à espaçonave perseguidora, enquanto que \emph{a} é a espaçonave alvo.}
 
 \begin{equation}

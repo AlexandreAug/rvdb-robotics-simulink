@@ -19,64 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{alfriend2010}{book}{}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=bda899410e386bdbfa8a7bdd63c5dec8}{%
-           family={Alfriend},
-           familyi={A\bibinitperiod},
-           given={Kyle\bibnamedelima T.},
-           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b1660b5ed455f0acce1f28f5a1733e08}{%
-           family={Vadali},
-           familyi={V\bibinitperiod},
-           given={Srinivas\bibnamedelima R.},
-           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8f36b7c244e514b20015f753f02acb19}{%
-           family={Gurfil},
-           familyi={G\bibinitperiod},
-           given={Pini},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8848ce0ee15eec9f66f8d5f9006b8d66}{%
-           family={How},
-           familyi={H\bibinitperiod},
-           given={Jonathan\bibnamedelima P.},
-           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=942a9009bf75e1e8e52b4f71ccf436ee}{%
-           family={Breger},
-           familyi={B\bibinitperiod},
-           given={Louis\bibnamedelima S.},
-           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{location}{1}{%
-        {Oxford, UK}%
-      }
-      \list{publisher}{1}{%
-        {Butterworth-Heinemann, Elsevier}%
-      }
-      \strng{namehash}{f33058e077cd57935d32fb1037812aa6}
-      \strng{fullhash}{c8ebd7f14ac6b2f8201a4ea4b9ce1c89}
-      \strng{fullhashraw}{c8ebd7f14ac6b2f8201a4ea4b9ce1c89}
-      \strng{bibnamehash}{c8ebd7f14ac6b2f8201a4ea4b9ce1c89}
-      \strng{authorbibnamehash}{c8ebd7f14ac6b2f8201a4ea4b9ce1c89}
-      \strng{authornamehash}{f33058e077cd57935d32fb1037812aa6}
-      \strng{authorfullhash}{c8ebd7f14ac6b2f8201a4ea4b9ce1c89}
-      \strng{authorfullhashraw}{c8ebd7f14ac6b2f8201a4ea4b9ce1c89}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{1st}
-      \field{isbn}{978-0-7506-8533-7}
-      \field{title}{Spacecraft Formation Flying: Dynamics, Control and Navigation}
-      \field{year}{2010}
-    \endentry
     \entry{astrom1995pid}{book}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=1b77956c091010989c5fc2426441bf07}{%
@@ -116,63 +58,6 @@
       \field{isbn}{1-55617-516-7}
       \field{title}{PID Controllers}
       \field{year}{1995}
-    \endentry
-    \entry{bloesch2013}{misc}{}{}
-      \name{author}{5}{}{%
-        {{un=0,uniquepart=base,hash=f1435bb9c30ae81b29d01029941e7068}{%
-           family={Bloesch},
-           familyi={B\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=164607f9daa616a03bed0e2bf6531a8d}{%
-           family={Hutter},
-           familyi={H\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0779c261d22505f312e6b8b679c19b69}{%
-           family={Gehring},
-           familyi={G\bibinitperiod},
-           given={Christian},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=07bd1cdadeb2aa2be82d0bbde5bb8b92}{%
-           family={Hoepflinger},
-           familyi={H\bibinitperiod},
-           given={Mark\bibnamedelima A.},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6ee8958bbf32527489012d8ca7c95ee3}{%
-           family={Siegwart},
-           familyi={S\bibinitperiod},
-           given={Roland},
-           giveni={R\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {ETH Zürich}%
-      }
-      \list{location}{1}{%
-        {Zürich, Switzerland}%
-      }
-      \strng{namehash}{a17b7b6a400d16e726e7d112721c4f03}
-      \strng{fullhash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{fullhashraw}{25e286439abeb4f8efb03b77237163b5}
-      \strng{bibnamehash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{authorbibnamehash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{authornamehash}{a17b7b6a400d16e726e7d112721c4f03}
-      \strng{authorfullhash}{25e286439abeb4f8efb03b77237163b5}
-      \strng{authorfullhashraw}{25e286439abeb4f8efb03b77237163b5}
-      \field{sortinit}{B}
-      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{Lecture notes}
-      \field{title}{Robot Dynamics -- Floating Base Systems}
-      \field{year}{2013}
     \endentry
     \entry{debruijn2011}{article}{}{}
       \name{author}{3}{}{%
@@ -448,6 +333,28 @@
       \field{pages}{5\bibrangedash 26}
       \range{pages}{22}
     \endentry
+    \entry{ieee_canadarm_technical}{online}{}{}
+      \list{organization}{1}{%
+        {IEEE Region 7 Millennium Project}%
+      }
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{note}{Reprinted courtesy of MacDonald Dettwiler Space and Advanced Robotics Ltd.}
+      \field{title}{Canadarm Technical Information}
+      \field{urlday}{14}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ewh.ieee.org/reg/7/millennium/canadarm/canadarm_technical.html
+      \endverb
+      \verb{url}
+      \verb https://ewh.ieee.org/reg/7/millennium/canadarm/canadarm_technical.html
+      \endverb
+    \endentry
     \entry{arantes2011}{thesis}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=458d836875c06386cce8d0aa27ef7ffd}{%
@@ -515,6 +422,65 @@
       \field{edition}{3rd}
       \field{title}{Nonlinear Systems}
       \field{year}{2002}
+    \endentry
+    \entry{vedant2025longrange}{online}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8ae51e3521c88d26ae54523e229445ac}{%
+           family={Kini},
+           familyi={K\bibinitperiod},
+           given={Vedant\bibnamedelima Vivek},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=965555930adb9ca9dd662f2895a7cd23}{%
+           family={Surya},
+           familyi={S\bibinitperiod},
+           given={Dantu\bibnamedelima Phani},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=577be3cfaa375e6f3a114d258a5289f6}{%
+           family={Sahoo},
+           familyi={S\bibinitperiod},
+           given={Rakesh\bibnamedelima Kumar},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffb5d198fdf21c9d88c9035af7469329}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Manoranjan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{fullhash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{fullhashraw}{433b07562eb26be9fbea34cf9391e307}
+      \strng{bibnamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorbibnamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authornamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorfullhash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorfullhashraw}{433b07562eb26be9fbea34cf9391e307}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{eess.SY}
+      \field{eprinttype}{arxiv}
+      \field{title}{Long-Range Rendezvous and Docking Maneuver Control of Satellite using Cross-Feedback Sliding Mode Controller}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2504.01203
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2504.01203
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2504.01203
+      \endverb
     \endentry
     \entry{lynch2017modern}{book}{}{}
       \name{author}{2}{}{%
@@ -627,6 +593,39 @@
       \field{note}{Data e local exatos não informados}
       \field{title}{Autonomous Rendezvous with Non-cooperative Target Objects with Swarm Chasers and Observers}
       \field{year}{2023}
+    \endentry
+    \entry{mathworks_space_rendezvous_docking}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={{MathWorks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MathWorks}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{MATLAB®{} \& Simulink®{}, Aerospace Blockset example}
+      \field{title}{Space Rendezvous and Docking}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/aeroblks/spacecraft-rendezvous-and-docking.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/aeroblks/spacecraft-rendezvous-and-docking.html
+      \endverb
     \endentry
     \entry{murray1994mathematical}{book}{}{}
       \name{author}{3}{}{%
@@ -880,6 +879,42 @@
       \field{isbn}{978-1-84569-205-6}
       \field{title}{Industrial Gas Turbines: Performance and Operability}
       \field{year}{2007}
+    \endentry
+    \entry{Schaub2010AttitudeDynamics}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5d9753c98d823c83966f248dbe18f6fd}{%
+           family={Schaub},
+           familyi={S\bibinitperiod},
+           given={Hanspeter},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Chichester, UK}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{5d9753c98d823c83966f248dbe18f6fd}
+      \strng{fullhash}{5d9753c98d823c83966f248dbe18f6fd}
+      \strng{fullhashraw}{5d9753c98d823c83966f248dbe18f6fd}
+      \strng{bibnamehash}{5d9753c98d823c83966f248dbe18f6fd}
+      \strng{authorbibnamehash}{5d9753c98d823c83966f248dbe18f6fd}
+      \strng{authornamehash}{5d9753c98d823c83966f248dbe18f6fd}
+      \strng{authorfullhash}{5d9753c98d823c83966f248dbe18f6fd}
+      \strng{authorfullhashraw}{5d9753c98d823c83966f248dbe18f6fd}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Encyclopedia of Aerospace Engineering}
+      \field{note}{Simulated reprint}
+      \field{title}{Attitude Dynamics Fundamentals}
+      \field{year}{2010}
+      \field{pages}{3181\bibrangedash 3198}
+      \range{pages}{18}
     \endentry
     \entry{sherrill2014}{article}{}{}
       \true{moreauthor}
@@ -1209,6 +1244,54 @@
       \verb https://orbital-mechanics.space/orbital-maneuvers/hohmann-transfer.html
       \endverb
     \endentry
+    \entry{wertz2011sme_smad}{book}{}{}
+      \name{editor}{3}{}{%
+        {{un=0,uniquepart=base,hash=5772d44dd5bc95ef8faf8a4773563cbe}{%
+           family={Wertz},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d47cf74e646e156d29727dd92622f741}{%
+           family={Everett},
+           familyi={E\bibinitperiod},
+           given={David\bibnamedelima F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95e0c7be3baa712a13bfcbe50908b624}{%
+           family={Puschell},
+           familyi={P\bibinitperiod},
+           given={Jeffery\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Torrance, CA}%
+      }
+      \list{publisher}{1}{%
+        {Microcosm Press}%
+      }
+      \strng{namehash}{52344319e79792850b7062c19bc80d08}
+      \strng{fullhash}{52344319e79792850b7062c19bc80d08}
+      \strng{fullhashraw}{52344319e79792850b7062c19bc80d08}
+      \strng{bibnamehash}{52344319e79792850b7062c19bc80d08}
+      \strng{editorbibnamehash}{52344319e79792850b7062c19bc80d08}
+      \strng{editornamehash}{52344319e79792850b7062c19bc80d08}
+      \strng{editorfullhash}{52344319e79792850b7062c19bc80d08}
+      \strng{editorfullhashraw}{52344319e79792850b7062c19bc80d08}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781881883159}
+      \field{note}{ISBN-10: 1881883159}
+      \field{series}{Space Technology Library}
+      \field{title}{Space Mission Engineering: The New SMAD}
+      \field{volume}{28}
+      \field{year}{2011}
+    \endentry
     \entry{wie2008space}{book}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ef6e7a1fbbddeed6a8783fa4dc1fa115}{%
@@ -1396,8 +1479,8 @@
       \field{year}{2007}
     \endentry
   \enddatalist
-  \missing{vedant2025longrange{}
-  \missing{}mathworks_space_rendezvous_docking}
+  \missing{mathworks_matlab}
+  \missing{mathworks_simulink}
 \endrefsection
 \endinput
 

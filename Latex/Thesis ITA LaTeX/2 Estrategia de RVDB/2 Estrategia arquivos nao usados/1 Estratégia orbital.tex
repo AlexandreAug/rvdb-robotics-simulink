@@ -1,0 +1,100 @@
+\section{Estratégia orbital}
+\label{sec:estrategia_orbital}
+
+A missão considerada neste trabalho segue o encadeamento clássico das operações de \gls{rvdb} entre uma espaçonave perseguidora e um alvo em órbita circular \cite{fehse2003}.
+Nesta etapas ocorrem:
+
+\begin{enumerate}[label=(\roman*)]
+  \item lançamento e injeção do perseguidor em órbita circular terrestre baixa;
+  \item redução do ângulo de fase entre as espaçonaves;
+  \item transferência de órbita.
+\end{enumerate}
+
+\subsection{Premissas orbitais}
+
+Nessa etapa, é realizada a aproximação longa e toda a movimentação do perseguidor é realizada no referencial inercial, utilizando o problema de dois corpos.
+Considera-se que o perseguidor foi injetado pelo veículo lançador em sua órbita de injeção, a qual é circular e coplanar em relação à orbita do alvo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{2 Estrategia de RVDB/Imagens/1 Posicao espaconaves injecao orbital.png}
+\caption{Posição inicial das espaçonaves.}
+\label{fig:injecao_orbita_inicial}
+\end{figure}
+
+Na Figura~\ref{fig:injecao_orbita_inicial} é possível observar a diferença de ângulo entre as espaçonaves durante a injeção do perseguidor em sua órbita inicial.
+A diferença de ângulo entre as espaçonaves no início da operação é reduzida através da diferença da velocidade entre as espaçonaves (\emph{drift} orbital).
+Ao obter uma diferença de ângulo adequada o suficiente, realiza-se duas manobras impulsivas que conduzem o perseguidor a uma nova órbita, de raio orbital inferior ao do alvo.
+Além disso, o perseguidor estará atrasado em relação ao alvo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{2 Estrategia de RVDB/Imagens/2 Injecao orbita antes da transf de orbita.png}
+\caption{Momento do início da transferência orbital.}
+\label{fig:transf_orbita}
+\end{figure}
+
+Por sua vez, a Figura~\ref{fig:transf_orbita} demonstra a redução da diferença de fase entre as espaçonaves.
+
+\subsection{Parâmetros orbitais absolutos}
+
+A Tabela~\ref{tab:parametros_orbitais_iniciais} contempla todos os parâmetros orbitais durante essa primeira fase de operação das espaçonaves.
+
+
+\begin{longtable}{lrr}
+\caption{Constantes gravitacionais, altitudes, raios orbitais e elementos orbitais iniciais.}
+\label{tab:parametros_orbitais_iniciais}\\
+\hline
+\textbf{Variável} & \textbf{Valor} & \textbf{Unidade} \\
+\hline
+\endfirsthead
+
+\caption*{(Continuação) Constantes gravitacionais, altitudes, raios orbitais e elementos orbitais iniciais.}\\
+\hline
+\textbf{Variável} & \textbf{Valor} & \textbf{Unidade} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+
+\multicolumn{3}{l}{\textbf{Constantes e parâmetros planetários}} \\
+\hline
+$\mu_{\text{Terra}}$                               & $3.986004418\times 10^{14}$ & m$^{3}$/s$^{2}$ \\
+$R_{\text{Terra}}$                                & $6378.14$                   & km \\
+\hline
+\multicolumn{3}{l}{\textbf{Altitudes e raios orbitais}} \\
+\hline
+Altitude inicial do perseguidor                   & $500.00$                    & km \\
+Altitude do perseguidor após transferência orbital & $559.90$                   & km \\
+Altitude inicial do alvo                          & $600.00$                    & km \\
+Raio orbital inicial do perseguidor               & $6878.14$                   & km \\
+Raio orbital do perseguidor após transferência orbital & $6938.04$              & km \\
+Raio orbital inicial do alvo                      & $6978.14$                   & km \\
+\hline
+\multicolumn{3}{l}{\textbf{Longitudes inerciais iniciais}} \\
+\hline
+Longitude inercial inicial do perseguidor         & $-7.00 / -0.12$             & deg / rad \\
+Longitude inercial inicial do alvo                & $0.00 / 0.00$               & deg / rad \\
+\hline
+\multicolumn{3}{l}{\textbf{Elementos orbitais iniciais do alvo}} \\
+\hline
+Semi-eixo maior $a_{\text{alvo}}$                 & $6978.14$                   & km \\
+Excentricidade $e_{\text{alvo}}$                  & $0.00$                      & -- \\
+Inclinação $i_{\text{alvo}}$                      & $0.00 / 0.00$               & deg / rad \\
+Longitude do nó ascendente $\Omega_{\text{alvo}}$ & $0.00 / 0.00$               & deg / rad \\
+Argumento do perigeu $\omega_{\text{alvo}}$       & $0.00 / 0.00$               & deg / rad \\
+Anomalia verdadeira inicial $\nu_{\text{alvo},0}$ & $0.00 / 0.00$               & deg / rad \\
+\hline
+\multicolumn{3}{l}{\textbf{Elementos orbitais iniciais do perseguidor}} \\
+\hline
+Excentricidade $e_{\text{perseguidor}}$ & $0.0$ & -- \\
+Inclinação $i_{\text{perseguidor}}$& $0.00 / 0.00$               & deg / rad \\
+Longitude do nó ascendente $\Omega_{\text{perseguidor}}$ & $0.00 / 0.00$ & deg / rad \\
+Argumento do perigeu $\omega_{\text{perseguidor}}$ & $0.00 / 0.00$& deg / rad \\
+Anomalia verdadeira inicial $\nu_{\text{perseguidor},0}$ & $-7.00 / -0.12$& deg / rad \\
+
+\end{longtable}

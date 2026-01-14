@@ -1,58 +1,89 @@
-\section{Discussão dos resultados}
-\label{sec:cap4_app_final_discussao}
+% \section{Resultados}
+% \label{sec:cap4_app_final_discussao}
 
-Os resultados apresentados neste capítulo avaliam a cadeia de aproximações da missão de \gls{rvdb}, desde a transferência orbital inicial até a aproximação final.
-Em resumo, buscou-se verificar se:
-(i) a transferência de Hohmann conduz o perseguidor a uma órbita adequada para a transição ao referencial \gls{lvlh};
-(ii) o controle translacional baseado nas equações \gls{hcw} leva o perseguidor à região de aproximação de curta distância com erro e velocidade controlados;
-(iii) o controle de atitude estabiliza o perseguidor tanto com o manipulador inoperante quanto em regime acoplado base--manipulador;
-e (iv) o manipulador posiciona a ferramenta em uma vizinhança próxima da porta de acoplamento, sem comprometer a dinâmica global do sistema.
+% Os resultados apresentados neste capítulo avaliam a cadeia de aproximações da missão de \gls{rvdb}, desde a transferência orbital inicial até a aproximação final.
+% Em resumo, buscou-se verificar se:
+% (i) a transferência de Hohmann conduz o perseguidor a uma órbita adequada para a transição ao referencial \gls{lvlh};
+% (ii) o controle translacional baseado nas equações \gls{hcw} leva o perseguidor à região de aproximação de curta distância com erro e velocidade controlados;
+% (iii) o controle de atitude estabiliza o perseguidor tanto com o manipulador inoperante quanto em regime acoplado espaçonave--manipulador;
+% e (iv) o manipulador posiciona a ferramenta em uma vizinhança próxima da porta de acoplamento, sem comprometer a dinâmica global do sistema.
 
-\subsection{Coerência entre as fases de aproximação}
+% \subsection{Coerência entre as fases de aproximação}
 
-A linha do tempo da missão mostra que as três aproximações (longa, curta e final) são encadeadas de maneira consistente.
-Na aproximação de longa distância, a transferência de Hohmann eleva o raio orbital do perseguidor da altitude inicial de $500$ km para aproximadamente $599{,}9$ km, praticamente coincidente com a órbita circular do alvo, que se encontra a $600$ km de altitude. A diferença radial residual após a segunda queima é da ordem de $100$ m, valor coerente com o emprego posterior de um modelo linearizado em LVLH para descrever o movimento relativo.
+% A linha do tempo da missão mostra que as três aproximações (longa, curta e final) são encadeadas de maneira consistente.
+% Na aproximação de longa distância, a transferência de Hohmann eleva o raio orbital do perseguidor da altitude inicial de $500$ km para aproximadamente $599{,}9$ km, praticamente coincidente com a órbita circular do alvo, que se encontra a $600$ km de altitude. A diferença radial residual após a segunda queima é da ordem de $100$ m, valor coerente com o emprego posterior de um modelo linearizado em LVLH para descrever o movimento relativo.
 
-A análise da longitude inercial mostra que a condição de fase entre perseguidor e alvo é ajustada;
-ao final da transferência e do \emph{drift} orbital, a diferença de longitude reduz-se para próxmo de $0{,}0041^\circ$, o que corresponde a uma separação relativa de aproximadamente $506$ m. 
+% A análise da longitude inercial mostra que a condição de fase entre perseguidor e alvo é ajustada;
+% ao final da transferência e do \emph{drift} orbital, a diferença de longitude reduz-se para próxmo de $0{,}0041^\circ$, o que corresponde a uma separação relativa de aproximadamente $506$ m. 
 
-A comparação entre os cenários (A) e (B) indica que alterações nas condições iniciais (como altitude e longitude do perseguidor) preservam a estrutura relativa da missão, mas impactam de forma sensível o tempo total e o consumo de $\Delta v$.
-No cenário B, por exemplo, o tempo até o término da aproximação de longa distância aumenta em cerca de $365\%$, e o consumo total de $\Delta v$ praticamente dobra em relação ao cenário de referência. Isso confirma que a escolha da órbita inicial e da fase inercial desempenha papel relevante no custo propulsivo da missão, ainda que o estado final para o início do movimento relativo em LVLH permaneça semelhante.
+% A comparação entre os cenários (A) e (B) indica que alterações nas condições iniciais (como altitude e longitude do perseguidor) preservam a estrutura relativa da missão, mas impactam de forma sensível o tempo total e o consumo de $\Delta v$.
+% No cenário B, por exemplo, o tempo até o término da aproximação de longa distância aumenta em cerca de $365\%$, e o consumo total de $\Delta v$ praticamente dobra em relação ao cenário de referência. Isso confirma que a escolha da órbita inicial e da fase inercial desempenha papel relevante no custo propulsivo da missão, ainda que o estado final para o início do movimento relativo em LVLH permaneça semelhante.
 
-\subsection{Desempenho do controle translacional em LVLH}
+% \subsection{Desempenho do controle translacional em LVLH}
 
-Na aproximação de curta distância, a dinâmica relativa no referencial LVLH mostra que a lei de controle proporcional--derivativa cumpre os objetivos de redução da posição e da velocidade relativas, mantendo o perseguidor dentro de limites operacionais pré-estabelecidos. As componentes de posição partem de valores da ordem de centenas de metros e convergem para uma condição final próxima de $-0{,}007$ m em along-track e $-0{,}500$ m em radial, enquanto a componente cross-track permanece praticamente nula desde o início da fase.
+% Na aproximação de curta distância, a dinâmica relativa no referencial LVLH mostra que a lei de controle proporcional--derivativa cumpre os objetivos de redução da posição e da velocidade relativas, mantendo o perseguidor dentro de limites operacionais pré-estabelecidos. As componentes de posição partem de valores da ordem de centenas de metros e convergem para uma condição final próxima de $-0{,}007$ m em along-track e $-0{,}500$ m em radial, enquanto a componente cross-track permanece praticamente nula desde o início da fase.
 
-Os tempos de assentamento em posição, calculados com critério de tolerância de $\pm 0{,}05$ m durante um intervalo mínimo de $15$ s, são da ordem de $515$ s para a componente radial e $530$ s para a componente along-track, com assentamento imediato em cross-track. Esses tempos refletem um compromisso entre rapidez de convergência e limitação de esforços de controle, uma vez que a mesma lei deve respeitar restrições de velocidade relativa e de aceleração impostas para garantir segurança na vizinhança do alvo.
+% Os tempos de assentamento em posição, calculados com critério de tolerância de $\pm 0{,}05$ m durante um intervalo mínimo de $15$ s, são da ordem de $515$ s para a componente radial e $530$ s para a componente along-track, com assentamento imediato em cross-track. Esses tempos refletem um compromisso entre rapidez de convergência e limitação de esforços de controle, uma vez que a mesma lei deve respeitar restrições de velocidade relativa e de aceleração impostas para garantir segurança na vizinhança do alvo.
 
-A velocidade relativa inicial é dominada pela componente along-track, cerca de $0{,}1625$ m/s, e converge para valores finais da ordem de $10^{-5}$ m/s. A saturação da velocidade em $0{,}3000$ m/s para distâncias superiores a $20$ m e em $0{,}0300$ m/s na vizinhança do alvo impede que a dinâmica aproximada pelas equações de \gls{hcw} conduza a velocidades de alguns metros por segundo. Os picos de velocidade não saturada (cerca de $4{,}51$ m/s em radial e $8{,}62$ m/s em along-track) mostram que, sem essa limitação, a manobra apresentaria risco de colisão entre o perseguidor e o alvo. Em contrapartida, a aceleração de controle é mantida dentro de $\pm 1{,}0000$ m/s², e tende rapidamente a zero após o regime transitório, o que caracteriza um esforço de controle compatível com atuadores de baixa potência.
-Esses resultados indicam que o controle translacional consegue trazer o perseguidor para uma região de referência próxima ao alvo, com limites de posição e velocidade adequados para a transição à fase de aproximação final, ainda que à custa de tempos de assentamento relativamente longos.
+% A velocidade relativa inicial é dominada pela componente along-track, cerca de $0{,}1625$ m/s, e converge para valores finais da ordem de $10^{-5}$ m/s. A saturação da velocidade em $0{,}3000$ m/s para distâncias superiores a $20$ m e em $0{,}0300$ m/s na vizinhança do alvo impede que a dinâmica aproximada pelas equações de \gls{hcw} conduza a velocidades de alguns metros por segundo. Os picos de velocidade não saturada (cerca de $4{,}51$ m/s em radial e $8{,}62$ m/s em along-track) mostram que, sem essa limitação, a manobra apresentaria risco de colisão entre o perseguidor e o alvo. Em contrapartida, a aceleração de controle é mantida dentro de $\pm 1{,}0000$ m/s², e tende rapidamente a zero após o regime transitório, o que caracteriza um esforço de controle compatível com atuadores de baixa potência.
+% Esses resultados indicam que o controle translacional consegue trazer o perseguidor para uma região de referência próxima ao alvo, com limites de posição e velocidade adequados para a transição à fase de aproximação final, ainda que à custa de tempos de assentamento relativamente longos.
 
-\subsection{Controle de atitude e dinâmica da base com manipulador acoplado}
+% \subsection{Controle de atitude e dinâmica da espaçonave no modo operacional}
 
-Durante toda a missão, o controle de atitude é responsável por alinhar o perseguidor ao referencial do alvo e por rejeitar as perturbações induzidas pelo manipulador robótico. Os erros iniciais de atitude em relação ao alvo — cerca de $7^\circ$ em roll, $8^\circ$ em pitch e $9^\circ$ em yaw — são reduzidos para valores finais próximos de $0{,}5^\circ$ em cada componente, dentro do limite de $\pm 1^\circ$ estabelecido. O alinhamento se mantém tanto na fase em que a dinâmica é descrita pelas equações de Euler quanto após a comutação para o modelo de Lagrange com base flutuante.
+% Durante a missão, o controle de atitude reduz os erros de orientação do perseguidor e amortece os transitórios associados à comutação do modelo dinâmico e à atuação do manipulador robótico.
+% Ao final da simulação, os ângulos de Euler convergem para valores residuais reduzidos: $0{,}10^\circ$ (roll), $0{,}02^\circ$ (pitch) e $0{,}30^\circ$ (yaw).
 
-As velocidades angulares da base permanecem em faixas moderadas, com limites aproximados de $[-1{,}20,\;1{,}20]$ rad/s em $w_x$, $[-1{,}26,\;1{,}25]$ rad/s em $w_y$ e $[-0{,}96,\;1{,}00]$ rad/s em $w_z$, convergindo ao final para valores residuais de $0{,}01$ rad/s, $-0{,}01$ rad/s e $0{,}03$ rad/s, respectivamente. As acelerações angulares apresentam picos concentrados na transição entre os modelos dinâmicos, chegando a cerca de $-109{,}9$ rad/s² em $w\dot{y}$, mas retornam a aproximadamente $\pm 2{,}00$ rad/s² no regime final. Esses resultados sugerem que a comutação entre os modelos produz transitórios mais intensos, porém de duração limitada, após os quais a base evolui para um regime de rotação lenta, compatível com a fase de engate.
+% As velocidades angulares da espaçonave permanecem limitadas na simulação, com faixas aproximadas de
+% $[-1{,}19,\;1{,}20]$ rad/s em $w_x$, $[-1{,}26,\;1{,}25]$ rad/s em $w_y$ e $[-0{,}96,\;1{,}00]$ rad/s em $w_z$,
+% convergindo ao final para $w_x=-0{,}01$ rad/s, $w_y=0{,}00$ rad/s e $w_z=-0{,}01$ rad/s.
+% As acelerações angulares apresentam picos concentrados no regime transitório, com mínimo de $-109{,}94$ rad/s$^2$ em $\dot{w}_y$,
+% e convergem ao final para $\dot{w}_x=-1{,}18$ rad/s$^2$, $\dot{w}_y=-2{,}00$ rad/s$^2$ e $\dot{w}_z=1{,}70$ rad/s$^2$.
 
-Os torques de controle de atitude (PD) oscilam tipicamente na faixa de poucos N·m, com picos absolutos próximos de $12$ N·m em módulo e valores finais de aproximadamente $-0{,}016$ N·m, $0{,}028$ N·m e $-0{,}58$ N·m em $x$, $y$ e $z$, respectivamente.
-A versão compensada desses torques, que inclui termos de acoplamento dinâmico base--manipulador, apresenta valores finais muito próximos, com diferenças da ordem de $10^{-3}$ a $10^{-2}$ N·m, que afetam principalmente a forma transitória. Os torques de reação na base, induzidos pela movimentação do manipulador, permanecem significativamente menores; variam, em módulo, em torno de $0{,}03$ N·m, com valores finais inferiores a $0{,}01$ N·m em cada componente. Assim, o controlador de atitude consegue rejeitar as perturbações associadas ao manipulador sem exigir níveis de torque incompatíveis com uma plataforma de pequeno porte.
+% Os torques de controle de atitude permanecem tipicamente na faixa de poucos Nm, com picos absolutos próximos de $12{,}49$ Nm.
+% No instante final, o torque PD de atitude assume $0{,}21$ Nm (eixo $x$), $-0{,}04$ Nm (eixo $y$) e $0{,}06$ Nm (eixo $z$).
+% Na forma compensada (incluindo termos de acoplamento), os valores finais são $0{,}16$ Nm, $-0{,}51$ Nm e $0{,}08$ Nm.
+% Os torques de reação na base, induzidos pela movimentação do manipulador, apresentam amplitudes inferiores às do torque de controle,
+% com valores finais de $0{,}05$ Nm (eixo $x$), $0{,}47$ Nm (eixo $y$) e $-0{,}02$ Nm (eixo $z$).
+% Assim, o controlador de atitude mantém a estabilização e absorve as perturbações associadas ao regime acoplado, ainda que com transitórios concentrados em instantes específicos da missão.
 
-A evolução da energia cinética e do momento angular reforça essa interpretação. A energia cinética total atinge valor máximo de cerca de $0{,}1914$ J e decai para aproximadamente $1{,}35\times 10^{-4}$ J ao final da aproximação, enquanto as componentes do momento angular total se mantêm em faixas da ordem de $10^{-1}$ N·m·s, com valores residuais entre $10^{-3}$ e $10^{-2}$ N·m·s. A manobra termina, portanto, em um estado de baixa energia cinética e baixo momento angular residual.
+% \subsection{Atuação do manipulador e aproximação geométrica da ferramenta}
 
-\subsection{Atuação do manipulador e aproximação geométrica da ferramenta}
+% O manipulador robótico opera durante a aproximação final, iniciando o modo operacional em $t=466{,}26$ s e executando a manobra até $t=900{,}00$ s.
+% As posições articulares convergem para uma configuração final bem definida, com $j_1=1{,}55$ rad, $j_2=1{,}22$ rad e $j_3=0{,}23$ rad.
+% As velocidades residuais ao final são $\dot{j}_1=-0{,}12$ rad/s, $\dot{j}_2=0{,}01$ rad/s e $\dot{j}_3=-0{,}19$ rad/s.
 
-O manipulador robótico opera durante a aproximação final para posicionar a ferramenta em uma configuração adequada ao engate. As posições articulares convergem para uma configuração bem definida em regime final, aproximadamente $q_1 = -1{,}5820$ rad, $q_2 = -0{,}2649$ rad e $q_3 = 2{,}4860$ rad, com velocidades residuais reduzidas (por exemplo, $\dot{q}_1 \approx 0{,}0097$ rad/s e $\dot{q}_2 \approx 0{,}0009$ rad/s). Os torques de junta permanecem na faixa de décimos de N·m, com valores finais próximos de zero nas juntas $1$ e $2$ e esforço mais significativo na junta $3$, que responde pela extensão principal da ferramenta.
+% Os torques de controle nas juntas permanecem em níveis reduzidos, na faixa de décimos de N$\cdot$m.
+% Ao final, obtém-se $\tau_1=0{,}09$ N$\cdot$m, $\tau_2=8{,}95\times 10^{-4}$ N$\cdot$m e $\tau_3=0{,}04$ N$\cdot$m,
+% com a junta 2 apresentando esforço residual significativamente menor em relação às demais.
 
-Os erros de seguimento em relação à referência de cinemática inversa permanecem contidos: as faixas de erro de posição por junta são da ordem de $10^{-3}$ a $10^{-2}$ rad, com valores finais próximos de zero em $q_2$ e da ordem de milésimos de radiano em $q_1$ e $q_3$. Os erros de velocidade exibem comportamento similar, o que indica que a trajetória descrita pelo manipulador acompanha de perto a referência planejada, sem oscilações significativas.
+% Do ponto de vista geométrico, em relação à referência de cinemática inversa para a ponta da ferramenta,
+% o erro cartesiano de posição no referencial $\{0\}$ converge para valores finais de
+% $e_x=1{,}00\times 10^{-2}$ m, $e_y=-4{,}95\times 10^{-3}$ m e $e_z=-1{,}04\times 10^{-2}$ m.
+% A magnitude do erro de posição do efetuador final também converge, atingindo $1{,}53\times 10^{-2}$ m no instante final.
 
-Do ponto de vista geométrico, em relação à referência desejada para a posição da ponta, os erros de posição $(e_x,e_y,e_z)$ variam ao longo da aproximação dentro de faixas inferiores a $0{,}12$ m em módulo, com valores finais de cerca de $-0{,}0015$ m, $-0{,}0045$ m e $1{,}61\times 10^{-4}$ m, respectivamente. A norma do erro de posição permanece abaixo de aproximadamente $0{,}93$ m e converge para um valor final de $4{,}7\times 10^{-3}$ m, isto é, poucos milímetros em relação à posição de referência.
-Sendo assim, o sistema consegue posicionar o efetuador em uma região compatível com uma janela de captura fina. Entretanto, o modelo não impõe explicitamente uma restrição de alinhamento angular perfeito entre a ferramenta e a porta; a certificação de engate coaxial dependeria de mecanismos adicionais, como guias mecânicas, cones de acoplamento ou estratégias de controle específicas para a fase de contato.
+% Por fim, o alinhamento direcional entre o eixo da ferramenta e a normal da porta foi avaliado por duas métricas: (i) o ângulo entre os vetores e (ii) o produto escalar entre as direções normalizadas, ambos no referencial $\{0\}$.
+% Até $t=466{,}26$ s, o ângulo permanece em $90{,}00^\circ$, indicando condição perpendicular anterior ao modo operacional do manipulador.
+% Após o início do modo operacional, o ângulo é reduzido, atingindo $5{,}16^\circ$ no instante de acoplamento ($t=662{,}57$ s) e $6{,}77^\circ$ ao final.
+% De forma consistente, o produto escalar evolui para valores próximos de $1$, com $0{,}9959$ no acoplamento e $0{,}9930$ ao final.
+% A análise detalhada dessas métricas e de suas componentes está apresentada na Subseção~\ref{subsec:cap4_alinhamento}.
 
-\subsection{Encerramento e limitações do modelo}
 
-Os resultados indicam que a arquitetura proposta para a missão de \gls{rvdb} atinge os objetivos estabelecidos: a transferência orbital gera condições adequadas para o uso do referencial LVLH; o controle translacional baseado nas equações de \gls{hcw} conduz o perseguidor à vizinhança do alvo com limites de posição e velocidade; o controle de atitude mantém o alinhamento com o alvo mesmo com o manipulador em operação; e o manipulador é capaz de posicionar a ferramenta em uma vizinhança milimétrica da posição alvo, com baixo esforço de controle e efeitos limitados sobre a base.
+% \subsection{Síntese do alinhamento ferramenta--porta}
+% Além da convergência translacional, o alinhamento direcional entre o eixo da ferramenta e a normal da porta foi avaliado por duas métricas:
+% (i) o ângulo entre os vetores e (ii) o produto escalar entre as direções normalizadas, ambos em $\{0\}$.
+% Até $t=466{,}26$ s, o ângulo permanece em $90{,}00^\circ$, indicando condição perpendicular anterior ao modo operacional do manipulador.
+% Após o início do modo operacional, o ângulo é reduzido, atingindo $5{,}16^\circ$ no instante de acoplamento ($t=662{,}57$ s) e $6{,}77^\circ$ ao final.
+% De forma consistente, o produto escalar evolui para valores próximos de $1$, com $0{,}9959$ no acoplamento e $0{,}9930$ no instante final.
+% Esses resultados indicam alinhamento direcional elevado durante a fase de aproximação final e compatível com o objetivo geométrico de engate,
+% ainda que a simulação não inclua modelagem detalhada da interface mecânica de captura e contato.
 
-Por outro lado, o modelo apresenta limitações que devem ser consideradas na interpretação dos resultados. A dinâmica relativa é descrita por equações linearizadas \gls{hcw} em órbitas circulares coplanares, sem consideração explícita de perturbações orbitais, atrasos de atuadores, ruídos de sensores ou saturações detalhadas de torque. O manipulador é representado por um modelo rígido de três graus de liberdade, sem flexibilidade estrutural nem dinâmica de contato com a porta de acoplamento. Além disso, a condição de alinhamento angular entre ferramenta e porta não possui modelagem da interface mecânica de engate.
+% \subsection{Encerramento e limitações do modelo}
 
-% Embora hajam simplificações em termos de alinhamento com a porta de acoplamento, a coerência entre as fases da missão, os níveis de esforço de controle obtidos, os baixos valores residuais de energia e momento angular e a precisão geométrica alcançada na posição da ferramenta indicam que a estratégia de controle adotada é compatível com o cenário estudado e fornece base consistente para estudos futuros de extensões do modelo, incluindo dinâmica de contato, modelos orbitais mais completos e técnicas de controle alternativas para a fase de aproximação final.
+% Os resultados indicam que a arquitetura proposta para a missão de \gls{rvdb} atinge os objetivos estabelecidos.
+% O controle de translação baseado nas equações de \gls{hcw} conduz o perseguidor à vizinhança do alvo, e o controle de atitude mantém o alinhamento com o alvo mesmo quando o \gls{mr} está no modo operacional.
+% Além disso, o manipulador robótico é capaz de posicionar a ferramenta em uma vizinhança próxima da posição da porta de acoplamento.
 
+% Por outro lado, o modelo apresenta limitações que devem ser consideradas na interpretação dos resultados.
+% A dinâmica relativa é descrita por equações linearizadas \gls{hcw} em órbitas circulares coplanares, sem qualquer consideração de perturbações orbitais, atrasos de atuadores, ruídos de sensores ou saturações detalhadas de torque.
+% O manipulador é representado por um modelo rígido de três graus de liberdade, sem flexibilidade estrutural nem dinâmica de contato com a porta de acoplamento.
+% Além disso, a condição de alinhamento angular entre ferramenta e porta não possui modelagem da interface mecânica de engate.

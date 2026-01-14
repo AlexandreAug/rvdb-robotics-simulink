@@ -1,9 +1,9 @@
 \section{Linha do tempo}
 \label{sec:cap4_linha_tempo}
 
-Antes da exibição do resultados, será apresentada a linha do tempo da missão de \gls{rvdb}.
-Nela será possível observar quando e o que acontece em cada momento importante da simulação da missão deste trabalho.
-Para melhor eficiência computacional, a simulação realizada na plataforma Matlab/Simulink foi separada conforme as aproximações realizadas, portanto, inicialmente simulou-se a aproximação de longa distância por completo, posteriormente a aproximação de curta distância e em paralelo, a aproximação final.
+Antes da apresentação dos resultados, descreve-se a linha do tempo da missão de \gls{rvdb} para explicitar a sequência de fases e os eventos associados a cada marco temporal.
+Nesta seção, o tempo $t$ é absoluto e medido a partir do início da simulação ($t=0$).
+Por eficiência computacional, a simulação em MATLAB/Simulink foi executada de forma segmentada por fases; posteriormente, os trechos foram concatenados em uma única escala temporal absoluta para fins de análise e apresentação dos resultados \cite{mathworks_matlab,mathworks_simulink}.
 
 \begin{figure}[H]
 \centering
@@ -12,16 +12,20 @@ Para melhor eficiência computacional, a simulação realizada na plataforma Mat
     \label{fig:cap4_linha_tempo}
 \end{figure}
 
-A Figura~\ref{fig:cap4_linha_tempo} e a Tabela~\ref{tab:cap4_linha_tempo} sintetizam os principais marcos temporais da missão, indicando para cada evento o instante correspondente em segundos e em horas.
-Entre o início da missão de \gls{rvdb} ($t = 0$ s) e o início da aproximação de longa distância ($t = 3.702$ s) ocorre a redução da diferença de fase entre perseguidor e alvo, preparando a condição adequada para a transferência orbital.
+A Figura~\ref{fig:cap4_linha_tempo} e a Tabela~\ref{tab:cap4_linha_tempo}, em conjunto, resumem os principais marcos temporais da missão, indicando para cada evento o instante correspondente em segundos.
+Entre o início da missão ($t=0$) e o início da aproximação de longa distância ($t=3.702$~s) ocorre a evolução orbital destinada a reduzir a separação de fase entre perseguidor e alvo até a condição de início da manobra de transferência orbital, ou seja, aplicação do primeiro impulso de velocidade ($\Delta v_1$).
 
-Em seguida, após o final da aproximação de longa distância no instante $t = 6.571$ s, tem início o trecho de \emph{drift} orbital, que se estende até $t = 7.471$ s, quando se inicia a aproximação de curta distância. Esta, por sua vez, evolui até o instante $t = 7.538$ s, momento em que se caracteriza o início da aproximação final e em que a dinâmica do corpo rígido ainda é descrita pela formulação de Euler.
+Em seguida, a aproximação de longa distância prossegue até $t=6.571$~s, instante associado ao término da transferência (aplicação de $\Delta v_2$).
+A partir desse ponto tem início o trecho da derivda (\emph{drift}) orbital, que se estende até $t=7.471$~s, quando inicia-se a aproximação de curta distância.
 
-No instante $t = 7.924$ s é realizada a comutação entre as dinâmicas, passando-se a empregar o modelo acoplado de base flutuante descrito pelas equações de Lagrange, e o \gls{mr} entra em operação para conduzir a ferramenta até a porta de acoplamento. Por fim, em $t = 7.992$ s considera-se encerrada a missão, uma vez que a ferramenta se encontra engatada e estabilizada, dispensando correções adicionais de atitude ou de posição fina.
+A aproximação de curta distância evolui até $t=7.538$~s, instante em que se caracteriza o início da aproximação final, mantendo-se ainda a dinâmica do corpo rígido descrita pela formulação de Euler.
+
+No instante $t = 7.924$ s é realizada a comutação entre as dinâmicas, passando-se a empregar o modelo acoplado de base flutuante descrito pelas equações de Lagrange, e o \gls{mr} entra em operação para conduzir a ferramenta até a porta de acoplamento.
+Por fim, em $t = 7.992$ s considera-se encerrada a missão, uma vez que a ferramenta se encontra engatada e estabilizada, dispensando correções adicionais de atitude ou de posição.
 
 \begin{table}[H]
 \centering
-\caption{Linha do tempo da missão e das fases de aproximação.}
+\caption{Linha do tempo da missão e das fases de aproximação (Cenário A).}
 \label{tab:cap4_linha_tempo}
 \begin{tabularx}{\linewidth}{|
   >{\raggedright\arraybackslash}X|
@@ -35,19 +39,19 @@ No instante $t = 7.924$ s é realizada a comutação entre as dinâmicas, passan
 Início da missão &
 $0$ & $00\text{h }00\text{min }00\text{s}$ \\
 \hline
-Início da aproximação longa distância ($\Delta v1$) & $3.702$ & $01\text{h }01\text{min }41\text{s}$ \\
+Início da aproximação longa distância ($\Delta v1$) & $3.702$ & $01\text{h }01\text{min }42\text{s}$ \\
 \hline
-Final da aproximação longa distância ($\Delta v2$) & $6.571$ & $01\text{h }49\text{min }30\text{s}$ \\
+Final da aproximação longa distância ($\Delta v2$) & $6.571$ & $01\text{h }49\text{min }31\text{s}$ \\
 \hline
-Início da aproximação curta distância &$7.471$ & $02\text{h }04\text{min }30\text{s}$ \\
+Início da aproximação curta distância &$7.471$ & $02\text{h }04\text{min }31\text{s}$ \\
 \hline
 Início da aproximação final & $7.538$ & $02\text{h }05\text{min }38\text{s}$ \\
 \hline
 Comutação entre as dinâmicas & $7.924$ & $02\text{h }12\text{min }04\text{s}$ \\
 \hline
-Fim da aproximação final & $7.992$ & $02\text{h }13\text{min }11\text{s}$ \\
+Fim da aproximação final & $7.992$ & $02\text{h }13\text{min }12\text{s}$ \\
 \hline
-\textbf{Tempo total da missão} & $7.992$ & $02\text{h }13\text{min }11\text{s}$ \\
+\textbf{Tempo total da missão} & $7.992$ & $02\text{h }13\text{min }12\text{s}$ \\
 \hline
 \end{tabularx}
 \end{table}
@@ -84,13 +88,13 @@ Início da aproximação curta distância  &$34.872$ &$09\text{h }41\text{min }1
 \hline
 % Fim da aproximação curta distância  &$34.940$ &$09\text{h }42\text{min }19\text{s}$ \\
 % \hline
-Início da aproximação final  &$34.940$ &$09\text{h }42\text{min }19\text{s}$ \\
+Início da aproximação final  &$34.940$ &$09\text{h }42\text{min }20\text{s}$ \\
 \hline
 Comutação entre as dinâmicas & $35.325$ & $09\text{h }48\text{min }45\text{s}$ \\
 \hline
-Fim da aproximação final  &$35.393$ &$09\text{h }49\text{min }52\text{s}$ \\
+Fim da aproximação final  &$35.393$ &$09\text{h }49\text{min }53\text{s}$ \\
 \hline
-\textbf{Tempo total da missão}  &$35.393$ &$09\text{h }49\text{min }52\text{s}$ \\
+\textbf{Tempo total da missão}  &$35.393$ &$09\text{h }49\text{min }53\text{s}$ \\
 \hline
 \end{tabularx}
 \end{table}

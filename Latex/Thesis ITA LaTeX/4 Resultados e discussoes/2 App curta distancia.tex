@@ -3,7 +3,14 @@
 
 Nesta seção são apresentados os resultados da aproximação de curta distância no referencial \gls{lvlh}{,} com ênfase na evolução da posição relativa{,} da velocidade relativa e das acelerações de controle aplicadas ao perseguidor. As grandezas numéricas foram obtidas diretamente a partir dos sinais exportados do modelo em ambiente Simulink.
 
-A Tabela~\ref{tab:cap4_app_curta_condicoes_lvhl} apresenta as condições iniciais e as medições finais da aproximação de curta distância em \gls{lvlh}{,} expressas pelas componentes along-track{,} cross-track e radial. Em complemento{,} a Figura~\ref{fig:cap4_posicoes_lvlh} apresenta{,} de forma gráfica{,} a evolução dessas componentes ao longo do tempo. Esses valores iniciais decorrem da conversão{,} para o referencial \gls{lvlh}{,} dos vetores de posição em ECI no instante final da aproximação de longa distância.
+A Tabela~\ref{tab:cap4_app_curta_condicoes_lvhl} apresenta as condições iniciais e as medições finais da aproximação de curta distância no referencial \gls{lvlh}, expressas pelas componentes \emph{along-track}, \emph{cross-track} e radial.
+Adicionalmente, a Figura~\ref{fig:cap4_posicoes_lvlh} apresenta a evolução temporal dessas componentes ao longo do tempo.
+Esses valores iniciais decorrem da conversão, para o referencial \gls{lvlh}, dos vetores de posição no referencial ECI no instante final da aproximação de longa distância.
+
+Além disso, as medições apresentadas na
+Tabela~\ref{tab:cap4_app_curta_condicoes_lvhl} foram obtidas a partir dos sinais de posição relativa no referencial \gls{lvlh} registrados durante a simulação no Simulink.
+Em cada instante, a posição relativa foi calculada pela diferença entre os vetores de posição ECI do perseguidor e do alvo e, em seguida, transformada para \gls{lvlh}.
+A "medição inicial" corresponde ao primeiro valor amostrado no instante de início da fase de curta distância, enquanto que a "medição final" é o último valor amostrado no instante de término dessa fase; e por fim, a Figura~\ref{fig:cap4_posicoes_lvlh} foi gerada a partir do mesmo conjunto de sinais registrados.
 
 \begin{table}[H]
 \centering
@@ -25,23 +32,20 @@ Posição along-track          & $-353{,}777$ & $-0{,}007$   & m \\
 Posição radial               & $-100{,}009$ & $-0{,}500$   & m \\
 \hline
 Posição cross-track          & $0{,}000$    & $0{,}000$    & m \\
-% Norma da posição relativa    & $367{,}641$  & $0{,}500$    & m \\
-% Norma da posição relativa    & $0{,}367641$ & $0{,}000500$ & km \\
 \hline
 \end{tabularx}
 \end{table}
- 
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=1\linewidth]{4 Resultados e discussoes/Imagens/2 App curta distancia/1 Posicao e distancia relativa (LVLH).png}
 \caption{Posições do perseguidor no referencial \gls{lvlh}.}
-    \label{fig:cap4_posicoes_lvlh}
+\label{fig:cap4_posicoes_lvlh}
 \end{figure}
 
-A Figura~\ref{fig:cap4_posicoes_lvlh} mostra a evolução temporal das componentes de posição relativa entre o perseguidor e o alvo no referencial \gls{lvlh} durante a aproximação de curta distância. 
-Próximo ao final do intervalo de simulação foram inseridas duas linhas verticais que indicam os instantes de assentamento das componentes radial e along-track.
+A Figura~\ref{fig:cap4_posicoes_lvlh} mostra a evolução temporal das componentes de posição relativa entre o perseguidor e o alvo no referencial \gls{lvlh} durante a aproximação de curta distância. Próximo ao final do intervalo de simulação, foram inseridas duas linhas verticais que indicam os instantes de estabilização das componentes radial e \emph{along-track}.
 
-O critério de assentamento (estabilização) adotado consiste em permanecer dentro de uma faixa de tolerância de $\pm 0{,}05$ m em torno dos valores finais da Tabela~\ref{tab:cap4_app_curta_condicoes_lvhl}{,} durante pelo menos $15$ s.
+O critério de estabilização adotado consiste em permanecer dentro de uma faixa de tolerância de $\pm 0{,}05$ m em torno dos valores finais da Tabela~\ref{tab:cap4_app_curta_condicoes_lvhl}{,} durante pelo menos $15$ s.
 Com esse critério{,} a componente radial atinge o regime permanente em aproximadamente $515$ s{,} enquanto a componente along-track se estabiliza em torno de $530$ s; a componente cross-track permanece dentro da banda de tolerância desde o início da aproximação de curta distância.
 
 % Ademais{,} as Figuras~\ref{fig:cap4_proj_3d} e~\ref{fig:cap4_projecao} apresentam as projeções do deslocamento relativo do perseguidor em relação ao alvo durante a fase de translação.
@@ -63,7 +67,9 @@ A Figura~\ref{fig:cap4_proj_3d} apresenta o deslocamento do perseguidor em uma v
 
 \subsection{Velocidade relativa}
 
-O comportamento da velocidade relativa no referencial \gls{lvlh} é sintetizado na Tabela~\ref{tab:cap4_app_curta_vel_lvhl}{,} que reúne os valores inicial e final de cada componente{,} bem como a norma da velocidade relativa ao longo da aproximação de curta distância.
+A velocidade relativa no referencial \gls{lvlh} é apresentada na Tabela~\ref{tab:cap4_app_curta_vel_lvhl}; nesta tabela reúne os valores inicial e final de cada componente.
+A medição inicial corresponde ao instante de transição entre as fases da missão, sendo: ao final da aproximação de longa distância e, simultaneamente, ao início da aproximação de curta distância, após a conversão dos estados do referencial ECI para o referencial \gls{lvlh}.
+A medição final corresponde ao instante de estabilização ao término da fase de curta distância, quando as componentes de velocidade relativa atingem e mantêm valores estabilizados.
 
 \begin{table}[H]
 \centering
@@ -100,18 +106,23 @@ Norma da velocidade relativa & $0{,}162462$ & $0{,}000012$ & m/s \\
     \label{fig:cap4_velocidades_lvlh}
 \end{figure}
 
-A Figura~\ref{fig:cap4_velocidades_lvlh} apresenta a evolução temporal das componentes de velocidade relativa no referencial \gls{lvlh}{,} juntamente com as faixas de limite adotadas para a missão. Estabeleceu-se que{,} para distâncias relativas superiores a $20$ m{,} a velocidade relativa máxima admissível é de $0{,}300$ m/s{,} enquanto para distâncias inferiores a $20$ m o limite é reduzido para $0{,}030$ m/s{,} em conformidade proposto por \cite{vedant2025longrange{,}mathworks_space_rendezvous_docking}.
+A Figura~\ref{fig:cap4_velocidades_lvlh} apresenta a evolução temporal das componentes de velocidade relativa no referencial \gls{lvlh}{,} juntamente com as faixas de limite adotadas para a missão. Estabeleceu-se que{,} para distâncias relativas superiores a $20$ m{,} a velocidade relativa máxima admissível é de $0{,}300$ m/s{,} enquanto para distâncias inferiores a $20$ m o limite é reduzido para $0{,}030$ m/s{,} em conformidade proposto por \cite{vedant2025longrange,mathworks_space_rendezvous_docking}.
 
-Observa-se que o sistema de navegação e guiagem mantém o perseguidor dentro desses limites ao longo de toda a aproximação de curta distância. As linhas verticais indicam{,} adicionalmente{,} os instantes em que as componentes radial e along-track passam a satisfazer o critério de assentamento definido na Seção~\ref{sec:cap4_app_curta}{,} isto é{,} permanência dentro da faixa de $\pm 0{,}05$ m em torno dos valores finais por um intervalo mínimo de $15$ s.
+Observa-se que o sistema de navegação e guiagem mantém o perseguidor dentro desses limites ao longo de toda a aproximação de curta distância. As linhas verticais indicam{,} adicionalmente{,} os instantes em que as componentes radial e along-track passam a satisfazer o critério de estabilização definido na Seção~\ref{sec:cap4_app_curta}{,} isto é{,} permanência dentro da faixa de $\pm 0{,}05$ m em torno dos valores finais por um intervalo mínimo de $15$ s.
 
-\subsection{Tempos de assentamento em posição}
+\subsection{Tempos de estabilização da posição}
 
-Os tempos de assentamento em cada componente do referencial \gls{lvlh} foram obtidos por meio de um bloco específico de medição no modelo{,} utilizando o mesmo critério de tolerância previamente definido para a estabilização em posição. A Tabela~\ref{tab:cap4_app_curta_tempos_assentamento} resume esses resultados{,} apresentados tanto em segundos quanto no formato horas{,} minutos e segundos.
+Os tempos de estabilização de cada componente no referencial \gls{lvlh} foram obtidos por meio de um subsistema de pós-processamento no modelo Simulink para detectar a de estabilização ao longo do tempo de simulação.
+Esse subsistema recebe como entrada os sinais das componentes de posição relativa em \gls{lvlh} (radial, \emph{along-track} e \emph{cross-track}) e identifica, para cada componente, o primeiro instante em que o sinal passa a permanecer continuamente dentro de uma banda de tolerância em torno do valor de referência, até o término da fase de aproximação de curta distância. Nesta subseção, os tempos são contabilizados a partir do início da aproximação de curta distância (isto é, após o término da aproximação de longa distância e do \emph{drift} orbital).
+
+Adotou-se uma banda de tolerância de $\pm 0{,}10$~m para a estabilização radial e $\pm 0{,}05$~m para a estabilização \emph{along-track}.
+Para a componente radial, empregou-se como referência $r_{\mathrm{ref}}=-0{,}50$~m, enquanto para as componentes \emph{along-track} e \emph{cross-track} empregou-se $a_{\mathrm{ref}}=0$~m e $c_{\mathrm{ref}}=0$~m, respectivamente.
+A Tabela~\ref{tab:cap4_app_curta_tempos_estabilização} resume os tempos de estabilização obtidos, apresentados tanto em segundos quanto no formato horas, minutos e segundos.
 
 \begin{table}[H]
 \centering
-\caption{Tempos de assentamento da aproximação curta em LVLH.}
-\label{tab:cap4_app_curta_tempos_assentamento}
+\caption{Tempos de estabilização da aproximação curta em LVLH.}
+\label{tab:cap4_app_curta_tempos_estabilização}
 \begin{tabularx}{\linewidth}{|
   >{\raggedright\arraybackslash}X|
   >{\raggedleft\arraybackslash}X|
@@ -128,7 +139,8 @@ Cross-track & $0{,}000$   & $00\mathrm{h}:00\mathrm{m}:00\mathrm{s}$ \\
 \end{tabularx}
 \end{table}
 
-A Figura~\ref{fig:cap4_erro_radial} apresenta o erro de posição no eixo radial ao longo do tempo no referencial \gls{lvlh}. As linhas tracejadas indicam a faixa de tolerância em torno do valor final desejado{,} enquanto a linha vertical vermelha marca o instante em que o erro passa a permanecer dentro dessa faixa pelo intervalo mínimo de tempo adotado{,} caracterizando o tempo de assentamento radial.
+A Figura~\ref{fig:cap4_erro_radial} apresenta o erro de posição no eixo radial ao longo do tempo no referencial \gls{lvlh}.
+As linhas tracejadas pretas indicam a faixa de tolerância de $\pm 0{,}10$~m em torno do valor de referência radial ($r_{\mathrm{ref}}=-0{,}50$~m), enquanto a linha vertical vermelha marca o primeiro instante em que o erro passa a permanecer dentro dessa faixa até o término da aproximação de curta distância, caracterizando o tempo de estabilização radial.
 
 \begin{figure}[H]
 \centering
@@ -137,7 +149,7 @@ A Figura~\ref{fig:cap4_erro_radial} apresenta o erro de posição no eixo radial
 \label{fig:cap4_erro_radial}
 \end{figure}
 
-De forma análoga{,} a Figura~\ref{fig:cap4_erro_alongtrack} mostra a evolução do erro de posição na componente along-track. Observa-se o decaimento do erro em direção ao valor final prescrito e{,} novamente{,} a identificação do instante em que o perseguidor é considerado estabilizado segundo o mesmo critério de tolerância.
+De forma análoga, a Figura~\ref{fig:cap4_erro_alongtrack} mostra a evolução do erro de posição na componente \emph{along-track}. Observa-se o decaimento do erro em direção ao valor de referência ($a_{\mathrm{ref}}=0$~m) e a identificação do primeiro instante em que o erro passa a permanecer dentro da faixa de tolerância de $\pm 0{,}10$~m até o término da fase, definindo o tempo de estabilização \emph{along-track}.
 
 \begin{figure}[H]
 \centering
@@ -146,7 +158,7 @@ De forma análoga{,} a Figura~\ref{fig:cap4_erro_alongtrack} mostra a evolução
 \label{fig:cap4_erro_alongtrack}
 \end{figure}
 
-A Figura~\ref{fig:cap4_erro_crosstrack} apresenta o erro de posição na componente cross-track. Nesse caso{,} o erro permanece dentro da faixa de tolerância desde o início da aproximação de curta distância{,} o que se reflete no tempo de assentamento nulo reportado na Tabela~\ref{tab:cap4_app_curta_tempos_assentamento}.
+A Figura~\ref{fig:cap4_erro_crosstrack} apresenta o erro de posição na componente \emph{cross-track}. Nesse caso, o erro permanece dentro da faixa de tolerância desde o início da aproximação de curta distância, o que se reflete no tempo de estabilização nulo apresentado na Tabela~\ref{tab:cap4_app_curta_tempos_estabilização}.
 
 \begin{figure}[H]
 \centering
@@ -156,9 +168,12 @@ A Figura~\ref{fig:cap4_erro_crosstrack} apresenta o erro de posição na compone
 \end{figure}
 
 
-\subsection{Picos de posição{,} velocidade e aceleração de controle}
+\subsection{Picos de posição, velocidade e aceleração de controle}
 
-A Tabela~\ref{tab:cap4_app_curta_picos_pos_vel} resume os picos absolutos de posição e de velocidade relativa por componente LVLH{,} destacando que a dinâmica permanece contida dentro dos limites impostos pela própria configuração inicial.
+A Tabela~\ref{tab:cap4_app_curta_picos_pos_vel} resume os picos absolutos de posição e de velocidade relativa por componente em \gls{lvlh}.
+Esses valores foram obtidos a partir dos sinais registrados na simulação (os mesmos utilizados para gerar os gráficos) pelo Simulink, exportados e pós-processados em MATLAB.
+Para cada componente, o pico absoluto foi determinado como o máximo do módulo do sinal ao longo do intervalo analisado, isto é, $\max\!\left(|x(t)|\right)$.
+
 \begin{table}[H]
 \centering
 \caption{Picos absolutos de posição e velocidade relativa em LVLH.}
@@ -189,7 +204,7 @@ Velocidade relativa & Radial      & $0{,}300000$ & m/s \\
 \end{tabularx}
 \end{table}
 
-O esforço de controle proporcional-derivativo aplicado na aproximação curta é caracterizado pelos picos de aceleração de comando e pelos limites de velocidade relativa impostos pelo regulador. A Tabela~\ref{tab:cap4_app_curta_controle_pd} apresenta os picos de aceleração por componente \gls{lvlh} e os limites máximos de velocidade relativa utilizados na simulação.
+O esforço de controle proporcional-derivativo aplicado na aproximação curta é caracterizado pelos picos de aceleração de comando e pelos limites de velocidade relativa impostos pelo regulador. A Tabela~\ref{tab:cap4_app_curta_controle_pd} apresenta os picos de aceleração por componente \gls{lvlh} e os limites máximos de velocidade relativa \cite{vedant2025longrange} utilizados na simulação.
 
 \begin{table}[H]
 \centering
@@ -233,7 +248,7 @@ A Figura~\ref{fig:cap4_acel_controle} apresenta a aceleração de controle exerc
 
 \subsection{Efeito da saturação de velocidade relativa}
 
-Por fim{,} a Tabela~\ref{tab:cap4_app_curta_vel_raw} compara os picos de velocidade relativa que seriam obtidos sem limitação (velocidades provenientes diretamente do modelo de Hill/Clohessy--Wiltshire) com os limites efetivamente impostos pelo regulador de velocidade. Observa-se que{,} sem saturação{,} as velocidades poderiam atingir alguns metros por segundo nas componentes along-track e radial{,} ao passo que o controlador restringe a dinâmica a $0{,}3$ m/s na região distante e a $0{,}03$ m/s na vizinhança do alvo.
+Por fim{,} a Tabela~\ref{tab:cap4_app_curta_vel_raw} compara os picos de velocidade relativa que seriam obtidos sem limitação (velocidades provenientes diretamente do modelo de Hill/Clohessy--Wiltshire) com os limites efetivamente impostos pelo regulador de velocidade. Observa-se que{,} sem saturação{,} as velocidades poderiam atingir alguns metros por segundo nas componentes along-track e radial{,} ao passo que o controlador restringe a dinâmica a $0{,}3$ m/s na região distante e a $0{,}03$ m/s na vizinhança do alvo, conforme proposto por \cite{vedant2025longrange}.
 
 \begin{table}[H]
 \centering

@@ -1,77 +1,56 @@
 \subsection{Sugestões para trabalhos futuros}
 \label{sec:cap5_trabalhos_futuros}
 
-Os resultados obtidos fornecem base consistente para o estudo de operações de \gls{rvdb} com manipulador em base flutuante, mas também permitem a extensão do trabalho. A seguir, apresentam-se sugestões para estudos futuros.
+Os resultados obtidos fornecem base consistente para o estudo de operações de \gls{rvdb} com manipulador robótico em uma espaçonave robótica, mas também indicam possibilidades de extensão do trabalho.
+A seguir, apresentam-se sugestões para estudos futuros.
 
 \subsubsection{Extensões do modelo geométrico e dinâmico}
 
 \begin{enumerate}[label=(\alph*)]
-    \item \textbf{Imposição explícita de restrições de orientação da ferramenta}
-
-    Incluir uma restrição de alinhamento para o eixo da ferramenta com o eixo radial da porta de acoplamento (no referencial \gls{lvlh}). Essa modificação permitiria avaliar o impacto direto dessa restrição adicional sobre:
-    \begin{itemize}
-        \item a convergência dos algoritmos de cinemática inversa;
-        \item os torques de junta necessários na fase de aproximação final;
-        \item a sensibilidade do sistema a pequenas perturbações na atitude.
-    \end{itemize}
 
     \item \textbf{Modelagem de contato e acoplamento}
 
-    Introduzir modelos de contato entre ferramenta e porta, incluindo rigidez, amortecimento e elementos geométricos como cones de engate ou guias mecânicas. Com isso, seria possível:
+    Introduzir modelos de contato entre ferramenta e porta, incluindo rigidez, amortecimento e elementos geométricos, como cones de engate ou guias mecânicas.
+    Com isso, seria possível:
     \begin{itemize}
         \item estudar a fase de \emph{soft capture} com controle de força ou impedância no manipulador;
         \item analisar a transferência de impulso e as oscilações induzidas na base durante o acoplamento;
         \item definir tolerâncias posicionais e angulares mais realistas para a interface de engate.
     \end{itemize}
 
-    \item \textbf{Dinâmica orbital com mais variáveis}
+    \item \textbf{Dinâmica orbital com perturbações ambientais e achatamento da Terra}
 
-    Estender o modelo orbital com a inclusão de perturbações, como o termo de achatamento $J_2$, arrasto residual em órbitas baixas e incertezas paramétricas. Essa extensão permitiria:
+    Estender o modelo orbital com a inclusão de perturbações, como o termo de achatamento $J_2$, arrasto residual em órbitas baixas e incertezas paramétricas.
+    Essa extensão permitiria:
     \begin{itemize}
         \item quantificar a robustez do controlador translacional diante de perturbações sistemáticas;
         \item avaliar desvios acumulados em missões de maior duração;
         \item investigar a necessidade de leis de controle mais sofisticadas para manter as janelas de posição e velocidade.
     \end{itemize}
 
-    \item \textbf{Modelo mais realista de atuadores e sensores}
-
-    Tornar mais detalhada a modelagem de atuadores e sensores, incorporando:
-    \begin{itemize}
-        \item saturações de torque, limites de velocidade e histerese em atuadores de atitude e juntas;
-        \item atrasos de atuação e de processamento;
-        \item ruídos de medida em posição, velocidade, atitude e posição relativa.
-    \end{itemize}
-    Esse refinamento possibilitaria avaliar o desempenho do esquema de controle em um cenário mais próximo de aplicações reais e apoiar futuras implementações em \emph{hardware}.
 \end{enumerate}
 
 \subsubsection{Estratégias de controle}
 
 \begin{enumerate}[label=(\alph*),resume]
-    \item \textbf{Comparação com outras técnicas de controle}
-
-    Comparar o desempenho da lei de controle implementada neste trabalho com outros métodos, como LQR ou controle preditivo por modelo (MPC), aplicados à translação, à atitude e às juntas. A análise poderia focar em:
-    \begin{itemize}
-        \item robustez a variações de parâmetros e perturbações;
-        \item consumo de $\Delta v$ na fase translacional;
-        \item margens de estabilidade e desempenho em regime transitório.
-    \end{itemize}
 
     \item \textbf{Controle adaptativo ou com ganho variável}
 
-    Investigar controladores com ganhos variando em função da fase da aproximação (distância ao alvo, velocidade relativa, energia cinética ou outros indicadores). Essa abordagem permitiria:
+    Investigar controladores com ganhos variando em função da fase da aproximação (por exemplo, distância ao alvo, velocidade relativa, energia cinética ou outros indicadores).
+    Essa abordagem permitiria:
     \begin{itemize}
-        \item reduzir tempos de assentamento em trechos específicos da missão;
-        \item manter o esforço de controle dentro de limites seguros para atuadores;
-        \item ajustar automaticamente a agressividade do controle conforme o regime dinâmico.
+        \item reduzir tempos de estabilização em trechos específicos da missão;
+        \item ajustar automaticamente os ganhos de controle conforme o regime dinâmico.
     \end{itemize}
 
     \item \textbf{Análise formal de estabilidade e robustez}
 
-    Desenvolver análises formais de estabilidade e robustez para o sistema acoplado base–manipulador, por exemplo:
+    Desenvolver análises formais de estabilidade e robustez para o sistema acoplado base--manipulador, por exemplo:
     \begin{itemize}
         \item construção de funções de Lyapunov apropriadas para o sistema completo;
         \item uso de critérios no domínio da frequência para avaliar margens de estabilidade;
         \item derivação de condições de estabilidade diante de variações de massa, inércia, atrasos e perturbações externas.
     \end{itemize}
     Esses estudos forneceriam garantias mais rigorosas para o uso da arquitetura de controle em cenários operacionais mais exigentes.
+
 \end{enumerate}

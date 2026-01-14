@@ -71,15 +71,21 @@
 \usepackage{lmodern}
 \usepackage{longtable}
 \usepackage{hhline}
-\usepackage{tabularx}
-\usepackage{xltabular}
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
+\usepackage{xltabular}
+\usepackage{tabularx}
 \usepackage{array}
 
+% Coluna X alinhada à esquerda (para xltabular/tabularx)
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% (opcional) reduz avisos de "glue shrinkage" em quebras
+\setlength{\emergencystretch}{2em}
+
+\renewcommand{\arraystretch}{1.05}
 
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta, positioning, calc}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds,shapes.geometric}
 \usetikzlibrary{decorations.pathreplacing, shapes.geometric}
 \usetikzlibrary{patterns}
 \usetikzlibrary{scopes}
@@ -93,6 +99,9 @@
 %\usepackage{subfigmat}
 %PACOTEFIGURAS_SE _ERRADO_ESXCLUIR_ACIMA
 \usepackage{booktabs}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+\raggedbottom
 %PACOTETABELAS_SE _ERRADO_ESXCLUIR_ACIMA
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 
@@ -151,14 +160,12 @@
 
 % membros da banca examinadora
 
-\examiner{Prof. Dr.}{Alan Turing}{Presidente}{ITA}
-\examiner{Prof. Dr.}{Linus Torwald}{}{UXXX}
-\examiner{Prof. Dr.}{Richard Stallman}{}{UYYY}
-\examiner{Prof. Dr.}{Donald Duck}{}{DYSNEY}
-\examiner{Prof. Dr.}{Mickey Mouse}{}{DISNEY}
+\examiner{Prof. Dr.}{XXX}{XXX}{XXX}
+\examiner{Prof. Dr.}{XXX}{}{XXX}
+\examiner{Prof. Dr.}{XXX}{}{XXX}
 
 % Data da defesa (mês em maiúsculo, se trabalho em inglês, e minúsculo se trabalho em português)
-\date{11}{fevereiro}{2025}
+\date{XX}{fevereiro}{2026}
 
 % Número CDU - (somente para TG)
 % \cdu{???.??}
@@ -169,10 +176,10 @@
 
 
 \input{PreTextuais/listaabreviaturas.tex}
-% \input{PreTextuais/listasimbolos.tex}
+\input{PreTextuais/listasimbolos.tex}
 
 \begin{document}
-% \input{PreTextuais/main}
+\input{PreTextuais/main}
 
 \mainmatter
 % Os capitulos comecam aqui
@@ -194,8 +201,17 @@
 
 % Apendices
 \appendix
-\chapter{Apêndice A} %opcional
-\input{ApeA/apendiceA}
+\chapter{Posição e velocidade no referencial inercial}
+\input{ApeA/apendiceA.tex}
+
+\chapter{Parâmetros físicos do perseguidor}
+\input{ApeB/apendiceB.tex}
+
+\chapter{Parâmetros de controle e limitadores operacionais}
+\input{ApeC/apendiceC.tex}
+
+\chapter{Códigos computacionais}
+\input{ApeD/apendiceD.tex}
 
 % Anexos
 \annex
@@ -203,12 +219,12 @@
 % \input{AneA/anexoA}
 
 % Glossario
-%\itaglossary
-%\printglossary
+% \itaglossary
+\printglossary
 
 % Folha de Registro do Documento
 % Valores dos campos do formulario
-\FRDitadata{28 de novembro de 2015}
+\FRDitadata{00 de fevereiro de 2026}
 \FRDitadocnro{DCTA/ITA/DM-000} %(o número de registro você solicita a biblioteca)
 \FRDitaorgaointerno{Instituto Tecnológico de Aeronáutica -- ITA}
 %Exemplo no caso de pós-graduação: Instituto Tecnol{\'o}gico de Aeron{\'a}utica -- ITA

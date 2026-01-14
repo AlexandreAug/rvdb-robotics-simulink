@@ -1,21 +1,21 @@
 \section{Técnica de controle aplicada}
 \label{sec:tecnica_pd}
 
-% Nesta seção, o termo \textit{técnica de controle} é empregado de forma abrangente, pois contempla tanto o planejamento de manobras orbitais em malha aberta, como a transferência orbital, quanto leis de controle em malha fechada por realimentação \cite{astrom1995pid}.
-% No contexto deste trabalho, o problema de \gls{rvdb} é decomposto em dois níveis principais:
-% (i) o nível orbital, em que se define uma estratégia de transferência entre órbitas circulares coplanares, e
-% (ii) o nível de atitude e de movimentação do \gls{mr}, em que se aplicam leis de controle por realimentação de estados.
+Nesta seção, o termo técnica de controle é empregado de forma abrangente, pois contempla tanto o planejamento de manobras orbitais em malha aberta, como a transferência orbital, quanto leis de controle em malha fechada por realimentação \cite{astrom1995pid}.
+No contexto deste trabalho, o problema de \gls{rvdb} é decomposto em dois níveis principais:
+(i) o nível orbital, em que se define uma estratégia de transferência entre órbitas circulares coplanares, e
+(ii) o nível de atitude e de movimentação do \gls{mr}, em que se aplicam leis de controle por realimentação de estados.
 
-% No nível orbital, a transferência de Hohmann foi utilizada como estratégia de manobra impulsiva entre órbitas circulares.
-% A transferência de Hohmann não é aqui interpretada como uma lei de controle por realimentação, mas como uma estratégia de controle em malha aberta: a partir de um estado orbital inicial conhecido, calculam-se dois impulsos ideais de velocidade, aplicados em instantes predefinidos, de modo a transferir o veículo para uma órbita alvo sob hipóteses keplerianas.
-% O resultado desse planejamento estabelece as condições iniciais para a fase de movimentação e aproximação relativa descrita pelas equações de \gls{hcw} e posteriormente, as etapas de controle em malha fechada.
+No nível orbital, a transferência de Hohmann foi utilizada como estratégia de manobra impulsiva entre órbitas circulares.
+A transferência de Hohmann não é aqui interpretada como uma lei de controle por realimentação, mas como uma estratégia de controle em malha aberta: a partir de um estado orbital inicial conhecido, calculam-se dois impulsos ideais de velocidade, aplicados em instantes predefinidos, de modo a transferir o veículo para uma órbita alvo sob hipóteses keplerianas.
+O resultado desse planejamento estabelece as condições iniciais para a fase de movimentação e aproximação relativa descrita pelas equações de \gls{hcw} e posteriormente, as etapas de controle em malha fechada.
 
-% Ao tratar da atitude e do \gls{mr}, empregam-se as leis de controle em malha fechada do tipo \gls{pd}, que são formuladas diretamente sobre as variáveis de estado de atitude da base física $\{B\}$ e articulares do \gls{mr}.
-% Os controladores \gls{pd} utilizam o erro entre os estados atuais e as referências desejadas, como a orientação da base física, velocidades angulares e as posições articulares, para produzir torques de controle que atuam na dinâmica acoplada base--\gls{mr}.
+Ao tratar da atitude e do \gls{mr}, empregam-se as leis de controle em malha fechada do tipo \gls{pd}, que são formuladas diretamente sobre as variáveis de estado de atitude da base física $\{B\}$ e articulares do \gls{mr}.
+Os controladores \gls{pd} utilizam o erro entre os estados atuais e as referências desejadas, como a orientação da base física, velocidades angulares e as posições articulares, para produzir torques de controle que atuam na dinâmica acoplada base--\gls{mr}.
 
-% Em síntese, a técnica de controle aplicada neste trabalho combina:
-% (i) estratégia de transferência orbital em malha aberta (Hohmann), que define a trajetória e os impulsos de mudança de órbita, e
-% (ii) controladores \gls{pd} em malha fechada, que são dedicados à estabilização da atitude da base, à compensação dos efeitos de reação devido ao movimento do \gls{mr} e ao rastreamento das referências articulares necessárias para o alinhamento e o acoplamento com a porta de acoplamento.
+Em síntese, a técnica de controle aplicada neste trabalho combina:
+(i) estratégia de transferência orbital em malha aberta (Hohmann), que define a trajetória e os impulsos de mudança de órbita, e
+(ii) controladores \gls{pd} em malha fechada, que são dedicados à estabilização da atitude da base, à compensação dos efeitos de reação devido ao movimento do \gls{mr} e ao rastreamento das referências articulares necessárias para o alinhamento e o acoplamento com a porta de acoplamento.
 
 \input{3 Formulacao matematica/6 Tecnicas de controle aplicada/1 Transferencia de Hohmann.tex}
 
@@ -26,5 +26,12 @@
 \input{3 Formulacao matematica/6 Tecnicas de controle aplicada/4 Limitacoes.tex}
 
 \input{3 Formulacao matematica/6 Tecnicas de controle aplicada/5 Justificativa.tex}
+
+\input{3 Formulacao matematica/6 Tecnicas de controle aplicada/6 Diagramas.tex}
+
+\input{3 Formulacao matematica/6 Tecnicas de controle aplicada/7 Hardware.tex}
+
+\input{3 Formulacao matematica/6 Tecnicas de controle aplicada/8 Acoplamento.tex}
+
 
 

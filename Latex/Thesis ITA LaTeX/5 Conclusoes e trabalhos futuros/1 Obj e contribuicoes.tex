@@ -1,16 +1,40 @@
 \subsection{Síntese dos objetivos e contribuições}
 \label{sec:cap5_sintese_obj_contrib}
 
-O objetivo geral desta pesquisa foi formular e simular computacionalmente a dinâmica de uma espaçonave robótica em órbita, bem como testar algoritmos de controle associados à operação de manipuladores robóticos em ambiente espacial, utilizando MATLAB e Simulink como plataforma principal de desenvolvimento. A partir desse objetivo amplo, o trabalho buscou articular, em um único cenário de missão, a interação entre dinâmica orbital, movimento relativo e atuação de um manipulador montado sobre uma base flutuante.
+O objetivo geral desta pesquisa foi formular e simular computacionalmente a dinâmica de uma espaçonave robótica em órbita, bem como testar algoritmos de controle associados à operação de manipuladores robóticos em ambiente espacial, utilizando as plataformas MATLAB e Simulink o desenvolvimento deste trabalho.
+Este trabalho buscou articular, em um único cenário de missão, a interação entre a dinâmica orbital, controle de atitude e a atuação de um manipulador montado acoplado em uma espaçonave.
 
-No que se refere ao primeiro objetivo específico, voltado ao estudo de ferramentas de programação em MATLAB e Simulink, a dissertação desenvolveu um conjunto estruturado de modelos numéricos: dinâmica orbital no referencial ECI, dinâmica relativa em \gls{lvlh}, e dinâmica acoplada base--manipulador descrita por equações de Lagrange. Esses modelos foram integrados em um ambiente de simulação modular, com exportação sistemática de sinais, geração de gráficos e criação de critérios numéricos de desempenho, o que caracteriza um uso aprofundado das ferramentas de modelagem, simulação e pós-processamento disponíveis nesses ambientes.
+%%%%%%%% 1o OBJ ESP
 
-Em relação ao segundo objetivo específico, que tratava do estudo do ambiente de atividades robóticas (incluindo aspectos de colisão, mobilidade e possíveis danos), o trabalho adotou um cenário simplificado de órbitas circulares coplanares e focou na análise de segurança em termos de janelas de posição e velocidade relativas, limites de atitude, energia cinética e momento angular. Embora não se tenha modelado explicitamente impactos, contato ou falhas estruturais, as restrições impostas às velocidades relativas e aos esforços de controle foram definidas à luz de requisitos de segurança típicos para operações de proximidade, o que permite discutir, em nível de simulação, condições mínimas para reduzir riscos de colisão e manobras abruptas.
+No que se refere ao primeiro objetivo específico, voltado ao estudo e à aplicação de MATLAB e Simulink, conclui-se que ele foi alcançado.
+Foram desenvolvidos e implementados modelos numéricos para a dinâmica orbital em ECI, a dinâmica relativa em \gls{lvlh}, a dinâmica de corpo rígido por meio das equações de Euler, e a dinâmica acoplada espaçonave--manipulador via equações de Lagrange, bem como para a cinemática direta e inversa e para o controle \gls{pd}.
+A implementação combinou códigos e funções em MATLAB com blocos no Simulink, e os sinais de simulação foram exportados ao MATLAB para organização dos resultados, geração de gráficos e avaliação de desempenho.
 
-O terceiro objetivo específico, associado ao estudo de procedimentos de otimização da mobilidade e à prevenção de falhas operacionais, foi abordado de forma indireta por meio da definição e avaliação de critérios de desempenho. Foram estabelecidas janelas admissíveis de posição e velocidade no referencial \gls{lvlh}, tolerâncias para erros de atitude, limites para energia cinética e momento angular residual, além de uma tolerância para o erro de posição da ferramenta em relação ao ponto desejado na porta de acoplamento. A comparação entre cenários com condições iniciais distintas (cenário A e cenário B) evidenciou a influência de escolhas orbitais iniciais sobre o tempo de missão e o consumo de $\Delta v$, o que se relaciona à ideia de mobilidade mais eficiente e de planejamento de missão menos suscetível a condições desfavoráveis.
+%%%%%%%% 2o OBJ ESP
+
+Em relação ao segundo objetivo específico, associado ao estudo do ambiente espacial com atividades robóticas, o trabalho adotou um cenário de órbitas circulares coplanares e concentrou a análise em posição e velocidade relativas, bem como no controle de atitude.
+Ressalta-se que não foi empregado nenhum simulador pronto de \gls{rvdb} nem módulos predefinidos, como o \emph{Aerospace Blockset}.
+
+As simulações foram implementadas em MATLAB/Simulink, utilizando blocos padrão (por exemplo, somadores e integradores) e rotinas próprias em \emph{MATLAB Function} para representar:
+(i) a inicialização orbital a partir de elementos orbitais e sua conversão para o referencial ECI;
+(ii) a dinâmica relativa via equações de Hill/Clohessy--Wiltshire;
+(iii) as conversões ECI--LVLH para obtenção de estados relativos;
+(iv) o controle PD de translação e de atitude; e
+(v) as dinâmicas de corpo rígido (Euler) e do sistema acoplado espaçonave--manipulador (Lagrange), além de cinemática direta/inversa e controle PD das juntas.
+
+A comutação do modelo dinâmico (Euler $\rightarrow$ Lagrange) foi realizada de forma condicional: quando o perseguidor permanece, por $60$~s, dentro de uma região de operação definida no referencial LVLH (limites de $\pm 0{,}70$~m no radial, $\pm 0{,}50$~m no \emph{along-track} e $\pm 0{,}10$~m no \emph{cross-track}), ativa-se o modo operacional do \gls{mr};
+caso contrário, mantém-se a dinâmica de corpo rígido.
+Embora não se tenham modelado impactos, contato ou falhas, as restrições impostas às velocidades relativas e aos esforços de controle foram definidas e respeitadas ao longo das fases de aproximação.
+
+%%%%%%%% 3o OBJ ESP
+
+Sobre o terceiro objetivo específico, associado ao estudo de procedimentos de otimização da mobilidade e à prevenção de falhas operacionais, foi abordado por meio da aplicação e verificação de restrições operacionais ao longo das simulações.
+As restrições foram implementadas na forma de janelas admissíveis para a posição e a velocidade relativas no referencial \gls{lvlh}, tolerâncias para erros de atitude, limites para energia cinética e para o momento angular residual, além de uma tolerância para o erro de posição da ferramenta em relação ao ponto desejado na porta de acoplamento.
+Neste trabalho, tais valores foram adotados como hipóteses de simulação para investigar a sensibilidade do desempenho e para assegurar que a aproximação e a fase final ocorressem dentro de limites numéricos previamente definidos; não se pretendeu, nesta etapa, estabelecer requisitos operacionais generalizáveis ou derivados de normas de projeto.
 
 Do ponto de vista das contribuições, o trabalho apresentou:
-(i) uma modelagem integrada que combina dinâmica orbital no referencial ECI, movimento relativo em \gls{lvlh} e dinâmica base--manipulador em base flutuante;
+(i) uma modelagem integrada que combina dinâmica orbital no referencial ECI, movimento relativo em \gls{lvlh} e dinâmica acoplada espaçonave--manipulador;
 (ii) uma arquitetura de controle em camadas, englobando transferência orbital, controle translacional no referencial \gls{lvlh}, controle de atitude e controle das juntas do manipulador;
-(iii) critérios numéricos explícitos para avaliar posição, velocidade, atitude, energia, momento angular e erro da ferramenta; e
-(iv) cenários de simulação que permitem analisar o impacto de diferentes condições iniciais sobre o tempo de missão e o custo propulsivo. Em conjunto, esses elementos atendem ao objetivo geral de estudar, em ambiente de simulação, a operação de manipuladores robóticos em órbita e fornecem uma base coerente para investigações futuras mais detalhadas sobre aproximação e ancoragem com perseguidor em base flutuante.
+(iii) critérios numéricos adotados nas simulações para limitar e verificar posição, velocidade, atitude e seus respectivos erros;
+e (iv) cenários de simulação (A e B) definidos e aplicados no Capítulo~\ref{sec:cap4_objetivo_criterios}, que permitem analisar o impacto de diferentes condições iniciais sobre o tempo de missão e o incremento de velocidade ($\Delta v$).
+Em conjunto, esses elementos atendem ao objetivo geral de estudar, em ambiente de simulação, a operação de manipuladores robóticos em órbita e fornecem uma base para investigações futuras mais detalhadas sobre aproximação e captura/acoplamento de uma espaçonave robótica.

@@ -1,44 +1,86 @@
-\subsection{Movimento das juntas e seguimento da referência de IK}
+\subsection{Movimento das juntas e seguimento da referência da cinemática inversa}
 \label{sec:cap4_app_final_juntas}
 
-O movimento das juntas do manipulador durante a aproximação final foi planejado de forma a posicionar a ferramenta em uma configuração adequada para o acoplamento, respeitando limites articulares e mantendo erros de seguimento reduzidos em relação à referência de cinemática inversa (IK). A Figura~\ref{fig:cap4_app_final_juntas} ilustra a evolução das posições, velocidades e torques nas três juntas ao longo do tempo.
+O movimento das juntas do manipulador durante a aproximação final foi planejado de forma a posicionar a ferramenta em uma configuração adequada para o acoplamento, respeitando limites articulares e mantendo erros de seguimento reduzidos em relação à referência de cinemática inversa.
+A Figura~\ref{fig:cap4_app_final_juntas} ilustra a evolução das posições, velocidades e torques nas três juntas ao longo do tempo.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/4 Posicao velocidade e torque juntas MR.png}
+\includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/4A Posicao velocidade e torque juntas MR.png}
 \caption{Posição, velocidade e torque nas juntas do manipulador durante a aproximação final.}
 \label{fig:cap4_app_final_juntas}
 \end{figure}
 
-A Tabela~\ref{tab:cap4_juntas_pos} resume as faixas de variação e os valores finais das posições articulares. Observa-se um giro de grande amplitude da junta 1, com reposicionamento para a configuração de aproximação, enquanto as juntas 2 e 3 descrevem o movimento de abertura e extensão do manipulador até a vizinhança da porta de acoplamento.
+%%%%%%%%%%%%% POSIÇÃO ARTICULAR
+
+A Tabela~\ref{tab:cap4_juntas_pos_rad} apresenta, para cada junta do manipulador robótico, os valores mínimo e máximo observados ao longo da simulação e o valor final ao término do intervalo analisado.
 
 \begin{table}[H]
 \centering
-\caption{Faixas e valores finais das posições articulares.}
-\label{tab:cap4_juntas_pos}
+\caption{Movimentação de cada junta do MR em radianos.}
+\label{tab:cap4_juntas_pos_rad}
 \begin{tabularx}{\linewidth}{|
   >{\centering\arraybackslash}X|
   >{\centering\arraybackslash}X|
   >{\centering\arraybackslash}X|}
 \hline
 \textbf{Junta} &
-\textbf{Faixa $q_i$ ao longo da simulação [rad]} &
-\textbf{Valor final $q_i$ [rad]} \\
+\textbf{Medição de $j_i$ ao longo da simulação [rad]} &
+\textbf{Medição final $j_i$ [rad]} \\
 \hhline{|=|=|=|}
-$q_1$ & $-1{,}5820 \text{ a } 0{,}0000$ & $-1{,}5820$ \\
+$j_1$ & $0{,}00 \text{ a } 1{,}62$ & $1{,}55$ \\
 \hline
-$q_2$ & $-0{,}2649 \text{ a } 1{,}1630$ & $-0{,}2649$ \\
+$j_2$ & $0{,}00 \text{ a } 1{,}23$ & $1{,}22$ \\
 \hline
-$q_3$ & $0{,}0000 \text{ a } 2{,}4860$ & $2{,}4860$ \\
+$j_3$ & $0{,}00 \text{ a } 0{,}73$ & $0{,}23$ \\
 \hline
 \end{tabularx}
 \end{table}
 
-As velocidades articulares mantêm-se em faixas moderadas durante todo o processo, com valores residuais pequenos no instante final, conforme apresentado na Tabela~\ref{tab:cap4_juntas_vel}.
+De forma complementar, a Tabela~\ref{tab:cap4_juntas_pos_deg} apresenta os mesmos resultados, porém em graus.
 
 \begin{table}[H]
 \centering
-\caption{Faixas e valores finais das velocidades articulares.}
+\caption{Movimentação de cada junta do MR em graus.}
+\label{tab:cap4_juntas_pos_deg}
+\begin{tabularx}{\linewidth}{|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Junta} &
+\textbf{Medição de $j_i$ ao longo da simulação [$^\circ$]} &
+\textbf{Medição final $j_i$ [$^\circ$]} \\
+\hhline{|=|=|=|}
+$j_1$ & $0{,}00 \text{ a } 92{,}65$ & $88{,}70$ \\
+\hline
+$j_2$ & $0{,}00 \text{ a } 70{,}60$ & $70{,}08$ \\
+\hline
+$j_3$ & $0{,}00 \text{ a } 41{,}69$ & $13{,}12$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+%%%%%%%%%%%%% VELOCIDADES ARTICULARES
+
+\subsubsection{Velocidades das juntas}
+
+As velocidades das juntas apresentadas na Figura~\ref{fig:cap4_app_final_velocjuntas}, permanecem de baixa magnitude ao longo de toda a fase operacional do \gls{mr}.
+Observa-se que os maiores módulos ocorrem nas juntas 1 e 3, com picos de aproximadamente $0{,}26~\mathrm{rad/s}$, enquanto a junta 2 apresenta variações inferiores a $0{,}12~\mathrm{rad/s}$.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/4B Velocidade das juntas.png}
+\caption{Posição, velocidade e torque nas juntas do manipulador durante a aproximação final.}
+\label{fig:cap4_app_final_velocjuntas}
+\end{figure}
+
+A Tabela~\ref{tab:cap4_juntas_vel} sintetiza os valores mínimo e máximo de $\dot{j}_i$ ao longo da simulação e o valor final em rad/s.
+
+\begin{table}[H]
+\centering
+\caption{Velocidades articulares em rad/s.}
 \label{tab:cap4_juntas_vel}
 \begin{tabularx}{\linewidth}{|
   >{\centering\arraybackslash}X|
@@ -46,23 +88,63 @@ As velocidades articulares mantêm-se em faixas moderadas durante todo o process
   >{\centering\arraybackslash}X|}
 \hline
 \textbf{Junta} &
-\textbf{Faixa $\dot{q}_i$ ao longo da simulação [rad/s]} &
-\textbf{Valor final $\dot{q}_i$ [rad/s]} \\
+\textbf{Variação de $\dot{j}_i$ ao longo da simulação [rad/s]} &
+\textbf{Valor final $\dot{j}_i$ [rad/s]} \\
 \hhline{|=|=|=|}
-$\dot{q}_1$ & $-0{,}1400 \text{ a } 0{,}0297$ & $0{,}0097$ \\
+$\dot{j}_1$ & $-0{,}26 \text{ a } 0{,}24$ & $-0{,}12$ \\
 \hline
-$\dot{q}_2$ & $-0{,}0731 \text{ a } 0{,}4100$ & $8{,}64\times 10^{-4}$ \\
+$\dot{j}_2$ & $-0{,}02 \text{ a } 0{,}12$ & $0{,}01$ \\
 \hline
-$\dot{q}_3$ & $-0{,}0298 \text{ a } 0{,}1486$ & $0{,}0302$ \\
+$\dot{j}_3$ & $-0{,}25 \text{ a } 0{,}14$ & $-0{,}19$ \\
 \hline
 \end{tabularx}
 \end{table}
 
-Os torques de controle nas juntas permanecem em níveis reduzidos, com esforço residual mais concentrado na junta 3, responsável pela extensão dominante da ferramenta, enquanto as juntas 1 e 2 encerram a aproximação com torques próximos de zero. A Tabela~\ref{tab:cap4_juntas_torque} apresenta as faixas de variação e os valores finais dos torques de controle.
+A Tabela~\ref{tab:cap4_juntas_vel_deg} apresenta os mesmos resultados em graus por segundo.
 
 \begin{table}[H]
 \centering
-\caption{Faixas e valores finais dos torques de controle nas juntas.}
+\caption{Velocidades articulares em graus por segundo.}
+\label{tab:cap4_juntas_vel_deg}
+\begin{tabularx}{\linewidth}{|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Junta} &
+\textbf{Variação de $\dot{j}_i$ ao longo da simulação [$^\circ$/s]} &
+\textbf{Valor final $\dot{j}_i$ [$^\circ$/s]} \\
+\hhline{|=|=|=|}
+$\dot{j}_1$ & $-14{,}86 \text{ a } 13{,}89$ & $-6{,}67$ \\
+\hline
+$\dot{j}_2$ & $-1{,}07 \text{ a } 6{,}88$ & $0{,}42$ \\
+\hline
+$\dot{j}_3$ & $-14{,}56 \text{ a } 7{,}89$ & $-10{,}91$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+%%%%%%%%%%%%% TORQUE DE CONTROLE NAS JUNTAS
+
+\subsubsection{Torque de controle nas juntas}
+
+Os torques de controle nas juntas, apresentados na Figura~\ref{fig:cap4_app_final_torquejuntas} permanecem entre $\pm 0{,}2~\mathrm{Nm}$ ao longo de toda a fase operacional do \gls{mr}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/4C Torque nas juntas.png}
+\caption{Posição, velocidade e torque nas juntas do manipulador durante a aproximação final.}
+\label{fig:cap4_app_final_torquejuntas}
+\end{figure}
+
+Observa-se que a junta 1 apresenta maior variação, enquanto as juntas 2 e 3 permanecem relativamente mais estáveis.
+Esse comportamento observado na junta 1 acontece pois ela produz correções de orientação do conjunto do manipulador com maior efetividade para reduzir o erro de alinhamento do eixo da ferramenta com a normal da porta; possuindo menor necessidade de alterar a configuração das próximas juntas.
+Portanto, o controle tende a concentrar em $j_1$ os ajustes finos de alinhamento, preservando $j_2$ e $j_3$ para compensações de menor amplitude associadas ao seguimento de posição e à manutenção da postura.
+A Tabela~\ref{tab:cap4_juntas_torque} apresenta as faixas de variação e os valores finais dos torques de controle.
+
+\begin{table}[H]
+\centering
+\caption{Medição dos torques de controle nas juntas.}
 \label{tab:cap4_juntas_torque}
 \begin{tabularx}{\linewidth}{|
   >{\centering\arraybackslash}X|
@@ -70,73 +152,76 @@ Os torques de controle nas juntas permanecem em níveis reduzidos, com esforço 
   >{\centering\arraybackslash}X|}
 \hline
 \textbf{Junta} &
-\textbf{Faixa de torque ao longo da simulação [N·m]} &
-\textbf{Valor final de torque [N·m]} \\
+\textbf{Variação do torque ao longo da simulação [Nm]} &
+\textbf{Medição final de torque [Nm]} \\
 \hhline{|=|=|=|}
-$\tau_1$ & $-0{,}9677 \text{ a } 0{,}3449$ & $-0{,}0200$ \\
+$\tau_1$ & $-0{,}20 \text{ a } 0{,}22$ & $0{,}09$ \\
 \hline
-$\tau_2$ & $-0{,}0058 \text{ a } 0{,}1843$ & $-4{,}40\times 10^{-4}$ \\
+$\tau_2$ & $-0{,}04 \text{ a } 0{,}15$ & $0{,}00$ \\
 \hline
-$\tau_3$ & $-0{,}3031 \text{ a } 0{,}3138$ & $-0{,}2981$ \\
+$\tau_3$ & $-0{,}09 \text{ a } 0{,}15$ & $0{,}04$ \\
 \hline
 \end{tabularx}
 \end{table}
 
-A qualidade do seguimento em relação às referências de IK é avaliada pelos erros de posição e de velocidade das juntas, ilustrados na Figura~\ref{fig:cap4_app_final_erro_juntas}.
+
+%%%%%%%%%%%%%%%%%% ERROS DE SEGUIMENTO
+
+\subsubsection{Erro de seguimento}
+
+A Figura~\ref{fig:cap4_app_final_erro_eef} apresenta o erro de seguimento em posição da ferramenta, definido como a diferença entre a posição de referência fornecida pela cinemática inversa (associada ao alinhamento e à aproximação da porta de acoplamento) e a posição efetivamente executada pelo efetuador final, ambas expressas no referencial ${0}$.
+O segundo subgráfico corresponde a uma ampliação da escala vertical, com o objetivo de evidenciar a magnitude do erro residual, em metros, entre a posição desejada e a posição realizada.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/5 Erro posicao e velocidade juntas.png}
-\caption{Erros de posição e de velocidade das juntas em relação às referências de cinemática inversa.}
-\label{fig:cap4_app_final_erro_juntas}
+\includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/9 Erro eef.png}
+\caption{Erro de posição da ferramenta em relação à referência, expresso no frame $\{0\}$.}
+\label{fig:cap4_app_final_erro_eef}
 \end{figure}
 
-A Tabela~\ref{tab:cap4_juntas_erro_pos} apresenta as faixas e os valores finais dos erros de posição, evidenciando que $q_2$ praticamente coincide com a referência de IK ao final da aproximação, enquanto $q_1$ e $q_3$ mantêm erros residuais da ordem de milésimos de radiano.
+A Tabela~\ref{tab:cap4_erro_pos_ferramenta} resume as faixas e os valores finais do erro de posição por componente.
+Ao final da aproximação, os erros residuais permanecem da ordem de centésimos de metro, indicando convergência da trajetória executada para a referência.
 
 \begin{table}[H]
 \centering
-\caption{Faixas e valores finais dos erros de posição das juntas.}
-\label{tab:cap4_juntas_erro_pos}
+\caption{Medição do erro de posição da ferramenta no frame $\{0\}$.}
+\label{tab:cap4_erro_pos_ferramenta}
 \begin{tabularx}{\linewidth}{|
   >{\centering\arraybackslash}X|
   >{\centering\arraybackslash}X|
   >{\centering\arraybackslash}X|}
 \hline
-\textbf{Junta} &
-\textbf{Faixa $e_{q_i}$ ao longo da simulação [rad]} &
-\textbf{Valor final $e_{q_i}$ [rad]} \\
+\textbf{Componente} &
+\textbf{Medição ao longo da simulação [m]} &
+\textbf{Medição final [m]} \\
 \hhline{|=|=|=|}
-$e_{q1}$ & $-0{,}0039 \text{ a } 0{,}0038$ & $-0{,}0039$ \\
+$e_{p,x}$ & $-0{,}25 \text{ a } 0{,}01$ & $0{,}01$ \\
 \hline
-$e_{q2}$ & $-0{,}0368 \text{ a } 7{,}03\times 10^{-4}$ & $-1{,}80\times 10^{-6}$ \\
+$e_{p,y}$ & $-0{,}85 \text{ a } 0{,}01$ & $0{,}00$ \\
 \hline
-$e_{q3}$ & $-0{,}0070 \text{ a } 0{,}0074$ & $0{,}0072$ \\
+$e_{p,z}$ & $-0{,}01 \text{ a } 0{,}98$ & $-0{,}01$ \\
 \hline
 \end{tabularx}
 \end{table}
 
-Os erros de velocidade também permanecem limitados, conforme a Tabela~\ref{tab:cap4_juntas_erro_vel}, com valores residuais pequenos no instante final, o que indica que a trajetória da ferramenta segue de perto a referência gerada pela cinemática inversa, sem oscilações excessivas.
+De forma complementar, a Tabela~\ref{tab:cap4_erro_pos_ferramenta_norma} apresenta a norma do erro de posição, permanecendo inferior a $0{,}02~\mathrm{m}$.
 
 \begin{table}[H]
 \centering
-\caption{Faixas e valores finais dos erros de velocidade das juntas.}
-\label{tab:cap4_juntas_erro_vel}
+\caption{Medição da norma do erro de posição da ferramenta.}
+\label{tab:cap4_erro_pos_ferramenta_norma}
 \begin{tabularx}{\linewidth}{|
   >{\centering\arraybackslash}X|
   >{\centering\arraybackslash}X|
   >{\centering\arraybackslash}X|}
 \hline
-\textbf{Junta} &
-\textbf{Faixa $e_{\dot{q}_i}$ ao longo da simulação [rad/s]} &
-\textbf{Valor final $e_{\dot{q}_i}$ [rad/s]} \\
+\textbf{Grandeza} &
+\textbf{Faixa ao longo da simulação [m]} &
+\textbf{Valor final [m]} \\
 \hhline{|=|=|=|}
-$e_{\dot{q}1}$ & $-0{,}0379 \text{ a } 0{,}1054$ & $0{,}0100$ \\
-\hline
-$e_{\dot{q}2}$ & $-0{,}3650 \text{ a } 0{,}0472$ & $8{,}81\times 10^{-4}$ \\
-\hline
-$e_{\dot{q}3}$ & $-0{,}0388 \text{ a } 0{,}0383$ & $0{,}0300$ \\
+$\|e_p\|$ & $0{,}00 \text{ a } 367{,}67$ & $0{,}02$ \\
 \hline
 \end{tabularx}
 \end{table}
 
-Por fim, a combinação dos resultados das Figuras~\ref{fig:cap4_app_final_juntas} e \ref{fig:cap4_app_final_erro_juntas} com as Tabelas~\ref{tab:cap4_juntas_pos}--\ref{tab:cap4_juntas_erro_vel} mostra que o manipulador acompanha de forma satisfatória a trajetória de referência de IK, com amplitudes de movimento compatíveis com o envelope geométrico da operação e com níveis de esforço e erro residual adequados para um acoplamento suave na fase de aproximação final.
+Por fim, conforme apresentado por Figuras e Tabelas, os resultados indicam que o manipulador robótico acompanha a referência de cinemática inversa com baixo erro residual.

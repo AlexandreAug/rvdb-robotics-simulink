@@ -4,13 +4,13 @@
 Esta seção apresenta os resultados da aproximação final, etapa em que a dinâmica relativa passa a envolver o acoplamento dinâmico entre o movimento translacional do perseguidor (descrito pelas equações \gls{hcw}), o alinhamento de atitude e a atuação do manipulador robótico.
 Nesta fase, o objetivo é conduzir o perseguidor a uma vizinhança próxima da porta de acoplamento, garantindo simultaneamente a convergência da posição relativa em \gls{lvlh}, o alinhamento da atitude do corpo principal com o alvo e a configuração adequada das juntas do manipulador para a captura.
 
-São analisados os sinais de atitude do perseguidor ao longo do tempo, destacando o processo de alinhamento iniciado ainda na aproximação de curta distância e refinado nesta etapa.
-Em seguida, investigam-se a dinâmica da base (velocidades e acelerações angulares), a transição entre os modelos dinâmicos utilizados (regime Euler para regime Lagrange com base flutuante) e o comportamento dos torques de controle aplicados pelo controlador de atitude.
+São analisados os sinais de atitude do perseguidor ao longo do tempo, destacando o processo de alinhamento de atitude, iniciado na etapa de aproximação de curta distância.
+Em seguida, investigam-se as velocidades e acelerações angulares do perseguidor e a transição entre os modelos dinâmicos utilizados (regime de corpo rígido para regime operacional) e o comportamento dos torques de controle aplicados pelo controlador de atitude.
 Por fim, discute-se o seguimento das referências de cinemática inversa pelo manipulador, por meio das trajetórias articulares, erros de rastreamento e torques de junta, verificando se a ferramenta se aproxima da porta de acoplamento com orientação e velocidade compatíveis com os requisitos da manobra.
 
 \input{4 Resultados e discussoes/4.1 Evolucao atitude.tex}
 \input{4 Resultados e discussoes/4.2 Dinamica base.tex}
 \input{4 Resultados e discussoes/4.3 Movimento juntas.tex}
-% \input{4 Resultados e discussoes/4.4 Energia cinetica.tex}
-\input{4 Resultados e discussoes/4.5 App alvo.tex}
+\input{4 Resultados e discussoes/4.5 Alinhamento.tex}
 \input{4 Resultados e discussoes/4.6 Sintese resultado.tex}
+

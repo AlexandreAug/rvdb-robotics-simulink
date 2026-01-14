@@ -180,9 +180,21 @@ C(\vec q\,,\dot{\vec q\,})\,\dot{\vec q\,}
 \label{eq:dinamica_geral_com_G}
 \end{equation}
 
-onde o segundo termo agrupa as contribuições centrífugas e de Coriolis,
-e a matriz $C(\vec q\,,\dot{\vec q\,})$ possui elementos dados por
-\eqref{eq:coeficientes_C_geradin}.
+\begin{equation}
+c_{kj}(\vec q\,,\dot{\vec q\,})
+=
+\sum_{l=1}^{n_g}
+\left(
+\frac{\partial m_{kj}(\vec q\,)}{\partial q_l}
+-
+\frac{1}{2}\frac{\partial m_{lj}(\vec q\,)}{\partial q_k}
+\right)\dot q_l,
+\qquad
+k,j = 1,\dots,n_g.
+\label{eq:coeficientes_C_geradin}
+\end{equation}
+
+onde o termo $C(\vec q\,,\dot{\vec q\,})\,\dot{\vec q\,}$ agrupa as contribuições centrífugas e de Coriolis.
 
 Conforme discutido na Seção~\ref{sec:dinAcoplada_energia_cinetica},
 no modelo adotado para o conjunto espaçonave--\gls{mr} em ambiente de
@@ -228,7 +240,7 @@ A organização das coordenadas generalizadas segue a definição
 
 onde $\vec\eta_B$ reúne os parâmetros de atitude da base e $\vec\theta$
 contém as coordenadas articulares do manipulador.
-De forma compatível, o vetor de forças generalizadas é divido como
+De forma compatível, o vetor de forças generalizadas é dividido como
 
 \begin{equation}
 \vec\tau

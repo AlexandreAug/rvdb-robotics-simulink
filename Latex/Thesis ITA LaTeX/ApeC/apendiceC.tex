@@ -1,0 +1,341 @@
+% =========================================================================
+% APÊNDICE C — Parâmetros de controle, limitadores e lógica de modos
+% =========================================================================
+
+% \section{Parâmetros de controle e limitadores operacionais}
+\label{ap:apendiceC_parametros_controle}
+
+Este apêndice consolida os parâmetros numéricos utilizados nas leis de controle e nos limitadores operacionais do perseguidor e do \gls{mr}.
+
+\subsection{Tempo de simulação e discretizações auxiliares}
+\label{apC:tempo_dt}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros de tempo e discretizações (simulação e blocos auxiliares).}
+\label{tab:apC_tempo_dt}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Tempo inicial $t_0$ [s] & 0,00\\
+\hline
+Duração total [min] & 15,00\\
+\hline
+Tempo final [s] & 900,00\\
+\hline
+Passo de integração $dt$ [s] & 0,01\\
+\hline
+Amostragem do bloco (dinâmica/limitadores) $dt_{\text{bloco}}$ [s] & 0,02\\
+\hline
+Amostragem da cinemática inversa $dt_{\text{ik}}$ [s] & 0,05\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Saturações e limites do modelo acoplado (dinâmica de Lagrange)}
+\label{apC:saturacoes_lagrange}
+
+\begin{table}[H]
+\centering
+\caption{Limites impostos à base e às juntas no modo acoplado.}
+\label{tab:apC_saturacoes_lagrange}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Limite} & \textbf{Valor}\\
+\hline
+Saturação de aceleração da base $\,\ddot{(\cdot)}_{\text{base,max}}$ & 2,00\\
+\hline
+Saturação de velocidade da base $\,\dot{(\cdot)}_{\text{base,max}}$ & 2,00\\
+\hline
+Saturação de aceleração das juntas $\,\ddot{q}_{\max}$ & 2,00\\
+\hline
+Saturação de velocidade das juntas $\,\dot{q}_{\max}$ & 2,00\\
+\hline
+Saturação de posição das juntas $\,q_{\max}$ [rad] & 6,28\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Controle PD de atitude da base (modo não acoplado: Euler)}
+\label{apC:pd_euler}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros do controle de atitude no modo não acoplado (dinâmica de Euler).}
+\label{tab:apC_pd_euler}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Ganho de torque escalar & 50,00\\
+\hline
+$\vec{PD}_{\tau,\text{Euler}}$ (3 eixos) & $[50,00;\,50,00;\,50,00]^T$\\
+\hline
+Ganho proporcional & 10,00\\
+\hline
+Ganho derivativo & 5,00\\
+\hline
+$\vec{K}_{p,\text{Euler}}$ (3 eixos) & $[10,00;\,10,00;\,10,00]^T$\\
+\hline
+$\vec{K}_{d,\text{Euler}}$ (3 eixos) & $[5,00;\,5,00;\,5,00]^T$\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Controle PD de atitude da base (modo acoplado: Lagrange)}
+\label{apC:pd_lagrange}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros do controle de atitude no modo acoplado (dinâmica de Lagrange).}
+\label{tab:apC_pd_lagrange}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Ganho de torque escalar & 50,00\\
+\hline
+$\vec{PD}_{\tau,\text{Lagrange}}$ (3 eixos) & $[50,00;\,50,00;\,50,00]^T$\\
+\hline
+Ganho proporcional & 30,00\\
+\hline
+Ganho derivativo & 15,00\\
+\hline
+$\vec{K}_{p,\text{Lagrange}}$ (3 eixos) & $[30,00;\,30,00;\,30,00]^T$\\
+\hline
+$\vec{K}_{d,\text{Lagrange}}$ (3 eixos) & $[15,00;\,15,00;\,15,00]^T$\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Controle do manipulador robótico}
+\label{apC:controle_mr}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros do controle articular do \gls{mr} (3R).}
+\label{tab:apC_controle_mr}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Ganho proporcional (articular) $\vec{K}_{p,\text{MR}}$ & $[3,00;\,3,00;\,3,00]^T$\\
+\hline
+Ganho derivativo (articular) $\vec{K}_{d,\text{MR}}$ & $[1,50;\,1,50;\,1,50]^T$\\
+\hline
+Saturação de torque articular $\vec{\tau}_{\max}$ & $[2,00;\,2,00;\,2,00]^T$\\
+\hline
+Termo de \textit{feedforward} $\,\vec{K}_{\text{FF}}$ & $[0,00;\,0,00;\,0,00]^T$\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros da cinemática inversa e do mapeamento geométrico do \gls{mr}.}
+\label{tab:apC_ik_mr}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Ganho de posição & 1,00\\
+\hline
+Ganho de alinhamento & 0,50\\
+\hline
+Limite de velocidade articular (IK) [rad/s] & 0,10\\
+\hline
+Damping (IK) & 2,00\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros do controle por \textit{twist} (quando habilitado).}
+\label{tab:apC_twist}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Ganho angular & 3,00\\
+\hline
+Ganho lateral & 2,00\\
+\hline
+Ganho axial & 2,00\\
+\hline
+$\epsilon$ lateral & 0,10\\
+\hline
+$\epsilon$ angular [graus] & 0,20\\
+\hline
+Saturação de velocidade de referência & 1,00\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Critério de ativação do modo operacional do \gls{mr}}
+\label{apC:ativacao_modo_op}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros da lógica de ativação do modo operacional do \gls{mr} na missão.}
+\label{tab:apC_modo_op}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Critério radial & 1,20\\
+\hline
+Tempo mínimo de permanência [s] & 15,00\\
+\hline
+\end{tabular}
+\end{table}
+
+% =========================================================================
+% APÊNDICE D — Lógica de modos e transições
+% =========================================================================
+
+\section{Lógica de modos e transições}
+\label{ap:apendiceD_modos_transicoes}
+
+Este apêndice resume os modos discretos da simulação e as condições de transição.
+
+\subsection{Resumo de modos (missão)}
+\label{apD:resumo_modos}
+
+\begin{table}[H]
+\centering
+\caption{Resumo dos modos principais da missão e subsistemas habilitados.}
+\label{tab:apD_modos_missao}
+\small
+\begin{tabular}{|p{0.10\linewidth}|p{0.30\linewidth}|p{0.50\linewidth}|}
+\hline
+\textbf{Modo} & \textbf{Descrição} & \textbf{Subsistemas habilitados}\\
+\hline
+0 & Aproximação (antes da inserção) &
+Dinâmica orbital/relativa ativa conforme etapa (ECI ou \gls{lvlh}); leis de controle translacionais e de atitude conforme o regime; \gls{mr} sem operação de inserção.\\
+\hline
+1 & Inserção &
+Dinâmica acoplada espaçonave--\gls{mr} (Lagrange); cinemática inversa do \gls{mr}; cinemática direta e Jacobianos; controle PD articular do \gls{mr}; controle de atitude com compensação de reação do \gls{mr}.\\
+\hline
+2 & Acoplado &
+Estado travado após sucesso: referência do efetuador mantida no ponto final de inserção; dinâmica e controladores mantidos conforme modo acoplado.\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Critérios de transição e sucesso no acoplamento}
+\label{apD:criterios_transicao_docking}
+
+\begin{table}[H]
+\centering
+\caption{Critérios numéricos de transição e de sucesso no acoplamento.}
+\label{tab:apD_criterios_docking}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+Tolerância posicional $\|\vec{e}_p\|$ [m] & 0,10\\
+\hline
+Tolerância angular $\theta$ [graus] & 10,00\\
+\hline
+Comprimento máximo de inserção $s_{\max}$ [m] & 0,05\\
+\hline
+Velocidade de inserção $\dot{s}$ [m/s] & 0,01\\
+\hline
+Limiar de ativação por distância [m] & 10,00\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Regras de transição entre estados do sequenciador de acoplamento.}
+\label{tab:apD_regras_transicao}
+\small
+\begin{tabular}{|p{0.18\linewidth}|p{0.74\linewidth}|}
+\hline
+\textbf{Transição} & \textbf{Condição lógica}\\
+\hline
+0 $\rightarrow$ 1 &
+$\|\vec{e}_p\| \leq 0{,}10$ \; e \; $\theta \leq 10{,}00$.\\
+\hline
+1 $\rightarrow$ 2 &
+$\|\vec{e}_p\| \leq 0{,}10$ \; e \; $s \geq 0{,}05$.\\
+\hline
+Reinicialização (retorno a 0) &
+Se a distância de operação excede 10,00 m, zera-se $s$ e retorna-se ao estado 0.\\
+\hline
+\end{tabular}
+\end{table}
+
+% =========================================================================
+% APÊNDICE E — Critério de acoplamento
+% =========================================================================
+
+\section{Critério de acoplamento e detecção de sucesso}
+\label{ap:apendiceE_acoplamento}
+
+O acoplamento é declarado quando as três condições abaixo são satisfeitas simultaneamente:
+
+\begin{itemize}
+    \item $\|\vec{e}_p\| \leq 0{,}10$ m;
+    \item $\theta \leq 10{,}00$ graus;
+    \item $s \geq 0{,}05$ m.
+\end{itemize}
+
+A variável escalar $s$ é integrada no tempo com velocidade constante $\dot{s}=0{,}01$ m/s durante o modo de inserção.
+Ao atingir $s_{\max}=0{,}05$ m, o estado passa a ser travado, mantendo a referência do efetuador no ponto final de inserção.
+
+% =========================================================================
+% APÊNDICE F — Condições iniciais e parâmetros orbitais
+% =========================================================================
+
+\section{Condições iniciais e parâmetros orbitais por cenário}
+\label{ap:apendiceF_orbita_cenarios}
+
+Este apêndice consolida as variáveis orbitais utilizadas para inicialização do movimento relativo no referencial \gls{lvlh}.
+
+\subsection{Parâmetros orbitais básicos (Hill frame)}
+\label{apF:param_orbitais}
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros orbitais utilizados no cálculo do referencial de Hill e de $\omega_{\text{orb}}$.}
+\label{tab:apF_param_orbitais}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Parâmetro} & \textbf{Valor}\\
+\hline
+$\mu_{\text{Terra}}$ [m$^3$/s$^2$] & (definido no modelo)\\
+\hline
+$R_{\text{Terra}}$ [m] & (definido no modelo)\\
+\hline
+Altitude do alvo [m] & (definida por cenário)\\
+\hline
+Altitude do perseguidor [m] & (definida por cenário)\\
+\hline
+Raio orbital do alvo $R_{\text{target}}$ [m] & $R_{\text{Terra}}+\text{alt}_{\text{target}}$\\
+\hline
+Velocidade angular orbital $\omega_{\text{orb}}$ [rad/s] & $\sqrt{\mu_{\text{Terra}}/R_{\text{target}}^3}$\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Condições iniciais do movimento relativo em LVLH}
+\label{apF:cond_iniciais_lvlh}
+
+\begin{table}[H]
+\centering
+\caption{Condições iniciais do estado relativo em \gls{lvlh}.}
+\label{tab:apF_cond_iniciais_lvlh}
+\begin{tabular}{|p{0.62\linewidth}|p{0.28\linewidth}|}
+\hline
+\textbf{Variável} & \textbf{Definição}\\
+\hline
+$\Delta \vec{R}_0$ [m] & (definida por cenário)\\
+\hline
+$\Delta \vec{V}_0$ [m/s] & $[0,00;\,0,00;\,0,00]^T$\\
+\hline
+\end{tabular}
+\end{table}
