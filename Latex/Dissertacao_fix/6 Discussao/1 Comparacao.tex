@@ -1,0 +1,23 @@
+\section{Comparação com a literatura}
+\label{sec_comparacao_literatura}
+
+A modelagem da dinâmica orbital relativa adotada nesta dissertação fundamenta-se nas equações de \gls{hcw}, amplamente utilizadas na literatura para descrever o movimento relativo entre espaçonaves em órbitas próximas.
+Essa formulação linear permite representar de maneira adequada o comportamento relativo durante operações de proximidade, particularmente quando a distância entre os veículos é pequena em comparação ao raio orbital.
+Assim, de forma consistente com os trabalhos apresentados por \cite{clohessy1960terminal} e com a interpretação discutida por \cite{fehse2003}, a modelagem adotada neste estudo mantém as mesmas hipóteses de linearização da dinâmica gravitacional.
+
+As estratégias de controle utilizadas diferem das abordagens mais elaboradas frequentemente discutidas na literatura. 
+Enquanto diversos estudos exploram técnicas de controle não linear, adaptativo ou robusto para lidar com incertezas e perturbações em operações de proximidade \cite{slotine1991applied}, nesta dissertação optou-se pela utilização de leis de controle do tipo proporcional--derivativa.
+Essa escolha foi aplicada de forma consistente aos diferentes subsistemas considerados no modelo: controle de atitude da espaçonave, controle das juntas do manipulador robótico e controle da dinâmica translacional relativa baseada nas equações de \gls{hcw}. Dessa forma, a abordagem adotada privilegia a simplicidade de implementação e a interpretação clara do comportamento dinâmico do sistema, mantendo coerência com a aplicação de controladores \gls{pd} em sistemas aproximadamente lineares descritos por essas equações, conforme discutido por \cite{qi2022variable}.
+Assim, diferentemente de trabalhos que concentram sua contribuição em leis de controle avançadas, o foco desta dissertação está na análise da interação dinâmica entre os subsistemas e na avaliação do desempenho obtido com uma estratégia de controle aplicada ao problema de proximidade orbital com manipuladores robóticos.
+
+No modelo desenvolvido, o manipulador robótico é considerado como parte integrante do sistema dinâmico formado pela espaçonave servidora e pelo alvo durante operações de proximidade.
+Trabalhos como o de \cite{papadopoulos1994free} investigam de forma geral a dinâmica de sistemas robóticos espaciais com base livre e o acoplamento entre manipulador e espaçonave.
+Nesta dissertação, essa base conceitual é utilizada para representar o manipulador no cenário específico de operações de proximidade e atracação.
+Além disso, estudos voltados à atracação de alvos não cooperativos, como o de \cite{nishida2011strategy}, enfatizam os desafios associados à transferência de momento e às incertezas nos parâmetros inerciais durante o contato.
+Em comparação, o manipulador é aqui modelado no contexto da interação dinâmica com o sistema orbital relativo, permitindo analisar sua atuação em conjunto com a dinâmica da espaçonave servidora.
+Dessa forma, diferentemente de trabalhos que se concentram no planejamento detalhado da atracação ou em estratégias específicas de controle do manipulador, o enfoque está na integração do manipulador robótico ao modelo dinâmico do sistema utilizado para estudar operações de serviço em órbita, conforme discutido em revisões como a de \cite{flores2014review}.
+
+Por fim, a dinâmica acoplada é considerada no contexto da interação entre a dinâmica orbital relativa, a atitude da espaçonave servidora e o movimento do manipulador robótico.
+Estudos experimentais anteriores, como os conduzidos com o satélite ETS-VI \cite{adachi1999}, tiveram como objetivo validar modelos dinâmicos de atitude por meio de dados obtidos em órbita, enquanto missões como o ETS-VII \cite{yoshida2003} permitiram investigar diretamente os efeitos de reação gerados por manipuladores robóticos instalados em plataformas com base livre.
+Em comparação, esta dissertação não se concentra na validação experimental em voo, mas na modelagem e análise do comportamento dinâmico resultante da interação entre os diferentes subsistemas envolvidos.
+Além disso, enquanto alguns trabalhos abordam o acoplamento entre posição relativa e atitude no contexto de operações de aproximação e acoplamento, como no controle integrado proposto por Wei et al.~\cite{wei2011}, o enfoque deste estudo está na análise do acoplamento dinâmico do sistema completo — incluindo dinâmica orbital relativa, atitude da espaçonave e movimento do manipulador — dentro de um modelo unificado utilizado para avaliar operações de proximidade e atracação em serviço em órbita.

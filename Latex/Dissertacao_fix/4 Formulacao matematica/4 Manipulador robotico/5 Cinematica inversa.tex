@@ -1,0 +1,154 @@
+\section{Cinemática Inversa}
+\label{sec_cinematica_inversa}
+
+Dados a pose desejada do efetuador (posição e orientação), o problema de cinemática inversa consiste em determinar todos os possíveis conjuntos de ângulos de junta que compõem a pose.
+Na cinemática de manipuladores, essa determinação da pose do efetuador é um problema fundamental.
+O problema é não linear, pois envolve equações trigonométricas resultantes da composição de transformações homogêneas \cite{craig2005,spong2006robot}.
+Além disso, manipuladores revolutos podem admitir múltiplas soluções articulares para uma mesma pose, exigindo que a escolha final respeite continuidade da trajetória e limites mecânicos \cite{craig2005}.
+
+\subsection{Erro operacional}
+
+A formulação diferencial da cinemática inversa baseia-se na definição do erro no espaço operacional.
+Seja ${}^{0}\!\vec{x}_{des}$ a posição desejada do \gls{eef} e ${}^{0}\!\vec{x}$ a posição atual obtida pela cinemática direta, ambas expressas no referencial $\{0\}$.
+Define-se o erro cartesiano como \cite{sciavicco_siciliano2010}:
+
+\begin{equation}
+\label{eq_erro_operacional}
+\vec{e}
+=
+{}^{0}\!\vec{x}_{des}
+-
+{}^{0}\!\vec{x}.
+\end{equation}
+
+Esse erro representa a diferença instantânea entre a posição desejada e a posição atual do efetuador e constitui a variável regulada pelo algoritmo de cinemática inversa diferencial.
+
+
+\subsection{Erro de orientação}
+
+Além da posição, é necessário considerar o alinhamento do efetuador com uma direção desejada no espaço, particularmente na fase de aproximação para acoplamento.
+Seja ${}^{0}\!\hat{z}_{E}$ o versor associado ao eixo $\hat{z}$ do efetuador $\{E\}$, expresso no referencial $\{0\}$, e seja ${}^{0}\!\hat{d}$ um versor que representa a direção desejada, também expresso em $\{0\}$.
+Define-se o erro de orientação como:
+
+\begin{equation}
+\label{eq_erro_orientacao}
+\vec{e}_{\omega}
+=
+{}^{0}\!\hat{z}_{E}
+\times
+{}^{0}\!\hat{d}.
+\end{equation}
+
+De modo que $\vec{e}_{\omega}=\vec{0}$ indica alinhamento entre o eixo do efetuador e a direção desejada.
+Esse erro vetorial é utilizado na construção da componente angular da velocidade operacional desejada.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Velocidade cartesiana desejada}
+
+Seguindo a formulação de controle cinemático apresentada em \cite{sciavicco_siciliano2010}, utiliza-se uma lei proporcional no espaço operacional, separando as componentes linear e de velocidade angular:
+
+\begin{equation}
+\vec{v}_{des}
+=
+\dot{\vec{x}}_{des}
++
+K_{p}\,\vec{e},
+\label{eq_vd_desejada}
+\end{equation}
+
+\begin{equation}
+\vec{\omega}_{des}
+=
+K_{\omega}\,\vec{e}_{\omega}.
+\label{eq_omegad_desejada}
+\end{equation}
+
+Em que $\dot{\vec{x}}_{des}$ é a velocidade cartesiana de referência.
+Os ganhos $K_{p}>0$ e $K_{\omega}>0$ são escalares e ponderam, respectivamente, os termos proporcionais associados aos erros de posição e de orientação.
+A velocidade operacional desejada é reunida no vetor:
+
+\begin{equation}
+\label{eq_velocidade_operacional_desejada}
+\vec{y}_{des}
+=
+\begin{bmatrix}
+\vec{v}_{des} \\
+\vec{\omega}_{des}
+\end{bmatrix}.
+\end{equation}
+
+O qual combina o objetivo de posicionamento com o objetivo de alinhamento do efetuador.
+Essa velocidade operacional desejada é então mapeada para o espaço das juntas por meio da Jacobiana do manipulador, resultando nas velocidades articulares desejadas utilizadas na cinemática inversa diferencial.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Lei de cinemática diferencial inversa}
+
+A relação entre a velocidade operacional desejada e as velocidades articulares é obtida por meio da pseudo-inversa amortecida da Jacobiana geométrica do manipulador.
+Seja $\vec{\xi}$ o vetor de coordenadas articulares e $\dot{\vec{\xi}}$ o vetor de velocidades articulares.
+A Jacobiana geométrica $\mathbf{J}_{g}(\vec{\xi})$ relaciona $\dot{\vec{\xi}}$ à velocidade operacional do efetuador, sendo:
+
+\begin{equation}
+\mathbf{J}_{g}(\vec{\xi})
+=
+\begin{bmatrix}
+\mathbf{J}_{v}(\vec{\xi}) \\
+\mathbf{J}_{\omega}(\vec{\xi})
+\end{bmatrix}.
+\label{eq_jacobiana_particionada}
+\end{equation}
+
+A lei de cinemática inversa diferencial é escrita como
+
+\begin{equation}
+\dot{\vec{\xi}}
+=
+\mathbf{J}_{\lambda}^{\dagger}(\vec{\xi})\,\vec{y}_{des}.
+\label{eq_ik_diferencial}
+\end{equation}
+
+Em que $\vec{y}_{des}$ é a velocidade operacional desejada definida em \eqref{eq_velocidade_operacional_desejada} e
+$\mathbf{J}_{\lambda}^{\dagger}(\vec{\xi})$ denota a pseudo-inversa amortecida, com parâmetro de amortecimento $\lambda>0$, definida em \eqref{eq_pseudoinversa_amortecida2}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Pseudo-inversa amortecida}
+
+A pseudo-inversa amortecida empregada na lei de cinemática diferencial inversa \eqref{eq_ik_diferencial} é definida segundo \cite{sciavicco_siciliano2010}, como:
+
+\begin{equation}
+\label{eq_pseudoinversa_amortecida2}
+\mathbf{J}_{\lambda}^{\dagger}
+=
+\mathbf{J}^{T}
+\bigl(
+\mathbf{J}\,\mathbf{J}^{T}
++
+\lambda^{2}\mathbf{I}_{m}
+\bigr)^{-1}.
+\end{equation}
+
+O termo $\lambda>0$ é o fator de amortecimento empregado para regularizar a inversão de $\mathbf{J}\mathbf{J}^{T}$, $\mathbf{I}_{m}$ é a matriz identidade de ordem $m$ (número de coordenadas da tarefa) e $\mathbf{J}$ representa a Jacobiana da tarefa considerada (nesta seção, $\mathbf{J}=\mathbf{J}_{g}(\vec{\xi})$).
+Essa pseudo-inversa amortecida melhora a robustez numérica e o comportamento na vizinhança de singularidades.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Integração da lei diferencial}
+
+Uma vez determinada a velocidade articular instantânea $\dot{\vec{\xi}}(t)$ pela lei de cinemática diferencial inversa, a trajetória no espaço de juntas é obtida por integração explícita no tempo.
+Utilizando o método de Euler explícito com passo $\Delta t$, tem-se:
+
+\begin{equation}
+\label{eq_integracao_explicita_xi}
+\vec{\xi}(t + \Delta t)
+=
+\vec{\xi}(t)
++
+\dot{\vec{\xi}}(t)\,\Delta t.
+\end{equation}
+
+Essa atualização é aplicada iterativamente, de modo que, a cada passo de integração, o erro operacional é recalculado e a lei diferencial de cinemática inversa é novamente avaliada, conforme proposto em \cite{sciavicco_siciliano2010}.

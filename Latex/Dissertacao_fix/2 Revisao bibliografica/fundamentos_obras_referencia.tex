@@ -1,0 +1,26 @@
+\section{Fundamentos e obras de referência}
+\label{sec_fundamentos_obras_referencia}
+
+Nesta seção são apresentadas as principais obras de referência que fundamentam os conceitos, as formulações matemáticas e os procedimentos de modelagem utilizados ao longo desta dissertação.
+
+No contexto das operações de proximidade orbital, a formulação clássica da dinâmica relativa é estabelecida por \cite{clohessy1960terminal}. 
+Neste trabalho seminal, os autores desenvolveram as equações lineares do movimento relativo entre duas espaçonaves, conhecidas como equações de \gls{hcw}. 
+A importância dessa formulação na literatura é amplamente reconhecida, pois ela fornece a base matemática essencial para análises preliminares, projetos de guiamento terminal e desenvolvimento de leis de controle em operações de aproximação.
+Entretanto, a aplicação do modelo possui limitações estritas: a formulação assume que a órbita do alvo é perfeitamente circular, ou com excentricidade desprezível, e restringe-se a distâncias relativas curtas, nas quais a aproximação linear do campo gravitacional se mantém válida.
+Mesmo com essas restrições, o modelo consolidou o tratamento matemático da dinâmica de \gls{rvdb} e serve de ponto de partida para todas as formulações com maior nível de detalhamento.
+
+No que se refere à dinâmica e ao controle de atitude de espaçonaves, \cite{wie2008space}, \cite{hughes1986spacecraft} e \cite{wertz1978spacecraft} apresentam os fundamentos da dinâmica rotacional de corpos rígidos, as diferentes formas de representação da atitude e os principais conceitos empregados na modelagem e no controle de espaçonaves.
+De forma particular, \cite{wie2008space} apresenta a formulação da dinâmica de atitude em ambiente orbital, incluindo a relação entre os referenciais inercial, orbital e fixo ao corpo. Além disso, essas referências também discutem os principais torques atuantes no sistema, a formulação das equações de Euler e os efeitos associados ao movimento orbital do referencial local.
+
+As diferentes representações da atitude, tais como ângulos de Euler, cossenos diretores, quatérnios e parametrizações equivalentes, são discutidas por \cite{wertz1978spacecraft}, \cite{hughes1986spacecraft}, \cite{wie2008space} e \cite{junkins1986optimal}. Essas obras apresentam as vantagens e limitações de cada parametrização, bem como sua aplicação na formulação cinemática e dinâmica de problemas de atitude. Essas referências estabelecem o formalismo matemático empregado na descrição da orientação da espaçonave perseguidora ao longo deste trabalho.
+
+No campo da robótica, \cite{craig2005} e \cite{sciavicco_siciliano2010} apresentam os fundamentos da modelagem cinemática e dinâmica de manipuladores robóticos, incluindo a descrição de elos e juntas, o uso de parâmetros geométricos, a obtenção de transformações homogêneas e a formulação das equações do movimento por diferentes abordagens.
+
+As formulações voltadas especificamente à robótica espacial têm como marcos os trabalhos de \cite{umetani1989resolved}, \cite{papadopoulos1991nature} e \cite{dubowsky1993kinematics}. 
+Diferentemente dos manipuladores fixos em solo, esses autores demonstram que os movimentos das juntas produzem reações sobre a base espacial, afetando a atitude e o movimento translacional. 
+\cite{umetani1989resolved} introduziram a matriz Jacobiana generalizada para o controle cinemático em regime \textit{free-floating}, permitindo relacionar as velocidades articulares ao movimento do efetuador terminal mesmo quando a espaçonave reage dinamicamente. 
+\cite{papadopoulos1991nature} aprofundaram a natureza dos algoritmos de controle para esses sistemas, mostrando que a ausência de base fixa introduz restrições singulares na formulação das leis de controle. 
+Por fim, \cite{dubowsky1993kinematics} apresentaram a sistematização definitiva da modelagem cinemática e dinâmica, estabelecendo as diferenças conceituais entre sistemas \textit{free-flying} e \textit{free-floating}. 
+Esses trabalhos consolidam a base conceitual necessária para a compreensão do acoplamento dinâmico entre a espaçonave e o manipulador robótico.
+
+De modo geral, as obras de referência aqui apresentadas fornecem os fundamentos conceituais e matemáticos necessários para a análise da literatura especializada discutida nas seções seguintes. A partir dessas referências, torna-se possível examinar com maior clareza os trabalhos publicados sobre \gls{rvdb}, percepção relativa do alvo, modelagem acoplada de sistemas espaçonave--manipulador e estratégias de controle e autonomia aplicadas a operações orbitais de proximidade.

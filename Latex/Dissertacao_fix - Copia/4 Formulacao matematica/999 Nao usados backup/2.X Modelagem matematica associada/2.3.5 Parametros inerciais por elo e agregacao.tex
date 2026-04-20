@@ -1,0 +1,185 @@
+% \section{Parâmetros Inerciais e Agregação Dinâmic}
+% Após a modelagem geométrica do manipulador robótico em 3D utilizando a ferramenta CAD (\emph{Computer-Aided Design}) Autodesk Fusion 360, obtiveram-se os parâmetros inerciais individuais de cada elo, junta e base, bem como os parâmetros do manipulador completo.
+% Esses dados compreendem as massas, a posição do centro de massa local e o tensor de inércia em relação ao respectivo centro de massa e \emph{frame} local. Todos os valores detalhados encontram-se no Apêndice \eqref{ap:ApendiceA}.
+
+% \subsection{Parâmetros inerciais por elo}
+% Como o centro de massa é fornecido no sistema de referência local do elo, é necessário convertê-lo para o sistema de referência da base $\{0\}$.
+% Sejam ${}^{0}\!\mathbf R_i(q)\in\mathbb{R}^{3\times 3}$ a rotação do frame do corpo $i$ em relação à base e ${}^{0}\!\vec p_i(q)$ a posição de sua origem. O centro de massa do corpo $i$ expresso na base é
+% \begin{equation}
+% {}^{0}\!\vec r_{C_i}(q)= {}^{0}\!\vec p_i(q)+{}^{0}\!\mathbf R_i(q)\,{}^{i}\!\vec r_{C_i}.
+% \label{eq:rci_base}
+% \end{equation}
+
+% \subsection{Transformação para o frame da base}
+% De forma análoga, o tensor de inércia ${}^{(elo)}\mathbf{I}_{i}$, o tensor de inércia do corpo ${}^{(elo)}\mathbf{I}_{i}$, quando expresso no seu centro de massa, e alinhado aos eixos principais locais, é rotacionado para os eixos da base por:
+% \begin{equation}
+% {}^{0}\!\mathbf I_{C_i}(q)= {}^{0}\!\mathbf R_i(q)\,{}^{(i)}\!\mathbf I_{C_i}\,{}^{0}\!\mathbf R_i^{\top}(q).
+% \label{eq:I_rot_base}
+% \end{equation}
+
+% \subsection{Aplicação do Teorema de Steiner}
+% Mesmo após a rotação, o tensor de inércia ainda está referido ao centro de massa do elo, para que esteja em referência a inércia do corpo $i$ a um ponto $p$ expresso na base, utiliza-se o Teorema de Steiner \eqref{eq:steiner_matriz} para referi-lo à origem da base $O$:
+% \begin{equation}
+% {}^{0}\!\mathbf I_{P_i}(q)
+% = {}^{0}\!\mathbf I_{C_i}(q)+ m_i\big(\,\|{}^{0}\!\vec d_{Pi}(q)\|^2\mathbf I_3-{}^{0}\!\vec d_{Pi}(q)\,{}^{0}\!\vec d_{Pi}^{\,T}(q)\big),
+% \label{eq:steiner_matriz}
+% \end{equation}
+
+% Onde ${}^{0}\mathbf{I}_{O_i}$ é o tensor de inércia do elo $i$ em relação à origem da base;
+% ${}^{0}\mathbf{I}_{C_i}$ é o tensor no centro de massa já rotacionado para a base;
+% $m_i$ é a massa do elo $i$;
+% $\vec r_i$ é a posição do seu centro de massa em relação à base;
+% $\mathbf{I}_3$ é a matriz identidade $3\times 3$ e por fim,
+% ${}^{0}\!\vec d_{Pi}(q)= {}^{0}\!\vec r_{C_i}(q)-{}^{0}\!\vec r_{P}$.
+% %% ===== EXPLICAÇÃO =====
+% % A matriz identidade serve para construir um tensor de inercia equivalente que leve em conta a mudança de referencia (do CoM para outro ponto)
+% % I_3 aparece pq estamos tratando grandezas vetoriais 3D
+% % é a forma matricial de generalizar a formula escalar I = sum mr^2 para o caso tensorial
+% % sem ela, não teriamos a componente isotropica
+
+
+% \subsection{Agregação dos parâmetros}
+% A seguir todos os parâmetros já calculados serão agregados, iniciando pela massa.
+% A massa total do conjunto (base + manipulador robótico) é dado por:
+% \begin{equation}
+%   M_{\text{total}} = \sum_{j} m_j
+% \end{equation}
+
+% O centro de massa global, expresso na base, é:
+% \begin{equation}
+%   \vec{r}_{\text{Global}} = \frac{1}{M_{\text{total}}} \sum_{j} m_j \,\vec{r}_j .
+% \end{equation}
+
+% Para encontrar a inércia total do sistema referida à origem da base:
+% \begin{equation}
+% {}^{0}\!\mathbf I_{O}(q)=\sum_{i} {}^{0}\!\mathbf I_{O_i}(q)
+% =\sum_{i}\Big[\,{}^{0}\!\mathbf I_{C_i}(q)+ m_i\big(\|{}^{0}\!\vec r_{C_i}(q)\|^2\mathbf I_3-{}^{0}\!\vec r_{C_i}(q)\,{}^{0}\!\vec r_{C_i}^{\,T}(q)\big)\Big].
+% \label{eq:I_total_O}
+% \end{equation}
+
+% A inércia equivalente no centro de massa global é:
+% \begin{equation}
+% {}^{0}\!\mathbf I_{G}(q)
+% = {}^{0}\!\mathbf I_{O}(q)
+% - M_{\mathrm{tot}}\big(\|{}^{0}\!\vec r_{G}(q)\|^2\mathbf I_3-{}^{0}\!\vec r_{G}(q)\,{}^{0}\!\vec r_{G}^{\,T}(q)\big).
+% \label{eq:I_total_G}
+% \end{equation}
+
+% \subsection{Observações e verificação numérica}
+% Como ${}^{0}\!\mathbf R_i(q)$ e ${}^{0}\!\vec p_i(q)$ dependem de $q(t)$, as matrizes \({}^{0}\!\mathbf I_{O}(q)\) e \({}^{0}\!\mathbf I_{G}(q)\) variam ao passar do tempo.
+% Pode-se utilizar a propriedade a seguir para evitar assimetrias numéricas por arredondamento:
+% \begin{equation}
+% \mathbf I \;\leftarrow\; \tfrac{1}{2}\big(\mathbf I+\mathbf I^{T}\big).
+% \label{eq:symmetrize}
+% \end{equation}
+
+% As grandezas agregadas
+% \({}^{0}\!\mathbf I_{O}(q)\),
+% \({}^{0}\!\mathbf I_{G}(q)\) e
+% \({}^{0}\!\vec r_{G}(q)\)
+% alimentam diretamente a expressão de \(T(q,\dot q)\)
+% e a construção de \(\mathbf M(q)\) na seção \eqref{sec:energia_cinetica};
+% a formulação Lagrangiana e a forma \(\mathbf M(q)\ddot q+\mathbf C(q,\dot q)\dot q+\mathbf g(q)=\boldsymbol\tau\) estão na seção \eqref{sec:equacao_euler_lagrange}. 
+
+% \subsection{Parâmetros físicos do manipulador robótico}
+% A seguir são apresentados os parâmetros físicos do manipulador robótico, incluindo massas, dimensões e matrizes de inércia. 
+% Os valores encontram-se no Sistema Internacional (SI), com intuito de manter a consistência com a modelagem matemática desenvolvida. 
+% Para maior detalhamento, as mesmas tabelas também estão disponíveis em outras unidades (g e cm) no Apêndice
+% \eqref{ap:ApendiceA},
+% onde é possível verificar todas as casas decimais e observar que os produtos de inércia, embora muito pequenos, não são nulos.
+
+% \subsubsection{Massas e dimensões}
+% As massas e dimensões físicas de cada componente do manipulador robótico foram medidas a partir do modelo tridimensional no \emph{Autodesk Fusion 360} e convertidas para o Sistema Internacional. 
+% Esses parâmetros foram utilizados para a formulação da modelagem geométrica e para a determinação das matrizes de inércia, sendo posteriormente utilizados nas simulações computacionais. 
+% A Tabela \eqref{tab:dimensoes_massas_m_kg} apresenta o comprimento, o raio, o diâmetro e a massa de cada componente, bem como o valor total da massa do manipulador robótico.
+
+% \begin{table}[H]
+% \centering
+% \caption{Dimensões e massas dos componentes do manipulador (Sistema Internacional).}
+% \label{tab:dimensoes_massas_m_kg}
+% \begin{tabular}{l rrrr}
+% \hline
+% \textbf{Componente} & \textbf{Comprimento [m]} & \textbf{Raio [m]} & \textbf{Diâmetro [m]} & \textbf{Massa [kg]} \\
+% \hline
+% Base Geral   & 0{,}100 & 0{,}250  & 0{,}500 & 3{,}6530  \\
+% Junta 1      & 0{,}005 & 0{,}0250 & 0{,}050 & 0{,}0265 \\
+% Junta 2      & 0{,}005 & 0{,}0250 & 0{,}050 & 0{,}0265 \\
+% Junta 3      & 0{,}005 & 0{,}0250 & 0{,}050 & 0{,}0265 \\
+% Junta 4      & 0{,}005 & 0{,}0250 & 0{,}050 & 0{,}0265 \\
+% Junta 5      & 0{,}005 & 0{,}0250 & 0{,}050 & 0{,}0265 \\
+% Elo 1        & 0{,}100 & 0{,}0250 & 0{,}050 & 0{,}1115 \\
+% Elo 2        & 0{,}300 & 0{,}0250 & 0{,}050 & 0{,}3129 \\
+% Elo 3        & 0{,}300 & 0{,}0250 & 0{,}050 & 0{,}3129 \\
+% Elo 4        & 0{,}300 & 0{,}0250 & 0{,}050 & 0{,}3129 \\
+% Ferramenta   & 0{,}150 & 0{,}0075 & 0{,}015 & 0{,}0403 \\
+% \hline
+% \textbf{Total} & -- & -- & -- & \textbf{4{,}876} \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+
+% \subsubsection{Momentos de inércia}
+% Os momentos principais de inércia de cada componente do manipulador foram obtidos através do software \emph{Fusion 360} e estão apresentados na Tabela \eqref{tab:inercias_diag_kgm2}. 
+% Os valores correspondem às componentes diagonais das matrizes de inércia ($I_{xx}$, $I_{yy}$ e $I_{zz}$), expressas em kg$\cdot$m$^{2}$. 
+% Apesar das magnitudes reduzidas, esses parâmetros são relevantes para a análise dinâmica, principalmente em sistemas espaciais onde pequenas variações podem impactar o desempenho do controle.
+
+% \begin{table}[H]
+% \centering
+% \caption{Momentos de inércia principais (valores diagonais) em kg$\cdot$m$^{2}$.}
+% \label{tab:inercias_diag_kgm2}
+% \begin{tabular}{l rrr}
+% \hline
+% \textbf{Componente} & $I_{xx}$ & $I_{yy}$ & $I_{zz}$ \\
+% \hline
+% Base Geral   & 0,07950   & 0,0795   & 0,144900 \\
+% Junta 1      & 4,20$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ & 8,28$\times$10$^{-6}$ \\
+% Junta 2      & 8,28$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ \\
+% Junta 3      & 8,28$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ \\
+% Junta 4      & 8,28$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ \\
+% Junta 5      & 4,20$\times$10$^{-6}$ & 8,28$\times$10$^{-6}$ & 4,20$\times$10$^{-6}$ \\
+% Elo 1        & 0,00137  & 0,00137  & 0,000597 \\
+% Elo 2        & 0,02580   & 0,00174  & 0,025800 \\
+% Elo 3        & 0,02580   & 0,00174  & 0,025800 \\
+% Elo 4        & 0,02580   & 0,00174  & 0,025800 \\
+% Ferramenta   & 7,82$\times$10$^{-5}$ & 1,62$\times$10$^{-6}$ & 7,82$\times$10$^{-5}$ \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+
+
+% \subsubsection{Produtos de inércia}
+% Além dos momentos principais, os produtos de inércia ($I_{xy}$, $I_{xz}$ e $I_{yz}$) também foram mantidos e encontram-se listados na Tabela
+% \eqref{tab:inercias_prod_kgm2}. 
+% Embora apresentem valores de ordem muito pequena, ao considerar mais casas decimais permite manter a consistência matemática dos modelos e evita simplificações que poderiam comprometer análises de precisão. 
+% Essa escolha reforça a adequação do modelo a cenários de microgravidade, nos quais a dinâmica é sensível a perturbações de baixa intensidade.
+
+
+
+% \begin{table}[H]
+% \centering
+% \caption{Produtos de inércia (valores fora da diagonal) em kg$\cdot$m$^{2}$.}
+% \label{tab:inercias_prod_kgm2}
+% \begin{tabular}{l rrr}
+% \hline
+% \textbf{Componente} & $I_{xy}$ & $I_{xz}$ & $I_{yz}$ \\
+% \hline
+% Base Geral   & 6,60$\times$10$^{-16}$ & 1,64$\times$10$^{-12}$ & -1,30$\times$10$^{-16}$ \\
+% Junta 1      & -2,25$\times$10$^{-16}$ & 0 & 0 \\
+% Junta 2      & -1,13$\times$10$^{-17}$ & 0 & 0 \\
+% Junta 3      & -1,42$\times$10$^{-16}$ & 1,83$\times$10$^{-16}$ & -1,25$\times$10$^{-15}$ \\
+% Junta 4      & 3,08$\times$10$^{-16}$ & -1,32$\times$10$^{-17}$ & -4,35$\times$10$^{-16}$ \\
+% Junta 5      & -3,95$\times$10$^{-16}$ & 5,37$\times$10$^{-16}$ & -1,63$\times$10$^{-17}$ \\
+% Elo 1        & 0 & -1,17$\times$10$^{-14}$ & 2,35$\times$10$^{-17}$ \\
+% Elo 2        & 2,14$\times$10$^{-15}$ & -1,08$\times$10$^{-15}$ & 2,39$\times$10$^{-14}$ \\
+% Elo 3        & 9,95$\times$10$^{-17}$ & -6,59$\times$10$^{-15}$ & 4,41$\times$10$^{-14}$ \\
+% Elo 4        & 6,33$\times$10$^{-14}$ & 4,29$\times$10$^{-15}$ & -1,15$\times$10$^{-15}$ \\
+% Ferramenta   & 5,43$\times$10$^{-15}$ & 4,39$\times$10$^{-16}$ & -5,66$\times$10$^{-16}$ \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+
+
+

@@ -1,0 +1,35 @@
+%==================================================
+% ----- Mapa de estado e saídas cinemáticas
+%==================================================
+\section{Mapa de estado e saídas cinemáticas}
+
+O estado integrado é
+$\vec x=\begin{bmatrix}\vec q\\ \dot{\vec q}\end{bmatrix}$,
+em que $\vec q=\begin{bmatrix} q_b \\ \vec q_m \end{bmatrix}
+$ empilha a atitude da base (quaternion $q_b$) e as coordenadas das juntas do manipulador, e
+$\dot{\vec q}=\begin{bmatrix} \boldsymbol\omega_b \\ \dot{\vec q}_m \end{bmatrix}$
+empilha as respectivas velocidades. 
+A consistência do quaternion ($q_b^{\top}q_b=1$)
+é a restrição holonômica apresentada anteriormente
+\fn{Ver \eqref{eq:PhiJ1} e \eqref{eq:PhiJ2}}.
+
+Para fins de apresentação e comparação, adotou-se: 
+\begin{equation}
+Y_1 \equiv \vec q,\qquad
+Y_3 \equiv \dot{\vec q},\qquad
+Y_2 \equiv h(\vec q),\qquad
+Y_4 \equiv J_h(\vec q)\,\dot{\vec q},
+\label{eq:mapa_estado}
+\end{equation}
+sendo que $h(\vec q)$ reúne as grandezas geométricas de interesse e uma parametrização mínima da orientação do efetuador ou o próprio
+${}^{B}\!q_E(\vec q)$,
+e $J_h(\vec q)=\partial h/\partial \vec q$
+é a jacobiana correspondente. 
+Assim, $Y_2$ e $Y_4$ são saídas algébricas calculadas a partir de $(Y_1,Y_3)$ via cinemática direta e jacobianas,
+conservando-se no integrador apenas $\vec x$. 
+Os vínculos e seus níveis diferencial e de aceleração permanecem impostos por
+\eqref{eq:vellevel} e \eqref{eq:acclevel},
+bem como pela estabilização de Baumgarte quando empregada
+\eqref{eq:acclevel_baumgarte}.
+
+

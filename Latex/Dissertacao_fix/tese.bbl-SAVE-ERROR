@@ -1,0 +1,449 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{arantes2010far}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=053cc5fbcf293b91a4e23771774ebf09}{%
+           family={Arantes\bibnamedelima Jr.},
+           familyi={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Gilberto},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d4331bceaebf8a257c04ca43425c5ab}{%
+           family={Rocco},
+           familyi={R\bibinitperiod},
+           given={Evandro\bibnamedelima Marconi},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=d1e8cc842f8e11255e2bb59b9a2b3ceb}{%
+           family={Theil},
+           familyi={T\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{69a3294bbb57759bdca3c1f9d7ea12d2}
+      \strng{fullhash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{fullhashraw}{0aa74a173c44f79eba129364332c36c5}
+      \strng{bibnamehash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{authorbibnamehash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{authornamehash}{69a3294bbb57759bdca3c1f9d7ea12d2}
+      \strng{authorfullhash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{authorfullhashraw}{0aa74a173c44f79eba129364332c36c5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{number}{9--10}
+      \field{title}{Far and Proximity Maneuvers of a Constellation of Service Satellites and Autonomous Pose Estimation of Customer Satellite Using Machine Vision}
+      \field{volume}{66}
+      \field{year}{2010}
+      \field{pages}{1493\bibrangedash 1505}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2009.11.022
+      \endverb
+    \endentry
+    \entry{capolupo2017heuristic}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0e8fb70b840aa3c5e35560afdc2921a3}{%
+           family={Capolupo},
+           familyi={C\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbe83c65696267bd4cf0215641d0fe43}{%
+           family={Simeon},
+           familyi={S\bibinitperiod},
+           given={Thierry},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ba8861f945388312d52794a0bb070ebd}{%
+           family={Berges},
+           familyi={B\bibinitperiod},
+           given={Jean-Claude},
+           giveni={J\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \strng{fullhash}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \strng{fullhashraw}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \strng{bibnamehash}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \strng{authorbibnamehash}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \strng{authornamehash}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \strng{authorfullhash}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \strng{authorfullhashraw}{3cd7d216e0a177c3aabed4f10c6a78b1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IFAC-PapersOnLine}
+      \field{number}{1}
+      \field{title}{Heuristic Guidance Techniques for the Exploration of Small Celestial Bodies}
+      \field{volume}{50}
+      \field{year}{2017}
+      \field{pages}{8279\bibrangedash 8284}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.ifacol.2017.08.1401
+      \endverb
+    \endentry
+    \entry{fiori2024modeling}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=bf94679d7fc8c3fdef9fca3d003d86d8}{%
+           family={Fiori},
+           familyi={F\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8016431ccdf22ca24124abe137219fb1}{%
+           family={Rachiglia},
+           familyi={R\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00883974e0f4ebd5eb8b166530f89110}{%
+           family={Sabatini},
+           familyi={S\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5ba473d565d6f9cc611a1f0c66e418a}{%
+           family={Sampaolesi},
+           familyi={S\bibinitperiod},
+           given={Edoardo},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5f9065c5487416f0b3ec5f4b4067b045}
+      \strng{fullhash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{fullhashraw}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{bibnamehash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{authorbibnamehash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{authornamehash}{5f9065c5487416f0b3ec5f4b4067b045}
+      \strng{authorfullhash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{authorfullhashraw}{72f13376289b3f5c98cdfc205ee32391}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aerospace}
+      \field{number}{3}
+      \field{title}{Modeling, Simulation and Control of a Spacecraft: Automated Rendezvous under Positional Constraints}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{245}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/aerospace11030245
+      \endverb
+    \endentry
+    \entry{fonseca2016dynamics}{unpublished}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=57b47ebee24c84bc4740a9714d9bd177}{%
+           family={Unfried},
+           familyi={U\bibinitperiod},
+           given={Luciano},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c8c83f8a0071a6bc3666c54bdcf40d4}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={Glaydson\bibnamedelimb Luiz\bibnamedelima Bertoze},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{fullhash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{fullhashraw}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{bibnamehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authorbibnamehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authornamehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authorfullhash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authorfullhashraw}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Technical paper / unpublished manuscript}
+      \field{title}{Dynamics Analysis of a Manipulator-Like Spacecraft in the Close Range Approach for Rendezvous and Docking/Berthing by Using the Lagrangian Formulation with the Lagrange's Multiplier Approach to Account for the Reaction Forces/Torque in the Manipulator Joints}
+      \field{year}{2016}
+    \endentry
+    \entry{fonseca2019kinematics}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ef43c023cd3656aa40e7328788c692a0}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima Milagre},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=45e3f864094d0c1589400280781bcb3e}{%
+           family={Pontuschka},
+           familyi={P\bibinitperiod},
+           given={Maurício\bibnamedelima Nacib},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c8c83f8a0071a6bc3666c54bdcf40d4}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={Glaydson\bibnamedelimb Luiz\bibnamedelima Bertoze},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IntechOpen}%
+      }
+      \strng{namehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{fullhash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{fullhashraw}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{bibnamehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authorbibnamehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authornamehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authorfullhash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authorfullhashraw}{62a3c876f314f23d77dcac00ebafeb73}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Kinematics}
+      \field{title}{Kinematics for Spacecraft-Type Robotic Manipulators}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.5772/intechopen.85636
+      \endverb
+    \endentry
+    \entry{technicalreportsoyuz}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=306537a89e3a35723d7fb1515187be51}{%
+           family={Morais},
+           familyi={M\bibinitperiod},
+           given={Giovane},
+           giveni={G\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=ef43c023cd3656aa40e7328788c692a0}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima Milagre},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto Tecnológico de Aeronáutica (ITA)}%
+      }
+      \strng{namehash}{db3d2e8524ca435984cb593fd62bc281}
+      \strng{fullhash}{db3d2e8524ca435984cb593fd62bc281}
+      \strng{fullhashraw}{db3d2e8524ca435984cb593fd62bc281}
+      \strng{bibnamehash}{db3d2e8524ca435984cb593fd62bc281}
+      \strng{authorbibnamehash}{db3d2e8524ca435984cb593fd62bc281}
+      \strng{authornamehash}{db3d2e8524ca435984cb593fd62bc281}
+      \strng{authorfullhash}{db3d2e8524ca435984cb593fd62bc281}
+      \strng{authorfullhashraw}{db3d2e8524ca435984cb593fd62bc281}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{number}{TR-2025-01}
+      \field{subtitle}{Technical Documentation for Space Mission Design}
+      \field{title}{Comprehensive Systems Analysis of the Soyuz Spacecraft: Launch Dynamics, Orbital Mechanics, and Rendezvous Operations}
+      \field{type}{Technical Report}
+      \field{year}{2025}
+    \endentry
+    \entry{santos2023physics}{unpublished}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=de2eb5e50934a2fd81693e9c3f4b7abb}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Rogerio\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0,
+           prefix={dos},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=dd5f1c4dc1204ff91c55350d4b0e50dd}{%
+           family={Rade},
+           familyi={R\bibinitperiod},
+           given={Domingos\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{fullhash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{fullhashraw}{c47b8720edb60b78288322ed52ac2428}
+      \strng{bibnamehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authorbibnamehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authornamehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authorfullhash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authorfullhashraw}{c47b8720edb60b78288322ed52ac2428}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished conference-style manuscript}
+      \field{title}{Physics Informed Machine Learning for Path Planning of Robots}
+      \field{year}{2023}
+    \endentry
+    \entry{santos2022uncertainty}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0b2049e82c5bc1cb3b0a6daf7d6a8010}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Rogerio\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=dd5f1c4dc1204ff91c55350d4b0e50dd}{%
+           family={Rade},
+           familyi={R\bibinitperiod},
+           given={Domingos\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{fullhash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{fullhashraw}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{bibnamehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authorbibnamehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authornamehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authorfullhash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authorfullhashraw}{90a58492d8cbbeca188fcbfada2aec6c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Uncertainty Modeling: Fundamental Concepts and Models}
+      \field{note}{In Jorge, Ariosto B. et al. (Eds.)}
+      \field{title}{Uncertainty Quantification in Inverse Kinematics Computation of Space Robots by Neural Networks}
+      \field{volume}{3}
+      \field{year}{2022}
+      \field{pages}{89\bibrangedash 118}
+      \range{pages}{30}
+    \endentry
+    \entry{santos2022machine}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0b2049e82c5bc1cb3b0a6daf7d6a8010}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Rogerio\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd5f1c4dc1204ff91c55350d4b0e50dd}{%
+           family={Rade},
+           familyi={R\bibinitperiod},
+           given={Domingos\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{fullhash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{fullhashraw}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{bibnamehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authorbibnamehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authornamehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authorfullhash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authorfullhashraw}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{A Machine Learning Strategy for Optimal Path Planning of Space Robotic Manipulator in On-Orbit Servicing}
+      \field{volume}{191}
+      \field{year}{2022}
+      \field{pages}{41\bibrangedash 54}
+      \range{pages}{14}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

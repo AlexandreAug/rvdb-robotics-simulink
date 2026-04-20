@@ -1,0 +1,16 @@
+\section{Lições aprendidas com a simulação e os resultados}
+
+A realização das simulações permitiu observar aspectos relevantes relacionados ao comportamento dinâmico do sistema durante uma missão de \gls{rvdb}.
+
+Um primeiro aspecto observado foi a importância da estabilização da posição e da velocidade relativas antes do início da fase de aproximação final. 
+A utilização das equações de \gls{hcw} combinadas com uma lei de controle \gls{pd} permitiu conduzir o perseguidor até a posição desejada com níveis reduzidos de erro e com comportamento dinâmico estável.
+Caso isso não seja atendido, o alinhamento da ferramenta seria prejudicado e impossibilitaria concluir a missão de \gls{rvdb}.
+
+Outro ponto foi a influência do movimento do \gls{mr} sobre a dinâmica de atitude da espaçonave. 
+Durante a movimentação das juntas do manipulador, torques de reação são gerados e transmitidos para a estrutura da espaçonave, alterando sua dinâmica de atitude. 
+A inclusão desse efeito no modelo de simulação permitiu avaliar a necessidade de compensação desses torques pelo sistema de controle de atitude.
+
+Além disso, verificou-se a importância de realizar a transição entre diferentes modelos dinâmicos ao longo da missão. 
+Nas fases iniciais, a dinâmica da espaçonave pode ser representada por um modelo de corpo rígido, enquanto na fase de operação do \gls{mr} torna-se necessário considerar a dinâmica acoplada entre a espaçonave e o manipulador.
+
+De forma geral, os resultados obtidos nas simulações demonstram que a integração entre dinâmica orbital, dinâmica de atitude e dinâmica do \gls{mr} é essencial para representar de forma mais realista o comportamento do sistema durante operações de \gls{rvdb}.

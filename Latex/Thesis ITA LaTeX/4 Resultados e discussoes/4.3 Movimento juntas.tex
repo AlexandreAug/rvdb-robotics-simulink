@@ -1,7 +1,7 @@
-\subsection{Movimento das juntas e seguimento da referência da cinemática inversa}
+\subsection{Movimento das juntas e apontamento da referência da cinemática inversa}
 \label{sec:cap4_app_final_juntas}
 
-O movimento das juntas do manipulador durante a aproximação final foi planejado de forma a posicionar a ferramenta em uma configuração adequada para o acoplamento, respeitando limites articulares e mantendo erros de seguimento reduzidos em relação à referência de cinemática inversa.
+O movimento das juntas do manipulador durante a aproximação final foi planejado de forma a posicionar a ferramenta em uma configuração adequada para o acoplamento, respeitando limites articulares e mantendo erros de apontamento reduzidos em relação à referência de cinemática inversa.
 A Figura~\ref{fig:cap4_app_final_juntas} ilustra a evolução das posições, velocidades e torques nas três juntas ao longo do tempo.
 
 \begin{figure}[H]
@@ -72,7 +72,7 @@ Observa-se que os maiores módulos ocorrem nas juntas 1 e 3, com picos de aproxi
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/4B Velocidade das juntas.png}
-\caption{Posição, velocidade e torque nas juntas do manipulador durante a aproximação final.}
+\caption{Velocidade das juntas do manipulador durante a aproximação final.}
 \label{fig:cap4_app_final_velocjuntas}
 \end{figure}
 
@@ -133,13 +133,13 @@ Os torques de controle nas juntas, apresentados na Figura~\ref{fig:cap4_app_fina
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/4C Torque nas juntas.png}
-\caption{Posição, velocidade e torque nas juntas do manipulador durante a aproximação final.}
+\caption{Torque nas juntas do manipulador durante a aproximação final.}
 \label{fig:cap4_app_final_torquejuntas}
 \end{figure}
 
 Observa-se que a junta 1 apresenta maior variação, enquanto as juntas 2 e 3 permanecem relativamente mais estáveis.
 Esse comportamento observado na junta 1 acontece pois ela produz correções de orientação do conjunto do manipulador com maior efetividade para reduzir o erro de alinhamento do eixo da ferramenta com a normal da porta; possuindo menor necessidade de alterar a configuração das próximas juntas.
-Portanto, o controle tende a concentrar em $j_1$ os ajustes finos de alinhamento, preservando $j_2$ e $j_3$ para compensações de menor amplitude associadas ao seguimento de posição e à manutenção da postura.
+Portanto, o controle tende a concentrar em $j_1$ os ajustes finos de alinhamento, preservando $j_2$ e $j_3$ para compensações de menor amplitude associadas ao apontamento de posição e à manutenção da postura.
 A Tabela~\ref{tab:cap4_juntas_torque} apresenta as faixas de variação e os valores finais dos torques de controle.
 
 \begin{table}[H]
@@ -167,15 +167,15 @@ $\tau_3$ & $-0{,}09 \text{ a } 0{,}15$ & $0{,}04$ \\
 
 %%%%%%%%%%%%%%%%%% ERROS DE SEGUIMENTO
 
-\subsubsection{Erro de seguimento}
+\subsubsection{Erro de apontamento}
 
-A Figura~\ref{fig:cap4_app_final_erro_eef} apresenta o erro de seguimento em posição da ferramenta, definido como a diferença entre a posição de referência fornecida pela cinemática inversa (associada ao alinhamento e à aproximação da porta de acoplamento) e a posição efetivamente executada pelo efetuador final, ambas expressas no referencial ${0}$.
+A Figura~\ref{fig:cap4_app_final_erro_eef} apresenta o erro de apontamento em posição da ferramenta, definido como a diferença entre a posição de referência fornecida pela cinemática inversa (associada ao alinhamento e à aproximação da porta de acoplamento) e a posição efetivamente executada pelo efetuador final, ambas expressas no referencial ${0}$.
 O segundo subgráfico corresponde a uma ampliação da escala vertical, com o objetivo de evidenciar a magnitude do erro residual, em metros, entre a posição desejada e a posição realizada.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\linewidth]{4 Resultados e discussoes/Imagens/3 App final/9 Erro eef.png}
-\caption{Erro de posição da ferramenta em relação à referência, expresso no frame $\{0\}$.}
+\caption{Erro de posição da ferramenta em relação à referência, expresso no referencial $\{0\}$.}
 \label{fig:cap4_app_final_erro_eef}
 \end{figure}
 
@@ -184,7 +184,7 @@ Ao final da aproximação, os erros residuais permanecem da ordem de centésimos
 
 \begin{table}[H]
 \centering
-\caption{Medição do erro de posição da ferramenta no frame $\{0\}$.}
+\caption{Medição do erro de posição da ferramenta no referencial $\{0\}$.}
 \label{tab:cap4_erro_pos_ferramenta}
 \begin{tabularx}{\linewidth}{|
   >{\centering\arraybackslash}X|

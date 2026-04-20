@@ -1,0 +1,268 @@
+\subsection{Dinâmica da espaçonave e torques de controle}
+\label{sec_cap4_app_final_espaçonave_torques}
+
+A dinâmica da espaçonave durante a aproximação final pode ser sintetizada pelas faixas de variação e pelos valores finais das velocidades e acelerações angulares combinadas dos modos não-operacional e operacional.
+
+\subsubsection{Velocidade angular da espaçonave robótica}
+
+A Tabela~\ref{tab_cap4_vel_espaçonave} resume as componentes da velocidade angular da espaçonave ao longo da simulação.
+
+\begin{table}[H]
+\centering
+\caption{Medições da velocidade angular do perseguidor.}
+\label{tab_cap4_vel_espaçonave}
+\begin{tabularx}{\linewidth}{|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Componente} &
+\textbf{Máximo e mínimo ao longo da simulação [rad/s]} &
+\textbf{Medição final [rad/s]} \\
+\hhline{|=|=|=|}
+$w_x$ & $-1{,}20 \text{ a } 1{,}20$ & $-0{,}01234$ \\
+\hline
+$w_y$ & $-1{,}26 \text{ a } 1{,}25$ & $0{,}00214$ \\
+\hline
+$w_z$ & $-0{,}96 \text{ a } 1{,}00$ & $-0{,}00891$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+A Figura~\ref{fig_cap4_veloc_ang} apresenta a evolução da velocidade angular do perseguidor ao longo do tempo. O primeiro subplot reúne as três componentes da velocidade angular, enquanto que os subplots seguintes detalham, separadamente, a contribuição individual de cada eixo no movimento rotacional da espaçonave perseguidora.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{5 Resultados/Imagens/3 App final/2a Veloc angular base Euler Lagrange.png}
+\caption{Velocidades angulares da espaçonave combinando as fases em Euler e Lagrange.}
+\label{fig_cap4_veloc_ang}
+\end{figure}
+
+\subsubsection{Aceleração angular da espaçonave robótica}
+
+A Tabela~\ref{tab_cap4_acel_espaçonave} contém as acelerações angulares obtidas na simulação.
+Observa-se que os extremos ocorrem no início da simulação (de $0$ a $10$ s) e estão associados à inicialização do controlador e da dinâmica do corpo rígido do perseguidor.
+Após $10$ s, as acelerações ficam próximas de $0$ e após o início de operação do \gls{mr}, elas voltam a ser medidas, e assim permanecem até o final da simulação.
+
+\begin{table}[H]
+\centering
+\caption{Medição da aceleração angular do perseguidor.}
+\label{tab_cap4_acel_espaçonave}
+\begin{tabularx}{\linewidth}{|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Componente} &
+\textbf{Máximo e mínimo longo da simulação [rad/s$^2$]} &
+\textbf{Medição final [rad/s$^2$]} \\
+\hhline{|=|=|=|}
+$\dot{w}_x$ & $-57{,}64 \text{ a } 3{,}50$  & $-1{,}18$ \\
+\hline
+$\dot{w}_y$ & $-109{,}94 \text{ a } 6{,}48$ & $-2{,}00$ \\
+\hline
+$\dot{w}_z$ & $-61{,}73 \text{ a } 3{,}55$ & $1{,}70$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+A Figura~\ref{fig_cap4_acel_perseg_xyz} apresenta o comportamento da aceleração angular da espaçonave perseguidora ao longo da simulação.
+Observa-se um pico no início, entre $2$ e $4$ s, associado à inicialização simultânea da dinâmica do corpo rígido e do controlador, que se normaliza e permanece próximo de zero a operação do \gls{mr}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{5 Resultados/Imagens/3 App final/2b Acel angular base Euler Lagrange.png}
+\caption{Acelerações angulares da espaçonave na transição entre os modos de operação.}
+\label{fig_cap4_acel_perseg_xyz}
+\end{figure}
+
+A seguir, a Figura~\ref{fig_cap4_acel_perseg_xyz_separado} apresenta a evolução das componentes $x$, $y$ e $z$ da aceleração angular da espaçonave perseguidora ao longo da simulação.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{5 Resultados/Imagens/3 App final/2b Acel angular por eixo.png}
+\caption{Acelerações angulares da espaçonave perseguidora por eixo ao longo da simulação.}
+\label{fig_cap4_acel_perseg_xyz_separado}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%% TORQUE ATTDE
+
+\subsubsection{Torque de controle de atitude da espaçonave robótica}
+
+A atuação do controlador de atitude por eixo é apresentada na Figura~\ref{fig_cap4_app_final_torque_controle}, e discrimina o torque aplicado pelo controlador PD, em $Nm$.
+Observa-se um transiente pronunciado no início da simulação, seguido por redução do torque do controlador e estabilização em regime, comportamento compatível com a correção e a manutenção do alinhamento de atitude discutidas na Seção~\ref{sec_cap4_app_final_atitude}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{5 Resultados/Imagens/3 App final/3a Torque de controle.png}
+\caption{Torques de controle de atitude aplicados pelo controlador PD.}
+\label{fig_cap4_app_final_torque_controle}
+\end{figure}
+
+As variações do torque em cada eixo, bem como os respectivos valores finais, estão apresentadas na Tabela~\ref{tab_cap4_torque_PD}.
+Pode-se observar que, ao término da simulação, os torques de controle de atitude são próximos de zero, compatíveis com a manutenção da atitude em relação à atitude do alvo e com a estabilização do transitório inicial.
+
+\begin{table}[H]
+\centering
+\caption{Medição dos torques de controle de atitude (PD).}
+\label{tab_cap4_torque_PD}
+\begin{tabularx}{\linewidth}{|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Torque} &
+\textbf{Mínimo [Nm]} &
+\textbf{Máximo [Nm]} &
+\textbf{Medição final [Nm]} \\
+\hhline{|=|=|=|=|}
+$\tau_x$ & $-12{,}07$ & $0{,}74$ & $0{,}21$ \\
+\hline
+$\tau_y$ & $-12{,}49$ & $1{,}05$ & $-0{,}04$ \\
+\hline
+$\tau_z$ & $-9{,}88$  & $0{,}55$ & $0{,}06$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+%%%%%% TORQUE REAÇÃO
+
+\subsubsection{Torques de reação da espaçonave robótica}
+
+A perturbação atitude da espaçonave causada pela movimentação do manipulador é quantificada pelos torques de reação na espaçonave, apresentados na Figura~\ref{fig_cap4_app_final_torque_reacao}.
+Em comparação com os torques aplicados pelo controlador de atitude, observa-se que as reações em geral, são de menor magnitude.
+Isso indica que, nas condições simuladas, essas perturbações são limitadas e são compensadas pelo controle de atitude, mantendo a estabilidade da espaçonave.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{5 Resultados/Imagens/3 App final/3b Torque reacao.png}
+\caption{Torques de reação na espaçonave decorrentes do movimento do manipulador.}
+\label{fig_cap4_app_final_torque_reacao}
+\end{figure}
+
+A variação e os valores finais correspondentes são apresentados na Tabela~\ref{tab_cap4_torque_reacao}.
+
+\begin{table}[H]
+\centering
+\caption{Medição dos torques de reação na espaçonave.}
+\label{tab_cap4_torque_reacao}
+\begin{tabularx}{\linewidth}{|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Torque} &
+\textbf{Mínimo [Nm]} &
+\textbf{Máximo [Nm]} &
+\textbf{Medição final [Nm]} \\
+\hhline{|=|=|=|=|}
+$\tau_x^{\text{reac}}$ & $-0{,}24$ & $0{,}24$ & $0{,}05$ \\
+\hline
+$\tau_y^{\text{reac}}$ & $-0{,}57$ & $0{,}61$ & $0{,}47$ \\
+\hline
+$\tau_z^{\text{reac}}$ & $-0{,}12$ & $0{,}11$ & $-0{,}02$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% TORQUE COMPENSAÇÃO
+
+\subsubsection{Compensação do acoplamento dinâmico}
+
+A versão compensada do torque de controle, que incorpora termos destinados a mitigar os acoplamentos dinâmicos entre a espaçonave e o manipulador, é apresentada na Figura~\ref{fig_cap4_app_final_torque_compensado}.
+% Comparando-se com o caso sem compensação, observa-se que a principal diferença se manifesta no transiente, enquanto os valores finais permanecem da mesma ordem de grandeza.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{5 Resultados/Imagens/3 App final/3c Torque compensado.png}
+\caption{Torque de reação compensado.}
+\label{fig_cap4_app_final_torque_compensado}
+\end{figure}
+
+A medição dos torques compensados estão na Tabela~\ref{tab_cap4_torque_PD_comp} e é possível observar que o controle de atitude compensa a reação da espaçonave quando o \gls{mr} se movimenta.
+
+\begin{table}[H]
+\centering
+\caption{Valores finais dos torques de controle compensados.}
+\label{tab_cap4_torque_PD_comp}
+\begin{tabularx}{\linewidth}{|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Componente} &
+\textbf{Valor final [Nm]} \\
+\hhline{|=|=|}
+$\tau_x^{\text{comp}}$ & $0{,}16$ \\
+\hline
+$\tau_y^{\text{comp}}$ & $-0{,}51$ \\
+\hline
+$\tau_z^{\text{comp}}$ & $0{,}08$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+% \subsubsection{Energia cinética}
+
+% A coerência entre os resultados de torque e a resposta global do sistema pode ser verificada na Figura~\ref{fig_cap4_app_final_energia_cinetica}, que apresenta a evolução da energia cinética da espaçonave, dos elos e do sistema como um todo. Os valores máximos e finais dessas energias são sintetizados na Tabela~\ref{tab_cap4_energia_cinetica}. Verifica-se que, após os transitórios, tanto a energia da espaçonave quanto a dos elos se reduzem a níveis muito baixos, caracterizando um regime de movimento quase estacionário ao final da aproximação.
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=1.0\linewidth]{5 Resultados/Imagens/3 App final/6 Energia cinetica.png}
+% \caption{Energia cinética da espaçonave, dos elos e total do sistema ao longo da aproximação final.}
+% \label{fig_cap4_app_final_energia_cinetica}
+% \end{figure}
+
+% \begin{table}[H]
+% \centering
+% \caption{Valores máximos e finais das energias cinéticas.}
+% \label{tab_cap4_energia_cinetica}
+% \begin{tabularx}{\linewidth}{|
+%   >{\centering\arraybackslash}X|
+%   >{\centering\arraybackslash}X|
+%   >{\centering\arraybackslash}X|}
+% \hline
+% \textbf{Grandeza} &
+% \textbf{Valor máximo [J]} &
+% \textbf{Valor final [J]} \\
+% \hhline{|=|=|=|}
+% $E_{\text{espaçonave}}$ & $0{,}1914$ & $7{,}313\times 10^{-5}$ \\
+% \hline
+% $E_{\text{elos}}$ & $9{,}326\times 10^{-4}$ & $1{,}704\times 10^{-7}$ \\
+% \hline
+% $E_{\text{tot}}$  & 0{,}1914 & $1{,}349\times 10^{-4}$ \\
+% \hline
+% \end{tabularx}
+% \end{table}
+
+% \subsubsection{Momento angular}
+% As componentes do momento angular total (espaçonave + elos) permanecem confinadas em intervalos estreitos ao longo dos $900$ s de simulação, com amplitudes máximas da ordem de $10^{-1}$ Nm·s e valores finais na faixa de $10^{-3}$–$10^{-2}$ Nm·s. A Tabela~\ref{tab_cap4_momento_angular} sintetiza as faixas observadas e os valores residuais ao final da aproximação, evidenciando que o sistema encerra a fase de acoplamento com baixa quantidade de movimento angular armazenada.
+
+% \begin{table}[H]
+% \centering
+% \caption{Faixas e valores finais das componentes do momento angular total.}
+% \label{tab_cap4_momento_angular}
+% \begin{tabularx}{\linewidth}{|
+%   >{\centering\arraybackslash}X|
+%   >{\centering\arraybackslash}X|
+%   >{\centering\arraybackslash}X|}
+% \hline
+% \textbf{Componente} &
+% \textbf{Faixa ao longo da simulação [Nms]} &
+% \textbf{Valor final [Nms]} \\
+% \hhline{|=|=|=|}
+% $h_x$ & $-0{,}09494 \text{ a } 0{,}09511$ & $0{,}00236$ \\
+% \hline
+% $h_y$ & $-0{,}1415 \text{ a } 0{,}0990$ & $-0{,}00504$ \\
+% \hline
+% $h_z$ & $-0{,}1426 \text{ a } 0{,}1452$ & $0{,}01513$ \\
+% \hline
+% \end{tabularx}
+% \end{table}
+
+
+% Em conjunto, as Figuras~\ref{fig_cap4_app_final_veloc_espaçonave}--\ref{fig_cap4_app_final_energia_cinetica} e as Tabelas~\ref{tab_cap4_torque_PD}--\ref{tab_cap4_momento_angular} indicam que o sistema encerra a aproximação final em uma condição de baixa energia cinética, baixo momento angular residual e níveis moderados de torque de controle, com torques de reação significativamente menores.

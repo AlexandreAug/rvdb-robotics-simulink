@@ -1,0 +1,22 @@
+\section{Manipulador robótico no contexto espacial}
+\label{sec_MR_espacial}
+
+Os estudos de \cite{papadopoulos1994free} investigam a dinâmica de sistemas robóticos espaciais do tipo \textit{free-flying}, nos quais manipuladores são montados em uma espaçonave com base livre. 
+Nesse contexto, o movimento do centro de massa do sistema é utilizado para descrever a dinâmica translacional do robô espacial em relação a um referencial inercial.
+
+O trabalho de \cite{nishida2011strategy} aborda a captura de detritos espaciais não cooperativos em rotação, destacando que erros de rastreamento e incertezas nos parâmetros inerciais do alvo podem gerar carregamentos elevados e transferência de momento durante o contato.
+
+Ainda conforme \cite{flores2014review}, os sistemas de serviço em órbita são geralmente constituídos por uma espaçonave servidora equipada com um manipulador robótico e pelo satélite alvo.
+Nesse contexto, manipuladores espaciais possibilitam a realização de diferentes operações de \gls{oos}, como captura, manutenção, reabastecimento e atualização de satélites em órbita.
+
+Os estudos de \cite{fonseca2016attitude} investigaram a dinâmica de atitude e o controle de uma grande estrutura espacial durante a translação de um \gls{mr} ao longo da plataforma e sob perturbações associadas ao deslocamento de astronautas, destacando que esses movimentos internos podem induzir vibrações estruturais e comprometer a estabilidade da atitude.
+% No estudo, foram analisadas duas configurações: uma em que a estrutura e o manipulador são flexíveis, com controle baseado em LQG para amortecer vibrações e manter a orientação nominal da estação, e outra em que a estrutura principal é considerada rígida, enquanto o manipulador flexível pode transladar e girar, sendo empregado o método de \textit{backstepping} para estabilizar o sistema durante a manobra. Os resultados mostraram que ambas as abordagens foram capazes de reduzir vibrações e controlar a atitude, evidenciando a relevância de considerar o acoplamento entre flexibilidade estrutural, movimento do manipulador e perturbações operacionais em missões espaciais com robótica embarcada.
+
+Conforme \cite{nardin2019epos}, os estudos apresentaram o desenvolvimento e a validação, em ambiente de tempo real de um simulador de manobras de \textit{berthing} utilizando a infraestrutura EPOS do \gls{dlr}.
+No trabalho, dois robôs industriais representam fisicamente o perseguidor e o alvo, enquanto o manipulador robótico acoplado ao perseguidor é emulado por software, permitindo avaliar algoritmos de cinemática, dinâmica e controle em um cenário mais próximo da operação real.
+% Os autores modelaram um manipulador com três juntas rotativas, aplicaram formulações de cinemática direta e inversa e utilizaram o método de Newton--Euler para o cálculo dos torques articulares. Os resultados mostraram que o efetuador final virtual foi capaz de alcançar o alvo com erro de posição tendendo a zero, ao mesmo tempo em que as respostas angulares da espaçonave e o deslocamento do centro de massa do conjunto puderam ser analisados ao longo da manobra. Assim, o estudo indicou que o simulador desenvolvido constitui uma ferramenta confiável para testes de manobras de \textit{berthing} com manipuladores robóticos espaciais.
+
+O trabalho de \cite{nardin2020berthing} investiga o problema de manobras de \textit{berthing} em missões de \gls{oos}, considerando um satélite perseguidor equipado com manipulador robótico.
+O autor desenvolve um ambiente de simulação que modela a dinâmica acoplada entre a espaçonave e o manipulador, incluindo os efeitos das forças e torques gerados pelo movimento do braço sobre a atitude do satélite.
+% A partir desse modelo, é proposta uma abordagem de otimização multiobjetivo para lidar com objetivos conflitantes, tais como precisão de posicionamento, manutenção da atitude da espaçonave, tempo de execução da manobra e consumo de energia.
+% Os resultados são avaliados por meio de simulações e posteriormente validados em experimentos com \textit{hardware-in-the-loop} utilizando o simulador EPOS do DLR, no qual robôs físicos representam os satélites envolvidos na manobra, enquanto o manipulador é modelado em software. Essa abordagem permite analisar de forma integrada a dinâmica do sistema, os efeitos de acoplamento entre manipulador e espaçonave e o desempenho de diferentes estratégias de otimização para manobras de aproximação e captura. \cite{nardin2020berthing}. :contentReference[oaicite:0]{index=0}

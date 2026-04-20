@@ -1,0 +1,27 @@
+
+\subsection{Controle Proporcional--Derivativo (PD)}
+\label{sec:controle_PD}
+
+Em aplicações espaciais, controladores da família PID/PD são amplamente utilizados como base para o controle de atitude e de apontamento \cite{xie2016applications}.
+Neste trabalho adota-se o controle \gls{pd} em vez de PID, isto é, o termo integrativo é omitido para evitar acúmulo de ação de controle e degradação do transitório, como oscilações e aumento do tempo de acomodação em determinadas condições \cite{razak2007industrial}.
+De forma geral, para uma variável escalar de interesse $x(t)$, com referência $x_{\text{ref}}(t)$, conforme \cite{astrom1995pid}, define-se o erro como:
+
+\begin{equation}
+e(t) = x_{\text{ref}}(t) - x(t).
+\end{equation}
+
+Em que $e(t)$ é o erro calculado, e conforme \cite{xue2007linear}, a ação de controle $u(t)$ é calculada como:
+
+\begin{equation}
+u(t) = K_p\,e(t) + K_d\,\dot e(t).
+\label{eq:controle_PD_geral}
+\end{equation}
+
+Em que $K_p$ e $K_d$ são ganhos positivos e assumem a forma escalar.
+Adota-se realimentação negativa, de modo que a ação de controle reduza o erro \cite{ogata2010engenharia}.
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/2.1 Controle atitude.tex}
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/2.2 Controle juntas.tex}
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/2.3 Estrutura malha fechada.tex}

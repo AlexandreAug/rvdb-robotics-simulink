@@ -540,13 +540,22 @@
 
 
 
-   \vspace*{\stretch{2}}
+  %  \vspace*{\stretch{2}}
 
-   \begin{spacing}{1.5}
-       \@boss
-   \end{spacing}
+  %  \begin{spacing}{1.5}
+  %      \@boss
+  %  \end{spacing}
 
-   \vspace*{\stretch{2}}
+  %  \vspace*{\stretch{2}}
+
+  \@ifundefined{@boss}{}{%
+  \vspace*{\stretch{2}}
+  \begin{spacing}{1.5}
+      \@boss
+  \end{spacing}
+}
+\vspace*{\stretch{2}}
+
 
    \begin{spacing}{1.0}
    Campo Montenegro \\ S\~{a}o Jos\'{e} dos Campos, SP - \itacountrybabel \\ \@publyear

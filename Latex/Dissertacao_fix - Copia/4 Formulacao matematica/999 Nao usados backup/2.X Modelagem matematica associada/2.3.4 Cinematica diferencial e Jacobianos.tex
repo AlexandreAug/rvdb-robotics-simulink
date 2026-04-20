@@ -1,0 +1,265 @@
+% \subsection{Cinemática diferencial e Jacobiano do efetuador}
+% Para relacionar as velocidades das juntas do manipulador robótico com a velocidade espacial
+% \footnote{Velocidade dentro do espaço de trabalho do manipulador robótico}
+% do efetuador $\{E\}$, utiliza-se o Jacobiano ($J(q)\in\mathbb{R}^{m\times n}$) que mapeia as velocidades em cada junta e as transforma em velocidades (lineares e angulares) do efetuador.
+
+% \subsubsection{Velocidades cartesianas e $\mathbf{J}$}
+% Considerando $\vec q$ como o vetor de juntas e
+% $\dot{q}$ as suas respectivas velocidades,
+% a velocidade espacial do efetuador é descrita como:
+% \begin{equation}
+% \vec{\mathcal V}_E^{(S)}=
+% \begin{bmatrix}
+%     \vec v_E        \\
+%     \vec \omega_E
+% \end{bmatrix}
+% =\mathbf J_s(q)\,\dot{\vec q},
+% \end{equation}
+
+% enquanto a torção corporal (no frame do efetuador) é
+% \begin{equation}
+%     \label{eq:veloc_espacial_efetuador}
+% \vec{\mathcal V}_E^{(B)}=
+% \mathrm{Ad}_{(^{0}\mathbf T_E)}^{-1}\,\vec{\mathcal V}_E^{(S)}=
+% \mathbf J_b(q)\,\dot{\vec q}.
+% \end{equation}
+
+% onde $\operatorname{Ad}_{(\cdot)}$ é a adjunta em $SE(3)$.
+
+%% ===== EXPLICAÇÃO ACIMA =========================
+% O vetor do lado esquerdo "V_E é a velocidade linear (m/s)" 
+% Omega_E é a velocidade angular (rad/s)
+% O vetor q_ponto contém as velocidades das juntas.
+% Cada elemento é thata_ponto_i para as juntas revolutas e d_ponto_i para as juntas prismáticas.
+% O Jacobiano J(q) é a mtriz 6xn que mapeia velocidades de juntas para velocidades do efetuador.
+% Ou seja: sabendo as velocidades das juntas, multiplica-se por J(q) e obtém como o efetuador está se movendo no espaço.
+% ==================================================
+
+% As colunas de $J(q)$, quando são expressas em um mesmo frame (como o $frame \{0\}$), para a $i$-ésima junta revoluta é descrita por:
+% \begin{equation}
+% \label{eq:jac_columns_revoluta}
+% \begin{cases}
+% J_{v,i} =
+% {}^{0}\!\vec{z}_{\,i-1} \times \big({}^{0}\!\vec{p}_{\,E}
+% - {}^{0}\!\vec{p}_{\,i-1}\big), \\
+% J_{\omega,i} =
+% {}^{0}\!\vec{z}_{\,i-1},
+% \end{cases}
+% \end{equation}
+
+% e para a junta prismática:
+% \begin{equation}
+%     \label{eq:jac_columns_prismatica}
+% \begin{cases}
+% J_{v,i} \;=\; {}^{0}\!\vec{z}_{\,i-1}, \\
+% J_{\omega,i} \;=\; \vec{0}.
+% \end{cases}
+% \end{equation}
+%% ===== EXPLICAÇÃO DE CIMA =====
+% Para cada junta "i", a coluna correspondente "J_i" é construida a partir do eixo da junta (z_i-1) e das posições de referencia (p_e, p_i-1).
+% p_E = posição do efetuador
+% p_i-1 = posição da junta anterior
+% z_i-1 = eixo da junta anterior (eixo de rotação para junta revoluta, direção de movimento para junta prismática)
+%
+% Junta revoluta: o produto vetorial mostra que a velocidade linear do efetuador vem da rotação em torno de z_i-1; a velocidade angular é simplesmente o eixo da rotação.
+%
+% Junta prismática: não há rotação, portanto omega = 0; o efetuador se move linearmente na direção do eixo da junta.
+%
+% Portanto, cada coluna do Jacobiano corresponde à contribuição individual de uma junta para a velocidade do efetuador como um todo.
+% ==================================================
+% \subsubsection{Jacobiano e contribuição da base}
+% Durante a fase operacional, quando o subsistema do manipulador robótico atua como um corpo não-rígido,
+% a torção total no $frame \{0\}$ é resultado da contribuição da base e das juntas via a adjunta $Ad_{{}^{0}T_{B}}$:
+% \begin{equation}
+% {}^{0}\!\vec{\mathcal V}_E
+% =
+% \mathrm{Ad}_{\,^{0}\!T_E (^{0}\!T_B)^{-1}}\;{}^{0}\!\vec{\mathcal V}_B
+% \;+\;
+% J_s(q)\,\dot{\vec q},
+% \label{eq:VE_base_movel}
+% \end{equation}
+% onde $^{0}\!\vec{\mathcal V}_B=[\,^{0}\!\vec v_b;\,^{0}\!\vec\omega_b\,]$ é a torção da base, $J_s(q)\in\mathbb{R}^{6\times n}$ é o jacobiano espacial do manipulador, e $^{0}\!T_E,\,^{0}\!T_B\in SE(3)$ são as poses de $E$ e $B$ no frame $\{0\}$.
+
+% \subsubsection{Base sem translação}
+% Caso a velocidade linear da base for igual a zero (${}^{0}\!\vec{v}_{b}=\vec{0}$), obtém-se:
+% \begin{equation}
+% \label{eq:jac_base_particular1}
+% {}^{0}\!\vec{\mathcal V}_{E \leftarrow B}=
+% \operatorname{Ad}_{\,{}^{0}\!T_E \left({}^{0}\!T_B\right)^{-1}}
+% \begin{bmatrix}
+% \vec{0}         \\
+% {}^{0}\!\boldsymbol{\omega}_{B}
+% \end{bmatrix}
+% \end{equation}
+
+% E a torção total do efetuador será:
+% \begin{equation}
+% \label{eq:jac_base_particular2}
+% {}^{0}\!\vec{\mathcal V}_{E}=
+% {}^{0}\!\vec{\mathcal V}_{E \leftarrow B}
+% +J_s(q)\,\dot{\vec{q}}.
+% \end{equation}
+
+% \subsubsection{Base fixa}
+% Se, além de
+% (${}^{0}\!\vec v_b=\vec 0$),
+% também (${}^{0}\!\vec\omega_b=\vec 0$), então:
+% \begin{equation}
+% \label{eq:VE_base_fixa}
+% {}^{0}\!\vec{\mathcal V}_E = J_s(q)\,\dot{\vec q}.
+% \end{equation}
+
+% A adjunta presente em \eqref{eq:jac_base_particular1} pode ser expressa por:
+% \begin{equation}
+% \label{eq:adjunta_twist}
+% \operatorname{Ad}_{T}=
+% \begin{bmatrix}
+% \mathbf R & \mathbf 0\\
+% [\vec p]_\times \mathbf R & \mathbf R
+% \end{bmatrix},
+% \qquad
+% T=\begin{bmatrix}\mathbf R&\vec p\\ \mathbf 0^T & 1\end{bmatrix}\in SE(3).
+% \end{equation}
+
+% Resultando em:
+% \begin{equation}
+% {}^{0}\!\vec{\mathcal V}_E = J_s(q)\,\dot{\vec q}.
+% \label{eq:VE_base_fixa}
+% \end{equation}
+
+%==================================================
+%----- Acel cartesiana
+%==================================================
+% \subsubsection{Aceleração cartesiana e \(\dot{\mathbf J}\)}
+% A aceleração é obtida pela derivada de \eqref{eq:veloc_espacial_efetuador}:
+% \begin{equation}
+% \dot{\vec{\mathcal V}}_E=
+% \mathbf J(q)\,\ddot{\vec q}+\dot{\mathbf J}(q,\dot{\vec q})\,\dot{\vec q}.
+% \end{equation}
+
+% Para $\dot{\mathbf J}$, pode-se utilizar as torções $\vec{\mathcal V}_{B,i}$ das juntas:
+% \begin{equation}
+% \dot{\mathbf J}_s=
+% \sum_{i=1}^n \mathbf J_{s,i}\,\dot q_i,
+% \end{equation}
+
+% \begin{equation}
+% \mathbf J_{s,i}=
+% \begin{bmatrix}
+% ad_{\vec V} & \mathbf 0\\
+% \mathbf 0   & ad_{\vec V}
+% \end{bmatrix}\mathbf J_s,
+% \end{equation}
+
+% \begin{equation}
+% \mathrm{ad}_{\vec{\mathcal V}}=
+% \begin{bmatrix}
+% [\vec\omega]_\times &\mathbf 0\\
+% [\vec v]_\times     &[\vec\omega]_\times
+% \end{bmatrix}.
+% \end{equation}
+
+% Portanto, para o controle,
+% utiliza-se $\ddot{\vec x}_E=\mathbf J\,\ddot{\vec q}+\dot{\mathbf J}\dot{\vec q}$
+% com $\dot{\mathbf J}\dot{\vec q}$
+% computado recursivamente junto com $\mathbf J$.
+%% ===== EXPLICAÇÃO DE CIMA =====
+% Qdo o manipulador está preso a uma base não-fixa, a veloc. do efetuador não depende apenas das juntas: há uma contribuição da movimentação da base.
+
+% O termo com a adjunta (Ad) leva em conta a contribuição do mov da base
+% Se a base é fixa, omega = 0, sobra apenas o termo J(q)q_ponto.
+
+% A Ad possui os termos: Rotação (R), posição (p) e o produto vetorial (p_x) em forma matricial, matriz anti-simetrica.
+
+% Portanto, esse termo "transporta" a velocidade da base para o frame do efetuador.
+% ==================================================
+
+
+\subsection{Mapeamento de torques e forças}
+A dual da adjunta fornece a transformação da ferramenta e o mapeamento entre as juntas e o efetuador.
+Então, para mapear matematicamente os torques e forças das juntas, pode ser expresso como:
+\begin{equation}
+\label{eq:tau_torque1}
+\vec\tau=\mathbf J^\top(q)\,\vec w_E^{(S)},
+\end{equation}
+
+onde $\omega_{Efetuador}$ deve estar no mesmo frame de $\mathbf{J}$, e pode ser expresso por:
+\begin{equation}
+\label{eq:tau_torque2}
+\vec{w}_{E} \;=\;
+\begin{bmatrix}
+\vec{f}_{E}\\ \vec{m}_{E}
+\end{bmatrix}.
+\end{equation}
+
+Se for necessário transportar as forças e torques entre os frames, usa-se a adjunta dual:
+\begin{equation}
+\label{eq:adjunta_dual1}
+\vec w^{(S)}_{E\leftarrow E'}=\mathrm{Ad}^*_{^{E}\mathbf T_{E'}}\,\vec w^{(S)}_{E'}.
+\end{equation}
+
+Onde:
+\begin{equation}
+\label{eq:adjunta_dual2}
+\operatorname{Ad}^{*}_{T}
+\;=\;
+\begin{bmatrix}
+\mathbf R & \mathbf 0 \\
+[\vec p]_\times \mathbf R & \mathbf R
+\end{bmatrix},
+\end{equation}
+
+
+%% ===== EXPLICAÇÃO DE CIMA =====
+% Forma dual do Jacobiano.
+% Se o efetuador aplica uima força (f_E) e um momento (m_E) sobre o ambiente, o Jacobiano transposto mapeia isso para os torques ou forças necessários em cada junta.
+%
+% Portanto, J leva as velocidades de juntas (veloc do efetuador)
+% J^T leva forças no efetuador (torques nas juntas)
+%=============================================
+
+\subsection{Singularidades}
+A sequência ZYX apresenta singularidade para \(\theta=\pm\frac{\pi}{2}\), sendo assim,
+a configuração $q$
+é singular quando $\mathrm{rank}\,\mathbf J(q)<dim$.
+Para encontrar diferenças finitas, pode realizar uma checagem numérica:
+\begin{equation}
+\label{eq:rank_condition}
+\mathrm{rank}\, J(q) < dim,
+\end{equation}
+onde $dim$ é a dimensão da tarefa. Por exemplo, $dim=6$ para controle completo, ou seja, controle de posição e de orientação.
+
+Caso $\mathrm{rank}\,\mathbf J(q)$ reduzir, o manipulador robótico perde graus de liberdade efetivos.
+Um exemplo disso é quando o manipulador robótico está totalmente esticado em determinada direção e por isso, perderá certos graus de liberdade, limitando assim, o seu movimento em certas direções.
+Uma aproximação numérica de $J$ pode ser obtida por diferenças finitas:
+\begin{equation}
+\label{eq:jac_dif_finita}
+J(q) \;\approx\;
+\frac{\vec{x}_{E}(q+\Delta q) - \vec{x}_{E}(q)}{\Delta q}.
+\end{equation}
+
+A equação apresentada é útil para estimar de forma numérica o Jacobiano por diferenças finitas, pois certas configurações ou comandos podem explodir os números próximos de singularidades.
+De forma geral, \eqref{eq:jac_dif_finita} desloca levemente $q$ e observa a variação de $\vec x_E$.
+
+%% ===== EXPLICAÇÃO DE CIMA =====
+% "dim" é a dimensão da tarefga, 6 se for controle completo de posição e orientação.
+% Se "rank(J)" cai, o robô perde graus de liberdade efetivos.
+% >>> Exemplo: um braço esticado pode perder a capacidade de se mover em certas direções.
+% Os comandos podem "explodir" proximo de singularidades.
+% O teste numerico é um jeito de estimar numericamente o Jacobiano por diferenças finitas, desloca-se um pouco "q" e ve como x_E varia.
+% Isso é util pra detectar singularidades.
+%=============================================
+
+
+
+%% RESUMO GERAL
+% Jacobiano = derivada da cinemática direta.
+% >>> Conecta velocidades de juntas com velocidades do efetuador.
+% Colunas = efeito de cada junta.
+% >>> Revoluta: rotação gera veloc linear (via produto vetorial)
+% >>> Prismática: só deslocamento linear
+% Base móvel = se o manipulador não está fixo, há termos adicionais via adjunta.
+% Dualidade
+% >>> J(q_ponto): velocidade do efetuador
+% >>> J^T(w_e): torques ou juntas necessários
+% Singularidades = O Jacobiano perde "posto" e o robô não consegue se mover em todas as direções desejadas.

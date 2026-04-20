@@ -1,0 +1,154 @@
+\section{Modelos de atuadores e sensores}
+\label{sec_modelos_atuadores_sensores}
+
+Esta seção descreve as hipóteses adotadas para os modelos de atuação e de sensoriamento empregados na missão de \gls{rvdb}. 
+Além disso, é mostrado como as grandezas de controle e as grandezas medidas são implementadas nas equações e nas leis de controle. 
+Adotou-se a hipótese de modelos ideais, isto é, sem efeitos dissipativos como atrito, variações térmicas, elasticidade estrutural, atrasos, quantização ou ruído de medição.
+Adicionalmente, assume-se comando direto de aceleração ou torque nas etapas de curta distância e final, enquanto a etapa de longa distância utiliza incrementos impulsivos de velocidade na transferência orbital.
+
+Ainda que o hardware não seja modelado, a descrição a seguir faz referência a exemplos de atuadores e sensores empregados em missões de \gls{rvdb}, como propulsores de manobra e controle de atitude, rodas de reação, sensores inerciais, sensores estelares, câmeras e sensores ativos de distância.
+Tais exemplos são incluídos apenas para contextualização física do significado das entradas e saídas consideradas no modelo ideal.
+
+\subsection{Hipóteses gerais de idealização}
+\label{subsec_hipoteses_idealizacao}
+
+As seguintes hipóteses são adotadas durante a simulação:
+\begin{itemize}
+\item atuação ideal, sem dinâmicas internas de atuadores, sem atrasos e sem histerese.
+\item sensoriamento ideal, com acesso direto às variáveis de estado do modelo dinâmico.
+\item ausência de atrito, folgas, elasticidade estrutural e efeitos termoelásticos.
+\item ausência de ruído e viés em medições de posição, velocidade, atitude e velocidade angular.
+\item ausência de quantização e de limitação de resolução em sensores e atuadores.
+\end{itemize}
+
+Essas hipóteses delimitam o escopo do estudo ao desempenho lógico das leis de controle e às transições entre modelos dinâmicos, sem caracterização de desempenho de hardware ou de robustez a incertezas e perturbações não modeladas.
+Em um sistema real, as variáveis utilizadas pelo controle seriam estimadas por um sistema de navegação combinando medições de múltiplos sensores e modelos dinâmicos, com filtros e tratamento de ruído e viés, conformidade \cite{wertz2011sme_smad}, o que não é considerado neste trabalho.
+
+\subsection{Modelos de atuação}
+\label{subsec_modelos_atuacao}
+
+A seguir descreve-se como a atuação é representada em cada etapa da missão de \gls{rvdb} e como os comandos entram nas equações e nas leis de controle.
+
+\subsubsection{Atuação translacional}
+\label{subsubsec_atuacao_translacional}
+
+Durante a aproximação de curta distância e na aproximação final, a atuação translacional é modelada como comando direto de aceleração no referencial \gls{lvlh}.
+Assim, a saída das leis de controle PD translacionais é interpretada como vetor de aceleração de controle aplicado diretamente como entrada nas equações de dinâmica relativa em \gls{lvlh} (formulação \gls{hcw}).
+Não há conversão de comando para o referencial inercial, nem modelagem de propulsores, empuxo, consumo de propelente ou alocação de atuadores.
+
+Como contextualização, em uma espaçonave real essa aceleração seria tipicamente realizada por um sistema de propulsão dedicado a translação, por exemplo, propulsores químicos de baixa magnitude, propulsores elétricos em regimes adequados ou arranjos de micropropulsão, conforme requisitos de precisão, segurança e contaminação \cite{wertz2011sme_smad}.
+Apesar da atuação ser ideal, impõem-se limites de projeto por meio de saturação da aceleração de comando em cada eixo (radial, along-track e cross-track), representando restrições físicas.
+% Adicionalmente, a velocidade relativa admitida é limitada externamente antes de alimentar a lei de controle PD translacional, com limiar mais restritivo na região de proximidade.
+
+\subsubsection{Atuação translacional na aproximação de longa distância}
+\label{subsubsec_atuacao_translacional_longa}
+
+Na aproximação de longa distância, a atuação é representada por incrementos impulsivos de velocidade ($\Delta v$) aplicados ao perseguidor, conforme a manobra de transferência orbital do tipo Hohmann.
+Fora da aplicação do $\Delta v$, o movimento é obtido por propagação orbital do problema de dois corpos, sem acelerações de controle contínuas.
+
+\subsubsection{Atuação de atitude}
+\label{subsubsec_atuacao_atitude}
+
+A atuação de atitude é modelada como comando direto de torque aplicado à dinâmica rotacional da espaçonave.
+O torque de controle é gerado por uma lei de controle PD baseada em quaternion.
+Embora utilizadas em missões reais de \gls{rvdb} \cite{wertz2011sme_smad}, não há modelagem de rodas de reação, propulsores de atitude ou magnetotorques.
+
+Como exemplo físico, a realização desse torque em um sistema real pode ser feita por rodas de reação ou por propulsores de controle de atitude, e a escolha depende de requisitos de apontamento, saturação de momento, disponibilidade de propelente e níveis de distúrbio. No presente trabalho, tais aspectos são abstraídos pelo comando direto de torque.
+
+Durante o modo não operacional, o torque de controle alimenta diretamente a dinâmica rotacional de corpo rígido.
+Durante o modo operacional, o torque aplicado à dinâmica rotacional é modificado pela compensação do torque de reação induzido pela movimentação do \gls{mr}.
+
+\subsubsection{Atuação do controle das juntas do MR}
+\label{subsubsec_atuacao_mr}
+
+No modo operacional do \gls{mr}, as juntas são atuadas por torque articular resultante de uma lei de controle PD em espaço articular.
+A dinâmica acoplada fornece as acelerações articulares; por integração, obtêm-se as velocidades e posições articulares utilizadas na realimentação e na cinemática.
+Assume-se ausência de atrito nas juntas, ausência de saturações de corrente/momento no atuador e ausência de elasticidade ou conformidade estrutural.
+
+Em um manipulador real, os torques seriam produzidos por atuadores eletromecânicos \cite{ieee_canadarm_technical} associados a redutores e sensores de posição e velocidade, e poderiam existir limitações de corrente elétrica, saturação térmica e flexibilidade estrutural, que não são representadas aqui.
+
+\subsection{Modelos de sensores e variáveis disponíveis ao controle}
+\label{subsec_modelos_sensoriamento_variaveis}
+
+Para realizar medições de distância entre as espaçonaves, utilizou-se sensor para esta tarefa e serão detalhadas a seguir.
+
+\subsubsection{Estados translacionais relativos}
+\label{subsubsec_sensoriamento_translacional}
+
+As leis de controle translacionais utilizam como entradas a posição e a velocidade relativas do perseguidor em \gls{lvlh} centrado no alvo, tratadas como variáveis disponíveis de forma ideal.
+Essas grandezas são obtidas do próprio modelo de dinâmica relativa em \gls{lvlh}, sem ruído ou necessidade de filtragem.
+A referência translacional é especificada diretamente no referencial \gls{lvlh}, a partir da definição de uma condição geométrica desejada para viabilizar a inserção do efetuador do \gls{mr} na região de acoplamento do alvo.
+
+Como contextualização, em missões reais a estimativa de posição e velocidade relativas pode ser obtida por sensores ópticos e ativos, como câmeras para navegação relativa e sensores de distância do tipo laser \cite{wertz2011sme_smad} rangefinder ou LiDAR, além de radar em certos perfis, combinados por filtros de estimação.
+Esses elementos não são modelados, pois o estudo assume acesso direto ao estado relativo.
+
+\subsubsection{Atitude e velocidade angular}
+\label{subsubsec_sensoriamento_atitude}
+
+A atitude do perseguidor é representada por quaternion e evolui segundo a cinemática de quaternion, integrada a partir da velocidade angular.
+O quaternion é normalizado a cada passo para garantir unidade e continuidade de representação.
+A lei de controle PD de atitude utiliza como entradas o quaternion atual do perseguidor e a velocidade angular do corpo, tratados como variáveis ideais fornecidas pelo modelo dinâmico correspondente (dinâmica de corpo rígido no modo não acoplado e dinâmica acoplada no modo operacional do \gls{mr}).
+A atitude desejada é definida como coincidência com o \gls{lvlh} centrado no alvo.
+
+Como referência física, em um sistema real a atitude e a velocidade angular são tipicamente obtidas por combinação de sensores inerciais (giroscópios) e sensores absolutos, como sensores estelares \cite{wertz2011sme_smad}, com fusão de dados para reduzir ruído e viés. No presente trabalho, essas grandezas são assumidas diretamente disponíveis.
+
+\subsubsection{Estados do MR e grandezas cinemáticas}
+\label{subsubsec_sensoriamento_mr_cinematica}
+
+No modo operacional do \gls{mr}, as posições e velocidades articulares são consideradas disponíveis de forma ideal.
+A cinemática direta fornece a pose do efetuador no referencial 0, e os Jacobianos linear e angular são calculados para suportar a cinemática inversa e a análise de mapeamento entre velocidades cartesianas e articulares.
+A referência geométrica do efetuador é obtida a partir da posição relativa do perseguidor em \gls{lvlh}.
+
+Como contextualização, em manipuladores reais as variáveis articulares são medidas por sensores de posição e velocidade, como encoders, e o estado do efetuador pode ser complementado por sensoriamento externo (câmeras ou sensores de distância) conforme a estratégia de acoplamento \cite{fehse2003,wertz2011sme_smad}. Esses detalhes são abstraídos pela hipótese de sensoriamento ideal.
+
+\subsection{Representação de limites operacionais na lógica de controle}
+\label{subsec_limites_operacionais_logica}
+
+Embora não haja modelagem de hardware, limites operacionais são representados por mecanismos lógicos e saturações nas leis de controle:
+
+\begin{itemize}
+\item saturação da aceleração de comando nos canais translacionais;
+\item limitação externa da velocidade relativa antes de alimentar a lei de controle PD translacional, com comutação do limite em função da distância e tempo mínimo de permanência na faixa;
+\item condicionamento temporal (tempo mínimo de permanência) para comutação de modo dinâmico, reduzindo alternâncias espúrias.
+\end{itemize}
+
+\subsection{Saturações e limitadores operacionais}
+\label{subsec_saturacoes_limitadores_operacionais}
+
+As saturações e os limitadores operacionais foram introduzidos para restringir o sistema a um regime de operação compatível com os objetivos da missão e, ao mesmo tempo, reduzir a probabilidade de excitação de dinâmicas indesejadas durante eventos simultâneos, como a atuação das leis de controle, a comutação entre modelos dinâmicos e a ativação do subsistema do \gls{mr}.
+Como o estudo adota modelos ideais de atuação e sensoriamento, tais mecanismos cumprem o papel de impor limites físicos e operacionais de forma explícita, evitando comandos excessivos e transientes agressivos nas variáveis de estado.
+
+\subsubsection{Limitação da velocidade relativa na aproximação em LVLH}
+\label{subsubsec_limitacao_veloc_relativa_lvlh}
+
+Na etapa de aproximação em \gls{lvlh}, a velocidade relativa em cada eixo é limitada antes de alimentar a lei de controle PD translacional.
+O limitador utiliza dois regimes em função da distância relativa: para distâncias acima de $20$ m, adota-se o limite de $\pm 0{,}30$ m/s; para distâncias iguais ou inferiores a 20 m, adota-se o limite de $\pm 0{,}03$ m/s \cite{vedant2025longrange}. 
+Essa escolha visa preservar a estabilidade numérica e operacional quando múltiplos subsistemas estão ativos e quando a comutação de dinâmica se torna iminente.
+
+A troca entre os regimes de limite de velocidade não ocorre por uma comparação instantânea de distância, mas por uma lógica de permanência temporal.
+O sistema só comuta para o regime de proximidade após permanecer dentro do limiar de $1$ m por $15$ s.
+Esse condicionamento reduz comutações indevidas por conta de oscilações em torno do limiar e melhora o comportamento do sistema no entorno da região de acoplamento.
+
+\subsubsection{Saturação da aceleração de comando na lei de controle PD translacional}
+\label{subsubsec_saturacao_acel_pd_translacional}
+
+Além do limite de velocidade relativa, a lei de controle PD translacional aplica saturação na aceleração de comando em cada eixo.
+Após o cálculo do comando a partir dos erros de posição e velocidade, o valor é limitado em módulo por uma aceleração máxima definida por parâmetro.
+Essa saturação impede que erros transitórios produzam acelerações não realistas e reduz a possibilidade de instabilidade numérica na integração das equações \gls{hcw} quando o sistema está submetido a mudanças rápidas de regime, como a transição para a dinâmica acoplada e a ativação do subsistema do \gls{mr}.
+Na implementação, a limitação de velocidade ocorre antes do cálculo do comando, e a saturação em aceleração ocorre após o cálculo do comando.
+
+\subsubsection{Saturações no modo acoplado com o \gls{mr}}
+\label{subsubsec_saturacoes_modo_acoplado_mr}
+
+No modo acoplado, são definidos limites adicionais associados às variáveis do subsistema dinâmico da espaçonave e do \gls{mr}.
+Em particular, são estabelecidos limites de aceleração, velocidade e posição para as juntas, bem como limites de aceleração e velocidade para a parte da espaçonave no modelo acoplado.
+Esses limites atuam como proteções operacionais no momento em que o sistema passa a considerar o acoplamento dinâmico e em que a cinemática inversa, a cinemática direta e os Jacobianos passam a operar em conjunto com as leis de controle.
+Adicionalmente, o torque articular comandado pela lei de controle PD do \gls{mr} é limitado por um valor máximo por junta, representando restrição operacional de atuação.
+
+\subsubsection{Motivação física para os limitadores}
+\label{subsubsec_motivacao_fisica_limitadores}
+
+A motivação principal para os limitadores é física: garantir que a dinâmica relativa e a dinâmica acoplada permaneçam em um regime coerente com a aproximação, minimizando transientes que poderiam comprometer a estabilidade do sistema quando várias ações ocorrem simultaneamente.
+Na aproximação no referencial \gls{lvlh}, a limitação de velocidade ajuda a manter a estabilidade do sistema, favorecendo uma entrada suave na janela geométrica de comutação.
+A saturação de aceleração restringe a agressividade da lei de controle PD translacional diante de erros momentâneos, evitando picos de comando.
+No modo operacional, as saturações associadas ao \gls{mr} e à espaçonave reduzem a chance de respostas não físicas em presença de acoplamentos e contribuem para a estabilidade numérica e para a coerência do regime de operação durante a aproximação final.

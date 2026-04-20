@@ -82,7 +82,7 @@ Em termos de tempo absoluto, o perseguidor levou $6.571$~s ($01$h$49$min$31$s) p
 \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Instante}} &
-\multicolumn{3}{c|}{\textbf{Longitude [grau]}} \\
+\multicolumn{3}{c|}{\textbf{Longitude relativa [grau]}} \\
 \textbf{[s]} & \textbf{Perseguidor} & \textbf{Alvo} & \textbf{Diferença} \\
 \hhline{|=|=|=|=|}
 $0$      & $-7,0000^{\circ}$   & $0,0000^{\circ}$    & $-7,0000^{\circ}$ \\
@@ -168,18 +168,16 @@ Consumo de $\Delta v_2$      & $27,29$ & $6.598$ \\
 \subsection{Cenários}
 
 Para avaliar o desempenho da aproximação de longa distância, novas condições iniciais foram estabelecidas para obtenção de novas medidas.
-
-\subsubsection{Condições iniciais}
-
+% \subsubsection{Condições iniciais}
 Conforme a Tabela~\ref{tab:cap4_longitude_cenarios}, o primeiro cenário (A) possui as medidas e valores já apresentados até o momento, enquanto que o cenário (B) possui nova condição inicial para nova análise.
 
 \begin{table}[H]
 \centering
-\caption{Longitude inicial do perseguidor por cenário}
+\caption{Longitude relativa inicial do perseguidor por cenário}
 \begin{tabularx}{\linewidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
 \hline
 \multicolumn{1}{|c|}{\textbf{Cenário}} &
-\multicolumn{1}{c|}{\textbf{Longitude inicial do perseguidor}} \\
+\multicolumn{1}{c|}{\textbf{Longitude relativa inicial do perseguidor}} \\
 \hhline{|=|=|}
 A & $-7^{\circ}$ ou $-0,1222$ (rad) \\
 \hline
@@ -198,14 +196,14 @@ A Figura~\ref{fig:cap4_posicoes_cenarios} exemplifica a posição do perseguidor
 \label{fig:cap4_posicoes_cenarios}
 \end{figure}
 
-\subsubsection{Longitude no instante da queima}
+\subsubsection{Longitude relativa ao alvo no instante da queima}
 
 Ao modificar a longitude inicial e o raio orbital inicial do perseguidor, os instantes de queima também foram alterados conforme apresentados nas Tabela~\ref{tab:cap4_longitudes_queimas} e Tabela~\ref{tab:cap4_longitudes_queimas_rad}.
 Como as órbitas são keplerianas e o intervalo simulado é curto, não se espera influência consistente de perturbações; portanto, os valores não foram comparados entre si.
 
 \begin{table}[H]
 \centering
-\caption{Longitudes na queima 1 e queima 2}
+\caption{Longitudes relativas na queima 1 e queima 2}
 \begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|
                              >{\raggedright\arraybackslash}c|
                              r|r|}
@@ -215,11 +213,11 @@ Como as órbitas são keplerianas e o intervalo simulado é curto, não se esper
 \multicolumn{1}{c|}{\textbf{Cenário A}} &
 \multicolumn{1}{c|}{\textbf{Cenário B}} \\
 \hhline{|=|=|=|=|}
-Longitude do perseguidor na queima 1 & grau & 229,38 & 128,15 \\
+Longitude relativa do perseguidor na queima 1 & grau & 229,38 & 128,15 \\
 \hline
 Longitude do alvo na queima 1        & grau & 231,31 & 132,02 \\
 \hline
-Longitude do perseguidor na queima 2 & grau & 49,38  & 308,15 \\
+Longitude relativa do perseguidor na queima 2 & grau & 49,38  & 308,15 \\
 \hline
 Longitude do alvo na queima 2        & grau & 49,38  & 308,16 \\
 \hline
@@ -239,11 +237,11 @@ Longitude do alvo na queima 2        & grau & 49,38  & 308,16 \\
 \multicolumn{1}{c|}{\textbf{Cenário A}} &
 \multicolumn{1}{c|}{\textbf{Cenário B}} \\
 \hhline{|=|=|=|=|}
-Longitude do perseguidor na queima 1 & radiano & 4,0034   & 2,2367   \\
+Longitude relativa do perseguidor na queima 1 & radiano & 4,0034   & 2,2367   \\
 \hline
 Longitude do alvo na queima 1        & radiano & 4,0372   & 2,3041   \\
 \hline
-Longitude do perseguidor na queima 2 & radiano & 0,861774 & 5,378311 \\
+Longitude relativa do perseguidor na queima 2 & radiano & 0,861774 & 5,378311 \\
 \hline
 Longitude do alvo na queima 2        & radiano & 0,861846 & 5,378383 \\
 \hline

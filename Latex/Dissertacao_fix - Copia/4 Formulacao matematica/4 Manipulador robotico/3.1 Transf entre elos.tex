@@ -1,0 +1,315 @@
+A transformação homogênea entre os referenciais consecutivos $\{i-1\}$ e $\{i\}$ é definida pela convenção de \gls{dh} \cite{craig2005}.
+Cada transformação descreve a relação geométrica entre dois referenciais adjacentes e depende dos quatro parâmetros apresentados na Tabela~\ref{tab_dh_zxx}.
+
+A matriz de transformação (Equação~\ref{eq_Ti_1}) é construída pela composição de quatro operações fundamentais:
+uma rotação de $\alpha_{i-1}$ em torno de $\hat{X}_{i-1}$, seguida de uma translação de $a_{i-1}$ ao longo de $\hat{X}_{i-1}$, uma rotação de $\theta_i$ em torno de $\hat{Z}_i$ e, por fim, uma translação de $d_i$ ao longo de $\hat{Z}_i$ \cite{craig2005}.
+% Assim, utilizando as matrizes elementares de rotação ($R$) e de translação ($D$), tem-se:
+Assim, utilizando as matrizes elementares de rotação e translação, tem-se:
+
+\begin{equation}
+{}^{i-1}T_i
+=
+T_X(\alpha_{i-1})\,D_X(a_{i-1})\,T_Z(\theta_i)\,D_Z(d_i).
+\label{eq_Ti_1}
+\end{equation}
+
+Portanto, a partir da Equação~\ref{eq_Ti_1}, resulta em:
+
+\begin{equation}
+{}^{i-1}_{\ \ \ i}T(q_i)
+=
+{}^{i-1}_{\ \ \ i'}A \, {}^{i'}_{\ \ i}A
+=
+\begin{bmatrix}
+\cos\theta_i & -\sin\theta_i \cos\alpha_i & \sin\theta_i \sin\alpha_i & a_i \cos\theta_i \\
+\sin\theta_i & \cos\theta_i \cos\alpha_i & -\cos\theta_i \sin\alpha_i & a_i \sin\theta_i \\
+0 & \sin\alpha_i & \cos\alpha_i & d_i \\
+0 & 0 & 0 & 1
+\end{bmatrix}.
+\end{equation}
+
+O termo $T_X(\alpha_{i-1})$ representa a rotação de ângulo $\alpha_{i-1}$ em torno de $\hat{X}_{i-1}$,
+$D_X(a_{i-1})$ representa a translação de magnitude $a_{i-1}$ ao longo de $\hat{X}_{i-1}$,
+$T_Z(\theta_i)$ representa a rotação de ângulo $\theta_i$ em torno de $\hat{Z}_i$ e
+$D_Z(d_i)$ representa a translação de magnitude $d_i$ ao longo de $\hat{Z}_i$.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As quatro matrizes elementares utilizadas na convenção de \gls{dh} podem ser escritas como \cite{craig2005}:
+
+\begin{equation}
+\label{eq_tx}
+T_X(\alpha_{i-1}) =
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & \cos\alpha_{i-1} & -\sin\alpha_{i-1} & 0 \\
+0 & \sin\alpha_{i-1} &  \cos\alpha_{i-1} & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+D_X(a_{i-1}) =
+\begin{bmatrix}
+1 & 0 & 0 & a_{i-1} \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+T_Z(\theta_i) =
+\begin{bmatrix}
+\cos\theta_i & -\sin\theta_i & 0 & 0 \\
+\sin\theta_i &  \cos\theta_i & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+    \label{eq_Dz}
+D_Z(d_i) =
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & d_i \\
+0 & 0 & 0 & 1
+\end{bmatrix}.
+\end{equation}
+
+% Multiplicando as operações na ordem prescrita em \eqref{eq_Ti_1}, obtém-se a forma geral \cite{craig2005}:
+
+% \begin{equation}
+% {}^{i-1}T_i =
+% \begin{bmatrix}
+% \cos\theta_i & -\sin\theta_i & 0 & a_{i-1} \\
+% \sin\theta_i\cos\alpha_{i-1} &
+% \cos\theta_i\cos\alpha_{i-1} &
+% -\sin\alpha_{i-1} &
+% -\sin\alpha_{i-1}d_i \\
+% \sin\theta_i\sin\alpha_{i-1} &
+% \cos\theta_i\sin\alpha_{i-1} &
+% \cos\alpha_{i-1} &
+% \cos\alpha_{i-1}d_i \\
+% 0 & 0 & 0 & 1
+% \end{bmatrix}.
+% \label{eq_transf_homogenea_geral_Craig}
+% \end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A matriz de transformação homogênea pode ser particionada em duas submatrizes: a matriz de rotação ${}^{i-1}R_i$ ($3 \times 3$), que descreve a orientação do referencial $\{i\}$ em relação a $\{i-1\}$, e o vetor de posição ${}^{i-1}P_i$ ($3 \times 1$), que descreve a posição da origem de $\{i\}$ expressa em $\{i-1\}$.
+Conforme \cite{craig2005}, essa estrutura é escrita como:
+
+\begin{equation}
+{}^{i-1}T_i =
+\begin{bmatrix}
+{}^{i-1}R_i & {}^{i-1}P_i \\
+\mathbf{0}_{1\times 3} & 1
+\end{bmatrix}.
+\label{eq_estrutura_submatrizes}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Expandindo \eqref{eq_transf_homogenea_geral_Craig} e aplicando os parâmetros do \gls{mr} em estudo (três juntas revolutas, $i=1,2,3$), as transformações entre elos consecutivos são obtidas pela substituição direta de $\alpha_{i-1}$, $a_{i-1}$ e $\theta_i$, com $d_i=0$, conforme a Tabela~\ref{tab_dh_zxx}.
+% Dessa forma, resulta:
+
+% \begin{equation}
+% {}^{i-1}T_i
+% =
+% \begin{bmatrix}
+% \cos\theta_i & -\sin\theta_i & 0 & a_{i-1} \\
+% \sin\theta_i\cos\alpha_{i-1} & \cos\theta_i\cos\alpha_{i-1} & -\sin\alpha_{i-1} & 0 \\
+% \sin\theta_i\sin\alpha_{i-1} & \cos\theta_i\sin\alpha_{i-1} & \cos\alpha_{i-1} & 0 \\
+% 0 & 0 & 0 & 1
+% \end{bmatrix}.
+% \label{eq_Ti_junto_RP_di0}
+% \end{equation}
+
+
+Para o \gls{mr} em estudo, composto por três juntas revolutas ($i=1,2,3$), as transformações homogêneas entre elos consecutivos são obtidas pela substituição direta dos parâmetros da Tabela~\ref{tab_dh_zxx} na forma geral, com $d_i=0$. Assim, as matrizes de transformação para cada elo são:
+
+% %%%%%%%%%%%% 0 a 1
+% \begin{equation}
+% {}^{0}T_1 =
+% \begin{bmatrix}
+% \cos\theta_1 & -\sin\theta_1 & 0 & 0 \\
+% \sin\theta_1 & \cos\theta_1  & 0 & 0 \\
+% 0            & 0             & 1 & 0 \\
+% 0            & 0             & 0 & 1
+% \end{bmatrix},
+% \label{eq_T01}
+% \end{equation}
+
+% %%%%%%%%%%%% 1 a 2
+% \begin{equation}
+% {}^{1}T_2 =
+% \begin{bmatrix}
+% \cos\theta_2 & -\sin\theta_2 & 0  & a1 \\
+% 0            & 0             & -1 & 0 \\
+% \sin\theta_2 & \cos\theta_2  & 0  & 0 \\
+% 0            & 0             & 0  & 1
+% \end{bmatrix},
+% \label{eq_T12}
+% \end{equation}
+
+
+% %%%%%%%%%%%% 2 a 3
+% \begin{equation}
+% {}^{2}T_3 =
+% \begin{bmatrix}
+% \cos\theta_3 & -\sin\theta_3 & 0 & a2 \\
+% \sin\theta_3 & \cos\theta_3  & 0 & 0 \\
+% 0            & 0             & 1 & 0 \\
+% 0            & 0             & 0 & 1
+% \end{bmatrix},
+% \label{eq_T23}
+% \end{equation}
+
+%%%%%%%%%%%% 0 a 1
+\begin{equation}
+{}^{0}T_1 =
+\begin{bmatrix}
+\cos\theta_1 & 0 & \sin\theta_1 & 0 \\
+\sin\theta_1 & 0 & -\cos\theta_1 & 0 \\
+0            & 1 & 0             & 0 \\
+0            & 0 & 0             & 1
+\end{bmatrix},
+\label{eq_T01}
+\end{equation}
+
+%%%%%%%%%%%% 1 a 2
+\begin{equation}
+{}^{1}T_2 =
+\begin{bmatrix}
+\cos\theta_2 & -\sin\theta_2 & 0 & a_2\cos\theta_2 \\
+\sin\theta_2 & \cos\theta_2  & 0 & a_2\sin\theta_2 \\
+0            & 0             & 1 & 0 \\
+0            & 0             & 0 & 1
+\end{bmatrix},
+\label{eq_T12}
+\end{equation}
+
+%%%%%%%%%%%% 2 a 3
+\begin{equation}
+{}^{2}T_3 =
+\begin{bmatrix}
+\cos\theta_3 & -\sin\theta_3 & 0 & a_3\cos\theta_3 \\
+\sin\theta_3 & \cos\theta_3  & 0 & a_3\sin\theta_3 \\
+0            & 0             & 1 & 0 \\
+0            & 0             & 0 & 1
+\end{bmatrix},
+\label{eq_T23}
+\end{equation}
+
+% Definindo $\theta_{23}=\theta_2+\theta_3$, a transformação homogênea acumulada do referencial $\{0\}$ ao referencial $\{3\}$ é dada por:
+
+% \begin{equation}
+% {}^{0}T_{3} = {}^{0}T_{1}\,{}^{1}T_{2}\,{}^{2}T_{3}.
+% \label{eq_T03_def}
+% \end{equation}
+
+% Substituindo \eqref{eq_T01}--\eqref{eq_T23} em \eqref{eq_T03_def} e efetuando as multiplicações, obtém-se:
+
+% \begin{equation}
+% {}^{0}T_{3} =
+% \begin{bmatrix}
+% \cos\theta_{1}\cos\theta_{23} & -\cos\theta_{1}\sin\theta_{23} & \sin\theta_{1} & \cos\theta_{1}\bigl(a1+a2\cos\theta_{2}\bigr)\\
+% \sin\theta_{1}\cos\theta_{23} & -\sin\theta_{1}\sin\theta_{23} & -\cos\theta_{1} & \sin\theta_{1}\bigl(a1+a2\cos\theta_{2}\bigr)\\
+% \sin\theta_{23} & \cos\theta_{23} & 0 & a2\sin\theta_{2}\\
+% 0 & 0 & 0 & 1
+% \end{bmatrix}.
+% \label{eq_T03_final}
+% \end{equation}
+
+Definindo $\theta_{23}=\theta_2+\theta_3$, a transformação homogênea acumulada do referencial $\{0\}$ ao referencial $\{3\}$ é dada por:
+
+\begin{equation}
+{}^{0}T_{3} = {}^{0}T_{1}\,{}^{1}T_{2}\,{}^{2}T_{3}.
+\label{eq_T03_def}
+\end{equation}
+
+Substituindo \eqref{eq_T01}--\eqref{eq_T23} em \eqref{eq_T03_def} e efetuando as multiplicações, obtém-se:
+
+\begin{equation}
+{}^{0}T_{3} =
+\begin{bmatrix}
+\cos\theta_{1}\cos\theta_{23} & -\cos\theta_{1}\sin\theta_{23} & \sin\theta_{1} & \cos\theta_{1}\bigl(a_2\cos\theta_{2}+a_3\cos\theta_{23}\bigr)\\
+\sin\theta_{1}\cos\theta_{23} & -\sin\theta_{1}\sin\theta_{23} & -\cos\theta_{1} & \sin\theta_{1}\bigl(a_2\cos\theta_{2}+a_3\cos\theta_{23}\bigr)\\
+\sin\theta_{23} & \cos\theta_{23} & 0 & a_2\sin\theta_{2}+a_3\sin\theta_{23}\\
+0 & 0 & 0 & 1
+\end{bmatrix}.
+\label{eq_T03_final}
+\end{equation}
+
+%%%%%%% inversa
+
+% A inversa de uma transformação homogênea ${}^{0}T_{3}=\begin{bmatrix}{}^{0}R_{3} & {}^{0}P_{3}\\ \mathbf{0}_{1\times 3} & 1\end{bmatrix}$ é dada por:
+
+% \begin{equation}
+% {}^{3}T_{0} = ({}^{0}T_{3})^{-1}
+% =
+% \begin{bmatrix}
+% ({}^{0}R_{3})^{T} & -({}^{0}R_{3})^{T}\,{}^{0}P_{3}\\
+% \mathbf{0}_{1\times 3} & 1
+% \end{bmatrix}.
+% \label{eq_T30_geral}
+% \end{equation}
+
+% Aplicando \eqref{eq_T30_geral} ao resultado de \eqref{eq_T03_final}, obtém-se:
+
+% \begin{equation}
+% {}^{3}T_{0} =
+% \begin{bmatrix}
+% \cos\theta_{1}\cos\theta_{23} & \sin\theta_{1}\cos\theta_{23} & \sin\theta_{23} & -a1\cos\theta_{23}-a2\cos\theta_{3}\\
+% -\cos\theta_{1}\sin\theta_{23} & -\sin\theta_{1}\sin\theta_{23} & \cos\theta_{23} & a1\sin\theta_{23}+a2\sin\theta_{3}\\
+% \sin\theta_{1} & -\cos\theta_{1} & 0 & 0\\
+% 0 & 0 & 0 & 1
+% \end{bmatrix}.
+% \label{eq_T30_final}
+% \end{equation}
+
+A inversa de uma transformação homogênea ${}^{0}T_{3}=\begin{bmatrix}{}^{0}R_{3} & {}^{0}P_{3}\\ \mathbf{0}_{1\times 3} & 1\end{bmatrix}$ é dada por:
+
+\begin{equation}
+{}^{3}T_{0} = ({}^{0}T_{3})^{-1}
+=
+\begin{bmatrix}
+({}^{0}R_{3})^{T} & -({}^{0}R_{3})^{T}\,{}^{0}P_{3}\\
+\mathbf{0}_{1\times 3} & 1
+\end{bmatrix}.
+\label{eq_T30_geral}
+\end{equation}
+
+Aplicando \eqref{eq_T30_geral} ao resultado de \eqref{eq_T03_final}, obtém-se:
+
+\begin{equation}
+{}^{3}T_{0} =
+\begin{bmatrix}
+\cos\theta_{1}\cos\theta_{23} & \sin\theta_{1}\cos\theta_{23} & \sin\theta_{23} & -a_2\cos\theta_{3}-a_3\\
+-\cos\theta_{1}\sin\theta_{23} & -\sin\theta_{1}\sin\theta_{23} & \cos\theta_{23} & -a_2\sin\theta_{3}\\
+\sin\theta_{1} & -\cos\theta_{1} & 0 & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}.
+\label{eq_T30_final}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% A pose do \gls{eef} (referencial $\{E\}$) em relação à espaçonave do \gls{mr} (referencial $\{0\}$) é obtida pela composição das transformações ao longo da cadeia cinemática:
+
+% \begin{equation}
+% {}^{0}T_{3}
+% =
+% {}^{0}T_{1}(\theta_1)\,{}^{1}T_{2}(\theta_2)\,{}^{2}T_{3}(\theta_3).
+% \label{eq_cinematica_direta_T0E}
+% \end{equation}
+
+% Sendo que o termo ${}^{0}T_{3}$ representa a matriz de transformação homogênea que descreve a pose do referencial $3$ em relação ao referencial $0$.  
+% A matriz ${}^{0}T_{1}(\theta_1)$ descreve a pose do referencial $1$ em relação ao referencial $0$, sendo função da variável articular $\theta_1$.  
+% De forma análoga, ${}^{1}T_{2}(\theta_2)$ representa a transformação do referencial $2$ em relação ao referencial $1$, dependente da variável articular $\theta_2$, enquanto ${}^{2}T_{3}(\theta_3)$ descreve a transformação do referencial $3$ em relação ao referencial $2$, dependente da variável articular $\theta_3$.  
+% As variáveis $\theta_i$ correspondem às coordenadas articulares associadas às juntas rotacionais do manipulador.
+
+Essa matriz descreve a transformação homogênea do referencial $\{0\}$ em relação ao referencial $\{3\}$, obtida a partir da inversa da transformação apresentada em \eqref{eq_T03_final}.

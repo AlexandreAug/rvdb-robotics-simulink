@@ -1,0 +1,246 @@
+
+acoplamento dinâmico? É o fenômeno pelo qual: o movimento de um subconjunto de variáveis, influencia a dinâmica de outro subconjunto.
+No seu modelo: termos M_{Bξ} e C_{Bξ}, definidos nas Eqs. (3.192), (3.216) e (3.217).
+
+auto valor: Indica o fator de amplificação ao longo de uma direção propria. Em sistemas dinâmicos lineares, está associada a estabilidade (parte real).
+escalar que satisfaz A v = lambda v. onde A é matriz, v é um autovetor não nulo
+
+estabilidade em termos de autovalores? Para sistema linear: todos os autovalores devem ter parte real negativa.
+Para sistema não linear (como o seu): analisa-se estabilidade local via linearização.
+
+auto vetor: a transformação linear não altera sua direção, apenas sua magnitude (escala por λ).
+É o vetor v associado a um autovalor λ tal que: A v = λ v.
+
+conservação da quantidade de movimento angular: se tenho uma força externa igual a zero, então a qtde de movimento angular também é 0. Eq 3.202. Explica reação dinamica da base qdo MR se move.
+
+Coriolis: termo da dinâmica, que depende das velocidades generalizadas. surge do acoplamento não linear entre graus de liberdade, aparece em 3.189
+fisicamente representa forças inerciais associadas a rotação e ao movimento relativo. não armazena energia. redistribui energia cinética entre os graus de liberdade
+
+
+coordenadas generalizadas: São variáveis independentes que: descrevem completamente a configuração do sistema, respeitam vínculos geométricos, não precisam ser coordenadas cartesianas
+Ex 3.169
+
+contribuição inercial: EFEITO DA ACELERAÇÃO DAS JUNTAS DO MANIP PRODUZ NA DINAMICA TRANSLACIONAL E ROTACIONAL DA ESPAÇONAVE
+OU SEJA, Se as juntas aceleram, elas geram forças e torques de reação na espaçonave, por conservação dA QTDE DE MOVIMENTO linear e angular.
+
+
+
+espaço de configuração? É o conjunto de todas as possíveis configurações do sistema.
+Para seu modelo: dimensão 3 + n, inclui orientação da espaçonave e postura do manipulador.
+
+espaço de estados? É o conjunto formado por: coordenadas generalizadas, velocidades generalizadas.
+Dimensão total: 2(3 + n). É o espaço onde a dinâmica evolui.
+
+
+forma quadrática da energia? É a expressão: T = ½ ȳ̇ᵀ M(ȳ) ȳ̇ (Eq. 3.195).
+Significa que: energia cinética depende quadraticamente das velocidades, M(ȳ) é matriz de inércia generalizada.
+
+
+grau de liberdade (DoF)? É o número mínimo de variáveis independentes necessárias para descrever a configuração do sistema.
+No seu caso: 3 rotacionais da espaçonave, n do manipulador.
+Total: 3 + n.
+
+
+linearização? É a aproximação do sistema não linear por: expansão em série de Taylor, em torno de ponto de operação.
+Permite análise de autovalores e estabilidade local.
+
+LINEAR = SATISFAZ A PROPORCIONALIDADE, ENTRADA 1, SAIDA 1, ENTRADA 2, SAIDA 2
+
+NAO LINEAR = PRODUTOS ENTRE VARIAVEIS, FUNÇOES TRIGONOMETRICAS, DEPENDENCIA DA MATRIZ DE INERCIA DA CONFIGURAÇAO
+
+matriz de inércia generalizada M(ȳ): É a matriz que relaciona acelerações generalizadas a torques, aparece na Eq. (3.189), é definida via energia cinética na Eq. (3.195),
+construída explicitamente na Eq. (3.198). Propriedades: simétrica, definida positiva, contém termos de acoplamento base–MR.
+
+matriz definida positiva? Uma matriz M é definida positiva se: x^T * M x > 0 para todo x ≠ 0.
+No seu caso: decorre da definição da energia cinética (Eq. 3.195).
+
+matriz simétrica? Uma matriz A é simétrica se: A = A^T.
+No seu modelo: M(ȳ) é simétrica por construção energética (Eq. 3.195).
+
+matriz definida positiva? M é definida positiva se: x^T M x > 0 para todo x ≠ 0.
+No seu caso: garante energia cinética sempre positiva.
+
+ortonormal: É um conjunto de vetores que são mutuamente ortogonais, possuem norma unitária.
+Em {B} e LVLH: os eixos são definidos como base ortonormal.
+
+ortogonal: Uma matriz Q é ortogonal se: Q^T * Q = I.
+Propriedades: preserva norma, preserva ângulos, representa rotação ou reflexão.
+No contexto do meu trabalho: matrizes de rotação são ortogonais.
+
+operador de inércia espacial: É o operador 6D M_i,spt que relaciona velocidade espacial a quantidade de movimento espacial, aparece na Eq. (3.200), unifica massa e tensor de inércia no formalismo espacial.
+quantidade de movimento angular
+
+=====================PSEUDO E CINEMATICA INVERSA================================
+
+pseudo-inversa é uma ferramenta para a solução aproximada quando a matriz não tem inversa tradicional,
+ela permite resolver sistemas lineares de forma consistente e encontrar soluções ótimas.
+
+Cinemática inversa, a inversão da jacobiana falha em configurações singulares.
+O fator de amortecimento LAMBDA trás estabilidade numérica da simulação,
+permitindo que o controle continue atuando mesmo perto dos limites do espaço de trabalho.
+
+A pseudo-inversa tradicional pode gerar soluções com valores muito grandes quando a matriz Jacobiana
+está próxima de uma singularidade. Para evitar isso, introduz-se um termo de amortecimento (ou regularização), que suaviza os cálculos e limita explosões numéricas.
+
+=====================PSEUDO E CINEMATICA INVERSA===============================
+
+quantidade de movimento angular: É o vetor h = I ω (para corpo rígido simples), ou, no formalismo espacial: parte angular de h_i,sp, extraída via matriz S_ω (Eq. 3.201).
+No sistema acoplado: h_tot é dado pela Eq. (3.202), conserva-se na ausência de torques externos.
+
+regime transitório? É o comportamento do sistema: imediatamente após perturbação ou comando, antes de atingir regime permanente.
+
+regime permanente? É o comportamento quando as variáveis se estabilizam, e o erro tende a valor constante (idealmente zero).
+
+torque generalizado? É a força conjugada às coordenadas generalizadas.
+Na Eq. (3.189): τ é o vetor de torques generalizados, inclui torques de atitude e torques nas juntas.
+
+
+variável ξ : vetor das coordenadas articulares do manipulador robótico (MR).
+Ou seja: Cada componente de ξ corresponde a um grau de liberdade do MR; Se o MR possui n juntas, então ξ = [ξ₁, ξ₂, …, ξₙ]^T;
+Essas variáveis descrevem a configuração do manipulador em relação à base {B}.
+
+
+velocidades generalizadas: São as derivadas temporais das coordenadas generalizadas
+No seu modelo: incluem velocidades angulares da espaçonave, e velocidades articulares do MR.
+Elas definem o estado cinemático completo do sistema
+
+===========
+
+PQ ENERGIA CINETICA NA DIN. ACOPLADA?
+
+É A FORMULAÇÃO ADOTADA É LAGRANGEANA.
+NA MECANICA ANALITICA, AS EQUAÇÕES DE MOVIMENTO SÃO OBTIDAS A PARTIR DA DIFERENÇA DA ENERGIA CINETICA TOTAL DO SISTEMA E ENERGIA POTENCIAL.
+NO CASO DO MEU TRABALHO, O SISTEMA É LIVRE NO ESPAÇO E NÃO HÁ ENERGIA POTENCIAL GRAVITACIONAL RELEVANTE PARA A DINAMICA INTERNA.
+PORTANTO, TODA A ESTRUTURA DO SISTEMA ESTÁ CONTIDA NA ENERGIA CINETICA TOTAL.
+
+AO DESCREVER PELA ENERGIA CINETICA TOTAL COMO FUNÇAO DAS COORDENADAS GENERALIZADAS E SUAS DERIVADAS, OBTEM-SE:
+- MATRIZ DE INERCIA ACOPLADA
+- TERMOS DE CORIOLIS
+- TERMOS GIROSCOPICOS
+
+============
+
+PQ 1/2 NA ENERGIA CINETICA?
+
+Porque a energia cinética é definida como o trabalho necessário para acelerar uma partícula desde repouso até velocidade v.
+PARTE DA FORMULA DA FORÇA, F = M * A, E FAZENDO A INTEGRAÇÃO DO TRABALHO, OBTEM-SE QUE ENERGIA CINETICA É 1/2 DE M * V^2
+DE FORMA ANALOGA, PARA UM CORPO RIGIDO EM ROTAÇÃO, FAZ 1/2 OMEGA^T * I * OMEGA
+ENTAO O 1/2 SURGE NATURALMENTE DA INTEGRAÇAO DA ACELERAÇAO EM FUNCAO DA VELOCIDADE.
+
+
+===========
+>>> Por que aparecem termos giroscópicos na dinâmica da espaçonave?
+
+R:
+
+Porque o tensor de inércia está expresso em um referencial que gira com a espaçonave.
+Ao derivar o momento angular em referencial não inercial, surge o termo:
+
+ω × (I ω)
+
+Esse é o termo giroscópico clássico da dinâmica rotacional.
+=============
+>>> Por que a matriz de inércia acoplada é simétrica?
+
+R: 
+Porque ela deriva da energia cinética, que é uma forma quadrática nas velocidades generalizadas:
+
+T = 1/2 q̇^T M(q) q̇
+
+Toda forma quadrática associada a energia física deve ser positiva definida (ou semidefinida) e, portanto, a matriz M é simétrica.
+
+===============
+>>> Por que a matriz de Coriolis não é única?
+
+R: 
+Porque diferentes escolhas de representação podem gerar matrizes C distintas, desde que satisfaçam:
+
+Ṁ − 2C é antissimétrica.
+
+O importante é a estrutura energética do sistema, não a forma específica de C.
+===========
+>>> Por que o momento angular total é conservado mesmo com o manipulador se movendo?
+
+R: 
+Porque as forças entre elos e espaçonave são internas.
+Pela conservação do momento angular: d h_total / dt = τ_ext
+
+Na ausência de torque externo, o momento angular apenas se redistribui internamente.
+=============
+>>> Por que o acoplamento desaparece se o manipulador estiver travado?
+
+R: Porque não há contribuição inercial.
+não há termos de Coriolis associados às juntas.
+O sistema se reduz à dinâmica de corpo rígido único.
+=============
+>>> Por que o formalismo espacial (6D) é vantajoso?
+
+R: Porque ele unifica: translação,rotação,em uma única estrutura matricial,
+simplificando a modelagem de sistemas multibody e permitindo algoritmos recursivos eficientes.
+=============
+>>> Por que o centro de massa do sistema é importante?
+
+R: Porque, na ausência de força externa, o centro de massa do sistema se move com velocidade constante.
+Isso separa: dinâmica translacional do sistema, dinâmica interna (atitude e juntas)
+=============
+>>> Por que usar coordenadas generalizadas ao invés de coordenadas cartesianas?
+
+R: Porque coordenadas generalizadas: reduzem restrições explícitas incorporam vínculos geométricos
+produzem equações com dimensão mínima
+=============
+>>> Por que a energia potencial pode ser desprezada na dinâmica interna orbital?
+
+R: Porque, para o sistema espaçonave + manipulador tratado como corpo único em órbita,
+o campo gravitacional atua aproximadamente de forma uniforme
+sobre o conjunto, não alterando a dinâmica relativa interna (modelo de microgravidade).
+=============
+>>> Se o momento angular total é conservado, por que a atitude da espaçonave muda?
+
+R:
+
+Porque o que é conservado é o momento angular total do sistema.
+Quando o manipulador se move, ele altera sua parcela de momento angular.
+Para manter a soma constante, a espaçonave ajusta sua rotação.
+==============
+>>> O sistema é holonômico ou não holonômico?
+
+R: O manipulador articulado é holonômico (restrições integráveis).
+A conservação de momento angular introduz um acoplamento dinâmico, mas não é uma restrição geométrica não integrável.
+
+==============
+>>> Por que a dinâmica acoplada pode gerar instabilidade de atitude?
+
+R: Porque movimentos rápidos das juntas podem transferir momento angular para a espaçonave, excitando modos rotacionais, especialmente se o tensor de inércia for mal condicionado.
+==============
+>>> Qual a diferença entre modelagem Newton–Euler e Lagrange?
+
+R: Newton–Euler trabalha com forças e torques diretamente.
+Lagrange trabalha com energia escalar e coordenadas generalizadas.
+
+Ambas são equivalentes, mas Lagrange facilita a obtenção sistemática da matriz de inércia acoplada.
+==============
+>>> Por que o sistema é subatuado?
+
+R: Porque a espaçonave pode não ter atuadores em todos os graus de liberdade enquanto o manipulador se move.
+O movimento das juntas pode induzir rotação na espaçonave sem controle direto.
+==============
+>>> O que acontece se houver torque externo pequeno (ex.: gradiente gravitacional)?
+
+R: O momento angular total deixa de ser estritamente conservado.
+Passa a valer:
+
+d h_total / dt = τ_ext
+
+Logo, o sistema evolui segundo a perturbação aplicada.
+==============
+>>> Por que o modelo assume corpo rígido?
+
+R: Porque deformações estruturais são desprezadas.
+Se flexibilidade fosse relevante, surgiriam modos vibratórios
+adicionais e termos elásticos na energia potencial.
+==============
+>>> Qual hipótese física é crítica para a validade da modelagem?
+
+R: Sistema isolado (sem torque externo significativo),
+corpos rígidos, massa constante, referencial inercial bem definido.
+==============

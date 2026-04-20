@@ -1,0 +1,302 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{canadarm2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e804b8667889ee4d133d9a1b710e1f2d}{%
+           family={{Canadian Space Agency (CSA)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{fullhash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{fullhashraw}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{bibnamehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authorbibnamehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authornamehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authorfullhash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authorfullhashraw}{e804b8667889ee4d133d9a1b710e1f2d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em January 2025}
+      \field{title}{About Canadarm2}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.asc-csa.gc.ca/eng/iss/canadarm2/about.asp
+      \endverb
+      \verb{url}
+      \verb https://www.asc-csa.gc.ca/eng/iss/canadarm2/about.asp
+      \endverb
+    \endentry
+    \entry{dennehy_2016_rcs}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=edf76bd8cd6a7d1db051b31f44b3cab9}{%
+           family={Dennehy},
+           familyi={D\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {NASA}%
+      }
+      \strng{namehash}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \strng{fullhash}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \strng{fullhashraw}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \strng{bibnamehash}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \strng{authorbibnamehash}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \strng{authornamehash}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \strng{authorfullhash}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \strng{authorfullhashraw}{edf76bd8cd6a7d1db051b31f44b3cab9}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{note}{NASA MBSE Pathfinder Webinar Series: Where the Art and Science of SE Come Together}
+      \field{title}{Rendezvous \& Capture Systems}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb <inserir_link_se_disponivel>
+      \endverb
+      \verb{url}
+      \verb inserir_link_se_disponivel
+      \endverb
+    \endentry
+    \entry{fehse2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5ecb95438e87e12b20e8c9e9c27d0db7}{%
+           family={Fehse},
+           familyi={F\bibinitperiod},
+           given={Wigbert},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{fullhash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{fullhashraw}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{bibnamehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authorbibnamehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authornamehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authorfullhash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authorfullhashraw}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521824927}
+      \field{series}{Cambridge Aerospace Series}
+      \field{title}{Automated Rendezvous and Docking of Spacecraft}
+      \field{year}{2003}
+    \endentry
+    \entry{jaxa_deb_rendezvous}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=20909e491e721a1a24dbfcfde595e9f2}{%
+           family={{Japan Aerospace Exploration Agency (JAXA)}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {JAXA}%
+      }
+      \strng{namehash}{20909e491e721a1a24dbfcfde595e9f2}
+      \strng{fullhash}{20909e491e721a1a24dbfcfde595e9f2}
+      \strng{fullhashraw}{20909e491e721a1a24dbfcfde595e9f2}
+      \strng{bibnamehash}{20909e491e721a1a24dbfcfde595e9f2}
+      \strng{authorbibnamehash}{20909e491e721a1a24dbfcfde595e9f2}
+      \strng{authornamehash}{20909e491e721a1a24dbfcfde595e9f2}
+      \strng{authorfullhash}{20909e491e721a1a24dbfcfde595e9f2}
+      \strng{authorfullhashraw}{20909e491e721a1a24dbfcfde595e9f2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Research on Technology to Rendezvous with Space Debris}
+      \field{urlday}{3}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.kenkai.jaxa.jp/eng/research/debris/deb-rendezvous.html
+      \endverb
+      \verb{url}
+      \verb https://www.kenkai.jaxa.jp/eng/research/debris/deb-rendezvous.html
+      \endverb
+    \endentry
+    \entry{nardin2017_simulador}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=21ae2b0e988bbd042fd006c5a8d55be9}{%
+           family={Nardin},
+           familyi={N\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf967decc8bb71b1511fda9a18f0e4f9}{%
+           family={Rocco},
+           familyi={R\bibinitperiod},
+           given={E.\bibnamedelimi M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {São José dos Campos, SP, Brasil}%
+      }
+      \list{organization}{1}{%
+        {Instituto Nacional de Pesquisas Espaciais (INPE)}%
+      }
+      \strng{namehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{fullhash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{fullhashraw}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{bibnamehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authorbibnamehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authornamehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authorfullhash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authorfullhashraw}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Anais do 8{º} Workshop em Engenharia e Tecnologia Espaciais}
+      \field{month}{8}
+      \field{note}{09--10 de agosto de 2017}
+      \field{title}{Simulador de Manobras de Atracação de Satélites Dotados de Manipuladores Robóticos}
+      \field{year}{2017}
+    \endentry
+    \entry{mev_northrop}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c64907e559117e32c07abc515c87983}{%
+           family={{Northrop Grumman}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Northrop Grumman}%
+      }
+      \strng{namehash}{0c64907e559117e32c07abc515c87983}
+      \strng{fullhash}{0c64907e559117e32c07abc515c87983}
+      \strng{fullhashraw}{0c64907e559117e32c07abc515c87983}
+      \strng{bibnamehash}{0c64907e559117e32c07abc515c87983}
+      \strng{authorbibnamehash}{0c64907e559117e32c07abc515c87983}
+      \strng{authornamehash}{0c64907e559117e32c07abc515c87983}
+      \strng{authorfullhash}{0c64907e559117e32c07abc515c87983}
+      \strng{authorfullhashraw}{0c64907e559117e32c07abc515c87983}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Página consultada para informações sobre serviços de logística espacial e veículos de extensão de missão, inclusive o Mission Extension Vehicle (MEV)}
+      \field{title}{SpaceLogistics – in-orbit satellite servicing and space logistics services}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.northropgrumman.com/what-we-do/space/space-logistics-services
+      \endverb
+      \verb{url}
+      \verb https://www.northropgrumman.com/what-we-do/space/space-logistics-services
+      \endverb
+    \endentry
+    \entry{weberHohmann}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=770bbbac828f8ad8af5a2b94d361ee40}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{fullhash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{fullhashraw}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{bibnamehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authorbibnamehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authornamehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authorfullhash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authorfullhashraw}{770bbbac828f8ad8af5a2b94d361ee40}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{From *Orbital Mechanics \& Astrodynamics*. Licensed under CC BY-SA}
+      \field{title}{Hohmann Transfer}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://orbital-mechanics.space/orbital-maneuvers/hohmann-transfer.html
+      \endverb
+      \verb{url}
+      \verb https://orbital-mechanics.space/orbital-maneuvers/hohmann-transfer.html
+      \endverb
+    \endentry
+    \entry{yoshida_reactionless_etsvii}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=00f2f390e4f769bd7ba816b64972b509}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54586232596784bec8423c4224bf81dc}{%
+           family={Nenchev},
+           familyi={N\bibinitperiod},
+           given={Dragomir\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{fullhash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{fullhashraw}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{bibnamehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authorbibnamehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authornamehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authorfullhash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authorfullhashraw}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{<Nome do evento ou conferência, se aplicável>}
+      \field{note}{Department of Aeronautics and Space Engineering, Tohoku University; Department of Intelligent Machines and System Engineering, Hirosaki University}
+      \field{title}{Reactionless Manipulations and Proposal to ETS-VII On-Board Experiments}
+      \field{year}{1999}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,33 @@
+% \section{Principais resultados e limitações}
+% \label{sec_cap5_resultados_limitacoes}
+
+% Os resultados numéricos apresentados no Capítulo~\ref{sec_cap4_objetivo_criterios} indicam que a missão é coerente e cumpre os objetivos propostos dentro das hipóteses adotadas.
+% Na aproximação de longa distância, a transferência de Hohmann conduz o perseguidor a uma órbita próxima com a do alvo, possuindo erro radial e de fase suficientemente pequenos para justificar a descrição posterior do movimento relativo no referencial \gls{lvlh} por meio das equações linearizadas de Hill--Clohessy--Wiltshire.
+% Essa etapa estabelece condições iniciais consistentes para o início do controle translacional na vizinhança do alvo.
+
+% Na aproximação de curta distância, o controle realizado no referencial \gls{lvlh} reduz as componentes de posição e velocidade relativas para dentro de limites preestabelecidos.
+% Os tempos de estabilização são relativamente longos, mas compatíveis com um compromisso entre rapidez de convergência e limitação de esforços de controle.
+% A imposição de saturações sobre a velocidade relativa evita que o modelo linearizado produza trajetórias com aproximações excessivamente rápidas, mantendo as velocidades em patamares seguros após a estabilização.
+
+% Na aproximação final, a arquitetura de controle mostrou-se capaz de coordenar atitude, movimento da espaçonave e atuação do manipulador.
+% O controlador de atitude mantém o perseguidor alinhado com o alvo, tanto antes quanto depois da ativação da dinâmica acoplada espaçonave--manipulador, compensando as perturbações geradas pelo movimento das juntas.
+% Em paralelo, o controle das juntas acompanha a referência gerada pela cinemática inversa e aplicada na dinâmica articular por meio de torques comandados por um controlador \gls{pd}.
+% Nesta simulação, a referência de posição foi definida como o ponto $(0,0,0)$ no referencial \gls{lvlh}, convertido para o referencial do manipulador robótico (referencial $\{0\}$).
+% A simulação é encerrada quando a ferramenta atinge essa referência dentro dos limites estabelecidos.
+
+% Ressalta-se que o erro de posição da ferramenta não necessariamente converge exatamente a zero, pois o controle empregado é do tipo \gls{pd} (sem ação integral) e a dinâmica numérica inclui saturações e regularizações (por exemplo, limitação de aceleração e regularização da matriz de inércia), além de tolerâncias internas e das aproximações inerentes ao cálculo da cinemática inversa.
+% Assim, o desempenho é caracterizado pelos valores residuais do erro de posição da ferramenta e por sua estabilização na vizinhança do ponto desejado, conforme os sinais registrados no Simulink.
+
+% Ressalta-se, por fim, que as simulações consideram restrições de comando de controle e mecanismos de proteção numérica, mas não visam representar a dinâmica completa de atuação e sensoriamento de uma arquitetura específica de propulsão e de controle de atitude.
+
+% \begin{itemize}
+%     \item A dinâmica relativa é descrita por um modelo linearizado de Hill--Clohessy--Wiltshire em órbitas circulares e coplanares, sem inclusão de perturbações orbitais relevantes (como termos de achatamento $J_2$, arrasto atmosférico ou efeitos de terceiros corpos).
+
+%     \item O modelo simulador inclui não-linearidades relevantes por saturação e limitação de sinais (por exemplo, limites de velocidade e aceleração, além de regularizações numéricas nos códigos computacionais).
+%     No entanto, a cadeia de atuação e sensoriamento não foi fechada com um modelo físico de atuadores e sensores: não há representação explícita de limites de torque/impulso dos atuadores de atitude e translação, nem dinâmica de acionamento, atrasos, ruídos/vieses de medida ou falhas.
+%     Assim, os resultados devem ser interpretados como desempenho do esquema de controle sob restrições de comando, e não como verificação de viabilidade frente a uma arquitetura específica de atuadores.
+
+%     \item O manipulador robótico é modelado sem consideração de flexibilidade estrutural, vibrações elásticas ou efeitos dinâmicos associados a estruturas mais longas ou leves.
+% \end{itemize}
+
+% Essas limitações não invalidam as conclusões obtidas, mas delimitam o escopo de validade dos resultados e motivam estudos futuros em direção a descrições mais completas do ambiente orbital, da interação mecânica na fase de contato e da dinâmica das espaçonaves após o acoplamento.

@@ -1,0 +1,295 @@
+
+% % sec 4.3.5
+
+% \subsection{Ângulos de Euler}
+% \label{sec_angulos_euler}
+
+% Assim como a matriz de cossenos diretores, a orientação de um referencial $B$ em relação a outro $N$ pode ser descrita por ângulos de Euler.
+% Conforme \cite{wie2008space}, considera-se a sequência de rotações $C_1(\phi_1) \leftarrow C_2(\phi_2) \leftarrow C_3(\phi_3)$ que leva o referencial inercial $N$ até o sistema do corpo $B$.
+% A sequência de transformações entre os referenciais intermediários $N'$ e $N''$ é dada por:
+
+% \begin{equation}
+% N \xrightarrow{C_3(\phi_3)} N' \xrightarrow{C_2(\phi_2)} N'' \xrightarrow{C_1(\phi_1)} B.
+% \end{equation}
+
+% Isto é, parte-se do referencial inercial $N$ e aplica-se primeiro a rotação $C_3(\phi_3)$ em torno do eixo $z$, obtendo $N'$; em seguida, aplica-se $C_2(\phi_2)$ em torno do novo eixo $y'$, obtendo $N''$; e por fim, $C_1(\phi_1)$ em torno do eixo $x''$, obtendo o referencial do corpo $B$.
+% A matriz de cossenos diretores resultante é dada pelo produto das matrizes elementares:
+
+% \begin{equation}
+% \label{eq_sequencia_c1c2c3}
+% \mathbf{C}^{B/N}
+% =
+% C_1(\phi_1)\,C_2(\phi_2)\,C_3(\phi_3).
+% \end{equation}
+
+% As matrizes de rotação elementar para essa sequência são definidas como \cite{wie2008space}:
+
+% \begin{equation}
+% C_1(\phi_1)=
+% \begin{bmatrix}
+% 1 & 0 & 0 \\
+% 0 & \cos\phi_1 & \sin\phi_1 \\
+% 0 & -\sin\phi_1 & \cos\phi_1
+% \end{bmatrix},
+% \label{eq_C1_phi1}
+% \end{equation}
+
+% \begin{equation}
+% C_2(\phi_2)=
+% \begin{bmatrix}
+% \cos\phi_2 & 0 & -\sin\phi_2 \\
+% 0 & 1 & 0 \\
+% \sin\phi_2 & 0 & \cos\phi_2
+% \end{bmatrix},
+% \label{eq_C2_phi2}
+% \end{equation}
+
+% \begin{equation}
+% C_3(\phi_3)=
+% \begin{bmatrix}
+% \cos\phi_3 & \sin\phi_3 & 0 \\
+% -\sin\phi_3 & \cos\phi_3 & 0 \\
+% 0 & 0 & 1
+% \end{bmatrix}.
+% \label{eq_C3_phi3}
+% \end{equation}
+
+% Os ângulos $\phi_1, \phi_2, \phi_3$ correspondem, respectivamente, aos movimentos de rolagem (\textit{roll}), arfagem (\textit{pitch}) e guinada (\textit{yaw}).
+% A velocidade angular total de $B$ em relação a $N$ é obtida pela soma vetorial das taxas angulares relativas em cada etapa da rotação:
+
+% \begin{equation}
+% \vec{\omega}^{B/N}
+% =
+% \vec{\omega}_{B/N''}
+% +
+% \vec{\omega}_{N''/N'}
+% +
+% \vec{\omega}_{N'/N}
+% =
+% \dot{\phi}_1\,\vec{b}_1
+% +
+% \dot{\phi}_2\,\vec{n}''_2
+% +
+% \dot{\phi}_3\,\vec{n}'_3.
+% \label{eq_omega_soma_contrib}
+% \end{equation}
+
+% O termo $\vec{b}_1$ é o eixo $x$ do corpo, $\vec{n}''_2$ é o eixo $y$ do referencial intermediário $N''$ e $\vec{n}'_3$ é o eixo $z$ do referencial intermediário $N'$.
+
+% Ao projetar essas contribuições nos eixos do sistema do corpo $B$ ($\{\vec{b}_1, \vec{b}_2, \vec{b}_3\}$), obtém-se a relação cinemática diferencial entre as componentes da velocidade angular $\vec{\omega}^{B/N} = [\omega_1, \omega_2, \omega_3]^T$ e as taxas dos ângulos de Euler \cite{wie2008space}:
+
+% \begin{equation}
+% \begin{bmatrix}
+% \omega_1 \\[2pt] \omega_2 \\[2pt] \omega_3
+% \end{bmatrix}
+% =
+% \begin{bmatrix}
+% 1 & 0 & -\sin\phi_2 \\
+% 0 & \cos\phi_1 & \sin\phi_1 \cos\phi_2 \\
+% 0 & -\sin\phi_1 & \cos\phi_1 \cos\phi_2
+% \end{bmatrix}
+% \begin{bmatrix}
+% \dot{\phi}_1 \\[2pt] \dot{\phi}_2 \\[2pt] \dot{\phi}_3
+% \end{bmatrix}.
+% \label{eq_cinematica_euler}
+% \end{equation}
+
+% A relação inversa, que fornece as taxas dos ângulos de Euler em função da velocidade angular medida pelos sensores da espaçonave, é dada por:
+
+% \begin{equation}
+% \begin{bmatrix}
+% \dot{\phi}_1 \\[2pt] \dot{\phi}_2 \\[2pt] \dot{\phi}_3
+% \end{bmatrix}
+% =
+% \frac{1}{\cos\phi_2}
+% \begin{bmatrix}
+% \cos\phi_2 & \sin\phi_1 \sin\phi_2 & \cos\phi_1 \sin\phi_2 \\
+% 0 & \cos\phi_1 \cos\phi_2 & -\sin\phi_1 \cos\phi_2 \\
+% 0 & \sin\phi_1 & \cos\phi_1
+% \end{bmatrix}
+% \begin{bmatrix}
+% \omega_1 \\[2pt] \omega_2 \\[2pt] \omega_3
+% \end{bmatrix}.
+% \label{eq_euler_inversa}
+% \end{equation}
+
+% A matriz na Equação~\eqref{eq_euler_inversa} torna-se singular quando $\phi_2 = \pm 90^\circ$ (singularidade de \textit{pitch}), pois $\cos\phi_2 = 0$.
+% Nessa configuração, conhecida como \textit{gimbal lock}, os eixos da primeira e terceira rotações alinham-se, resultando na perda de um grau de liberdade na representação matemática da atitude.
+% Essa limitação motiva o uso de parametrizações globais não singulares, como os parâmetros de Euler (quatérnions), para descrever grandes manobras de atitude.
+
+
+%%%%%% após 20/04/2026:
+
+% sec 4.3.4
+
+\subsection{Ângulos de Euler}
+\label{sec_angulos_euler}
+
+Assim como a matriz de cossenos diretores, a orientação do referencial do corpo $B$ em relação ao referencial orbital $A$ pode ser descrita por ângulos de Euler. Conforme \cite{wie2008space}, considera-se a sequência de rotações $C_1(\theta_1)\leftarrow C_2(\theta_2)\leftarrow C_3(\theta_3)$, que leva o referencial orbital $A$ ao referencial do corpo $B$.
+
+A matriz de cossenos diretores associada a essa sequência é dada por
+
+\begin{equation}
+\mathbf{C}^{B/A}
+=
+C_1(\theta_1)\,C_2(\theta_2)\,C_3(\theta_3).
+\label{eq_sequencia_c1c2c3_orbital}
+\end{equation}
+
+As matrizes de rotação elementar são escritas como \cite{wie2008space}
+
+\begin{equation}
+C_1(\theta_1)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\theta_1 & \sin\theta_1 \\
+0 & -\sin\theta_1 & \cos\theta_1
+\end{bmatrix},
+\label{eq_C1_theta1}
+\end{equation}
+
+\begin{equation}
+C_2(\theta_2)=
+\begin{bmatrix}
+\cos\theta_2 & 0 & -\sin\theta_2 \\
+0 & 1 & 0 \\
+\sin\theta_2 & 0 & \cos\theta_2
+\end{bmatrix},
+\label{eq_C2_theta2}
+\end{equation}
+
+\begin{equation}
+C_3(\theta_3)=
+\begin{bmatrix}
+\cos\theta_3 & \sin\theta_3 & 0 \\
+-\sin\theta_3 & \cos\theta_3 & 0 \\
+0 & 0 & 1
+\end{bmatrix}.
+\label{eq_C3_theta3}
+\end{equation}
+
+Os ângulos $\theta_1$, $\theta_2$ e $\theta_3$ correspondem, respectivamente, aos ângulos de rolagem, arfagem e guinada da espaçonave em relação ao referencial orbital \gls{lvlh}.
+
+Inicialmente, a velocidade angular relativa do corpo em relação ao referencial orbital pode ser escrita como \cite{wie2008space}
+
+\begin{equation}
+\begin{bmatrix}
+\omega^{\prime}_1 \\
+\omega^{\prime}_2 \\
+\omega^{\prime}_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & -\sin\theta_2 \\
+0 & \cos\theta_1 & \sin\theta_1\cos\theta_2 \\
+0 & -\sin\theta_1 & \cos\theta_1\cos\theta_2
+\end{bmatrix}
+\begin{bmatrix}
+\dot{\theta}_1 \\
+\dot{\theta}_2 \\
+\dot{\theta}_3
+\end{bmatrix}.
+\label{eq_bongwie_6150}
+\end{equation}
+
+Entretanto, para um corpo rígido em órbita circular, a velocidade angular total da espaçonave em relação ao referencial inercial $N$ deve incluir a contribuição da rotação orbital. Assim,
+
+\begin{equation}
+\vec{\omega}
+\equiv
+\vec{\omega}^{B/N}
+=
+\vec{\omega}^{B/A}
++
+\vec{\omega}^{A/N}
+=
+\vec{\omega}^{B/A}
+-
+n\,\vec{a}_2.
+\label{eq_omega_total_bongwie}
+\end{equation}
+
+Em que $n$ é a velocidade angular orbital constante, e $\vec{a}_2$ é o segundo versor do referencial orbital expresso no referencial do corpo. Para a sequência $C_1(\theta_1)\leftarrow C_2(\theta_2)\leftarrow C_3(\theta_3)$, esse versor é dado por:
+
+\begin{equation}
+\vec{a}_2
+=
+C_{12}\,\vec{b}_1
++
+C_{22}\,\vec{b}_2
++
+C_{32}\,\vec{b}_3
+=
+\cos\theta_2\sin\theta_3\,\vec{b}_1
++
+\left(
+\sin\theta_1\sin\theta_2\sin\theta_3+\cos\theta_1\cos\theta_3
+\right)\vec{b}_2
++
+\left(
+\cos\theta_1\sin\theta_2\sin\theta_3-\sin\theta_1\cos\theta_3
+\right)\vec{b}_3.
+\label{eq_a2_expressa_em_B}
+\end{equation}
+
+Dessa forma, a relação entre a velocidade angular total $\vec{\omega}^{B/N}$ e as taxas dos ângulos de Euler passa a ser escrita como:
+
+\begin{equation}
+\begin{bmatrix}
+\omega_1 \\
+\omega_2 \\
+\omega_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & -\sin\theta_2 \\
+0 & \cos\theta_1 & \sin\theta_1\cos\theta_2 \\
+0 & -\sin\theta_1 & \cos\theta_1\cos\theta_2
+\end{bmatrix}
+\begin{bmatrix}
+\dot{\theta}_1 \\
+\dot{\theta}_2 \\
+\dot{\theta}_3
+\end{bmatrix}
+-
+n
+\begin{bmatrix}
+\cos\theta_2\sin\theta_3 \\
+\sin\theta_1\sin\theta_2\sin\theta_3+\cos\theta_1\cos\theta_3 \\
+\cos\theta_1\sin\theta_2\sin\theta_3-\sin\theta_1\cos\theta_3
+\end{bmatrix}.
+\label{eq_bongwie_6151}
+\end{equation}
+
+A Equação~\eqref{eq_bongwie_6151} mostra explicitamente que, para um corpo rígido em órbita, a cinemática diferencial da atitude inclui a contribuição da rotação orbital. Portanto, essa relação não coincide com a forma usual empregada para um corpo rígido em solo ou em referencial inercial fixo.
+A relação inversa, que fornece as taxas dos ângulos de Euler em função da velocidade angular total da espaçonave, é dada por:
+
+\begin{equation}
+\begin{bmatrix}
+\dot{\theta}_1 \\
+\dot{\theta}_2 \\
+\dot{\theta}_3
+\end{bmatrix}
+=
+\frac{1}{\cos\theta_2}
+\begin{bmatrix}
+\cos\theta_2 & \sin\theta_1\sin\theta_2 & \cos\theta_1\sin\theta_2 \\
+0 & \cos\theta_1\cos\theta_2 & -\sin\theta_1\cos\theta_2 \\
+0 & \sin\theta_1 & \cos\theta_1
+\end{bmatrix}
+\begin{bmatrix}
+\omega_1 \\
+\omega_2 \\
+\omega_3
+\end{bmatrix}
++
+\frac{n}{\cos\theta_2}
+\begin{bmatrix}
+\sin\theta_3 \\
+\cos\theta_2\cos\theta_3 \\
+\sin\theta_2\sin\theta_3
+\end{bmatrix}.
+\label{eq_bongwie_6152}
+\end{equation}
+
+As Equações~\eqref{eq_bongwie_6151} e \eqref{eq_bongwie_6152} correspondem às equações diferenciais da cinemática de um corpo rígido em órbita circular, escritas de forma consistente com o referencial \gls{lvlh}. Observa-se que a matriz em \eqref{eq_bongwie_6152} torna-se singular quando $\theta_2=\pm 90^\circ$, pois $\cos\theta_2=0$. Essa limitação motiva o uso de parametrizações globais não singulares, como os parâmetros de Euler, para a representação da atitude em manobras orbitais.

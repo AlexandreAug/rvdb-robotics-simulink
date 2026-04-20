@@ -1,0 +1,107 @@
+\subsection{Controle de atitude da espaçonave}
+\label{sec_controle_PD_atitude}
+
+A atitude da espaçonave é descrita por um quaternion unitário, conforme a Equação~\eqref{eq_qrel_sincronizacao}, ou seja:
+
+\begin{equation}
+\vec q_B =
+\begin{bmatrix}
+q_{B,w} \\
+q_{B,x} \\
+q_{B,y} \\
+q_{B,z}
+\end{bmatrix}.
+\end{equation}
+
+Por sua vez, a referência de atitude é a atitude da espaçonave alvo, sendo especificada por um quaternion desejado, como:
+
+\begin{equation}
+\vec q_{B,\text{ref}} =
+\begin{bmatrix}
+q_{B,w,\text{ref}} \\
+q_{B,x,\text{ref}} \\
+q_{B,y,\text{ref}} \\
+q_{B,z,\text{ref}}
+\end{bmatrix}.
+\end{equation}
+
+O erro de atitude é obtido a partir do quaternion relativo, isto é:
+
+\begin{equation}
+\vec q_e
+=
+\vec q_{B,\text{ref}} \otimes \vec q_B^{-1}.
+\label{eq_controle_PD_quat}
+\end{equation}
+
+Adota-se a convenção $q_{e,w}\ge 0$. Caso $q_{e,w}<0$, define-se $\vec q_e \leftarrow -\vec q_e$.
+Definindo a parte vetorial do quaternion de erro como
+$\vec q_{e,v} = [\,q_{e,x}\;\;q_{e,y}\;\;q_{e,z}\,]^T$,
+a lei de controle \gls{pd} de atitude atua sobre $\vec q_{e,v}$ e sobre a velocidade angular:
+
+\begin{equation}
+\vec\tau_B
+=
+-K_{p,B}\,\vec q_{e,v}
+-
+K_{d,B}\,\vec\omega_B.
+\label{eq_controle_PD_atitude}
+\end{equation}
+
+Em que \(K_{p,B}\) e \(K_{d,B}\) são matrizes de ganhos proporcionais e derivativos, respectivamente.
+Por sua vez, a velocidade angular da espaçonave, expressa em $\{B\}$, é escrita como:
+
+\begin{equation}
+\vec\omega_B =
+\begin{bmatrix}
+\omega_x \\
+\omega_y \\
+\omega_z
+\end{bmatrix}.
+\end{equation}
+
+A ação de controle $\vec\tau_B$ é inserida no vetor de torques generalizados $\vec\tau$ das equações de movimento presentes na Seção~\ref{sec_atitude_inercial}, especificamente na Equação~\eqref{eq_dinamica_geral}, já que as primeiras coordenadas generalizadas estão associadas à atitude da espaçonave.
+Dessa forma, o controlador \gls{pd} opera diretamente sobre a parcela correspondente aos torques da espaçonave no vetor $\vec\tau$.
+Reorganizando os termos associados às coordenadas do \gls{mr} na
+Equação~\eqref{eq_dinAcoplada_espaconave_compacta}, obtém-se a dinâmica da espaçonave explicitando o efeito de reação do manipulador:
+
+\begin{equation}
+M_{BB}(\vec y\,)\,\ddot{\vec\eta}_B
++
+C_{BB}(\vec y\,,\dot{\vec y\,})\,\dot{\vec\eta}_B
+=
+\vec\tau_B
+-
+\underbrace{\bigl[
+M_{B\xi}(\vec y\,)\,\ddot{\vec\xi}
++
+C_{B\xi}(\vec y\,,\dot{\vec y\,})\,\dot{\vec\xi}
+\bigr]}_{\displaystyle \vec\tau_{\text{reac}}}.
+\label{eq_dina_espaconave_reac_compacta}
+\end{equation}
+
+
+Em que:
+
+\begin{equation}
+\vec\tau_{\text{reac}}
+=
+M_{B\xi}(\vec y\,)\,\ddot{\vec\xi}
++
+C_{B\xi}(\vec y\,,\dot{\vec y\,})\,\dot{\vec\xi}.
+\label{eq_def_tau_reac}
+\end{equation}
+
+
+A Equação~\ref{eq_def_tau_reac} representa o torque de reação na espaçonave devido ao movimento das juntas do manipulador.
+Durante o momento em que o \gls{mr} está no modo não operacional:
+
+\begin{equation}
+\dot{\vec\xi} = \vec 0,
+\qquad
+\ddot{\vec\xi} = \vec 0.
+\end{equation}
+
+
+Tem-se $\vec\tau_{\text{reac}} = \vec 0$.
+Quando o \gls{mr} se movimenta, os termos de acoplamento $M_{B\xi}$ e $C_{B\xi}$ introduzem $\vec\tau_{\text{reac}}$ como perturbação interna, de modo que o controlador \gls{pd} em \eqref{eq_controle_PD_atitude} deve simultaneamente reduzir o erro de atitude e compensar os torques de reação induzidos pelo manipulador, preservando o alinhamento da espaçonave requerido para a operação de ancoramento.

@@ -1,0 +1,50 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'tese.blg'
+[107] biber-MSWIN64:342> INFO - === 
+[142] Biber.pm:421> INFO - Reading 'tese.bcf'
+[289] Biber.pm:1002> INFO - Found 83 citekeys in bib section 0
+[308] Biber.pm:4487> INFO - Processing section 0
+[318] Biber.pm:4678> INFO - Looking for bibtex file 'Referencias/referencias.bib' for section 0
+[366] bibtex.pm:1713> INFO - LaTeX decoding ...
+[638] bibtex.pm:1519> INFO - Found BibTeX data source 'Referencias/referencias.bib'
+[1169] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1169] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1169] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[1169] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[1280] bbl.pm:676> INFO - Writing 'tese.bbl' with encoding 'UTF-8'
+[1334] bbl.pm:779> INFO - Output to tese.bbl
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'arantes2010far' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'fiori2024modeling' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'umetani1989resolved' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'papadopoulos1991nature' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'dubowsky1993kinematics' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'papadopoulos1991nature' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'shi2000dynamics' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'technicalreportsoyuz' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'wang2018' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'nasaGateway' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'craig2005' in file 'Referencias/referencias.bib', skipping ...
+[1336] Biber.pm:132> WARN - Duplicate entry key: 'arantes2011' in file 'Referencias/referencias.bib', skipping ...
+[1337] Biber.pm:132> WARN - legacy month field 'August' in entry 'nardin2017_simulador' is not an integer - this will probably not sort properly.
+[1337] Biber.pm:132> WARN - legacy month field 'May' in entry 'debruijn2011' is not an integer - this will probably not sort properly.
+[1337] Biber.pm:132> WARN - ISBN '9780898716287' in entry 'xue2007linear' is invalid - run biber with '--validate_datamodel' for details.
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 1671, warning: 94 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 1839, warning: 107 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 1895, warning: 30 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 1929, warning: 37 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 1939, warning: 29 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 1985, warning: 42 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 1997, warning: 39 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2086, warning: 48 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2107, warning: 46 characters of junk seen at toplevel
+[1337] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2119, warning: 31 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2234, warning: 35 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2247, warning: 41 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2270, warning: 29 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2290, warning: 18 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2337, warning: 33 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2363, warning: 20 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2384, warning: 21 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 2642, warning: 135 characters of junk seen at toplevel
+[1338] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\olive\AppData\Local\Temp\biber_tmp_Royo\f1acd60b6c57e7ae00f56d747b2cd459_37144.utf8, line 3104, warning: 108 characters of junk seen at toplevel
+[1338] Biber.pm:134> INFO - WARNINGS: 34

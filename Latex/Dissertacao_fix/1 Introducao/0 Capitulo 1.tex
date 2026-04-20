@@ -1,0 +1,48 @@
+\chapter{Introdução} 
+\label{sec_Introducao_Dissertacao_orientador}
+
+% Missões espaciais de encontro, acoplamento e atracamento, conhecidas como \gls{rvdb}, desempenham papel central em diversas operações espaciais. Essas missões envolvem a condução de uma espaçonave perseguidora até um veículo alvo em órbita. Operações dessa natureza são empregadas em missões tripuladas, em operações de reabastecimento ou manutenção de satélites e em arquiteturas de serviço em órbita.
+
+Missões espaciais de encontro, acoplamento e atracação, conhecidas como RVD/B, desempenham papel central em operações orbitais modernas. Essas missões permitem o transporte de tripulação, suprimentos e módulos estruturais, além de possibilitarem reabastecimento, manutenção de satélites e montagem de grandes estruturas espaciais, como a \gls{iss} \cite{nasaISS}.
+
+% A execução de uma missão de \gls{rvdb} é normalmente organizada em diferentes etapas, que estabelecem condições para a transição entre as fases da manobra. De forma geral, essas etapas incluem a aproximação inicial, a aproximação de curta distância e a fase final de alinhamento e contato entre as interfaces de acoplamento.
+
+A execução de uma missão de RVD/B é geralmente estruturada em etapas que definem as condições para a transição entre fases da manobra. De forma geral, incluem o lançamento e inserção orbital, o faseamento para reduzir diferenças angulares, a aproximação de longa distância — frequentemente realizada por meio de manobras orbitais como a transferência usando o referencial absoluto (Hohmann) e aproximação de long e  curta distância e de proximidade (final), quando se faz o alinhamento geométrico entre as interfaces de acoplamento, que permite a execução da manobra de docking ou berthing.
+
+O problema de \gls{rvdb} consiste em guiar a espaçonave perseguidora em trajetória relativa até o veículo-alvo, reduzindo progressivamente a distância até que seja possível realizar uma operação segura de acoplamento ou atracação. Essa manobra exige o controle integrado da dinâmica orbital, da atitude e das condições geométricas necessárias para o contato final entre os veículos \cite{curtis2013orbital}.
+Durante a aproximação, o perseguidor deve alinhar posição, velocidade relativa e orientação em relação ao alvo, garantindo que as interfaces mecânicas estejam corretamente posicionadas no momento do contato. Em missões não cooperativas, essa operação pode demandar sensores de navegação relativa, algoritmos de controle e, em alguns casos, manipuladores robóticos para realizar a atracação ou estabilização \cite{flores2014review}.
+
+Historicamente, as primeiras demonstrações práticas de operações de rendezvous e docking ocorreram na década de 1960, quando a espaçonave Gemini realizou manobras de aproximação e acoplamento com o veículo-alvo Agena \cite{nasa1stDocking}.
+Essas missões estabeleceram os procedimentos básicos para o encontro orbital e demonstraram a viabilidade do controle de trajetória e atitude durante a aproximação \cite{goodman2011rendezvous}.
+Posteriormente, o programa Apollo incorporou o docking como parte fundamental da arquitetura de missão, permitindo o acoplamento entre o módulo de comando e o módulo lunar \cite{RVDBapollo,nevins1971}.
+Ao longo das décadas seguintes, operações de RVD/B tornaram-se rotineiras em missões tripuladas e robóticas, consolidando-se como capacidade essencial para a exploração espacial. A ISS, por exemplo, depende de operações de docking e berthing para o recebimento de veículos de carga e tripulação \cite{nasaRVDBiss,nasaVisitingVehicles}.
+
+Além das operações clássicas, missões de \gls{rvdb} têm ampliado seu escopo para aplicações modernas, como prestação de serviços em órbita, manutenção de satélites, remoção de detritos espaciais e montagem de grandes estruturas.
+Essas aplicações introduzem novos desafios de controle, navegação e interação dinâmica entre veículos espaciais, especialmente em cenários que envolvem alvos não cooperativos ou o uso de manipuladores robóticos \cite{flores2014review,papadopoulos1994}.
+
+A Figura \ref{fig_etapas_rvdb} ilustra as fases típicas de uma missão de \gls{rvdb}.
+Inicialmente, ocorre o lançamento do veículo lançador que está carregando a espaçonave perseguidora e a injeta em sua órbita inicial.
+Na sequência, a espaçonave perseguidora se mantém em deriva orbital para reduzir a diferença de fase em relação ao alvo.
+Em seguida, ocorre a fase de aproximação de curta distância, na qual o controle da posição e da atitude torna-se mais rigoroso.
+Por fim, na fase final da operação, o alinhamento geométrico entre as interfaces de acoplamento é realizado, permitindo a execução da manobra de docking ou berthing.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{4 Formulacao matematica/Imagens/Lançamento quadro explicativo.png}
+\caption{Fases de uma missão de \gls{rvdb}, adaptado de \cite{fehse2003}.}
+\label{fig_etapas_rvdb}
+\end{figure}
+
+\input{1 Introducao/1 Problema RVDB.tex} % ok
+
+\input{1 Introducao/2 Contexto missoes.tex} % ok
+
+\input{1 Introducao/3 Motivacao.tex} % ok
+
+\input{1 Introducao/4 Pergunta pesquisa.tex} % ok
+
+\input{1 Introducao/5 Objetivos.tex} % ok
+
+\input{1 Introducao/6 Metodologia.tex} % ok
+
+\input{1 Introducao/7 Estrutura documento.tex}

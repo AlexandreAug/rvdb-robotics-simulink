@@ -1,0 +1,229 @@
+\subsection{Matriz de cossenos diretores}
+\label{sec:matriz_cosseno_diretor}
+
+Considerando dois referenciais $N$ e $B$ em rotação relativa.
+A orientação de $B$ em relação a $N$ pode ser descrita pela matriz de cossenos diretores (\gls{dcm}), denotada por $\mathbf{C}^{B/N}$.
+Seguindo a notação de \cite{wie2008space}, cada linha de $\mathbf{C}^{B/N}$ contém as projeções de um versor de $B$ nos eixos de $N$, de modo que:
+
+\begin{equation}
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}
+=
+\mathbf{C}^{B/N}
+\begin{bmatrix}
+\vec{n}_1 \\
+\vec{n}_2 \\
+\vec{n}_3
+\end{bmatrix}.
+\label{eq:def_dcm_ba}
+\end{equation}
+
+O termo $\{\vec{n}_1,\vec{n}_2,\vec{n}_3\}$ e $\{\vec{b}_1,\vec{b}_2,\vec{b}_3\}$ são bases ortonormais de $N$ e $B$, respectivamente.
+Cada elemento $C_{ij}^{B/N}$ é o cosseno do ângulo entre o $i$-ésimo versor de $B$ e o $j$-ésimo versor de $N$.
+
+\begin{equation}
+C_{ij}^{B/N} = \vec{b}_i \cdot \vec{n}_j.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A matriz $\mathbf{C}^{B/N}$ é a \gls{dcm} que realiza a mudança de base de componentes de um vetor do referencial $N$ para o referencial $B$, assumindo que $\{\vec{n}_1,\vec{n}_2,\vec{n}_3\}$ e $\{\vec{b}_1,\vec{b}_2,\vec{b}_3\}$ são bases ortonormais em $\mathbb{R}^3$.
+Por construção, suas linhas e colunas são mutuamente ortogonais e possuem norma unitária, de modo que $\mathbf{C}^{B/N}$ é uma matriz ortogonal.
+Consequentemente, $\mathbf{C}^{B/N}$ preserva produtos internos, normas e ângulos; isto é, para quaisquer vetores $\vec{x}$ e $\vec{y}$ vale $(\mathbf{C}^{B/N}\vec{x})\cdot(\mathbf{C}^{B/N}\vec{y})=\vec{x}\cdot\vec{y}$.
+Neste caso, tem-se:
+
+\begin{equation}
+\mathbf{C}^{B/N}\big(\mathbf{C}^{B/N}\big)^{T}
+=
+\big(\mathbf{C}^{B/N}\big)^{T}\mathbf{C}^{B/N}
+=
+\mathbf{I}_3.
+\label{eq:ortonormalidade_C}
+\end{equation}
+
+O termo $\mathbf{I}_3$ é a matriz identidade $3\times 3$.
+Além disso, para rotações físicas próprias, vale $\det \mathbf{C}^{B/N} = +1$.
+A relação inversa de \eqref{eq:def_dcm_ba} é escrita como:
+
+\begin{equation}
+\begin{bmatrix}
+\vec{n}_1 \\
+\vec{n}_2 \\
+\vec{n}_3
+\end{bmatrix}
+=
+\big(\mathbf{C}^{B/N}\big)^{-1}
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}
+=
+\big(\mathbf{C}^{B/N}\big)^{T}
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}.
+\label{eq:relacao_inversa_dcm}
+\end{equation}
+
+Isso se dá pois, sendo $\mathbf{C}^{B/N}$ ortogonal, sua inversa coincide com a transposta, o que corresponde à rotação inversa (transformação de $B$ para $N$).
+Esta matriz não deve ser confundida com a matriz de rotação obtida diretamente a partir de um triplo de ângulos de Euler: para um dado conjunto de ângulos de Euler existe uma DCM associada, mas a DCM fornece uma descrição independente da parametrização escolhida.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Segundo \cite{wie2008space}, considera-se que a velocidade angular de $B$ em relação a $N$ é o vetor:
+
+\begin{equation}
+\vec{\omega}^{B/N}(t)
+=
+\omega_1(t)\,\vec{b}_1
++
+\omega_2(t)\,\vec{b}_2
++
+\omega_3(t)\,\vec{b}_3.
+\end{equation}
+
+Para simplificar a notação, ao longo desta subseção usa-se $\vec{\omega}\equiv\vec{\omega}^{B/N}$.
+A derivada temporal dos versores de $B$, vista a partir de $N$, é dada pela cinemática de corpo rígido:
+
+\begin{equation}
+\dot{\vec{b}}_i = \vec{\omega}^{B/N} \times \vec{b}_i,
+\qquad i = 1,2,3.
+\label{eq:derivada_b_i}
+\end{equation}
+
+Partindo de \eqref{eq:relacao_inversa_dcm}, e tomando a derivada temporal vista a partir de $N$ (isto é, $\frac{d}{dt}\big|_N$), obtém-se:
+
+\begin{equation}
+\frac{d}{dt}\bigg|_N
+\begin{bmatrix}
+\vec{n}_1 \\
+\vec{n}_2 \\
+\vec{n}_3
+\end{bmatrix}
+=
+\frac{d}{dt}\bigg|_N
+\left(
+\mathbf{C}^{T}
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}
+\right)
+=
+\dot{\mathbf{C}}^{T}
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}
++
+\mathbf{C}^{T}
+\begin{bmatrix}
+\dot{\vec{b}}_1 \\
+\dot{\vec{b}}_2 \\
+\dot{\vec{b}}_3
+\end{bmatrix}.
+\label{eq:derivada_relacao_inversa}
+\end{equation}
+
+O termo $\frac{d}{dt}\big|_N\,\vec{n}_i=\vec{0}$, pois os versores do referencial $N$ são fixos quando a derivada é tomada em $N$.
+Para simplificar a notação, usa-se $\mathbf{C}\equiv\mathbf{C}^{B/N}$.
+Substituindo \eqref{eq:derivada_b_i} em \eqref{eq:derivada_relacao_inversa}, obtém-se:
+
+\begin{equation}
+\dot{\mathbf{C}}^{T}
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}
+-
+\mathbf{C}^{T}
+\begin{bmatrix}
+\vec{\omega}\times\vec{b}_1 \\
+\vec{\omega}\times\vec{b}_2 \\
+\vec{\omega}\times\vec{b}_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+\vec{0} \\
+\vec{0} \\
+\vec{0}
+\end{bmatrix}.
+\end{equation}
+
+Para manipular o produto vetorial em forma matricial, introduz-se a matriz antissimétrica $\boldsymbol{\Omega}$ associada a $\vec{\omega}$. Esta matriz é o operador que representa o produto vetorial:
+
+\begin{equation}
+\vec{\omega}\times\vec{v}
+=
+\boldsymbol{\Omega}\,\vec{v},
+\qquad
+\boldsymbol{\Omega}
+=
+\begin{bmatrix}
+0      & -\omega_3 &  \omega_2 \\
+\omega_3 & 0       & -\omega_1 \\
+-\omega_2 & \omega_1 & 0
+\end{bmatrix}.
+\label{eq:def_omega_matriz}
+\end{equation}
+
+De modo que $\boldsymbol{\Omega}$ é antissimétrica ($\boldsymbol{\Omega}^{T} = -\boldsymbol{\Omega}$).
+Com a definição \eqref{eq:def_omega_matriz}, a expressão anterior pode ser escrita de forma compacta como:
+
+\begin{equation}
+\big(\dot{\mathbf{C}}^{T} - \mathbf{C}^{T}\boldsymbol{\Omega}\big)
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+\vec{0} \\
+\vec{0} \\
+\vec{0}
+\end{bmatrix}.
+\end{equation}
+
+Conduzindo-o à condição matricial:
+
+\begin{equation}
+\dot{\mathbf{C}}^{T} - \mathbf{C}^{T}\boldsymbol{\Omega} = \mathbf{0}.
+\end{equation}
+
+Tomando a transposta e usando $\boldsymbol{\Omega}^{T} = -\boldsymbol{\Omega}$, obtém-se a equação cinemática diferencial para a matriz de cossenos diretores, conforme apresentado em \cite{wie2008space}:
+
+\begin{equation}
+\dot{\mathbf{C}} + \boldsymbol{\Omega}\,\mathbf{C} = \mathbf{0}.
+\label{eq:cinematica_dcm}
+\end{equation}
+
+
+Escrevendo \eqref{eq:cinematica_dcm} elemento a elemento, obtêm-se as nove equações diferenciais em termos dos cossenos diretores $C_{ij}$:
+
+\begin{equation}
+\begin{aligned}
+    \dot{C}_{11} &= \omega_3 C_{21} - \omega_2 C_{31}, \\
+    \dot{C}_{12} &= \omega_3 C_{22} - \omega_2 C_{32}, \\
+    \dot{C}_{13} &= \omega_3 C_{23} - \omega_2 C_{33}, \\
+    \dot{C}_{21} &= \omega_1 C_{31} - \omega_3 C_{11}, \\
+    \dot{C}_{22} &= \omega_1 C_{32} - \omega_3 C_{12}, \\
+    \dot{C}_{23} &= \omega_1 C_{33} - \omega_3 C_{13}, \\
+    \dot{C}_{31} &= \omega_2 C_{11} - \omega_1 C_{21}, \\
+    \dot{C}_{32} &= \omega_2 C_{12} - \omega_1 C_{22}, \\
+    \dot{C}_{33} &= \omega_2 C_{13} - \omega_1 C_{23}.
+\end{aligned}
+\end{equation}
+
+Essas equações mostram explicitamente como cada cosseno diretor evolui em
+função da velocidade angular $\vec{\omega}$.
+Quando $\vec{\omega}(t)$ é conhecida como função do tempo, a orientação de $B$ em relação a $N$ pode ser obtida pela integração numérica de \eqref{eq:cinematica_dcm}.
+A condição de ortonormalidade \eqref{eq:ortonormalidade_C} é uma integral de movimento da equação cinemática: se $\mathbf{C}(0)$ é ortonormal, então a solução exata de \eqref{eq:cinematica_dcm} satisfaz $\mathbf{C}(t)\mathbf{C}^{T}(t)=\mathbf{I}$ para todo $t>0$. Na prática, essa propriedade é usada como verificação de consistência numérica e, quando necessário, como critério para re-ortonormalizar a matriz integrada.
+
+Por fim, a comparação entre a DCM $\mathbf{C}^{B/N}$ e a matriz de rotação obtida a partir de ângulos de Euler é fundamental para entender as diferenças entre representações de atitude. A DCM atua diretamente nas bases dos referenciais, enquanto a matriz de rotação em ângulos de Euler é construída como produto de três rotações elementares em torno de eixos prescritos.

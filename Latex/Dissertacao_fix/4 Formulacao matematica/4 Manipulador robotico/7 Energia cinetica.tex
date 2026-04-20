@@ -1,0 +1,206 @@
+\section{Energia cinética}
+\label{sec_dinAcoplada_energia_cinetica}
+
+A energia cinética total é escrita como a soma da contribuição associada à atitude da espaçonave (tratada como corpo rígido) e das contribuições de cada um dos $n$ elos do manipulador robótico, isto é:
+
+
+\begin{equation}
+T = T_{B} + \sum_{i=1}^{n} T_{i}.
+\label{eq_T_total}
+\end{equation}
+
+O termo $n$ é a quantidade de elos do \gls{mr}, e $T_B$ é a energia cinética da espaçonave, em torno de seu \gls{cdm}, incluindo o \gls{mr} o modo de operação.
+A Equação~\eqref{eq_T_total} poderia ser reescita com uma parcela linear, associada ao movimento do seu \gls{cdm}, e uma parcela rotacional, associada ao movimento de atitude em torno desse mesmo ponto.
+Essa energia cinética de atitude é escrita como:
+
+\begin{equation}
+T_{B} =
+\frac{1}{2}\, {}^{B}\!\vec{\omega}_{B}^{\,T}\,\mathbf{I}_B(\vec{\xi})\,{}^{B}\!\vec{\omega}_{B}.
+\label{eq_TB}
+\end{equation}
+
+Em que $\mathbf{I}_B(\vec{\xi})$ é a matriz de inércia do perseguidor em torno do seu \gls{cdm} $G$, expressa no referencial $\{B\}$ fixo ao perseguidor.
+Em particular, $\mathbf{I}_B(\vec{\xi})$ depende da configuração articular $\vec{\xi}$, uma vez que a redistribuição de massa provocada pelo movimento do \gls{mr} altera a posição do \gls{cdm} e a matriz de inércia da espaçonave.
+
+Na formulação adotada, assume-se que o movimento do \gls{cdm} é prescrito pelo modelo de translação orbital.
+Em um modelo completamente livre de forças externas, a conservação da quantidade de movimento linear implicaria um pequeno deslizamento da espaçonave ao longo da órbita em resposta ao deslocamento dos elos.
+
+%%%%%%%%%%%%%%%
+
+A energia cinética do $i$-ésimo elo do manipulador é composta pelas parcelas translacional e rotacional, sendo:
+
+\begin{equation}
+T_i =
+\frac{1}{2} m_i\, {}^{B}\!\vec v_{G_i}^{\,T}\,{}^{B}\!\vec v_{G_i}
++
+\frac{1}{2}\, {}^{B}\!\vec\omega_i^{\,T}\, I_i\, {}^{B}\!\vec\omega_i.
+\label{eq_Ti}
+\end{equation}
+
+Em que ${}^{B}\!\vec v_{G_i}$ e ${}^{B}\!\vec\omega_i$ são, respectivamente, a velocidade linear no \gls{cdm} do elo $i$
+e a velocidade angular do elo $i$, expressas no referencial da espaçonave $\{B\}$ e obtidas a partir do Jacobiano acoplado introduzido na Seção~\ref{sec_cinematica_diferencial_jacobiano}, e $I_i$ é o
+matriz de inércia do elo $i$ em torno do seu próprio \gls{cdm}.
+
+%%%%%%%%%%%%%%%%%%%
+
+Do ponto de vista físico, o termo translacional em \eqref{eq_Ti} representa o movimento do \gls{cdm} do elo $i$ em relação ao corpo da espaçonave, por meio do termo quadrático na velocidade linear ${}^{B}\!\vec v_{G_i}$.
+Ao agrupar as coordenadas generalizadas em um único vetor, define-se:
+
+\begin{equation}
+\vec y
+=
+\begin{bmatrix}
+\vec\eta_B \\
+\vec{\xi}
+\end{bmatrix},
+\qquad
+\dot{\vec y}
+=
+\begin{bmatrix}
+\dot{\vec\eta}_B \\
+\dot{\vec{\xi}}
+\end{bmatrix}.
+\label{eq_veloc_generalizadas}
+\end{equation}
+
+Em que $\vec\eta_B$ reúne os parâmetros de atitude da espaçonave e $\vec{\xi}$ contém as coordenadas articulares do manipulador.
+Note-se que a velocidade angular da espaçonave,
+${}^{B}\!\vec\omega_B$,
+não é, em si, uma velocidade generalizada, mas é obtida como combinação linear das velocidades generalizadas de atitude, isto é,
+${}^{B}\!\vec\omega_B = \mathbf{T}_\omega(\vec\eta_B)\,\dot{\vec\eta}_B$,
+conforme a relação usual entre taxas de ângulos de Euler e velocidade angular.
+Com essa definição, a energia cinética total pode ser escrita como:
+
+\begin{equation}
+T =
+\frac{1}{2}\,\dot{\vec y}^{\,T}\,
+M(\vec y)\,
+\dot{\vec y}.
+\label{eq_T_quadratica_Mq1}
+\end{equation}
+
+De forma equivalente:
+
+\begin{equation}
+T
+=
+\frac{1}{2}
+\begin{bmatrix}
+\dot{\vec{\eta}}_{B}\\
+\dot{\vec{\xi}}
+\end{bmatrix}^{T}
+\begin{bmatrix}
+M_{BB}(\vec{\eta}_B,\vec{\xi}) & M_{B\xi}(\vec{\eta}_B,\vec{\xi})\\
+M_{\xi B}(\vec{\eta}_B,\vec{\xi}) & M_{\xi\xi}(\vec{\eta}_B,\vec{\xi})
+\end{bmatrix}
+\begin{bmatrix}
+\dot{\vec{\eta}}_{B}\\
+\dot{\vec{\xi}}
+\end{bmatrix}.
+\label{eq_T_quadratica_Mq2}
+\end{equation}
+
+
+Em que $M(\vec y)\in\mathbb{R}^{(3+n)\times(3+n)}$ é a matriz de inércia generalizada do conjunto espaçonave--manipulador, função da configuração $(\vec\eta_B,\vec{\xi})$, construída a partir das contribuições da espaçonave e dos elos segundo as expressões \eqref{eq_TB} e \eqref{eq_Ti}.
+A partir da energia cinética \eqref{eq_T_quadratica_Mq1} e das coordenadas generalizadas, e aplicando as equações de Lagrange, obtém-se a forma matricial das equações de movimento do conjunto espaçonave e manipulador:
+
+\begin{equation}
+M(\vec y)\,\ddot{\vec y} + C(\vec y,\dot{\vec y})\,\dot{\vec y} = \vec\tau.
+\label{eq_eom_acoplada_compacta}
+\end{equation}
+
+O termo $C(\vec y,\dot{\vec y})\,\dot{\vec y}$ reúne as contribuições dependentes de velocidade (Coriolis e centrífugas):
+
+
+\begin{equation}
+\vec\tau =
+\begin{bmatrix}
+\vec\tau_B \\
+\tau_1 \\
+\tau_2 \\
+\tau_3
+\end{bmatrix},
+\qquad
+\ddot{\vec y}=
+\begin{bmatrix}
+\ddot{\vec\eta}_B \\
+\ddot{\vec\xi}
+\end{bmatrix},
+\qquad
+\ddot{\vec\xi}=
+\begin{bmatrix}
+\ddot{\xi}_1\\
+\ddot{\xi}_2\\
+\ddot{\xi}_3
+\end{bmatrix}.
+\label{eq_tau_y_ddoty}
+\end{equation}
+
+Em que $[\cdot]_i$ denota a $i$-ésima componente do vetor resultante.
+Particionando a matriz de inércia e os termos dependentes de velocidade de acordo com
+$\vec y=[\,\vec\eta_B^{\,T}\ \ \vec{\xi}^{\,T}\,]^{T}$, obtém-se:
+
+\begin{equation}
+M(\vec y)=
+\begin{bmatrix}
+M_{BB}(\vec y) & M_{B\xi}(\vec y)\\
+M_{\xi B}(\vec y) & M_{\xi\xi}(\vec y)
+\end{bmatrix},
+\qquad
+C(\vec y,\dot{\vec y})=
+\begin{bmatrix}
+C_{BB}(\vec y,\dot{\vec y}) & C_{B\xi}(\vec y,\dot{\vec y})\\
+C_{\xi B}(\vec y,\dot{\vec y}) & C_{\xi\xi}(\vec y,\dot{\vec y})
+\end{bmatrix}.
+\label{eq_particionamento_M_C}
+\end{equation}
+
+Tomando, em \eqref{eq_eom_acoplada_compacta}, as linhas associadas às coordenadas articulares $\vec{\xi}$ e empregando o particionamento \eqref{eq_particionamento_M_C}, obtêm-se as equações escalares das juntas.
+Em particular, ao selecionar a primeira linha do bloco associado às coordenadas articulares, obtém-se a equação escalar da primeira junta:
+
+\begin{equation}
+\tau_1
+=
+\bigl[M_{\xi B}(\vec y)\,\ddot{\vec\eta}_B\bigr]_1
++
+\bigl[M_{\xi\xi}(\vec y)\,\ddot{\vec\xi}\bigr]_1
++
+\bigl[C_{\xi B}(\vec y,\dot{\vec y})\,\dot{\vec\eta}_B\bigr]_1
++
+\bigl[C_{\xi\xi}(\vec y,\dot{\vec y})\,\dot{\vec\xi}\bigr]_1.
+\label{eq_eom_junta1}
+\end{equation}
+
+De modo análogo, a segunda junta é descrita pela segunda linha do mesmo bloco:
+
+\begin{equation}
+\tau_2
+=
+\bigl[M_{\xi B}(\vec y)\,\ddot{\vec\eta}_B\bigr]_2
++
+\bigl[M_{\xi\xi}(\vec y)\,\ddot{\vec\xi}\bigr]_2
++
+\bigl[C_{\xi B}(\vec y,\dot{\vec y})\,\dot{\vec\eta}_B\bigr]_2
++
+\bigl[C_{\xi\xi}(\vec y,\dot{\vec y})\,\dot{\vec\xi}\bigr]_2.
+\label{eq_eom_junta2}
+\end{equation}
+
+Por fim, a terceira junta é obtida ao selecionar a terceira linha correspondente:
+
+\begin{equation}
+\tau_3
+=
+\bigl[M_{\xi B}(\vec y)\,\ddot{\vec\eta}_B\bigr]_3
++
+\bigl[M_{\xi\xi}(\vec y)\,\ddot{\vec\xi}\bigr]_3
++
+\bigl[C_{\xi B}(\vec y,\dot{\vec y})\,\dot{\vec\eta}_B\bigr]_3
++
+\bigl[C_{\xi\xi}(\vec y,\dot{\vec y})\,\dot{\vec\xi}\bigr]_3.
+\label{eq_eom_junta3}
+\end{equation}
+
+Essas expressões exibem a contribuição dos termos inerciais e dos termos dependentes de velocidade provenientes do acoplamento entre a atitude do perseguidor e as coordenadas articulares do manipulador.
+
+

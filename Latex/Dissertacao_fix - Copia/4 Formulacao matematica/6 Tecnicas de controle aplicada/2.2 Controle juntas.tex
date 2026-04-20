@@ -1,0 +1,47 @@
+
+\subsection{Controle das juntas do manipulador robótico}
+\label{sec_controle_PD_juntas}
+
+O \gls{mr} acoplado à espaçonave $\{B\}$ possui 3 graus de liberdade rotacionais, descritos pelas coordenadas generalizadas, por suas respectivas velocidades articulares $\dot{\vec\phi}$:
+
+\begin{equation}
+\vec\phi =
+\begin{bmatrix}
+\phi_1 \\ \phi_2 \\ \phi_3
+\end{bmatrix}.
+\end{equation}
+
+As referências articulares são denotadas por:
+
+\begin{equation}
+\vec\phi_{\text{ref}} =
+\begin{bmatrix}
+\phi_{1,\text{ref}} \\
+\phi_{2,\text{ref}} \\
+\phi_{3,\text{ref}}
+\end{bmatrix}.
+\end{equation}
+
+As quais são obtidas a partir da solução do problema de cinemática inversa, conforme a Seção~\eqref{sec_cinematica_inversa}, do efetuador para uma trajetória desejada de aproximação e alinhamento com a porta de acoplamento.
+Define-se o erro articular e sua derivada como:
+
+\begin{equation}
+\vec e_\phi = \vec\phi - \vec\phi_{\text{ref}},
+\qquad
+\dot{\vec e}_\phi = \dot{\vec\phi} - \dot{\vec\phi}_{\text{ref}}.
+\end{equation}
+
+Em que as referências de velocidade $\dot{\vec\phi}_{\text{ref}}$ são nulas ou variam lentamente, de modo a caracterizar trajetórias suavizadas para o manipulador.
+A lei de controle \gls{pd} em espaço de juntas é então escrita como:
+
+\begin{equation}
+\vec\tau_\phi
+=
+- K_{p,\phi}\,\vec e_\phi
+- K_{d,\phi}\,\dot{\vec e}_\phi.
+\label{eq_controle_PD_juntas}
+\end{equation}
+
+O termo $\vec\tau_\phi$ é o vetor de torques nas juntas,
+e $K_{p,\phi}$, $K_{d,\phi}$ são matrizes com os ganhos de posição e velocidade, respectivamente.
+Neste contexto, o \gls{mr} é controlado no espaço de juntas \cite{craig2005}, enquanto o vínculo com o espaço operacional (posição e orientação do efetuador em relação à porta de acoplamento) é realizado pela cinemática direta e inversa discutidas anteriormente.

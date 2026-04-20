@@ -1,0 +1,41 @@
+\section{Estratégia de controle de atitude}
+\label{sec:controle_atitude}
+
+A estratégia de controle adotada combina o controle \gls{pd} aplicado à dinâmica relativa em \gls{lvlh} com controle \gls{pd} de atitude da base, operando em dois modos distintos: com o \gls{mr} travado (dinâmica de corpo rígido) e com o \gls{mr} em operação (dinâmica acoplada base--MR).
+Na fase final, um controle \gls{pd} adicional atua nas juntas do manipulador para executar a manobra de captura.
+
+\subsection{Controle PD na dinâmica relativa}
+\label{sec:controle_PD_HCW}
+
+A aproximação relativa em \gls{lvlh} é descrita, nas vizinhanças da órbita de fase, por um modelo linearizado do tipo \gls{hcw}, que relaciona posição e velocidade relativas do perseguidor em relação ao alvo.
+Sobre esse modelo é definida uma lei de controle PD em translação, que atua sobre o vetor de erro de posição relativa e sobre a velocidade relativa.
+
+O objetivo é conduzir o perseguidor de um estado inicial de \textit{drift} até a região de captura, respeitando os limites de velocidade relativos estabelecidos.
+As saídas desse controlador são comandos de translação (equivalentes a impulsos) que definem a trajetória relativa desejada para a base.
+
+\subsection{Controle de atitude com MR travado}
+\label{sec:controle_atitude_Euler}
+
+Quando o \gls{mr} permanece travado em configuração fixa, o conjunto base--\gls{mr} é tratado como um corpo rígido.
+Nessa condição, a atitude da base é controlada pela dinâmica de Euler e o controle de atitude atua diretamente sobre os torques da base física, sem contribuição de reações articulares.
+A estratégia consiste em aplicar uma lei de controle PD de atitude, formulada em termos de um quaternion de erro entre a orientação da base e uma orientação de referência associada ao alvo, e da velocidade angular medida no sistema corpo.
+Esse controle é responsável por manter a base alinhada com o alvo durante a aproximação curta, enquanto o controle translacional em \gls{lvlh} define a trajetória relativa.
+
+\subsection{Controle de atitude com dinâmica acoplada}
+\label{sec:controle_atitude_Lagrange}
+
+No modo operacional, o \gls{mr} passa a se movimentar para executar a manobra de captura.
+A dinâmica do sistema deixa de ser equivalente à de um corpo rígido e passa a ser descrita pela formulação de Lagrange com coordenadas generalizadas que incluem a atitude da base e as juntas do manipulador.
+Os movimentos articulares geram torques internos que aparecem como reações na base, alterando a sua atitude.
+
+A estratégia de controle mantém a mesma lei PD de atitude aplicada às coordenadas da base, dessa forma, o mesmo controlador que estabiliza a atitude quando o \gls{mr} está travado passa a atuar também como compensador das reações provenientes dos movimentos das juntas.
+Assim, o controle de atitude deve ao mesmo tempo seguir a referência de apontamento em relação ao alvo e rejeitar as perturbações internas induzidas pela operação do manipulador.
+
+\subsection{Controle das juntas do manipulador na aproximação final}
+\label{sec:controle_juntas_MR}
+
+Na fase de aproximação final, após o perseguidor estar inserido na região de captura com atitude estabilizada, um controlador adicional atua nas juntas do manipulador para rastrear trajetórias articulares de referência associadas às fases de posicionamento, alinhamento fino e inserção.
+Esse controlador é do tipo PD no espaço de juntas, definido a partir do erro entre os ângulos articulares medidos e os ângulos desejados, bem como das velocidades articulares.
+
+O objetivo é garantir que o efetuador siga trajetórias suaves, evitando saturações de torque e limitando as reações transmitidas à base.
+Dessa forma, o controle das juntas complementa o controle de atitude da base: enquanto a base procura manter o apontamento desejado e compensar as reações globais, o controlador em espaço de juntas realiza a manobra local necessária para alinhar a ferramenta com a porta e completar a captura.

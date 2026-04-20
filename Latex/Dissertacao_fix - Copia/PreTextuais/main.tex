@@ -1,0 +1,56 @@
+% Folha de Rosto e Capa para o caso do TG
+\maketitle
+
+% Dedicatoria: Nao esqueca essa secao  ... :-)
+\begin{itadedication}
+Dedico este trabalho à minha esposa, que sempre confiou em mim e esteve ao meu lado, ajudando-me a superar desafios que pareciam intransponíveis.
+\end{itadedication}
+
+
+% Agradecimentos
+\begin{itathanks}
+\input{PreTextuais/agradecimentos}
+\end{itathanks}
+
+% Epígrafe
+\ifhyperref\pdfbookmark[0]{\nameepigraphe}{epigrafe}\fi
+\begin{flushright}
+\begin{spacing}{1}
+\mbox{}\vfill
+\input{PreTextuais/epigrafe}
+\end{spacing}
+\end{flushright}
+
+% Resumo
+\begin{abstract}
+\noindent
+\input{PreTextuais/resumo}
+\end{abstract}
+
+% Abstract
+\begin{englishabstract}
+\noindent
+\input{PreTextuais/abstract}
+\end{englishabstract}
+
+% Lista de figuras
+\listoffigures %opcional
+
+% Lista de tabelas
+\listoftables %opcional
+
+% Lista de abreviaturas
+\printnoidxglossary[type=\acronymtype,
+    title=\listofabbreviationsname,
+    sort=standard,
+    nonumberlist]
+\pdfbookmark[0]{\listofabbreviationsname}{listaabreviaturas}
+    
+% Lista de simbolos
+\printnoidxglossary[
+    title=\listofsymbolsname,
+    sort=use,   % according to abnt 14724 the list of symbols is sorted by order of use in text
+    nonumberlist]
+\pdfbookmark[0]{\listofsymbolsname}{listasimbolos}
+% Sumario
+\tableofcontents

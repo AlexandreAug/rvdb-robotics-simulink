@@ -1,0 +1,15 @@
+% sec 4.3
+
+\section{Equações do Movimento de Atitude em \gls{rvdb}}
+\label{sec:equacoes_movimento_atitude}
+
+O problema de atitude em missões de \gls{rvdb} requer a descrição da orientação da espaçonave perseguidora em relação à espaçonave alvo. Essa descrição deve ser consistente tanto no referencial \gls{eci} quanto no referencial \gls{lvlh}. No referencial \gls{eci}, a atitude é descrita em relação ao centro da Terra, enquanto, no referencial \gls{lvlh}, é descrita em relação ao centro de massa da espaçonave alvo, o que é particularmente relevante para a sincronização de atitude entre as espaçonaves durante a fase de aproximação.
+
+Neste trabalho, a formulação dinâmica da atitude é desenvolvida a partir das equações de Euler para corpo rígido em órbita, enquanto a parametrização da orientação é posteriormente escrita em termos adequados à implementação numérica da simulação. A presença de um \gls{mr} acoplado à espaçonave perseguidora acrescenta complexidade ao problema, pois a movimentação de seus elos altera a distribuição de massa do sistema e, consequentemente, a sua matriz de inércia.
+
+
+\input{4 Formulacao matematica/3 Equacoes movimento atitude/2 Equacoes Euler.tex} % sec 4.3.1
+
+\input{4 Formulacao matematica/3 Equacoes movimento atitude/3 Equacoes cinematica.tex} % sec 4.3.3
+
+\input{4 Formulacao matematica/3 Equacoes movimento atitude/7 Equacoes Atitude relativa.tex} % sec 4.3.7

@@ -1,0 +1,51 @@
+%%%%%%%%%% Motivação
+\section{Motivação}
+
+As operações de \gls{rvdb} envolvem fenômenos dinâmicos que não se limitam ao movimento orbital relativo entre duas espaçonaves.
+Durante as fases de aproximação de curta distância e fase final, a interação entre dinâmica orbital, atitude e movimentação de manipuladores robóticos passa a desempenhar papel determinante no comportamento da espaçonave perseguidora.
+Os modelos que consideram apenas o movimento relativo orbital tornam-se insuficientes para descrever de forma abrangente essas etapas críticas.
+
+Além disso, o crescente interesse em missões de inspeção \cite{dennehy_2016_rcs}, manutenção em órbita \cite{mev_northrop}, remoção de detritos espaciais \cite{jaxa_deb_rendezvous} e montagem de estruturas espaciais, como a \gls{iss}, impõe a necessidade de ferramentas de modelagem que integrem os efeitos dinâmicos associados à presença de um \gls{mr}.
+Nesse contexto, torna-se relevante desenvolver uma formulação que una dinâmica orbital relativa e dinâmica acoplada da espaçonave equipada com manipulador, contribuindo para uma representação das operações de \gls{rvdb}.
+
+%%%%%%%%%%%%%%%%%% LIMITAÇÕES
+\subsection{Limitações de modelos puramente orbitais para as missões de \gls{rvdb}}
+
+% Modelos baseados exclusivamente na dinâmica orbital relativa são empregados para descrever fases de aproximação de longa distância, assumindo a validade do problema de dois corpos e de um campo gravitacional central, como na Transferência de Hohmann \cite{weberHohmann}.
+
+% Nessa abordagem, a dinâmica é estabelecida apenas pela interação gravitacional, não sendo explicitamente considerados efeitos internos da espaçonave, variações de distribuição de massa ou acoplamentos estruturais.
+
+% Entretanto, nas fases de aproximação de curta distância e na fase final, a movimentação de um \gls{mr} acoplado à espaçonave pode introduzir torques internos e efeitos de acoplamento dinâmico que influenciam diretamente a atitude e a estabilidade do sistema como um todo \cite{nardin2017_simulador}.
+% Tais interações tornam-se particularmente críticas quando há necessidade de alinhamento preciso para inserção da ferramenta na interface de acoplamento, uma vez que erros de posicionamento do efetuador final podem ser amplificados pela dinâmica acoplada entre o satélite e o manipulador.
+
+% A desconsideração desses acoplamentos pode conduzir a simplificações que não representam o comportamento dinâmico do sistema durante a interação física com o alvo.
+% Assim, evidencia-se a necessidade de incorporar explicitamente a dinâmica acoplada entre a espaçonave e o manipulador na modelagem dessas fases críticas.
+
+Modelos puramente orbitais, baseados na dinâmica relativa em campo gravitacional central, são adequados para fases de longa distância, como a transferência de Hohmann \cite{weberHohmann}.
+Entretanto, nas fases próximas, a movimentação de manipuladores robóticos acoplados pode introduzir torques internos e efeitos de acoplamento dinâmico que influenciam diretamente a atitude e a estabilidade do sistema \cite{nardin2017_simulador}. A desconsideração desses efeitos pode levar a simplificações que não representam o comportamento real durante a interação física com o alvo.
+Nesse contexto, torna-se essencial integrar a dinâmica orbital relativa com a robótica espacial. A movimentação de manipuladores altera a distribuição de massa e os esforços internos da espaçonave, influenciando sua atitude e seu desempenho dinâmico \cite{yoshida_reactionless_etsvii}.
+
+
+Essa integração é particularmente relevante em missões de inspeção, manutenção e remoção de detritos, que dependem cada vez mais do uso de manipuladores embarcados.
+Exemplos incluem o Canadarm2 na \gls{iss}, utilizado para captura de veículos de carga \cite{canadarm2}, e a missão MEV, responsável pela extensão da vida útil de satélites geoestacionários \cite{mev_northrop}.
+O desenvolvimento de modelos integrados contribui para análises de desempenho, avaliação de riscos e planejamento de manobras em cenários operacionais complexos. 
+
+%%%%%%%%%%%%%%%%%% INTEGRAÇÃO
+\subsection{Integração entre dinâmica orbital e robótica espacial}
+
+A dinâmica orbital relativa e a robótica espacial são frequentemente tratadas de forma independente na literatura.
+Enquanto a primeira descreve o movimento relativo entre espaçonaves em órbita \cite{fehse2003}, a segunda concentra-se na modelagem cinemática e dinâmica de \gls{mr} em microgravidade \cite{yoshida_reactionless_etsvii}.
+
+Entretanto, durante operações de \gls{rvdb}, essas duas áreas interagem diretamente.
+A movimentação do \gls{mr} altera a distribuição de massa e os esforços internos da espaçonave, influenciando sua atitude e seu comportamento dinâmico. Essa interação motiva o desenvolvimento de um modelo integrado capaz de representar simultaneamente os fenômenos orbitais e robóticos.
+
+
+%%%%%%%%%%%%%%%%%% RELEVANCIA
+\subsection{Relevância para missões de inspeção, manutenção e remoção de detritos}
+
+Missões de inspeção em órbita, manutenção de satélites, extensão de vida útil e remoção de detritos espaciais dependem cada vez mais do uso de manipuladores robóticos embarcados.
+Exemplos incluem o uso do Canadarm2 na \gls{iss} para a captura de veículos de carga \cite{canadarm2}, bem como a missão MEV (Mission Extension Vehicle), responsável pela extensão da vida útil de satélites em órbita geoestacionária \cite{mev_northrop}.
+
+Nessas aplicações, a interação entre movimento orbital relativo e dinâmica do manipulador torna-se parte central do problema, uma vez que a movimentação do \gls{mr} pode influenciar diretamente na atitude da espaçonave durante a operação.
+
+O desenvolvimento de modelos que representem essa integração contribui para a análise preliminar de desempenho, para a avaliação de riscos dinâmicos e para o planejamento de manobras em cenários operacionais complexos.

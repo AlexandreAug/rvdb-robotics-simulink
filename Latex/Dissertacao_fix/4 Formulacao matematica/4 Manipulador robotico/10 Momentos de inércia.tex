@@ -1,0 +1,73 @@
+\section{Momentos de inércia}
+\label{sec:dinAcoplada_momentos_inercia}
+
+A matriz de inércia generalizada $M(\vec y\,)$ é introduzida a partir da
+forma quadrática da energia cinética, conforme \eqref{eq_T_quadratica_Mq1} e \eqref{eq_M_total_formula}, e em linha com \cite{spong2006robot,featherstone2008}:
+
+\begin{equation}
+T =
+\frac{1}{2}\,\dot{\vec y}^{\,T}\,M(\vec y\,)\,\dot{\vec y}.
+\label{eq_T_quadratica_Mq_reprise}
+\end{equation}
+
+
+Os elementos $m_{kj}(\vec y\,)$ de $M(\vec y\,)$ têm interpretação direta:
+os termos da diagonal representam as inércias equivalentes associadas a
+cada grau de liberdade, enquanto os termos fora da diagonal expressam os
+acoplamentos inerciais entre a atitude da espaçonave e as juntas do
+manipulador \cite{Geradin2004}.
+Adota-se o vetor de coordenadas generalizadas conforme
+\eqref{eq_q_generalizado_espaconave_mr}, isto é:
+
+\begin{equation}
+\vec y
+=
+\begin{bmatrix}
+\vec\eta_B \\
+\vec\xi
+\end{bmatrix}.
+\end{equation}
+
+Em que $\vec\eta_B$ descreve a atitude da espaçonave e $\vec\xi$ reúne as
+coordenadas articulares do \gls{mr}. Com essa escolha, a matriz
+$M(\vec y\,)$ assume a forma particionada usual para sistemas de espaçonave
+flutuante \cite{featherstone2008,Wilde2018}:
+
+\begin{equation}
+M(\vec y\,) =
+\begin{bmatrix}
+M_{BB}(\vec y\,) & M_{BM}(\vec y\,) \\
+M_{MB}(\vec y\,) & M_{MM}(\vec y\,)
+\end{bmatrix}.
+\label{eq_M_blocos}
+\end{equation}
+
+Em que $M_{BB}$ agrupa as inércias equivalentes associadas à atitude da
+espaçonave, $M_{MM}$ contém as contribuições do manipulador e os blocos
+$M_{BM}$, $M_{MB}$ representam os termos de acoplamento entre a
+espaçonave e o \gls{mr}.
+
+Do ponto de vista construtivo, a expressão
+\eqref{eq_M_total_formula} mostra que $M(\vec y\,)$ é obtida
+somando-se as contribuições espaciais de cada elo e da espaçonave, isto é:
+
+\begin{equation}
+M(\vec y\,) =
+\sum_{i=1}^{n}
+J_{\text{sp},i}^{T}(\vec y\,)\,
+M_{i,\text{spt}}\,
+J_{\text{sp},i}(\vec y\,)
++
+M_{\text{espaç},\text{spt}}.
+\label{eq_M_total_formula}
+\end{equation}
+
+
+Em que $J_{\text{sp},i}(\vec y\,)$ é o jacobiano espacial do elo $i$ e
+$M_{i,\text{spt}}$ é o operador de inércia espacial associado à
+massa e ao matriz de inércia do elo no formalismo 6D
+\cite{featherstone2008}.
+Essa construção garante a consistência entre a
+cinemática diferencial (via jacobianos espaciais) e a estrutura da
+matriz de inércia generalizada empregada nas equações de Lagrange em
+\eqref{eq_dinamica_geral}.

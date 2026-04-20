@@ -1,0 +1,344 @@
+\label{ap_params_perseguidor}
+
+As tabelas deste apêndice consolidam os parâmetros físicos do perseguidor.
+
+
+\section{Geometria, massa e centros de massa (SI)}
+
+\begin{table}[H]
+\centering
+\caption{Perseguidor: massa, dimensões geométricas e centro de massa (SI).}
+\label{tab_perseguidor_base_SI}
+\begin{tabular}{lcc}
+\hline
+\textbf{Grandeza} & \textbf{Símbolo} & \textbf{Valor} \\
+\hline
+Massa & $m$ (kg) & 3,65 \\
+Comprimento & $L$ (m) & 0,10 \\
+Raio & $R$ (m) & 0,25 \\
+Diâmetro & $D$ (m) & 0,50 \\
+Centro de massa & $\vec{r}_{cm}$ (m) & $(0,00,\ 0,00,\ 0,00)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\caption{Juntas: massa, dimensões geométricas e centros de massa (SI).}
+\label{tab_perseguidor_juntas_SI}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Junta} & \textbf{Massa (kg)} & \textbf{$L$ (m)} & \textbf{$R$ (m)} & \textbf{$\vec{r}_{cm}$ (m)} \\
+\hline
+J1 & 0,07 & 0,05 & 0,05 & $(0,00,\ -0,13,\ 0,08)$ \\
+J2 & 0,07 & 0,05 & 0,05 & $(0,00,\ -0,13,\ 0,08)$ \\
+J3 & 0,07 & 0,05 & 0,05 & $(0,00,\ 0,23,\ 0,23)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\caption{Elos: massa, dimensões geométricas e centros de massa (SI).}
+\label{tab_perseguidor_elos_SI}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Elo} & \textbf{Massa (kg)} & \textbf{$L$ (m)} & \textbf{$R$ (m)} & \textbf{$\vec{r}_{cm}$ (m)} \\
+\hline
+E1 & 0,12 & 0,10 & 0,03 & $(0,00,\ -0,13,\ 0,15)$ \\
+E2 & 0,32 & 0,30 & 0,03 & $(0,00,\ 0,05,\ 0,23)$ \\
+E3 & 0,32 & 0,30 & 0,03 & $(0,00,\ 0,40,\ 0,23)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\centering
+\caption{Ferramenta: massa, dimensões geométricas e centro de massa (SI).}
+\label{tab_perseguidor_ferramenta_SI}
+\begin{tabular}{lcc}
+\hline
+\textbf{Grandeza} & \textbf{Símbolo} & \textbf{Valor} \\
+\hline
+Massa & $m$ (kg) & 0,04 \\
+Comprimento & $L$ (m) & 0,15 \\
+Raio & $R$ (m) & 0,01 \\
+Diâmetro & $D$ (m) & 0,02 \\
+Centro de massa & $\vec{r}_{cm}$ (m) & $(0,00,\ 0,63,\ 0,23)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\caption{Conjuntos combinados: massas e centros de massa (SI).}
+\label{tab_perseguidor_combinados_SI}
+\begin{tabular}{lcc}
+\hline
+\textbf{Conjunto} & \textbf{Massa (kg)} & \textbf{$\vec{r}_{cm}$ (m)} \\
+\hline
+J1 + E1 & 0,19 & $(0,00,\ -0,13,\ 0,12)$ \\
+J2 + E2 & 0,40 & $(0,00,\ 0,02,\ 0,23)$ \\
+J3 + E3 + Ferramenta & 0,44 & $(0,00,\ 0,39,\ 0,23)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\caption{Perseguidor (modo não operacional): centro de massa (SI).}
+\label{tab_perseguidor_home_com_SI}
+\begin{tabular}{lc}
+\hline
+\textbf{Grandeza} & \textbf{Valor} \\
+\hline
+$\vec{r}_{cm}$ (m) & $(0,00;\ 0,03;\ 0,05)$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\caption{Espessuras adotadas para cascas no modelo (SI).}
+\label{tab_perseguidor_espessuras_SI_milim}
+\begin{tabular}{lcc}
+\hline
+\textbf{Elemento} & \textbf{Espessura (m)} & \textbf{Espessura (mm)} \\
+\hline
+Parede da espaçonave & 0,0025 & 2,5 \\
+Parede dos elos & 0,0025 & 2,5 \\
+Parede da ferramenta & 0,0025 & 2,5 \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Componentes do tensor de inércia (SI)}
+
+\begin{table}[H]
+\centering
+\caption{Perseguidor: componentes do tensor de inércia (kg$\cdot$m$^2$).}
+\label{tab_perseguidor_I_base_SI}
+\begin{tabular}{lc}
+\hline
+\textbf{Componente} & \textbf{Valor} \\
+\hline
+$I_{xx}$ & $7,95\times 10^{-2}$ \\
+$I_{yy}$ & $7,95\times 10^{-2}$ \\
+$I_{zz}$ & $1,45\times 10^{-1}$ \\
+$I_{xy}$ & $6,60\times 10^{-16}$ \\
+$I_{xz}$ & $1,64\times 10^{-12}$ \\
+$I_{yz}$ & $-1,26\times 10^{-16}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\centering
+\caption{Elos e ferramenta: componentes do tensor de inércia (kg$\cdot$m$^2$).}
+\label{tab_perseguidor_I_elos_SI}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Componente} & \textbf{Elo 1} & \textbf{Elo 2} & \textbf{Elo 3} & \textbf{Ferramenta} \\
+\hline
+$I_{xx}$ & $1,66\times 10^{-4}$ & $2,83\times 10^{-3}$ & $2,83\times 10^{-3}$ & $8,11\times 10^{-5}$ \\
+$I_{yy}$ & $1,66\times 10^{-4}$ & $1,76\times 10^{-4}$ & $1,76\times 10^{-4}$ & $1,63\times 10^{-6}$ \\
+$I_{zz}$ & $6,24\times 10^{-5}$ & $2,83\times 10^{-3}$ & $2,83\times 10^{-3}$ & $8,11\times 10^{-5}$ \\
+$I_{xy}$ & $0$ & $0$ & $1,25\times 10^{-17}$ & $0$ \\
+$I_{xz}$ & $5,74\times 10^{-14}$ & $1,88\times 10^{-17}$ & $0$ & $0$ \\
+$I_{yz}$ & $0$ & $0$ & $0$ & $0$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Componentes de inércia dos conjuntos combinados (SI)}
+\label{sec:apB_inercias_combinadas}
+
+
+\begin{table}[H]
+\centering
+\caption{Conjuntos combinados: componentes do tensor de inércia (kg$\cdot$m$^2$).}
+\label{tab_perseguidor_I_combinados_SI}
+\begin{tabular}{lccc}
+\hline
+\textbf{Componente} & \textbf{J1 + E1} & \textbf{J2 + E2} & \textbf{J3 + E3 + Ferramenta} \\
+\hline
+$I_{xx}$ & $4,60\times 10^{-4}$ & $4,66\times 10^{-3}$ & $7,18\times 10^{-3}$ \\
+$I_{yy}$ & $4,60\times 10^{-4}$ & $2,16\times 10^{-4}$ & $2,18\times 10^{-4}$ \\
+$I_{zz}$ & $9,63\times 10^{-5}$ & $4,67\times 10^{-3}$ & $7,19\times 10^{-3}$ \\
+$I_{xy}$ & $0$ & $-4,44\times 10^{-13}$ & $-3,78\times 10^{-13}$ \\
+$I_{xz}$ & $-1,04\times 10^{-14}$ & $3,12\times 10^{-17}$ & $0$ \\
+$I_{yz}$ & $0$ & $-1,49\times 10^{-17}$ & $-7,60\times 10^{-14}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------- B.12: J1 + E1 ---------
+% \begin{table}[H]
+% \centering
+% \caption{Componentes do tensor de inércia do conjunto J1 + E1 (kg$\cdot$m$^2$).}
+% \label{tab_B12_I_J1E1}
+% \begin{tabular}{lc}
+% \hline
+% \textbf{Componente} & \textbf{Valor} \\
+% \hline
+% $I_{xx}$ & $4,60\times 10^{-4}$ \\
+% $I_{yy}$ & $4,60\times 10^{-4}$ \\
+% $I_{zz}$ & $9,63\times 10^{-5}$ \\
+% $I_{xy}$ & $0$ \\
+% $I_{xz}$ & $-1,04\times 10^{-14}$ \\
+% $I_{yz}$ & $0$ \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------- B.13: J2 + E2 ---------
+% \begin{table}[H]
+% \centering
+% \caption{Componentes do tensor de inércia do conjunto J2 + E2 (kg$\cdot$m$^2$).}
+% \label{tab_B13_I_J2E2}
+% \begin{tabular}{lc}
+% \hline
+% \textbf{Componente} & \textbf{Valor} \\
+% \hline
+% $I_{xx}$ & $4,66\times 10^{-3}$ \\
+% $I_{yy}$ & $2,16\times 10^{-4}$ \\
+% $I_{zz}$ & $4,67\times 10^{-3}$ \\
+% $I_{xy}$ & $-4,44\times 10^{-13}$ \\
+% $I_{xz}$ & $3,12\times 10^{-17}$ \\
+% $I_{yz}$ & $-1,49\times 10^{-17}$ \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------- B.14: J3 + E3 + Ferramenta ---------
+% \begin{table}[H]
+% \centering
+% \caption{Componentes do tensor de inércia do conjunto J3 + E3 + Ferramenta (kg$\cdot$m$^2$).}
+% \label{tab_B14_I_J3E3F}
+% \begin{tabular}{lc}
+% \hline
+% \textbf{Componente} & \textbf{Valor} \\
+% \hline
+% $I_{xx}$ & $7,18\times 10^{-3}$ \\
+% $I_{yy}$ & $2,18\times 10^{-4}$ \\
+% $I_{zz}$ & $7,19\times 10^{-3}$ \\
+% $I_{xy}$ & $-3,78\times 10^{-13}$ \\
+% $I_{xz}$ & $0$ \\
+% $I_{yz}$ & $-7,60\times 10^{-14}$ \\
+% \hline
+% \end{tabular}
+% \end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\caption{Perseguidor (configuração home, modo não operacional): componentes do tensor de inércia (kg$\cdot$m$^2$).}
+\label{tab_perseguidor_I_home_SI}
+\begin{tabular}{lc}
+\hline
+\textbf{Componente} & \textbf{Valor} \\
+\hline
+$I_{xx}$ & $2,11\times 10^{-1}$ \\
+$I_{yy}$ & $1,34\times 10^{-1}$ \\
+$I_{zz}$ & $2,22\times 10^{-1}$ \\
+$I_{xy}$ & $-7,64\times 10^{-16}$ \\
+$I_{xz}$ & $-5,86\times 10^{-16}$ \\
+$I_{yz}$ & $-3,62\times 10^{-2}$ \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Massas do perseguidor}
+
+\begin{table}[H]
+\centering
+\caption{Massas agregadas do perseguidor (SI).}
+\label{tab_perseguidor_massas_agregadas_SI}
+\begin{tabular}{lc}
+\hline
+\textbf{Grandeza} & \textbf{Valor (kg)} \\
+\hline
+Massa do perseguidor (apenas a espaçonave, sem \gls{mr}) & 3,65 \\
+Massa total do perseguidor (espaçonave + \gls{mr}) & 4,68 \\
+Massa total dos elos (E1 + E2 + E3) & 0,77 \\
+Massa total das juntas (J1 + J2 + J3) & 0,22 \\
+Massa total (elos + juntas) & 0,99 \\
+Massa total do \gls{mr} (elos + juntas + ferramenta) & 1,03 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Limites das juntas do manipulador robótico}
+
+\begin{table}[H]
+\centering
+\caption{Limites de posição das juntas (SI).}
+\label{tab_perseguidor_lim_pos_SI}
+\begin{tabular}{lcc}
+\hline
+\textbf{Junta} & \textbf{Posição (rad)} & \textbf{Posição (deg)} \\
+\hline
+J1 & $[-6,28;\ 6,28]$ & $[-360,00;\ 360,00]$ \\
+J2 & $[-1,57;\ 1,57]$ & $[-90,00;\ 90,00]$ \\
+J3 & $[-2,27;\ 2,27]$ & $[-130,00;\ 130,00]$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\centering
+\caption{Limites de velocidade angular das juntas (SI).}
+\label{tab_perseguidor_lim_vel_SI}
+\begin{tabular}{lc}
+\hline
+\textbf{Junta} & \textbf{$|\dot{q}|_{\max}$ (rad/s)} \\
+\hline
+J1 & 0,31 \\
+J2 & 0,31 \\
+J3 & 0,31 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[H]
+\centering
+\caption{Limites de torque das juntas (SI).}
+\label{tab_perseguidor_lim_tau_SI}
+\begin{tabular}{lcc}
+\hline
+\textbf{Junta} & \textbf{$\tau$ nominal (Nm)} & \textbf{$\tau$ máximo (Nm)} \\
+\hline
+J1 & $[-4,00;\ 4,00]$ & $[-4,20;\ 4,20]$ \\
+J2 & $[-4,00;\ 4,00]$ & $[-4,20;\ 4,20]$ \\
+J3 & $[-4,00;\ 4,00]$ & $[-4,20;\ 4,20]$ \\
+\hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

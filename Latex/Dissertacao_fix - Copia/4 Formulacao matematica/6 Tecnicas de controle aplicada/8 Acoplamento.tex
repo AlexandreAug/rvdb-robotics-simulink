@@ -1,0 +1,24 @@
+\subsection{Critério de acoplamento e detecção de sucesso}
+\label{subsec:criterio_acoplamento_sucesso}
+
+Neste trabalho, o estado de acoplamento é declarado por uma lógica sequencial implementada em MATLAB/Simulink, que supervisiona a transição entre os modos de aproximação, inserção e acoplado.
+O sucesso é avaliado por três verificações simultâneas:
+(i) erro de posição do efetuador em relação à referência geométrica,
+(ii) alinhamento angular entre o eixo da ferramenta e a normal da porta, e
+(iii) conclusão do avanço de inserção ao longo da normal.
+
+A referência do efetuador final é definida no referencial 0 fixado à espaçonave.
+No modo de aproximação, a referência é um ponto de aproximação na porta de acoplamento ao longo de sua normal;
+no modo de inserção, a referência progride ao longo da normal por meio de uma variável escalar de inserção $s$, integrada no tempo com velocidade constante até um comprimento máximo; no modo acoplado, $s$ é mantida no valor máximo e a referência permanece fixada no ponto final de inserção.
+
+O alinhamento é calculado pelo produto escalar entre o eixo da ferramenta (extraído da cinemática direta) e a normal da porta (transformada de \gls{lvlh} para o referencial 0 pelo quaternion de atitude da espaçonave); o ângulo é obtido por $\arccos(\cdot)$ e comparado a uma tolerância angular.
+O erro de posição é definido como a diferença entre a posição de referência e a posição atual do efetuador, sendo aceito quando sua norma é inferior a uma tolerância posicional.
+
+A declaração de acoplamento adota critério em conjunto.
+Considera-se acoplado quando:
+(i) o erro de posição está abaixo do limite,
+(ii) o erro angular está abaixo do limite e
+(iii) $s$ atinge o comprimento de inserção especificado.
+
+A evolução ocorre em três estados: aproximação (0), inserção (1) e acoplado (2);
+a transição 0$\rightarrow$1 ocorre quando posição e alinhamento são satisfeitos, e a transição 1$\rightarrow$2 ocorre quando $s$ atinge o comprimento especificado mantendo a condição de posição.

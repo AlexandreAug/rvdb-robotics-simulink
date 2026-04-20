@@ -1,14 +1,32 @@
-\subsection{Movimento orbital relativo}
-\label{sec:movimento_orbital_relativo}
+\subsection{Movimento orbital relativo aplicado em missão de \gls{rvdb}}
+
 O problema do movimento relativo dos dois corpos se aplica também à ao movimento orbital relativo entre a espaçonave perseguidora e o alvo.
 Ela é formulada a partir da diferença entre as posições da espaçonave perseguidora e do alvo previamente descritos no ECI, conforme apresentado na Figura~\eqref{fig:movimento_relativo_LVLH}.
+Para a formulação do movimento relativo, considera-se que as posições inerciais do alvo e do perseguidor em relação ao corpo primário são $\vec r_a$ e $\vec r_p$, com $r_a=\|\vec r_a\|$ e $r_p=\|\vec r_p\|$. No problema restrito de dois corpos, a dinâmica orbital do alvo (sem aceleração de controle) é descrita por
+
+\begin{equation}
+\label{eq:movimentoalvo}
+\ddot{\vec r}_a = -\frac{\mu}{r_a^3}\,\vec r_a,
+\end{equation}
+
+enquanto a dinâmica do perseguidor (com aceleração de controle) é dada por
+\begin{equation}
+\label{eq:movimentoperseguidor}
+\ddot{\vec r}_p
+=
+-\frac{\mu}{r_{p}^3}\,\vec r_{p}
++
+\frac{\vec F}{m_{p}}.
+\end{equation}
+onde $\vec F$ é a força não-gravitacional aplicada ao perseguidor, associada ao comando de controle translacional.
+
 \begin{figure}[ht]
 \centering
 \includegraphics[width=0.9\linewidth]{3 Formulacao matematica/Imagens/Posicao relativa LVLH.png}
 \caption{Movimento relativo das espaçonaves em relação ao referencial LVLH.}
 \label{fig:movimento_relativo_LVLH}
 \end{figure}
-Sendo assim, o vetor relativo $s$ expressa a posição do aceleração em relação ao alvo, e as equações diferenciais permitem descrever a dinâmica da aproximação entre as duas espaçonaves \cite{fehse2003}.
+Sendo assim, o vetor relativo $\vec s$ expressa a posição do perseguidor em relação ao alvo,
 
 \begin{equation}
 \vec r_{a} + \vec s = \vec r_{p}

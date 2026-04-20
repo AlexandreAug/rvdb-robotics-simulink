@@ -1,0 +1,28 @@
+\section{Técnica de controle aplicada}
+\label{sec:tecnica_pd}
+
+Nesta seção, o termo técnica de controle é utilizado para abranger tanto o planejamento orbital em malha aberta quanto as leis de controle em malha fechada por realimentação \cite{astrom1995pid}.
+No contexto deste trabalho, o problema de \gls{rvdb} é tratado em dois níveis:
+(i) orbital, com a definição de uma estratégia de transferência entre órbitas circulares coplanares; e
+(ii) atitude e movimento relativo do perseguidor, com aplicação de leis de controle por realimentação.
+
+No nível orbital, adota-se a transferência de Hohmann como manobra impulsiva em malha aberta: a partir de um estado orbital inicial conhecido, determinam-se dois incrementos de velocidade, aplicados em instantes predefinidos, para transferir o veículo para uma órbita-alvo.
+Esse planejamento estabelece as condições iniciais para a fase de aproximação de curta distância, descrita pelas equações de \gls{hcw} e para as etapas seguintes.
+
+No nível de atitude e do \gls{mr}, empregam-se controladores do tipo \gls{pd}, formulados sobre as variáveis de atitude no referencial $\{B\}$ fixo à espaçonave e sobre as coordenadas articulares do \gls{mr}.
+Esses controladores utilizam o erro entre os estados atuais e as referências desejadas (orientação, velocidades angulares e posições articulares) para gerar torques que atuam na dinâmica acoplada espaçonave--\gls{mr}.
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/1 Transferencia de Hohmann.tex}
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/2 Controle PD.tex}
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/3 Ganhos criterios ajuste.tex}
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/4 Limitacoes.tex}
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/5 Justificativa.tex}
+
+\input{4 Formulacao matematica/6 Tecnicas de controle aplicada/8 Acoplamento.tex}
+
+
+

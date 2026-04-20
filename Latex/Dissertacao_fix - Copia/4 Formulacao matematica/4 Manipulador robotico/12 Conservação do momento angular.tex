@@ -1,0 +1,90 @@
+\section{Quantidade de movimento angular do sistema}
+\label{sec_dinAcoplada_quantidade_movimento_angular}
+
+Para fins de análise física e verificação da conservação da quantidade de movimento angular,
+introduz-se o cálculo explícito da quantidade de movimento angular total do sistema
+espaçonave--\gls{mr} em relação à origem do referencial $\{B\}$.
+Na formulação de velocidades espaciais adotada na Seção~\ref{sec_dinAcoplada_energia_cinetica},
+a velocidade espacial do corpo $i$ (espaçonave ou elo do \gls{mr}) em $\{B\}$ é escrita como:
+
+\begin{equation}
+\vec v_{i,\text{sp}}
+=
+\begin{bmatrix}
+{}^{B}\!\vec v_{G_i} \\[2pt]
+{}^{B}\!\vec\omega_i
+\end{bmatrix}
+=
+J_{\text{sp},i}(\vec y\,)\,\dot{\vec y\,}.
+\label{eq_velocidade_espacial_corpo_i}
+\end{equation}
+
+
+Em que ${}^{B}\!\vec v_{G_i}$ e ${}^{B}\!\vec\omega_i$ são, respectivamente,
+a velocidade linear do \gls{cdm} e a velocidade angular do corpo $i$
+expressas em $\{B\}$, e $J_{\text{sp},i}(\vec y\,)$ é o jacobiano espacial
+avaliado no \gls{cdm} do corpo $i$, construído a partir dos graus de
+liberdade de atitude da espaçonave e das juntas do manipulador
+\cite{featherstone2008}.
+
+Para cada corpo $i$, o operador de inércia espacial
+$M_{i,\text{spt}}$ associa a velocidade espacial à quantidade de movimento espacial
+\cite{featherstone2008}:
+
+\begin{equation}
+\vec h_{i,\text{sp}}
+=
+M_{i,\text{spt}}\,\vec v_{i,\text{sp}}.
+\label{eq_quantidade_movimento_espacial_corpo_i}
+\end{equation}
+
+
+Em que $\vec h_{i,\text{sp}}$ agrupa em um único vetor a quantidade de movimento linear e a quantidade de movimento angular do corpo $i$ em relação à origem de $\{B\}$.
+A parte angular de $\vec h_{i,\text{sp}}$ é obtida selecionando-se as
+três últimas componentes, por meio da matriz:
+
+\begin{equation}
+S_\omega
+=
+\begin{bmatrix}
+0 & 0 & 0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 0 & 1
+\end{bmatrix},
+\qquad
+\vec h_i
+=
+S_\omega\,\vec h_{i,\text{sp}}.
+\label{eq_selecao_parte_angular}
+\end{equation}
+
+Em que $\vec h_i$ é o vetor de quantidade de movimento angular do corpo $i$ expresso em $\{B\}$,
+em analogia à decomposição da quantidade de movimento espacial em componentes linear e angular discutida em
+\cite{featherstone2008,lynch2017modern}.
+
+Neste trabalho, a espaçonave é tratada como um corpo rígido adicional com operador de inércia espacial
+$M_{\text{espaç},\text{spt}}$ expresso em $\{B\}$,
+cujos parâmetros de massa, \gls{cdm} e matriz de inércia já incluem
+a contribuição estrutural da espaçonave.
+Os elos do manipulador são indexados por $i=1,\dots,n$, de modo que o
+quantidade de movimento angular total do sistema espaçonave e manipulador em $\{B\}$ é escrito como:
+
+\begin{equation}
+\vec h_{\text{tot}}
+=
+\sum_{i=0}^{n} \vec h_i
+=
+\sum_{i=0}^{n}
+S_\omega\,M_{i,\text{spt}}\,
+J_{\text{sp},i}(\vec y\,)\,\dot{\vec y\,}.
+\label{eq_quantidade_mov_angular_total}
+\end{equation}
+
+
+Essa expressão define a quantidade de movimento espacial total como a soma dos quantidade de movimentos de cada corpo rígido
+em sistemas de espaçonave flutuante \cite{featherstone2008} e com formulações de sistemas espaçonave--manipulador
+que utilizam a conservação de quantidade de movimento para descrever a dinâmica em
+microgravidade.
+Na ausência de torques externos, a quantidade de movimento angular total do sistema em relação
+ao ponto de referência adotado (origem de $\{B\}$) é conservada, de modo que $\vec h_{\text{tot}}$
+deve permanecer constante no tempo \cite{wie2008space,featherstone2008}.

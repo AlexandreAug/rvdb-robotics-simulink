@@ -1,11 +1,9 @@
 \subsection{Dinâmica orbital}
 \label{sec:dinamica_orbital}
-Segundo \cite{wie2008space}, a dinâmica orbital é análise do movimento orbital de espaçonaves sob influencia gravitacional e outras forças externas.
-As Leis de Newton do movimento e a Lei da gravidade, assim como as três Leis do movimento planetário de Kepler providenciam o fundamento para esse estudo.
 
-% \subsubsection{Problema dos dois corpos}
 Nesta dissertação foi considerado o problema mais simples da mecânica orbital, ou seja, o problema dinâmico de duas massas pontuais sob a influência de sua atração gravitacional mútua, conhecido como o problema dos dois corpos na mecânica celeste, sendo este utilizado para descrever o movimento absoluto das espaçonaves em missão de \gls{rvdb}.
-A formulação do problema matemático é descrita pelas leis de movimento e pela lei da gravidade de Newton \cite{wie2008space}. O problema de dois corpos será formulado com as três leis empíricas do movimento planetário de Kepler, que são:
+A formulação do problema matemático é descrita pelas leis de movimento e pela lei da gravidade de Newton \cite{wie2008space}.
+O problema de dois corpos será formulado com as três leis empíricas do movimento planetário de Kepler, que são:
 
 \begin{enumerate}[label=(\roman*)]
     \item Cada planeta move-se ao redor do Sol descrevendo uma órbita elíptica, tendo o Sol localizado em um dos focos da elipse (Lei das Órbitas).
@@ -13,116 +11,257 @@ A formulação do problema matemático é descrita pelas leis de movimento e pel
     \item O quadrado do período orbital de um planeta é proporcional ao cubo do semi-eixo maior de sua órbita, relação que expressa a dependência entre o tempo de revolução e a distância média ao Sol (Lei dos Períodos).
 \end{enumerate}
 
-Conforme \cite{wie2008space}, este problema de dois corpos é ainda mais simplificado para o movimento quando se considera a dinâmica orbital de espaçonaves porque a massa do corpo primário (planeta) é muito maior que a do corpo secundário (espaçonave), ou seja, $m_1 \gg m_2$, o que resulta em $\mu \approx Gm_1$.
-Portanto, para um sistema Terra--espaçonave, temos $\mu \approx \mu_\oplus = G M_\oplus$, onde $\mu_\oplus$ denota o parâmetro gravitacional da Terra e $G M_\oplus$ denota a massa da Terra.
-Vale ressaltar que o corpo primário não é fixado inercialmente no problema dos dois corpos.
+% Conforme \cite{wie2008space}, no contexto de dinâmica orbital de espaçonaves, considera-se frequentemente que a massa do corpo primário (Terra) é muito maior que a do corpo secundário (espaçonave), isto é, $m_1 \gg m_2$, de modo que
+% \begin{equation}
+% \mu = G(m_1+m_2)\approx Gm_1 \triangleq \mu_\oplus,
+% \end{equation}
+% onde $\mu_\oplus$ denota o parâmetro gravitacional da Terra.
 
-O problema dos dois corpos deve ser diferenciado do chamado problema restrito de dois corpos (sistema planeta--satélite), no qual o corpo primário de massa $m_1$ é assumido fixo inercialmente. Esse problema restrito de dois corpos é frequentemente descrito pelo movimento de força central de uma partícula de massa $m_2$ em torno de um corpo primário de massa $m_1$ fixado inercialmente.
-Nesse estudo, então, o sistema de dois corpos é o sistema restrito dos dois corpos \cite{wie2008space}.
+% Portanto, para um sistema Terra--espaçonave, tem-se $\mu \approx \mu_\oplus = G M_\oplus$, onde $M_\oplus$ é a massa da Terra.
+% Essa aproximação conduz ao chamado problema restrito de dois corpos (modelo planeta--satélite), no qual o corpo primário é tratado como fixo no referencial inercial e o movimento do corpo secundário é descrito por uma força central.
+% Vale ressaltar que o corpo primário não é fixado inercialmente no problema dos dois corpos.
+
+% O problema dos dois corpos deve ser diferenciado do chamado problema restrito de dois corpos (sistema planeta--satélite), no qual o corpo primário de massa $m_1$ é assumido fixo inercialmente. Esse problema restrito de dois corpos é frequentemente descrito pelo movimento de força central de uma partícula de massa $m_2$ em torno de um corpo primário de massa $m_1$ fixado inercialmente.
+% Neste estudo, a dinâmica absoluta das espaçonaves é descrita por esse modelo restrito \cite{wie2008space}.
+No contexto de dinâmica orbital de espaçonaves, assume-se que $m_1 \gg m_2$ (corpo primário muito mais massivo que o secundário) \cite{wie2008space}, de modo que o parâmetro gravitacional do sistema
+
+\begin{equation}
+\mu = G(m_1+m_2)
+\end{equation}
+
+pode ser aproximado por
+\begin{equation}
+\mu \approx Gm_1 \triangleq \mu_\oplus,
+\end{equation}
+
+onde $\mu_\oplus$ é o parâmetro gravitacional da Terra e $m_1=M_\oplus$.
+Essa aproximação conduz ao problema restrito de dois corpos (modelo planeta--satélite), no qual o corpo primário é tratado como fixo no referencial inercial e o movimento do corpo secundário é descrito por uma força central \cite{wie2008space}.
+
+Primeiro, completa-se a formulação do problema dos dois corpos com os teoremas de conservação obtidos a partir da equação do movimento relativo \cite{wie2008space}. Em seguida, especializa-se o modelo para o problema restrito de dois corpos e, por fim, escrevem-se as equações orbitais em termos das variáveis do alvo e do perseguidor.
+A partir deste ponto, apresenta-se inicialmente a formulação geral do problema dos dois corpos e seus integrais de movimento. Em seguida, adota-se a aproximação restrita (Terra--espaçonave), com $\mu\approx\mu_\oplus$, e introduzem-se as equações orbitais individuais do alvo e do perseguidor no referencial inercial geocêntrico.
+
 
 \subsubsection{O problema dos dois corpos: Movimento absoluto e relativo}
 
-% Como exemplo prático do problema dos dois corpos, pode-se citar a órbita da Lua em torno da Terra, bem como a de um planeta em torno do Sol \cite{wgsantos2011}.
+As equações a seguir conduzem aos teoremas de conservação do problema dos dois corpos.
+A partir da equação do movimento relativo, obtém-se a conservação de energia do movimento, que será utilizada em seguida para introduzir a equação vis-viva, conforme \cite{wie2008space}.
 A aceleração de cada corpo é dada por:
 
 \begin{equation}
 \label{eq:wie3_1}
 m_1 \ddot{\vec R}_1 =
-+ G \frac{m_1m_2}{r^3} \vect r
++ G \frac{m_1m_2}{r^3} \vec r
 \end{equation}
 
 \begin{equation}
 \label{eq:wie3_2}
 m_2 \ddot{\vec R}_2 =
-- G \frac{m_1m_2}{r^3} \vect r
+- G \frac{m_1m_2}{r^3} \vec r
 \end{equation}
 
 onde:
 \begin{equation}
     \label{eq:vetor_posicao_r}
-\vect{r} = \vec R_{\, 2} - \vec R_{\, 1}.
+\vec{r} = \vec R_{\, 2} - \vec R_{\, 1}.
 \end{equation}
 
-A equação \eqref{eq:vetor_posicao_r} é o vetor posição de $m_2$ em relação a $m_1$ e em relação ao centro da Terra \cite{wie2008space}; e, $r$ é a distância entre um corpo em relação ao outro. Portanto, somando as equações \eqref{eq:wie3_1} e \eqref{eq:wie3_2}, obtém-se:
+A equação \eqref{eq:vetor_posicao_r} define o vetor posição relativa de $m_2$ em relação a $m_1$.
+O escalar $r=\|\vec r\|$ é a distância entre os corpos, conforme ilustrado na Figura~\ref{fig:movimento_ref_absoluto}.
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\linewidth]{3 Formulacao matematica/Imagens/Posicao absoluta.png}
+\caption{O problema do movimento relativo formulado para missões de \gls{rvdb}.}
+\label{fig:movimento_ref_absoluto}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Portanto, somando as equações \eqref{eq:wie3_1} e \eqref{eq:wie3_2}, obtém-se:
 \begin{equation}
 \label{eq:somaAceleracao_Corpo1e2}
-m_1 \ddot{\vec R}_1 + m_2 \ddot{\vec R}_2 = 0
+m_1 \ddot{\vec R}_1 + m_2 \ddot{\vec R}_2 = \vec 0.
 \end{equation}
 
-Definindo o vetor posição $\vec R_{c}$ para o centro de massa do sistema como
+Pela definição do \gls{cdm}, como explica \cite{halliday_resnick_walker_fundamentos1}, para um sistema discreto com duas partículas, impõe-se que a soma dos momentos de massa em relação ao \gls{cdm} seja nula,
 
+\begin{equation}
+m_1(\vec R_1-\vec R_c)+m_2(\vec R_2-\vec R_c)=\vec 0.
+\label{eq:def_cm_duas_particulas}
+\end{equation}
+
+Reorganizando \eqref{eq:def_cm_duas_particulas}, obtém-se
+\begin{equation}
+(m_1+m_2)\,\vec R_c = m_1\,\vec R_1 + m_2\,\vec R_2,
+\end{equation}
+
+e, portanto,
 \begin{equation}
 \vec R_{c} =
-\frac{m_1\,\vec {R_1} + m_2\,\vec R_2}{m_1+m_2},
+\frac{m_1\,\vec R_1 + m_2\,\vec R_2}{m_1+m_2}.
+\label{eq:Rc_cm_duas_particulas}
 \end{equation}
 
-portanto,
-
+Tomando duas derivadas temporais de \eqref{eq:Rc_cm_duas_particulas}, com massas constantes, resulta
 \begin{equation}
- \ddot{\vec R}_{c} = 0.
+(m_1+m_2)\,\ddot{\vec R}_c = m_1\,\ddot{\vec R}_1 + m_2\,\ddot{\vec R}_2.
+\label{eq:Rc_ddot_relacao}
 \end{equation}
 
-Integrando a equação anterior, obtém-se
+Usando \eqref{eq:somaAceleracao_Corpo1e2} em \eqref{eq:Rc_ddot_relacao}, conclui-se que
+\begin{equation}
+    \label{eq:Rc_vec0}
+\ddot{\vec R}_{c} = \vec 0.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A condição \eqref{eq:Rc_vec0} não implica $\vec R_c(t)=\vec 0$, mas que o \gls{cdm} possui movimento retilíneo uniforme no referencial inercial. Integrando, obtém-se
 
 \begin{equation}
-\dot{\vec{R}}_c(t) = \dot{\vec{R}}_c(0) = \text{vetor constante},
+\dot{\vec{R}}_c(t) = \dot{\vec{R}}_c(0),
+\label{eq:Rc_dot_constante}
 \end{equation}
 
 \begin{equation}
 \vec{R}_c(t) = \vec{R}_c(0) + \dot{\vec{R}}_c(0)\,t,
+\label{eq:Rc_movimento_uniforme}
 \end{equation}
 
-onde $\vec{R}_{c}(0)$ e $\dot{\vec{R}}_{c}(0)$ representam a posição e a velocidade inercial do centro de massa no instante $t = 0$.
-Assim, metade dos 12 estados do sistema dinâmico foi resolvida. Os seis estados restantes podem ser obtidos considerando o movimento relativo entre as duas massas.
+onde $\vec{R}_{c}(0)$ e $\dot{\vec{R}}_{c}(0)$ representam, respectivamente, a posição e a velocidade inerciais do \gls{cdm} no instante $t = 0$.
+Ainda, pode-se escolher a origem do referencial inercial no centro de massa no instante inicial, isto é, $\vec R_c(0)=\vec 0$.
+Além disso, escolhendo um referencial inercial no qual o centro de massa esteja em repouso no instante inicial, $\dot{\vec R}_c(0)=\vec 0$, a equação \eqref{eq:Rc_movimento_uniforme} reduz-se a
+
+\begin{equation}
+\vec R_c(t)=\vec 0.
+\label{eq:Rc_zero_por_escolha_referencial}
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Assim, metade dos 12 estados do sistema dinâmico foi resolvida ao descrever o movimento do \gls{cdm}.
+Os 12 estados correspondem às posições e velocidades inerciais de ambos os corpos, isto é, $\vec R_1,\dot{\vec R}_1,\vec R_2,\dot{\vec R}_2$.
+A dinâmica do \gls{cdm} determina 6 estados globais associados a $\vec R_c(t)$ e $\dot{\vec R}_c(t)$.
+Os seis estados restantes estão associados ao movimento relativo entre as massas e podem ser obtidos por meio de
+\begin{equation}
+\vec r(t)=\vec R_2(t)-\vec R_1(t),
+\label{eq:posicao_relativa}
+\end{equation}
+e
+\begin{equation}
+\dot{\vec r}(t)=\dot{\vec R}_2(t)-\dot{\vec R}_1(t).
+\label{eq:velocidade_relativa}
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Subtraindo a \eqref{eq:wie3_1} multiplicada por $m_2$ da \eqref{eq:wie3_2} multiplicada por $m_1$, obtém-se
 
 \begin{equation}
-\ddot{\vec{r}} + \mu\,\frac{\vec{r}}{r^3} = 0,
+m_1 m_2\left(\ddot{\vec R}_2-\ddot{\vec R}_1\right)
+=
+-\,G\,m_1 m_2\left(m_1+m_2\right)\frac{\vec r}{r^3},
+\end{equation}
+
+onde $\vec r\triangleq \vec R_2-\vec R_1$ e $r\triangleq\|\vec r\|$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Dividindo por $m_1 m_2$ e definindo
+
+\begin{equation}
+\mu \triangleq G(m_1+m_2),
+\end{equation}
+
+resulta
+\begin{equation}
+\label{eq:eqFundamentalDoisCorpos1}
+\ddot{\vec{r}} + \mu\,\frac{\vec{r}}{r^3} = \vec 0,
 \end{equation}
 
 sendo reescrito como
 \begin{equation}
 \label{eq:eqFundamentalDoisCorpos}
-\ddot{\vec r} = -\frac{\mu}{r^3}\,\vec r
+\ddot{\vec r} = -\frac{\mu}{r^3}\,\vec r.
 \end{equation}
 
-onde $\ddot{\vect r}$ é a aceleração inercial de $m_2$ em relação a $m_1$; $\mu$ é o parâmetro gravitacional do sistema de dois corpos, e \eqref{eq:eqFundamentalDoisCorpos} é a equação fundamental (geral) do problema dos dois corpos \cite{fehse2003,wie2008space}.
+onde $\ddot{\vec r}$ é a aceleração inercial de $m_2$ em relação a $m_1$, e $\mu$ é o parâmetro gravitacional do sistema de dois corpos.
+A equação \eqref{eq:eqFundamentalDoisCorpos} corresponde à forma vetorial fundamental do problema dos dois corpos \cite{wie2008space}.
+Nesta etapa, $\mu=G(m_1+m_2)$ e as grandezas $\vec R_1$, $\vec R_2$ e $\vec r$ são definidas no referencial inercial.
 
-A partir do integral de energia do problema restrito de dois corpos, a relação entre o módulo da velocidade orbital $v=\|\dot{\vec r}\|$, a distância ao corpo primário $r=\|\vec r\|$ e o semieixo maior $a$ pode ser escrita pela equação vis-viva \cite{wie2008space}:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A partir de \eqref{eq:eqFundamentalDoisCorpos}, conforme \cite{wie2008space}, obtém-se o integral de energia tomando o produto escalar com $\dot{\vec r}$,
+
+\begin{equation}
+\ddot{\vec r}\cdot \dot{\vec r}
+=
+-\frac{\mu}{r^3}\,\vec r\cdot \dot{\vec r}.
+\label{eq:energia_dot_1}
+\end{equation}
+
+Observa-se que $\ddot{\vec r}\cdot \dot{\vec r}=\frac{1}{2}\frac{d}{dt}\!\left(\dot{\vec r}\cdot \dot{\vec r}\right)$ e que $\frac{d}{dt}\!\left(\frac{1}{r}\right)=-\frac{1}{r^3}\vec r\cdot \dot{\vec r}$.
+
+Logo,
+
+\begin{equation}
+\frac{d}{dt}\left(\frac{\|\dot{\vec r}\|^2}{2}-\frac{\mu}{r}\right)=0,
+\label{eq:energia_constante}
+\end{equation}
+
+ou, equivalentemente,
+
+\begin{equation}
+\frac{\|\dot{\vec r}\|^2}{2}-\frac{\mu}{r}=\mathcal{E},
+\label{eq:energia_especifica}
+\end{equation}
+onde $\mathcal{E}$ é constante e representa a energia mecânica específica do movimento relativo \cite{wie2008space}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+A partir do integral de energia \eqref{eq:energia_especifica} e usando $\mathcal{E}=-\mu/(2a)$ para órbitas keplerianas, obtém-se a relação entre o módulo da velocidade orbital $v=\|\dot{\vec r}\|$, a distância relativa $r=\|\vec r\|$ e o semieixo maior $a$, resultando na equação vis-viva \cite{wie2008space}:
 
 \begin{equation}
 \label{eq:vis_viva}
 v^2 = \mu\left(\frac{2}{r}-\frac{1}{a}\right).
 \end{equation}
 
-A dinâmica orbital do alvo (sem aceleração de controle) é propagada por\fn{O subescrito \emph{p} se refere à espaçonave perseguidora, enquanto que \emph{a} é a espaçonave alvo.}
+\subsubsection{Equações orbitais em termos do perseguidor}
 
+Nesta dissertação, adota-se o referencial inercial geocêntrico para a propagação orbital e distinguem-se as variáveis do alvo e do perseguidor pelos subscritos $a$ e $p$, respectivamente.
+Os vetores $\vec r_a$ e $\vec r_p$ denotam as posições inerciais do alvo e do perseguidor em relação ao centro do corpo primário, com $r_a=\|\vec r_a\|$ e $r_p=\|\vec r_p\|$.
+A força $\vec F$ representa uma força não-gravitacional aplicada ao perseguidor (por exemplo, força de controle).
+
+
+No problema restrito de dois corpos (planeta--satélite), adota-se $m_1=M_\oplus$ e $m_2\ll m_1$, de modo que
 \begin{equation}
-\label{eq:movimentoalvo}
-\ddot{\vec r}_a = \frac{-\mu}{\vec {r^3_a}}\vec {r}_a.
+\mu = G(m_1+m_2)\approx GM_\oplus \triangleq \mu_\oplus.
 \end{equation}
+A partir deste ponto, utiliza-se $\mu=\mu_\oplus$ nas equações orbitais individuais do alvo e do perseguidor.
 
-Enquanto que o perseguidor (com aceleração de controle) é propagado por
 
-\begin{equation}
-\label{eq:movimentoperseguidor}
-\ddot{\vec r}_p
-=
--\frac{\mu}{\vec {r_{p}^3}}\vec r_{p}
-+
-\frac{\vec F}{m_{p}},
-\end{equation}
+% A dinâmica orbital do alvo (sem aceleração de controle) é propagada por
+% \begin{equation}
+% \label{eq:movimentoalvo}
+% \ddot{\vec r}_a = -\frac{\mu}{r_a^3}\,\vec r_a.
+% \end{equation}
 
-onde $\vect F$ é um tipo de força não-gravitacional, como uma força de controle, aplicada no perseguidor para se aproximar do alvo.
-A Figura~\eqref{fig:movimento_ref_absoluto} apresenta o modelo físico da \gls{emtr} no contexto do movimento descrito no referencial inercial geocêntrico.
-Nesse sistema, as posições do alvo e da espaçonave perseguidora são expressas em relação ao centro da Terra, possibilitando a análise do movimento absoluto.
+% Enquanto que o perseguidor (com aceleração de controle) é propagado por
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.9\linewidth]{3 Formulacao matematica/Imagens/Posicao absoluta.png}
-\caption{O problema do movimento relativo formulado para missões de \gls{rvdb}.}
-\label{fig:movimento_ref_absoluto}
-\end{figure}
+% \begin{equation}
+% \label{eq:movimentoperseguidor}
+% \ddot{\vec r}_p
+% =
+% -\frac{\mu}{r_{p}^3}\,\vec r_{p}
+% +
+% \frac{\vec F}{m_{p}}.
+% \end{equation}
 
-% \newpage
+% onde $\vec F$ é a força não-gravitacional aplicada ao perseguidor, associada ao comando de controle translacional.
+% A Figura~\eqref{fig:movimento_ref_absoluto} apresenta o modelo físico da \gls{etmr} no contexto do movimento descrito no referencial inercial geocêntrico.
+% Nesse sistema, as posições do alvo e da espaçonave perseguidora são expressas em relação ao centro da Terra, possibilitando a análise do movimento absoluto.
+
+% \begin{figure}[ht]
+% \centering
+% \includegraphics[width=0.9\linewidth]{3 Formulacao matematica/Imagens/Posicao absoluta.png}
+% \caption{O problema do movimento relativo formulado para missões de \gls{rvdb}.}
+% \label{fig:movimento_ref_absoluto}
+% \end{figure}
+

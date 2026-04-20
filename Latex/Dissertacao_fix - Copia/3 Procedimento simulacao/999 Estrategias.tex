@@ -1,0 +1,87 @@
+% \chapter{Estratégias de RVD/B}
+% \label{sec_cap2_estrategias_rvdb}
+
+
+% Neste capítulo descreve-se as estratégias empregadas para o processo de RVD/B entre o veículo perseguidor e o alvo.
+% O objetivo é traçar o roteiro das abordagens a serem implementadas em uma missão de RVD/B, desde a fase de lançamento até  a manobra orbital de aproximação de proximidade, quando então se dá o acoplamento da nave tipo manipulador robótico na porta de docking da espaçonave alvo, completando assim a operação de RVD/B.
+% O Capítulo aborda estratégia para a modelagem matemática e análise dinâmica (Capítulo 2) em conformidade com os conceitos de movimento absoluto e relativo que permeiam as fases de aproximações de longa e curta distância bem como a aproximação de curta distância e a aproximação de proximidade. O controle de atitude segue estratégias sob o mesmo prisma de movimento absoluto e relativo.
+
+
+% \subsection{Lançamento: vínculos associados às missões de \gls{rvdb}}
+% \label{sec:lancamento_vinculos}
+
+% O início de uma missão de \gls{rvdb} ocorre na etapa de lançamento, conforme ilustrado na Figura~\ref{fig_etapas_rvdb}.
+% Nessa fase, a espaçonave perseguidora deve ser injetada em uma órbita compatível com a do alvo, considerando a janela de lançamento planejada, de modo a evitar inserções que demandem correções adicionais de trajetória.
+
+% A definição da janela de lançamento é vinculada à órbita conhecida do alvo.
+% Os parâmetros de injeção são escolhidos em função dessa órbita, com o objetivo de garantir a inserção do veículo em uma trajetória coplanar à do alvo, reduzindo a necessidade de manobras posteriores para correção do plano orbital.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Estratégia de controle de atitude}
+% \label{sec:controle_atitude}
+
+
+% O sistema de controle opera em dois modos distintos:
+% (1) quando o manipulador robótico estiver travado (descrito pela dinâmica de corpo rígido) e
+% (2) quando o \gls{mr} estiver em operação (descrito pela dinâmica acoplada da atitude e variáveis do movimento do \gls{mr}).
+% Na fase de aproximação final, uma lei de controle atua nas juntas do manipulador para executar a manobra de captura.
+% A estratégia inclui também os pontos de referência (\emph{waypoints}), que são pontos de espera para possíveis ajustes de posição e velocidades e cheques de segurança do sistema robótico.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \subsection{Controle PD na dinâmica relativa}
+% \label{sec:controle_PD_HCW}
+
+% A aproximação relativa no referencial \gls{lvlh}, definido no centro de massa da espaçonave alvo, é descrita pelo modelo linearizado \gls{hcw}.
+% Neste referencial é descrito o movimento relativo entre a espaçonave perseguidora e a espaçonave alvo.
+% A abordagem de controle do movimento orbital relativo é realizado pela lei de controle \gls{pd}.
+% O objetivo é conduzir o movimento relativo a um órbita cuja deriva possa ser utilizada para reduzir um ângulo de fase que atenda a condição de aproximação final com o \gls{mr} em modo não operacional. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \subsection{Controle de atitude durante o modo não operacional do \gls{mr}}
+% \label{sec:controle_atitude_Euler}
+
+% No modo não operacional, a \gls{etmr} é tratada como corpo rígido.
+% A estratégia consiste em aplicar a técnica \gls{pd} para controle da atitude descrita em quaternion de erro entre a orientação da espaçonave perseguidora e uma orientação de referência associada ao alvo medida no sistema corpo.
+% O controle é responsável por manter o perseguidor alinhado com o alvo durante a aproximação curta, enquanto o controle translacional define a trajetória relativa.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \subsection{Controle de atitude durante o modo operacional do \gls{mr}}
+% \label{sec:controle_atitude_Lagrange}
+% % 
+% No modo operacional, o \gls{mr} passa a se movimentar para engatar o \gls{eef} na porta de acoplamento.
+% A dinâmica do sistema deixa de ser equivalente à de um corpo rígido e passa a ser descrita pela formulação de Lagrange com coordenadas generalizadas que incluem a atitude da base e as juntas do \gls{mr}.
+% Os movimentos articulares geram torques internos que aparecem como reações na base, alterando a sua atitude.
+
+% A estratégia de controle utiliza o mesmo controlador que estabiliza a atitude quando o \gls{mr} está travado, e então passa a atuar também como compensador das reações provenientes dos movimentos das juntas.
+% Assim, o controle de atitude deve ao mesmo tempo seguir a referência de atitude em relação ao alvo e anular os efeitos dos torques e forças de reação na plataforma robótica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \subsection{Síntese das estratégias de controle}
+
+
+% Por fim, a Tabela~\ref{tab_locais_atuacao_controladores} apresenta a forma de implementação da lei de controle \gls{pd} neste trabalho, onde e como cada uma atua, de forma a cumprir a missão de \gls{rvdb}.
+
+% \begin{table}[H]
+% \centering
+% \caption{Estratégia da lei de controle implementada.}
+% \label{tab_locais_atuacao_controladores}
+% \begin{tabular}{p{0.32\linewidth} p{0.62\linewidth}}
+% \hline
+% \textbf{Local de atuação} & \textbf{Como atua} \\
+% \hline
+% Controle de órbita &
+% Reduz o erro e mantém a acurácia da posição relativa entre as espaçonaves e translada o perseguidor para próximo do alvo durante a aproximação curta. \\
+% \hline
+% Atitude relativa &
+% Durante as aproximações curta distância e final, mantém a atitude do perseguidor sincronizada com a do alvo. \\
+% \hline
+% Juntas do \gls{mr} &
+% Realiza a movimentação do \gls{mr} para que o efetuador final seja conduzido até a porta de acoplamento, de maneira suave e controlada. \\
+% \hline
+% \end{tabular}
+% \end{table}

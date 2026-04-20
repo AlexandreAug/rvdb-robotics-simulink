@@ -1,0 +1,18 @@
+\section{Leis de controle}
+\label{sec_estrategias_controle}
+
+Uma vez estabelecido o modelo da dinâmica relativa entre o veículo perseguidor e o alvo, torna-se necessário definir estratégias de guiamento e controle capazes de conduzir o perseguidor até o estado relativo desejado.
+
+% \subsection{Lei de controle Proporcional--Derivativa}
+
+O trabalho de \cite{santos2015mixed} propôs uma metodologia de otimização multiobjetivo discreta para o gerenciamento de atuadores mistos em manobras de rendezvous, considerando de forma integrada propulsores, rodas de reação e torqrods magnéticos no controle acoplado de translação e atitude da espaçonave.
+% A abordagem, denominada \textit{Actuator Multiobjective Command Method} (\textit{AMCM}), distribui o torque de controle entre os atuadores com base em critérios simultâneos de erro de torque, consumo de combustível e energia elétrica, efeitos de acoplamento e risco de utilização. Os autores implementaram a metodologia em uma malha completa de guiamento, navegação e controle e validaram seu desempenho tanto em simulações numéricas quanto em testes \textit{hardware-in-the-loop} no simulador EPOS do DLR. Os resultados indicaram que o uso coordenado de atuadores com características distintas pode produzir melhor desempenho global do que estratégias baseadas em um único tipo de atuador, especialmente na fase final de aproximação de missões de rendezvous autônomo.
+
+
+Como explicado por \cite{qi2022variable}, a lei de controle \gls{pd} é utilizada em operações de proximidade devido à sua simplicidade de implementação e robustez em sistemas lineares.
+Quando aplicada à dinâmica relativa descrita pelas equações de \gls{hcw}, a lei de controle \gls{pd} permite estabilizar o movimento relativo e conduzir o perseguidor até a posição desejada em relação ao alvo.
+
+% \subsection{Controle não-linear}
+
+Como apresentado por \cite{slotine1991applied}, sistemas físicos são não-lineares, ou seja, em cenários operacionais reais, as incertezas associadas ao modelo dinâmico, perturbações externas e erros de medição podem afetar o desempenho dos sistemas de controle.
+Para lidar com essas perturbações, técnicas de controle adaptativo e robusto têm sido propostas na literatura, permitindo ajustar automaticamente os parâmetros do controlador ou garantir estabilidade mesmo na presença de incertezas.

@@ -1,0 +1,11 @@
+\subsection{Estrutura em malha fechada}
+
+A técnica de controle aplicada consiste em uma estrutura em malha fechada na qual:
+
+\begin{itemize}
+  \item o movimento orbital relativo é descrita pelas equações de \gls{hcw}, que fornecem a evolução da posição e velocidade do \gls{cdm} da espaçonave no referencial \gls{lvlh};
+  \item a atitude da espaçonave é estabilizada em torno de uma referência desejada por meio do controlador \gls{pd} de atitude \eqref{eq_controle_PD_atitude}, de forma que o alinhamento do perseguidor se mantenha em relação ao alvo;
+  \item as juntas do \gls{mr} seguem trajetórias de referência obtidas pela cinemática inversa, sendo rastreadas pelo controlador \gls{pd} articular \eqref{eq_controle_PD_juntas}.
+\end{itemize}
+
+Essa combinação permite que, além da transição entre as dinâmicas utilizadas neste trabalho durante as fases de aproximação curta e final, a espaçonave mantenha uma atitude compatível com os requisitos de aproximação, enquanto o \gls{mr} realiza o alinhamento e o acoplamento com a porta de acoplamento.

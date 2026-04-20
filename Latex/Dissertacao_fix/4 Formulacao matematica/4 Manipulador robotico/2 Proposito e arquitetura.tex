@@ -1,0 +1,11 @@
+\subsection{Propósito e Arquitetura}
+\label{sec_proposito_arquitetura}
+
+Terminada a fase de aproximação de curta distância, inicia-se a aproximação final, onde o \gls{mr}, por meio de suas juntas revolutas, movimenta seus elos de modo que o efetuador se alinhe com a porta de acoplamento do alvo.
+Durante essa fase, o comando das juntas é dado pelo sistema de controle considerando o modelo dinâmico da espaçonave no modo operacional.
+
+A lei de controle das juntas atua de forma integrada às leis de controle de atitude e do movimento relativo da espaçonave, assegurando que a pose (alinhamento com a porta de acoplamento e atitude) não seja perturbada pela reação da espaçonave associadas ao movimento do \gls{mr}.
+
+Em ambiente orbital, a conservação da quantidade de movimento angular total da espaçonave robótica se conserva e contrabalança torques e forças de reação geradas pelo movimento do \gls{mr}, ou seja, o movimento da espaçonave para contrabalançar so efeitos das reaçães precisa ser controlado para garantir a sincronização da atitude e apontamento para a porta de acomplamento.
+Essa compensação é obtida por meio de uma lei de controle acoplado espaçonave robótica usando a formulação lagrangiana para obter as equações do movimento da \gls{etmr}.
+O \gls{mr} adotado possui configuração 3R, composta por três juntas revolutas responsáveis pela movimentação e posicionamento da ferramenta.

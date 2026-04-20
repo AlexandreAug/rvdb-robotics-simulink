@@ -1,0 +1,33 @@
+\subsection{Restrições no Efetuador (pré-captura/berthing) (=== EM DESENVOLVIMENTO ===)}
+
+Durante a fase final do \emph{rendezvous}, mais especificamente na aproximação de proximidade - onde requer uma aproximação fina e engajamento com o alvo (\emph{berthing}) - o efetuador do manipulador robótico deve obedecer aos limites cinemáticos definidos.  
+Esses limites garantem a segurança do processo como um todo, evitando impactos, desalinhamentos, falhas na captura ou contatos indesejados.
+
+As restrições aplicam-se à velocidade linear, à velocidade angular e ao erro de orientação do efetuador.
+
+\begin{equation}
+\label{eq:restr_efe_v}
+\|\vec{v}_E\| \leq v_{\text{max}} \qquad \text{(velocidade linear máxima)},
+\end{equation}
+
+\begin{equation}
+\label{eq:restr_efe_w}
+\|\vec{\omega}_E\| \leq \omega_{\text{max}} \qquad \text{(velocidade angular máxima)},
+\end{equation}
+
+\begin{equation}
+\label{eq:restr_efe_orient}
+\angle(\mathbf{R}_E, \mathbf{R}_{\text{ref}}) \leq \theta_{\text{max}} \qquad \text{(erro de orientação)},
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $\vec{v}_E$: velocidade linear do efetuador no instante de captura;
+    \item $\vec{\omega}_E$: velocidade angular do efetuador;
+    \item $\mathbf{R}_E$: matriz de rotação do efetuador;
+    \item $\mathbf{R}_{\text{ref}}$: matriz de rotação de referência do alvo;
+    \item $\angle(\mathbf{R}_E, \mathbf{R}_{\text{ref}})$: ângulo entre a orientação atual e a desejada;
+    \item $v_{\text{max}}, \omega_{\text{max}}, \theta_{\text{max}}$: limites máximos admissíveis.
+\end{itemize}
+
+Os valores de $v_{\text{max}}$, $\omega_{\text{max}}$ e $\theta_{\text{max}}$ foram definidos com base nas tolerâncias geométricas determinadas para o sistema de captura, nas capacidades de controle PD e nos requisitos da missão.

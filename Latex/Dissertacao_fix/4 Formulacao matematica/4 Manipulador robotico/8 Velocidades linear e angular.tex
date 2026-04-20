@@ -1,0 +1,748 @@
+% \subsection{Velocidades linear e angular}
+% \label{sec_dinAcoplada_veloc_linear_angular}
+
+% As velocidades linear ${}^{B}\!\vec v_{G_i}$ e angular ${}^{B}\!\vec\omega_i$
+% do elo $i$ são obtidas a partir do jacobiano geométrico avaliado no respectivo
+% centro de massa \cite{craig2005,Wang2003KinematicsDynamics}.
+% Escrevendo o jacobiano na forma espacial \cite{murray1994mathematical},
+% tem-se um operador $J_{\text{sp},i}(\vec y\, \, )$ que
+% relaciona diretamente as velocidades generalizadas
+% $\dot{\vec y\, \, }$ com as velocidades cinemáticas empregadas na energia
+% cinética:
+
+% \begin{equation}
+% \begin{bmatrix}
+% {}^{B}\!\vec v_{G_i} \\
+% {}^{B}\!\vec\omega_i
+% \end{bmatrix}
+% =
+% J_{\text{sp},i}(\vec y\,)\,\dot{\vec y\,}.
+% \label{eq_jacobianos_vGi1}
+% \end{equation}
+
+% Em seguida, decompõe-se o jacobiano espacial em parte linear e parte angular
+
+% \begin{equation}
+% J_{\text{sp},i}(\vec y\,)
+% =
+% \begin{bmatrix}
+% J_{v,i}(\vec y\,) \\
+% J_{\omega,i}(\vec y\,)
+% \end{bmatrix},
+% \label{eq_jacobianos_vGi2}
+% \end{equation}
+
+% Em que o termo $J_{v,i}(\vec y\, )$ é a parte linear, enquanto
+% $J_{\omega,i}(\vec y\, )$ é a parte angular do jacobiano espacial do elo $i$.
+
+% Como discutido em \cite{sciavicco_siciliano2010}, no caso de juntas
+% revolutas as colunas de $J_{v,i}$ e $J_{\omega,i}$ associadas às coordenadas
+% articulares podem ser escritas a partir dos eixos de junta e das posições
+% dos centros de massa.
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Se ${}^{B}\!\vec z_j$ denota o eixo de rotação da junta $j$ expresso em $\{B\}$,
+% ${}^{B}\!\vec r_{O_j}$ a posição da origem da junta $j$ em $\{B\}$ e
+% ${}^{B}\!\vec r_{G_i}$ a posição do centro de massa do elo $i$ em $\{B\}$,
+% então ${}^{B}\!\vec v_{G_i}$ representa a velocidade linear no \gls{cdm} do elo $i$,
+% e ${}^{B}\!\vec\omega_i$ representa a velocidade angular do elo $i$, ambas expressas em $\{B\}$.
+% Para uma junta revoluta $j$ que atua sobre o elo $i$, a coluna correspondente do
+% jacobiano espacial avaliado no seu \gls{cdm} $G_i$ é dada por
+
+% \begin{equation}
+% J_{v,i}^{(j)}(\vec y\, )
+% =
+% {}^{B}\!\vec z_j \times
+% \bigl({}^{B}\!\vec r_{G_i}(\vec y\, ) - {}^{B}\!\vec r_{O_j}(\vec y\, )\bigr),
+% \qquad
+% J_{\omega,i}^{(j)}(\vec y\, )
+% =
+% {}^{B}\!\vec z_j,
+% \label{eq_colunas_J_sp_revoluta}
+% \end{equation}
+
+% para $j\le i$; para $j>i$, essas colunas são nulas, pois a junta $j$ não influencia o elo $i$.
+% Para evidenciar a estrutura do jacobiano espacial $J_{\text{sp},i}$,
+% escrevem-se explicitamente as colunas não nulas para $i=1,2,3$.
+% Para $i=1$:
+
+% \begin{equation}
+% J_{\text{sp},1}(\vec y\, )
+% =
+% \begin{bmatrix}
+% {}^{B}\!\vec z_1 \times \bigl({}^{B}\!\vec r_{G_1}-{}^{B}\!\vec r_{O_1}\bigr) & \vec 0 & \vec 0\\[2pt]
+% {}^{B}\!\vec z_1 & \vec 0 & \vec 0
+% \end{bmatrix}.
+% \label{eq_Jsp_i1}
+% \end{equation}
+
+% Para $i=2$:
+% \begin{equation}
+% J_{\text{sp},2}(\vec y\, )
+% =
+% \begin{bmatrix}
+% {}^{B}\!\vec z_1 \times \bigl({}^{B}\!\vec r_{G_2}-{}^{B}\!\vec r_{O_1}\bigr) &
+% {}^{B}\!\vec z_2 \times \bigl({}^{B}\!\vec r_{G_2}-{}^{B}\!\vec r_{O_2}\bigr) &
+% \vec 0\\[2pt]
+% {}^{B}\!\vec z_1 &
+% {}^{B}\!\vec z_2 &
+% \vec 0
+% \end{bmatrix}.
+% \label{eq_Jsp_i2}
+% \end{equation}
+
+% Para $i=3$:
+% \begin{equation}
+% J_{\text{sp},3}(\vec y\, )
+% =
+% \begin{bmatrix}
+% {}^{B}\!\vec z_1 \times \bigl({}^{B}\!\vec r_{G_3}-{}^{B}\!\vec r_{O_1}\bigr) &
+% {}^{B}\!\vec z_2 \times \bigl({}^{B}\!\vec r_{G_3}-{}^{B}\!\vec r_{O_2}\bigr) &
+% {}^{B}\!\vec z_3 \times \bigl({}^{B}\!\vec r_{G_3}-{}^{B}\!\vec r_{O_3}\bigr)\\[2pt]
+% {}^{B}\!\vec z_1 &
+% {}^{B}\!\vec z_2 &
+% {}^{B}\!\vec z_3
+% \end{bmatrix}.
+% \label{eq_Jsp_i3}
+% \end{equation}
+
+% Os termos dependentes de velocidade (Coriolis e centrífugos) decorrem da aplicação
+% das equações de Lagrange à energia cinética do sistema e são reunidos no termo
+% $C(\cdot)\,\dot{\cdot}$ nas equações de movimento \cite{Geradin2004,Wilde2018}.
+% Assim, o foco recai sobre a construção de $M(\cdot)$ por meio dos jacobianos
+% e dos operadores de inércia espacial.
+
+% Em ambiente de microgravidade, o centro de massa do sistema praticamente coincide com o centro de gravidade e o torque gravitacional interno em torno do centro de massa é desprezível \cite{wie2008space}.
+% Além disso, para uma órbita circular, a contribuição da energia potencial gravitacional na dinâmica de atitude é praticamente constante.
+% Assim, no modelo adotado, toma-se a energia potencial generalizada como
+% $V(\vec y\, ) = 0$ e a Lagrangiana reduz-se
+% a $L(\vec y\, ,\dot{\vec y\, }) = T(\vec y\, ,\dot{\vec y\, })$.
+% O conjunto espaçonave--\gls{mr} é, então, descrito diretamente pelas equações de Lagrange em sua forma padrão \cite{murray1994mathematical}:
+
+% \begin{equation}
+% M(\vec y\, )\,\ddot{\vec y\, }
+% +
+% C(\vec y\, ,\dot{\vec y\, })\,\dot{\vec y\, }
+% =
+% \vec\tau,
+% \label{eq_lagrange_formato_padrao}
+% \end{equation}
+
+% Em que $\vec y\, $ é o vetor de coordenadas generalizadas, $M(\vec y\, )$ é a
+% matriz de inércia generalizada e $C(\vec y\, ,\dot{\vec y\, })\,\dot{\vec y\, }$
+% agrega os termos de Coriolis e centrífugos.
+% O foco desta seção é a construção de $M(\vec y\, )$ a partir das
+% contribuições de massa e inércia da espaçonave e dos elos do manipulador.
+% %%%%%%%%%%%%%%%%%%%
+
+% % As coordenadas generalizadas são organizadas de modo a reunir, em um único
+% % vetor, os parâmetros de atitude da espaçonave e as coordenadas articulares do manipulador:
+
+% % \begin{equation}
+% % \vec y\, \in \mathbb{R}^{3+n}
+% % =
+% % \begin{bmatrix}
+% % \vec\eta_B \\[2pt]
+% % \vec\xi\end{bmatrix},
+% % \qquad
+% % \dot{\vec y\, } \in \mathbb{R}^{3+n}
+% % =
+% % \begin{bmatrix}
+% % \dot{\vec\eta}_B \\[2pt]
+% % \dot{\vec\xi}
+% % \end{bmatrix},
+% % \label{eq_q_generalizado_espaconave_mr}
+% % \end{equation}
+
+% % Em que $\vec\eta_B \in \mathbb{R}^{3}$ representa os ângulos de Euler da
+% % espaçonave e $\vec\xi \in \mathbb{R}^{n}$ contém as coordenadas articulares
+% % do manipulador (neste trabalho, $n=3$).
+
+% As coordenadas generalizadas são organizadas de modo a reunir, em um único
+% vetor, os parâmetros de atitude da espaçonave e as coordenadas articulares do
+% manipulador:
+
+% \begin{equation}
+% \vec y\, \in \mathbb{R}^{3+n}
+% =
+% \begin{bmatrix}
+% \vec\eta_B \\[2pt]
+% \vec\xi\end{bmatrix},
+% \qquad
+% \dot{\vec y\, } \in \mathbb{R}^{3+n}
+% =
+% \begin{bmatrix}
+% \dot{\vec\eta}_B \\[2pt]
+% \dot{\vec\xi}
+% \end{bmatrix},
+% \label{eq_q_generalizado_espaconave_mr}
+% \end{equation}
+
+% Em que $\vec\eta_B = [\phi_1, \phi_2, \phi_3]^T$ representa os ângulos de Euler da
+% espaçonave (sequência 3--2--1) e $\vec\xi \in \mathbb{R}^{n}$ contém as coordenadas articulares do manipulador.
+
+% %%%%%%%%%%%%
+% % A relação cinemática entre as taxas dos ângulos de Euler e a velocidade
+% % angular do corpo é dada pelas equações cinemáticas diferenciais
+% % \cite{Schaub2010AttitudeDynamics}, que, para a sequência 3--2--1,
+% % podem ser escritas como
+
+% % \begin{equation}
+% % \dot{\vec\eta}_B
+% % =
+% % B(\vec\eta_B)\,{}^{B}\!\vec\omega_B,
+% % \qquad
+% % \vec\eta_B=
+% % \begin{bmatrix}
+% % \phi\\ \xi\\ \psi
+% % \end{bmatrix},
+% % \label{eq_euler321_kinematics}
+% % \end{equation}
+
+% % Em que $\phi$, $\xi$ e $\psi$ são, respectivamente, os ângulos de rolagem,
+% % arfagem e guinada.
+% A relação cinemática entre as taxas dos ângulos de Euler e a velocidade
+% angular do corpo, ${}^{B}\!\vec\omega_B$, é dada diretamente pela matriz de transformação $\mathbf{S}(\vec\eta_B)$, conforme apresentado na Equação~\eqref{eq_cinematica_euler}:
+
+% \begin{equation}
+% {}^{B}\!\vec\omega_B
+% =
+% \mathbf{S}(\vec\eta_B)\,\dot{\vec\eta}_B,
+% \label{eq:euler_direct_kinematics}
+% \end{equation}
+
+% Em que a matriz $\mathbf{S}(\vec\eta_B)$ é definida como \cite{wie2008space}:
+% \begin{equation}
+% \mathbf{S}(\vec\eta_B)
+% =
+% \begin{bmatrix}
+% 1 & 0 & -\sin\phi_2 \\
+% 0 & \cos\phi_1 & \sin\phi_1 \cos\phi_2 \\
+% 0 & -\sin\phi_1 & \cos\phi_1 \cos\phi_2
+% \end{bmatrix}.
+% \label{eq:S_matrix_definition}
+% \end{equation}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para a sequência 3--2--1, a matriz $B(\vec\eta_B)\in\mathbb{R}^{3\times 3}$ é
+
+% \begin{equation}
+% B(\vec\eta_B)
+% =
+% \begin{bmatrix}
+% 1 & \sin\phi\,\tan\xi & \cos\phi\,\tan\xi\\
+% 0 & \cos\phi             & -\sin\phi\\
+% 0 & \sin\phi\,\sec\xi & \cos\phi\,\sec\xi
+% \end{bmatrix}.
+% \label{eq_B_euler321}
+% \end{equation}
+
+% Neste trabalho, utiliza-se a forma inversa, de modo a expressar a velocidade
+% angular da espaçonave em função das velocidades generalizadas de atitude:
+
+% \begin{equation}
+% {}^{B}\!\vec\omega_B
+% =
+% \mathbf{T}_\omega(\vec\eta_B)\,\dot{\vec\eta}_B,
+% \qquad
+% \mathbf{T}_\omega(\vec\eta_B)=B^{-1}(\vec\eta_B),
+% \label{eq_euler321_inverse_kinematics}
+% \end{equation}
+
+% com
+% \begin{equation}
+% \mathbf{T}_\omega(\vec\eta_B)
+% =
+% \begin{bmatrix}
+% 1 & 0        & -\sin\xi\\
+% 0 & \cos\phi & \sin\phi\,\cos\xi\\
+% 0 & -\sin\phi& \cos\phi\,\cos\xi
+% \end{bmatrix}.
+% \label{eq_Tomega_euler321}
+% \end{equation}
+
+
+% %%%%%%%%%%%%%%%%
+% % Ao reunir a velocidade angular da espaçonave e as velocidades articulares em um único vetor, define-se
+
+% % \begin{equation}
+% % \dot{\vec s}
+% % =
+% % \begin{bmatrix}
+% % {}^{B}\!\vec\omega_B \\[2pt]
+% % \dot{\vec\xi}
+% % \end{bmatrix}
+% % \in \mathbb{R}^{3+n}.
+% % \label{eq_def_s_dot}
+% % \end{equation}
+
+% Ao reunir a velocidade angular da espaçonave e as velocidades articulares em um único vetor de quase-velocidades, define-se:
+
+% \begin{equation}
+% \dot{\vec s}
+% =
+% \begin{bmatrix}
+% {}^{B}\!\vec\omega_B \\[2pt]
+% \dot{\vec\xi}
+% \end{bmatrix}
+% \in \mathbb{R}^{3+n}.
+% \label{eq:def_s_dot}
+% \end{equation}
+% %%%%%%%%%%%%%%%%%%%%%%%%%
+
+% % Como ${}^{B}\!\vec\omega_B=\mathbf{T}_\omega(\vec\eta_B)\,\dot{\vec\eta}_B$ e $\dot{\vec\xi}=I_n\,\dot{\vec\xi}$, obtém-se
+
+% % \begin{equation}
+% % \dot{\vec s}
+% % =
+% % \underbrace{
+% % \begin{bmatrix}
+% % \mathbf{T}_\omega(\vec\eta_B) & 0 \\[2pt]
+% % 0 & I_{n}
+% % \end{bmatrix}}_{\displaystyle \mathbf{J}_s(\vec\eta_B)}
+% % \dot{\vec y\, },
+% % \qquad
+% % \dot{\vec y\, }
+% % =
+% % \begin{bmatrix}
+% % \dot{\vec\eta}_B \\[2pt]
+% % \dot{\vec\xi}
+% % \end{bmatrix}.
+% % \label{eq_Js_mapping}
+% % \end{equation}
+
+% Substituindo \eqref{eq:euler_direct_kinematics} em \eqref{eq:def_s_dot} e considerando que $\dot{\vec\xi}=I_n\,\dot{\vec\xi}$, obtém-se o mapeamento entre as velocidades generalizadas $\dot{\vec y\,}$ e o vetor cinemático $\dot{\vec s}$:
+
+% \begin{equation}
+% \dot{\vec s}
+% =
+% \underbrace{
+% \begin{bmatrix}
+% \mathbf{S}(\vec\eta_B) & 0 \\[2pt]
+% 0 & I_{n}
+% \end{bmatrix}}_{\displaystyle \mathbf{J}_s(\vec\eta_B)}
+% \underbrace{
+% \begin{bmatrix}
+% \dot{\vec\eta}_B \\[2pt]
+% \dot{\vec\xi}
+% \end{bmatrix}}_{\displaystyle \dot{\vec y\,}}.
+% \label{eq:Js_mapping}
+% \end{equation}
+
+% A matriz $\mathbf{J}_s(\vec\eta_B)$ é o Jacobiano de transformação que relaciona as derivadas das coordenadas generalizadas com as velocidades físicas (angular da espaçonave e das juntas).
+% Com essa definição, a energia cinética total do conjunto pode ser escrita como
+
+% \begin{equation}
+% T =
+% \frac{1}{2}\,\dot{\vec s}^{\,T}\,M_s(\vec y\, )\,\dot{\vec s},
+% \label{eq_T_matriz_s}
+% \end{equation}
+
+% Em que $M_s(\vec y\, )$ é a matriz de inércia generalizada escrita no espaço do vetor
+% cinemático $\dot{\vec s}$.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Para cada elo, a matriz $M_{i,\text{spt}}$ é um operador de inércia
+% espacial $6\times 6$ que combina, em um único bloco, os efeitos
+% translacionais e rotacionais em torno do centro de massa expresso em
+% $\{B\}$.
+% Se ${}^{B}\!p_{G_i}$ denota a posição do centro de massa do elo em relação à
+% origem de $\{B\}$ e ${}^{B}\!I_i$ o matriz de inércia do elo em torno desse
+% centro, a forma padrão do operador de inércia espacial é
+
+% \begin{equation}
+% M_{i,\text{spt}}
+% =
+% \begin{bmatrix}
+% m_i I_3 & -m_i\,S({}^{B}\!p_{G_i})\\[2pt]
+% m_i\,S({}^{B}\!p_{G_i}) &
+% {}^{B}\!I_i - m_i\,S({}^{B}\!p_{G_i})\,S({}^{B}\!p_{G_i})^{T}
+% \end{bmatrix},
+% \end{equation}
+
+% Em que $m_i$ é a massa do $i$-ésimo elo, $I_3$ é a matriz identidade $3\times 3$,
+% ${}^{B}\!p_{G_i}$ é o vetor posição do centro de massa do elo $i$
+% em relação à origem do referencial $\{B\}$, ${}^{B}\!I_i$
+% é o matriz de inércia do elo $i$ em torno do seu centro de massa, expresso em
+% $\{B\}$, e $S(\cdot)$ é o operador matricial antissimétrico associado ao produto
+% vetorial, tal que $S(\vec a)\,\vec b = \vec a \times \vec b$ para quaisquer
+% $\vec a,\vec b$.
+
+% De maneira análoga, a espaçonave é descrita por um operador de inércia
+% espacial $M_{\text{espaç},\text{spt}}$.
+% No formalismo de velocidades espaciais \cite{featherstone2008}, uma matriz de
+% inércia espacial relaciona a velocidade espacial
+% $\vec v_{\text{sp}} = [\,{}^{B}\!\vec v^{\,T}\;{}^{B}\!\vec\omega^{\,T}\,]^{T}$
+% com a quantidade de movimento espacial
+% $\vec h_{\text{sp}}$ por meio de
+% $\vec h_{\text{sp}} = M_{\text{spt}}\,\vec v_{\text{sp}}$.
+
+% Para a espaçonave, $M_{\text{espaç},\text{spt}}$ é construído a partir da massa
+% $m_B$ e do matriz ${}^{B}\!I_B$ em torno do seu centro de massa, em completa
+% analogia com $M_{i,\text{spt}}$ definido para os elos.
+
+% A energia cinética total do conjunto espaçonave--\gls{mr} resulta da soma das
+% energias cinéticas de cada elo e da espaçonave.
+% Utilizando a forma espacial para cada elo, tem-se
+
+% \begin{equation}
+% T
+% =
+% \sum_{i=1}^{n}
+% \frac{1}{2}
+% \bigl(J_{\text{sp},i}(\vec y\, )\,\dot{\vec y\, }\bigr)^{T}
+% M_{i,\text{spt}}
+% \bigl(J_{\text{sp},i}(\vec y\, )\,\dot{\vec y\, }\bigr)
+% +
+% \frac{1}{2}\,
+% \vec v_{\text{espaç,sp}}^{\,T}\,
+% M_{\text{espaç},\text{spt}}\,
+% \vec v_{\text{espaç,sp}},
+% \end{equation}
+
+% Em que $\vec v_{\text{espaç,sp}}$ é a velocidade espacial da espaçonave, escrita
+% também como combinação linear das velocidades generalizadas $\dot{\vec y\, }$.
+% Comparando essa expressão com a forma quadrática de \eqref{eq_T_quadratica_Mq1}, obtém-se
+
+% \begin{equation}
+% T =
+% \frac{1}{2}\,\dot{\vec y\, }^{\,T}\,M(\vec y\, )\,\dot{\vec y\, },
+% \end{equation}
+
+% de modo que a matriz de inércia generalizada $M_s(\vec y\, )$ é dada pela soma das
+% contribuições espaciais de todos os elos, ponderadas pelos respectivos
+% jacobianos espaciais, acrescida da contribuição inercial da espaçonave:
+
+% \begin{equation}
+% M_s(\vec y\, ) =
+% \sum_{i=1}^{n}
+% J_{\text{sp},i}^{T}(\vec y\, )\,
+% M_{i,\text{spt}}\,
+% J_{\text{sp},i}(\vec y\, )
+% +
+% M_{\text{espaç},\text{spt}}.
+% \label{eq_Ms_total_formula}
+% \end{equation}
+
+
+% Cada termo
+% $J_{\text{sp},i}^{T}(\vec y\, \, \, )\,M_{i,\text{spt}}\,J_{\text{sp},i}(\vec y\, \, \, )$
+% é, portanto, a contribuição espacial do elo $i$ para a matriz de inércia
+% generalizada $M_s(\vec y\, )$.
+% Nessa expressão, cada jacobiano espacial $J_{\text{sp},i}(\vec y\, \, )$ mapeia as velocidades generalizadas $\dot{\vec y\, \, }$ na velocidade espacial (linear e angular) do centro de massa do elo $i$ em $\{B\}$.
+
+
+\section{Velocidades linear e angular}
+\label{sec_dinAcoplada_veloc_linear_angular}
+
+As velocidades linear ${}^{B}\!\vec v_{G_i}$ e angular ${}^{B}\!\vec\omega_i$
+do elo $i$ são obtidas a partir do jacobiano geométrico avaliado no respectivo
+centro de massa \cite{craig2005,Wang2003KinematicsDynamics}.
+Escrevendo o jacobiano na forma espacial \cite{murray1994mathematical},
+tem-se um operador $J_{\text{sp},i}(\vec y\, \, )$ que
+relaciona diretamente as velocidades generalizadas
+$\dot{\vec y\, \, }$ com as velocidades cinemáticas empregadas na energia
+cinética:
+
+\begin{equation}
+\begin{bmatrix}
+{}^{B}\!\vec v_{G_i} \\
+{}^{B}\!\vec\omega_i
+\end{bmatrix}
+=
+J_{\text{sp},i}(\vec y\,)\,\dot{\vec y\,}.
+\label{eq_jacobianos_vGi1}
+\end{equation}
+
+Em seguida, decompõe-se o jacobiano espacial em parte linear e parte angular:
+
+\begin{equation}
+J_{\text{sp},i}(\vec y\,)
+=
+\begin{bmatrix}
+J_{v,i}(\vec y\,) \\
+J_{\omega,i}(\vec y\,)
+\end{bmatrix}.
+\label{eq_jacobianos_vGi2}
+\end{equation}
+
+Em que o termo $J_{v,i}(\vec y\, )$ é a parte linear, enquanto
+$J_{\omega,i}(\vec y\, )$ é a parte angular do jacobiano espacial do elo $i$.
+
+Como discutido em \cite{sciavicco_siciliano2010}, no caso de juntas
+revolutas as colunas de $J_{v,i}$ e $J_{\omega,i}$ associadas às coordenadas
+articulares podem ser escritas a partir dos eixos de junta e das posições
+dos centros de massa.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Se ${}^{B}\!\vec z_j$ denota o eixo de rotação da junta $j$ expresso em $\{B\}$,
+${}^{B}\!\vec r_{O_j}$ a posição da origem da junta $j$ em $\{B\}$ e
+${}^{B}\!\vec r_{G_i}$ a posição do centro de massa do elo $i$ em $\{B\}$,
+então ${}^{B}\!\vec v_{G_i}$ representa a velocidade linear no \gls{cdm} do elo $i$,
+e ${}^{B}\!\vec\omega_i$ representa a velocidade angular do elo $i$, ambas expressas em $\{B\}$.
+Para uma junta revoluta $j$ que atua sobre o elo $i$, a coluna correspondente do
+jacobiano espacial avaliado no seu \gls{cdm} $G_i$ é dada por
+
+\begin{equation}
+J_{v,i}^{(j)}(\vec y\, )
+=
+{}^{B}\!\vec z_j \times
+\bigl({}^{B}\!\vec r_{G_i}(\vec y\, ) - {}^{B}\!\vec r_{O_j}(\vec y\, )\bigr),
+\qquad
+J_{\omega,i}^{(j)}(\vec y\, )
+=
+{}^{B}\!\vec z_j,
+\label{eq_colunas_J_sp_revoluta}
+\end{equation}
+
+para $j\le i$; para $j>i$, essas colunas são nulas, pois a junta $j$ não influencia o elo $i$.
+Para evidenciar a estrutura do jacobiano espacial $J_{\text{sp},i}$,
+escrevem-se explicitamente as colunas não nulas para $i=1,2,3$.
+Para $i=1$:
+
+\begin{equation}
+J_{\text{sp},1}(\vec y\, )
+=
+\begin{bmatrix}
+{}^{B}\!\vec z_1 \times \bigl({}^{B}\!\vec r_{G_1}-{}^{B}\!\vec r_{O_1}\bigr) & \vec 0 & \vec 0\\[2pt]
+{}^{B}\!\vec z_1 & \vec 0 & \vec 0
+\end{bmatrix}.
+\label{eq_Jsp_i1}
+\end{equation}
+
+Para $i=2$:
+\begin{equation}
+J_{\text{sp},2}(\vec y\, )
+=
+\begin{bmatrix}
+{}^{B}\!\vec z_1 \times \bigl({}^{B}\!\vec r_{G_2}-{}^{B}\!\vec r_{O_1}\bigr) &
+{}^{B}\!\vec z_2 \times \bigl({}^{B}\!\vec r_{G_2}-{}^{B}\!\vec r_{O_2}\bigr) &
+\vec 0\\[2pt]
+{}^{B}\!\vec z_1 &
+{}^{B}\!\vec z_2 &
+\vec 0
+\end{bmatrix}.
+\label{eq_Jsp_i2}
+\end{equation}
+
+Para $i=3$:
+\begin{equation}
+J_{\text{sp},3}(\vec y\, )
+=
+\begin{bmatrix}
+{}^{B}\!\vec z_1 \times \bigl({}^{B}\!\vec r_{G_3}-{}^{B}\!\vec r_{O_1}\bigr) &
+{}^{B}\!\vec z_2 \times \bigl({}^{B}\!\vec r_{G_3}-{}^{B}\!\vec r_{O_2}\bigr) &
+{}^{B}\!\vec z_3 \times \bigl({}^{B}\!\vec r_{G_3}-{}^{B}\!\vec r_{O_3}\bigr)\\[2pt]
+{}^{B}\!\vec z_1 &
+{}^{B}\!\vec z_2 &
+{}^{B}\!\vec z_3
+\end{bmatrix}.
+\label{eq_Jsp_i3}
+\end{equation}
+
+Os termos dependentes de velocidade (Coriolis e centrífugos) decorrem da aplicação
+das equações de Lagrange à energia cinética do sistema e são reunidos no termo
+$C(\cdot)\,\dot{\cdot}$ nas equações de movimento \cite{Geradin2004,Wilde2018}.
+Assim, o foco recai sobre a construção de $M(\cdot)$ por meio dos jacobianos
+e dos operadores de inércia espacial.
+
+Em ambiente de microgravidade, o centro de massa do sistema praticamente coincide com o centro de gravidade e o torque gravitacional interno em torno do centro de massa é desprezível \cite{wie2008space}.
+Além disso, para uma órbita circular, a contribuição da energia potencial gravitacional na dinâmica de atitude é praticamente constante.
+Assim, no modelo adotado, toma-se a energia potencial generalizada como
+$V(\vec y\, ) = 0$ e a Lagrangiana reduz-se
+a $L(\vec y\, ,\dot{\vec y\, }) = T(\vec y\, ,\dot{\vec y\, })$.
+O conjunto espaçonave--\gls{mr} é, então, descrito diretamente pelas equações de Lagrange em sua forma padrão \cite{murray1994mathematical}:
+
+\begin{equation}
+M(\vec y\, )\,\ddot{\vec y\, }
++
+C(\vec y\, ,\dot{\vec y\, })\,\dot{\vec y\, }
+=
+\vec\tau.
+\label{eq_lagrange_formato_padrao}
+\end{equation}
+
+Em que $\vec y\, $ é o vetor de coordenadas generalizadas, $M(\vec y\, )$ é a
+matriz de inércia generalizada e $C(\vec y\, ,\dot{\vec y\, })\,\dot{\vec y\, }$
+agrega os termos de Coriolis e centrífugos.
+O foco desta seção é a construção de $M(\vec y\, )$ a partir das
+contribuições de massa e inércia da espaçonave e dos elos do manipulador.
+%%%%%%%%%%%%%%%%%%%
+
+As coordenadas generalizadas são organizadas de modo a reunir, em um único
+vetor, os parâmetros de atitude da espaçonave e as coordenadas articulares do
+manipulador:
+
+\begin{equation}
+\vec y\, \in \mathbb{R}^{3+n}
+=
+\begin{bmatrix}
+\vec\eta_B \\[2pt]
+\vec\xi\end{bmatrix},
+\qquad
+\dot{\vec y\, } \in \mathbb{R}^{3+n}
+=
+\begin{bmatrix}
+\dot{\vec\eta}_B \\[2pt]
+\dot{\vec\xi}
+\end{bmatrix}.
+\label{eq_q_generalizado_espaconave_mr}
+\end{equation}
+
+Em que $\vec\eta_B = [\phi_1, \phi_2, \phi_3]^T$ representa os ângulos de Euler da
+espaçonave (sequência 3--2--1, conforme definido na Seção~\ref{sec_angulos_euler}) e $\vec\xi \in \mathbb{R}^{n}$ contém as coordenadas articulares do manipulador.
+
+%%%%%%%%%%%%
+A relação cinemática entre as taxas dos ângulos de Euler e a velocidade
+angular do corpo, ${}^{B}\!\vec\omega_B$, é dada diretamente pela matriz de transformação $\mathbf{S}(\vec\eta_B)$, conforme apresentado na Equação~\eqref{eq_cinematica_euler}:
+
+\begin{equation}
+{}^{B}\!\vec\omega_B
+=
+\mathbf{S}(\vec\eta_B)\,\dot{\vec\eta}_B.
+\label{eq:euler_direct_kinematics}
+\end{equation}
+
+Em que a matriz $\mathbf{S}(\vec\eta_B)$ é definida como \cite{wie2008space}:
+
+\begin{equation}
+\mathbf{S}(\vec\eta_B)
+=
+\begin{bmatrix}
+1 & 0 & -\sin\phi_2 \\
+0 & \cos\phi_1 & \sin\phi_1 \cos\phi_2 \\
+0 & -\sin\phi_1 & \cos\phi_1 \cos\phi_2
+\end{bmatrix}.
+\label{eq:S_matrix_definition}
+\end{equation}
+
+Ao reunir a velocidade angular da espaçonave e as velocidades articulares em um único vetor de quase-velocidades, define-se:
+
+\begin{equation}
+\dot{\vec s}
+=
+\begin{bmatrix}
+{}^{B}\!\vec\omega_B \\[2pt]
+\dot{\vec\xi}
+\end{bmatrix}
+\in \mathbb{R}^{3+n}.
+\label{eq:def_s_dot}
+\end{equation}
+
+Substituindo \eqref{eq:euler_direct_kinematics} em \eqref{eq:def_s_dot} e considerando que $\dot{\vec\xi}=I_n\,\dot{\vec\xi}$, obtém-se o mapeamento entre as velocidades generalizadas $\dot{\vec y\,}$ e o vetor cinemático $\dot{\vec s}$:
+
+\begin{equation}
+\dot{\vec s}
+=
+\underbrace{
+\begin{bmatrix}
+\mathbf{S}(\vec\eta_B) & 0 \\[2pt]
+0 & I_{n}
+\end{bmatrix}}_{\displaystyle \mathbf{J}_s(\vec\eta_B)}
+\underbrace{
+\begin{bmatrix}
+\dot{\vec\eta}_B \\[2pt]
+\dot{\vec\xi}
+\end{bmatrix}}_{\displaystyle \dot{\vec y\,}}.
+\label{eq:Js_mapping}
+\end{equation}
+
+A matriz $\mathbf{J}_s(\vec\eta_B)$ é o Jacobiano de transformação que relaciona as derivadas das coordenadas generalizadas com as velocidades físicas (angular da espaçonave e das juntas).
+Com essa definição, a energia cinética total do conjunto pode ser escrita como:
+
+\begin{equation}
+T =
+\frac{1}{2}\,\dot{\vec s}^{\,T}\,M_s(\vec y\, )\,\dot{\vec s}.
+\label{eq_T_matriz_s}
+\end{equation}
+
+Em que $M_s(\vec y\, )$ é a matriz de inércia generalizada escrita no espaço do vetor
+cinemático $\dot{\vec s}$.
+
+Para cada elo, a matriz $M_{i,\text{spt}}$ é um operador de inércia
+espacial $6\times 6$ que combina, em um único bloco, os efeitos
+translacionais e rotacionais em torno do centro de massa expresso em
+$\{B\}$.
+Se ${}^{B}\!p_{G_i}$ denota a posição do centro de massa do elo em relação à
+origem de $\{B\}$ e ${}^{B}\!I_i$ o matriz de inércia do elo em torno desse
+centro, a forma padrão do operador de inércia espacial é:
+
+\begin{equation}
+M_{i,\text{spt}}
+=
+\begin{bmatrix}
+m_i I_3 & -m_i\,S({}^{B}\!p_{G_i})\\[2pt]
+m_i\,S({}^{B}\!p_{G_i}) &
+{}^{B}\!I_i - m_i\,S({}^{B}\!p_{G_i})\,S({}^{B}\!p_{G_i})^{T}
+\end{bmatrix}.
+\end{equation}
+
+Em que $m_i$ é a massa do $i$-ésimo elo, $I_3$ é a matriz identidade $3\times 3$,
+${}^{B}\!p_{G_i}$ é o vetor posição do centro de massa do elo $i$
+em relação à origem do referencial $\{B\}$, ${}^{B}\!I_i$
+é o matriz de inércia do elo $i$ em torno do seu centro de massa, expresso em
+$\{B\}$, e $S(\cdot)$ é o operador matricial antissimétrico associado ao produto
+vetorial, tal que $S(\vec a)\,\vec b = \vec a \times \vec b$ para quaisquer
+$\vec a,\vec b$.
+
+De maneira análoga, a espaçonave é descrita por um operador de inércia
+espacial $M_{\text{espaç},\text{spt}}$.
+No formalismo de velocidades espaciais \cite{featherstone2008}, uma matriz de
+inércia espacial relaciona a velocidade espacial
+$\vec v_{\text{sp}} = [\,{}^{B}\!\vec v^{\,T}\;{}^{B}\!\vec\omega^{\,T}\,]^{T}$
+com a quantidade de movimento espacial
+$\vec h_{\text{sp}}$ por meio de
+$\vec h_{\text{sp}} = M_{\text{spt}}\,\vec v_{\text{sp}}$.
+
+Para a espaçonave, $M_{\text{espaç},\text{spt}}$ é construído a partir da massa
+$m_B$ e do matriz ${}^{B}\!I_B$ em torno do seu centro de massa, em completa
+analogia com $M_{i,\text{spt}}$ definido para os elos.
+A energia cinética total do conjunto espaçonave--\gls{mr} resulta da soma das
+energias cinéticas de cada elo e da espaçonave.
+Utilizando a forma espacial para cada elo, tem-se:
+
+\begin{equation}
+T
+=
+\sum_{i=1}^{n}
+\frac{1}{2}
+\bigl(J_{\text{sp},i}(\vec y\, )\,\dot{\vec y\, }\bigr)^{T}
+M_{i,\text{spt}}
+\bigl(J_{\text{sp},i}(\vec y\, )\,\dot{\vec y\, }\bigr)
++
+\frac{1}{2}\,
+\vec v_{\text{espaç,sp}}^{\,T}\,
+M_{\text{espaç},\text{spt}}\,
+\vec v_{\text{espaç,sp}}.
+\end{equation}
+
+Em que $\vec v_{\text{espaç,sp}}$ é a velocidade espacial da espaçonave, escrita
+também como combinação linear das velocidades generalizadas $\dot{\vec y\, }$.
+Comparando essa expressão com a forma quadrática de \eqref{eq_T_quadratica_Mq1}, obtém-se:
+
+\begin{equation}
+T =
+\frac{1}{2}\,\dot{\vec y\, }^{\,T}\,M(\vec y\, )\,\dot{\vec y\, }.
+\end{equation}
+
+De modo que a matriz de inércia generalizada $M_s(\vec y\, )$ é dada pela soma das
+contribuições espaciais de todos os elos, ponderadas pelos respectivos
+jacobianos espaciais, acrescida da contribuição inercial da espaçonave:
+
+\begin{equation}
+M_s(\vec y\, ) =
+\sum_{i=1}^{n}
+J_{\text{sp},i}^{T}(\vec y\, )\,
+M_{i,\text{spt}}\,
+J_{\text{sp},i}(\vec y\, )
++
+M_{\text{espaç},\text{spt}}.
+\label{eq_Ms_total_formula}
+\end{equation}
+
+Cada termo
+$J_{\text{sp},i}^{T}(\vec y\, \, \, )\,M_{i,\text{spt}}\,J_{\text{sp},i}(\vec y\, \, \, )$
+é, portanto, a contribuição espacial do elo $i$ para a matriz de inércia
+generalizada $M_s(\vec y\, )$.
+Nessa expressão, cada jacobiano espacial $J_{\text{sp},i}(\vec y\, \, )$ mapeia as velocidades generalizadas $\dot{\vec y\, \, }$ na velocidade espacial (linear e angular) do centro de massa do elo $i$ em $\{B\}$.

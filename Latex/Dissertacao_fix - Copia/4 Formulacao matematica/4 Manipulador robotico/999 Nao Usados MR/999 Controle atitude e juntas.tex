@@ -1,0 +1,76 @@
+\subsection{Controle de atitude e juntas}
+\label{sec:controle_atitude_juntas}
+
+Nesta subseção serão apresentadas as leis de controle para a base e para o MR. Todo o desenvolvimento é expresso no referencial da base $\{B\}$. Além disso, o controle utilizado é o Proporcional--Derivativo (PD).
+
+\subsubsection{Controle de atitude da base por quaternion}
+Sejam $q_{B}$ o quaternion da base e $q_{B,ref}$ a referência, pode-se definir o quaternion de erro como:
+
+\begin{equation}
+    q_{e}=q_{B,ref}\otimes q_{B}^{-1}.
+\end{equation}
+
+Podendo ser decomposto em:
+
+\begin{equation}
+q_{e}=
+\begin{bmatrix}
+\,q_{e0} \\
+\vec q_{ev}^{\,T}\,
+\end{bmatrix},
+\end{equation}
+
+de modo que $q_{e0}\ge 0$.
+O erro de velocidade angular é obtido por:
+\begin{equation}
+\vec e_\omega=\vec\omega_B-\vec\omega_{B,ref}.
+\end{equation}
+
+A lei PD é dada por:
+
+\begin{equation}
+\label{eq:tauB_PD}
+\vec\tau_B \;=\; -K_q\,\vec q_{ev} \;-\; K_\omega\,\vec e_\omega \;+\; \vec\tau_{ff,B},
+\end{equation}
+
+onde $K_q$ e $K_\omega$ são matrizes definidas positivas.
+O termo de feedforward $\vec\tau_{ff,B}$ é utilizado para compensar a reação do MR sobre a base.
+
+\subsubsection{Controle de juntas para seguimento de trajetória}
+
+No espaço de juntas, sejam $\vec\theta_{ref}(t)$ e $\dot{\vec\theta}_{ref}(t)$ as referências.
+Define-se:
+
+\begin{equation}
+\vec e_\theta=\vec\theta-\vec\theta_{ref},
+\end{equation}
+
+e também define-se:
+\begin{equation}
+\dot{\vec e}_\theta=\dot{\vec\theta}-\dot{\vec\theta}_{ref}\end{equation}
+
+A lei PD nas juntas é dado por:
+
+\begin{equation}
+\label{eq:taum_PD}
+\vec\tau_m \;=\; -K_p\,\vec e_\theta \;-\; K_d\,\dot{\vec e}_\theta \;+\; \vec\tau_{ff,m},
+\end{equation}
+
+sendo $K_p$ e $K_d$ definidos positivos.
+O termo feedforward $\vec\tau_{ff,m}$ inclui compensações dinâmicas quando existir acoplamento.
+
+\subsubsection{Compensação de reação (feedforward)}
+
+Considerando a forma matricial da dinâmica acoplada da Seção~\eqref{sec:dinamica_acoplada} com os blocos $M_{bb}$, $M_{bm}$, $M_{mb}$ e $M_{mm}$ e os termos de Coriolis centrífugos reunidos em $C(\cdot)$.
+Para atenuar a contribuição de orientação induzida pelas juntas, aplica-se na base:
+
+\begin{equation}
+\label{eq:ff_base}
+\vec\tau_{ff,B} \;\approx\; -\Big( M_{bm}(\vec q)\,\ddot{\vec\theta}_d \;+\; C_{bm}(\vec q,\dot{\vec q})\,\dot{\vec\theta} \Big),
+\end{equation}
+
+de modo que a lei \eqref{eq:tauB_PD} opere sobre perturbações menores.
+
+\subsubsection{Estabilização de atitude}
+Em microgravidade, o momento angular total é conservado, então caso não houver compensação, os movimentos das juntas produzirão reações que reorientam a base.
+As leis \eqref{eq:tauB_PD}--\eqref{eq:ff_base}, combinadas com \eqref{eq:taum_PD} e \eqref{eq:ff_manip}, reduzem o a influência causada pelo acoplamento base--manipulador e buscam promover a convergência do erro de atitude da base e do erro de seguimento em juntas, condicionada à escolha de ganhos e às limitações de atuação.

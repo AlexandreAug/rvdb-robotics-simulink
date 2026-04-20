@@ -1,0 +1,76 @@
+\babel@toc {brazilian}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Problema de dois-corpos.}}{30}{figure.caption.9}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Movimento relativo formulado para missões de \gls {rvdb} no referencial ECI.}}{34}{figure.caption.10}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Movimento relativo das espaçonaves em relação ao referencial LVLH.}}{36}{figure.caption.11}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Geometria de um corpo rígido em órbita circular, com os referenciais inercial $N$, orbital $A$ e fixo ao corpo $B$. Adaptado de \blx@tocontentsinit {0}\cite {wie2008space}.}}{42}{figure.caption.12}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Referencias dos elos fixados de modo que o referencial $i$ é rigidamente fixado ao elo $i$. Adaptado de \blx@tocontentsinit {0}\cite {craig2005}.}}{57}{figure.caption.13}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Referencial local do Manipulador Robótico 3R acoplado à espaçonave.}}{57}{figure.caption.14}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Notação esquemática do Manipulador Robótico 3R.}}{58}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Linha do tempo da missão de \gls {rvdb}}}{90}{figure.caption.17}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Posições inicial e final das espaçonaves durante a fase de aproximação longa da missão de \gls {rvdb}.}}{93}{figure.caption.22}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Deriva orbital do perseguidor após o segundo impulso durante a aproximação de longa distância da missão de \gls {rvdb}.}}{94}{figure.caption.23}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Evolução da longitude relativa ao longo do tempo.}}{94}{figure.caption.24}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Evolução do raio orbital do perseguidor ao longo do tempo absoluto.}}{95}{figure.caption.26}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Posições iniciais do perseguidor em cada cenário.}}{97}{figure.caption.29}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Posições do perseguidor no referencial \gls {lvlh}.}}{101}{figure.caption.36}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Projeção tridimensional do deslocamento perseguidor em relação ao alvo no referencial \gls {lvlh}.}}{102}{figure.caption.37}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Projeções do deslocamento perseguidor em relação ao alvo no referencial \gls {lvlh}.}}{102}{figure.caption.38}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Velocidades do perseguidor no referencial \gls {lvlh}.}}{103}{figure.caption.40}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Erro radial no referencial \gls {lvlh}.}}{105}{figure.caption.42}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Erro along-track no referencial \gls {lvlh}.}}{106}{figure.caption.43}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Erro cross-track no referencial \gls {lvlh}.}}{106}{figure.caption.44}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Aceleração de controle.}}{108}{figure.caption.47}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Aceleração de controle.}}{110}{figure.caption.49}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Atitude do perseguidor em ângulos de Euler ao longo de toda a aproximação.}}{112}{figure.caption.51}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Velocidades angulares da espaçonave combinando as fases em Euler e Lagrange.}}{113}{figure.caption.53}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Acelerações angulares da espaçonave na transição entre os modos de operação.}}{114}{figure.caption.55}
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Acelerações angulares da espaçonave perseguidora por eixo ao longo da simulação.}}{115}{figure.caption.56}
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Torques de controle de atitude aplicados pelo controlador PD.}}{115}{figure.caption.57}
+\contentsline {figure}{\numberline {5.21}{\ignorespaces Torques de reação na espaçonave decorrentes do movimento do manipulador.}}{116}{figure.caption.59}
+\contentsline {figure}{\numberline {5.22}{\ignorespaces Torque de reação compensado.}}{117}{figure.caption.61}
+\contentsline {figure}{\numberline {5.23}{\ignorespaces Posiçãodas juntas do manipulador durante a aproximação final.}}{118}{figure.caption.63}
+\contentsline {figure}{\numberline {5.24}{\ignorespaces Velocidade das juntas do manipulador durante a aproximação final.}}{119}{figure.caption.66}
+\contentsline {figure}{\numberline {5.25}{\ignorespaces Torque nas juntas do manipulador durante a aproximação final.}}{120}{figure.caption.69}
+\contentsline {figure}{\numberline {5.26}{\ignorespaces Erro de posição da ferramenta em relação à referência, expresso no referencial $\{0\}$.}}{121}{figure.caption.71}
+\contentsline {figure}{\numberline {5.27}{\ignorespaces Definição geométrica dos eixos utilizados na avaliação de alinhamento: eixo da ferramenta e normal da porta de acoplamento, no referencial $\{0\}$.}}{123}{figure.caption.74}
+\contentsline {figure}{\numberline {5.28}{\ignorespaces Ângulo entre o eixo da ferramenta e a normal da porta, expresso no referencial $\{0\}$.}}{123}{figure.caption.75}
+\contentsline {figure}{\numberline {5.29}{\ignorespaces Componentes do eixo unitário da ferramenta no referencial $\{0\}$ ao longo do tempo.}}{124}{figure.caption.76}
+\contentsline {figure}{\numberline {5.30}{\ignorespaces Produto escalar entre o eixo unitário da ferramenta e a normal unitária da porta, expresso no referencial $\{0\}$.}}{125}{figure.caption.77}
+\contentsline {figure}{\numberline {5.31}{\ignorespaces Contribuições por eixo no produto escalar de alinhamento no referencial $\{0\}$ e sua soma.}}{125}{figure.caption.78}
+\contentsline {figure}{\numberline {5.32}{\ignorespaces Erro de posição do efetuador final em relação à referência de cinemática inversa, expresso no referencial $\{0\}$: (a) magnitude, (b) componentes cartesianas e (c) destaque do transiente inicial.}}{126}{figure.caption.79}
+\contentsline {figure}{\numberline {5.33}{\ignorespaces Posições de referência e realizada do efetuador final no referencial $\{0\}$ ao longo do tempo.}}{127}{figure.caption.81}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

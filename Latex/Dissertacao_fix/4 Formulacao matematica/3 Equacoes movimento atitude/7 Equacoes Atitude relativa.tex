@@ -1,0 +1,37 @@
+\subsection{Equações do Movimento da Atitude Relativa entre as espaçonaves perseguidora e alvo} % sec 4.3.7
+
+A atitude relativa entre duas espaçonaves descreve a orientação do perseguidor em relação ao alvo.
+Sejam $q_a$ e $q_p$ os quaternions unitários das espaçonaves alvo e perseguidor, ambos definidos em relação ao mesmo referencial, a orientação relativa pode ser expressa por \cite{na2019vision}:
+
+\begin{equation}
+q_{rel}
+=
+q_a \otimes q_p^{-1}.
+\label{eq_quat_relativo}
+\end{equation}
+
+O termo o termo $q_p^{-1}$ é o inverso do quaternion do perseguidor, $q_a$ é o quaternion do alvo, e $\otimes$ é o produto de quaternions.
+Ademais, a atitude relativa não corresponde à atitude absoluta do perseguidor nem a do alvo, mas à diferença entre ambas em relação ao \gls{eci}. 
+Similarmente, ao movimento relativo de posição, definido pela subtração dos vetores $\vec r_p - \vec r_a$, a atitude relativa resulta da combinação de duas atitudes absolutas expressas em quaternions. 
+A condição de sincronização em uma missão de RVD/B ocorre quando o quaternion relativo converge para a identidade unitária:
+
+\begin{equation}
+\label{eq_qrel_sincronizacao}
+q_{rel} \;\;\longrightarrow\;\; 
+\begin{bmatrix}1 \\ 0 \\ 0 \\ 0\end{bmatrix}.
+\end{equation}
+
+Isso significa que a orientação do perseguidor se tornou idêntica à orientação do alvo. 
+Portanto, o erro de atitude é zero, e as espaçonaves estão alinhadas.
+Sendo assim, o quaternion $q_{rel}$ representa a rotação necessária para alinhar as espaçonaves.
+A parte escalar $q_{rel}$ é descrita por:
+
+\begin{equation}
+q_{rel} =
+\begin{bmatrix}
+\cos\!\left(\tfrac{\alpha}{2}\right) \\[4pt]
+\vec{u}\,\sin\!\left(\tfrac{\alpha}{2}\right)
+\end{bmatrix}.
+\end{equation}
+
+O termo $\alpha$ é o ângulo relativo entre os dois referenciais e $\vec u$ é o eixo unitário da rotação.

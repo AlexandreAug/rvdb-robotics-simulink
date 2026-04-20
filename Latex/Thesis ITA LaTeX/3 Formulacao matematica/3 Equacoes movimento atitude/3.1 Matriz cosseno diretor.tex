@@ -1,8 +1,9 @@
 \subsubsection{Matriz de cossenos diretores}
 \label{sec:matriz_cosseno_diretor}
 
-Considerando dois referenciais $A$ e $B$ em rotação relativa. A orientação de $B$ em relação a $A$ pode ser descrita pela matriz de cossenos diretores (\gls{dcm}), denotada por $\mathbf{C}^{B/A}$.
-Seguindo a notação de \cite{wie2008space}, cada linha de $\mathbf{C}^{B/A}$ contém as projeções de um versor de $B$ nos eixos de $A$, de modo que
+Considerando dois referenciais $N$ e $B$ em rotação relativa.
+A orientação de $B$ em relação a $N$ pode ser descrita pela matriz de cossenos diretores (\gls{dcm}), denotada por $\mathbf{C}^{B/N}$.
+Seguindo a notação de \cite{wie2008space}, cada linha de $\mathbf{C}^{B/N}$ contém as projeções de um versor de $B$ nos eixos de $N$, de modo que
 
 \begin{equation}
 \begin{bmatrix}
@@ -11,7 +12,7 @@ Seguindo a notação de \cite{wie2008space}, cada linha de $\mathbf{C}^{B/A}$ co
 \vec{b}_3
 \end{bmatrix}
 =
-\mathbf{C}^{B/A}
+\mathbf{C}^{B/N}
 \begin{bmatrix}
 \vec{a}_1 \\
 \vec{a}_2 \\
@@ -20,27 +21,31 @@ Seguindo a notação de \cite{wie2008space}, cada linha de $\mathbf{C}^{B/A}$ co
 \label{eq:def_dcm_ba}
 \end{equation}
 
-onde $\{\vec{a}_1,\vec{a}_2,\vec{a}_3\}$ e $\{\vec{b}_1,\vec{b}_2,\vec{b}_3\}$ são bases ortonormais de $A$ e $B$, respectivamente. Cada elemento $C_{ij}^{B/A}$ é o cosseno do ângulo entre o $i$-ésimo versor de $B$ e o
-$j$-ésimo versor de $A$
+onde $\{\vec{a}_1,\vec{a}_2,\vec{a}_3\}$ e $\{\vec{b}_1,\vec{b}_2,\vec{b}_3\}$ são bases ortonormais de $N$ e $B$, respectivamente. Cada elemento $C_{ij}^{B/N}$ é o cosseno do ângulo entre o $i$-ésimo versor de $B$ e o
+$j$-ésimo versor de $N$
 
 \begin{equation}
-C_{ij}^{B/A} = \vec{b}_i \cdot \vec{a}_j.
+C_{ij}^{B/N} = \vec{b}_i \cdot \vec{a}_j.
 \end{equation}
 
-A matriz $\mathbf{C}^{B/A}$ é, portanto, uma matriz ortogonal no sentido algébrico, suas linhas e colunas são mutuamente ortogonais.
-Quando, além disso, cada linha e cada coluna tem norma unitária, diz-se que a matriz é ortonormal.
-Neste caso, vale
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A matriz $\mathbf{C}^{B/N}$ é a \gls{dcm} que realiza a mudança de base de componentes de um vetor do referencial $N$ para o referencial $B$, assumindo que $\{\vec{a}_1,\vec{a}_2,\vec{a}_3\}$ e $\{\vec{b}_1,\vec{b}_2,\vec{b}_3\}$ são bases ortonormais em $\mathbb{R}^3$.
+Por construção, suas linhas e colunas são mutuamente ortogonais e possuem norma unitária, de modo que $\mathbf{C}^{B/N}$ é uma matriz ortogonal (ortonormal).
+Consequentemente, $\mathbf{C}^{B/N}$ preserva produtos internos, normas e ângulos, isto é, para quaisquer vetores $\vec{x}$ e $\vec{y}$ vale $(\mathbf{C}^{B/N}\vec{x})\cdot(\mathbf{C}^{B/N}\vec{y})=\vec{x}\cdot\vec{y}$.
+Neste caso, tem-se
 
 \begin{equation}
-\mathbf{C}^{B/A} \big(\mathbf{C}^{B/A}\big)^{T}
+\mathbf{C}^{B/N}\big(\mathbf{C}^{B/N}\big)^{T}
 =
-\big(\mathbf{C}^{B/A}\big)^{T}\mathbf{C}^{B/A}
+\big(\mathbf{C}^{B/N}\big)^{T}\mathbf{C}^{B/N}
 =
-\mathbf{I},
+\mathbf{I}_3,
 \label{eq:ortonormalidade_C}
 \end{equation}
 
-com $\det \mathbf{C}^{B/A} = +1$ para rotações físicas próprias. Em muitas referências de dinâmica, o termo “matriz ortogonal” já pressupõe esta condição de ortonormalidade.
+onde $\mathbf{I}_3$ é a matriz identidade $3\times 3$.
+Além disso, para rotações físicas próprias, vale $\det \mathbf{C}^{B/N} = +1$.
+Em muitas referências, o termo "matriz ortogonal" já pressupõe a condição de ortonormalidade e $\det=+1$.
 A relação inversa de \eqref{eq:def_dcm_ba} é escrita como
 
 \begin{equation}
@@ -50,14 +55,14 @@ A relação inversa de \eqref{eq:def_dcm_ba} é escrita como
 \vec{a}_3
 \end{bmatrix}
 =
-\big(\mathbf{C}^{B/A}\big)^{-1}
+\big(\mathbf{C}^{B/N}\big)^{-1}
 \begin{bmatrix}
 \vec{b}_1 \\
 \vec{b}_2 \\
 \vec{b}_3
 \end{bmatrix}
 =
-\big(\mathbf{C}^{B/A}\big)^{T}
+\big(\mathbf{C}^{B/N}\big)^{T}
 \begin{bmatrix}
 \vec{b}_1 \\
 \vec{b}_2 \\
@@ -66,13 +71,15 @@ A relação inversa de \eqref{eq:def_dcm_ba} é escrita como
 \label{eq:relacao_inversa_dcm}
 \end{equation}
 
-onde foi usada a propriedade ortonormal \eqref{eq:ortonormalidade_C}. Esta matriz não deve ser confundida com a matriz de rotação obtida diretamente a partir de um triplo de ângulos de Euler, para um dado conjunto de ângulos de
-Euler existe uma DCM associada, mas a DCM é uma descrição mais geral da orientação.
+pois, sendo $\mathbf{C}^{B/N}$ ortogonal, sua inversa coincide com a transposta, o que corresponde à rotação inversa (transformação de $B$ para $N$).
+Esta matriz não deve ser confundida com a matriz de rotação obtida diretamente a partir de um triplo de ângulos de Euler: para um dado conjunto de ângulos de Euler existe uma DCM associada, mas a DCM fornece uma descrição independente da parametrização escolhida.
 
-Segundo \cite{wie2008space}, considera-se que a velocidade angular de $B$ em relação a $A$ é o vetor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Segundo \cite{wie2008space}, considera-se que a velocidade angular de $B$ em relação a $N$ é o vetor
 
 \begin{equation}
-\vec{\omega}^{B/A}(t)
+\vec{\omega}^{B/N}(t)
 =
 \omega_1(t)\,\vec{b}_1
 +
@@ -81,22 +88,33 @@ Segundo \cite{wie2008space}, considera-se que a velocidade angular de $B$ em rel
 \omega_3(t)\,\vec{b}_3.
 \end{equation}
 
-A derivada temporal dos versores de $B$, vista a partir de $A$, é dada pela cinemática de corpo rígido
+A derivada temporal dos versores de $B$, vista a partir de $N$, é dada pela cinemática de corpo rígido
 
 \begin{equation}
-\dot{\vec{b}}_i = \vec{\omega}^{B/A} \times \vec{b}_i,
+\dot{\vec{b}}_i = \vec{\omega}^{B/N} \times \vec{b}_i,
 \qquad i = 1,2,3.
 \label{eq:derivada_b_i}
 \end{equation}
 
-Partindo de \eqref{eq:relacao_inversa_dcm}, toma-se a derivada temporal em $A$
+Partindo de \eqref{eq:relacao_inversa_dcm}, e tomando a derivada temporal \emph{vista a partir de} $N$ (isto é, $\frac{d}{dt}\big|_A$), obtém-se
 
 \begin{equation}
+\frac{d}{dt}\bigg|_A
 \begin{bmatrix}
-\vec{0} \\
-\vec{0} \\
-\vec{0}
+\vec{a}_1 \\
+\vec{a}_2 \\
+\vec{a}_3
 \end{bmatrix}
+=
+\frac{d}{dt}\bigg|_A
+\left(
+\mathbf{C}^{T}
+\begin{bmatrix}
+\vec{b}_1 \\
+\vec{b}_2 \\
+\vec{b}_3
+\end{bmatrix}
+\right)
 =
 \dot{\mathbf{C}}^{T}
 \begin{bmatrix}
@@ -105,7 +123,7 @@ Partindo de \eqref{eq:relacao_inversa_dcm}, toma-se a derivada temporal em $A$
 \vec{b}_3
 \end{bmatrix}
 +
-\big(\mathbf{C}^{B/A}\big)^{T}
+\mathbf{C}^{T}
 \begin{bmatrix}
 \dot{\vec{b}}_1 \\
 \dot{\vec{b}}_2 \\
@@ -114,7 +132,10 @@ Partindo de \eqref{eq:relacao_inversa_dcm}, toma-se a derivada temporal em $A$
 \label{eq:derivada_relacao_inversa}
 \end{equation}
 
-onde se usou a notação $\mathbf{C} \equiv \mathbf{C}^{B/A}$ para simplificar.
+onde $\frac{d}{dt}\big|_A\,\vec{a}_i=\vec{0}$, pois os versores do referencial $N$ são fixos quando a derivada é tomada em $N$.
+Para simplificar a notação, usa-se $\mathbf{C}\equiv\mathbf{C}^{B/N}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Substituindo \eqref{eq:derivada_b_i} em \eqref{eq:derivada_relacao_inversa}, obtém-se
 
 \begin{equation}
@@ -206,7 +227,7 @@ Escrevendo \eqref{eq:cinematica_dcm} elemento a elemento, obtêm-se as nove equa
 
 Essas equações mostram explicitamente como cada cosseno diretor evolui em
 função da velocidade angular $\vec{\omega}$.
-Quando $\vec{\omega}(t)$ é conhecida como função do tempo, a orientação de $B$ em relação a $A$ pode ser obtida pela integração numérica de \eqref{eq:cinematica_dcm}.
-A condição de ortonormalidade \eqref{eq:ortonormalidade_C} é um integral de movimento da equação cinemática: se $\mathbf{C}(0)$ é ortonormal, então a solução exata de \eqref{eq:cinematica_dcm} satisfaz $\mathbf{C}(t)\mathbf{C}^{T}(t)=\mathbf{I}$ para todo $t>0$. Na prática, essa propriedade é usada como verificação de consistência numérica e, quando necessário, como critério para re-ortonormalizar a matriz integrada.
+Quando $\vec{\omega}(t)$ é conhecida como função do tempo, a orientação de $B$ em relação a $N$ pode ser obtida pela integração numérica de \eqref{eq:cinematica_dcm}.
+A condição de ortonormalidade \eqref{eq:ortonormalidade_C} é uma integral de movimento da equação cinemática: se $\mathbf{C}(0)$ é ortonormal, então a solução exata de \eqref{eq:cinematica_dcm} satisfaz $\mathbf{C}(t)\mathbf{C}^{T}(t)=\mathbf{I}$ para todo $t>0$. Na prática, essa propriedade é usada como verificação de consistência numérica e, quando necessário, como critério para re-ortonormalizar a matriz integrada.
 
-Por fim, a comparação entre a DCM $\mathbf{C}^{B/A}$ e a matriz de rotação obtida a partir de ângulos de Euler é fundamental para entender as diferenças entre representações de atitude. A DCM atua diretamente nas bases dos referenciais, enquanto a matriz de rotação em ângulos de Euler é construída como produto de três rotações elementares em torno de eixos prescritos. 
+Por fim, a comparação entre a DCM $\mathbf{C}^{B/N}$ e a matriz de rotação obtida a partir de ângulos de Euler é fundamental para entender as diferenças entre representações de atitude. A DCM atua diretamente nas bases dos referenciais, enquanto a matriz de rotação em ângulos de Euler é construída como produto de três rotações elementares em torno de eixos prescritos. 

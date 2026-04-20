@@ -1,0 +1,277 @@
+% \subsubsection{Ângulos de Euler}
+% \label{sec:angulos_euler}
+
+% Assim como a matriz de cossenos diretores, a orientação de um referencial $B$
+% em relação a outro $N$ pode ser descrita por ângulos de Euler.
+% Conforme \cite{wie2008space}, considera-se a sequência de rotações
+% $C_1(\phi_1) \leftarrow C_2(\phi_2) \leftarrow C_3(\phi_3)$ que leva o
+% referencial inercial $N$ até o sistema do corpo $B$. Introduzem-se dois
+% referenciais intermediários $N'$ e $N''$:
+
+% \begin{equation}
+% C_3(\phi_3): N' \leftarrow N,\qquad
+% C_2(\phi_2): N'' \leftarrow N',\qquad
+% C_1(\phi_1): B \leftarrow N'',
+% \end{equation}
+
+% Isto é, parte-se do referencial inercial $N$ e aplica-se primeiro $C_3(\phi_3)$, obtendo $N'$, depois $C_2(\phi_2)$, obtendo $N''$, e por fim $C_1(\phi_1)$, obtendo o referencial do corpo $B$.
+% A matriz de cossenos diretores resultante é, portanto,
+
+% \begin{equation}
+%     \label{eq_sequencia_c1c2c3}
+% \mathbf{C}^{B/N}
+% =
+% C_1(\phi_1)\,C_2(\phi_2)\,C_3(\phi_3).
+% \end{equation}
+
+% Cada rotação elementar pode ser escritas como
+
+% \begin{equation}
+% C_1(\phi_1)=
+% \begin{bmatrix}
+% 1 & 0 & 0 \\
+% 0 & \cos\phi_1 & \sin\phi_1 \\
+% 0 & -\sin\phi_1 & \cos\phi_1
+% \end{bmatrix}.
+% \label{eq_C1_phi1}
+% \end{equation}
+
+% \begin{equation}
+% C_2(\phi_2)=
+% \begin{bmatrix}
+% \cos\phi_2 & 0 & -\sin\phi_2 \\
+% 0 & 1 & 0 \\
+% \sin\phi_2 & 0 & \cos\phi_2
+% \end{bmatrix}.
+% \label{eq_C2_phi2}
+% \end{equation}
+
+% \begin{equation}
+% C_3(\phi_3)=
+% \begin{bmatrix}
+% \cos\phi_3 & \sin\phi_3 & 0 \\
+% -\sin\phi_3 & \cos\phi_3 & 0 \\
+% 0 & 0 & 1
+% \end{bmatrix}.
+% \label{eq_C3_phi3}
+% \end{equation}
+
+
+% As velocidades angulares associadas a cada rotação elementar são
+% \begin{equation}
+% \vec{\omega}_{N'/N} = \dot{\phi}_3\,\vec{n}_3.
+% \label{eq_omega_Np_N}
+% \end{equation}
+
+% \begin{equation}
+% \vec{\omega}_{N''/N'} = \dot{\phi}_2\,\vec{n}'_2.
+% \label{eq_omega_Npp_Np}
+% \end{equation}
+
+% \begin{equation}
+% \vec{\omega}_{B/N''} = \dot{\phi}_1\,\vec{b}_1.
+% \label{eq_omega_B_Npp}
+% \end{equation}
+
+
+% O termo $\{\vec{n}_1,\vec{n}_2,\vec{n}_3\}$ é a base do referencial $N$ e $\{\vec{b}_1,\vec{b}_2,\vec{b}_3\}$ é a base do referencial $B$.
+
+% Introduzem-se ainda os referenciais intermediários $N'$ e $N''$, associados à sequência de rotações elementares que define os ângulos de Euler.
+% A velocidade angular total de $B$ em relação a $N$ pode ser obtida pela composição das velocidades angulares relativas sucessivas 
+
+% \begin{equation}
+% \vec{\omega}^{B/N}
+% =
+% \vec{\omega}_{B/N''}
+% +
+% \vec{\omega}_{N''/N'}
+% +
+% \vec{\omega}_{N'/N}
+% =
+% \dot{\phi}_1\,\vec{b}_1
+% +
+% \dot{\phi}_2\,\vec{n}'_2
+% +
+% \dot{\phi}_3\,\vec{n}_3.
+% \label{eq_omega_soma_contrib}
+% \end{equation}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Ao expressar a velocidade angular de $B$ em relação a $N$ na espaçonave e ao projetar a soma das contribuições elementares nos eixos de $B$, obtém-se uma relação linear entre as componentes da velocidade angular e as derivadas temporais dos ângulos de Euler.
+% Essa relação pode ser escrita em forma matricial conforme apresentado por Wie~\cite{wie2008space}:
+
+% \begin{equation}
+% \begin{bmatrix}
+% \omega_1 \\[2pt] \omega_2 \\[2pt] \omega_3
+% \end{bmatrix}
+% =
+% \begin{bmatrix}
+% 1 & 0 & -\sin\phi_2 \\
+% 0 & \cos\phi_1 & \sin\phi_1 \cos\phi_2 \\
+% 0 & -\sin\phi_1 & \cos\phi_1 \cos\phi_2
+% \end{bmatrix}
+% \begin{bmatrix}
+% \dot{\phi}_1 \\[2pt] \dot{\phi}_2 \\[2pt] \dot{\phi}_3
+% \end{bmatrix}.
+% \label{eq_cinematica_euler}
+% \end{equation}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% A matriz $3\times 3$ em \eqref{eq_cinematica_euler} não é ortogonal, pois não está associada a uma mudança de base entre referenciais ortonormais por meio de uma rotação.
+% Em particular, os vetores que sustentam essa decomposição de $\vec{\omega}$ correspondem aos eixos instantâneos das rotações elementares e, quando expressos no corpo, não formam um conjunto mutuamente ortogonal.
+% Sendo assim, as direções associadas a
+% $\vec{b}_1$, $\vec{a}''_2$ e $\vec{a}'_3$
+% não constituem uma base ortonormal.
+% Consequentemente, a matriz não representa uma rotação, mas uma transformação linear que relaciona as taxas dos ângulos de Euler às componentes de $\vec{\omega}$.
+
+
+% A relação inversa,
+% obtida pela inversão da Matriz~\eqref{eq_cinematica_euler},
+% fornece as equações diferenciais cinemáticas para a sequência apresentada na Equação~\eqref{eq_sequencia_c1c2c3}:
+
+% \begin{equation}
+% \begin{bmatrix}
+% \dot{\phi}_1 \\[2pt] \dot{\phi}_2 \\[2pt] \dot{\phi}_3
+% \end{bmatrix}
+% =
+% \frac{1}{\cos\phi_2}
+% \begin{bmatrix}
+% \cos\phi_2 & \sin\phi_1 \sin\phi_2 & \cos\phi_1 \sin\phi_2 \\
+% 0 & \cos\phi_1 \cos\phi_2 & -\sin\phi_1 \cos\phi_2 \\
+% 0 & \sin\phi_1 & \cos\phi_1
+% \end{bmatrix}
+% \begin{bmatrix}
+% \omega_1 \\[2pt] \omega_2 \\[2pt] \omega_3
+% \end{bmatrix}.
+% \label{eq_euler_inversa}
+% \end{equation}
+
+% Conforme \cite{wie2008space}, a Equação~\eqref{eq_euler_inversa} corresponde às equações cinemáticas diferenciais da sequência de Euler adotada, pois relaciona as derivadas temporais dos ângulos às componentes da velocidade angular expressas na espaçonave.
+% A \gls{dcm} associada aos ângulos $(\phi_1,\phi_2,\phi_3)$ é obtida pela composição das rotações elementares definida na Equação~\eqref{eq_sequencia_c1c2c3}.
+% Essa construção caracteriza uma sequência em torno dos eixos intermediários $z$--$y$--$x$ (isto é, $3$--$2$--$1$), sendo equivalente a uma sequência em torno de eixos fixos $x$--$y$--$z$, na ordem $X$--$Y$--$Z$.
+% Essa equivalência permite comparar diretamente a \gls{dcm} resultante com a parametrização por ângulos de Euler empregada.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A Matriz~\eqref{eq_cinematica_euler} torna-se singular quando $\phi_2=\pm 90^\circ (pitch)$, pois o mapeamento entre as derivadas dos ângulos de Euler e as componentes de $\vec{\omega}$ perde posto e a transformação inversa \eqref{eq_euler_inversa} deixa de existir.
+% Nessa configuração, na sequência adotada, os eixos associados às rotações primeira e terceira tornam-se alinhados, e elimina a independência entre dois movimentos elementares e reduz o número de graus de liberdade.
+% Esse fenômeno é conhecido como singularidade cinemática, ou \emph{gimbal lock}.
+% A adoção de outra sequência de Euler não elimina o problema, apenas desloca a singularidade para outra combinação de ângulos.
+% Essa limitação é inerente a parametrizações de atitude baseadas em três rotações sucessivas e motiva o uso de representações alternativas, como quaternions, que não apresentam singularidades de parametrização no espaço de estados.
+
+\subsection{Ângulos de Euler}
+\label{sec_angulos_euler}
+
+Assim como a matriz de cossenos diretores, a orientação de um referencial $B$ em relação a outro $N$ pode ser descrita por ângulos de Euler.
+Conforme \cite{wie2008space}, considera-se a sequência de rotações $C_1(\phi_1) \leftarrow C_2(\phi_2) \leftarrow C_3(\phi_3)$ que leva o referencial inercial $N$ até o sistema do corpo $B$.
+A sequência de transformações entre os referenciais intermediários $N'$ e $N''$ é dada por:
+
+\begin{equation}
+N \xrightarrow{C_3(\phi_3)} N' \xrightarrow{C_2(\phi_2)} N'' \xrightarrow{C_1(\phi_1)} B.
+\end{equation}
+
+Isto é, parte-se do referencial inercial $N$ e aplica-se primeiro a rotação $C_3(\phi_3)$ em torno do eixo $z$, obtendo $N'$; em seguida, aplica-se $C_2(\phi_2)$ em torno do novo eixo $y'$, obtendo $N''$; e por fim, $C_1(\phi_1)$ em torno do eixo $x''$, obtendo o referencial do corpo $B$.
+A matriz de cossenos diretores resultante é dada pelo produto das matrizes elementares:
+
+\begin{equation}
+\label{eq_sequencia_c1c2c3}
+\mathbf{C}^{B/N}
+=
+C_1(\phi_1)\,C_2(\phi_2)\,C_3(\phi_3).
+\end{equation}
+
+As matrizes de rotação elementar para essa sequência são definidas como \cite{wie2008space}:
+
+\begin{equation}
+C_1(\phi_1)=
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & \cos\phi_1 & \sin\phi_1 \\
+0 & -\sin\phi_1 & \cos\phi_1
+\end{bmatrix},
+\label{eq_C1_phi1}
+\end{equation}
+
+\begin{equation}
+C_2(\phi_2)=
+\begin{bmatrix}
+\cos\phi_2 & 0 & -\sin\phi_2 \\
+0 & 1 & 0 \\
+\sin\phi_2 & 0 & \cos\phi_2
+\end{bmatrix},
+\label{eq_C2_phi2}
+\end{equation}
+
+\begin{equation}
+C_3(\phi_3)=
+\begin{bmatrix}
+\cos\phi_3 & \sin\phi_3 & 0 \\
+-\sin\phi_3 & \cos\phi_3 & 0 \\
+0 & 0 & 1
+\end{bmatrix}.
+\label{eq_C3_phi3}
+\end{equation}
+
+Os ângulos $\phi_1, \phi_2, \phi_3$ correspondem, respectivamente, aos movimentos de rolagem (\textit{roll}), arfagem (\textit{pitch}) e guinada (\textit{yaw}).
+A velocidade angular total de $B$ em relação a $N$ é obtida pela soma vetorial das taxas angulares relativas em cada etapa da rotação:
+
+\begin{equation}
+\vec{\omega}^{B/N}
+=
+\vec{\omega}_{B/N''}
++
+\vec{\omega}_{N''/N'}
++
+\vec{\omega}_{N'/N}
+=
+\dot{\phi}_1\,\vec{b}_1
++
+\dot{\phi}_2\,\vec{n}''_2
++
+\dot{\phi}_3\,\vec{n}'_3.
+\label{eq_omega_soma_contrib}
+\end{equation}
+
+O termo $\vec{b}_1$ é o eixo $x$ do corpo, $\vec{n}''_2$ é o eixo $y$ do referencial intermediário $N''$ e $\vec{n}'_3$ é o eixo $z$ do referencial intermediário $N'$.
+
+Ao projetar essas contribuições nos eixos do sistema do corpo $B$ ($\{\vec{b}_1, \vec{b}_2, \vec{b}_3\}$), obtém-se a relação cinemática diferencial entre as componentes da velocidade angular $\vec{\omega}^{B/N} = [\omega_1, \omega_2, \omega_3]^T$ e as taxas dos ângulos de Euler \cite{wie2008space}:
+
+\begin{equation}
+\begin{bmatrix}
+\omega_1 \\[2pt] \omega_2 \\[2pt] \omega_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & -\sin\phi_2 \\
+0 & \cos\phi_1 & \sin\phi_1 \cos\phi_2 \\
+0 & -\sin\phi_1 & \cos\phi_1 \cos\phi_2
+\end{bmatrix}
+\begin{bmatrix}
+\dot{\phi}_1 \\[2pt] \dot{\phi}_2 \\[2pt] \dot{\phi}_3
+\end{bmatrix}.
+\label{eq_cinematica_euler}
+\end{equation}
+
+A relação inversa, que fornece as taxas dos ângulos de Euler em função da velocidade angular medida pelos sensores da espaçonave, é dada por:
+
+\begin{equation}
+\begin{bmatrix}
+\dot{\phi}_1 \\[2pt] \dot{\phi}_2 \\[2pt] \dot{\phi}_3
+\end{bmatrix}
+=
+\frac{1}{\cos\phi_2}
+\begin{bmatrix}
+\cos\phi_2 & \sin\phi_1 \sin\phi_2 & \cos\phi_1 \sin\phi_2 \\
+0 & \cos\phi_1 \cos\phi_2 & -\sin\phi_1 \cos\phi_2 \\
+0 & \sin\phi_1 & \cos\phi_1
+\end{bmatrix}
+\begin{bmatrix}
+\omega_1 \\[2pt] \omega_2 \\[2pt] \omega_3
+\end{bmatrix}.
+\label{eq_euler_inversa}
+\end{equation}
+
+A matriz na Equação~\eqref{eq_euler_inversa} torna-se singular quando $\phi_2 = \pm 90^\circ$ (singularidade de \textit{pitch}), pois $\cos\phi_2 = 0$.
+Nessa configuração, conhecida como \textit{gimbal lock}, os eixos da primeira e terceira rotações alinham-se, resultando na perda de um grau de liberdade na representação matemática da atitude.
+Essa limitação motiva o uso de parametrizações globais não singulares, como os parâmetros de Euler (quatérnions), para descrever grandes manobras de atitude.

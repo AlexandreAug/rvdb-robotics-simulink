@@ -1,0 +1,108 @@
+\subsection{Convenção para fixar sistemas de coordenadas aos elos}
+\label{sec_convencao_sistCoordenadas_elos}
+
+Para descrever a localização de cada elo em relação aos elos vizinhos, foram fixados eixos em cada elo.
+Cada elo é identificado por um índice, de modo que o referencial $\{i\}$ é rigidamente fixado ao elo $i$.
+Neste trabalho, adotam-se as convenções de \cite{craig2005}, adaptadas ao contexto espacial.
+
+\subsection{Convenção e descrição dos elos do manipulador robótico}
+\label{sec_convencao_dh_mr}
+
+Neste trabalho, adotam-se as convenções seguidas por \cite{craig2005}, adaptadas para aplicações espaciais.
+Cada junta é associada a um eixo $\hat{Z}_i$, coincidente com o respectivo eixo de rotação.
+O eixo $\hat{X}_i$ é orientado de modo a conectar o eixo $\hat{Z}_i$ ao eixo $\hat{Z}_{i+1}$, e $\hat{Y}_i$ é obtido pela regra da mão direita, completando um sistema ortogonal dextrogiro.
+As juntas 1, 2 e 3 são revolutas, mas apenas as juntas 2 e 3 são paralelas, portanto os eixos $\hat{Z}_1$, $\hat{Z}_2$ e $\hat{Z}_3$ representam os eixos de rotação sucessivos dos elos.
+O eixo $\hat{X}_1$ é definido na direção da interseção entre $\hat{Z}_1$ e $\hat{Z}_2$, e o eixo $\hat{X}_2$ segue o mesmo critério em relação a $\hat{Z}_2$ e $\hat{Z}_3$, conforme a Figura~\ref{fig_Craig_3_5}.
+Os referenciais locais $\{i\}$ ($i=1,\dots,3$) fixados em cada elo do manipulador respeitam as convenções de \gls{dh}, e as distâncias e ângulos definidos a partir desses eixos são utilizados na construção da tabela \gls{dh}.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{4 Formulacao matematica/4 Manipulador robotico/Imagens_MR/Craig_3_5.png}
+\caption{Referencias dos elos fixados de modo que o referencial $i$ é rigidamente fixado ao elo $i$. Adaptado de \cite{craig2005}.}
+\label{fig_Craig_3_5}
+\end{figure}
+
+A Figura~\ref{fig_referenciais_MR} exibe a espaçonave perseguidora de forma que é possível verificar os eixos de rotação de cada junta e o alinhamento de cada elo e os centros de gravidade de cada elemento.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{4 Formulacao matematica/4 Manipulador robotico/Imagens_MR/Lateral direita com eixos.png}
+\caption{Referencial local do Manipulador Robótico 3R acoplado à espaçonave.}
+\label{fig_referenciais_MR}
+\end{figure}
+
+Por sua vez, a Figura~\ref{fig_rotacaoJuntas_MR} exibe o mesmo manipulador robótico da Figura~\ref{fig_referenciais_MR}, no entanto, está no formato esquemático e explicita as juntas e seus eixos de rotação.
+O sistema de coordenadas fixo no corpo da espaçonave, $\{B\}$, é definido em seu \gls{cdm}, correspondendo aos seus eixos principais de inércia quando estiver no modo não operacional.
+No \gls{cdm} do alvo, define-se o sistema de coordenadas orbital \gls{lvlh}.
+% Neste trabalho, assume-se que o referencial $\{0\}$ é coincidente com espaçonave $\{B\}$, com $\hat{Z}_0$ alinhado ao eixo da primeira junta, de modo que as transformações homogêneas ${}^{B}T_i$ partem diretamente da espaçonave da primeira junta revoluta.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\textwidth]{4 Formulacao matematica/4 Manipulador robotico/Imagens_MR/Craig_3_6_RotacaoJuntas.png}
+\caption{Notação esquemática do Manipulador Robótico 3R.}
+\label{fig_rotacaoJuntas_MR}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Tabela de Denavit--Hartenberg}
+
+Para descrever a cinemática do \gls{mr}, adotou-se a convenção \gls{dh} apresentada em \cite{craig2005}, conforme:
+
+\begin{itemize}
+    \item $a_i$: distância de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medida ao longo de $\hat{X}_i$;
+    \item $\alpha_i$: ângulo de $\hat{Z}_i$ a $\hat{Z}_{i+1}$ medido em torno de $\hat{X}_i$;
+    \item $d_i$: distância de $\hat{X}_{i-1}$ a $\hat{X}_i$ medida ao longo de $\hat{Z}_i$; e
+    \item $\theta_i$: ângulo de $\hat{X}_{i-1}$ a $\hat{X}_i$ medido em torno de $\hat{Z}_i$.
+\end{itemize}
+
+A escolha dos parâmetros decorre da orientação relativa entre os eixos das juntas.
+Na junta~1, os eixos $\hat{Z}_0$ e $\hat{Z}_1$ são coincidentes; portanto, $\alpha_0 = 0^\circ$ e $a_0 = 0$.
+Na junta~2, o eixo $\hat{Z}_2$ é ortogonal a $\hat{Z}_1$, o que requer uma rotação de $90^\circ$ em torno de $\hat{X}_1$, resultando em $\alpha_1 = 90^\circ$.
+As juntas~2 e~3 possuem eixos paralelos, de modo que $\alpha_2 = 0^\circ$.
+
+Os comprimentos geométricos entre eixos consecutivos são representados por $a_1=L_1$ e $a_2=L_2$.
+Como todas as juntas são revolutas, as variáveis articulares são $\theta_i$, enquanto $d_i$ são constantes.
+As variáveis articulares $\theta_i$ correspondem às rotações das juntas em torno de seus respectivos eixos $\hat{Z}_{i}$.
+
+% Craig (como eu havia combinado com ele)
+% \begin{table}[H]
+% \centering
+% \caption{Parâmetros DH do manipulador 3R}
+% \label{tab_dh_zxx}
+% \begin{tabular}{c|c|c|c|c}
+% $i$ & $\alpha_{i-1}$ & $a_{i-1}$ & $d_i$ & $\theta_i$ \\
+% \hline
+% 1 & $0^\circ$  & 0    & 0 & $\theta_1$ \\
+% 2 & $90^\circ$ & $a1$ & 0 & $\theta_2$ \\
+% 3 & $0^\circ$  & $a2$ & 0 & $\theta_3$ \\
+% \end{tabular}
+% \end{table}
+
+% siciliano (como prof quer)
+\begin{table}[H]
+\centering
+\caption{Parâmetros DH do manipulador 3R}
+\label{tab_dh_zxx}
+\begin{tabular}{c|c|c|c|c}
+$i$ & $\alpha_{i-1}$ & $a_{i-1}$ & $d_i$ & $\theta_i$ \\
+\hline
+1 & $90^\circ$ & $a1$    & 0 & $\theta_1$ \\
+2 & $0^\circ$  & $a2$ & 0 & $\theta_2$ \\
+3 & $0^\circ$  & $a3$ & 0 & $\theta_3$ \\
+\end{tabular}
+\end{table}
+
+Dessa forma, a Tabela~\ref{tab_dh_zxx} fornece os parâmetros necessários para a construção das transformações homogêneas sucessivas e para a formulação da cinemática direta, que será utilizada na modelagem dinâmica subsequente.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Transformações entre elos}
+\label{sec_transformacoes_elos}
+
+\input{4 Formulacao matematica/4 Manipulador robotico/3.1 Transf entre elos.tex}
+
+% \subsection{Espaço das juntas}
+
+% Neste trabalho, a lei de controle é implementada no espaço das juntas, pois a lei de controle \gls{pd} atua diretamente sobre as variáveis articulares de posição.
+% Essa abordagem dispensa a conversão para o espaço cartesiano e permite aplicar diretamente os torques de controle nas juntas, mantendo correspondência física entre as ações de controle e o movimento do manipulador \cite{craig2005}.

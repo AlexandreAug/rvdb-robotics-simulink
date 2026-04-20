@@ -1,0 +1,54 @@
+\section{Contexto de missões de \gls{rvdb}}
+
+% As missões de \gls{rvdb} permitem que duas espaçonaves realizem acoplamento entre si. Possibilitando transferência de tripulação, reabastecimento, manutenção de satélites e montagem de estruturas espaciais, como a \gls{iss} \cite{nasaISS}.
+As operações de \gls{rvdb} envolvem fenômenos dinâmicos que vão além do movimento orbital relativo entre duas espaçonaves. Durante as fases de aproximação próxima e final, a interação entre dinâmica orbital, atitude e movimentação de manipuladores robóticos torna-se determinante para o comportamento da perseguidora. Modelos que consideram apenas o movimento relativo orbital tornam-se insuficientes para descrever essas etapas críticas.
+
+Desde as primeiras missões tripuladas que demonstraram a viabilidade de operações de \gls{rvdb}, o domínio dessas manobras tornou-se uma capacidade essencial para missões espaciais \cite{nasa1stDocking}.
+Atualmente, operações de \gls{rvdb} são utilizadas tanto em missões tripuladas quanto em missões robóticas, envolvendo aplicações como prestação de serviços em órbita, captura de satélites inativos \cite{mev_northrop}, remoção de detritos espaciais e montagem de grandes estruturas no espaço.
+
+Essas aplicações ampliam o escopo das operações de proximidade em órbita e introduzem novos desafios de controle, navegação e interação dinâmica entre veículos espaciais.
+Em particular, missões que envolvem manipuladores robóticos ou captura de alvos não cooperativos exigem modelos capazes de representar a dinâmica relativa e as interações entre os sistemas envolvidos \cite{papadopoulos1994free,flores2014review}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Evolução das missões de \gls{rvdb}}
+
+As primeiras demonstrações práticas de operações de rendezvous e \textit{docking} ocorreram na década de $1960$, quando a espaçonave \emph{Gemini} realizou manobras de aproximação e acoplamento com o veículo alvo \emph{Agena} \cite{nasa1stDocking}.
+Essas missões estabeleceram os procedimentos para operações de encontro orbital e demonstraram a viabilidade do controle de trajetória e atitude durante a aproximação \cite{goodman2011rendezvous}.
+
+Posteriormente, o programa \emph{Apollo} utilizou operações de \textit{docking} como parte fundamental da arquitetura de missão, permitindo o acoplamento entre o módulo de comando e o módulo lunar \cite{RVDBapollo,nevins1971}.
+Ao longo das décadas seguintes, operações de \gls{rvdb} tornaram-se rotineiras em missões tripuladas e robóticas, sendo empregada na \gls{iss}, que utiliza operações de \textit{docking} e \textit{berthing} para o recebimento de veículos de carga e tripulação \cite{nasaRVDBiss,nasaVisitingVehicles}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Prestação de serviços em órbita}
+
+Nesse tipo de missão, uma espaçonave de serviço aproxima-se de um satélite alvo para realizar tarefas como inspeção, reabastecimento, atualização de componentes ou extensão da vida útil do veículo \cite{mev_northrop}.
+
+Para que essas missões ocorram, são exigidas capacidades avançadas de navegação relativa e controle durante operações de proximidade, especialmente quando o satélite alvo não foi originalmente projetado para cooperação com operações de captura ou manutenção \cite{arantes2011,flores2014review}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Manutenção}
+
+Operações de manutenção em órbita podem envolver a substituição de componentes, a realização de inspeções ou a correção de falhas em satélites em operação.
+Em alguns casos, essas atividades dependem da capacidade de realizar aproximação segura entre veículos e estabelecer contato controlado entre interfaces mecânicas ou manipuladores robóticos \cite{hubbleRVDB,flores2014review}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Remoção de detritos}
+
+A crescente quantidade de detritos espaciais em órbita terrestre tem motivado o desenvolvimento de missões voltadas à captura e remoção de objetos inativos.
+Essas missões envolvem a aproximação a alvos não cooperativos, exigindo estratégias robustas de navegação relativa, controle de atitude e mecanismos de captura capazes de lidar com incertezas no estado do objeto alvo \cite{arantes2010,flores2014review}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Montagem espacial}
+
+Operações de montagem em órbita representam outra aplicação importante para missões de \gls{rvdb}.
+A construção de estruturas espaciais de grande porte pode exigir o encontro e a integração de múltiplos módulos em órbita, demandando operações sucessivas de aproximação, alinhamento e acoplamento entre veículos ou componentes estruturais \cite{nasaRVDBiss}.

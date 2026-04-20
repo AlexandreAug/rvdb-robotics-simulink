@@ -1,0 +1,317 @@
+\section{Equações de Lagrange e estrutura das forças de inércia}
+\label{sec_dinAcoplada_equacoes_Lagrange}
+
+
+As equações de Lagrange para o sistema espaçonave--\gls{mr}, em termos das coordenadas generalizadas $\vec y\,$ e de suas derivadas, podem ser escritas componente a componente conforme \cite{Wilde2018}:
+
+\begin{equation}
+\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot y_k}\right)
+-\frac{\partial T}{\partial y_k}
+=
+\tau_k,
+\qquad
+k = 1,\dots,n_g.
+\label{eq_lagrange_componentes}
+\end{equation}
+
+O termo $T$ é a energia cinética total, $\tau_k$ é a força generalizada associada à coordenada $y_k$ e $n_g$ é o número de graus de liberdade considerados na dinâmica acoplada (espaçonave e \gls{mr}).
+Partindo da forma quadrática da energia cinética em \eqref{eq_T_quadratica_Mq1},
+em que $M(\vec y\,)$ é a matriz de inércia generalizada do conjunto espaçonave--\gls{mr},
+reescreve-se $T$ na forma escalar:
+
+\begin{equation}
+T(\vec y,\dot{\vec y\, })
+=
+\frac{1}{2}
+\sum_{k=1}^{n_g}\sum_{j=1}^{n_g}
+m_{kj}(\vec y\, )\,\dot y_k \dot y_j.
+\label{eq_T_expandida_mkj}
+\end{equation}
+
+
+Sendo assim, a derivada parcial de $T$ em relação à velocidade generalizada
+$\dot y_k$ é obtida de forma explícita, e ao reescrever $T$ na forma:
+
+\begin{equation}
+T(\vec y,\dot{\vec y\, })
+=
+\frac{1}{2}
+\sum_{j=1}^{n_g}\sum_{l=1}^{n_g}
+m_{jl}(\vec y)\,\dot y_j \dot y_l.
+\end{equation}
+
+Tem-se:
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial T}{\partial \dot y_k}
+&=
+\frac{\partial}{\partial \dot y_k}
+\biggl[
+\frac{1}{2}
+\sum_{j=1}^{n_g}\sum_{l=1}^{n_g}
+m_{jl}(\vec y)\,\dot y_j \dot y_l
+\biggr]
+\\
+&=
+\frac{1}{2}
+\sum_{l=1}^{n_g}
+m_{kl}(\vec y)\,\dot y_l
++
+\frac{1}{2}
+\sum_{j=1}^{n_g}
+m_{jk}(\vec y)\,\dot y_j
+\\
+&=
+\sum_{j=1}^{n_g}
+m_{kj}(\vec y)\,\dot y_j
+\end{aligned}.
+\label{eq_dT_dqdot_intermediaria}
+\end{equation}
+
+O termo, no último passo, utiliza-se a simetria da matriz de inércia generalizada, $m_{jk}(\vec y) = m_{kj}(\vec y)$ \cite{Geradin2004}.
+Em seguida, ao aplicar a derivada temporal total a \eqref{eq_dT_dqdot_intermediaria}, obtém-se:
+
+\begin{equation}
+\begin{aligned}
+\frac{d}{dt}\!\left(\frac{\partial T}{\partial \dot y_k}\right)
+&=
+\frac{d}{dt}
+\biggl(
+\sum_{j=1}^{n_g}
+m_{kj}(\vec y)\,\dot y_j
+\biggr)
+\\
+&=
+\sum_{j=1}^{n_g}
+\bigl(
+\dot m_{kj}(\vec y)\,\dot y_j
++
+m_{kj}(\vec y)\,\ddot y_j
+\bigr).
+\end{aligned}
+\end{equation}
+
+Sendo:
+
+\begin{equation}
+\dot m_{kj}(\vec y\,)
+=
+\sum_{l=1}^{n_g}
+\frac{\partial m_{kj}(\vec y\,)}{\partial y_l}\,\dot y_l.
+\end{equation}
+
+
+Substituindo essa expressão na relação anterior e reorganizando os termos, obtém-se uma forma compacta para o primeiro termo à esquerda de \eqref{eq_lagrange_componentes},
+associado à coordenada $y_k$ do sistema espaçonave--\gls{mr}.
+O segundo termo de \eqref{eq_lagrange_componentes} envolve a derivada parcial de $T$ em relação a $y_k$.
+Usando novamente a forma escalar em \eqref{eq_T_expandida_mkj}, tem-se
+
+\begin{equation}
+\begin{aligned}
+\frac{\partial T}{\partial y_k}
+&=
+\frac{\partial}{\partial y_k}
+\biggl[
+\frac{1}{2}
+\sum_{j=1}^{n_g}\sum_{l=1}^{n_g}
+m_{jl}(\vec y)\,\dot y_j \dot y_l
+\biggr]
+\\
+&=
+\frac{1}{2}
+\sum_{j=1}^{n_g}\sum_{l=1}^{n_g}
+\frac{\partial m_{jl}}{\partial y_k}\,\dot y_j \dot y_l.
+\end{aligned}
+\end{equation}
+
+O termo as velocidades generalizadas $\dot y_j$ e $\dot y_l$ são tratadas como constantes na derivação em relação a $y_k$.
+Essa expressão fornece o segundo termo cinético das equações de Lagrange em \eqref{eq_lagrange_componentes}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Combinando as expressões obtidas para $\dfrac{d}{dt}\!\left(\dfrac{\partial T}{\partial \dot y_k}\right)$
+e para $\dfrac{\partial T}{\partial y_k}$, as equações de Lagrange podem ser escritas na forma escalar:
+
+\begin{equation}
+\sum_{j=1}^{n_g}
+m_{kj}(\vec y\,)\,\ddot y_j
++
+\sum_{j=1}^{n_g}\sum_{l=1}^{n_g}
+\bigg(
+\frac{\partial m_{kj}}{\partial y_l}
+-
+\frac{1}{2}\frac{\partial m_{lj}}{\partial y_k}
+\bigg)\,\dot y_l \dot y_j
+=
+\tau_k - g_k(\vec y\,),
+\qquad
+k = 1,\dots,n_g.
+\label{eq_lagrange_componentes_expandida}
+\end{equation}
+
+O termo $y_k$ e $y_l$ são as componentes do vetor de coordenadas generalizadas
+$\vec y$, e $g_k(\vec y\,)$ é a $k$-ésima componente do vetor
+$\vec G(\vec y\,)$ associado às forças generalizadas derivadas do
+potencial configuracional $V(\vec y\,)$, com
+$g_k(\vec y\,) = \dfrac{\partial V}{\partial y_k}$ \cite{Geradin2004}.
+Ao agrupar os termos proporcionais às acelerações $\ddot y_j$ na matriz
+$M(\vec y\,)$, os termos quadráticos em $\dot y_j$ e $\dot y_l$ na
+matriz $C(\vec y\,,\dot{\vec y\,})$ e as contribuições do potencial no
+vetor $\vec G(\vec y\,)$, a expressão
+\eqref{eq_lagrange_componentes_expandida} é organizada em forma
+matricial \cite{Geradin2004}:
+
+\begin{equation}
+M(\vec y\,)\,\ddot{\vec y\,}
++
+C(\vec y\,,\dot{\vec y\,})\,\dot{\vec y\,}
+=
+\vec\tau,
+\label{eq_dinamica_geral_com_G}
+\end{equation}
+
+\begin{equation}
+c_{kj}(\vec y\,,\dot{\vec y\,})
+=
+\sum_{l=1}^{n_g}
+\left(
+\frac{\partial m_{kj}(\vec y\,)}{\partial y_l}
+-
+\frac{1}{2}\frac{\partial m_{lj}(\vec y\,)}{\partial y_k}
+\right)\dot y_l,
+\qquad
+k,j = 1,\dots,n_g.
+\label{eq_coeficientes_C_geradin}
+\end{equation}
+
+O termo o termo $C(\vec y\,,\dot{\vec y\,})\,\dot{\vec y\,}$ agrupa as contribuições centrífugas e de Coriolis.
+Conforme discutido na Seção~\ref{sec_dinAcoplada_energia_cinetica},
+no modelo adotado para o conjunto espaçonave--\gls{mr} em ambiente de
+microgravidade assume-se $V(\vec y\,) \equiv 0$, de modo que
+$\vec G(\vec y\,) = \vec 0$ e a Lagrangiana reduz-se a
+$L(\vec y\,,\dot{\vec y\,}) = T(\vec y\,,\dot{\vec y\,})$
+\cite{wie2008space,murray1994mathematical}.
+Nesse caso, as equações de movimento tomam a forma padrão:
+
+\begin{equation}
+M(\vec y\,)\,\ddot{\vec y\,}
++
+C(\vec y\,,\dot{\vec y\,})\,\dot{\vec y\,}
+=
+\vec\tau.
+\label{eq_dinamica_geral}
+\end{equation}
+
+O termo $M(\vec y\,)$ é a matriz de inércia generalizada construída a partir dos jacobianos espaciais
+e dos operadores de inércia da espaçonave e dos elos,
+conforme \eqref{eq_Ms_total_formula}, e $C(\vec y\,,\dot{\vec y\,})\,\dot{\vec y\,}$
+representa o vetor de forças centrífugas--Coriolis \cite{featherstone2008,lynch2017modern}.
+A organização das coordenadas generalizadas segue a definição
+\eqref{eq_q_generalizado_espaconave_mr}, isto é:
+
+\begin{equation}
+\vec y
+=
+\begin{bmatrix}
+\vec\eta_B \\
+\vec\xi
+\end{bmatrix},
+\qquad
+\dot{\vec y}
+=
+\begin{bmatrix}
+\dot{\vec\eta}_B \\
+\dot{\vec\xi}
+\end{bmatrix}.
+\label{eq_y_def_reprise}
+\end{equation}
+
+
+O termo $\vec\eta_B$ reúne os parâmetros de atitude da espaçonave e $\vec\xi$
+contém as coordenadas articulares do manipulador.
+De forma compatível, o vetor de forças generalizadas é dividido como:
+
+\begin{equation}
+\vec\tau
+=
+\begin{bmatrix}
+\vec\tau_{\text{att}} \\
+\vec\tau_{\text{juntas}}
+\end{bmatrix}.
+\label{eq_tau_estruturado_final}
+\end{equation}
+
+O termo $\vec\tau_{\text{att}}$ é o vetor de torques aplicados à atitude da
+espaçonave, gerados pelo controlador de atitude, e
+$\vec\tau_{\text{juntas}}$ é o vetor de torques aplicados nos atuadores
+das juntas do \gls{mr}, gerados pelos controladores articulares.
+Essa estrutura deixa explícito que, no modelo considerado, $\vec\tau$
+agrupa apenas as ações de controle internas ao conjunto
+espaçonave--\gls{mr}, enquanto as contribuições derivadas de potenciais
+externos (como torques gravitacionais) são negligenciadas ao se adotar
+$V(\vec y\,) = 0$.
+
+%%%%%%%%%%%%%%%%%%%%%3333333333333%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Sendo assim, é conveniente explicitar a Equação~\eqref{eq_dinamica_geral}
+para o conjunto espaçonave--\gls{mr} por meio do particionamento,
+conforme \cite{featherstone2008,Wilde2018}, da matriz de inércia e da
+matriz de Coriolis:
+
+\begin{equation}
+M(\vec y\,) =
+\begin{bmatrix}
+M_{BB}(\vec y\,) & M_{BM}(\vec y\,) \\
+M_{MB}(\vec y\,) & M_{MM}(\vec y\,)
+\end{bmatrix},
+\qquad
+C(\vec y\,,\dot{\vec y\,}) =
+\begin{bmatrix}
+C_{BB}(\vec y\,,\dot{\vec y\,}) & C_{BM}(\vec y\,,\dot{\vec y\,}) \\
+C_{MB}(\vec y\,,\dot{\vec y\,}) & C_{MM}(\vec y\,,\dot{\vec y\,})
+\end{bmatrix}.
+\label{eq_particionamento_M_C_Lagrange}
+\end{equation}
+
+O termo o índice $B$ está associado às contribuições da espaçonave física e o
+índice $M$ às contribuições do manipulador robótico.
+Ao aplicar esse particionamento na Equação~\eqref{eq_dinamica_geral},
+a dinâmica da atitude da espaçonave pode ser escrita na forma:
+
+\begin{equation}
+M_{BB}(\vec y\,)\,\ddot{\vec y}_B
++
+M_{BM}(\vec y\,)\,\ddot{\vec y}_M
++
+C_{BB}(\vec y\,,\dot{\vec y\,})\,\dot{\vec y}_B
++
+C_{BM}(\vec y\,,\dot{\vec y\,})\,\dot{\vec y}_M
+=
+\vec\tau_B.
+\label{eq_dinAcoplada_espaconave_compacta}
+\end{equation}
+
+O termo $\vec y_B$ é o vetor de coordenadas generalizadas associado à
+atitude da espaçonave, $\vec y_M$ reúne as coordenadas das juntas do
+manipulador e $\vec\tau_B$ é o vetor de forças generalizadas aplicadas
+à espaçonave.
+Para explicitar o papel das reações inerciais geradas pelo
+manipulador, decompõe-se o esforço generalizado da espaçonave em:
+
+\begin{equation}
+\vec\tau_B
+=
+\vec\tau_{\text{att}}
++
+\vec\tau_{\text{reacao}}.
+\label{eq_decomposicao_tauB}
+\end{equation}
+
+
+O termo $\vec\tau_{\text{att}}$ representa o torque de controle aplicado
+pelos atuadores de atitude da espaçonave e $\vec\tau_{\text{reacao}}$
+representa o torque interno transmitido ao corpo da espaçonave pela
+movimentação do manipulador, isto é, a reação de acoplamento dinâmica
+entre espaçonave e \gls{mr}. 

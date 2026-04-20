@@ -1,0 +1,24 @@
+\subsection{Missões recentes e novos desafios}
+\label{subsec_missoes_recentes_desafios}
+
+Nos últimos anos, as operações de \gls{rvdb} passaram a ocorrer em um contexto mais amplo, caracterizado pela crescente participação de empresas privadas, pelo desenvolvimento de serviços em órbita e pela preparação de missões de exploração além da órbita baixa terrestre. 
+Essas mudanças ampliaram o número de aplicações das operações de aproximação e acoplamento, ao mesmo tempo em que introduziram novos requisitos tecnológicos e operacionais.
+
+Um exemplo desse cenário é a expansão de veículos comerciais destinados ao transporte de carga e tripulação para a \gls{iss}. 
+A espaçonave \emph{Dragon}, desenvolvida pela \emph{SpaceX}, tornou-se um dos principais veículos logísticos da estação espacial, sendo responsável pelo transporte de suprimentos e pelo retorno de experimentos científicos para a Terra \cite{bell2018,nasaDragonReturn}. 
+Em suas missões, a \emph{Dragon} realiza operações de aproximação utilizando sistemas de navegação relativa baseados em sensores como LiDAR e GPS, que permitem estimar a posição e orientação em relação à estação durante as fases finais de aproximação \cite{nasaspaceflightDragonISS}.
+
+A evolução desses sistemas levou ao desenvolvimento de veículos com maior grau de autonomia. 
+A versão mais recente da espaçonave, \emph{Dragon 2}, incorpora capacidades de navegação e acoplamento autônomos, permitindo a realização de \emph{docking} direto com a estação espacial sem a necessidade do manipulador robótico \emph{Canadarm2} \cite{nasaStarshipDocking}. 
+Esse tipo de arquitetura reduz a dependência de intervenção humana durante as fases críticas da missão e aumenta a robustez operacional das operações de \gls{rvdb}.
+
+Outro campo de expansão recente das operações de proximidade envolve missões de manutenção e extensão da vida útil de satélites em órbita. 
+O \gls{mev}, desenvolvido pela \emph{Northrop Grumman}, demonstrou a viabilidade de operações de acoplamento com satélites previamente lançados, permitindo assumir funções de controle de atitude e manutenção orbital do veículo atendido \cite{mev1}. 
+A primeira missão operacional ocorreu em 2020, quando o \emph{MEV-1} acoplou-se ao satélite \emph{Intelsat 901}, prolongando sua vida útil operacional \cite{nytMEV1}.
+
+Além das aplicações em órbita terrestre, futuras arquiteturas de exploração espacial também dependem de capacidades avançadas de \gls{rvdb}. 
+O programa \emph{Artemis}, liderado pela \gls{nasa}, prevê a construção de infraestrutura orbital no ambiente cislunar, incluindo a estação \emph{Gateway} \cite{nasaArtemis}. 
+Nesse contexto, operações de aproximação e acoplamento devem ser realizadas com maior grau de autonomia, uma vez que atrasos de comunicação entre a Terra e o ambiente lunar podem limitar a supervisão contínua por operadores em solo \cite{keeports2006}.
+
+Esses cenários reforçam a importância do desenvolvimento de sistemas de navegação relativa, sensoriamento e controle capazes de operar de forma robusta em diferentes regimes orbitais. 
+O uso de sensores como LiDAR, câmeras estereoscópicas e algoritmos avançados de processamento de dados permite estimar estados relativos e apoiar o planejamento de trajetórias de aproximação com menor dependência de intervenção humana direta \cite{farkasvolgyi2023,ibmComputerVision}.

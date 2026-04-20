@@ -135,7 +135,7 @@
 \itaauthoraddress{Praça Marechal Eduardo Gomes, 50, Vila das Acácias}{12.228-900}{São José dos Campos--SP}
 
 % Titulo da Tese/Dissertação
-\title{Testes de algoritmos e leis de controle para aplicações robóticas em operações de encontro e acoplamento/ancoragem (rendezvous and docking/berthing)}
+\title{Simulação de algoritmos e leis de controle para aplicações robóticas em operações de encontro e acoplamento/ancoragem (rendezvous and docking/berthing)}
 
 % Orientador
 \advisorgender{masc}                    % masc ou fem
@@ -146,12 +146,8 @@
 % \coadvisor{Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$.}{Doralice Serra}{OVNI}
 
 % Pró-reitor da Pós-graduação
-\bossgender{masc}												% masc ou fem
-\boss{Prof.~Dr.}{André Valdetaro Gomes Cavalieri}
-
-%Coordenador do curso no caso de TG
-% \bosscoursegender{masc}									% masc ou fem
-% \bosscourse{Prof.~Dr.}{John Walker}
+% \bossgender{masc}												% masc ou fem
+% \boss{Prof.~Dr.}{André Valdetaro Gomes Cavalieri}
 
 % Palavras-Chaves informadas pela Biblioteca -> utilizada na CIP
 \kwcip{Rendezvous and docking/berthing}
@@ -172,17 +168,19 @@
 
 % Glossario
 \makenoidxglossaries % to use glossaries pkg
-\frontmatter
-
+% \frontmatter
 
 \input{PreTextuais/listaabreviaturas.tex}
-\input{PreTextuais/listasimbolos.tex}
+% \input{PreTextuais/listasimbolos.tex}
 
 \begin{document}
+\frontmatter
+
 \input{PreTextuais/main}
 
 \mainmatter
-% Os capitulos comecam aqui
+
+%%%%%%%%%%%%%% Os capitulos comecam aqui
 
 \input{1 Introducao/0 Capitulo 1.tex}
 
@@ -192,7 +190,7 @@
 
 \input{4 Resultados e discussoes/0 Capitulo 4.tex}
 
-\input{5 Conclusoes e trabalhos futuros/0 Capitulo 5.tex}
+% \input{5 Conclusoes e trabalhos futuros/0 Capitulo 5.tex}
 
 
 % REFERENCIAS BIBLIOGRAFICAS
@@ -202,16 +200,16 @@
 % Apendices
 \appendix
 \chapter{Posição e velocidade no referencial inercial}
-\input{ApeA/apendiceA.tex}
+% \input{ApeA/apendiceA.tex}
 
 \chapter{Parâmetros físicos do perseguidor}
-\input{ApeB/apendiceB.tex}
+% \input{ApeB/apendiceB.tex}
 
 \chapter{Parâmetros de controle e limitadores operacionais}
-\input{ApeC/apendiceC.tex}
+% \input{ApeC/apendiceC.tex}
 
 \chapter{Códigos computacionais}
-\input{ApeD/apendiceD.tex}
+% \input{ApeD/apendiceD.tex}
 
 % Anexos
 \annex

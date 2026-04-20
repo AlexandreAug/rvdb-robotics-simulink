@@ -1,0 +1,58 @@
+\section{Lacunas da literatura e posicionamento da dissertação}
+
+A revisão bibliográfica apresentada nas seções anteriores mostra que a literatura relacionada às operações de rendezvous, aproximação e robótica espacial já oferece contribuições relevantes em diferentes frentes, como modelagem cinemática de manipuladores espaciais, planejamento de trajetória, guiamento em proximidade, estimação de pose, formulações dinâmicas e estratégias de controle.
+Entretanto, esses avanços aparecem, em grande parte, distribuídos em eixos específicos de investigação, de modo que muitos trabalhos concentram sua contribuição em apenas uma parcela do problema, como a cinemática do manipulador, o planejamento ótimo da trajetória, a navegação relativa, a estimação de pose do alvo ou a dinâmica acoplada entre braço e plataforma.
+
+No campo da cinemática e da modelagem geométrica, observa-se uma base consolidada para a descrição do movimento de manipuladores espaciais, especialmente por meio da convenção de Denavit-Hartenberg, de transformações homogêneas e da formulação da cinemática direta e inversa \cite{fonseca2019kinematics}.
+Também há avanços no emprego de técnicas de aprendizado de máquina para auxiliar a resolução da cinemática inversa sob incerteza ou para melhorar a convergência de procedimentos de otimização \cite{santos2022uncertainty,santos2022machine,santos2023physics}. Contudo, esses trabalhos tendem a concentrar-se na determinação da pose, na solução do problema inverso ou na eficiência computacional do processo, sem necessariamente tomar como foco principal a integração entre a dinâmica orbital relativa, a dinâmica de atitude da espaçonave e a resposta acoplada do manipulador robótico ao longo das fases críticas de aproximação.
+
+No que se refere ao planejamento de trajetória e à autonomia, a literatura mostra abordagens capazes de lidar com múltiplos objetivos, restrições cinodinâmicas, prevenção de colisão e diferentes níveis de inteligência computacional \cite{santos2022machine,capolupo2017heuristic,fiori2024modeling}.
+Ainda assim, parte expressiva dessas contribuições trata o problema sob a ótica do planejamento do movimento da plataforma, do manipulador ou do guiamento em cenários específicos, sem desenvolver de forma articulada uma formulação que contemple, simultaneamente, o movimento relativo entre perseguidor e alvo, a evolução da atitude da espaçonave e a atuação do manipulador em uma mesma estrutura dinâmica voltada à fase de aproximação curta e à interação final.
+
+Em relação às operações de rendezvous e aproximação, há trabalhos relevantes que integram dinâmica relativa, manobras far e proximity e estimação autônoma da pose de alvos não cooperativos por visão computacional \cite{arantes2010far}. Esses estudos são importantes para mostrar que a navegação de proximidade depende não apenas do modelo orbital relativo, mas também da capacidade de percepção e de reconstrução da pose do alvo. Entretanto, a maior parte dessas abordagens não tem como objetivo principal modelar, de forma integrada, o efeito da presença de um manipulador robótico sobre a dinâmica da espaçonave perseguidora durante a aproximação final ou durante a fase de interação com o alvo.
+
+Entre os trabalhos analisados, o estudo de da Fonseca, Unfried e Lima é o que mais se aproxima do escopo desta dissertação, ao tratar a dinâmica de uma espaçonave do tipo manipulador durante a aproximação de curta distância para rendezvous e docking/berthing, incluindo as forças e os torques de reação nas juntas e seus efeitos sobre a plataforma \cite{fonseca2016dynamics}. Essa contribuição constitui uma referência direta para o presente trabalho. Ainda assim, permanece relevante avançar na articulação entre dinâmica relativa orbital, atitude da espaçonave perseguidora e comportamento do manipulador robótico em uma formulação integrada voltada especificamente às operações de berthing.
+
+Dessa forma, a principal lacuna identificada na literatura não está na ausência de estudos sobre os componentes do problema de forma isolada, mas na limitada articulação entre esses componentes em uma mesma estrutura de modelagem e simulação. Em particular, ainda são pouco frequentes formulações que representem, de maneira integrada, a dinâmica relativa entre perseguidor e alvo, a atitude da espaçonave perseguidora e a dinâmica acoplada do manipulador robótico durante as fases críticas de aproximação e interação final.
+
+Nesse contexto, a presente dissertação se posiciona na interseção entre dinâmica orbital relativa, dinâmica de atitude e robótica espacial, com foco na modelagem integrada de uma espaçonave perseguidora equipada com manipulador robótico durante as fases de aproximação curta e operação final de berthing. Seu objetivo é conectar, em uma mesma estrutura de modelagem e simulação, elementos que frequentemente aparecem de forma separada na literatura, de modo a representar de forma mais consistente a influência do manipulador robótico sobre o comportamento dinâmico da espaçonave em operações orbitais de proximidade.
+
+\begin{table}[H]
+\centering
+\caption{Posicionamento dos trabalhos revisados em relação aos temas centrais da dissertação.}
+\label{tab_posicionamento_literatura}
+\scriptsize
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{|c|c|c|c|c|c|p{10cm}|}
+\hline
+\textbf{Ref.} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{Síntese} \\
+\hline
+1 & X &  &  &  &  & Base para modelagem cinemática, referenciais e transformações homogêneas. \\
+\hline
+2 & X &  &  &  & X & Cinemática inversa e redes neurais sob incerteza. \\
+\hline
+3 & X & X &  &  & X & Planejamento ótimo, manipulador espacial e eficiência computacional. \\
+\hline
+4 & X & X &  &  & X & Integra modelo físico simplificado e aprendizado de máquina. \\
+\hline
+5 &  & X & X &  & X & Guiamento heurístico e \textit{motion planning} em cenários espaciais complexos. \\
+\hline
+6 &  &  & X &  &  & Manobras far/proximity, dinâmica relativa e estimação autônoma de pose. \\
+\hline
+7 &  & X & X & X &  & Guiamento e controle em aproximação com restrições posicionais e obstáculos. \\
+\hline
+8 &  &  & X & X &  & Interação entre plataforma e manipulador em aproximação curta. \\
+\hline
+9 &  &  & X &  &  & Contexto operacional de rendezvous e dinâmica relativa em missões tripuladas. \\
+\hline
+\textbf{Diss.} & \textbf{X} &  & \textbf{X} & \textbf{X} &  & \textbf{Integra a dinâmica relativa orbital, a atitude da espaçonave perseguidora e a dinâmica acoplada do manipulador robótico no contexto das fases de aproximação curta e berthing.} \\
+\hline
+\end{tabular}
+\end{table}
+
+Na Tabela \ref{tab_posicionamento_literatura}, a coluna A corresponde à modelagem cinemática do manipulador espacial;
+a coluna B refere-se ao planejamento de trajetória e às estratégias de guiamento;
+a coluna C indica trabalhos voltados a rendezvous, aproximação e estimação de pose;
+a coluna D reúne contribuições relacionadas à dinâmica acoplada e ao controle;
+e a coluna E identifica abordagens que incorporam aprendizado de máquina.
+As referências numeradas correspondem a: 1) \textit{Kinematics for Spacecraft-Type Robotic Manipulators}; 2) \textit{Uncertainty Quantification in Inverse Kinematics Computation of Space Robots by Neural Networks}; 3) \textit{A Machine Learning Strategy for Optimal Path Planning of Space Robotic Manipulator in On-Orbit Servicing}; 4) \textit{Physics Informed Machine Learning for Path Planning of Robots}; 5) \textit{Heuristic Guidance Techniques for the Exploration of Small Celestial Bodies}; 6) \textit{Far and Proximity Maneuvers of a Constellation of Service Satellites and Autonomous Pose Estimation of Customer Satellite Using Machine Vision}; 7) \textit{Modeling, Simulation and Control of a Spacecraft: Automated Rendezvous under Positional Constraints}; 8) \textit{Dynamics Analysis of a Manipulator-Like Spacecraft in the Close Range Approach for Rendezvous and Docking/Berthing}; e 9) \textit{Comprehensive Systems Analysis of the Soyuz Spacecraft}.

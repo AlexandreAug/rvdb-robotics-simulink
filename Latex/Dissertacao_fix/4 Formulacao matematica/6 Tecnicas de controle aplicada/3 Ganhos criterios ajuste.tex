@@ -1,0 +1,23 @@
+\subsection{Ganhos do controle PD}
+\label{sec:controlePD_ganhos}
+
+A definição e escolha dos ganhos do controlador \gls{pd}, tanto para a atitude da espaçonave quanto para as juntas do \gls{mr}, foram guiadas por critérios de desempenho em malha fechada.
+No nível de atitude, os parâmetros $K_{p,B}$ e $K_{d,B}$ influenciam diretamente o tempo de acomodação, o sobressinal, o amortecimento das oscilações na orientação da espaçonave e a magnitude dos torques comandados.
+De forma similar, na malha fechada de controle das juntas do \gls{mr}, $K_{p,\phi}$ e $K_{d,\phi}$ determinam a rigidez aparente e o amortecimento do movimento articular, afetando a suavidade da trajetória do efetuador e os limites de velocidade e aceleração nas juntas.
+
+Na literatura, diversos procedimentos estão disponíveis para a definição sistemática de ganhos em controladores \gls{pd}.
+Um exemplo é o método de sintonia de Ziegler--Nichols \cite{ogata2010engenharia} e técnicas em espaço de estados, como alocação de polos ou formulações de controle ótimo (LQR) aplicadas a modelos linearizados em torno de pontos de operação.
+
+Neste trabalho, a dinâmica espaçonave--\gls{mr} é não linear e acoplada; além disso, depende da configuração instantânea do \gls{mr} e alterna entre diferentes regimes de operação.
+Dessa forma, os ganhos $K_{p,B}$, $K_{d,B}$, $K_{p,\phi}$ e $K_{d,\phi}$ foram ajustados iterativamente por meio de simulações, buscando estabilidade e respostas compatíveis com os limites de atuação.
+
+Este ajuste foi realizado de forma iterativa, considerando:
+
+\begin{itemize}
+  \item manutenção da estabilidade e do amortecimento da atitude da espaçonave, mesmo na presença dos torques de reação $\vec\tau_{\text{reac}}$ introduzidos pelo \gls{mr} (Equação~\eqref{eq_def_tau_reac});
+  \item limitação de sinais de controle excessivos;
+  \item tempo de acomodação no erro de orientação e nas variáveis articulares;
+  \item suavidade do movimento do manipulador durante a fase de aproximação e alinhamento com a porta de acoplamento.
+\end{itemize}
+
+Por fim, embora técnicas formais de sintonia estejam disponíveis na literatura, a calibração dos ganhos neste trabalho foi realizada de forma iterativa, guiada pelos resultados obtidos a cada iteração.

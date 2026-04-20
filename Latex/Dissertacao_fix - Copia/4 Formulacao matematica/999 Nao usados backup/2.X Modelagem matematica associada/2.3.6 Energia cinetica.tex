@@ -1,0 +1,90 @@
+% ---------------------------------------------------
+% Energia Cinética por Elo
+% ---------------------------------------------------
+\section{Energia cinética}
+\label{sec:energia_cinetica}
+Um corpo rígido possui energia cinética pois leva em conta sua translação e sua rotação.
+Cada elo do manipulador robótico possui sua própria característica, como massa, centro de massa e inércia, portanto a sua energia cinética é calculada de forma individual.
+\begin{equation}
+    \label{eq:energia_elos}
+T_i =
+\frac{1}{2} m_i \,
+({{\vec v}^{\, T}}_{C_i}) \vec{v}_{C_i}
++ \frac{1}{2} {\vec \omega_i}^{T} \, ({}^{0} \mathbf{I}_{C_i}) \, \vec{\omega}_i,
+\end{equation}
+
+onde $m_i$ é a massa do elo $i$, $\vec v_{C_i}$ é a velocidade do seu centro de massa,
+$\vec\omega_i$ é a velocidade angular do elo, e ${}^{0}\!\mathbf I_{C_i}$ é o tensor de inércia no CoM,
+expresso no $frame \{0\}$.
+
+Sendo que
+$\vec v_{C_i}=J_{v,C_i}(q)\dot q$ e
+$\vec{\omega}_i=J_{\omega,i}(q)\dot q$,
+portanto, a energia cinética total pode ser descrita como:
+\begin{equation}
+\label{eq:T_soma_links} % (2.87)
+T(q,\dot q)=\sum_i\left(\tfrac12 m_i\,\|J_{v,C_i}(q)\dot q\|^2+\tfrac12\,\dot q^{\top}J_{\omega,i}^{\top}(q)\,{}^{0}\!\mathbf I_{C_i}\,J_{\omega,i}(q)\dot q\right).
+\end{equation}
+
+sendo que ${}^{0}\!\mathbf I_{C_i}$ e $\vec\omega_i$ estão expressos no frame $\{0\}$, enquanto que $\vec v_{C_i}$ é a velocidade do centro de massa do elo $i$. Os Jacobianos $\mathbf J_{v,C_i}(q)$ e $\mathbf J_{\omega,i}(q)$ também se encontram na mesma referência.
+
+sendo:
+\begin{equation}
+\label{eq:definicao_Mq} 
+\mathbf{M}(q)=\sum_i\left(m_i\,J_{v,C_i}^{\top}(q)J_{v,C_i}(q)+J_{\omega,i}^{\top}(q)\,{}^{0}\!\mathbf I_{C_i}\,J_{\omega,i}(q)\right).
+\end{equation}
+
+% ---------------------------------------------------
+% T(q,dotq) é a energia cinética do manipulador: soma sobre os elos,
+% das parcelas translacionais e rotacional avaliados no CoM de cada elo
+% 
+% M(q) é a matriz de inercia generalizada (configuração dependente n x m)
+% do manipulador no espaço das juntas.
+% ---------------------------------------------------
+
+A equação equações \eqref{eq:energia_elos} é a energia cinética do manipulador robótico, sendo a soma sobre os elos; enquanto que \eqref{eq:definicao_Mq} é a matriz de inércia generalizada no espaço das juntas.
+
+A matriz de inércia \eqref{eq:definicao_Mq} é simétrica e definida positiva, conforme:
+
+\begin{equation}
+ \mathbf M(q)=\mathbf M(q)^{\top},
+\end{equation}
+
+e
+
+\begin{equation}
+    \vec x^{\top}\mathbf M(q)\vec x>0,
+\end{equation}
+
+sendo que $\vec x\neq \vec 0$ em configurações não singulares.
+
+% ---------------------------------------------------
+% Energia Cinética da Base
+% ---------------------------------------------------
+\subsection{Energia cinética da base}
+A base também pode contribuir com energia cinética, especialmente se houver rotação, caso haja translação da base, essa pode ser tratada separadamente como parte do subsistema orbital:
+
+\begin{equation}
+T_b \;=\; \tfrac12\,m_b\,\|\vec v_b\|^2 \;+\; \tfrac12\,\vec\omega_b^{\top}\mathbf I_b\,\vec\omega_b.
+\end{equation}
+
+onde:
+\begin{equation}
+\label{eq:T_classica} % (2.89)
+T_m(q,\dot q) \;=\; \tfrac12\,\dot{\vec q}^{\,\top}\mathbf M(q)\,\dot{\vec q}.
+\end{equation}
+
+E a energia total (manipulador robótico e base) pode ser descrita por:
+% Energia cinética total (manipulador + base)
+\begin{equation}
+T_{\text{total}}(q,\dot q,\vec\omega_b) \;=\; T_m(q,\dot q) \;+\; \tfrac12\,\vec\omega_b^{\top}\mathbf I_b\,\vec\omega_b.
+\end{equation}
+
+% ---------------------------------------------------
+% Energia Potencial
+% ---------------------------------------------------
+Por conta da espaçonave do tipo manipulador robótico estar em ambiente de microgravidade e por não haver outro tipo de força de perturbação ambiental, é possível considerar:
+\begin{equation}
+V \simeq 0
+\end{equation}
+

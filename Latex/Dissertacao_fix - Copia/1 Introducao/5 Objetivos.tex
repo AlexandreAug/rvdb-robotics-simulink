@@ -1,0 +1,48 @@
+%%%%%%%%%% Objetivos (os objetivos não são os objetivos do mestrado mas os objetivos da dissertação)
+
+%%%%%%%%%% Objetivos
+\section{Objetivos}
+\label{sec_objetivos}
+
+O presente trabalho visa desenvolver e simular um modelo matemático para missões de \gls{rvdb} de forma conjunta a dinâmica orbital relativa e a dinâmica acoplada entre uma espaçonave perseguidora e seu \gls{mr}.
+O modelo desenvolvido descreve o movimento relativo nos referenciais ECI e \gls{lvlh}, tratando o perseguidor sob duas abordagens:
+(i) como corpo rígido, via Equações de Euler; e
+(ii) como sistema multicorpos acoplado, via formulação lagrangiana.
+Além da modelagem, o trabalho contempla a implementação de um controle de atitude do tipo \gls{pd} e a simulação computacional em Matlab e Simulink para avaliar os torques de reação induzidos na espaçonave.
+
+A seguir, apresentam-se o objetivo geral e os objetivos específicos que guiam esta dissertação.
+
+%%%%%%%%%%%%%%%%%%%%%%% OBJ GERAL
+
+\subsection{Objetivo geral}
+\label{subsec_objetivo_geral}
+
+% Desenvolver e analisar um modelo dinâmico integrado entre a dinâmica orbital relativa e a dinâmica acoplada de uma espaçonave perseguidora equipada com \gls{mr}, aplicado às fases de aproximação de curta distância e final de operações de berthing, incorporando controle de atitude do tipo \gls{pd}, com validação em ambiente de simulação computacional nas plataformas Matlab e Simulink.
+Desenvolver e analisar um modelo dinâmico integrado entre a dinâmica orbital relativa e a dinâmica acoplada de uma espaçonave perseguidora equipada com \gls{mr}, aplicado às fases de aproximação de proximidade (final) de operações de berthing, incorporando controle de atitude do tipo \gls{pd} e validado em ambiente de simulação computacional nas plataformas Matlab e Simulink.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%% OBJ ESPECIFICOS
+
+\subsection{Objetivos específicos}
+\label{subsec_objetivos_especificos}
+
+% Os objetivos específicos deste trabalho foram organizados de forma a estruturar o desenvolvimento do modelo desde a definição dos requisitos dinâmicos até a análise do comportamento do sistema integrado em simulação, estabelecendo um encadeamento lógico de pesquisa:
+
+% \begin{itemize}
+%     \item Identificação das necessidades: Definir os requisitos associados às fases de aproximação de longa e curta distâncias e fase final de uma missão de \gls{rvdb}. Isso inclui caracterizar o comportamento do modelo de corpo rígido (com \gls{mr} travado) e do modelo acoplado (durante o modo operacional), além de identificar variáveis críticas como posição, velocidade relativa e sincronização de atitude com a espaçonave alvo.
+    
+%     \item Proposta de processo: Estabelecer o modelo matemático capaz de integrar as dinâmicas orbital e acoplada. Esta etapa engloba a formulação do modelo relativo nos referenciais ECI e \gls{lvlh}, a derivação do modelo acoplado via abordagem lagrangiana, e a definição dos parâmetros cinemáticos do \gls{mr} utilizando o método de \gls{dh}.
+    
+%     \item Aplicação do processo proposto: Implementar as equações desenvolvidas computacionalmente em Matlab e Simulink. O foco desta etapa é integrar os subsistemas orbital, dinâmico e de controle (controlador \gls{pd}) e realizar simulações sob diferentes condições iniciais para observar o comportamento da espaçonave.
+    
+%     \item Avaliação do processo proposto: Avaliar o comportamento dinâmico do sistema integrado a partir dos resultados simulados. Busca-se analisar a redução da diferença de fase entre as espaçonaves, o perfil de posição e velocidade relativas, o comportamento da atitude do perseguidor frente à operação do \gls{mr} e a eficácia da ferramenta na porta de acoplamento.
+% \end{itemize}
+
+Definir requisitos associados às fases de aproximação de longa e curta distância e fase final de uma missão de RVD/B, caracterizando o comportamento do modelo de corpo rígido e do modelo acoplado, além de identificar variáveis críticas como posição, velocidade relativa e sincronização de atitude.
+
+\begin{itemize}
+    \item Estabelecer o modelo matemático capaz de integrar as dinâmicas orbital e acoplada, incluindo formulação relativa nos referenciais ECI e LVLH, derivação lagrangiana e definição dos parâmetros cinemáticos do manipulador via método \gls{dh}.
+    \item Implementar as equações desenvolvidas em Matlab e Simulink, integrando subsistemas orbital, dinâmico e de controle (PD), e realizar simulações sob diferentes condições iniciais.
+    \item Avaliar o comportamento dinâmico do sistema integrado a partir dos resultados simulados, considerando redução da diferença de fase, perfis de posição e velocidade relativas, atitude do perseguidor frente à operação do manipulador e eficácia da ferramenta na interface de acoplamento.
+\end{itemize}

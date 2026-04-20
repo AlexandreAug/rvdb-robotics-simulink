@@ -1,0 +1,103 @@
+\section{Linha do tempo}
+\label{sec_cap4_linha_tempo}
+
+Antes da apresentação dos resultados, descreve-se a linha do tempo da missão de \gls{rvdb} para explicitar a sequência de fases e os eventos associados a cada marco temporal.
+Nesta seção, o tempo $t$ é absoluto e medido a partir do início da simulação ($t=0$).
+Prezando pela eficiência computacional, a simulação em MATLAB/Simulink foi executada de forma segmentada por fases; posteriormente, os trechos foram concatenados em uma única escala temporal absoluta para fins de análise e apresentação dos resultados.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\linewidth]{5 Resultados/Imagens/Linha do tempo.png}
+\caption{Linha do tempo da missão de \gls{rvdb}}
+    \label{fig_cap4_linha_tempo}
+\end{figure}
+
+A Figura~\ref{fig_cap4_linha_tempo} e a Tabela~\ref{tab_cap4_linha_tempo}, em conjunto, resumem os principais marcos temporais da missão, indicando para cada evento o instante correspondente em segundos.
+Entre o início da missão ($t=0$) e o início da aproximação de longa distância ($t=3.702$~s) ocorre a evolução orbital destinada a reduzir a separação de fase entre perseguidor e alvo até a condição de início da manobra de transferência orbital, ou seja, aplicação do primeiro impulso de velocidade ($\Delta v_1$).
+
+Em seguida, a aproximação de longa distância prossegue até $t=6.571$~s, instante associado ao término da transferência (aplicação de $\Delta v_2$).
+A partir desse ponto tem início o trecho da deriva (\emph{drift}) orbital, que se estende até $t=7.471$~s, quando inicia-se a aproximação de curta distância.
+
+A aproximação de curta distância evolui até $t=7.538$~s, instante em que se caracteriza o início da aproximação final, mantendo-se ainda a dinâmica do corpo rígido descrita pela formulação de Euler.
+
+No instante $t = 7.937$ s é realizada a comutação entre as dinâmicas, passando-se a empregar o modelo acoplado de espaçonave flutuante descrito pelas equações de Lagrange, e o \gls{mr} entra em operação para conduzir a ferramenta até a porta de acoplamento.
+Por fim, em $t = 8.134$ s considera-se encerrada a missão, uma vez que a ferramenta se encontra engatada e estabilizada, dispensando correções adicionais de atitude ou de posição.
+
+\begin{table}[H]
+\centering
+\caption{Linha do tempo da missão e das fases de aproximação (Cenário A).}
+\label{tab_cap4_linha_tempo}
+\begin{tabularx}{\linewidth}{|
+  >{\raggedright\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Evento} &
+\textbf{Tempo [s]} &
+\textbf{Tempo [h]} \\
+\hhline{|=|=|=|}
+Início da missão &
+$0$ & $00\text{h }00\text{min }00\text{s}$ \\
+\hline
+Início da aproximação longa distância ($\Delta v1$) & $3.702$ & $01\text{h }01\text{min }42\text{s}$ \\
+\hline
+Final da aproximação longa distância ($\Delta v2$) & $6.571$ & $01\text{h }49\text{min }31\text{s}$ \\
+\hline
+Início da aproximação curta distância &$7.471$ & $02\text{h }04\text{min }31\text{s}$ \\
+\hline
+Início da aproximação final & $7.538$ & $02\text{h }05\text{min }38\text{s}$ \\
+\hline
+Comutação entre as dinâmicas & $7.937$ & $02\text{h }12\text{min }17\text{s}$ \\
+\hline
+Fim da aproximação final & $8.134$ & $02\text{h }15\text{min }34\text{s}$ \\
+\hline
+\textbf{Tempo total da missão} & $8.134$ & $02\text{h }15\text{min }34\text{s}$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+\subsection{Comparativo entre cenários}
+
+De forma análoga ao cenário de referência, o Cenário (B) mantém a mesma sequência de fases da missão de \gls{rvdb}, porém deslocada para um tempo absoluto mais avançado.
+Observa-se que o início da aproximação longa distância ocorre em $t = 31.134$ s, isto é, significativamente após o primeiro caso, bem como o início da aproximação curta ($t = 34.872$ s) e o início da aproximação final ($t = 34.940$ s). A duração do \emph{drift} orbital permanece igual a $900$ s, e a duração total da aproximação curta e da aproximação final é mantida, resultando em um tempo total de missão de $35.393$ s no Cenário B, em contraste com os $8.134$ s do cenário inicial.
+Em termos de estrutura temporal relativa, os intervalos entre eventos principais são preservados, mudando apenas o instante absoluto em que cada fase é executada.
+
+\begin{table}[H]
+\centering
+\caption{Linha do tempo da missão e das fases de aproximação (Cenário B).}
+\label{tab_cap4_linha_tempo_B}
+\begin{tabularx}{\linewidth}{|
+  >{\raggedright\arraybackslash}X|
+  >{\centering\arraybackslash}X|
+  >{\centering\arraybackslash}X|}
+\hline
+\textbf{Evento} &
+\textbf{Tempo [s]} &
+\textbf{Tempo [h]} \\
+\hhline{|=|=|=|}
+Início da missão  & $0$ & $00\text{h }00\text{min }00\text{s}$ \\
+\hline
+Início da aproximação longa distância ($\Delta v1B$) &$31.134$ &$08\text{h }38\text{min }54\text{s}$ \\
+\hline
+Final da aproximação longa distância ($\Delta v2B$) &$33.972$ &$09\text{h }26\text{min }12\text{s}$ \\
+\hline
+% Duração do drift orbital  &$900$ &$00\text{h }15\text{min }00\text{s}$ \\
+% \hline
+% Final do drift orbital  &$34.872$ &$09\text{h }41\text{min }12\text{s}$ \\
+% \hline
+Início da aproximação curta distância  &$34.872$ &$09\text{h }41\text{min }12\text{s}$ \\
+\hline
+% Fim da aproximação curta distância  &$34.940$ &$09\text{h }42\text{min }19\text{s}$ \\
+% \hline
+Início da aproximação final  &$34.940$ &$09\text{h }42\text{min }20\text{s}$ \\
+\hline
+Comutação entre as dinâmicas & $35.325$ & $09\text{h }48\text{min }45\text{s}$ \\
+\hline
+Fim da aproximação final  &$35.393$ &$09\text{h }49\text{min }53\text{s}$ \\
+\hline
+\textbf{Tempo total da missão}  &$35.393$ &$09\text{h }49\text{min }53\text{s}$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+A Tabela~\ref{tab_cap4_linha_tempo_B} apresenta os tempos obtidos nos principais eventos do Cenário B.

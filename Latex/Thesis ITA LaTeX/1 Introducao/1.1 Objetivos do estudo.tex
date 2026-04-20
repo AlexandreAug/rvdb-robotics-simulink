@@ -1,14 +1,18 @@
 \section{Objetivo geral}
 
-O objetivo geral desta pesquisa é formular e simular computacionalmente a dinâmica do sistema robótico, além de testar algoritmos de controle para operações de manipuladores robóticos em órbita.
-Os testes serão feitos em ambiente de MATLAB e Simulink.
+O objetivo geral dessa pesquisa  é desenvolver um modelo matemático da din|ãmica orbital e de atitude de um satélite  tipo manipulador robótico como perseguidor e em missaõ de RVD/B, usando simulação computacional via MATLAB/SIMULINK, aplicando a técnica de controle Proporcial Derivativo (PD) no processo para implementar não apenas o encontro, mas também o acoplamento com a espaçonave alvo, cobrindo as fases da missão de \gls{rvdb} como dadas em \cite{fehse2003}:
+
+\begin{enumerate}[label=(\roman*)]
+    \item Lançamento e janela de lançamento;
+    \item Injeção em órbita coplanar à órbita do alvo;
+    \item Manobras orbitais de Hohmann;
+    \item Fases de aproximação de longa distancia e curta distância e aproximação de proximidade (aproximação final), de forma controlada prevenindo colisões para realizar as operaçoes previstas de \gls{rvdb} com sucesso.
+\end{enumerate}
 
 \subsection{Objetivos específicos}
 
 \begin{enumerate}[label=(\roman*)]
     \item Estudo das ferramentas de programação e simulação, utilizando MATLAB e Simulink;
-
-    \item Estudo do ambiente espacial e atividades robóticas;
-
-    \item Estudo de procedimentos de otimização visando a mobilidade ótima de robôs e a possibilidade de prevenir falhas operacionais.
+    \item Cursar as disciplinas recomendadas para obter sólido conhecimento em dinâmica e controle de atitude e órbita, bem como a disciplina de manipuladores robóticos em aplicações espaciais;
+    \item Estudo de procedimentos de otimização visando a mobilidade de robôs e a possibilidade de prevenir falhas operacionais.
 \end{enumerate}

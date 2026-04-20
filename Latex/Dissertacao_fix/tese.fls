@@ -1,0 +1,1376 @@
+PWD d:\OneDrive\Mestrado\0 DISSERTAÇÃO\DissertacaoMestradoITA\Latex\Dissertacao_fix
+INPUT C:\Users\olive\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT d:\OneDrive\Mestrado\0 DISSERTAÇÃO\DissertacaoMestradoITA\Latex\Dissertacao_fix\tese.tex
+OUTPUT tese.log
+INPUT .\ita.cls
+INPUT ita.cls
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifpdf.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifpdf.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifpdf.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT .\ita\defaults.def
+INPUT .\ita\defaults.def
+INPUT ita\defaults.def
+INPUT .\ita\msc.def
+INPUT .\ita\msc.def
+INPUT ita\msc.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\book.cls
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\bk12.clo
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\txtbabel.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-english.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-brazilian.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-brazilian.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-brazilian.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\en\babel-en.ini
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\babel-english\english.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\babel\locale\pt\babel-pt-BR.ini
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\babel-portuges\brazilian.ldf
+INPUT .\ita\itabr.babel
+INPUT .\ita\itabr.babel
+INPUT ita\itabr.babel
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\latin1.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\utf8.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\omsenc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\omsenc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\omsenc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ot1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ot1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ot1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\t1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\t1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\t1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\ts1enc.dfu
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\etoolbox\etoolbox.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amsfonts.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage2e.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage2e.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpagemodern.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpagemodern.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\longtable.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\base\glossaries.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\base\glossaries.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xkeyval\xkeyval.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\xkeyval\xkeyval.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\xkeyval\xkvutils.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\mfirstuc\mfirstuc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\mfirstuc\mfirstuc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xfor\xfor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xfor\xfor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\supertabular\supertabular.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\supertabular\supertabular.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tracklang\tracklang.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tracklang\tracklang.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\tracklang\tracklang.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\tracklang\tracklang.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\tracklang\tracklang.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\tracklang\tracklang.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\tracklang\tracklang.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\translator\translator.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\translator\translator.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\translator\translator.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-english\glossaries-english.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-english\glossaries-english.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-english\glossaries-english.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-portuges\glossaries-pt-BR.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-portuges\glossaries-pt-BR.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-portuges\glossaries-pt-BR.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-portuges\glossaries-portuges-utf8.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-portuges\glossaries-portuges-utf8.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries-portuges\glossaries-portuges-utf8.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-base.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-base.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-l3fp.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-l3fp.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-l3fp.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-utf8.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-utf8.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\datatool\datatool-utf8.ldf
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-hypernav.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-hypernav.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-list.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-list.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-long.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-long.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-super.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-super.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\supertabular\supertabular.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-tree.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\glossaries\styles\glossary-tree.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyphenat\hyphenat.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyphenat\hyphenat.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\makeidx.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\makeidx.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hyperref.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pdfescape\pdfescape.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\infwarerr\infwarerr.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hycolor\hycolor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\nameref.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\refcount\refcount.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\kvoptions\kvoptions.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\stringenc\stringenc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\pd1enc.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\intcalc\intcalc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\puenc.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\url\url.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\bitset\bitset.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\bigintcalc\bigintcalc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\hyperref\hpdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\ae\ae.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\ae\ae.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\logreq\logreq.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-dm.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-compat.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.def
+INPUT .\biblatex-abnt\abnt.bbx
+INPUT .\biblatex-abnt\abnt.bbx
+INPUT biblatex-abnt\abnt.bbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xpatch\xpatch.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
+INPUT .\biblatex-abnt\abnt.cbx
+INPUT .\biblatex-abnt\abnt.cbx
+INPUT biblatex-abnt\abnt.cbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\cbx\authoryear-comp.cbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\cbx\authoryear-comp.cbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\cbx\authoryear-comp.cbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\biblatex.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\blx-case-expl3.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\english-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\english-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\epsfig.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\epsfig.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\amssymb.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsthm.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amscls\amsthm.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\appendix\appendix.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\appendix\appendix.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lettrine\lettrine.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lettrine\lettrine.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xfp\xfp.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\l3packages\xfp\xfp.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lettrine\lettrine.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lettrine\lettrine.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lettrine\lettrine.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\placeins\placeins.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\rotating.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\graphics\rotating.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\lmodern.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\lmodern.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\hhline.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\tools\hhline.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xltabular\xltabular.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\xltabular\xltabular.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\ltablex\ltablex.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\ltablex\ltablex.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\frontendlayer\tikz.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgf.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfrcs.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfutil-common.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfutil-latex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfrcs.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\pgf.revision.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\basiclayer\pgfcore.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\systemlayer\pgfsys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeyslibraryfiltered.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgf.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-pdftex.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsys-common-pdf.def
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsyssoftpath.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\systemlayer\pgfsysprotocol.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcore.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathutil.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathparser.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.basic.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.trigonometric.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.random.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.comparison.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.base.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.round.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.misc.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfunctions.integerarithmetics.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathcalc.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmathfloat.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfint.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepoints.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathconstruct.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathusage.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorescopes.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoregraphicstate.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransformations.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorequick.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreobjects.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepathprocessing.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorearrows.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreshade.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreimage.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoreexternal.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorelayers.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcoretransparency.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorepatterns.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\basiclayer\pgfcorerdf.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmoduleshapes.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmoduleplot.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-0-65.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\compatibility\pgfcomp-version-1-18.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgffor.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\utilities\pgfkeys.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgfkeys.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\pgf\math\pgfmath.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\math\pgfmath.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\utilities\pgffor.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\tikz.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryplothandlers.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmodulematrix.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarytopaths.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypositioning.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.meta.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.meta.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.meta.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarycalc.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfit.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryfit.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarybackgrounds.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryshapes.geometric.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\shapes\pgflibraryshapes.geometric.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarydecorations.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\modules\pgfmoduledecorations.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\decorations\pgflibrarydecorations.pathreplacing.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypatterns.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibrarypatterns.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibrarypatterns.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibrarypatterns.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryscopes.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryscopes.code.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT .\PreTextuais\listaabreviaturas.tex
+INPUT .\PreTextuais\listaabreviaturas.tex
+INPUT PreTextuais\listaabreviaturas.tex
+INPUT .\PreTextuais\listasimbolos.tex
+INPUT .\PreTextuais\listasimbolos.tex
+INPUT PreTextuais\listasimbolos.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
+INPUT .\tese.aux
+INPUT .\tese.aux
+INPUT tese.aux
+OUTPUT tese.aux
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\caption\ltcaption.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\caption\ltcaption.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT .\tese.out
+INPUT .\tese.out
+INPUT tese.out
+INPUT tese.out
+OUTPUT tese.pdf
+INPUT .\tese.out
+INPUT .\tese.out
+OUTPUT tese.out
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazil-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazil-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazil-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\brazilian-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazil.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazil.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazil.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\brazilian.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex-abnt\lbx\english-abnt.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\biblatex\lbx\english.lbx
+OUTPUT tese.bcf
+INPUT tese.bbl
+INPUT .\tese.bbl
+INPUT .\tese.bbl
+INPUT .\tese.bbl
+INPUT tese.bbl
+INPUT .\PreTextuais\main.tex
+INPUT .\PreTextuais\main.tex
+INPUT .\PreTextuais\main.tex
+INPUT .\PreTextuais\main.tex
+INPUT PreTextuais\main.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr8.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr6.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omllmm.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omllmm.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omllmm.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi8.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi6.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omslmsy.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omslmsy.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omslmsy.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy8.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy6.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmex10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
+INPUT C:\Users\olive\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr17.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
+INPUT .\PreTextuais\agradecimentos.tex
+INPUT .\PreTextuais\agradecimentos.tex
+INPUT .\PreTextuais\agradecimentos.tex
+INPUT .\PreTextuais\agradecimentos.tex
+INPUT PreTextuais\agradecimentos.tex
+INPUT .\PreTextuais\epigrafe.tex
+INPUT .\PreTextuais\epigrafe.tex
+INPUT .\PreTextuais\epigrafe.tex
+INPUT .\PreTextuais\epigrafe.tex
+INPUT PreTextuais\epigrafe.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmss.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmss.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmss.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmss12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT PreTextuais\resumo.tex
+INPUT .\PreTextuais\abstract.tex
+INPUT .\PreTextuais\abstract.tex
+INPUT .\PreTextuais\abstract.tex
+INPUT .\PreTextuais\abstract.tex
+INPUT PreTextuais\abstract.tex
+INPUT .\tese.lof
+INPUT .\tese.lof
+INPUT tese.lof
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+OUTPUT tese.lof
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
+INPUT .\tese.lot
+INPUT .\tese.lot
+INPUT tese.lot
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
+OUTPUT tese.lot
+INPUT .\tese.toc
+INPUT .\tese.toc
+INPUT tese.toc
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmcsc10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
+OUTPUT tese.toc
+INPUT .\1 Introducao\0 Capitulo 1 orientador.tex
+INPUT .\1 Introducao\0 Capitulo 1 orientador.tex
+INPUT 1 Introducao\0 Capitulo 1 orientador.tex
+INPUT .\1 Introducao\Texto capitulo 1.tex
+INPUT .\1 Introducao\Texto capitulo 1.tex
+INPUT 1 Introducao\Texto capitulo 1.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
+INPUT .\2 Revisao bibliografica\0 Capitulo 2.tex
+INPUT .\2 Revisao bibliografica\0 Capitulo 2.tex
+INPUT 2 Revisao bibliografica\0 Capitulo 2.tex
+INPUT .\2 Revisao bibliografica\fundamentos_obras_referencia.tex
+INPUT .\2 Revisao bibliografica\fundamentos_obras_referencia.tex
+INPUT 2 Revisao bibliografica\fundamentos_obras_referencia.tex
+INPUT .\2 Revisao bibliografica\evolucao_rendezvous_aproximacao_relativa.tex
+INPUT .\2 Revisao bibliografica\evolucao_rendezvous_aproximacao_relativa.tex
+INPUT 2 Revisao bibliografica\evolucao_rendezvous_aproximacao_relativa.tex
+INPUT .\2 Revisao bibliografica\estimacao_pose_alvo_percepcao_relativa.tex
+INPUT .\2 Revisao bibliografica\estimacao_pose_alvo_percepcao_relativa.tex
+INPUT 2 Revisao bibliografica\estimacao_pose_alvo_percepcao_relativa.tex
+INPUT .\2 Revisao bibliografica\modelagem_controle_espaconave_manipulador.tex
+INPUT .\2 Revisao bibliografica\modelagem_controle_espaconave_manipulador.tex
+INPUT 2 Revisao bibliografica\modelagem_controle_espaconave_manipulador.tex
+INPUT .\2 Revisao bibliografica\reaction_null_free_floating.tex
+INPUT .\2 Revisao bibliografica\reaction_null_free_floating.tex
+INPUT 2 Revisao bibliografica\reaction_null_free_floating.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbxi10.tfm
+INPUT .\2 Revisao bibliografica\planejamento_autonomia_tecnicas_recentes.tex
+INPUT .\2 Revisao bibliografica\planejamento_autonomia_tecnicas_recentes.tex
+INPUT 2 Revisao bibliografica\planejamento_autonomia_tecnicas_recentes.tex
+INPUT .\2 Revisao bibliografica\sintese_critica_posicionamento_dissertacao.tex
+INPUT .\2 Revisao bibliografica\sintese_critica_posicionamento_dissertacao.tex
+INPUT 2 Revisao bibliografica\sintese_critica_posicionamento_dissertacao.tex
+INPUT .\3 Procedimento simulacao\0 Capitulo 3.tex
+INPUT .\3 Procedimento simulacao\0 Capitulo 3.tex
+INPUT 3 Procedimento simulacao\0 Capitulo 3.tex
+INPUT .\3 Procedimento simulacao\1 Escopo.tex
+INPUT .\3 Procedimento simulacao\1 Escopo.tex
+INPUT 3 Procedimento simulacao\1 Escopo.tex
+INPUT .\3 Procedimento simulacao\2 Fases missao.tex
+INPUT .\3 Procedimento simulacao\2 Fases missao.tex
+INPUT 3 Procedimento simulacao\2 Fases missao.tex
+INPUT .\4 Formulacao matematica\Imagens\Lançamento quadro explicativo.png
+INPUT .\4 Formulacao matematica\Imagens\Lançamento quadro explicativo.png
+INPUT .\4 Formulacao matematica\Imagens\Lançamento quadro explicativo.png
+INPUT .\4 Formulacao matematica\Imagens\Lançamento quadro explicativo.png
+INPUT .\4 Formulacao matematica\Imagens\Lançamento quadro explicativo.png
+INPUT .\4 Formulacao matematica\Imagens\Lançamento quadro explicativo.png
+INPUT .\4 Formulacao matematica\Imagens\Lançamento quadro explicativo.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\1 Geral.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\1 Geral.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\1 Geral.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\1 Geral.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\1 Geral.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\1 Geral.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\1 Geral.png
+INPUT .\3 Procedimento simulacao\3 Orbita inicial.tex
+INPUT .\3 Procedimento simulacao\3 Orbita inicial.tex
+INPUT 3 Procedimento simulacao\3 Orbita inicial.tex
+INPUT .\3 Procedimento simulacao\Imagens\1 Posicao espaconaves injecao orbital.png
+INPUT .\3 Procedimento simulacao\Imagens\1 Posicao espaconaves injecao orbital.png
+INPUT .\3 Procedimento simulacao\Imagens\1 Posicao espaconaves injecao orbital.png
+INPUT .\3 Procedimento simulacao\Imagens\1 Posicao espaconaves injecao orbital.png
+INPUT .\3 Procedimento simulacao\Imagens\1 Posicao espaconaves injecao orbital.png
+INPUT .\3 Procedimento simulacao\Imagens\1 Posicao espaconaves injecao orbital.png
+INPUT .\3 Procedimento simulacao\Imagens\1 Posicao espaconaves injecao orbital.png
+INPUT .\3 Procedimento simulacao\4 App longa.tex
+INPUT .\3 Procedimento simulacao\4 App longa.tex
+INPUT 3 Procedimento simulacao\4 App longa.tex
+INPUT .\2 Revisao bibliografica\Imagens\2 Posicao espaconaves antes da transf de orbita.png
+INPUT .\2 Revisao bibliografica\Imagens\2 Posicao espaconaves antes da transf de orbita.png
+INPUT .\2 Revisao bibliografica\Imagens\2 Posicao espaconaves antes da transf de orbita.png
+INPUT .\2 Revisao bibliografica\Imagens\2 Posicao espaconaves antes da transf de orbita.png
+INPUT .\2 Revisao bibliografica\Imagens\2 Posicao espaconaves antes da transf de orbita.png
+INPUT .\2 Revisao bibliografica\Imagens\2 Posicao espaconaves antes da transf de orbita.png
+INPUT .\2 Revisao bibliografica\Imagens\2 Posicao espaconaves antes da transf de orbita.png
+INPUT .\2 Revisao bibliografica\Imagens\3 Sequencia das fases.png
+INPUT .\2 Revisao bibliografica\Imagens\3 Sequencia das fases.png
+INPUT .\2 Revisao bibliografica\Imagens\3 Sequencia das fases.png
+INPUT .\2 Revisao bibliografica\Imagens\3 Sequencia das fases.png
+INPUT .\2 Revisao bibliografica\Imagens\3 Sequencia das fases.png
+INPUT .\2 Revisao bibliografica\Imagens\3 Sequencia das fases.png
+INPUT .\2 Revisao bibliografica\Imagens\3 Sequencia das fases.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\2 App longa.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\2 App longa.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\2 App longa.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\2 App longa.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\2 App longa.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\2 App longa.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\2 App longa.png
+INPUT .\3 Procedimento simulacao\5 App curta.tex
+INPUT .\3 Procedimento simulacao\5 App curta.tex
+INPUT 3 Procedimento simulacao\5 App curta.tex
+INPUT .\3 Procedimento simulacao\Imagens diagrama\3 App curta.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\3 App curta.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\3 App curta.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\3 App curta.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\3 App curta.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\3 App curta.png
+INPUT .\3 Procedimento simulacao\Imagens diagrama\3 App curta.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_hcw_space_state.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_hcw_space_state.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_hcw_space_state.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_hcw_space_state.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_hcw_space_state.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_hcw_space_state.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_hcw_space_state.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_controle_pd_radial.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_controle_pd_radial.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_controle_pd_radial.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_controle_pd_radial.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_controle_pd_radial.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_controle_pd_radial.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_controle_pd_radial.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_limite_velocidade.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_limite_velocidade.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_limite_velocidade.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_limite_velocidade.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_limite_velocidade.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_limite_velocidade.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_limite_velocidade.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_tempo_estabilizacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_tempo_estabilizacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_tempo_estabilizacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_tempo_estabilizacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_tempo_estabilizacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_tempo_estabilizacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_curta_tempo_estabilizacao.png
+INPUT .\3 Procedimento simulacao\6 App final.tex
+INPUT .\3 Procedimento simulacao\6 App final.tex
+INPUT 3 Procedimento simulacao\6 App final.tex
+INPUT .\3 Procedimento simulacao\Imagens\4 App final.png
+INPUT .\3 Procedimento simulacao\Imagens\4 App final.png
+INPUT .\3 Procedimento simulacao\Imagens\4 App final.png
+INPUT .\3 Procedimento simulacao\Imagens\4 App final.png
+INPUT .\3 Procedimento simulacao\Imagens\4 App final.png
+INPUT .\3 Procedimento simulacao\Imagens\4 App final.png
+INPUT .\3 Procedimento simulacao\Imagens\4 App final.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_euler_corpo_rigido.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_euler_corpo_rigido.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_euler_corpo_rigido.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_euler_corpo_rigido.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_euler_corpo_rigido.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_euler_corpo_rigido.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_euler_corpo_rigido.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_dinamica_acoplada.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_dinamica_acoplada.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_dinamica_acoplada.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_dinamica_acoplada.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_dinamica_acoplada.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_dinamica_acoplada.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_dinamica_acoplada.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_transicao_dinamica.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_transicao_dinamica.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_transicao_dinamica.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_transicao_dinamica.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_transicao_dinamica.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_transicao_dinamica.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_transicao_dinamica.png
+INPUT .\3 Procedimento simulacao\7 Movimento MR.tex
+INPUT .\3 Procedimento simulacao\7 Movimento MR.tex
+INPUT 3 Procedimento simulacao\7 Movimento MR.tex
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controle_mr.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controle_mr.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controle_mr.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controle_mr.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controle_mr.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controle_mr.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controle_mr.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_torque_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_torque_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_torque_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_torque_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_torque_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_torque_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_torque_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controlePD_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controlePD_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controlePD_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controlePD_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controlePD_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controlePD_reacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_controlePD_reacao.png
+INPUT .\3 Procedimento simulacao\8 Modos operacao.tex
+INPUT .\3 Procedimento simulacao\8 Modos operacao.tex
+INPUT 3 Procedimento simulacao\8 Modos operacao.tex
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_modo_operacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_modo_operacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_modo_operacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_modo_operacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_modo_operacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_modo_operacao.png
+INPUT .\3 Procedimento simulacao\Imagens simulink\app_final_modo_operacao.png
+INPUT .\3 Procedimento simulacao\9 Referenciais.tex
+INPUT .\3 Procedimento simulacao\9 Referenciais.tex
+INPUT 3 Procedimento simulacao\9 Referenciais.tex
+INPUT .\4 Formulacao matematica\0 Capitulo 4.tex
+INPUT .\4 Formulacao matematica\0 Capitulo 4.tex
+INPUT 4 Formulacao matematica\0 Capitulo 4.tex
+INPUT .\4 Formulacao matematica\1 Introducao\1 Introducao.tex
+INPUT .\4 Formulacao matematica\1 Introducao\1 Introducao.tex
+INPUT 4 Formulacao matematica\1 Introducao\1 Introducao.tex
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\1 Equacoes do movimento orbital.tex
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\1 Equacoes do movimento orbital.tex
+INPUT 4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\1 Equacoes do movimento orbital.tex
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\3 Movimento orbital absoluto.tex
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\3 Movimento orbital absoluto.tex
+INPUT 4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\3 Movimento orbital absoluto.tex
+INPUT .\4 Formulacao matematica\Imagens\Fig_3_1_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_3_1_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_3_1_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_3_1_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_3_1_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_3_1_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_3_1_Wie.png
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr6.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
+INPUT .\4 Formulacao matematica\Imagens\Posicao absoluta.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao absoluta.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao absoluta.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao absoluta.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao absoluta.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao absoluta.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao absoluta.png
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\4 Movimento orbital relativo.tex
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\4 Movimento orbital relativo.tex
+INPUT 4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\4 Movimento orbital relativo.tex
+INPUT .\4 Formulacao matematica\Imagens\Posicao relativa LVLH.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao relativa LVLH.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao relativa LVLH.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao relativa LVLH.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao relativa LVLH.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao relativa LVLH.png
+INPUT .\4 Formulacao matematica\Imagens\Posicao relativa LVLH.png
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx6.tfm
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\5 Equacoes de Hill.tex
+INPUT .\4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\5 Equacoes de Hill.tex
+INPUT 4 Formulacao matematica\2 Equacoes do movimento orbital e manobras\5 Equacoes de Hill.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\1 Equacoes movimento atitude.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\1 Equacoes movimento atitude.tex
+INPUT 4 Formulacao matematica\3 Equacoes movimento atitude\1 Equacoes movimento atitude.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\2 Equacoes Euler.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\2 Equacoes Euler.tex
+INPUT 4 Formulacao matematica\3 Equacoes movimento atitude\2 Equacoes Euler.tex
+INPUT .\4 Formulacao matematica\Imagens\Fig_6_8_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_6_8_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_6_8_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_6_8_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_6_8_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_6_8_Wie.png
+INPUT .\4 Formulacao matematica\Imagens\Fig_6_8_Wie.png
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx5.tfm
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3 Equacoes cinematica.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3 Equacoes cinematica.tex
+INPUT 4 Formulacao matematica\3 Equacoes movimento atitude\3 Equacoes cinematica.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3.1 Matriz cosseno diretor.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3.1 Matriz cosseno diretor.tex
+INPUT 4 Formulacao matematica\3 Equacoes movimento atitude\3.1 Matriz cosseno diretor.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib7.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy7.tfm
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3.2 Angulos de euler.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3.2 Angulos de euler.tex
+INPUT 4 Formulacao matematica\3 Equacoes movimento atitude\3.2 Angulos de euler.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3.3 Quaternions.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\3.3 Quaternions.tex
+INPUT 4 Formulacao matematica\3 Equacoes movimento atitude\3.3 Quaternions.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\7 Equacoes Atitude relativa.tex
+INPUT .\4 Formulacao matematica\3 Equacoes movimento atitude\7 Equacoes Atitude relativa.tex
+INPUT 4 Formulacao matematica\3 Equacoes movimento atitude\7 Equacoes Atitude relativa.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\1 Manipulador robotico.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\1 Manipulador robotico.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\1 Manipulador robotico.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\2 Proposito e arquitetura.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\2 Proposito e arquitetura.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\2 Proposito e arquitetura.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\3 Referenciais e cinematica direta.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\3 Referenciais e cinematica direta.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\3 Referenciais e cinematica direta.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_5.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_5.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_5.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_5.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_5.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_5.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_5.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_6_RotacaoJuntas.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_6_RotacaoJuntas.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_6_RotacaoJuntas.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_6_RotacaoJuntas.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_6_RotacaoJuntas.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_6_RotacaoJuntas.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\Imagens_MR\Craig_3_6_RotacaoJuntas.png
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\3.1 Transf entre elos.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\3.1 Transf entre elos.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\3.1 Transf entre elos.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\4 Cinematica diferencial e Jacobiano.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\4 Cinematica diferencial e Jacobiano.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\4 Cinematica diferencial e Jacobiano.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\5 Cinematica inversa.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\5 Cinematica inversa.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\5 Cinematica inversa.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\6 Formulacao dinamica acoplada.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\6 Formulacao dinamica acoplada.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\6 Formulacao dinamica acoplada.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\7 Energia cinetica.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\7 Energia cinetica.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\7 Energia cinetica.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\8 Velocidades linear e angular.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\8 Velocidades linear e angular.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\8 Velocidades linear e angular.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\9 Equações de Lagrange.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\9 Equações de Lagrange.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\9 Equações de Lagrange.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\10 Momentos de inércia.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\10 Momentos de inércia.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\10 Momentos de inércia.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\12 Conservação do momento angular.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\12 Conservação do momento angular.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\12 Conservação do momento angular.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\13 Translação da base.tex
+INPUT .\4 Formulacao matematica\4 Manipulador robotico\13 Translação da base.tex
+INPUT 4 Formulacao matematica\4 Manipulador robotico\13 Translação da base.tex
+INPUT .\4 Formulacao matematica\5 Formulacao problema controle\1 Formulacao problema controle.tex
+INPUT .\4 Formulacao matematica\5 Formulacao problema controle\1 Formulacao problema controle.tex
+INPUT 4 Formulacao matematica\5 Formulacao problema controle\1 Formulacao problema controle.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\0 Tecnicas controle adotada.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\0 Tecnicas controle adotada.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\0 Tecnicas controle adotada.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\1 Transferencia de Hohmann.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\1 Transferencia de Hohmann.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\1 Transferencia de Hohmann.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2 Controle PD.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2 Controle PD.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\2 Controle PD.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2.1 Controle atitude.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2.1 Controle atitude.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\2.1 Controle atitude.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2.2 Controle juntas.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2.2 Controle juntas.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\2.2 Controle juntas.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2.3 Estrutura malha fechada.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\2.3 Estrutura malha fechada.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\2.3 Estrutura malha fechada.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\3 Ganhos criterios ajuste.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\3 Ganhos criterios ajuste.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\3 Ganhos criterios ajuste.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\4 Limitacoes.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\4 Limitacoes.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\4 Limitacoes.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\5 Justificativa.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\5 Justificativa.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\5 Justificativa.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\8 Acoplamento.tex
+INPUT .\4 Formulacao matematica\6 Tecnicas de controle aplicada\8 Acoplamento.tex
+INPUT 4 Formulacao matematica\6 Tecnicas de controle aplicada\8 Acoplamento.tex
+INPUT .\5 Resultados\0 Capitulo 5.tex
+INPUT .\5 Resultados\0 Capitulo 5.tex
+INPUT 5 Resultados\0 Capitulo 5.tex
+INPUT .\5 Resultados\Linha do tempo.tex
+INPUT .\5 Resultados\Linha do tempo.tex
+INPUT 5 Resultados\Linha do tempo.tex
+INPUT .\5 Resultados\Imagens\Linha do tempo.png
+INPUT .\5 Resultados\Imagens\Linha do tempo.png
+INPUT .\5 Resultados\Imagens\Linha do tempo.png
+INPUT .\5 Resultados\Imagens\Linha do tempo.png
+INPUT .\5 Resultados\Imagens\Linha do tempo.png
+INPUT .\5 Resultados\Imagens\Linha do tempo.png
+INPUT .\5 Resultados\Imagens\Linha do tempo.png
+INPUT .\5 Resultados\1 App longa distancia.tex
+INPUT .\5 Resultados\1 App longa distancia.tex
+INPUT 5 Resultados\1 App longa distancia.tex
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Transferência de órbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Transferência de órbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Transferência de órbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Transferência de órbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Transferência de órbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Transferência de órbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Transferência de órbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Final da transf orbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Final da transf orbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Final da transf orbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Final da transf orbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Final da transf orbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Final da transf orbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\1 Final da transf orbita.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\2 Longitude ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\2 Longitude ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\2 Longitude ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\2 Longitude ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\2 Longitude ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\2 Longitude ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\2 Longitude ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\3 Raio orbital ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\3 Raio orbital ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\3 Raio orbital ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\3 Raio orbital ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\3 Raio orbital ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\3 Raio orbital ao longo do tempo.png
+INPUT .\5 Resultados\Imagens\1 App longa distancia\3 Raio orbital ao longo do tempo.png
+INPUT .\4 Formulacao matematica\Imagens\Cenario A e B.png
+INPUT .\4 Formulacao matematica\Imagens\Cenario A e B.png
+INPUT .\4 Formulacao matematica\Imagens\Cenario A e B.png
+INPUT .\4 Formulacao matematica\Imagens\Cenario A e B.png
+INPUT .\4 Formulacao matematica\Imagens\Cenario A e B.png
+INPUT .\4 Formulacao matematica\Imagens\Cenario A e B.png
+INPUT .\4 Formulacao matematica\Imagens\Cenario A e B.png
+INPUT .\5 Resultados\2 App curta distancia.tex
+INPUT .\5 Resultados\2 App curta distancia.tex
+INPUT 5 Resultados\2 App curta distancia.tex
+INPUT .\5 Resultados\Imagens\2 App curta distancia\1 Posicao e distancia relativa (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\1 Posicao e distancia relativa (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\1 Posicao e distancia relativa (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\1 Posicao e distancia relativa (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\1 Posicao e distancia relativa (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\1 Posicao e distancia relativa (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\1 Posicao e distancia relativa (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\4 Projecao 3D.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\4 Projecao 3D.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\4 Projecao 3D.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\4 Projecao 3D.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\4 Projecao 3D.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\4 Projecao 3D.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\4 Projecao 3D.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\5 Projecao along radial e cross.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\5 Projecao along radial e cross.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\5 Projecao along radial e cross.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\5 Projecao along radial e cross.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\5 Projecao along radial e cross.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\5 Projecao along radial e cross.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\5 Projecao along radial e cross.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\2 Velocidades relativas (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\2 Velocidades relativas (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\2 Velocidades relativas (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\2 Velocidades relativas (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\2 Velocidades relativas (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\2 Velocidades relativas (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\2 Velocidades relativas (LVLH).png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6a Erro radial.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6a Erro radial.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6a Erro radial.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6a Erro radial.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6a Erro radial.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6a Erro radial.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6a Erro radial.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6b Erro alongtrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6b Erro alongtrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6b Erro alongtrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6b Erro alongtrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6b Erro alongtrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6b Erro alongtrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6b Erro alongtrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6c Erro crosstrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6c Erro crosstrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6c Erro crosstrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6c Erro crosstrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6c Erro crosstrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6c Erro crosstrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\6c Erro crosstrack.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\7 Aceleracao controle.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\7 Aceleracao controle.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\7 Aceleracao controle.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\7 Aceleracao controle.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\7 Aceleracao controle.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\7 Aceleracao controle.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\7 Aceleracao controle.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\8 Veloc saturada.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\8 Veloc saturada.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\8 Veloc saturada.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\8 Veloc saturada.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\8 Veloc saturada.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\8 Veloc saturada.png
+INPUT .\5 Resultados\Imagens\2 App curta distancia\8 Veloc saturada.png
+INPUT .\5 Resultados\4 App final.tex
+INPUT .\5 Resultados\4 App final.tex
+INPUT 5 Resultados\4 App final.tex
+INPUT .\5 Resultados\4.1 Evolucao atitude.tex
+INPUT .\5 Resultados\4.1 Evolucao atitude.tex
+INPUT 5 Resultados\4.1 Evolucao atitude.tex
+INPUT .\5 Resultados\Imagens\3 App final\1A Atitude perseguidor.png
+INPUT .\5 Resultados\Imagens\3 App final\1A Atitude perseguidor.png
+INPUT .\5 Resultados\Imagens\3 App final\1A Atitude perseguidor.png
+INPUT .\5 Resultados\Imagens\3 App final\1A Atitude perseguidor.png
+INPUT .\5 Resultados\Imagens\3 App final\1A Atitude perseguidor.png
+INPUT .\5 Resultados\Imagens\3 App final\1A Atitude perseguidor.png
+INPUT .\5 Resultados\Imagens\3 App final\1A Atitude perseguidor.png
+INPUT .\5 Resultados\4.2 Dinamica base.tex
+INPUT .\5 Resultados\4.2 Dinamica base.tex
+INPUT 5 Resultados\4.2 Dinamica base.tex
+INPUT .\5 Resultados\Imagens\3 App final\2a Veloc angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2a Veloc angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2a Veloc angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2a Veloc angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2a Veloc angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2a Veloc angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2a Veloc angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular base Euler Lagrange.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular por eixo.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular por eixo.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular por eixo.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular por eixo.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular por eixo.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular por eixo.png
+INPUT .\5 Resultados\Imagens\3 App final\2b Acel angular por eixo.png
+INPUT .\5 Resultados\Imagens\3 App final\3a Torque de controle.png
+INPUT .\5 Resultados\Imagens\3 App final\3a Torque de controle.png
+INPUT .\5 Resultados\Imagens\3 App final\3a Torque de controle.png
+INPUT .\5 Resultados\Imagens\3 App final\3a Torque de controle.png
+INPUT .\5 Resultados\Imagens\3 App final\3a Torque de controle.png
+INPUT .\5 Resultados\Imagens\3 App final\3a Torque de controle.png
+INPUT .\5 Resultados\Imagens\3 App final\3a Torque de controle.png
+INPUT .\5 Resultados\Imagens\3 App final\3b Torque reacao.png
+INPUT .\5 Resultados\Imagens\3 App final\3b Torque reacao.png
+INPUT .\5 Resultados\Imagens\3 App final\3b Torque reacao.png
+INPUT .\5 Resultados\Imagens\3 App final\3b Torque reacao.png
+INPUT .\5 Resultados\Imagens\3 App final\3b Torque reacao.png
+INPUT .\5 Resultados\Imagens\3 App final\3b Torque reacao.png
+INPUT .\5 Resultados\Imagens\3 App final\3b Torque reacao.png
+INPUT .\5 Resultados\Imagens\3 App final\3c Torque compensado.png
+INPUT .\5 Resultados\Imagens\3 App final\3c Torque compensado.png
+INPUT .\5 Resultados\Imagens\3 App final\3c Torque compensado.png
+INPUT .\5 Resultados\Imagens\3 App final\3c Torque compensado.png
+INPUT .\5 Resultados\Imagens\3 App final\3c Torque compensado.png
+INPUT .\5 Resultados\Imagens\3 App final\3c Torque compensado.png
+INPUT .\5 Resultados\Imagens\3 App final\3c Torque compensado.png
+INPUT .\5 Resultados\4.3 Movimento juntas.tex
+INPUT .\5 Resultados\4.3 Movimento juntas.tex
+INPUT 5 Resultados\4.3 Movimento juntas.tex
+INPUT .\5 Resultados\Imagens\3 App final\4A Posicao velocidade e torque juntas MR.png
+INPUT .\5 Resultados\Imagens\3 App final\4A Posicao velocidade e torque juntas MR.png
+INPUT .\5 Resultados\Imagens\3 App final\4A Posicao velocidade e torque juntas MR.png
+INPUT .\5 Resultados\Imagens\3 App final\4A Posicao velocidade e torque juntas MR.png
+INPUT .\5 Resultados\Imagens\3 App final\4A Posicao velocidade e torque juntas MR.png
+INPUT .\5 Resultados\Imagens\3 App final\4A Posicao velocidade e torque juntas MR.png
+INPUT .\5 Resultados\Imagens\3 App final\4A Posicao velocidade e torque juntas MR.png
+INPUT .\5 Resultados\Imagens\3 App final\4B Velocidade das juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4B Velocidade das juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4B Velocidade das juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4B Velocidade das juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4B Velocidade das juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4B Velocidade das juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4B Velocidade das juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4C Torque nas juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4C Torque nas juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4C Torque nas juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4C Torque nas juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4C Torque nas juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4C Torque nas juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\4C Torque nas juntas.png
+INPUT .\5 Resultados\Imagens\3 App final\9 Erro eef.png
+INPUT .\5 Resultados\Imagens\3 App final\9 Erro eef.png
+INPUT .\5 Resultados\Imagens\3 App final\9 Erro eef.png
+INPUT .\5 Resultados\Imagens\3 App final\9 Erro eef.png
+INPUT .\5 Resultados\Imagens\3 App final\9 Erro eef.png
+INPUT .\5 Resultados\Imagens\3 App final\9 Erro eef.png
+INPUT .\5 Resultados\Imagens\3 App final\9 Erro eef.png
+INPUT .\5 Resultados\4.5 Alinhamento.tex
+INPUT .\5 Resultados\4.5 Alinhamento.tex
+INPUT 5 Resultados\4.5 Alinhamento.tex
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 1 Angulo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 1 Angulo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 1 Angulo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 1 Angulo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 1 Angulo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 1 Angulo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 1 Angulo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 2 Eixo xyz eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 2 Eixo xyz eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 2 Eixo xyz eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 2 Eixo xyz eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 2 Eixo xyz eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 2 Eixo xyz eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 2 Eixo xyz eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 3 Prod escalar.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 3 Prod escalar.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 3 Prod escalar.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 3 Prod escalar.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 3 Prod escalar.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 3 Prod escalar.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 3 Prod escalar.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 4 Contribuicao por eixo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 4 Contribuicao por eixo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 4 Contribuicao por eixo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 4 Contribuicao por eixo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 4 Contribuicao por eixo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 4 Contribuicao por eixo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 4 Contribuicao por eixo.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 5 Erro posicao eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 5 Erro posicao eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 5 Erro posicao eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 5 Erro posicao eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 5 Erro posicao eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 5 Erro posicao eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 5 Erro posicao eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 6 Posicao desejada e real eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 6 Posicao desejada e real eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 6 Posicao desejada e real eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 6 Posicao desejada e real eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 6 Posicao desejada e real eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 6 Posicao desejada e real eef.png
+INPUT .\5 Resultados\Imagens\4 Alinhamento\Alinhamento 6 Posicao desejada e real eef.png
+INPUT .\6 Discussao\0 Capitulo 6.tex
+INPUT .\6 Discussao\0 Capitulo 6.tex
+INPUT 6 Discussao\0 Capitulo 6.tex
+INPUT .\6 Discussao\1 Comparacao.tex
+INPUT .\6 Discussao\1 Comparacao.tex
+INPUT 6 Discussao\1 Comparacao.tex
+INPUT .\6 Discussao\2 Contribuicoes.tex
+INPUT .\6 Discussao\2 Contribuicoes.tex
+INPUT 6 Discussao\2 Contribuicoes.tex
+INPUT .\6 Discussao\3 Licoes aprendidas.tex
+INPUT .\6 Discussao\3 Licoes aprendidas.tex
+INPUT 6 Discussao\3 Licoes aprendidas.tex
+INPUT .\6 Discussao\4 Limitacoes.tex
+INPUT .\6 Discussao\4 Limitacoes.tex
+INPUT 6 Discussao\4 Limitacoes.tex
+INPUT .\7 Conclusao\0 Capitulo 7.tex
+INPUT .\7 Conclusao\0 Capitulo 7.tex
+INPUT 7 Conclusao\0 Capitulo 7.tex
+INPUT .\7 Conclusao\1 Atingimento objetivos.tex
+INPUT .\7 Conclusao\1 Atingimento objetivos.tex
+INPUT 7 Conclusao\1 Atingimento objetivos.tex
+INPUT .\7 Conclusao\2 Resumo contribuicoes.tex
+INPUT .\7 Conclusao\2 Resumo contribuicoes.tex
+INPUT 7 Conclusao\2 Resumo contribuicoes.tex
+INPUT .\7 Conclusao\3 Relevancia.tex
+INPUT .\7 Conclusao\3 Relevancia.tex
+INPUT 7 Conclusao\3 Relevancia.tex
+INPUT .\7 Conclusao\4 Trabalhos futuros.tex
+INPUT .\7 Conclusao\4 Trabalhos futuros.tex
+INPUT 7 Conclusao\4 Trabalhos futuros.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
+INPUT .\ApeA\apendiceA.tex
+INPUT .\ApeA\apendiceA.tex
+INPUT ApeA\apendiceA.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT .\ApeB\apendiceB.tex
+INPUT .\ApeB\apendiceB.tex
+INPUT ApeB\apendiceB.tex
+INPUT .\ApeC\apendiceC.tex
+INPUT .\ApeC\apendiceC.tex
+INPUT ApeC\apendiceC.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
+INPUT .\ApeD\apendiceD.tex
+INPUT .\ApeD\apendiceD.tex
+INPUT ApeD\apendiceD.tex
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr8.tfm
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT .\PreTextuais\resumo.tex
+INPUT PreTextuais\resumo.tex
+INPUT tese.aux
+INPUT .\tese.out
+INPUT .\tese.out
+INPUT tese.run.xml
+OUTPUT tese.run.xml
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbxi10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmcsc10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmex10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi7.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi7.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr7.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr7.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr8.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
+INPUT C:\Users\olive\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

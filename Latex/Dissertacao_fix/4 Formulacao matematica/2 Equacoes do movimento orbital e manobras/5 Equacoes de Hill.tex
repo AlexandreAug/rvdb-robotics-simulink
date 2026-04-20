@@ -1,0 +1,196 @@
+\subsection{Equações de Hill/CW}
+\label{sec_hillcw}
+
+Como \eqref{eq_relativo_LVLHgeral} estava sendo expresso no referencial do alvo, seguindo a orientação dextrogiro, o vetor posição é:
+
+\begin{equation}
+\label{eq_posicao_LVLH_target}
+\vec r_t
+=
+\begin{bmatrix}
+0 \\
+0 \\
+-r
+\end{bmatrix}.
+\end{equation}
+
+E também o vetor de velocidade angular, matematicamente:
+
+\begin{equation}
+\label{eq_velocidadeAngular_LVLH_target}
+\vec\omega=
+\begin{bmatrix}
+0 \\
+-\omega \\
+0
+\end{bmatrix}.
+\end{equation}
+
+Aplicando os produtos vetoriais apresentados em \eqref{eq_relativo_LVLHgeral}, obtêm-se:
+
+\begin{equation}
+\label{eq_velAngular_cross_s}
+\vec\omega \times \vec s^{\,*} =
+\begin{bmatrix}
+-\omega z \\
+0         \\
+\omega x
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+\label{eq_velAngular_cross_cross_s}
+\vec\omega \times (\vec\omega \times \vec s^{\,*} )
+=
+\begin{bmatrix}
+-\omega^2 x \\
+0           \\
+-\omega^2 z 
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+\label{eq_omega_cross_dsdt}
+\vec\omega \times \dot{\vec s}^{\,*} 
+=
+\begin{bmatrix}
+-\omega \dot z \\
+0 \\
+\omega \dot x
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+\label{eq_dOmega_cross_s}
+\frac{d\vec\omega}{dt} \times \vec s^{\,*} 
+=
+\begin{bmatrix}
+-\dot\omega z \\
+0              \\
+\dot\omega x
+\end{bmatrix},
+\end{equation}
+
+\begin{equation}
+\label{eq_jacobiana_LVLH}
+\vec{M}s^{\,*} 
+=
+\begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0  \\
+    0 & 0 & -2
+\end{bmatrix}
+\vec s^{\,*} 
+=
+\begin{bmatrix}
+x \\
+y \\
+-2z
+\end{bmatrix}.
+\end{equation}
+
+Como a quantidade de movimento angular $\vec{L}$ é constante para órbitas fixas elípticas e para o caso especial de órbitas circulares, a velocidade angular também é constante, sendo expressa por:
+
+\begin{equation}
+\label{eq_omega_constante1}
+\omega^2 = \frac{\mu}{r_t^3}.
+\end{equation}
+
+Como $r_t=a$, a velocidade angular $\omega^{2}= \eta^2 = \mu/r_t^{3}$, portanto, neste caso em particular de órbita circular, $\omega=n$.
+Portanto, $\dot{\omega}=0$, pode ser reescrita como:
+
+\begin{equation}
+\label{eq_omega_constante2}
+\eta^2 = \frac{\mu}{r_t^3}.
+\end{equation}
+
+Inserindo este resultado em \eqref{eq_relativo_LVLHgeral}, obtêm-se as equações linearizadas do movimento relativo, conhecidas como equações de Hill/Clohessy--Wiltshire \cite{hill1878,fehse2003,wie2008space}:
+
+\begin{equation}
+    \label{eq_equacoes_HillX}
+\ddot{x} - 2\omega \dot{z} = \frac{F_x}{m_c},
+\end{equation}
+
+\begin{equation}
+    \label{eq_equacoes_HillY}
+\ddot{y} + \omega^2 y = \frac{F_y}{m_c},
+\end{equation}
+
+\begin{equation}
+    \label{eq_equacoes_HillZ}
+\ddot{z} + 2\omega \dot{x} - 3 \omega^2 z = \frac{F_z}{m_c}.
+\end{equation}
+
+As equações em \eqref{eq_equacoes_HillX} a \eqref{eq_equacoes_HillZ} evidenciam os termos de Coriolis ($\pm2\omega$ sobre as velocidades cruzadas) e o termo centrípeto ou gravidade--gradiente (multiplicadores de $\omega^2$ sobre $x$ e $z$).
+Ainda, essas equações diferenciais lineares com coeficientes que não variam no tempo representam o modelo geral que é válido para uma trajetória relativa arbitrária \cite{debruijn2011,ortolano2017} entre o perseguidor e o alvo, considerando que este último se move sob a influência exclusiva de um campo gravitacional central, ou seja, pode ser considerado uma \emph{espaçonave não-cooperativa} \cite{mahendrakar2023}.
+
+Para reduzir a ordem das matrizes, as equações de Hill foram reescritas na forma de espaço de estados, expressa como \cite{fehse2003,starek2016,sherrill2014}:
+
+\begin{equation}
+    \dot{\vec{x}} = \vec{A}\,\vec{x} + \vec{B}\,\vec{u}
+    \label{eq_state_space_general}.
+\end{equation}
+
+O termo $\vec{A}$ é a matriz de transição, $\vec{x}$ é o vetor de estados, $\vec{B}$ é a matriz de entradas e $\vec{u}$ é o vetor de entradas, que neste caso é a força de controle aplicada no perseguidor.
+Para o primeiro caso dentro do plano (\textit{in-plane}), as equações \eqref{eq_equacoes_HillX} a \eqref{eq_equacoes_HillZ}, e considerando o vetor de estados
+$[x, z, \dot{x}, \dot{z}]^T$ podem ser escritas conforme:
+
+\begin{equation}
+\begin{bmatrix}
+\dot{x}(t) \\[0.3em]
+\dot{z}(t) \\[0.3em]
+\ddot{x}(t) \\[0.3em]
+\ddot{z}(t)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 2\omega \\
+0 & 3\omega^2 & -2\omega & 0
+\end{bmatrix}
+\begin{bmatrix}
+x(t) \\[0.3em]
+z(t) \\[0.3em]
+\dot{x}(t) \\[0.3em]
+\dot{z}(t)
+\end{bmatrix}
++
+\begin{bmatrix}
+0 & 0 \\
+0 & 0 \\
+\frac{1}{m_c} & 0 \\
+0 & \frac{1}{m_c}
+\end{bmatrix}
+\begin{bmatrix}
+F_x \\[0.3em]
+F_z
+\end{bmatrix}.
+\label{eq_inplane}
+\end{equation}
+
+De forma similar, para a dinâmica fora do plano orbital, (\textit{out-of-plane}), considerando o vetor de estados$[y,\dot{y}]^T$, obtém-se:
+
+\begin{equation}
+\begin{bmatrix}
+\dot{y}(t) \\[4pt]
+\ddot{y}(t)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 1 \\[4pt]
+\omega^{2} & 0
+\end{bmatrix}
+\begin{bmatrix}
+y(t) \\[4pt]
+\dot{y}(t)
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\[4pt]
+\dfrac{1}{m_c}
+\end{bmatrix}
+\begin{bmatrix}
+F_y
+\end{bmatrix}.
+\end{equation}

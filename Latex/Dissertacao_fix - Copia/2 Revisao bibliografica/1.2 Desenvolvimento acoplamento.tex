@@ -1,0 +1,22 @@
+\subsection{Desenvolvimento das operações de acoplamento}
+\label{subsec_desenvolvimento_acoplamento}
+
+Após as primeiras demonstrações de \textit{rendezvous} orbital, o desenvolvimento das operações de acoplamento passou a concentrar esforços na criação de sistemas capazes de realizar a aproximação final e o contato mecânico entre veículos espaciais de forma segura e repetível. 
+Esse avanço envolveu tanto a evolução de mecanismos de acoplamento quanto o desenvolvimento de sistemas de navegação relativa, guiamento e controle capazes de operar em distâncias progressivamente menores entre as espaçonaves.
+
+Nas primeiras aplicações, as operações de acoplamento dependiam fortemente da atuação de pilotos humanos, responsáveis por interpretar informações de navegação relativa e conduzir manualmente as fases finais da aproximação. 
+Com o avanço da tecnologia de sensores e de sistemas embarcados, passaram a ser desenvolvidas arquiteturas capazes de automatizar parte dessas operações, reduzindo a carga operacional sobre os astronautas e aumentando a previsibilidade do processo de aproximação.
+
+Um dos desafios associados a essa evolução consiste em garantir a estimativa precisa da posição e orientação relativas entre os veículos durante a fase final de aproximação. 
+Nesse contexto, diferentes soluções foram propostas ao longo do tempo, incluindo sistemas baseados em sensores ópticos, sensores a laser e técnicas de fusão de dados para estimar o estado relativo entre perseguidor e alvo.
+
+Estudos iniciais sobre acoplamento automático entre espaçonaves investigaram arquiteturas de sensoriamento e controle capazes de conduzir o processo sem intervenção humana direta. 
+Um exemplo é o trabalho apresentado por \cite{micheal1981}, no qual foi analisado um cenário de acoplamento associado ao projeto \emph{Teleoperator Retrieval System (TRS)}. 
+Nesse estudo, foram avaliados métodos para estimativa de posição e atitude relativas utilizando sensores ópticos e sistemas de varredura a laser, evidenciando a importância da integração entre sensoriamento e algoritmos de controle para viabilizar operações autônomas de acoplamento.
+
+Com a evolução das missões de logística orbital e de suporte a estações espaciais, sistemas de acoplamento altamente automatizados passaram a ser empregados em veículos de serviço. 
+Um exemplo representativo é o \emph{Automated Transfer Vehicle} (ATV), desenvolvido pela \gls{esa} para missões de reabastecimento da \gls{iss}. 
+O ATV realizava operações de \gls{rvdb} utilizando sistemas automáticos de navegação relativa, integrando sensores, câmeras e sistemas de guiamento para ajustar continuamente sua trajetória durante a fase final de aproximação \cite{esaATVRendezvous}.
+
+Durante a aproximação final, o veículo utilizava sensores a laser para estimar a distância e o alinhamento em relação à estação espacial, permitindo realizar correções de trajetória em tempo real. 
+A automação dessas operações reduziu significativamente a necessidade de intervenção humana direta e demonstrou a viabilidade de sistemas de \gls{rvdb} altamente automatizados em missões operacionais.

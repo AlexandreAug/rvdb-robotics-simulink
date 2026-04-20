@@ -1,0 +1,198 @@
+
+\documentclass[msc]{ita}
+\usepackage{ae}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{amsthm}
+\usepackage{url}         % formats URL addresses properly
+\usepackage{appendix}    % allows appendix section to be included
+\usepackage{lscape}      % allows a page to be rendered in landscape mode
+\usepackage{multicol}    % allows text in multi columns
+\usepackage{cancel}      % needed to show canceled terms in equations
+\usepackage{lettrine}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{rotating}
+
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hhline}
+
+\usepackage{xltabular}
+\usepackage{tabularx}
+\usepackage{array}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds,shapes.geometric}
+\usetikzlibrary{decorations.pathreplacing, shapes.geometric}
+\usetikzlibrary{patterns}
+\usetikzlibrary{scopes}
+
+%HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+\addbibresource{Referencias/referencias.bib}
+
+%HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+%\usepackage{subfigure}
+%\usepackage{subfigmat}
+%PACOTEFIGURAS_SE _ERRADO_ESXCLUIR_ACIMA
+\usepackage{booktabs}
+%PACOTETABELAS_SE _ERRADO_ESXCLUIR_ACIMA
+%HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+
+\newcommand{\vect}[1]{\vec{#1}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\rhat}{\hat{\mathbf{r}}}
+\newcommand{\ahat}{\hat{\mathbf{a}}}
+\newcommand{\I}{\mathbf I}
+\newcommand{\fn}[1]{\footnote{#1}}
+\newcommand{\eqn}[2]{\begin{equation}\label{#1}#2\end{equation}} % begin{equation}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% Espaçamento padrão de todo o documento
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\onehalfspacing
+
+%singlespacing Para um espaçamento simples
+%onehalfspacing Para um espaçamento de 1,5
+%doublespacing Para um espaçamento duplo
+
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+% Identificacoes (se o trabalho for em inglês, insira os dados em inglês)
+% Para entradas abreviadas de Professora (Profa.) em português escreva: Prof$^\textnormal{a}$.
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+\course{Ciências e Tecnologias Espaciais}  % Programa de PG ou Curso de Graduação
+\area{Sistemas Espaciais, Ensaios e Lançamentos} % Área de concentração na PG (Não utilizado no caso de TG)
+
+% Autor do trabalho: Nome Sobrenome
+\authorgender{masc}                     %sexo: masc ou fem
+\author{Alexandre Augusto}{Santana de Oliveira}
+\itaauthoraddress{Praça Marechal Eduardo Gomes, 50, Vila das Acácias}{12.228-900}{São José dos Campos--SP}
+
+% Titulo da Tese/Dissertação
+\title{Simulação de algoritmos e de leis de controle para aplicações robóticas em operações de encontro e de acoplamento/ancoragem (rendezvous and docking/berthing) entre espaçonaves}
+
+% Orientador
+\advisorgender{masc}                    % masc ou fem
+\advisor{Prof.~Dr.}{Ijar Milagre da Fonseca}{ITA}
+
+
+% Coorientador (Caso não haja coorientador, colocar ambas as variáveis \coadvisorgender e \coadvisor comentadas, com um % na frente)
+% \coadvisorgender{fem}									% masc ou fem
+% \coadvisor{Prof$^\textnormal{a}$.~Dr$^\textnormal{a}$.}{Doralice Serra}{OVNI}
+
+% TODO: remove Pro-rector entry or just leave it optional and off by default?
+% Pró-reitor da Pós-graduação
+% \bossgender{masc}												% masc ou fem
+% \boss{Prof.~Dr.}{John von Neumann}
+
+%Coordenador do curso no caso de TG
+% \bosscoursegender{masc}									% masc ou fem
+% \bosscourse{Prof.~Dr.}{John Walker}
+
+% Palavras-Chaves informadas pela Biblioteca -> utilizada na CIP
+\kwcip{Rendezvous and docking/berthing}
+\kwcip{Manipulador robótico}
+\kwcip{Controle PD}
+
+% membros da banca examinadora
+
+\examiner{Prof. Dr.}{Johnny Cardoso Marques}{Presidente}{ITA}
+\examiner{Prof. Dr.}{Geilson Loureiro}{Membro Interno}{ITA}
+\examiner{Prof. Dr.}{Evandro Marconi Rocco}{Membro Externo}{INPE}
+
+% Data da defesa (mês em maiúsculo, se trabalho em inglês, e minúsculo se trabalho em português)
+\date{26}{fevereiro}{2026}
+
+
+% Glossario
+\makenoidxglossaries % to use glossaries pkg
+\frontmatter
+
+
+\input{PreTextuais/listaabreviaturas.tex}
+% \input{PreTextuais/listasimbolos.tex}
+
+\begin{document}
+% \input{PreTextuais/main}
+
+\mainmatter
+
+%%%%%%%%%%%%%% Os capitulos comecam aqui
+
+%%%%% CAP 1 INTRODUCAO
+\input{1 Introducao/0 Capitulo 1 orientador.tex}
+
+%%%%% CAP 2 REV BIBLIOGRAFICA
+\input{2 Revisao bibliografica/0 Capitulo 2.tex}
+
+%%%%% CAP 3 PROCEDIMENTO DA SIMULACAO
+\input{3 Procedimento simulacao/0 Capitulo 3.tex}
+
+%%%%% CAP 4 FORMULACAO MATEMATICA
+\input{4 Formulacao matematica/0 Capitulo 4.tex}
+
+%%%%% CAP 5 SIMULACAO E RESULTADOS
+\input{5 Resultados/0 Capitulo 5.tex}
+
+%%%%% CAP 6 DISCUSSAO
+\input{6 Discussao/0 Capitulo 6.tex}
+
+%%%%% CAP 7 CONCLUSAO
+\input{7 Conclusao/0 Capitulo 7.tex}
+
+
+
+% REFERENCIAS BIBLIOGRAFICAS
+\renewcommand\bibname{\itareferencesnamebabel} %renomear título do capítulo referências
+\printbibliography
+
+% Apendices
+\appendix
+\chapter{Posição e velocidade no referencial inercial}
+% \input{ApeA/apendiceA.tex}
+
+\chapter{Parâmetros físicos do perseguidor}
+% \input{ApeB/apendiceB.tex}
+
+\chapter{Parâmetros de controle}
+% \input{ApeC/apendiceC.tex}
+
+\chapter{Códigos computacionais}
+% \input{ApeD/apendiceD.tex}
+
+% Anexos
+\annex
+
+% Glossario
+%\itaglossary
+%\printglossary
+
+% Folha de Registro do Documento
+% Valores dos campos do formulario
+\FRDitadata{06 de março de 2026}
+\FRDitadocnro{DCTA/ITA/DM-017/2026} %(o número de registro você solicita a biblioteca)
+\FRDitaorgaointerno{Instituto Tecnológico de Aeronáutica -- ITA}
+
+%Exemplo no caso de pós-graduação: Instituto Tecnol{\'o}gico de Aeron{\'a}utica -- ITA
+\FRDitapalavrasautor{Hill; Proporcional--Derivativo; Lagrange}
+\FRDitapalavrasresult{Controle de atitude; Multiplicadores de Lagrange; Modelagem (processos); Braços robóticos e 
+manipuladores; Equações de Euler-lagrange; Corpos rígidos; Sistemas aeroespaciais; Engenharia 
+mecânica.}
+
+%Exemplo no caso de pós-graduação (msc, dsc):
+\FRDitapalavraapresentacao{ITA, São José dos Campos. Curso de Mestrado. Programa de Pós-Graduação em Ciências e Tecnologias 
+Espaciais. Área de Sistemas Espaciais, Ensaios e Lançamentos. Orientador: Prof. Dr. Ijar Milagre da Fonseca. Defesa em 27/02/2026. Publicada em 2026.}
+\FRDitaresumo{\input{PreTextuais/resumo}}
+
+%  Primeiro Parametro: Nacional ou Internacional -- N/I
+%  Segundo parametro: Ostensivo, Reservado, Confidencial ou Secreto -- O/R/C/S
+\FRDitaOpcoes{N}{O}
+\itaFRD
+
+\end{document}
+% Fim do Documento.
+% O massacre acabou!!! :-)

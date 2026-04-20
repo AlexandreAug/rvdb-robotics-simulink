@@ -1,0 +1,106 @@
+\babel@toc {brazilian}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Modos de operação utilizados no modelo de simulação.}}{59}{table.caption.27}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Fases da missão de \gls {rvdb} e referenciais utilizados na modelagem do movimento.}}{60}{table.caption.29}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Parâmetros \gls {dh} do manipulador robótico 3R, como mostrado por \blx@tocontentsinit {0}\cite {sciavicco_siciliano2010}.}}{91}{table.caption.36}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Linha do tempo da missão e das fases de aproximação (Cenário A).}}{121}{table.caption.38}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Linha do tempo da missão e das fases de aproximação (Cenário B).}}{122}{table.caption.39}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Raio orbital}}{122}{table.caption.40}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Longitude inicial de cada espaçonave no instante 0 da simulação.}}{123}{table.caption.41}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Diferença de fase ao longo do tempo (\gls {eci})}}{125}{table.caption.45}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Consumo de Delta-V}}{126}{table.caption.47}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Longitude relativa inicial do perseguidor por cenário}}{126}{table.caption.48}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Longitudes relativas na queima 1 e queima 2}}{127}{table.caption.50}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Longitudes na queima 1 e queima 2}}{128}{table.caption.51}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Comparação de altitude e tempos entre cenários}}{128}{table.caption.52}
+\contentsline {table}{\numberline {5.11}{\ignorespaces Comparação de consumo de delta v entre cenários}}{129}{table.caption.53}
+\contentsline {table}{\numberline {5.12}{\ignorespaces Elementos orbitais do perseguidor}}{130}{table.caption.54}
+\contentsline {table}{\numberline {5.13}{\ignorespaces Condições iniciais e medições finais da aproximação curta (LVLH).}}{131}{table.caption.55}
+\contentsline {table}{\numberline {5.14}{\ignorespaces Velocidade relativa inicial e final em LVLH e norma correspondente.}}{133}{table.caption.59}
+\contentsline {table}{\numberline {5.15}{\ignorespaces Tempos de estabilização da aproximação curta em LVLH.}}{134}{table.caption.61}
+\contentsline {table}{\numberline {5.16}{\ignorespaces Picos absolutos de posição e velocidade relativa em LVLH.}}{137}{table.caption.65}
+\contentsline {table}{\numberline {5.17}{\ignorespaces Picos de aceleração de controle e limites de velocidade relativa.}}{138}{table.caption.66}
+\contentsline {table}{\numberline {5.18}{\ignorespaces Comparação entre picos de velocidade relativa não saturada e limites impostos.}}{139}{table.caption.68}
+\contentsline {table}{\numberline {5.19}{\ignorespaces Erros de atitude inicial e final do perseguidor em relação ao alvo.}}{141}{table.caption.70}
+\contentsline {table}{\numberline {5.20}{\ignorespaces Medições da velocidade angular do perseguidor.}}{143}{table.caption.72}
+\contentsline {table}{\numberline {5.21}{\ignorespaces Medição da aceleração angular do perseguidor.}}{144}{table.caption.74}
+\contentsline {table}{\numberline {5.22}{\ignorespaces Medição dos torques de controle de atitude (PD).}}{146}{table.caption.78}
+\contentsline {table}{\numberline {5.23}{\ignorespaces Medição dos torques de reação na espaçonave.}}{147}{table.caption.80}
+\contentsline {table}{\numberline {5.24}{\ignorespaces Valores finais dos torques de controle compensados.}}{147}{table.caption.82}
+\contentsline {table}{\numberline {5.25}{\ignorespaces Movimentação de cada junta do MR em radianos.}}{148}{table.caption.84}
+\contentsline {table}{\numberline {5.26}{\ignorespaces Movimentação de cada junta do MR em graus.}}{149}{table.caption.85}
+\contentsline {table}{\numberline {5.27}{\ignorespaces Velocidades articulares em rad/s.}}{149}{table.caption.87}
+\contentsline {table}{\numberline {5.28}{\ignorespaces Velocidades articulares em graus por segundo.}}{150}{table.caption.88}
+\contentsline {table}{\numberline {5.29}{\ignorespaces Medição dos torques de controle nas juntas.}}{151}{table.caption.90}
+\contentsline {table}{\numberline {5.30}{\ignorespaces Medição do erro de posição da ferramenta no referencial $\{0\}$.}}{152}{table.caption.92}
+\contentsline {table}{\numberline {5.31}{\ignorespaces Medição da norma do erro de posição da ferramenta.}}{152}{table.caption.93}
+\contentsline {table}{\numberline {5.32}{\ignorespaces Métricas de alinhamento em instantes característicos.}}{156}{table.caption.99}
+\contentsline {table}{\numberline {5.33}{\ignorespaces Extremos das métricas de alinhamento ao longo da simulação.}}{157}{table.caption.101}
+\contentsline {table}{\numberline {5.34}{\ignorespaces Resumo do avanço longitudinal do efetuador final em relação ao plano da porta, medido na direção de aproximação, no referencial $\{0\}$.}}{158}{table.caption.102}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Vetores orbitais no referencial \gls {eci} no instante inicial (cenário A).}}{174}{table.caption.104}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Vetores orbitais no referencial \gls {eci} no instante de aplicação de $\Delta v_1$ (cenário A).}}{174}{table.caption.105}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Vetores orbitais no referencial \gls {eci} no instante de aplicação de $\Delta v_2$ (cenário A).}}{175}{table.caption.106}
+\contentsline {table}{\numberline {A.4}{\ignorespaces Vetores orbitais no referencial \gls {eci} ao final do \emph {drift} orbital (cenário A).}}{175}{table.caption.107}
+\contentsline {table}{\numberline {A.5}{\ignorespaces Vetores orbitais no referencial \gls {eci} no instante inicial (cenário B).}}{175}{table.caption.108}
+\contentsline {table}{\numberline {A.6}{\ignorespaces Vetores orbitais no referencial \gls {eci} no instante de aplicação de $\Delta v_1$ (cenário B).}}{175}{table.caption.109}
+\contentsline {table}{\numberline {A.7}{\ignorespaces Vetores orbitais no referencial \gls {eci} no instante de aplicação de $\Delta v_2$ (cenário B).}}{176}{table.caption.110}
+\contentsline {table}{\numberline {A.8}{\ignorespaces Vetores orbitais no referencial \gls {eci} ao final do \emph {drift} orbital (cenário B).}}{176}{table.caption.111}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {B.1}{\ignorespaces Perseguidor: massa, dimensões geométricas e centro de massa (SI).}}{177}{table.caption.112}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Juntas: massa, dimensões geométricas e centros de massa (SI).}}{177}{table.caption.113}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Elos: massa, dimensões geométricas e centros de massa (SI).}}{177}{table.caption.114}
+\contentsline {table}{\numberline {B.4}{\ignorespaces Ferramenta: massa, dimensões geométricas e centro de massa (SI).}}{178}{table.caption.115}
+\contentsline {table}{\numberline {B.5}{\ignorespaces Conjuntos combinados: massas e centros de massa (SI).}}{178}{table.caption.116}
+\contentsline {table}{\numberline {B.6}{\ignorespaces Perseguidor (modo não operacional): centro de massa (SI).}}{178}{table.caption.117}
+\contentsline {table}{\numberline {B.7}{\ignorespaces Espessuras adotadas para cascas no modelo (SI).}}{178}{table.caption.118}
+\contentsline {table}{\numberline {B.8}{\ignorespaces Perseguidor: componentes do tensor de inércia (kg$\cdot $m$^2$).}}{178}{table.caption.119}
+\contentsline {table}{\numberline {B.9}{\ignorespaces Elos e ferramenta: componentes do tensor de inércia (kg$\cdot $m$^2$).}}{179}{table.caption.120}
+\contentsline {table}{\numberline {B.10}{\ignorespaces Conjuntos combinados: componentes do tensor de inércia (kg$\cdot $m$^2$).}}{179}{table.caption.121}
+\contentsline {table}{\numberline {B.11}{\ignorespaces Perseguidor (configuração home, modo não operacional): componentes do tensor de inércia (kg$\cdot $m$^2$).}}{179}{table.caption.122}
+\contentsline {table}{\numberline {B.12}{\ignorespaces Massas agregadas do perseguidor (SI).}}{180}{table.caption.123}
+\contentsline {table}{\numberline {B.13}{\ignorespaces Limites de posição das juntas (SI).}}{180}{table.caption.124}
+\contentsline {table}{\numberline {B.14}{\ignorespaces Limites de velocidade angular das juntas (SI).}}{180}{table.caption.125}
+\contentsline {table}{\numberline {B.15}{\ignorespaces Limites de torque das juntas (SI).}}{180}{table.caption.126}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {C.1}{\ignorespaces Parâmetros da simulação.}}{181}{table.caption.127}
+\contentsline {table}{\numberline {C.2}{\ignorespaces Limites da espaçonave e das juntas no modo operacional.}}{181}{table.caption.128}
+\contentsline {table}{\numberline {C.3}{\ignorespaces Parâmetros do controle de atitude no modo não operacional.}}{182}{table.caption.129}
+\contentsline {table}{\numberline {C.4}{\ignorespaces Parâmetros do controle PD de atitude no modo operacional.}}{182}{table.caption.130}
+\contentsline {table}{\numberline {C.5}{\ignorespaces Parâmetros do controle articular do \gls {mr} (3R).}}{183}{table.caption.131}
+\contentsline {table}{\numberline {C.6}{\ignorespaces Parâmetros da cinemática inversa e do mapeamento geométrico do \gls {mr}.}}{183}{table.caption.132}
+\contentsline {table}{\numberline {C.7}{\ignorespaces Parâmetros da lógica de ativação do modo operacional do \gls {mr} na missão.}}{183}{table.caption.133}
+\contentsline {table}{\numberline {C.8}{\ignorespaces Resumo dos modos principais da missão e subsistemas habilitados.}}{184}{table.caption.134}
+\contentsline {table}{\numberline {C.9}{\ignorespaces Critérios numéricos de transição e de sucesso no acoplamento.}}{184}{table.caption.135}
+\contentsline {table}{\numberline {C.10}{\ignorespaces Regras de transição entre estados do sequenciador de acoplamento.}}{184}{table.caption.136}
+\addvspace {10\p@ }

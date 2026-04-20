@@ -1,0 +1,27 @@
+\section{Referenciais}
+
+Durante a simulação da missão de \gls{rvdb}, diferentes referenciais são utilizados para descrever as fases do movimento das espaçonaves. 
+Nas etapas iniciais da missão, em que o movimento do perseguidor é descrito em relação à Terra, utiliza-se o referencial \gls{eci}. 
+Nesse referencial, a dinâmica orbital é tratada como movimento absoluto da espaçonave em torno do corpo central.
+
+Por outro lado, nas fases de aproximação de curta distância e final entre as espaçonaves, o movimento do perseguidor passa a ser descrito em relação ao alvo. 
+Nesse caso, utiliza-se o referencial \gls{lvlh}, centrado no alvo, que permite representar de forma direta o movimento relativo entre as duas espaçonaves.
+
+A Tabela~\ref{tab_fases_missao_referenciais} apresenta as fases da missão consideradas na simulação e os referenciais adotados em cada etapa.
+
+\begin{table}[H]
+\centering
+\caption{Fases da missão de \gls{rvdb} e referenciais utilizados na modelagem do movimento.}
+\label{tab_fases_missao_referenciais}
+\begin{tabular}{lll}
+\hline
+\textbf{Fase da missão} & \textbf{Tipo de movimento} & \textbf{Referencial} \\
+\hline
+Injeção orbital                & Movimento absoluto & \gls{eci} \\
+Órbita inicial                 & Movimento absoluto & \gls{eci} \\
+Transferência de órbita        & Movimento absoluto & \gls{eci} \\
+Aproximação de curta distância & Movimento relativo & LVLH \\
+Aproximação final              & Movimento relativo & LVLH \\
+\hline
+\end{tabular}
+\end{table}

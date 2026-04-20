@@ -1,0 +1,130 @@
+% sec 4.3.2
+\subsection{Equações Diferenciais da Cinemática}
+\label{sec_equacoes_cinematica}
+
+A orientação do perseguidor em órbita pode ser representada por diferentes parametrizações, entre as quais se destacam a matriz de cossenos diretores, os ângulos de Euler e os parâmetros de Euler (quatérnions). Nesta subseção, essas parametrizações são apresentadas de forma consistente com a formulação cinemática orbital adotada para o referencial \gls{lvlh}.
+
+Embora os ângulos de Euler ofereçam uma interpretação geométrica direta, baseada em rotações sequenciais em torno de eixos predefinidos, essa representação está sujeita a singularidades cinemáticas conhecidas como \emph{gimbal lock}, nas quais dois eixos de rotação tornam-se colineares e o sistema perde um grau de liberdade. Por essa razão, além da formulação em ângulos de Euler, também são apresentadas a matriz de cossenos diretores e a representação por quatérnions, as quais permitem descrever a atitude de forma mais adequada em diferentes contextos da modelagem e da simulação numérica.
+
+\input{4 Formulacao matematica/3 Equacoes movimento atitude/3.1 Matriz cosseno diretor.tex} % sec 4.3.3
+
+\input{4 Formulacao matematica/3 Equacoes movimento atitude/3.2 Angulos de euler.tex} % sec 4.3.4
+
+\input{4 Formulacao matematica/3 Equacoes movimento atitude/3.3 Quaternions.tex} % sec 4.3.5
+
+%% Subseção 4.3.6 (antiga 4.3.2)
+\subsection{Matriz de inércia}
+\label{sec_matriz_inercia_variavel}
+
+Após o estabelecimento da formulação dinâmica e das equações diferenciais da cinemática orbital, considera-se agora a extensão do modelo para o caso em que a movimentação do \gls{mr} altera a distribuição de massa do sistema. Nessa situação, a matriz de inércia da espaçonave robótica passa a depender da configuração interna do manipulador.
+
+No caso da espaçonave perseguidora, a distribuição de massa do sistema depende da configuração do \gls{mr}. Assim, considera-se agora que a matriz de inércia da espaçonave robótica dependa da configuração interna do sistema. Nesta subseção, a atitude da espaçonave é representada por quatérnions unitários, denotados por $\vec{q}_B(t)$, enquanto a configuração do \gls{mr} é descrita pelo vetor de coordenadas articulares:
+
+\begin{equation}
+\vec{q}(t)=
+\begin{bmatrix}
+q_1(t) \\
+q_2(t) \\
+q_3(t)
+\end{bmatrix}.
+\label{eq_vetor_juntas_mr}
+\end{equation}
+
+Com a seguinte restrição:
+
+\begin{equation}
+\vec{q}_B^{\,T}(t)\,\vec{q}_B(t)=1.
+\label{eq_restricao_quaternion_unitario}
+\end{equation}
+
+Ressalta-se que os quatérnions são empregados nesta formulação como parâmetros de atitude, e não como coordenadas generalizadas independentes, uma vez que seus quatro elementos estão sujeitos à restrição de norma unitária \cite{wie2008space}.
+A matriz de inércia total em torno do \gls{cdm}, expressa no referencial do corpo $B$, é modelada por:
+
+\begin{equation}
+\mathbf{I}_B\big(\vec{q}(t)\big)
+=
+\mathbf{I}_{\text{perseg},B}
++
+\mathbf{I}_{\text{manip},B}\big(\vec{q}(t)\big).
+\label{eq_inercia_total}
+\end{equation}
+
+O termo $\mathbf{I}_{\text{perseg},B}$ representa a matriz de inércia da espaçonave perseguidora, enquanto $\mathbf{I}_{\text{manip},B}\big(\vec{q}(t)\big)$ representa a contribuição do \gls{mr} durante o modo operacional, a qual depende da configuração das juntas e da orientação relativa dos elos em relação à espaçonave.
+Com base na formulação dinâmica de atitude em órbita apresentada anteriormente, a quantidade de movimento angular do sistema, expressa no referencial do corpo, é dada por:
+
+\begin{equation}
+\vec{H}_B(t)
+=
+\mathbf{I}_B\big(\vec{q}(t)\big)\,
+\vec{\omega}^{B/N}(t).
+\label{eq_H_def}
+\end{equation}
+
+A equação do momento angular mantém a forma geral:
+
+\begin{equation}
+\vec{M}
+=
+\left\{ \frac{d\vec{H}}{dt} \right\}_{N}.
+\label{eq_eq_momento_angular}
+\end{equation}
+
+Aplicando o teorema de transporte entre os referenciais $N$ e $B$, obtém-se \cite{wie2008space}:
+
+\begin{equation}
+\left\{ \frac{d\vec{H}_B}{dt} \right\}_{N}
+=
+\left\{ \frac{d\vec{H}_B}{dt} \right\}_{B}
++
+\vec{\omega}^{B/N} \times \vec{H}_B.
+\label{eq_teorema_transporte_H}
+\end{equation}
+
+Substituindo \eqref{eq_H_def} em \eqref{eq_teorema_transporte_H} e utilizando \eqref{eq_eq_momento_angular}, obtém-se a equação do movimento rotacional para o sistema com matriz de inércia dependente da configuração:
+
+\begin{equation}
+\vec{M}
+=
+\mathbf{I}_B\big(\vec{q}(t)\big)\,
+\dot{\vec{\omega}}^{B/N}
++
+\dot{\mathbf{I}}_B\big(\vec{q}(t)\big)\,
+\vec{\omega}^{B/N}
++
+\vec{\omega}^{B/N} \times
+\left(
+\mathbf{I}_B\big(\vec{q}(t)\big)\,
+\vec{\omega}^{B/N}
+\right).
+\label{eq_euler_inercia_variavel}
+\end{equation}
+
+Na Equação~\eqref{eq_euler_inercia_variavel}, o termo
+$\vec{\omega}^{B/N} \times \left(\mathbf{I}_B(\vec{q}(t))\,\vec{\omega}^{B/N}\right)$
+representa o efeito giroscópico, enquanto o termo
+$\dot{\mathbf{I}}_B(\vec{q}(t))\,\vec{\omega}^{B/N}$
+representa a contribuição associada à variação temporal da matriz de inércia, decorrente da redistribuição interna de massa provocada pelo movimento do \gls{mr}.
+Para explicitar a dependência da configuração do sistema, a matriz de inércia $\mathbf{I}_B(\vec{q})$ pode ser escrita em termos de seus momentos e produtos de inércia, os quais variam conforme a posição das juntas:
+
+\begin{equation}
+\mathbf{I}_B\big(\vec{q}\big)
+=
+\begin{bmatrix}
+I_{xx}(\vec{q}) & -I_{xy}(\vec{q}) & -I_{xz}(\vec{q}) \\
+-I_{xy}(\vec{q}) & I_{yy}(\vec{q}) & -I_{yz}(\vec{q}) \\
+-I_{xz}(\vec{q}) & -I_{yz}(\vec{q}) & I_{zz}(\vec{q})
+\end{bmatrix}.
+\label{eq_matriz_inercia_expandida}
+\end{equation}
+
+Consequentemente, a taxa de variação temporal da matriz de inércia é obtida pela derivada total em relação ao tempo. Aplicando a regra da cadeia, tem-se:
+
+\begin{equation}
+\dot{\mathbf{I}}_B\big(\vec{q}, \dot{\vec{q}}\big)
+=
+\sum_{k=1}^{3}
+\frac{\partial \mathbf{I}_B(\vec{q})}{\partial q_k}\,\dot{q}_k.
+\label{eq_derivada_inercia_expandida}
+\end{equation}
+
+Em que $q_k$ é a $k$-ésima coordenada articular do manipulador e $\dot{q}_k$ é a respectiva velocidade da junta.

@@ -1,0 +1,22 @@
+\section{Problema do encontro, acoplamento ou atracação}
+
+O problema de \gls{rvdb} consiste em conduzir uma espaçonave perseguidora até um veículo alvo em órbita, reduzindo progressivamente a distância relativa até que seja possível realizar uma operação segura de acoplamento ou atracação.
+Essa manobra envolve o controle simultâneo da dinâmica orbital relativa, da atitude da espaçonave e das condições geométricas necessárias para o contato final entre os veículos \cite{curtis2013orbital}.
+
+Durante a aproximação, a espaçonave perseguidora deve executar manobras que permitam alinhar posição, velocidade relativa e orientação em relação ao alvo. 
+Essas condições são necessárias para garantir que as interfaces mecânicas envolvidas na operação estejam adequadamente posicionadas no momento do contato.
+Em muitas missões, especialmente quando o alvo não coopera ativamente com a manobra, a operação pode exigir o uso de sensores de navegação relativa, algoritmos de controle e, em alguns casos, manipuladores robóticos para realizar a atracação ou estabilização do veículo alvo \cite{flores2014review}.
+
+De forma geral, o problema de \gls{rvdb} pode ser dividido em diferentes fases operacionais, que incluem a aproximação de longa distância a partir de uma órbita próxima, a aproximação de curta distância e a fase final de alinhamento e contato. Cada uma dessas etapas apresenta requisitos específicos de controle, navegação e segurança, tornando necessária a análise integrada da dinâmica orbital e da atitude das espaçonaves envolvidas \cite{fehse2003}.
+
+%%%%%%%%%%%
+
+\subsection{Diferença conceitual entre docking e berthing}
+
+Embora os termos \textit{docking} e \textit{berthing} sejam utilizados de forma conjunta em missões de \gls{rvdb}, eles representam operações distintas \cite{cook2011}.
+
+No \textit{docking}, uma espaçonave executa uma aproximação controlada até a porta de acoplamento do veículo alvo, alinhando os mecanismos de acoplamento até que ocorra o contato entre as interfaces. Após o contato inicial, ocorre a chamada atracação suave (\textit{soft capture}), seguida por processos de amortecimento de cargas e alinhamento estrutural, até que seja estabelecida a conexão estrutural definitiva entre as espaçonaves \cite{cook2011}.
+
+No \textit{berthing}, a aproximação final não é realizada diretamente pela espaçonave perseguidora. Nesse caso, o veículo alvo é capturado por um manipulador robótico e posicionado lentamente em frente à interface de acoplamento da estrutura receptora. Após essa etapa, são realizados processos de alinhamento e fixação estrutural até a conexão final entre os veículos \cite{cook2011}.
+
+Assim, enquanto o \textit{docking} envolve uma aproximação controlada diretamente entre as interfaces de acoplamento das espaçonaves, o \textit{berthing} depende da utilização de um manipulador robótico para capturar e posicionar o veículo antes da fixação final.

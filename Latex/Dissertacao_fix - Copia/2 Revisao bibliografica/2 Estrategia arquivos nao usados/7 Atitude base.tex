@@ -1,0 +1,10 @@
+\section{Estratégia de atitude da base}
+\label{sec:estrategia_atitude_base}
+
+A estratégia de atitude da base tem como objetivo manter a espaçonave perseguidora orientada de forma compatível com as necessidades de aproximação e captura.
+Assume-se que um dos eixos do corpo da base deve permanecer aproximadamente alinhado com a linha que une o centro de massa da base ao centro de massa do alvo, reduzindo o erro angular entre esses referenciais ao longo da aproximação.
+
+Além do apontamento, são impostos limites máximos de velocidade angular em cada eixo do corpo.
+A base não deve apresentar rotações rápidas ou oscilatórias para garantir condições adequadas de operação do manipulador robótico. 
+Assim, a atitude desejada é caracterizada por orientação próxima da referência e por taxas de rotação moderadas e amortecidas.
+Para atender a esses requisitos, adota-se um esquema de controle em malha fechada do tipo \gls{pd} aplicado à atitude da base.

@@ -12,8 +12,8 @@ T = T_{B} + \sum_{i=1}^{n} T_{i},
 
 onde $n$ é a quantidade de elos do \gls{mr}, neste trabalho considera-se $n = 3$.
 
-De forma geral, a energia cinética da espaçonave robótica (base + \gls{mr}) poderia ser decomposta em uma parcela translacional, associada ao movimento do seu centro de massa, e uma parcela rotacional, associada ao movimento de atitude em torno desse mesmo ponto.
-Neste trabalho, a dinâmica de translação do centro de massa global é tratada através do movimento orbital relativo no referencial \gls{lvlh}, enquanto que o termo translacional associado ao centro de massa não é repetida na formulação lagrangiana da dinâmica acoplada. Portanto, define-se $T_B$ como a parcela rotacional da energia cinética da espaçonave em torno do seu centro de massa.
+De forma geral, a energia cinética da espaçonave robótica (base + \gls{mr}) poderia ser decomposta em uma parcela translacional, associada ao movimento do seu \gls{cdm}, e uma parcela rotacional, associada ao movimento de atitude em torno desse mesmo ponto.
+Neste trabalho, a dinâmica de translação do \gls{cdm} global é tratada através do movimento orbital relativo no referencial \gls{lvlh}, enquanto que o termo translacional associado ao \gls{cdm} não é repetida na formulação lagrangiana da dinâmica acoplada. Portanto, define-se $T_B$ como a parcela rotacional da energia cinética da espaçonave em torno do seu \gls{cdm}.
 
 Quando somente a atitude é considerada como grau de liberdade dinâmico, essa
 energia cinética de atitude é escrita como
@@ -23,7 +23,7 @@ T_{B} =
 \label{eq:TB}
 \end{equation}
 em que $\mathbf{I}_B(\vec{q})$ é o tensor de inércia da \emph{espaçonave como
-um todo} (base + elos do manipulador) em torno do seu centro de massa global
+um todo} (base + elos do manipulador) em torno do seu \gls{cdm} global
 $G$, expresso no referencial $\{B\}$ fixo ao veículo. Em particular,
 $\mathbf{I}_B(\vec{q})$ depende da configuração articular $\vec{q}$, uma vez
 que a redistribuição de massa provocada pelo movimento dos elos altera a
@@ -31,7 +31,7 @@ posição de $G$ e o tensor de inércia equivalente da espaçonave.
 
 Na formulação acoplada adotada, os graus de liberdade de translação da base
 não são incluídos no vetor de coordenadas generalizadas: assume-se que o
-movimento do centro de massa global é prescrito pelo modelo de translação
+movimento do \gls{cdm} global é prescrito pelo modelo de translação
 orbital. Em um modelo completamente livre de forças externas, a conservação da
 quantidade de movimento linear implicaria um pequeno deslizamento da
 espaçonave ao longo da órbita em resposta ao deslocamento dos elos; tal efeito
@@ -48,14 +48,14 @@ T_i =
 \label{eq:Ti}
 \end{equation}
 em que ${}^{B}\!\vec v_{G_i}$ e ${}^{B}\!\vec\omega_i$ são, respectivamente, a
-velocidade linear do centro de massa e a velocidade angular do elo $i$,
+velocidade linear do \gls{cdm} e a velocidade angular do elo $i$,
 expressas no referencial $\{B\}$ e obtidas a partir do Jacobiano acoplado
 introduzido na Seção~\ref{sec:cinematica_diferencial_jacobiano}, e $I_i$ é o
-tensor de inércia do elo $i$ em torno do seu próprio centro de massa.
+tensor de inércia do elo $i$ em torno do seu próprio \gls{cdm}.
 
-Do ponto de vista físico, o termo translacional em \eqref{eq:Ti} representa o movimento do centro de massa do elo $i$ em relação ao corpo da espaçonave, por meio do quadrado da sua velocidade linear ${}^{B}\!\vec v_{G_i}$.
+Do ponto de vista físico, o termo translacional em \eqref{eq:Ti} representa o movimento do \gls{cdm} do elo $i$ em relação ao corpo da espaçonave, por meio do quadrado da sua velocidade linear ${}^{B}\!\vec v_{G_i}$.
 Em um sistema verdadeiramente livre de forças externas, a soma dessas contribuições está
-associada a um deslocamento efetivo do centro de massa global da espaçonave, de modo que o movimento dos elos induz um pequeno deslizamento da nave na órbita para garantir a conservação da quantidade de movimento linear.
+associada a um deslocamento efetivo do \gls{cdm} global da espaçonave, de modo que o movimento dos elos induz um pequeno deslizamento da nave na órbita para garantir a conservação da quantidade de movimento linear.
 No presente trabalho, esse efeito é tratado no nível do problema de translação orbital e não é modelado explicitamente na dinâmica acoplada de atitude e juntas.
 
 

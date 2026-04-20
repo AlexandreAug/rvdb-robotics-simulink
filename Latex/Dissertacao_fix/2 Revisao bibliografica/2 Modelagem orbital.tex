@@ -1,0 +1,13 @@
+\section{Modelagem orbital}
+\label{sec_modelagem_orbital}
+
+O estudo de operações de proximidade em órbita foi estabelecido por \cite{clohessy1960terminal}.
+Nesse trabalho foram derivadas as equações de movimento de uma espaçonave perseguidora em relação a um alvo utilizando um sistema de coordenadas local, conhecidas como equações de \gls{hcw}.
+Essa formulação permite calcular as velocidades necessárias para que o veículo perseguidor intercepte o alvo ao longo da trajetória relativa.
+
+De acordo com \cite{fehse2003}, essa hipótese de aproximação é consistente com o regime de operação típico das manobras de proximidade. 
+Durante as fases finais de aproximação em missões de \gls{rvdb}, a linearização dos termos gravitacionais não compromete a precisão necessária para o planejamento das manobras.
+
+O trabalho de \cite{santos2015discrete} investiga o problema de comando de atuadores em manobras de encontro e aproximação orbital, considerando a formulação do problema como uma tarefa de otimização multiobjetivo discreta.
+O autor propõe um método para determinar sequências ótimas de comandos de atuadores de espaçonaves, levando em conta objetivos conflitantes, como precisão da trajetória, consumo de combustível e esforço de controle.
+% A abordagem é aplicada ao problema de \textit{rendezvous} entre espaçonaves e avaliada em um ambiente de simulação de alta fidelidade. Além das simulações numéricas, o método é testado em um simulador \textit{hardware-in-the-loop} de rendezvous, permitindo validar experimentalmente o desempenho da estratégia de otimização no comando de atuadores e na execução de manobras orbitais de aproximação. \cite{santos2015discrete}

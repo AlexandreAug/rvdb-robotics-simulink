@@ -1,0 +1,3491 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{adachi1999}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e1000e5ee12eac6d82f1d352ac5f9d49}{%
+           family={Adachi},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af170583581e13848dd898d0062c90f1}{%
+           family={Yamaguchi},
+           familyi={Y\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2d64dbfc7cf3369db221f787ef27e28}{%
+           family={Kida},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=421aeecc15676d9549ba2e8a83a47a02}{%
+           family={Sekiguchi},
+           familyi={S\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8d386bd533a50057734b62a68e29532}{%
+           family={Yamada},
+           familyi={Y\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f81147d9284c2d671afe51698bbb4ac}{%
+           family={Chida},
+           familyi={C\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1916f8e6e01d51e029b77af8db86725f}
+      \strng{fullhash}{e002eedc69981401e123617a182295db}
+      \strng{fullhashraw}{e002eedc69981401e123617a182295db}
+      \strng{bibnamehash}{e002eedc69981401e123617a182295db}
+      \strng{authorbibnamehash}{e002eedc69981401e123617a182295db}
+      \strng{authornamehash}{1916f8e6e01d51e029b77af8db86725f}
+      \strng{authorfullhash}{e002eedc69981401e123617a182295db}
+      \strng{authorfullhashraw}{e002eedc69981401e123617a182295db}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Control Engineering Practice}
+      \field{number}{7}
+      \field{title}{On-orbit system identification experiments on Engineering Test Satellite-VI}
+      \field{volume}{7}
+      \field{year}{1999}
+      \field{pages}{831\bibrangedash 841}
+      \range{pages}{11}
+    \endentry
+    \entry{alali2024reinforcement}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1286f089f077b4fd4976e9036c3891cb}{%
+           family={Al\bibnamedelima Ali},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Abdullah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{384215ef6122685d931190fc68e5a015}
+      \strng{fullhash}{384215ef6122685d931190fc68e5a015}
+      \strng{fullhashraw}{384215ef6122685d931190fc68e5a015}
+      \strng{bibnamehash}{384215ef6122685d931190fc68e5a015}
+      \strng{authorbibnamehash}{384215ef6122685d931190fc68e5a015}
+      \strng{authornamehash}{384215ef6122685d931190fc68e5a015}
+      \strng{authorfullhash}{384215ef6122685d931190fc68e5a015}
+      \strng{authorfullhashraw}{384215ef6122685d931190fc68e5a015}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Control Engineering}
+      \field{title}{Reinforcement learning for path planning of free-floating space robotic manipulators}
+      \field{volume}{5}
+      \field{year}{2024}
+      \field{pages}{1394668}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fcteg.2024.1394668
+      \endverb
+    \endentry
+    \entry{alizadeh2024survey}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=21c3a07115a81fefe4f182bfa053b59a}{%
+           family={Alizadeh},
+           familyi={A\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4d0d1086c827359746430494268b1352}
+      \strng{fullhash}{4d0d1086c827359746430494268b1352}
+      \strng{fullhashraw}{4d0d1086c827359746430494268b1352}
+      \strng{bibnamehash}{4d0d1086c827359746430494268b1352}
+      \strng{authorbibnamehash}{4d0d1086c827359746430494268b1352}
+      \strng{authornamehash}{4d0d1086c827359746430494268b1352}
+      \strng{authorfullhash}{4d0d1086c827359746430494268b1352}
+      \strng{authorfullhashraw}{4d0d1086c827359746430494268b1352}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Robotics and AI}
+      \field{title}{A comprehensive survey of space robotic manipulators for on-orbit servicing}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{1470950}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/frobt.2024.1470950
+      \endverb
+    \endentry
+    \entry{arantes2010far}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=053cc5fbcf293b91a4e23771774ebf09}{%
+           family={Arantes\bibnamedelima Jr.},
+           familyi={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Gilberto},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d4331bceaebf8a257c04ca43425c5ab}{%
+           family={Rocco},
+           familyi={R\bibinitperiod},
+           given={Evandro\bibnamedelima Marconi},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=d1e8cc842f8e11255e2bb59b9a2b3ceb}{%
+           family={Theil},
+           familyi={T\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{69a3294bbb57759bdca3c1f9d7ea12d2}
+      \strng{fullhash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{fullhashraw}{0aa74a173c44f79eba129364332c36c5}
+      \strng{bibnamehash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{authorbibnamehash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{authornamehash}{69a3294bbb57759bdca3c1f9d7ea12d2}
+      \strng{authorfullhash}{0aa74a173c44f79eba129364332c36c5}
+      \strng{authorfullhashraw}{0aa74a173c44f79eba129364332c36c5}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{number}{9--10}
+      \field{title}{Far and Proximity Maneuvers of a Constellation of Service Satellites and Autonomous Pose Estimation of Customer Satellite Using Machine Vision}
+      \field{volume}{66}
+      \field{year}{2010}
+      \field{pages}{1493\bibrangedash 1505}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2009.11.022
+      \endverb
+    \endentry
+    \entry{astrom1995pid}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1b77956c091010989c5fc2426441bf07}{%
+           family={Åström},
+           familyi={Å\bibinitperiod},
+           given={Karl\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44be1c7157500a148884377dae85210e}{%
+           family={Hägglund},
+           familyi={H\bibinitperiod},
+           given={Tore},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Research Triangle Park, NC, USA}%
+      }
+      \list{publisher}{1}{%
+        {Instrument Society of America}%
+      }
+      \strng{namehash}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \strng{fullhash}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \strng{fullhashraw}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \strng{bibnamehash}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \strng{authorbibnamehash}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \strng{authornamehash}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \strng{authorfullhash}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \strng{authorfullhashraw}{69f57bfb420efc901b0e0fe6a4ef3c39}
+      \field{sortinit}{Å}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{1-55617-516-7}
+      \field{title}{PID Controllers}
+      \field{year}{1995}
+    \endentry
+    \entry{debruijn2011}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=444d0a33176e1cf8e5eb33da7c805084}{%
+           family={Bruijn},
+           familyi={B\bibinitperiod},
+           given={Ferdi\bibnamedelima De},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d39f83a2796eb6c9f7f0cbf1a298a09}{%
+           family={How},
+           familyi={H\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77c26d441b367da6e23610e91f423855}{%
+           family={Gill},
+           familyi={G\bibinitperiod},
+           given={Eberhard},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{520b44f7126240cbd931e202dfb2357b}
+      \strng{fullhash}{520b44f7126240cbd931e202dfb2357b}
+      \strng{fullhashraw}{520b44f7126240cbd931e202dfb2357b}
+      \strng{bibnamehash}{520b44f7126240cbd931e202dfb2357b}
+      \strng{authorbibnamehash}{520b44f7126240cbd931e202dfb2357b}
+      \strng{authornamehash}{520b44f7126240cbd931e202dfb2357b}
+      \strng{authorfullhash}{520b44f7126240cbd931e202dfb2357b}
+      \strng{authorfullhashraw}{520b44f7126240cbd931e202dfb2357b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Aerospace Engineering Sciences and Applications}
+      \field{month}{5}
+      \field{title}{Comparative analysis of Cartesian and curvilinear Clohessy--Wiltshire equations}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.7446/jaesa.0302.01
+      \endverb
+    \endentry
+    \entry{canadarm2}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e804b8667889ee4d133d9a1b710e1f2d}{%
+           family={{Canadian Space Agency (CSA)}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{fullhash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{fullhashraw}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{bibnamehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authorbibnamehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authornamehash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authorfullhash}{e804b8667889ee4d133d9a1b710e1f2d}
+      \strng{authorfullhashraw}{e804b8667889ee4d133d9a1b710e1f2d}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em January 2025}
+      \field{title}{About Canadarm2}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.asc-csa.gc.ca/eng/iss/canadarm2/about.asp
+      \endverb
+      \verb{url}
+      \verb https://www.asc-csa.gc.ca/eng/iss/canadarm2/about.asp
+      \endverb
+    \endentry
+    \entry{clohessy1960terminal}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ab18038c7b484ed46b56ed3ecd584b69}{%
+           family={Clohessy},
+           familyi={C\bibinitperiod},
+           given={W.\bibnamedelimi H.},
+           giveni={W\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb122c9c8515f7b4a0d9d7156c787d15}{%
+           family={Wiltshire},
+           familyi={W\bibinitperiod},
+           given={R.\bibnamedelimi S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5c6fa172cc7a1ba23637337caf329441}
+      \strng{fullhash}{5c6fa172cc7a1ba23637337caf329441}
+      \strng{fullhashraw}{5c6fa172cc7a1ba23637337caf329441}
+      \strng{bibnamehash}{5c6fa172cc7a1ba23637337caf329441}
+      \strng{authorbibnamehash}{5c6fa172cc7a1ba23637337caf329441}
+      \strng{authornamehash}{5c6fa172cc7a1ba23637337caf329441}
+      \strng{authorfullhash}{5c6fa172cc7a1ba23637337caf329441}
+      \strng{authorfullhashraw}{5c6fa172cc7a1ba23637337caf329441}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Aerospace Sciences}
+      \field{number}{9}
+      \field{title}{Terminal Guidance System for Satellite Rendezvous}
+      \field{volume}{27}
+      \field{year}{1960}
+      \field{pages}{653\bibrangedash 658}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.2514/8.8704
+      \endverb
+    \endentry
+    \entry{craig2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=57c29b307f6e70b7216c8c696af16b58}{%
+           family={Craig},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Prentice Hall}%
+      }
+      \strng{namehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{fullhash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{fullhashraw}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{bibnamehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authorbibnamehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authornamehash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authorfullhash}{57c29b307f6e70b7216c8c696af16b58}
+      \strng{authorfullhashraw}{57c29b307f6e70b7216c8c696af16b58}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{title}{Introduction to Robotics: Mechanics and Control}
+      \field{year}{2005}
+    \endentry
+    \entry{curtis2013orbital}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=55a7280b2d9a909f02706fed0fe1f209}{%
+           family={Curtis},
+           familyi={C\bibinitperiod},
+           given={Howard\bibnamedelima D.},
+           giveni={H\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford, UK}%
+      }
+      \list{publisher}{1}{%
+        {Butterworth-Heinemann}%
+      }
+      \strng{namehash}{55a7280b2d9a909f02706fed0fe1f209}
+      \strng{fullhash}{55a7280b2d9a909f02706fed0fe1f209}
+      \strng{fullhashraw}{55a7280b2d9a909f02706fed0fe1f209}
+      \strng{bibnamehash}{55a7280b2d9a909f02706fed0fe1f209}
+      \strng{authorbibnamehash}{55a7280b2d9a909f02706fed0fe1f209}
+      \strng{authornamehash}{55a7280b2d9a909f02706fed0fe1f209}
+      \strng{authorfullhash}{55a7280b2d9a909f02706fed0fe1f209}
+      \strng{authorfullhashraw}{55a7280b2d9a909f02706fed0fe1f209}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{978-0080977478}
+      \field{title}{Orbital Mechanics for Engineering Students}
+      \field{year}{2013}
+    \endentry
+    \entry{fonseca2017attitude}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=bd5f38ad50806f64e3fd40c7a2583f8b}{%
+           family={Da\bibnamedelima Fonseca},
+           familyi={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f4f3197f5f52dd6d3e85851fcb0bccbd}{%
+           family={Goes},
+           familyi={G\bibinitperiod},
+           given={Luiz\bibnamedelimb C.\bibnamedelimi S.},
+           giveni={L\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0911bd100bb5c14a8af708092137e0ce}{%
+           family={Seito},
+           familyi={S\bibinitperiod},
+           given={Narumi},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2ae294280bd8d6b19bc7e9dedfd70d3}{%
+           family={Silva\bibnamedelima Duarte},
+           familyi={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Mayara\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=5125d30089b163aed0f5f0eb8e8c0646}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Élcio\bibnamedelima Jeronimo},
+           giveni={É\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{4fded743cdac9f7b7c0b4a1412db3c6e}
+      \strng{fullhash}{9035bee9d61f03b754cd28811ec3bd6a}
+      \strng{fullhashraw}{9035bee9d61f03b754cd28811ec3bd6a}
+      \strng{bibnamehash}{9035bee9d61f03b754cd28811ec3bd6a}
+      \strng{authorbibnamehash}{9035bee9d61f03b754cd28811ec3bd6a}
+      \strng{authornamehash}{4fded743cdac9f7b7c0b4a1412db3c6e}
+      \strng{authorfullhash}{9035bee9d61f03b754cd28811ec3bd6a}
+      \strng{authorfullhashraw}{9035bee9d61f03b754cd28811ec3bd6a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{Attitude dynamics and control of a spacecraft like a robotic manipulator when implementing on-orbit servicing}
+      \field{volume}{137}
+      \field{year}{2017}
+      \field{pages}{490\bibrangedash 497}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2016.12.020
+      \endverb
+    \endentry
+    \entry{dong2022safe}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=92208244f9988d2a1870d0ad4a52541e}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2de6c0c4c1b1935d588715a6335d18ad}
+      \strng{fullhash}{2de6c0c4c1b1935d588715a6335d18ad}
+      \strng{fullhashraw}{2de6c0c4c1b1935d588715a6335d18ad}
+      \strng{bibnamehash}{2de6c0c4c1b1935d588715a6335d18ad}
+      \strng{authorbibnamehash}{2de6c0c4c1b1935d588715a6335d18ad}
+      \strng{authornamehash}{2de6c0c4c1b1935d588715a6335d18ad}
+      \strng{authorfullhash}{2de6c0c4c1b1935d588715a6335d18ad}
+      \strng{authorfullhashraw}{2de6c0c4c1b1935d588715a6335d18ad}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{A novel stable and safe model predictive control framework for multistage autonomous rendezvous and docking with a tumbling target}
+      \field{volume}{201}
+      \field{year}{2022}
+      \field{pages}{155\bibrangedash 168}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2022.09.013
+      \endverb
+    \endentry
+    \entry{dubowsky1993kinematics}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=46e5cf9b2668e84f9ecad7215f5e7d05}{%
+           family={Dubowsky},
+           familyi={D\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b6fcf805bd89b2aa479bfe43d8d190a}{%
+           family={Papadopoulos},
+           familyi={P\bibinitperiod},
+           given={Evangelos},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{12560940569e4d7ac137449956bbc408}
+      \strng{fullhash}{12560940569e4d7ac137449956bbc408}
+      \strng{fullhashraw}{12560940569e4d7ac137449956bbc408}
+      \strng{bibnamehash}{12560940569e4d7ac137449956bbc408}
+      \strng{authorbibnamehash}{12560940569e4d7ac137449956bbc408}
+      \strng{authornamehash}{12560940569e4d7ac137449956bbc408}
+      \strng{authorfullhash}{12560940569e4d7ac137449956bbc408}
+      \strng{authorfullhashraw}{12560940569e4d7ac137449956bbc408}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{5}
+      \field{title}{The Kinematics, Dynamics, and Control of Free-Flying and Free-Floating Space Robotic Systems}
+      \field{volume}{9}
+      \field{year}{1993}
+      \field{pages}{531\bibrangedash 543}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/70.258046
+      \endverb
+    \endentry
+    \entry{Geradin2004}{report}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=55bbf59917324962aed0534c9e5595b5}{%
+           family={Duysinx},
+           familyi={D\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e51d92f9d3ca7ef80957c21f3fa7039}{%
+           family={Geradin},
+           familyi={G\bibinitperiod},
+           given={Michel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {University of Liège}%
+      }
+      \list{location}{1}{%
+        {Liège, Belgium}%
+      }
+      \strng{namehash}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \strng{fullhash}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \strng{fullhashraw}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \strng{bibnamehash}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \strng{authorbibnamehash}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \strng{authornamehash}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \strng{authorfullhash}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \strng{authorfullhashraw}{789f220d1aac657a7f5fc87f7b10ebe0}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{An Introduction to Robotics: Mechanical Aspects}
+      \field{type}{Lecture notes}
+      \field{year}{2004}
+    \endentry
+    \entry{featherstone2008}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fa3cce175250fcafb8ef938e29b16b05}{%
+           family={Featherstone},
+           familyi={F\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science+Business Media, LLC}%
+      }
+      \strng{namehash}{fa3cce175250fcafb8ef938e29b16b05}
+      \strng{fullhash}{fa3cce175250fcafb8ef938e29b16b05}
+      \strng{fullhashraw}{fa3cce175250fcafb8ef938e29b16b05}
+      \strng{bibnamehash}{fa3cce175250fcafb8ef938e29b16b05}
+      \strng{authorbibnamehash}{fa3cce175250fcafb8ef938e29b16b05}
+      \strng{authornamehash}{fa3cce175250fcafb8ef938e29b16b05}
+      \strng{authorfullhash}{fa3cce175250fcafb8ef938e29b16b05}
+      \strng{authorfullhashraw}{fa3cce175250fcafb8ef938e29b16b05}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-387-74314-1}
+      \field{note}{Printed on acid-free paper}
+      \field{title}{Rigid Body Dynamics Algorithms}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1007/978-1-4899-7560-7
+      \endverb
+    \endentry
+    \entry{fehse2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5ecb95438e87e12b20e8c9e9c27d0db7}{%
+           family={Fehse},
+           familyi={F\bibinitperiod},
+           given={Wigbert},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{fullhash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{fullhashraw}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{bibnamehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authorbibnamehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authornamehash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authorfullhash}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \strng{authorfullhashraw}{5ecb95438e87e12b20e8c9e9c27d0db7}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521824927}
+      \field{series}{Cambridge Aerospace Series}
+      \field{title}{Automated Rendezvous and Docking of Spacecraft}
+      \field{year}{2003}
+    \endentry
+    \entry{fiori2024modeling}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=bf94679d7fc8c3fdef9fca3d003d86d8}{%
+           family={Fiori},
+           familyi={F\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8016431ccdf22ca24124abe137219fb1}{%
+           family={Rachiglia},
+           familyi={R\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00883974e0f4ebd5eb8b166530f89110}{%
+           family={Sabatini},
+           familyi={S\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c5ba473d565d6f9cc611a1f0c66e418a}{%
+           family={Sampaolesi},
+           familyi={S\bibinitperiod},
+           given={Edoardo},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5f9065c5487416f0b3ec5f4b4067b045}
+      \strng{fullhash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{fullhashraw}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{bibnamehash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{authorbibnamehash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{authornamehash}{5f9065c5487416f0b3ec5f4b4067b045}
+      \strng{authorfullhash}{72f13376289b3f5c98cdfc205ee32391}
+      \strng{authorfullhashraw}{72f13376289b3f5c98cdfc205ee32391}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aerospace}
+      \field{number}{3}
+      \field{title}{Modeling, Simulation and Control of a Spacecraft: Automated Rendezvous under Positional Constraints}
+      \field{volume}{11}
+      \field{year}{2024}
+      \field{pages}{245}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/aerospace11030245
+      \endverb
+    \endentry
+    \entry{flores2014review}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9a14c40aff9e47c4678d2014551b5c62}{%
+           family={Flores-Abad},
+           familyi={F\bibinithyphendelim A\bibinitperiod},
+           given={Angel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d891d71959c065793434b27a8dd1d0e8}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Ou},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62f9e4ae16a6df89c53d8f58a7fbd15e}{%
+           family={Pham},
+           familyi={P\bibinitperiod},
+           given={Khanh},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3de3711a02757d9fcb4614193d64955}{%
+           family={Ulrich},
+           familyi={U\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5cf00befd539fddaeff4287c9704eb43}
+      \strng{fullhash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{fullhashraw}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{bibnamehash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{authorbibnamehash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{authornamehash}{5cf00befd539fddaeff4287c9704eb43}
+      \strng{authorfullhash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{authorfullhashraw}{21ec4892342a2135d3f92a45b6b9412f}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Progress in Aerospace Sciences}
+      \field{title}{A review of space robotics technologies for on-orbit servicing}
+      \field{volume}{68}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+    \endentry
+    \entry{floresabad2014review}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=9a14c40aff9e47c4678d2014551b5c62}{%
+           family={Flores-Abad},
+           familyi={F\bibinithyphendelim A\bibinitperiod},
+           given={Angel},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d891d71959c065793434b27a8dd1d0e8}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Ou},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=62f9e4ae16a6df89c53d8f58a7fbd15e}{%
+           family={Pham},
+           familyi={P\bibinitperiod},
+           given={Khanh},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3de3711a02757d9fcb4614193d64955}{%
+           family={Ulrich},
+           familyi={U\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5cf00befd539fddaeff4287c9704eb43}
+      \strng{fullhash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{fullhashraw}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{bibnamehash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{authorbibnamehash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{authornamehash}{5cf00befd539fddaeff4287c9704eb43}
+      \strng{authorfullhash}{21ec4892342a2135d3f92a45b6b9412f}
+      \strng{authorfullhashraw}{21ec4892342a2135d3f92a45b6b9412f}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Progress in Aerospace Sciences}
+      \field{title}{A review of space robotics technologies for on-orbit servicing}
+      \field{volume}{68}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1016/j.paerosci.2014.03.002
+      \endverb
+    \endentry
+    \entry{fonseca2016dynamics}{unpublished}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=57b47ebee24c84bc4740a9714d9bd177}{%
+           family={Unfried},
+           familyi={U\bibinitperiod},
+           given={Luciano},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c8c83f8a0071a6bc3666c54bdcf40d4}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={Glaydson\bibnamedelimb Luiz\bibnamedelima Bertoze},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{fullhash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{fullhashraw}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{bibnamehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authorbibnamehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authornamehash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authorfullhash}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \strng{authorfullhashraw}{ec4d756e5b27c81303dbf9b4d73c656d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Technical paper / unpublished manuscript}
+      \field{title}{Dynamics Analysis of a Manipulator-Like Spacecraft in the Close Range Approach for Rendezvous and Docking/Berthing by Using the Lagrangian Formulation with the Lagrange's Multiplier Approach to Account for the Reaction Forces/Torque in the Manipulator Joints}
+      \field{year}{2016}
+    \endentry
+    \entry{fonseca2019kinematics}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ef43c023cd3656aa40e7328788c692a0}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima Milagre},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=45e3f864094d0c1589400280781bcb3e}{%
+           family={Pontuschka},
+           familyi={P\bibinitperiod},
+           given={Maurício\bibnamedelima Nacib},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c8c83f8a0071a6bc3666c54bdcf40d4}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={Glaydson\bibnamedelimb Luiz\bibnamedelima Bertoze},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IntechOpen}%
+      }
+      \strng{namehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{fullhash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{fullhashraw}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{bibnamehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authorbibnamehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authornamehash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authorfullhash}{62a3c876f314f23d77dcac00ebafeb73}
+      \strng{authorfullhashraw}{62a3c876f314f23d77dcac00ebafeb73}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Kinematics}
+      \field{title}{Kinematics for Spacecraft-Type Robotic Manipulators}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.5772/intechopen.85636
+      \endverb
+    \endentry
+    \entry{from2011singularityfree}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9f353f130fac067abdda0e2baa5f8357}{%
+           family={From},
+           familyi={F\bibinitperiod},
+           given={P{å}l\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ac14e4ed30e52c9405a99855b8d35db7}{%
+           family={Pettersen},
+           familyi={P\bibinitperiod},
+           given={Kristin\bibnamedelima Ytterstad},
+           giveni={K\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4b7e4539de073ff61c873a33de2b436e}{%
+           family={Gravdahl},
+           familyi={G\bibinitperiod},
+           given={Jan\bibnamedelima T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3950f5def5b68060c697e8552bca2ee1}
+      \strng{fullhash}{3950f5def5b68060c697e8552bca2ee1}
+      \strng{fullhashraw}{3950f5def5b68060c697e8552bca2ee1}
+      \strng{bibnamehash}{3950f5def5b68060c697e8552bca2ee1}
+      \strng{authorbibnamehash}{3950f5def5b68060c697e8552bca2ee1}
+      \strng{authornamehash}{3950f5def5b68060c697e8552bca2ee1}
+      \strng{authorfullhash}{3950f5def5b68060c697e8552bca2ee1}
+      \strng{authorfullhashraw}{3950f5def5b68060c697e8552bca2ee1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{number}{11--12}
+      \field{title}{Singularity-free dynamic equations of spacecraft-manipulator systems}
+      \field{volume}{69}
+      \field{year}{2011}
+      \field{pages}{1057\bibrangedash 1065}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2011.06.014
+      \endverb
+    \endentry
+    \entry{gavilanez2024vision}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=953bb5feb8e10231aab8348f590e475f}{%
+           family={Gavilanez},
+           familyi={G\bibinitperiod},
+           given={Gabriela},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39e392a0ba5dd2944ec8b4ca0fea2797}{%
+           family={Moncayo},
+           familyi={M\bibinitperiod},
+           given={Hever},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d0532f9a0dc75a0936cafa96606ebecd}
+      \strng{fullhash}{d0532f9a0dc75a0936cafa96606ebecd}
+      \strng{fullhashraw}{d0532f9a0dc75a0936cafa96606ebecd}
+      \strng{bibnamehash}{d0532f9a0dc75a0936cafa96606ebecd}
+      \strng{authorbibnamehash}{d0532f9a0dc75a0936cafa96606ebecd}
+      \strng{authornamehash}{d0532f9a0dc75a0936cafa96606ebecd}
+      \strng{authorfullhash}{d0532f9a0dc75a0936cafa96606ebecd}
+      \strng{authorfullhashraw}{d0532f9a0dc75a0936cafa96606ebecd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{Vision-based relative position and attitude determination of non-cooperative spacecraft using a generative model architecture}
+      \field{volume}{225}
+      \field{year}{2024}
+      \field{pages}{131\bibrangedash 140}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2024.07.039
+      \endverb
+    \endentry
+    \entry{halliday_resnick_walker_fundamentos1}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9d9a6552821ea504ab1a5c767dddff92}{%
+           family={Halliday},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8967f5a0664f741b0ef2530a47e698fa}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa8304879d8f7d99c7c4570759b948e2}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Jearl},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Rio de Janeiro}%
+      }
+      \list{publisher}{1}{%
+        {LTC -- Livros Técnicos e Científicos Editora}%
+      }
+      \strng{namehash}{3978689396696961b0bd612b55ccf075}
+      \strng{fullhash}{3978689396696961b0bd612b55ccf075}
+      \strng{fullhashraw}{3978689396696961b0bd612b55ccf075}
+      \strng{bibnamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorbibnamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authornamehash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorfullhash}{3978689396696961b0bd612b55ccf075}
+      \strng{authorfullhashraw}{3978689396696961b0bd612b55ccf075}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{note}{Tradução para o português}
+      \field{subtitle}{Mecânica}
+      \field{title}{Fundamentos de Física}
+      \field{volume}{1}
+      \field{year}{1996}
+    \endentry
+    \entry{hill1878}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4fca048ab1929a5de34306fc3e223dbb}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4fca048ab1929a5de34306fc3e223dbb}
+      \strng{fullhash}{4fca048ab1929a5de34306fc3e223dbb}
+      \strng{fullhashraw}{4fca048ab1929a5de34306fc3e223dbb}
+      \strng{bibnamehash}{4fca048ab1929a5de34306fc3e223dbb}
+      \strng{authorbibnamehash}{4fca048ab1929a5de34306fc3e223dbb}
+      \strng{authornamehash}{4fca048ab1929a5de34306fc3e223dbb}
+      \strng{authorfullhash}{4fca048ab1929a5de34306fc3e223dbb}
+      \strng{authorfullhashraw}{4fca048ab1929a5de34306fc3e223dbb}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Journal of Mathematics}
+      \field{number}{1}
+      \field{title}{Researches in the Lunar Theory}
+      \field{volume}{1}
+      \field{year}{1878}
+      \field{pages}{5\bibrangedash 26}
+      \range{pages}{22}
+    \endentry
+    \entry{hughes1986spacecraft}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0e9832806f2ee8fa417f120001664fe6}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Peter\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{0e9832806f2ee8fa417f120001664fe6}
+      \strng{fullhash}{0e9832806f2ee8fa417f120001664fe6}
+      \strng{fullhashraw}{0e9832806f2ee8fa417f120001664fe6}
+      \strng{bibnamehash}{0e9832806f2ee8fa417f120001664fe6}
+      \strng{authorbibnamehash}{0e9832806f2ee8fa417f120001664fe6}
+      \strng{authornamehash}{0e9832806f2ee8fa417f120001664fe6}
+      \strng{authorfullhash}{0e9832806f2ee8fa417f120001664fe6}
+      \strng{authorfullhashraw}{0e9832806f2ee8fa417f120001664fe6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spacecraft Attitude Dynamics}
+      \field{year}{1986}
+    \endentry
+    \entry{junkins1986optimal}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=fc213a94bb17c691b35d3ec947794815}{%
+           family={Junkins},
+           familyi={J\bibinitperiod},
+           given={John\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d24834dbab336f5b49d9d597cf178d64}{%
+           family={Turner},
+           familyi={T\bibinitperiod},
+           given={James\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \strng{fullhash}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \strng{fullhashraw}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \strng{bibnamehash}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \strng{authorbibnamehash}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \strng{authornamehash}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \strng{authorfullhash}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \strng{authorfullhashraw}{dce0be42187b5b18f0ed75bd1a1883d7}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Optimal Spacecraft Rotational Maneuvers}
+      \field{year}{1986}
+    \endentry
+    \entry{khalil2002nonlinear}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c687708249e29c8fa3d8d0c0ff1612f9}{%
+           family={Khalil},
+           familyi={K\bibinitperiod},
+           given={Hassan\bibnamedelima K.},
+           giveni={H\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \strng{fullhash}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \strng{fullhashraw}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \strng{bibnamehash}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \strng{authorbibnamehash}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \strng{authornamehash}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \strng{authorfullhash}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \strng{authorfullhashraw}{c687708249e29c8fa3d8d0c0ff1612f9}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{Nonlinear Systems}
+      \field{year}{2002}
+    \endentry
+    \entry{vedant2025longrange}{online}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8ae51e3521c88d26ae54523e229445ac}{%
+           family={Kini},
+           familyi={K\bibinitperiod},
+           given={Vedant\bibnamedelima Vivek},
+           giveni={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=965555930adb9ca9dd662f2895a7cd23}{%
+           family={Surya},
+           familyi={S\bibinitperiod},
+           given={Dantu\bibnamedelima Phani},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=577be3cfaa375e6f3a114d258a5289f6}{%
+           family={Sahoo},
+           familyi={S\bibinitperiod},
+           given={Rakesh\bibnamedelima Kumar},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffb5d198fdf21c9d88c9035af7469329}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Manoranjan},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0172cc8e882754835e38de31814b0102}
+      \strng{fullhash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{fullhashraw}{433b07562eb26be9fbea34cf9391e307}
+      \strng{bibnamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorbibnamehash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authornamehash}{0172cc8e882754835e38de31814b0102}
+      \strng{authorfullhash}{433b07562eb26be9fbea34cf9391e307}
+      \strng{authorfullhashraw}{433b07562eb26be9fbea34cf9391e307}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{eess.SY}
+      \field{eprinttype}{arxiv}
+      \field{title}{Long-Range Rendezvous and Docking Maneuver Control of Satellite using Cross-Feedback Sliding Mode Controller}
+      \field{urlday}{12}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{eprint}
+      \verb 2504.01203
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2504.01203
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2504.01203
+      \endverb
+    \endentry
+    \entry{lynch2017modern}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ab9086b1452a1a9813fc6765151b4f61}{%
+           family={Lynch},
+           familyi={L\bibinitperiod},
+           given={Kevin\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66f19f2d439b6eb60c024ab622b0389f}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Frank\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{8d01efb70f6cec86f711e78e22f97a48}
+      \strng{fullhash}{8d01efb70f6cec86f711e78e22f97a48}
+      \strng{fullhashraw}{8d01efb70f6cec86f711e78e22f97a48}
+      \strng{bibnamehash}{8d01efb70f6cec86f711e78e22f97a48}
+      \strng{authorbibnamehash}{8d01efb70f6cec86f711e78e22f97a48}
+      \strng{authornamehash}{8d01efb70f6cec86f711e78e22f97a48}
+      \strng{authorfullhash}{8d01efb70f6cec86f711e78e22f97a48}
+      \strng{authorfullhashraw}{8d01efb70f6cec86f711e78e22f97a48}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781107156302}
+      \field{title}{Modern Robotics: Mechanics, Planning, and Control}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb http://modernrobotics.org
+      \endverb
+      \verb{url}
+      \verb http://modernrobotics.org
+      \endverb
+    \endentry
+    \entry{madonna2025guidance}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=67a674dbb0a04a67d2f8fc9a58dbfeeb}{%
+           family={Madonna},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7bf22bec233b106ca92742be6b7562d1}
+      \strng{fullhash}{7bf22bec233b106ca92742be6b7562d1}
+      \strng{fullhashraw}{7bf22bec233b106ca92742be6b7562d1}
+      \strng{bibnamehash}{7bf22bec233b106ca92742be6b7562d1}
+      \strng{authorbibnamehash}{7bf22bec233b106ca92742be6b7562d1}
+      \strng{authornamehash}{7bf22bec233b106ca92742be6b7562d1}
+      \strng{authorfullhash}{7bf22bec233b106ca92742be6b7562d1}
+      \strng{authorfullhashraw}{7bf22bec233b106ca92742be6b7562d1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Aerospace}
+      \field{number}{8}
+      \field{title}{Guidance and Control Architecture for Rendezvous and Final Approach to a Non-Cooperative Spacecraft in Short-Range Operations}
+      \field{volume}{12}
+      \field{year}{2025}
+      \field{pages}{708}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/aerospace12080708
+      \endverb
+    \endentry
+    \entry{mahendrakar2023}{misc}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=e7d2f5a3f378b480091ed8ba79d13e5d}{%
+           family={Mahendrakar},
+           familyi={M\bibinitperiod},
+           given={Trupti},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f064d98680e226a839006366b3cbb01}{%
+           family={Holmberg},
+           familyi={H\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48dcbcfe8204b79e2cb61746001ace1d}{%
+           family={Ekblad},
+           familyi={E\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fbfc77b7e8e15df23468d8d84ace105}{%
+           family={Conti},
+           familyi={C\bibinitperiod},
+           given={Emma},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bc499e7a7fdf3aa04c4ef4fe7d15fe1}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Ryan\bibnamedelima T.},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c82c4dff1f3cbeba28bc9bad58cc4bbb}{%
+           family={Wilde},
+           familyi={W\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f1e4fac9745763b4478ebbdf357994ba}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={Isaac},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {[S.l.]}%
+      }
+      \strng{namehash}{47a27c1ad9361c8ef9b78904174bb91d}
+      \strng{fullhash}{5d97848657cecea711dddbc903e3cc70}
+      \strng{fullhashraw}{5d97848657cecea711dddbc903e3cc70}
+      \strng{bibnamehash}{5d97848657cecea711dddbc903e3cc70}
+      \strng{authorbibnamehash}{5d97848657cecea711dddbc903e3cc70}
+      \strng{authornamehash}{47a27c1ad9361c8ef9b78904174bb91d}
+      \strng{authorfullhash}{5d97848657cecea711dddbc903e3cc70}
+      \strng{authorfullhashraw}{5d97848657cecea711dddbc903e3cc70}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{(Preprint) AAS 23-423}
+      \field{note}{Data e local exatos não informados}
+      \field{title}{Autonomous Rendezvous with Non-cooperative Target Objects with Swarm Chasers and Observers}
+      \field{year}{2023}
+    \endentry
+    \entry{mathworks_space_rendezvous_docking}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d2b0d998977e6379aad61f1b56ac3c1}{%
+           family={{MathWorks}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {MathWorks}%
+      }
+      \strng{namehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{fullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{bibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorbibnamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authornamehash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhash}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \strng{authorfullhashraw}{2d2b0d998977e6379aad61f1b56ac3c1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{MATLAB®{} \& Simulink®{}, Aerospace Blockset example}
+      \field{title}{Space Rendezvous and Docking}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.mathworks.com/help/aeroblks/spacecraft-rendezvous-and-docking.html
+      \endverb
+      \verb{url}
+      \verb https://www.mathworks.com/help/aeroblks/spacecraft-rendezvous-and-docking.html
+      \endverb
+    \endentry
+    \entry{murray1994mathematical}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=22ec7dc3434ec7866e28d570204999f8}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Richard\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6add39ad0b25b0f40aff64937f444b3a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zexiang},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d756b35e7b530d260e5a0807d1953354}{%
+           family={Sastry},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi Shankar},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{adb744a4e5e7e0f8ac9032922b121530}
+      \strng{fullhash}{adb744a4e5e7e0f8ac9032922b121530}
+      \strng{fullhashraw}{adb744a4e5e7e0f8ac9032922b121530}
+      \strng{bibnamehash}{adb744a4e5e7e0f8ac9032922b121530}
+      \strng{authorbibnamehash}{adb744a4e5e7e0f8ac9032922b121530}
+      \strng{authornamehash}{adb744a4e5e7e0f8ac9032922b121530}
+      \strng{authorfullhash}{adb744a4e5e7e0f8ac9032922b121530}
+      \strng{authorfullhashraw}{adb744a4e5e7e0f8ac9032922b121530}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780849379819}
+      \field{title}{A Mathematical Introduction to Robotic Manipulation}
+      \field{year}{1994}
+    \endentry
+    \entry{na2019vision}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a2b438b3d05dad49f4efe13f98e43642}{%
+           family={Na},
+           familyi={N\bibinitperiod},
+           given={Yunju},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01f5cb1ac2762c1cf73c25a8ec0d7742}{%
+           family={Bang},
+           familyi={B\bibinitperiod},
+           given={Hyochoong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3c775a60bd6c5e9c40e3406512b3fb89}{%
+           family={Mok},
+           familyi={M\bibinitperiod},
+           given={Sung-Hoon},
+           giveni={S\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Daejeon, Republic of Korea}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fe18442279d176594d3b4c53db50a981}
+      \strng{fullhash}{fe18442279d176594d3b4c53db50a981}
+      \strng{fullhashraw}{fe18442279d176594d3b4c53db50a981}
+      \strng{bibnamehash}{fe18442279d176594d3b4c53db50a981}
+      \strng{authorbibnamehash}{fe18442279d176594d3b4c53db50a981}
+      \strng{authornamehash}{fe18442279d176594d3b4c53db50a981}
+      \strng{authorfullhash}{fe18442279d176594d3b4c53db50a981}
+      \strng{authorfullhashraw}{fe18442279d176594d3b4c53db50a981}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Aeronautical and Space Sciences}
+      \field{month}{6}
+      \field{note}{Received: 20 December 2018; Revised: 5 April 2019; Accepted: 26 April 2019; Published online: 18 June 2019}
+      \field{number}{4}
+      \field{title}{Vision-Based Relative Navigation Using Dual Quaternion for Spacecraft Proximity Operations}
+      \field{volume}{20}
+      \field{year}{2019}
+      \field{pages}{1010\bibrangedash 1023}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/s42405-019-00171-8
+      \endverb
+    \endentry
+    \entry{nardin2017_simulador}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=21ae2b0e988bbd042fd006c5a8d55be9}{%
+           family={Nardin},
+           familyi={N\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf967decc8bb71b1511fda9a18f0e4f9}{%
+           family={Rocco},
+           familyi={R\bibinitperiod},
+           given={E.\bibnamedelimi M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {São José dos Campos, SP, Brasil}%
+      }
+      \list{organization}{1}{%
+        {Instituto Nacional de Pesquisas Espaciais (INPE)}%
+      }
+      \strng{namehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{fullhash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{fullhashraw}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{bibnamehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authorbibnamehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authornamehash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authorfullhash}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \strng{authorfullhashraw}{069dbdb3ad9f62faa603d986e51e0fb8}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Anais do 8{º} Workshop em Engenharia e Tecnologia Espaciais}
+      \field{month}{8}
+      \field{note}{09--10 de agosto de 2017}
+      \field{title}{Simulador de Manobras de Atracação de Satélites Dotados de Manipuladores Robóticos}
+      \field{year}{2017}
+    \endentry
+    \entry{nasa1stDocking}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1f99771bc3e23e6097509a331544ab65}{%
+           family={{NASA}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{fullhash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{fullhashraw}{1f99771bc3e23e6097509a331544ab65}
+      \strng{bibnamehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authorbibnamehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authornamehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authorfullhash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authorfullhashraw}{1f99771bc3e23e6097509a331544ab65}
+      \field{extraname}{1}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em: 2025-01-02}
+      \field{title}{55 Years Ago: Gemini VIII, the First Docking in Space}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.nasa.gov/history/55-years-ago-gemini-viii-the-first-docking-in-space/
+      \endverb
+      \verb{url}
+      \verb https://www.nasa.gov/history/55-years-ago-gemini-viii-the-first-docking-in-space/
+      \endverb
+    \endentry
+    \entry{nasaISS}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1f99771bc3e23e6097509a331544ab65}{%
+           family={NASA},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{fullhash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{fullhashraw}{1f99771bc3e23e6097509a331544ab65}
+      \strng{bibnamehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authorbibnamehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authornamehash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authorfullhash}{1f99771bc3e23e6097509a331544ab65}
+      \strng{authorfullhashraw}{1f99771bc3e23e6097509a331544ab65}
+      \field{extraname}{2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acesso em January 2025}
+      \field{title}{International Space Station}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.nasa.gov/reference/international-space-station/
+      \endverb
+      \verb{url}
+      \verb https://www.nasa.gov/reference/international-space-station/
+      \endverb
+    \endentry
+    \entry{ISSaltitude}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=053017d31303414f79f93ca0045d5fda}{%
+           family={{National Aeronautics and Space Administration (NASA)}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{053017d31303414f79f93ca0045d5fda}
+      \strng{fullhash}{053017d31303414f79f93ca0045d5fda}
+      \strng{fullhashraw}{053017d31303414f79f93ca0045d5fda}
+      \strng{bibnamehash}{053017d31303414f79f93ca0045d5fda}
+      \strng{authorbibnamehash}{053017d31303414f79f93ca0045d5fda}
+      \strng{authornamehash}{053017d31303414f79f93ca0045d5fda}
+      \strng{authorfullhash}{053017d31303414f79f93ca0045d5fda}
+      \strng{authorfullhashraw}{053017d31303414f79f93ca0045d5fda}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Encyclopedia entry. Updated May 23, 2023. Page last updated Nov 27, 2025}
+      \field{title}{International Space Station}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nasa.gov/reference/international-space-station/
+      \endverb
+      \verb{url}
+      \verb https://www.nasa.gov/reference/international-space-station/
+      \endverb
+    \endentry
+    \entry{nenchev1999reaction}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=54586232596784bec8423c4224bf81dc}{%
+           family={Nenchev},
+           familyi={N\bibinitperiod},
+           given={Dragomir\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00f2f390e4f769bd7ba816b64972b509}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c910074b92e42d28ba4f873e055406dc}{%
+           family={Vichitkulsawat},
+           familyi={V\bibinitperiod},
+           given={Prasert},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce27f4628aa98acfd5da118acea93089}{%
+           family={Uchiyama},
+           familyi={U\bibinitperiod},
+           given={Masaru},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{88cb009d3c389545aa4808e45e04c4a0}
+      \strng{fullhash}{cfad345228094672fd5d4763ee7b01a3}
+      \strng{fullhashraw}{cfad345228094672fd5d4763ee7b01a3}
+      \strng{bibnamehash}{cfad345228094672fd5d4763ee7b01a3}
+      \strng{authorbibnamehash}{cfad345228094672fd5d4763ee7b01a3}
+      \strng{authornamehash}{88cb009d3c389545aa4808e45e04c4a0}
+      \strng{authorfullhash}{cfad345228094672fd5d4763ee7b01a3}
+      \strng{authorfullhashraw}{cfad345228094672fd5d4763ee7b01a3}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{6}
+      \field{title}{Reaction Null-Space Control of Flexible Structure Mounted Manipulator Systems}
+      \field{volume}{15}
+      \field{year}{1999}
+      \field{pages}{1011\bibrangedash 1023}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/70.817666
+      \endverb
+    \endentry
+    \entry{nevins1971}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=97432a38f4be97cb48699a35630edd92}{%
+           family={Nevins},
+           familyi={N\bibinitperiod},
+           given={James\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{97432a38f4be97cb48699a35630edd92}
+      \strng{fullhash}{97432a38f4be97cb48699a35630edd92}
+      \strng{fullhashraw}{97432a38f4be97cb48699a35630edd92}
+      \strng{bibnamehash}{97432a38f4be97cb48699a35630edd92}
+      \strng{authorbibnamehash}{97432a38f4be97cb48699a35630edd92}
+      \strng{authornamehash}{97432a38f4be97cb48699a35630edd92}
+      \strng{authorfullhash}{97432a38f4be97cb48699a35630edd92}
+      \strng{authorfullhashraw}{97432a38f4be97cb48699a35630edd92}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Rocket Society}
+      \field{note}{Acesso em: 2025-01-02}
+      \field{title}{Apollo, a Transition in the Art of Piloting a Vehicle}
+      \field{volume}{Fall 1971}
+      \field{year}{1971}
+      \verb{doi}
+      \verb 10.1002/j.2161-4296.1971.tb00098.x
+      \endverb
+    \endentry
+    \entry{nguyenhuynh2013adaptive}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a188a8ff4b9a299fcc3ed69da8885f41}{%
+           family={Nguyen-Huynh},
+           familyi={N\bibinithyphendelim H\bibinitperiod},
+           given={Thai\bibnamedelima Chau},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1c405714d88483ba83857f19f254d82}{%
+           family={Sharf},
+           familyi={S\bibinitperiod},
+           given={Inna},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \strng{fullhash}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \strng{fullhashraw}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \strng{bibnamehash}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \strng{authorbibnamehash}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \strng{authornamehash}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \strng{authorfullhash}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \strng{authorfullhashraw}{a8fb63559d74ec1c04fa7a84f4a64109}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Guidance, Control, and Dynamics}
+      \field{number}{2}
+      \field{title}{Adaptive reactionless motion and parameter identification in post-capture of space debris}
+      \field{volume}{36}
+      \field{year}{2013}
+      \field{pages}{404\bibrangedash 414}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.2514/1.57856
+      \endverb
+    \endentry
+    \entry{nishida2011strategy}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ea61c51b3d03a0b725b1ed3a9995cbf0}{%
+           family={Nishida},
+           familyi={N\bibinitperiod},
+           given={Shin-Ichiro},
+           giveni={S\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ff82c996c9203e7ea4046f64d6e0dfa}{%
+           family={Kawamoto},
+           familyi={K\bibinitperiod},
+           given={Satomi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{026648b5893c02013b6a062895c5982d}
+      \strng{fullhash}{026648b5893c02013b6a062895c5982d}
+      \strng{fullhashraw}{026648b5893c02013b6a062895c5982d}
+      \strng{bibnamehash}{026648b5893c02013b6a062895c5982d}
+      \strng{authorbibnamehash}{026648b5893c02013b6a062895c5982d}
+      \strng{authornamehash}{026648b5893c02013b6a062895c5982d}
+      \strng{authorfullhash}{026648b5893c02013b6a062895c5982d}
+      \strng{authorfullhashraw}{026648b5893c02013b6a062895c5982d}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{Strategy for capturing of a tumbling space debris}
+      \field{volume}{68}
+      \field{year}{2011}
+      \field{pages}{113\bibrangedash 120}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2010.06.045
+      \endverb
+    \endentry
+    \entry{mev_northrop}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0c64907e559117e32c07abc515c87983}{%
+           family={{Northrop Grumman}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Northrop Grumman}%
+      }
+      \strng{namehash}{0c64907e559117e32c07abc515c87983}
+      \strng{fullhash}{0c64907e559117e32c07abc515c87983}
+      \strng{fullhashraw}{0c64907e559117e32c07abc515c87983}
+      \strng{bibnamehash}{0c64907e559117e32c07abc515c87983}
+      \strng{authorbibnamehash}{0c64907e559117e32c07abc515c87983}
+      \strng{authornamehash}{0c64907e559117e32c07abc515c87983}
+      \strng{authorfullhash}{0c64907e559117e32c07abc515c87983}
+      \strng{authorfullhashraw}{0c64907e559117e32c07abc515c87983}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Página consultada para informações sobre serviços de logística espacial e veículos de extensão de missão, inclusive o Mission Extension Vehicle (MEV)}
+      \field{title}{SpaceLogistics – in-orbit satellite servicing and space logistics services}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.northropgrumman.com/what-we-do/space/space-logistics-services
+      \endverb
+      \verb{url}
+      \verb https://www.northropgrumman.com/what-we-do/space/space-logistics-services
+      \endverb
+    \endentry
+    \entry{ogata2010engenharia}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=72cb1e667ce543119df1b777c0db24de}{%
+           family={Ogata},
+           familyi={O\bibinitperiod},
+           given={Katsuhiko},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {São Paulo, Brasil}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Prentice Hall}%
+      }
+      \strng{namehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{fullhash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{fullhashraw}{72cb1e667ce543119df1b777c0db24de}
+      \strng{bibnamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authorbibnamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authornamehash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authorfullhash}{72cb1e667ce543119df1b777c0db24de}
+      \strng{authorfullhashraw}{72cb1e667ce543119df1b777c0db24de}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5}
+      \field{isbn}{978-85-4301-375-6}
+      \field{note}{Tradução de Heloísa Coimbra de Souza; revisão técnica de Eduardo Aoun Tannuri. Título original: \emph{Modern Control Engineering}}
+      \field{title}{Engenharia de Controle Moderno}
+      \field{year}{2010}
+    \endentry
+    \entry{ortolano2017}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=9af0a214ec824e508af0866f63181e83}{%
+           family={Ortolano},
+           familyi={O\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5884160c16c5d36bb84394f344ec1d6a}{%
+           family={Geller},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima K.},
+           giveni={D\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=caad8bcc3ed3b489ced038ea6a2c0ab5}{%
+           family={Avery},
+           familyi={A\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {[S.l.]}%
+      }
+      \strng{namehash}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \strng{fullhash}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \strng{fullhashraw}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \strng{bibnamehash}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \strng{authorbibnamehash}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \strng{authornamehash}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \strng{authorfullhash}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \strng{authorfullhashraw}{4ce7b84b178a78c5972fc4dc69e3b6ec}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{AAS 17-016}
+      \field{note}{Data e local exatos não informados}
+      \field{title}{Relative Orbital Motion Dynamics with Respect to a Rotating Spacecraft-Fixed Frame}
+      \field{year}{2017}
+    \endentry
+    \entry{papadopoulos1991nature}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3b6fcf805bd89b2aa479bfe43d8d190a}{%
+           family={Papadopoulos},
+           familyi={P\bibinitperiod},
+           given={Evangelos},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=46e5cf9b2668e84f9ecad7215f5e7d05}{%
+           family={Dubowsky},
+           familyi={D\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{92ccb505ff3184c3728ac06a1e9165d8}
+      \strng{fullhash}{92ccb505ff3184c3728ac06a1e9165d8}
+      \strng{fullhashraw}{92ccb505ff3184c3728ac06a1e9165d8}
+      \strng{bibnamehash}{92ccb505ff3184c3728ac06a1e9165d8}
+      \strng{authorbibnamehash}{92ccb505ff3184c3728ac06a1e9165d8}
+      \strng{authornamehash}{92ccb505ff3184c3728ac06a1e9165d8}
+      \strng{authorfullhash}{92ccb505ff3184c3728ac06a1e9165d8}
+      \strng{authorfullhashraw}{92ccb505ff3184c3728ac06a1e9165d8}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{6}
+      \field{title}{On the Nature of Control Algorithms for Free-Floating Space Manipulators}
+      \field{volume}{7}
+      \field{year}{1991}
+      \field{pages}{750\bibrangedash 758}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/70.105384
+      \endverb
+    \endentry
+    \entry{papadopoulos1994free}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3b6fcf805bd89b2aa479bfe43d8d190a}{%
+           family={Papadopoulos},
+           familyi={P\bibinitperiod},
+           given={Evangelos},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4c6616f4d7afd4d3c98d36b3ec9d6ff}{%
+           family={Moosavian},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi A.\bibnamedelimi A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d6c068629aff9fc5e2eb9b06836066c9}
+      \strng{fullhash}{d6c068629aff9fc5e2eb9b06836066c9}
+      \strng{fullhashraw}{d6c068629aff9fc5e2eb9b06836066c9}
+      \strng{bibnamehash}{d6c068629aff9fc5e2eb9b06836066c9}
+      \strng{authorbibnamehash}{d6c068629aff9fc5e2eb9b06836066c9}
+      \strng{authornamehash}{d6c068629aff9fc5e2eb9b06836066c9}
+      \strng{authorfullhash}{d6c068629aff9fc5e2eb9b06836066c9}
+      \strng{authorfullhashraw}{d6c068629aff9fc5e2eb9b06836066c9}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Guidance, Control, and Dynamics}
+      \field{number}{4}
+      \field{title}{Dynamics and control of free-flying space robots with multiple manipulators}
+      \field{volume}{17}
+      \field{year}{1994}
+      \field{pages}{729\bibrangedash 735}
+      \range{pages}{7}
+    \endentry
+    \entry{pauly2023survey}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=8d90378575a7c90cfd4cca11803e7066}{%
+           family={Pauly},
+           familyi={P\bibinitperiod},
+           given={Leo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe852b666c5a20acecb8b191ccac5543}{%
+           family={Rharbaoui},
+           familyi={R\bibinitperiod},
+           given={Wassim},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a5823e1bf828a152e2859756c2f805d}{%
+           family={Shneider},
+           familyi={S\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=926ef5926307eb1774f3907e521d21cd}{%
+           family={Rathinam},
+           familyi={R\bibinitperiod},
+           given={Arunkumar},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d79bcb4114f90dc255702b036ef1369}{%
+           family={Gaudillière},
+           familyi={G\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eeda874e9509b3a5b5b65ab40e2a20c0}{%
+           family={Aouada},
+           familyi={A\bibinitperiod},
+           given={Djamila},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{383a00ff8d71526759fe790935e13161}
+      \strng{fullhash}{2687066ea89d05b08e479bba00c1005f}
+      \strng{fullhashraw}{2687066ea89d05b08e479bba00c1005f}
+      \strng{bibnamehash}{2687066ea89d05b08e479bba00c1005f}
+      \strng{authorbibnamehash}{2687066ea89d05b08e479bba00c1005f}
+      \strng{authornamehash}{383a00ff8d71526759fe790935e13161}
+      \strng{authorfullhash}{2687066ea89d05b08e479bba00c1005f}
+      \strng{authorfullhashraw}{2687066ea89d05b08e479bba00c1005f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{A survey on deep learning-based monocular spacecraft pose estimation: Current state, limitations and prospects}
+      \field{volume}{212}
+      \field{year}{2023}
+      \field{pages}{339\bibrangedash 360}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2023.08.001
+      \endverb
+    \endentry
+    \entry{piersigilli2010reactionless}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=afded9b506c084ade0bce1f01407315f}{%
+           family={Piersigilli},
+           familyi={P\bibinitperiod},
+           given={Paolo},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1c405714d88483ba83857f19f254d82}{%
+           family={Sharf},
+           familyi={S\bibinitperiod},
+           given={Inna},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{449a0dceba856695f34a270e42fde9e7}
+      \strng{fullhash}{449a0dceba856695f34a270e42fde9e7}
+      \strng{fullhashraw}{449a0dceba856695f34a270e42fde9e7}
+      \strng{bibnamehash}{449a0dceba856695f34a270e42fde9e7}
+      \strng{authorbibnamehash}{449a0dceba856695f34a270e42fde9e7}
+      \strng{authornamehash}{449a0dceba856695f34a270e42fde9e7}
+      \strng{authorfullhash}{449a0dceba856695f34a270e42fde9e7}
+      \strng{authorfullhashraw}{449a0dceba856695f34a270e42fde9e7}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{number}{1--2}
+      \field{title}{Reactionless capture of a satellite by a two degree-of-freedom manipulator}
+      \field{volume}{66}
+      \field{year}{2010}
+      \field{pages}{183\bibrangedash 192}
+      \range{pages}{10}
+    \endentry
+    \entry{qi2022variable}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5a6f8f970683b8f907213b070b54c454}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c051f5f6d93adb7100f9054bf5f9821}{%
+           family={Jing},
+           familyi={J\bibinitperiod},
+           given={Haizao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2a60faa941eef53d1efebcab2050292}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xiwei},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{82a1403b166a1eb0e991a1e619d67082}
+      \strng{fullhash}{82a1403b166a1eb0e991a1e619d67082}
+      \strng{fullhashraw}{82a1403b166a1eb0e991a1e619d67082}
+      \strng{bibnamehash}{82a1403b166a1eb0e991a1e619d67082}
+      \strng{authorbibnamehash}{82a1403b166a1eb0e991a1e619d67082}
+      \strng{authornamehash}{82a1403b166a1eb0e991a1e619d67082}
+      \strng{authorfullhash}{82a1403b166a1eb0e991a1e619d67082}
+      \strng{authorfullhashraw}{82a1403b166a1eb0e991a1e619d67082}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{10}
+      \field{title}{Variable Structure PID Controller for Satellite Attitude Control Considering Actuator Failure}
+      \field{volume}{12}
+      \field{year}{2022}
+      \field{pages}{5273}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/app12105273
+      \endverb
+    \endentry
+    \entry{razak2007industrial}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b4f3be928de43be26d46df6c12af2d8c}{%
+           family={Razak},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi M.\bibnamedelimi Y.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Woodhead Publishing}%
+      }
+      \strng{namehash}{b4f3be928de43be26d46df6c12af2d8c}
+      \strng{fullhash}{b4f3be928de43be26d46df6c12af2d8c}
+      \strng{fullhashraw}{b4f3be928de43be26d46df6c12af2d8c}
+      \strng{bibnamehash}{b4f3be928de43be26d46df6c12af2d8c}
+      \strng{authorbibnamehash}{b4f3be928de43be26d46df6c12af2d8c}
+      \strng{authornamehash}{b4f3be928de43be26d46df6c12af2d8c}
+      \strng{authorfullhash}{b4f3be928de43be26d46df6c12af2d8c}
+      \strng{authorfullhashraw}{b4f3be928de43be26d46df6c12af2d8c}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-84569-205-6}
+      \field{title}{Industrial Gas Turbines: Performance and Operability}
+      \field{year}{2007}
+    \endentry
+    \entry{rybus2017nmpc}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0e1d2bfa8b26bb1cfe4c9b6b31992b7c}{%
+           family={Rybus},
+           familyi={R\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b25cfe44ee3899512698a483eb763fd0}{%
+           family={Seweryn},
+           familyi={S\bibinitperiod},
+           given={Krzysztof},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d92487fb1a5babc99ab28166b25691d2}{%
+           family={Sasiadek},
+           familyi={S\bibinitperiod},
+           given={Jurek\bibnamedelima Z.},
+           giveni={J\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d891e924fca6797bcf1395d9c23d2e13}
+      \strng{fullhash}{d891e924fca6797bcf1395d9c23d2e13}
+      \strng{fullhashraw}{d891e924fca6797bcf1395d9c23d2e13}
+      \strng{bibnamehash}{d891e924fca6797bcf1395d9c23d2e13}
+      \strng{authorbibnamehash}{d891e924fca6797bcf1395d9c23d2e13}
+      \strng{authornamehash}{d891e924fca6797bcf1395d9c23d2e13}
+      \strng{authorfullhash}{d891e924fca6797bcf1395d9c23d2e13}
+      \strng{authorfullhashraw}{d891e924fca6797bcf1395d9c23d2e13}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Intelligent \& Robotic Systems}
+      \field{title}{Control System for Free-Floating Space Manipulator Based on Nonlinear Model Predictive Control (NMPC)}
+      \field{volume}{85}
+      \field{year}{2017}
+      \field{pages}{491\bibrangedash 509}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/s10846-016-0396-2
+      \endverb
+    \endentry
+    \entry{santos2023physics}{unpublished}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=de2eb5e50934a2fd81693e9c3f4b7abb}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Rogerio\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0,
+           prefix={dos},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=dd5f1c4dc1204ff91c55350d4b0e50dd}{%
+           family={Rade},
+           familyi={R\bibinitperiod},
+           given={Domingos\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{fullhash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{fullhashraw}{c47b8720edb60b78288322ed52ac2428}
+      \strng{bibnamehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authorbibnamehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authornamehash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authorfullhash}{c47b8720edb60b78288322ed52ac2428}
+      \strng{authorfullhashraw}{c47b8720edb60b78288322ed52ac2428}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished conference-style manuscript}
+      \field{title}{Physics Informed Machine Learning for Path Planning of Robots}
+      \field{year}{2023}
+    \endentry
+    \entry{santos2022uncertainty}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0b2049e82c5bc1cb3b0a6daf7d6a8010}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Rogerio\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=dd5f1c4dc1204ff91c55350d4b0e50dd}{%
+           family={Rade},
+           familyi={R\bibinitperiod},
+           given={Domingos\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{fullhash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{fullhashraw}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{bibnamehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authorbibnamehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authornamehash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authorfullhash}{90a58492d8cbbeca188fcbfada2aec6c}
+      \strng{authorfullhashraw}{90a58492d8cbbeca188fcbfada2aec6c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Uncertainty Modeling: Fundamental Concepts and Models}
+      \field{note}{In Jorge, Ariosto B. et al. (Eds.)}
+      \field{title}{Uncertainty Quantification in Inverse Kinematics Computation of Space Robots by Neural Networks}
+      \field{volume}{3}
+      \field{year}{2022}
+      \field{pages}{89\bibrangedash 118}
+      \range{pages}{30}
+    \endentry
+    \entry{santos2022machine}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=0b2049e82c5bc1cb3b0a6daf7d6a8010}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Rogerio\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd5f1c4dc1204ff91c55350d4b0e50dd}{%
+           family={Rade},
+           familyi={R\bibinitperiod},
+           given={Domingos\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=839309f3ad5f956705e7fb30b78a3632}{%
+           family={Fonseca},
+           familyi={F\bibinitperiod},
+           given={Ijar\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={da},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+      }
+      \strng{namehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{fullhash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{fullhashraw}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{bibnamehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authorbibnamehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authornamehash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authorfullhash}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \strng{authorfullhashraw}{1b1ac6553dae2a3cf08a1f7f6895fb04}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{A Machine Learning Strategy for Optimal Path Planning of Space Robotic Manipulator in On-Orbit Servicing}
+      \field{volume}{191}
+      \field{year}{2022}
+      \field{pages}{41\bibrangedash 54}
+      \range{pages}{14}
+    \endentry
+    \entry{SaraivaKeplerAula}{misc}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cd8f34962c63ffae2243f29a166f3a01}{%
+           family={Saraiva},
+           familyi={S\bibinitperiod},
+           given={Maria\bibnamedelimb de\bibnamedelimb Fátima\bibnamedelima Oliveira},
+           giveni={M\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5b77d3b7fc30f5e07934d34ce0b71709}{%
+           family={Oliveira\bibnamedelima Filho},
+           familyi={O\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Kepler},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=69ecad8c1a28dd2ba895273e7971e03c}{%
+           family={Machado},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Instituto de Física, Universidade Federal do Rio Grande do Sul}%
+      }
+      \strng{namehash}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \strng{fullhash}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \strng{fullhashraw}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \strng{bibnamehash}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \strng{authorbibnamehash}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \strng{authornamehash}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \strng{authorfullhash}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \strng{authorfullhashraw}{a4c1ad5e5f56781eb0b74af08604bafc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://www.if.ufrgs.br/~fatima/fis2010/Aula6-132.pdf}}
+      \field{note}{Material de aula. Acesso em: 5 mar. 2026}
+      \field{title}{Aula 6: Movimento dos planetas -- as leis de Kepler}
+      \field{year}{2010}
+    \endentry
+    \entry{sciavicco_siciliano2010}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8ee631ade831cd9df4fdd3ecba074704}{%
+           family={Sciavicco},
+           familyi={S\bibinitperiod},
+           given={Lorenzo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=38f7a70abf2d86e432d63826f560ab93}{%
+           family={Siciliano},
+           familyi={S\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{9e28999dc3315225c0038a567a715815}
+      \strng{fullhash}{9e28999dc3315225c0038a567a715815}
+      \strng{fullhashraw}{9e28999dc3315225c0038a567a715815}
+      \strng{bibnamehash}{9e28999dc3315225c0038a567a715815}
+      \strng{authorbibnamehash}{9e28999dc3315225c0038a567a715815}
+      \strng{authornamehash}{9e28999dc3315225c0038a567a715815}
+      \strng{authorfullhash}{9e28999dc3315225c0038a567a715815}
+      \strng{authorfullhashraw}{9e28999dc3315225c0038a567a715815}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{Modelling and Control of Robot Manipulators}
+      \field{year}{2010}
+    \endentry
+    \entry{sharma2024safety}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26f9f0bdff41b0cf149f687507617c4d}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={K.\bibnamedelimi P.},
+           giveni={K\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a041616354607d01b360f9d1f4f34787}
+      \strng{fullhash}{a041616354607d01b360f9d1f4f34787}
+      \strng{fullhashraw}{a041616354607d01b360f9d1f4f34787}
+      \strng{bibnamehash}{a041616354607d01b360f9d1f4f34787}
+      \strng{authorbibnamehash}{a041616354607d01b360f9d1f4f34787}
+      \strng{authornamehash}{a041616354607d01b360f9d1f4f34787}
+      \strng{authorfullhash}{a041616354607d01b360f9d1f4f34787}
+      \strng{authorfullhashraw}{a041616354607d01b360f9d1f4f34787}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers in Human Behavior}
+      \field{title}{Advancing spacecraft rendezvous and docking through obstacle avoidance: a safety reinforcement learning approach}
+      \field{volume}{152}
+      \field{year}{2024}
+      \field{pages}{108110}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.chb.2023.108110
+      \endverb
+    \endentry
+    \entry{sherrill2014}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d468b5da0cccfbb5ced8104b0680c8ac}{%
+           family={Sherrill},
+           familyi={S\bibinitperiod},
+           given={Ryan\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{278c139ec0f4ef32e9d00514c72c93b9}
+      \strng{fullhash}{278c139ec0f4ef32e9d00514c72c93b9}
+      \strng{fullhashraw}{278c139ec0f4ef32e9d00514c72c93b9}
+      \strng{bibnamehash}{278c139ec0f4ef32e9d00514c72c93b9}
+      \strng{authorbibnamehash}{278c139ec0f4ef32e9d00514c72c93b9}
+      \strng{authornamehash}{278c139ec0f4ef32e9d00514c72c93b9}
+      \strng{authorfullhash}{278c139ec0f4ef32e9d00514c72c93b9}
+      \strng{authorfullhashraw}{278c139ec0f4ef32e9d00514c72c93b9}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Celestial Mechanics and Dynamical Astronomy}
+      \field{title}{Time-varying transformations for Hill--Clohessy--Wiltshire solutions in elliptic orbits}
+      \field{volume}{119}
+      \field{year}{2014}
+      \field{pages}{55\bibrangedash 73}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/s10569-014-9543-x
+      \endverb
+    \endentry
+    \entry{slotine1991applied}{book}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1dc6c2ca8255505108e7ed377ab4c534}{%
+           family={Slotine},
+           familyi={S\bibinitperiod},
+           given={Jean-Jacques\bibnamedelima E.},
+           giveni={J\bibinithyphendelim J\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56a2cc9043bd27ea8b4615a383f2b778}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Weiping},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Englewood Cliffs}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{14f11c338ebd4957611f048b3567a733}
+      \strng{fullhash}{14f11c338ebd4957611f048b3567a733}
+      \strng{fullhashraw}{14f11c338ebd4957611f048b3567a733}
+      \strng{bibnamehash}{14f11c338ebd4957611f048b3567a733}
+      \strng{authorbibnamehash}{14f11c338ebd4957611f048b3567a733}
+      \strng{authornamehash}{14f11c338ebd4957611f048b3567a733}
+      \strng{authorfullhash}{14f11c338ebd4957611f048b3567a733}
+      \strng{authorfullhashraw}{14f11c338ebd4957611f048b3567a733}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Applied Nonlinear Control}
+      \field{year}{1991}
+    \endentry
+    \entry{song2022survey}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=85ca6b28241374716c6c98960112c65b}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Jianing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf00cd373d9c5ff646cb1af3f841da84}{%
+           family={Rondao},
+           familyi={R\bibinitperiod},
+           given={Duarte},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88b8a62f56ae81eb775b054877787e19}{%
+           family={Aouf},
+           familyi={A\bibinitperiod},
+           given={Nabil},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b8e286703121cadc1bcb741dfc858d38}
+      \strng{fullhash}{b8e286703121cadc1bcb741dfc858d38}
+      \strng{fullhashraw}{b8e286703121cadc1bcb741dfc858d38}
+      \strng{bibnamehash}{b8e286703121cadc1bcb741dfc858d38}
+      \strng{authorbibnamehash}{b8e286703121cadc1bcb741dfc858d38}
+      \strng{authornamehash}{b8e286703121cadc1bcb741dfc858d38}
+      \strng{authorfullhash}{b8e286703121cadc1bcb741dfc858d38}
+      \strng{authorfullhashraw}{b8e286703121cadc1bcb741dfc858d38}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{Deep learning-based spacecraft relative navigation methods: A survey}
+      \field{volume}{191}
+      \field{year}{2022}
+      \field{pages}{22\bibrangedash 40}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2021.10.025
+      \endverb
+    \endentry
+    \entry{spong2006robot}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=1e0c4c9e500fcb5128a2bb73fbbe891a}{%
+           family={Spong},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8346db44e6189448a4dff197f5bc47bb}{%
+           family={Hutchinson},
+           familyi={H\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7175c3321a0269f1e715675f8629352e}{%
+           family={Vidyasagar},
+           familyi={V\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{fullhash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{fullhashraw}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{bibnamehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{authorbibnamehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{authornamehash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{authorfullhash}{d6482215384c9e79f8244e09185e7fc5}
+      \strng{authorfullhashraw}{d6482215384c9e79f8244e09185e7fc5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{First Edition}
+      \field{title}{Robot Modeling and Control}
+      \field{year}{2006}
+    \endentry
+    \entry{starek2016}{misc}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2c0b27bb2ada0a24dae3982063596481}{%
+           family={Starek},
+           familyi={S\bibinitperiod},
+           given={Joseph\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Stanford University; NASA Goddard Space Flight Center}%
+      }
+      \list{location}{1}{%
+        {[S.l.]}%
+      }
+      \strng{namehash}{7a135650843eac21b55f51a30a8cba2d}
+      \strng{fullhash}{7a135650843eac21b55f51a30a8cba2d}
+      \strng{fullhashraw}{7a135650843eac21b55f51a30a8cba2d}
+      \strng{bibnamehash}{7a135650843eac21b55f51a30a8cba2d}
+      \strng{authorbibnamehash}{7a135650843eac21b55f51a30a8cba2d}
+      \strng{authornamehash}{7a135650843eac21b55f51a30a8cba2d}
+      \strng{authorfullhash}{7a135650843eac21b55f51a30a8cba2d}
+      \strng{authorfullhashraw}{7a135650843eac21b55f51a30a8cba2d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Real-time, propellant-optimized spacecraft motion planning under Clohessy--Wiltshire--Hill dynamics}
+      \field{year}{2016}
+    \endentry
+    \entry{sun2022tof}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6b1741ec2d23a9ac9b42c7873d1ebcd1}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Dianqi},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=306cf86d2ff78ab3091218c81e03279e}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=850372a808fefee51cb018b319b4e8e2}{%
+           family={Duan},
+           familyi={D\bibinitperiod},
+           given={Huixian},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b420e2d163cb15890f794240d419fba}{%
+           family={Pei},
+           familyi={P\bibinitperiod},
+           given={Haodong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7f003750db9d8a087f62d8adabd0324d}
+      \strng{fullhash}{45d4fe902b205796df540359e5c09d91}
+      \strng{fullhashraw}{45d4fe902b205796df540359e5c09d91}
+      \strng{bibnamehash}{45d4fe902b205796df540359e5c09d91}
+      \strng{authorbibnamehash}{45d4fe902b205796df540359e5c09d91}
+      \strng{authornamehash}{7f003750db9d8a087f62d8adabd0324d}
+      \strng{authorfullhash}{45d4fe902b205796df540359e5c09d91}
+      \strng{authorfullhashraw}{45d4fe902b205796df540359e5c09d91}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Remote Sensing}
+      \field{number}{23}
+      \field{title}{Relative Pose Estimation of Non-Cooperative Space Targets Using a TOF Camera}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{6100}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/rs14236100
+      \endverb
+    \endentry
+    \entry{symon1979}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8c1c623a3e41f70b1276d6007f21cea5}{%
+           family={Symon},
+           familyi={S\bibinitperiod},
+           given={K.\bibnamedelimi R.},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Reading, MA}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{8c1c623a3e41f70b1276d6007f21cea5}
+      \strng{fullhash}{8c1c623a3e41f70b1276d6007f21cea5}
+      \strng{fullhashraw}{8c1c623a3e41f70b1276d6007f21cea5}
+      \strng{bibnamehash}{8c1c623a3e41f70b1276d6007f21cea5}
+      \strng{authorbibnamehash}{8c1c623a3e41f70b1276d6007f21cea5}
+      \strng{authornamehash}{8c1c623a3e41f70b1276d6007f21cea5}
+      \strng{authorfullhash}{8c1c623a3e41f70b1276d6007f21cea5}
+      \strng{authorfullhashraw}{8c1c623a3e41f70b1276d6007f21cea5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mechanics}
+      \field{year}{1979}
+    \endentry
+    \entry{umetani1989resolved}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=70d817c9f2c2cb5163c74874cfabac6d}{%
+           family={Umetani},
+           familyi={U\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f324f57b44d8e3fb900c6e12fd6c2a23}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{af9f2049c5d6ceeec1515de05d6dc607}
+      \strng{fullhash}{af9f2049c5d6ceeec1515de05d6dc607}
+      \strng{fullhashraw}{af9f2049c5d6ceeec1515de05d6dc607}
+      \strng{bibnamehash}{af9f2049c5d6ceeec1515de05d6dc607}
+      \strng{authorbibnamehash}{af9f2049c5d6ceeec1515de05d6dc607}
+      \strng{authornamehash}{af9f2049c5d6ceeec1515de05d6dc607}
+      \strng{authorfullhash}{af9f2049c5d6ceeec1515de05d6dc607}
+      \strng{authorfullhashraw}{af9f2049c5d6ceeec1515de05d6dc607}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics and Automation}
+      \field{number}{3}
+      \field{title}{Resolved Motion Rate Control of Space Manipulators with Generalized Jacobian Matrix}
+      \field{volume}{5}
+      \field{year}{1989}
+      \field{pages}{303\bibrangedash 314}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/70.34766
+      \endverb
+    \endentry
+    \entry{vallado2007fundamentals}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ff82d5bad08121d2839c136f2728f566}{%
+           family={Vallado},
+           familyi={V\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Hawthorne, CA}%
+      }
+      \list{publisher}{1}{%
+        {Microcosm Press / Springer}%
+      }
+      \strng{namehash}{ff82d5bad08121d2839c136f2728f566}
+      \strng{fullhash}{ff82d5bad08121d2839c136f2728f566}
+      \strng{fullhashraw}{ff82d5bad08121d2839c136f2728f566}
+      \strng{bibnamehash}{ff82d5bad08121d2839c136f2728f566}
+      \strng{authorbibnamehash}{ff82d5bad08121d2839c136f2728f566}
+      \strng{authornamehash}{ff82d5bad08121d2839c136f2728f566}
+      \strng{authorfullhash}{ff82d5bad08121d2839c136f2728f566}
+      \strng{authorfullhashraw}{ff82d5bad08121d2839c136f2728f566}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{Fundamentals of Astrodynamics and Applications}
+      \field{year}{2007}
+    \endentry
+    \entry{volpe2022gnc}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=643f311ee23cb226c9fcbac765f1f7e0}{%
+           family={Volpe},
+           familyi={V\bibinitperiod},
+           given={Renato},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0e96d0ee82ea62c50f461a79972b334}{%
+           family={Circi},
+           familyi={C\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0da73b82e6c8035ae9a3aec9ce2d700}{%
+           family={Sabatini},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66586d05116843cf520b4cec16ccac5d}{%
+           family={Palmerini},
+           familyi={P\bibinitperiod},
+           given={Giovanni\bibnamedelima B.},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e40b7f4c3f547f45d04b36da5aefb8e0}
+      \strng{fullhash}{d1480638ae928e1e4c06474f1b3399cb}
+      \strng{fullhashraw}{d1480638ae928e1e4c06474f1b3399cb}
+      \strng{bibnamehash}{d1480638ae928e1e4c06474f1b3399cb}
+      \strng{authorbibnamehash}{d1480638ae928e1e4c06474f1b3399cb}
+      \strng{authornamehash}{e40b7f4c3f547f45d04b36da5aefb8e0}
+      \strng{authorfullhash}{d1480638ae928e1e4c06474f1b3399cb}
+      \strng{authorfullhashraw}{d1480638ae928e1e4c06474f1b3399cb}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{GNC architecture for an optimal rendezvous to an uncooperative tumbling target using passive monocular camera}
+      \field{volume}{196}
+      \field{year}{2022}
+      \field{pages}{380\bibrangedash 393}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2020.10.038
+      \endverb
+    \endentry
+    \entry{volpe2018passive}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=643f311ee23cb226c9fcbac765f1f7e0}{%
+           family={Volpe},
+           familyi={V\bibinitperiod},
+           given={Renato},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=66586d05116843cf520b4cec16ccac5d}{%
+           family={Palmerini},
+           familyi={P\bibinitperiod},
+           given={Giovanni\bibnamedelima B.},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0da73b82e6c8035ae9a3aec9ce2d700}{%
+           family={Sabatini},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6102d765b8cc0ca339c03d3dac18937}
+      \strng{fullhash}{c6102d765b8cc0ca339c03d3dac18937}
+      \strng{fullhashraw}{c6102d765b8cc0ca339c03d3dac18937}
+      \strng{bibnamehash}{c6102d765b8cc0ca339c03d3dac18937}
+      \strng{authorbibnamehash}{c6102d765b8cc0ca339c03d3dac18937}
+      \strng{authornamehash}{c6102d765b8cc0ca339c03d3dac18937}
+      \strng{authorfullhash}{c6102d765b8cc0ca339c03d3dac18937}
+      \strng{authorfullhashraw}{c6102d765b8cc0ca339c03d3dac18937}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Astronautica}
+      \field{title}{A passive camera based determination of a non-cooperative and unknown satellite's pose and shape}
+      \field{volume}{151}
+      \field{year}{2018}
+      \field{pages}{805\bibrangedash 817}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.actaastro.2018.06.061
+      \endverb
+    \endentry
+    \entry{Wang2003KinematicsDynamics}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=1,uniquepart=given,hash=738a9d184d8283268d4748331aa5dfb9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Shao-Chi},
+           giveni={S\bibinithyphendelim C\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=797827f0b6234d7bba37ff3ee7344f0d}{%
+           family={Hikita},
+           familyi={H\bibinitperiod},
+           given={Hiromitsu},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=509819d868827683a9b4771429243acb}{%
+           family={Kubo},
+           familyi={K\bibinitperiod},
+           given={Hiroshi},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3680acbe7ec615faf7481ba37a373c8}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yong-Sheng},
+           giveni={Y\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a0371e0a62b44d30cc131417169cf7c}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6a95979c7cd8a119bdc611dc6442a69}{%
+           family={Ifukube},
+           familyi={I\bibinitperiod},
+           given={Tohru},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Pergamon}%
+      }
+      \strng{namehash}{ae1014aec92a8eeab927a5e268fa10a1}
+      \strng{fullhash}{ce09deda36671c23648acf0a2bfe121e}
+      \strng{fullhashraw}{ce09deda36671c23648acf0a2bfe121e}
+      \strng{bibnamehash}{ce09deda36671c23648acf0a2bfe121e}
+      \strng{authorbibnamehash}{ce09deda36671c23648acf0a2bfe121e}
+      \strng{authornamehash}{ae1014aec92a8eeab927a5e268fa10a1}
+      \strng{authorfullhash}{ce09deda36671c23648acf0a2bfe121e}
+      \strng{authorfullhashraw}{ce09deda36671c23648acf0a2bfe121e}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0094-114X}
+      \field{journaltitle}{Mechanism and Machine Theory}
+      \field{number}{5}
+      \field{title}{Kinematics and dynamics of a 6 degree-of-freedom fully parallel manipulator with elastic joints}
+      \field{volume}{38}
+      \field{year}{2003}
+      \field{pages}{439\bibrangedash 461}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1016/S0094-114X(02)00132-5
+      \endverb
+    \endentry
+    \entry{wang2023close}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=8fde8559617f603b3e2b3cf30cb48e9b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xiang},
+           giveni={X\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{35ac326fad78d42d0760cfb75887ea69}
+      \strng{fullhash}{35ac326fad78d42d0760cfb75887ea69}
+      \strng{fullhashraw}{35ac326fad78d42d0760cfb75887ea69}
+      \strng{bibnamehash}{35ac326fad78d42d0760cfb75887ea69}
+      \strng{authorbibnamehash}{35ac326fad78d42d0760cfb75887ea69}
+      \strng{authornamehash}{35ac326fad78d42d0760cfb75887ea69}
+      \strng{authorfullhash}{35ac326fad78d42d0760cfb75887ea69}
+      \strng{authorfullhashraw}{35ac326fad78d42d0760cfb75887ea69}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Space Research}
+      \field{number}{12}
+      \field{title}{Model predictive control for close-proximity maneuvering of spacecraft rendezvous and docking with a nonrotating or rotating client}
+      \field{volume}{71}
+      \field{year}{2023}
+      \field{pages}{4966\bibrangedash 4984}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1016/j.asr.2022.12.047
+      \endverb
+    \endentry
+    \entry{weberHohmann}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=770bbbac828f8ad8af5a2b94d361ee40}{%
+           family={Weber},
+           familyi={W\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{fullhash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{fullhashraw}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{bibnamehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authorbibnamehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authornamehash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authorfullhash}{770bbbac828f8ad8af5a2b94d361ee40}
+      \strng{authorfullhashraw}{770bbbac828f8ad8af5a2b94d361ee40}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{From *Orbital Mechanics \& Astrodynamics*. Licensed under CC BY-SA}
+      \field{title}{Hohmann Transfer}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://orbital-mechanics.space/orbital-maneuvers/hohmann-transfer.html
+      \endverb
+      \verb{url}
+      \verb https://orbital-mechanics.space/orbital-maneuvers/hohmann-transfer.html
+      \endverb
+    \endentry
+    \entry{wei2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=582467bbf15555b58c0c28c0211d49aa}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b1b3d376e5c7ab6fe67c3133abef1ae3}{%
+           family={Yunhai},
+           familyi={Y\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6219f8716e659e01afcead5a79f3b2e0}{%
+           family={Xueqin},
+           familyi={X\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ad3a9602cfb658e673bab2bfc43335a1}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7cdd57a88315639bada263fe4dc77e57}
+      \strng{fullhash}{6e7c4bdd366b9c5687427191c4ea3e15}
+      \strng{fullhashraw}{6e7c4bdd366b9c5687427191c4ea3e15}
+      \strng{bibnamehash}{6e7c4bdd366b9c5687427191c4ea3e15}
+      \strng{authorbibnamehash}{6e7c4bdd366b9c5687427191c4ea3e15}
+      \strng{authornamehash}{7cdd57a88315639bada263fe4dc77e57}
+      \strng{authorfullhash}{6e7c4bdd366b9c5687427191c4ea3e15}
+      \strng{authorfullhashraw}{6e7c4bdd366b9c5687427191c4ea3e15}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Control and Automation}
+      \field{number}{4}
+      \field{title}{Relative position and attitude coupled control for autonomous docking with a tumbling target}
+      \field{volume}{4}
+      \field{year}{2011}
+      \field{pages}{1\bibrangedash 22}
+      \range{pages}{22}
+    \endentry
+    \entry{wertz1978spacecraft}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5772d44dd5bc95ef8faf8a4773563cbe}{%
+           family={Wertz},
+           familyi={W\bibinitperiod},
+           given={James\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {D. Reidel Publishing Company}%
+      }
+      \strng{namehash}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \strng{fullhash}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \strng{fullhashraw}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \strng{bibnamehash}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \strng{authorbibnamehash}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \strng{authornamehash}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \strng{authorfullhash}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \strng{authorfullhashraw}{5772d44dd5bc95ef8faf8a4773563cbe}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Spacecraft Attitude Determination and Control}
+      \field{year}{1978}
+    \endentry
+    \entry{wie2008space}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef6e7a1fbbddeed6a8783fa4dc1fa115}{%
+           family={Wie},
+           familyi={W\bibinitperiod},
+           given={Bong},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Reston, VA}%
+      }
+      \list{publisher}{1}{%
+        {AIAA Education Series}%
+      }
+      \strng{namehash}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \strng{fullhash}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \strng{fullhashraw}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \strng{bibnamehash}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \strng{authorbibnamehash}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \strng{authornamehash}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \strng{authorfullhash}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \strng{authorfullhashraw}{ef6e7a1fbbddeed6a8783fa4dc1fa115}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd}
+      \field{isbn}{978-1-56347-953-3}
+      \field{title}{Space Vehicle Dynamics and Control}
+      \field{year}{2008}
+    \endentry
+    \entry{Wilde2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4edddff3cd4494a22a13ba264e94e27e}{%
+           family={Wilde},
+           familyi={W\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d787c33feddbd124cfbdd7553f63c8db}{%
+           family={Heijden},
+           familyi={H\bibinitperiod},
+           given={Jan\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0,
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=5d9753c98d823c83966f248dbe18f6fd}{%
+           family={Schaub},
+           familyi={S\bibinitperiod},
+           given={Hanspeter},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \strng{fullhash}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \strng{fullhashraw}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \strng{bibnamehash}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \strng{authorbibnamehash}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \strng{authornamehash}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \strng{authorfullhash}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \strng{authorfullhashraw}{f5ce24d8397d2894338c8d2fc231e4fb}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Robotics and AI}
+      \field{title}{Equations of Motion of Free-Floating Spacecraft Manipulators using the Generalized Jacobian Matrix}
+      \field{volume}{5}
+      \field{year}{2018}
+      \field{pages}{15}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/frobt.2018.00015
+      \endverb
+      \verb{urlraw}
+      \verb https://www.frontiersin.org/articles/10.3389/frobt.2018.00015/full
+      \endverb
+      \verb{url}
+      \verb https://www.frontiersin.org/articles/10.3389/frobt.2018.00015/full
+      \endverb
+    \endentry
+    \entry{xie2016applications}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a84ff769eaa751add64a2700da16c0ae}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Yong-chun},
+           giveni={Y\bibinithyphendelim c\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=daa654d1e8f9054f4817cc67277692f5}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Huang},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=427576fb2e392193d9635397ae50a1e8}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a529a14e88ff88c2a48ca39a0f35ab2f}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Guo-qi},
+           giveni={G\bibinithyphendelim q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7006f8ba048c03407bff1fcfbb607aff}
+      \strng{fullhash}{b38513bbe8e69bdce6fbd4e876f9bb2e}
+      \strng{fullhashraw}{b38513bbe8e69bdce6fbd4e876f9bb2e}
+      \strng{bibnamehash}{b38513bbe8e69bdce6fbd4e876f9bb2e}
+      \strng{authorbibnamehash}{b38513bbe8e69bdce6fbd4e876f9bb2e}
+      \strng{authornamehash}{7006f8ba048c03407bff1fcfbb607aff}
+      \strng{authorfullhash}{b38513bbe8e69bdce6fbd4e876f9bb2e}
+      \strng{authorfullhashraw}{b38513bbe8e69bdce6fbd4e876f9bb2e}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers of Information Technology \& Electronic Engineering}
+      \field{number}{9}
+      \field{title}{Applications of advanced control methods in spacecrafts: progress, challenges, and future prospects}
+      \field{volume}{17}
+      \field{year}{2016}
+      \field{pages}{841\bibrangedash 861}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1631/FITEE.1600128
+      \endverb
+    \endentry
+    \entry{xu2016adaptive}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=ec9b5b0b234b2be36b2324efe21fae3e}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Shuanfeng},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2398185dc7939ead48955bb50777b1aa}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hanlei},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce65c25469f2cbb51a707f735260a6f8}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Duzhou},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f6323eb2952a82cef8b1c2ce0ef2e0a6}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Baohua},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3203a688b2eb9ac78e33918fd2a512c8}
+      \strng{fullhash}{865a65e0ba747ae622ae8e7240b9d54d}
+      \strng{fullhashraw}{865a65e0ba747ae622ae8e7240b9d54d}
+      \strng{bibnamehash}{865a65e0ba747ae622ae8e7240b9d54d}
+      \strng{authorbibnamehash}{865a65e0ba747ae622ae8e7240b9d54d}
+      \strng{authornamehash}{3203a688b2eb9ac78e33918fd2a512c8}
+      \strng{authorfullhash}{865a65e0ba747ae622ae8e7240b9d54d}
+      \strng{authorfullhashraw}{865a65e0ba747ae622ae8e7240b9d54d}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Aerospace and Electronic Systems}
+      \field{number}{3}
+      \field{title}{Adaptive zero reaction motion control for free-floating space manipulators}
+      \field{volume}{52}
+      \field{year}{2016}
+      \field{pages}{1067\bibrangedash 1076}
+      \range{pages}{10}
+    \endentry
+    \entry{xue2007linear}{book}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=d173337a7940bd002ef13e3a235da46f}{%
+           family={Xue},
+           familyi={X\bibinitperiod},
+           given={Dingyü},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cc012cb35dabc84a8f3be9e5436141e0}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={YangQuan},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b63d238e7e7e9da20db79b4226c43378}{%
+           family={Atherton},
+           familyi={A\bibinitperiod},
+           given={Derek\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Philadelphia, PA, USA}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics (SIAM)}%
+      }
+      \strng{namehash}{ef6a8b0024abf7988fcd146011a59872}
+      \strng{fullhash}{ef6a8b0024abf7988fcd146011a59872}
+      \strng{fullhashraw}{ef6a8b0024abf7988fcd146011a59872}
+      \strng{bibnamehash}{ef6a8b0024abf7988fcd146011a59872}
+      \strng{authorbibnamehash}{ef6a8b0024abf7988fcd146011a59872}
+      \strng{authornamehash}{ef6a8b0024abf7988fcd146011a59872}
+      \strng{authorfullhash}{ef6a8b0024abf7988fcd146011a59872}
+      \strng{authorfullhashraw}{ef6a8b0024abf7988fcd146011a59872}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780898716287}
+      \field{title}{Linear Feedback Control: Analysis and Design with MATLAB}
+      \field{year}{2007}
+    \endentry
+    \entry{ye2019adaptive}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=5e058b60e07be2686cd99a299ae4ab0a}{%
+           family={Ye},
+           familyi={Y\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=70a5bc32dd78d4f1cde89aa23bd70312}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Zheng-Hong},
+           giveni={Z\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b2ae5ef1c78fad8f9addf5b0ac88af74}{%
+           family={Hong},
+           familyi={H\bibinitperiod},
+           given={Gwi-Ryung\bibnamedelima Son},
+           giveni={G\bibinithyphendelim R\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6dda940e0e7d97ea655f69671e23dde4}
+      \strng{fullhash}{6dda940e0e7d97ea655f69671e23dde4}
+      \strng{fullhashraw}{6dda940e0e7d97ea655f69671e23dde4}
+      \strng{bibnamehash}{6dda940e0e7d97ea655f69671e23dde4}
+      \strng{authorbibnamehash}{6dda940e0e7d97ea655f69671e23dde4}
+      \strng{authornamehash}{6dda940e0e7d97ea655f69671e23dde4}
+      \strng{authorfullhash}{6dda940e0e7d97ea655f69671e23dde4}
+      \strng{authorfullhashraw}{6dda940e0e7d97ea655f69671e23dde4}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electronics}
+      \field{number}{10}
+      \field{title}{Research on Adaptive Reaction Null Space Planning and Control Strategy Based on VFF--RLS and SSADE--ELM Algorithm for Free-Floating Space Robot}
+      \field{volume}{8}
+      \field{year}{2019}
+      \field{pages}{1111}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/electronics8101111
+      \endverb
+    \endentry
+    \entry{yoshida2003}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=00f2f390e4f769bd7ba816b64972b509}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{00f2f390e4f769bd7ba816b64972b509}
+      \strng{fullhash}{00f2f390e4f769bd7ba816b64972b509}
+      \strng{fullhashraw}{00f2f390e4f769bd7ba816b64972b509}
+      \strng{bibnamehash}{00f2f390e4f769bd7ba816b64972b509}
+      \strng{authorbibnamehash}{00f2f390e4f769bd7ba816b64972b509}
+      \strng{authornamehash}{00f2f390e4f769bd7ba816b64972b509}
+      \strng{authorfullhash}{00f2f390e4f769bd7ba816b64972b509}
+      \strng{authorfullhashraw}{00f2f390e4f769bd7ba816b64972b509}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Robotics Research}
+      \field{number}{5}
+      \field{title}{ETS-VII flight experiments for space robot dynamics and control}
+      \field{volume}{22}
+      \field{year}{2003}
+      \field{pages}{321\bibrangedash 335}
+      \range{pages}{15}
+    \endentry
+    \entry{yoshida_reactionless_etsvii}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=00f2f390e4f769bd7ba816b64972b509}{%
+           family={Yoshida},
+           familyi={Y\bibinitperiod},
+           given={Kazuya},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54586232596784bec8423c4224bf81dc}{%
+           family={Nenchev},
+           familyi={N\bibinitperiod},
+           given={Dragomir\bibnamedelima N.},
+           giveni={D\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{fullhash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{fullhashraw}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{bibnamehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authorbibnamehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authornamehash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authorfullhash}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \strng{authorfullhashraw}{e7d12f6a833a4bf79a58a3fae95057ca}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{<Nome do evento ou conferência, se aplicável>}
+      \field{note}{Department of Aeronautics and Space Engineering, Tohoku University; Department of Intelligent Machines and System Engineering, Hirosaki University}
+      \field{title}{Reactionless Manipulations and Proposal to ETS-VII On-Board Experiments}
+      \field{year}{1999}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

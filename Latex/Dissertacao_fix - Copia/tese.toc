@@ -1,0 +1,143 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introdução}{21}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivação}{22}{section.1.1}
+\contentsline {section}{\numberline {1.2}Pergunta de pesquisa}{23}{section.1.2}
+\contentsline {section}{\numberline {1.3}Objetivos}{23}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Objetivo geral}{23}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Objetivos específicos}{23}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Metodologia}{24}{section.1.4}
+\contentsline {section}{\numberline {1.5}Estrutura do documento}{24}{section.1.5}
+\contentsline {chapter}{\numberline {2}Revisão bibliográfica}{26}{chapter.2}
+\contentsline {chapter}{\numberline {3}Procedimento da simulação}{27}{chapter.3}
+\contentsline {chapter}{\numberline {4}Formulação Matemática}{28}{chapter.4}
+\contentsline {section}{\numberline {4.1}Dinâmica orbital}{28}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}O problema de dois-corpos: Movimento absoluto e relativo}{29}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Equações do Movimento Orbital e Manobras Associadas ao Problema de RVD/B}{33}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detalhes sobre a geometria da órbita do perseguidor}{34}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Movimento orbital relativo aplicado em missão de \gls {rvdb}}{35}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Equações de Hill/CW}{39}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Equações do Movimento de Atitude em RVD/B}{41}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Equações de Euler para um corpo rígido em órbita circular}{41}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Matriz de inércia}{46}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Equações Diferenciais da Cinemática}{48}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Matriz de cossenos diretores}{48}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Ângulos de Euler}{51}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}Quaternions e justificativa de sua utilização}{52}{subsection.4.3.6}
+\contentsline {subsubsection}{\numberline {4.3.6.1}Definição e componentes do quaternion}{53}{subsubsection.4.3.6.1}
+\contentsline {subsection}{\numberline {4.3.7}Equações do Movimento da Atitude Relativa entre as espaçonaves perseguidora e alvo}{54}{subsection.4.3.7}
+\contentsline {section}{\numberline {4.4}Espaçonave Tipo Manipulador Robótico}{55}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Propósito e Arquitetura}{55}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Convenção para fixar sistemas de coordenadas aos elos}{56}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Convenção e descrição dos elos do manipulador robótico}{56}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Tabela de Denavit--Hartenberg}{58}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}Transformações entre elos}{59}{subsection.4.4.5}
+\contentsline {section}{\numberline {4.5}Cinemática Diferencial e Jacobiano}{62}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Construção do Jacobiano}{62}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6}Interpretação geométrica da Jacobiana}{62}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Contribuição da junta revoluta}{63}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Síntese geométrica}{63}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}Jacobiano angular}{63}{subsection.4.6.3}
+\contentsline {section}{\numberline {4.7}Singularidades e interpretação geométrica}{63}{section.4.7}
+\contentsline {section}{\numberline {4.8}Cinemática Inversa}{64}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Erro operacional}{64}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Erro de orientação}{65}{subsection.4.8.2}
+\contentsline {subsection}{\numberline {4.8.3}Velocidade cartesiana desejada}{65}{subsection.4.8.3}
+\contentsline {subsection}{\numberline {4.8.4}Lei de cinemática diferencial inversa}{66}{subsection.4.8.4}
+\contentsline {subsection}{\numberline {4.8.5}Pseudo-inversa amortecida}{66}{subsection.4.8.5}
+\contentsline {subsection}{\numberline {4.8.6}Integração da lei diferencial}{66}{subsection.4.8.6}
+\contentsline {subsection}{\numberline {4.8.7}Formulação da dinâmica acoplada}{67}{subsection.4.8.7}
+\contentsline {section}{\numberline {4.9}Energia cinética}{67}{section.4.9}
+\contentsline {section}{\numberline {4.10}Velocidades linear e angular}{70}{section.4.10}
+\contentsline {section}{\numberline {4.11}Equações de Lagrange e estrutura das forças de inércia}{74}{section.4.11}
+\contentsline {section}{\numberline {4.12}Momentos de inércia}{77}{section.4.12}
+\contentsline {section}{\numberline {4.13}Quantidade de movimento angular do sistema}{78}{section.4.13}
+\contentsline {section}{\numberline {4.14}Translação da espaçonave}{80}{section.4.14}
+\contentsline {section}{\numberline {4.15}Formulação do Problema de Controle}{80}{section.4.15}
+\contentsline {section}{\numberline {4.16}Técnica de controle aplicada}{80}{section.4.16}
+\contentsline {subsection}{\numberline {4.16.1}Transferência de Hohmann}{81}{subsection.4.16.1}
+\contentsline {subsubsection}{\numberline {4.16.1.1}Etapas da manobra}{81}{subsubsection.4.16.1.1}
+\contentsline {subsection}{\numberline {4.16.2}Controle Proporcional--Derivativo (PD)}{82}{subsection.4.16.2}
+\contentsline {subsection}{\numberline {4.16.3}Controle de atitude da espaçonave}{83}{subsection.4.16.3}
+\contentsline {subsection}{\numberline {4.16.4}Controle das juntas do manipulador robótico}{84}{subsection.4.16.4}
+\contentsline {subsection}{\numberline {4.16.5}Estrutura em malha fechada}{85}{subsection.4.16.5}
+\contentsline {subsection}{\numberline {4.16.6}Ganhos do controle PD}{85}{subsection.4.16.6}
+\contentsline {subsection}{\numberline {4.16.7}Limitações}{86}{subsection.4.16.7}
+\contentsline {subsection}{\numberline {4.16.8}Justificativa da escolha}{87}{subsection.4.16.8}
+\contentsline {subsection}{\numberline {4.16.9}Critério de acoplamento e detecção de sucesso}{87}{subsection.4.16.9}
+\contentsline {chapter}{\numberline {5}Resultados}{89}{chapter.5}
+\contentsline {section}{\numberline {5.1}Linha do tempo}{89}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Comparativo entre cenários}{91}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Aproximação de longa distância}{92}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Raio orbital do perseguidor ao longo do tempo}{95}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Consumo de Delta-V}{96}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Cenários}{96}{subsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3.1}Longitude relativa ao alvo no instante da queima}{97}{subsubsection.5.2.3.1}
+\contentsline {subsubsection}{\numberline {5.2.3.2}Comparativo entre os cenários}{98}{subsubsection.5.2.3.2}
+\contentsline {subsubsection}{\numberline {5.2.3.3}Consumo de Delta-V}{99}{subsubsection.5.2.3.3}
+\contentsline {subsubsection}{\numberline {5.2.3.4}Elementos orbitais}{99}{subsubsection.5.2.3.4}
+\contentsline {section}{\numberline {5.3}Aproximação de curta distância}{100}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Velocidade relativa}{102}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Tempos de estabilização da posição}{104}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Picos de posição, velocidade e aceleração de controle}{107}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Efeito da saturação de velocidade relativa}{109}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Aproximação final}{110}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Evolução da atitude e modos de operação}{110}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Dinâmica da espaçonave e torques de controle}{112}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}Velocidade angular da espaçonave robótica}{112}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}Aceleração angular da espaçonave robótica}{113}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}Torque de controle de atitude da espaçonave robótica}{115}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}Torques de reação da espaçonave robótica}{116}{subsubsection.5.4.2.4}
+\contentsline {subsubsection}{\numberline {5.4.2.5}Compensação do acoplamento dinâmico}{117}{subsubsection.5.4.2.5}
+\contentsline {subsection}{\numberline {5.4.3}Movimento das juntas e apontamento da referência da cinemática inversa}{118}{subsection.5.4.3}
+\contentsline {subsubsection}{\numberline {5.4.3.1}Velocidades das juntas}{119}{subsubsection.5.4.3.1}
+\contentsline {subsubsection}{\numberline {5.4.3.2}Torque de controle nas juntas}{120}{subsubsection.5.4.3.2}
+\contentsline {subsubsection}{\numberline {5.4.3.3}Erro de apontamento}{121}{subsubsection.5.4.3.3}
+\contentsline {subsection}{\numberline {5.4.4}Alinhamento da ferramenta com a porta de acoplamento}{122}{subsection.5.4.4}
+\contentsline {subsubsection}{\numberline {5.4.4.1}Ângulo de alinhamento}{122}{subsubsection.5.4.4.1}
+\contentsline {subsubsection}{\numberline {5.4.4.2}Componentes do eixo da ferramenta no referencial $\{0\}$}{124}{subsubsection.5.4.4.2}
+\contentsline {subsubsection}{\numberline {5.4.4.3}Produto escalar como métrica de colinearidade}{124}{subsubsection.5.4.4.3}
+\contentsline {subsubsection}{\numberline {5.4.4.4}Decomposição do produto escalar por eixo}{125}{subsubsection.5.4.4.4}
+\contentsline {subsubsection}{\numberline {5.4.4.5}Erro de posição da ferramenta durante o alinhamento}{126}{subsubsection.5.4.4.5}
+\contentsline {subsubsection}{\numberline {5.4.4.6}Instantes característicos e coerência entre métricas}{126}{subsubsection.5.4.4.6}
+\contentsline {subsubsection}{\numberline {5.4.4.7}Avanço longitudinal do efetuador final em relação ao plano da porta}{128}{subsubsection.5.4.4.7}
+\contentsline {subsection}{\numberline {5.4.5}Síntese dos resultados de alinhamento}{128}{subsection.5.4.5}
+\contentsline {chapter}{\numberline {6}Discussão}{129}{chapter.6}
+\contentsline {section}{\numberline {6.1}Comparação com a literatura}{129}{section.6.1}
+\contentsline {section}{\numberline {6.2}Contribuições do trabalho}{131}{section.6.2}
+\contentsline {section}{\numberline {6.3}Lições aprendidas com a simulação e os resultados}{131}{section.6.3}
+\contentsline {section}{\numberline {6.4}Limitações do trabalho}{132}{section.6.4}
+\contentsline {chapter}{\numberline {7}Conclusão}{133}{chapter.7}
+\contentsline {section}{\numberline {7.1}Atingimento dos objetivos do trabalho}{133}{section.7.1}
+\contentsline {section}{\numberline {7.2}Resumo das contribuições}{133}{section.7.2}
+\contentsline {section}{\numberline {7.3}Relevância do trabalho}{134}{section.7.3}
+\contentsline {section}{\numberline {7.4}Trabalhos futuros}{134}{section.7.4}
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\SetAppendixTocName {Ap\^endice}
+\contentsline {chapter}{\numberline {A}Posição e velocidade no referencial inercial}{141}{appendix.A}
+\contentsline {chapter}{\numberline {B}Parâmetros físicos do perseguidor}{142}{appendix.B}
+\contentsline {chapter}{\numberline {C}Parâmetros de controle}{143}{appendix.C}
+\contentsline {chapter}{\numberline {D}Códigos computacionais}{144}{appendix.D}
+\SetAppendixTocName {Anexo}

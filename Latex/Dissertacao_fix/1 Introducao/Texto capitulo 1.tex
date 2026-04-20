@@ -1,0 +1,71 @@
+Missões espaciais de encontro, acoplamento e atracação, conhecidas como \gls{rvdb}, desempenham papel central em operações orbitais modernas.
+Essas missões permitem o transporte de tripulação, suprimentos e módulos estruturais, além de possibilitarem reabastecimento, manutenção de satélites e montagem de grandes estruturas espaciais, como a \gls{iss} \cite{nasaISS}.
+
+A execução de uma missão de \gls{rvdb} é geralmente estruturada em etapas que definem as condições para a transição entre fases da manobra.
+De forma geral, incluem o lançamento e inserção orbital, o ângulo de fase adequada para reduzir diferenças angulares, a aproximação de longa distância — frequentemente realizada por meio de manobras orbitais como a transferência de Hohmann usando o referencial absoluto (e aproximação de longa e curta distância) — e de proximidade (final), quando se faz o alinhamento geométrico entre as interfaces de acoplamento, facilitando a execução da manobra de \textit{docking} ou \textit{berthing}.
+
+O problema de \gls{rvdb} consiste em guiar a espaçonave perseguidora em trajetória relativa até o veículo-alvo, reduzindo progressivamente a distância até que seja possível realizar uma operação segura de acoplamento ou atracação. Essa manobra exige o controle integrado da dinâmica orbital, da atitude e das condições geométricas necessárias para o contato final entre os veículos \cite{curtis2013orbital}.
+Durante a aproximação, o perseguidor deve alinhar posição, velocidade relativa e orientação em relação ao alvo, garantindo que as interfaces mecânicas estejam corretamente posicionadas no momento do contato. Em missões não cooperativas, essa operação pode demandar sensores de navegação relativa, algoritmos de controle e, em alguns casos, manipuladores robóticos para realizar a atracação ou estabilização \cite{flores2014review}.
+
+Historicamente, as primeiras demonstrações práticas de operações de \textit{rendezvous} e \textit{docking} ocorreram na década de 1960, quando a espaçonave Gemini realizou manobras de aproximação e acoplamento com o veículo-alvo Agena \cite{nasa1stDocking}.
+Essas missões estabeleceram os procedimentos básicos para o encontro orbital e demonstraram a viabilidade do controle de trajetória e atitude durante a aproximação (Goodman, 2011). Posteriormente, o programa Apollo incorporou o \textit{docking} como parte fundamental da arquitetura de missão, permitindo o acoplamento entre o módulo de comando e o módulo lunar \cite{nevins1971}. 
+
+Ao longo das décadas seguintes, operações de \gls{rvdb} tornaram-se rotineiras em missões tripuladas e robóticas, consolidando-se como capacidade essencial para a exploração espacial. A ISS, por exemplo, depende de operações de \textit{docking} e \textit{berthing} para o recebimento de veículos de carga e tripulação (NASA, 2023; NASA, 2024). Além das operações clássicas, missões de \gls{rvdb} têm ampliado seu escopo para aplicações modernas, como prestação de serviços em órbita, manutenção de satélites, remoção de detritos espaciais e montagem de grandes estruturas. Essas aplicações introduzem novos desafios de controle, navegação e interação dinâmica entre veículos espaciais, especialmente em cenários que envolvem alvos não cooperativos ou o uso de manipuladores robóticos (Flores-Abad et al., 2014; Papadopoulos; Moosavian, 1994).
+
+
+\section{Motivação}
+
+As operações de \gls{rvdb} envolvem fenômenos dinâmicos que vão além do movimento orbital relativo entre duas espaçonaves.
+Durante as fases de aproximação próxima e final, a interação entre dinâmica orbital, atitude e movimentação de manipuladores robóticos torna-se determinante para o comportamento da perseguidora. Modelos que consideram apenas o movimento relativo orbital tornam-se insuficientes para descrever essas etapas críticas.
+
+Modelos puramente orbitais, baseados na dinâmica relativa em campo gravitacional central, são adequados para fases de longa distância, como a transferência de Hohmann \cite{weberHohmann}.
+Entretanto, nas fases próximas, a movimentação de manipuladores robóticos acoplados pode introduzir torques internos e efeitos de acoplamento dinâmico que influenciam diretamente a atitude e a estabilidade do sistema \cite{nardin2017_simulador}.
+A desconsideração desses efeitos pode levar a simplificações que não representam o comportamento real durante a interação física com o alvo.
+
+Nesse contexto, torna-se essencial integrar a dinâmica orbital relativa com a robótica espacial.
+A movimentação de manipuladores altera a distribuição de massa e os esforços internos da espaçonave, influenciando sua atitude e seu desempenho dinâmico \cite{yoshida_reactionless_etsvii}.
+Essa integração é particularmente relevante em missões de inspeção, manutenção e remoção de detritos, que dependem cada vez mais do uso de manipuladores embarcados. Exemplos incluem o Canadarm2 na ISS, utilizado para captura de veículos de carga \cite{canadarm2}, e a missão MEV, responsável pela extensão da vida útil de satélites geoestacionários \cite{mev_northrop}.
+O desenvolvimento de modelos integrados contribui para análises de desempenho, avaliação de riscos e planejamento de manobras em cenários operacionais complexos.
+
+\section{Pergunta de pesquisa}
+
+Diante desse desafio, a pergunta de pesquisa que orienta este trabalho é: Como a redistribuição de massa causada pelo movimento de um manipulador robótico influencia a dinâmica relativa, a sincronização de pose e o controle de atitude de uma nave perseguidora durante a fase de aproximação de proximidade em operações de \gls{rvdb}?
+
+\section{Objetivos}
+
+\subsection{Objetivo geral}
+
+O objetivo geral deste trabalho é desenvolver e analisar um modelo dinâmico integrado entre a dinâmica orbital relativa e a dinâmica acoplada de uma espaçonave perseguidora equipada com manipulador robótico, aplicado às fases de aproximação de proximidade (final) de operações de \textit{berthing}, incorporando controle de atitude do tipo PD e validado em ambiente de simulação computacional nas plataformas Matlab e Simulink.
+
+\subsection{Objetivos específicos}
+
+Os objetivos específicos deste estudo são:
+
+\begin{itemize}
+    \item Definir requisitos associados às fases de aproximação de longa e curta distância e fase final de uma missão de \gls{rvdb}, caracterizando o comportamento do modelo de corpo rígido e do modelo acoplado, além de identificar variáveis críticas como posição, velocidade relativa e sincronização de atitude.
+    \item Estabelecer o modelo matemático capaz de integrar as dinâmicas orbital e acoplada, incluindo formulação relativa nos referenciais \gls{eci} e LVLH, derivação lagrangiana e definição dos parâmetros cinemáticos do manipulador via método \gls{dh}.
+    \item Implementar as equações desenvolvidas em Matlab e Simulink, integrando subsistemas orbital, dinâmico e de lei de controle PD, e realizar simulações sob diferentes condições iniciais.
+    \item Avaliar o comportamento dinâmico do sistema integrado a partir dos resultados simulados, considerando redução da diferença de fase, perfis de posição e velocidade relativas, atitude do perseguidor frente à operação do manipulador e eficácia da ferramenta na interface de acoplamento.
+\end{itemize}
+
+\section{Metodologia}
+
+A metodologia adotada é de natureza teórico-computacional, fundamentada no desenvolvimento matemático e na validação por meio de simulação numérica. Inicialmente, realizou-se uma revisão da literatura sobre dinâmica orbital relativa, robótica espacial e operações de \gls{rvdb}, com o objetivo de identificar lacunas na integração entre essas áreas.
+
+Na sequência, foi desenvolvida uma formulação matemática integrada, contemplando a dinâmica orbital relativa da perseguidora em relação ao alvo e a dinâmica acoplada entre a espaçonave e seu manipulador.
+A modelagem cinemática do manipulador foi conduzida pela convenção de \gls{dh}, enquanto a dinâmica acoplada foi formulada via abordagem lagrangiana baseada na formulação via energia e coordenadas generalizadas. Com essa metodologia, derivaram-se as equações de movimento acopladas de energia através do uso da energia cinética do sistema espaçonave tipo manipulador robótico na configuração de corpo não rígido.
+
+O modelo foi simulado computacionalmente em ambiente Matlab e Simulink, incluindo controlador PD para movimento orbital, atitude e juntas do manipulador. Foram realizadas simulações numéricas em diferentes condições iniciais, permitindo avaliar o comportamento dinâmico da perseguidora nas fases de aproximação de longa distância, curta distância e final.
+
+A avaliação dos resultados foi conduzida por meio da análise dos perfis temporais das variáveis orbitais e de atitude, com ênfase na influência do manipulador sobre a dinâmica da perseguidora.
+
+\section{Estrutura do documento}
+
+Este trabalho está organizado em sete capítulos.
+O Capítulo 1 apresenta a introdução ao tema, contemplando a contextualização, a motivação, a pergunta de pesquisa, os objetivos e a metodologia.
+Em seguida, o Capítulo 2 traz a revisão da literatura, abordando trabalhos consolidados e recentes relacionados à dinâmica orbital relativa, robótica espacial e modelagem de operações de \gls{rvdb}.
+O Capítulo 3 descreve o procedimento de simulação, detalhando os fluxogramas e a organização da implementação computacional, enquanto o Capítulo 4 apresenta a formulação matemática desenvolvida, incluindo a modelagem orbital, a cinemática do manipulador via \gls{dh}, a formulação lagrangiana e o controle de atitude.
+
+Dando continuidade, o Capítulo 5 expõe o ambiente de simulação e os resultados obtidos para as fases de aproximação de longa distância, curta distância e de proximidade (final).
+Posteriormente, o Capítulo 6 promove a discussão desses resultados, avaliando o desempenho do modelo integrado e analisando os impactos da movimentação do manipulador robótico na dinâmica relativa e no controle de atitude da perseguidora.
+Por fim, o Capítulo 7 apresenta as conclusões gerais do trabalho, sintetizando as contribuições em resposta à pergunta de pesquisa, além de apontar as limitações do estudo e sugerir direcionamentos para trabalhos futuros.

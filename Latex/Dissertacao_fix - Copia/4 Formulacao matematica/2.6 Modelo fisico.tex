@@ -1,0 +1,266 @@
+%% Modelo físico do manipulador robótico
+
+A Tabela~\ref{tab:DH_parametros} apresenta os parâmetros de Denavit-Hartenberg adotados para o manipulador robótico, conforme a convenção clássica.
+
+\begin{table}[H]
+\centering
+\caption{Parâmetros de Denavit-Hartenberg do manipulador robótico.}
+\label{tab:DH_parametros}
+\begin{tabular}{ccccc}
+\toprule
+Junta $i$ & $\theta_i$ & $d_i$ [m] & $a_i$ [m] & $\alpha_i$ [rad] \\
+\midrule
+1 & $\theta_1$ & 0{,}005        & 0{,}000  & $\frac{\pi}{2}$ \\
+2 & $\theta_2$ & 0{,}100        & 0{,}005  & 0{,}000 \\
+3 & $\theta_3$ & 0{,}000        & 0{,}005  & 0{,}000 \\
+4 & $\theta_4$ & 0{,}000        & 0{,}005  & 0{,}000 \\
+5 & 0          & $d_5 \in [0,15]$ & 0{,}000  & 0{,}000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Para as juntas do tipo revoluta, o parâmetro $\theta_i$ é considerado variável \cite{craig2005}, uma vez que representa o ângulo de rotação da junta $J_i$, enquanto que no caso de juntas prismáticas, o deslocamento axial $d_i$ é a variável de interesse, enquanto os demais parâmetros permanecem constantes.
+
+No manipulador em estudo, a junta $J_5$ é do tipo prismática e está embutida no interior do Elo 4. O parâmetro $d_5$ representa seu deslocamento ao longo do eixo longitudinal do elo, podendo variar de 0 a 0,15 m.
+O valor $d_5 = 0$ indica que a haste da ferramenta está completamente estendida, enquanto $d_5 = 0{,}15$ m representa a retração máxima da ferramenta para dentro do Elo 4.
+
+\begin{figure}[ht] % h = here, t = top, b = bottom
+    \centering
+    \includegraphics[width=0.5\textwidth]{2 Formulacao do problema/Imagens/Manipulador robotico 3D.png}
+    \caption{Imagem digital do manipulador robótico desenvolvido pelo autor.}
+    \label{fig:manipuladorRobotico_3D}
+\end{figure}
+
+A seguir, são listadas as características físicas dos elos que compõem o manipulador:
+
+\begin{table}[H]
+\centering
+\caption{Características físicas dos elos do manipulador robótico.}
+\label{tab:elos_MR}
+\begin{tabular}{lcc}
+\toprule
+Componente & Comprimento [m] & Raio externo [m] \\
+\midrule
+Elo 1     & 0{,}100   & 0{,}025 \\
+Elo 2     & 0{,}300   & 0{,}025 \\
+Elo 3     & 0{,}300   & 0{,}025 \\
+Elo 4     & 0{,}300   & 0{,}025 \\
+Ferramenta & 0{,}150  & 0{,}025 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Considerações sobre as Matrizes de Inércia}
+
+As matrizes de inércia dos componentes do manipulador robótico foram obtidas a partir do software de modelagem tridimensional \emph{Autodesk Fusion 360} e refletem os valores em unidades do Sistema Internacional (kg·m²). No entanto, por se tratar de um manipulador robótico leve, com a sua estrutura construída predominantemente em alumínio (densidade de $2.700kg/m^3$) e dimensões reduzidas (com elos ocos de paredes de $2,50mm$), os valores numéricos resultantes para os termos das matrizes de inércia podem parecer próximos de zero quando expressos com notação científica.
+
+Mesmo que reduzidos, os números apresentados não implicam na ausência de inércia, mas sim reflete a baixa massa e o pequeno raio de giro dos corpos em torno de seus eixos principais. Ainda assim, mesmo pequenos, esses termos são relevantes para análises dinâmicas, especialmente em ambientes de microgravidade ou quando são necessárias manobras finas de controle.
+Portanto, as matrizes de inércia foram mantidas integralmente nos modelos computacionais e nas simulações subsequentes.
+
+\subsubsection{Parâmetros do Manipulador Robótico}
+
+Nesta seção são apresentados os principais parâmetros físicos e geométricos do manipulador robótico desenvolvido.  
+Os dados foram agrupados em quatro categorias:
+\emph{centros de massa} \eqref{tab:com_manipulador},
+\emph{dimensões físicas} \eqref{tab:parametros_fisicos1},
+\emph{matrizes de inércia} \eqref{tab:mi_diag} e \eqref{tab:mi_foraDiag}
+, e
+\emph{limites operacionais das juntas} \eqref{tab:limites_manipulador}.  
+
+
+Centros de massa estão expressos em $cm$, considerando a origem no ambiente de simulação 3D (\emph{0,0,0}) e estão listados na Tabela \eqref{tab:com_manipulador}.
+
+\begin{table}[H]
+\centering
+\caption{Centros de massa dos componentes do manipulador.}
+\label{tab:com_manipulador}
+\begin{tabular}{lrrr}
+\toprule
+Componente & $x$ & $y$ & $z$ \\
+\midrule
+Base Geral   & $9{,}202\times 10^{-10}$  & 0{,}00   & 5{,}00 \\
+Junta 1      & $-5{,}259\times 10^{-10}$ & -12{,}5  & 10{,}25 \\
+Junta 2      & -2{,}75                   & -12{,}5  & 20{,}5 \\
+Junta 3      & -8{,}25                   & 17{,}5   & 20{,}5 \\
+Junta 4      & -13{,}75                  & 47{,}5   & 20{,}5 \\
+Elo 1        & $1{,}768\times 10^{-9}$   & -12{,}5  & 15{,}03 \\
+Elo 2        & -5{,}5                    & 3{,}01   & 20{,}5 \\
+Elo 3        & -11                       & 33{,}01  & 20{,}5 \\
+Elo 4        & -16{,}5                   & 63{,}01  & 20{,}5 \\
+Ferramenta   & -16{,}5                   & 84{,}903 & 20{,}5 \\
+Manipulador Global & -2{,}402            & 7{,}027  & 8{,}643 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Os parâmetros físicos
+\eqref{tab:parametros_fisicos1}
+estão expressos em $cm$ e as respectivas massas em g.
+
+\begin{table}[H]
+\centering
+\caption{Dimensões físicas e massas dos componentes.}
+\label{tab:parametros_fisicos1}
+\begin{tabular}{lrrrr}
+\toprule
+Componente & Altura & Raio & Diâmetro & Massa \\
+\midrule
+Base Geral   & 10{,}0  & 25{,}0   & 50{,}0      & 3.652{,}956 \\
+Junta 1      & 0{,}5   & 2{,}5    & 5{,}0       & 26{,}507 \\
+Junta 2      & 0{,}5   & 2{,}5    & 5{,}0       & 26{,}507 \\
+Junta 3      & 0{,}5   & 2{,}5    & 5{,}0       & 26{,}507 \\
+Junta 4      & 0{,}5   & 2{,}5    & 5{,}0       & 26{,}507 \\
+Elo 1        & 10{,}0  & 2{,}5    & 5{,}0       & 111{,}463 \\
+Elo 2        & 30{,}0  & 2{,}5    & 5{,}0       & 312{,}917 \\
+Elo 3        & 30{,}0  & 2{,}5    & 5{,}0       & 312{,}917 \\
+Elo 4        & 30{,}0  & 2{,}5    & 5{,}0       & 312{,}917 \\
+Ferramenta   & 15{,}0  & 0{,}75   & 1{,}5       & 40{,}291 \\
+\midrule
+Massa Total (g) &&&& 4.849,49 \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+As matrizes de inércia estão expressas em g/cm$^{2}$ e estão em relação ao centro de massa de cada componente do manipulador robótico.
+Para melhor legibilidade, os termos principais
+($I_{xx}$, $I_{yy}$, $I_{zz}$)
+são apresentados separadamente dos termos de acoplamento (fora da diagonal).  
+
+\begin{table}[H]
+\centering
+\caption{Elementos diagonais das matrizes de inércia.}
+\label{tab:mi_diag}
+\begin{tabular}{lrrr}
+\toprule
+Componente & $I_{xx}$ & $I_{yy}$ & $I_{zz}$ \\
+\midrule
+Base Geral
+& $7{,}948\times 10^{5}$
+& $7{,}948\times 10^{5}$
+& $1{,}449\times 10^{6}$ \\
+Junta 1
+& $4{,}197\times 10^{1}$
+& $4{,}197\times 10^{1}$
+& $8{,}283\times 10^{1}$ \\
+Junta 2
+& $8{,}283\times 10^{1}$
+& $4{,}197\times 10^{1}$
+& $4{,}197\times 10^{1}$ \\
+Junta 3
+& $8{,}283\times 10^{1}$
+& $4{,}197\times 10^{1}$
+& $4{,}197\times 10^{1}$ \\
+Junta 4
+& $8{,}283\times 10^{1}$
+& $4{,}197\times 10^{1}$
+& $4{,}197\times 10^{1}$ \\
+Elo 1
+& $1{,}368\times 10^{3}$
+& $1{,}368\times 10^{3}$
+& $5{,}969\times 10^{2}$ \\
+Elo 2
+& $2{,}582\times 10^{4}$
+& $1{,}736\times 10^{3}$
+& $2{,}582\times 10^{4}$ \\
+Elo 3
+& $2{,}582\times 10^{4}$
+& $1{,}736\times 10^{3}$
+& $2{,}582\times 10^{4}$ \\
+Elo 4
+& $2{,}582\times 10^{4}$
+& $1{,}736\times 10^{3}$
+& $2{,}582\times 10^{4}$ \\
+Ferramenta
+& $7{,}820\times 10^{2}$
+& $1{,}622\times 10^{1}$
+& $7{,}820\times 10^{2}$ \\
+Global
+& $2{,}807\times 10^{6}$
+& $1{,}126\times 10^{6}$
+& $3{,}381\times 10^{6}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A tabela \eqref{tab:mi_foraDiag} apresenta os elementos fora da diagonal das matrizes de inércia, ou seja, os elementos de acoplamento entre os eixos principais.
+
+\begin{table}[H]
+\centering
+\caption{Elementos fora da diagonal das matrizes de inércia.}
+\label{tab:mi_foraDiag}
+\begin{tabular}{lrrr}
+\toprule
+Componente 
+& $I_{xy}$ 
+& $I_{xz}$ 
+& $I_{yz}$ \\
+\midrule
+Base Geral   
+& $6{,}601\times 10^{-9}$ 
+& $1{,}639\times 10^{-5}$ 
+& $-1{,}297\times 10^{-9}$ \\
+Junta 1      
+& $-2{,}246\times 10^{-9}$ 
+& 0 
+& 0 \\
+Junta 2      
+& $-1{,}128\times 10^{-10}$ 
+& 0 
+& 0 \\
+Junta 3      
+& $-1{,}417\times 10^{-9}$ 
+& $1{,}830\times 10^{-9}$ 
+& $-1{,}249\times 10^{-8}$ \\
+Junta 4      
+& $3{,}084\times 10^{-9}$ 
+& $-1{,}323\times 10^{-10}$ 
+& $-4{,}345\times 10^{-9}$ \\
+Elo 1        
+& 0 
+& $-1{,}172\times 10^{-7}$ 
+& $1{,}315\times 10^{-10}$ \\
+Elo 2        
+& $2{,}138\times 10^{-8}$ 
+& $-1{,}076\times 10^{-8}$ 
+& $2{,}389\times 10^{-7}$ \\
+Elo 3        
+& $9{,}663\times 10^{-10}$ 
+& $-6{,}585\times 10^{-8}$ 
+& $4{,}412\times 10^{-7}$ \\
+Elo 4        
+& $6{,}325\times 10^{-7}$ 
+& $4{,}290\times 10^{-8}$ 
+& $-1{,}165\times 10^{-8}$ \\
+Ferramenta   
+& $5{,}427\times 10^{-8}$ 
+& $4{,}384\times 10^{-9}$ 
+& $-5{,}684\times 10^{-9}$ \\
+Global       
+& $4{,}390\times 10^{5}$ 
+& $1{,}381\times 10^{5}$ 
+& $-4{,}151\times 10^{5}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A tabela \ref{tab:limites_manipulador} apresenta os limites de rotação e velocidade angular de cada junta. A junta $J_5$ não possui rotação, mas sim um deslocamento axial, e sua velocidade é limitada a $0{,}1\pi$ [rad/s].
+
+\begin{table}[H]
+\centering
+\caption{Limites de rotação e velocidade angular das juntas.}
+\label{tab:limites_manipulador}
+\begin{tabular}{lrr}
+\toprule
+Junta & Rotação [rad] & Velocidade [rad/s] \\
+\midrule
+J1 & $\pm 2\pi$ & $\pm 0.5\pi$ \\
+J2 & $\pm \pi/2$ & $\pm \pi$ \\
+J3 & $\pm 130^\circ$ & $\pm \pi$ \\
+J4 & $\pm 150^\circ$ & $\pm 2\pi$ \\
+% J5 & [-0.15, 0] m & $\pm 0.1\pi$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+

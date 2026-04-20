@@ -1,0 +1,111 @@
+\subsection{Quaternions e justificativa de sua utilização}
+\label{sec:representacao_quaternion}
+ 
+Os quaternions constituem uma alternativa para representar a orientação, pois evitam as descontinuidades associadas às singularidades dos ângulos de Euler e permitem descrever a atitude do perseguidor.
+
+Um quaternion unitário é definido como um elemento do espaço quaternional de quatro dimensões, pertencente ao conjunto
+dos quaternions unitários $q = [w,\vec{v}\,]$, com $\|q\| = 1$, em que $w$ é a parte escalar e $\vec{v}$ é a parte vetorial. Cada quaternion unitário $q$ corresponde a uma rotação de ângulo $\theta$ em torno de um eixo unitário $\vec{u}$, dada por:
+
+\begin{equation}
+q(\theta,\vec{u}) = \cos\!\left(\frac{\theta}{2}\right) + \sin\!\left(\frac{\theta}{2}\right)\,\vec{u}.
+\label{eq_quat_axis_angle}
+\end{equation}
+
+Essa parametrização fornece uma representação livre de singularidades geométricas para a integração contínua das equações diferenciais de atitude.
+Em aplicações numéricas, impõe-se a condição de unidade $\|q\|=1$ e utiliza-se o desvio de norma como critério de monitoramento de erros de integração ao longo da simulação.
+
+Do ponto de vista físico, os quaternions preservam a norma e realizam rotações por multiplicação, assegurando uma transição suave entre orientações sucessivas.
+Embora exijam uma variável adicional em comparação aos ângulos de Euler, sua principal vantagem reside na ausência de singularidades e no fato de que as equações cinemáticas em quaternions envolvem apenas produtos, sem funções trigonométricas, o que facilita a implementação embarcada em tempo real \cite{wie2008space}.
+% Por essas razões, a formulação cinemática e dinâmica de atitude adotada neste trabalho utiliza quaternions unitários para a espaçonave perseguidora, evitando singularidades.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Definição e componentes do quaternion}
+\label{sec:componentes_quaternion}
+
+O espaço quaternional é um espaço vetorial de quatro dimensões, composto por um elemento escalar e três elementos imaginários mutuamente ortogonais $\{i,j,k\}$, que obedecem às regras de multiplicação introduzidas por Hamilton (1844):
+\begin{equation}
+i^2 = j^2 = k^2 = ijk = -1,
+\label{eq_hamilton_quadrados}
+\end{equation}
+\begin{equation}
+ij = k,\quad jk = i,\quad ki = j,\quad
+ji = -k,\quad kj = -i,\quad ik = -j.
+\label{eq_hamilton_produtos}
+\end{equation}
+
+Um quaternion qualquer pode ser escrito como:
+\begin{equation}
+q = w + x\,i + y\,j + z\,k.
+\label{eq_quaternion_forma}
+\end{equation}
+
+Ou, de forma vetorial compacta:
+
+\begin{equation}
+q = [\,w,\vec{v}\,] = [\,w,x,y,z\,].
+\label{eq_quaternion_wxyz}
+\end{equation}
+
+Em que $w$ é a parte escalar e $\vec{v} = [x,y,z]$ é a parte vetorial.
+Neste trabalho será adotada a notação $q = [w,x,y,z]^T$.
+A magnitude (ou norma) de um quaternion é definida por:
+
+\begin{equation}
+\|q\| = \sqrt{w^2 + x^2 + y^2 + z^2}.
+\label{eq_norma_quaternion}
+\end{equation}
+
+E o quaternion unitário é obtido normalizando-se $q$ de modo que $\|q\| = 1$.
+Em aplicações de atitude, a condição de unidade constitui uma restrição do estado e pode ser empregada para monitorar o acúmulo de erros numéricos durante a integração.
+Desvios de $\|q\|$ em relação a $1$ indicam erro numérico e podem ser corrigidos por renormalização do quaternion, evitando que a representação de atitude se degrade ao longo do tempo.
+
+A relação entre os quaternions e a velocidade angular do corpo é obtida a partir da equação cinemática diferencial \cite{wie2008space}.
+Considerando o vetor de estado quaternion:
+
+\begin{equation}
+\mathbf{q} =
+\begin{bmatrix}
+w \\
+x \\
+y \\
+z
+\end{bmatrix},
+\qquad
+\vec{\omega} =
+\begin{bmatrix}
+\omega_x \\ \omega_y \\ \omega_z
+\end{bmatrix}.
+\label{eq_q_omega_vetores}
+\end{equation}
+
+A equação cinemática pode ser escrita na forma matricial:
+
+\begin{equation}
+\begin{bmatrix}
+\dot{w} \\[2pt]
+\dot{x} \\[2pt]
+\dot{y} \\[2pt]
+\dot{z}
+\end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix}
+0 & -\omega_x & -\omega_y & -\omega_z \\
+\omega_x & 0 & \omega_z & -\omega_y \\
+\omega_y & -\omega_z & 0 & \omega_x \\
+\omega_z & \omega_y & -\omega_x & 0
+\end{bmatrix}
+\begin{bmatrix}
+w \\ x \\ y \\ z
+\end{bmatrix}.
+\label{eq_cinematica_quaternion_wxyz}
+\end{equation}
+
+De forma compacta, pode-se escrever:
+
+\begin{equation}
+\dot{\mathbf{q}} = \tfrac{1}{2}\,\boldsymbol{\Omega}(\vec{\omega})\,\mathbf{q}.
+\label{eq_quat_compacta}
+\end{equation}
+
+Em que $\boldsymbol{\Omega}(\vec{\omega})$ é a matriz $4\times 4$ definida em \eqref{eq_cinematica_quaternion_wxyz}.

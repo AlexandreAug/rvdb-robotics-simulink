@@ -1,0 +1,139 @@
+
+[Bloco 1 - angulos de Euler]
+  duracao amostrada: 900.000 s, N = 225003
+  phi: min = -173.8, max = 178.6, final = 0.5141
+  theta: min = -24.28, max = 83.77, final = 0.4638
+  psi: min = -114.3, max = 22.28, final = 0.4998
+
+[Bloco 1 - modo de operacao]
+  duracao amostrada: 900.000 s, N = 225003
+  modo: min = 0, max = 1, final = 1
+
+[Bloco 2 - velocidade angular base (Euler+Lagrange)]
+  duracao amostrada: 900.000 s, N = 225003
+  wx: min = -1.195, max = 1.197, final = 0.009999
+  wy: min = -1.261, max = 1.246, final = -0.009999
+  wz: min = -0.9564, max = 1.003, final = 0.03
+
+[Bloco 2 - aceleracao angular base (Euler+Lagrange)]
+  duracao amostrada: 900.000 s, N = 225003
+  dwx: min = -57.64, max = 3.502, final = 2
+  dwy: min = -109.9, max = 6.478, final = 2
+  dwz: min = -61.73, max = 3.546, final = -2
+
+[Bloco 3 - torque PD atitude]
+  duracao amostrada: 900.000 s, N = 225003
+  Torque x: min = -12.07, max = 0.7388, final = -0.01592
+  Torque y: min = -12.49, max = 0.7419, final = 0.02797
+  Torque z: min = -9.88, max = 0.605, final = -0.5803
+
+[Bloco 3 - torque compensado atitude]
+  duracao amostrada: 900.000 s, N = 225003
+  Torque x: min = -12.07, max = 0.7388, final = -0.02256
+  Torque y: min = -12.49, max = 0.7419, final = 0.02404
+  Torque z: min = -9.88, max = 0.5968, final = -0.5854
+
+[Bloco 3 - torque de reação na base]
+  duracao amostrada: 900.000 s, N = 225003
+  Reacao x: min = -0.02057, max = 0.03092, final = 0.006644
+  Reacao y: min = -0.07039, max = 0.0132, final = 0.003922
+  Reacao z: min = -0.005112, max = 0.02998, final = 0.005088
+
+[Bloco 4 - posicao juntas]
+  duracao amostrada: 900.000 s, N = 225003
+  q1: min = -1.582, max = 0, final = -1.582
+  q2: min = -0.2649, max = 1.163, final = -0.2649
+  q3: min = 0, max = 2.486, final = 2.486
+
+[Bloco 4 - velocidade juntas]
+  duracao amostrada: 900.000 s, N = 225003
+  dq1: min = -0.14, max = 0.02967, final = 0.00967
+  dq2: min = -0.0731, max = 0.41, final = 0.0008636
+  dq3: min = -0.02977, max = 0.1486, final = 0.03023
+
+[Bloco 4 - torque juntas]
+  duracao amostrada: 900.000 s, N = 225003
+  Torque 1: min = -0.9677, max = 0.3449, final = -0.02003
+  Torque 2: min = -0.0058, max = 0.1843, final = -0.0004397
+  Torque 3: min = -0.3031, max = 0.3138, final = -0.2981
+
+[Bloco 5 - erro posicao juntas]
+  duracao amostrada: 900.000 s, N = 225003
+  eq1: min = -0.003891, max = 0.00383, final = -0.00389
+  eq2: min = -0.03682, max = 0.0007026, final = -1.802e-06
+  eq3: min = -0.007035, max = 0.007426, final = 0.007225
+
+[Bloco 5 - erro velocidade juntas]
+  duracao amostrada: 900.000 s, N = 225003
+  edq1: min = -0.03787, max = 0.1054, final = 0.01001
+  edq2: min = -0.365, max = 0.0472, final = 0.0008811
+  edq3: min = -0.03883, max = 0.0383, final = 0.03004
+
+[Bloco 6 - energias cineticas]
+  duracao amostrada: 900.000 s, N = 225003
+  E_base: min = 0, max = 0.1914, final = 7.313e-05
+  E_elos: min = 0, max = 0.0009326, final = 1.704e-07
+  E_total: min = 0, max = 0.1914, final = 0.0001349
+
+[Bloco 7 - momento angular total]
+  duracao amostrada: 900.000 s, N = 225003
+  hx_tot_min = -0.09494, hx_tot_max = 0.09511, hx_tot_final = 0.002364
+  hy_tot_min = -0.1415, hy_tot_max = 0.099, hy_tot_final = -0.005043
+  hz_tot_min = -0.1426, hz_tot_max = 0.1452, hz_tot_final = 0.01513
+
+[Bloco 7 - momento angular da base]
+  duracao amostrada: 900.000 s, N = 225003
+  hx_base_min = -0.09494, hx_base_max = 0.09511, hx_base_final = 0.0007947
+  hy_base_min = -0.1002, hy_base_max = 0.099, hy_base_final = -0.0007947
+  hz_base_min = -0.1385, hz_base_max = 0.1452, hz_base_final = 0.004346
+
+[Bloco 7 - momento angular dos elos]
+  duracao amostrada: 0.000 s, N = 3
+  hx_elos_min = 0, hx_elos_max = 0, hx_elos_final = 0
+  hy_elos_min = 0, hy_elos_max = 0, hy_elos_final = 0
+  hz_elos_min = 0, hz_elos_max = 0, hz_elos_final = 0
+
+[Bloco 8 - posicao EEF frame0]
+  duracao amostrada: 900.000 s, N = 225003
+  x0: min = 0, max = 0.1309, final = 0.05025
+  y0: min = -0.0005573, max = 0.825, final = -0.0005566
+  z0: min = 0, max = 0.9708, final = 0.4615
+
+[Bloco 8 - posicao EEF LVLH]
+  duracao amostrada: 900.000 s, N = 225003
+  along: min = -353.7, max = 0.02249, final = 0.001079
+  cross: min = -0.08569, max = 0.8381, final = 0.004019
+  radial: min = -99.99, max = 0.3352, final = -0.05021
+
+[Bloco 9 - erro posicao ferramenta]
+  duracao amostrada: 900.000 s, N = 225003
+  ex: min = -0.02109, max = 0.1142, final = -0.001524
+  ey: min = -0.825, max = 0, final = -0.004456
+  ez: min = -0.3848, max = 0.4172, final = 0.0001613
+
+[Bloco 9 - norma erro ferramenta]
+  duracao amostrada: 900.000 s, N = 225003
+  norma_erro: min = 0, max = 0.9315, final = 0.004712
+
+[Bloco 10 - erro LVLH EEF]
+  duracao amostrada: 900.000 s, N = 225003
+  along: min = -353.7, max = 0.02249, final = 0.001079
+  cross: min = -0.08569, max = 0.8381, final = 0.004019
+  radial: min = -99.99, max = 0.3352, final = -0.05021
+
+[Bloco 10 - modo de operacao]
+  duracao amostrada: 900.000 s, N = 225003
+  modo: min = 0, max = 1, final = 1
+
+[Bloco 11 - vel ang corpo wrt ECI]
+  duracao amostrada: 900.000 s, N = 225003
+  wx: min = -1.375, max = 2.366, final = 0.01902
+  wy: min = -0.7733, max = 2.496, final = 0.03901
+  wz: min = -0.9774, max = 1.983, final = -0.0198
+
+[Bloco 11 - vel ang LVLH wrt corpo]
+  duracao amostrada: 900.000 s, N = 225003
+  wx: min = -1.376, max = 2.365, final = 0.01901
+  wy: min = -0.774, max = 2.495, final = 0.039
+  wz: min = -0.9768, max = 1.983, final = -0.02088
+>> 
